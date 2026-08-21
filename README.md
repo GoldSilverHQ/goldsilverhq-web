@@ -1,36 +1,23 @@
-# goldsilverhq.com
+# GoldSilverHQ
 
-Live tape, quiz, topical map, ebooks. Repo: `GoldSilverHQ/goldsilverhq-web`.
+Repo: `GoldSilverHQ/goldsilverhq-web`
 
-## Go live (GitHub Pages + deine Domain)
+**Jetzt:** Site wird in der Grok-Preview gebaut. GitHub ist das Backup — jeder Slice wird hier committed.
+**Später:** GitHub Pages + Domain `goldsilverhq.com` (united-domains).
 
-1. GitHub → **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` / folder `/` (root)
-4. Custom domain: `goldsilverhq.com`
-5. DNS beim Domain-Registrar:
+## Was im Repo liegt (Static Snapshot)
 
-**Apex `goldsilverhq.com`** (A records):
-
-- `185.199.108.153`
-- `185.199.109.153`
-- `185.199.110.153`
-- `185.199.111.153`
-
-**`www`** CNAME → `goldsilverhq.github.io`
-
-6. Pages: **Enforce HTTPS** an, sobald das Zertifikat da ist.
-
-Die Datei `CNAME` im Repo muss `goldsilverhq.com` enthalten (liegt schon).
-
-## Was live ist
-
-- `/` Live Gold/Silber/US-Schuld (öffentliche APIs)
-- `/quiz.html` Daily sound-money quiz
+- `/` Live Gold / Silber / US-Schuld
+- `/quiz.html` Sound-money Quiz
 - `/world.html` Offizielle Goldreserven
 - `/ebooks.html` Die sechs PDFs
 - `/blog.html` Topical map
 
-Checkout: vorerst Order via [@GoldSilverHQ](https://x.com/GoldSilverHQ). LemonSqueezy-Links ersetzen die Buttons, sobald die Produkte stehen.
+Checkout vorerst via [@GoldSilverHQ](https://x.com/GoldSilverHQ). Keine Anlageberatung.
 
-Keine Anlageberatung.
+## Pages + DNS (wenn live gehen soll)
+
+Settings → Pages → Deploy from a branch → `main` / root. Custom domain: `goldsilverhq.com`.
+
+Apex A: `185.199.108.153` `185.199.109.153` `185.199.110.153` `185.199.111.153`  
+www CNAME → `goldsilverhq.github.io`
