@@ -1,23 +1,38 @@
 # GoldSilverHQ
 
-Repo: `GoldSilverHQ/goldsilverhq-web`
+Repo: [`GoldSilverHQ/goldsilverhq-web`](https://github.com/GoldSilverHQ/goldsilverhq-web)
 
-**Jetzt:** Site wird in der Grok-Preview gebaut. GitHub ist das Backup — jeder Slice wird hier committed.
-**Später:** GitHub Pages + Domain `goldsilverhq.com` (united-domains).
+**goldsilverhq.com** — sound money, monetary history, gold and silver.
 
-## Was im Repo liegt (Static Snapshot)
+This commit is the topical-map skeleton: pillar → cluster → episode, internal links, and the black / gold / silver design. Copy is outline-level on purpose. First live episode: Weimar 1923.
 
-- `/` Live Gold / Silber / US-Schuld
-- `/quiz.html` Sound-money Quiz
-- `/world.html` Offizielle Goldreserven
-- `/ebooks.html` Die sechs PDFs
-- `/blog.html` Topical map
+Media only. Not investment advice. Checkout: [@GoldSilverHQ](https://x.com/GoldSilverHQ).
 
-Checkout vorerst via [@GoldSilverHQ](https://x.com/GoldSilverHQ). Keine Anlageberatung.
+## Map
 
-## Pages + DNS (wenn live gehen soll)
+| Pillar | Path |
+| --- | --- |
+| Sound money | `/sound-money` |
+| History of money | `/history` |
+| Gold & silver in practice | `/gold-silver` |
 
-Settings → Pages → Deploy from a branch → `main` / root. Custom domain: `goldsilverhq.com`.
+Phase 1 cluster: `/history/20th-century` → `/history/20th-century/weimar-1923`.
 
-Apex A: `185.199.108.153` `185.199.109.153` `185.199.110.153` `185.199.111.153`  
-www CNAME → `goldsilverhq.github.io`
+See [`topical-map.md`](./topical-map.md).
+
+## Stack
+
+TanStack Start (Vite) + React. Grok preview is the working copy; this repo is the backup. Domain `goldsilverhq.com` (CNAME kept). GitHub Pages is **not** auto-deploying this source tree — it needs a Node server (Vercel), not a static folder upload.
+
+## Run
+
+```bash
+npm ci
+npm run dev      # http://127.0.0.1:8080
+npm run typecheck
+npm run build
+```
+
+## Convert
+
+Newsletter + *Sound Money Survival Kit* ebook sit on every cluster and episode. Wire the form to your list when you are ready.
