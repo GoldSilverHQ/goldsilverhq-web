@@ -1,6 +1,6 @@
 import { Banknote, Building2, Globe2, Landmark, Scale } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Board, Live, Tile, fmtTonnes } from "@/components/clock-ui";
+import { Board, Tile, fmtTonnes } from "@/components/clock-ui";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
 import {
@@ -15,18 +15,15 @@ import {
 import { COMPILED_PRINTERS, getPrinters, type Printers } from "@/lib/dashboard/printers";
 import { getSpotLite } from "@/lib/dashboard/spot";
 import {
-  CB_YTD_2026,
   FX_START,
   IMF_GOV_DEBT,
+  SILVER_2024,
   USGS_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
   coverPct,
-  investmentGoldGramsPerPerson,
-  investmentSilverOzPerPerson,
   lostVsStart,
   mineOutputRatio,
-  silverOfficialT,
   silverSupplyGapT,
   silverVisibleMonths,
   wgcShare,
@@ -82,73 +79,28 @@ export function ClockBoards() {
   return (
     <section className="mt-8">
 
-      <Board icon={Landmark} title="Stock versus flow" kicker="the spine" open>
-        <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] sm:col-span-2">
-          <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">Gold — a stock</p>
-          <h3 className="mt-1 text-sm text-muted">Almost all ever mined still exists</h3>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <div>
-              <p className="text-xs text-faint">Official reserves</p>
-              <Live tone="gold" unit="t">
-                {fmtTonnes(official.world.tonnes)}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">Net official buying, YTD</p>
-              <Live tone="gold" unit="t">
-                {fmtTonnes(CB_YTD_2026.tonnes)}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">CB take of mine supply</p>
-              <Live tone="gold" unit="%">
-                {(cbTakeOfMine() * 100).toFixed(0)}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">Investment gold per person</p>
-              <Live tone="gold" unit="g">
-                {investmentGoldGramsPerPerson().toFixed(1)}
-              </Live>
-            </div>
-          </div>
-          <p className="mt-3 text-xs text-faint">
-            Buying is WGC GDT H1 2026. Take is 2025 official / WGC mine. Grams: bars, coins, ETFs over 8.2bn people.
-          </p>
-        </article>
-        <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] sm:col-span-2">
-          <p className="text-xs font-semibold tracking-[0.16em] text-silver uppercase">Silver — a flow</p>
-          <h3 className="mt-1 text-sm text-muted">A large share is used up, not stored</h3>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <div>
-              <p className="text-xs text-faint">Official silver</p>
-              <Live tone="silver" unit="t">
-                {Math.round(silverOfficialT())}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">Mine + recycle vs demand</p>
-              <Live tone="silver" unit="t">
-                {`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">Months of visible cover</p>
-              <Live tone="silver" unit="mo">
-                {silverVisibleMonths().toFixed(1)}
-              </Live>
-            </div>
-            <div>
-              <p className="text-xs text-faint">Investment silver per person</p>
-              <Live tone="silver" unit="oz">
-                {investmentSilverOzPerPerson().toFixed(2)}
-              </Live>
-            </div>
-          </div>
-          <p className="mt-3 text-xs text-faint">
-            2024 Silver Institute. Official sector is a rounding error. Visible ounces are vaulted bullion, not jewelry.
-          </p>
-        </article>
+      <Board icon={Landmark} title="Stock versus flow" open>
+        <Tile
+          kicker="Au"
+          label="Above-ground gold"
+          unit="t"
+          cadence="yearly"
+          asOf={formatAsOf(WGC_STOCK.asOf)}
+          wide
+          live={fmtTonnes(WGC_STOCK.aboveGroundT)}
+          aside={`${(cbTakeOfMine() * 100).toFixed(0)}% of mine to CBs`}
+        />
+        <Tile
+          kicker="Ag"
+          label="Mine + recycle vs demand"
+          tone="silver"
+          unit="t"
+          cadence="yearly"
+          asOf={SILVER_2024.asOf}
+          wide
+          live={`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
+          aside={`${silverVisibleMonths().toFixed(1)} mo visible`}
+        />
       </Board>
 
       <Board icon={Globe2} title="Who holds the gold" kicker={`WGC Q2 2026 · ${fmtTonnes(WGC_STOCK.aboveGroundT)} t`} open>
