@@ -12,6 +12,7 @@ import { getCbDesk } from "@/lib/dashboard/cb-desk";
 import { DollarPower } from "@/components/DollarPower";
 import { AthNow } from "@/components/AthNow";
 import { Segmented } from "@/components/Segmented";
+import { SpotTape } from "@/components/SpotTape";
 
 function fmtTonnes(n: number) {
   const sign = n > 0 ? "+" : "";
@@ -57,8 +58,10 @@ export function MetalDesk() {
         <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
-        Prices live in the bar above. First: what the January 1980 highs are worth in today’s money.
+        Prices live in the bar above. The tape is five years of COMEX. Then the 1980 highs in today’s money.
       </p>
+
+      <SpotTape />
 
       <AthNow />
 

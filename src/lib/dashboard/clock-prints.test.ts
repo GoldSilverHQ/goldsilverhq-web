@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { dollarLostVsGold, fmtUsdCompact, officialMtmUsd } from "./clock-prints.ts";
+import { dollarLostVsGold, fmtCompact, fmtUsdCompact, officialMtmUsd } from "./clock-prints.ts";
 
 describe("clock prints", () => {
   it("marks official gold to market", () => {
@@ -18,5 +18,11 @@ describe("clock prints", () => {
   it("compacts dollars", () => {
     assert.equal(fmtUsdCompact(2.3e12), "$2.3T");
     assert.equal(fmtUsdCompact(23.2e9), "$23.2B");
+  });
+
+  it("compacts other printers", () => {
+    assert.equal(fmtCompact(17.637718e12, "€"), "€17.6T");
+    assert.equal(fmtCompact(355.51e12, "CN¥"), "CN¥355.5T");
+    assert.equal(fmtCompact(1_297e12, "¥"), "¥1,297T");
   });
 });

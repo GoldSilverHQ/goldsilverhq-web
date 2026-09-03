@@ -28,10 +28,16 @@ export function latestUsM2() {
   return { bn: row.m2, year: row.year };
 }
 
-export function fmtUsdCompact(n: number) {
+export function fmtCompact(n: number, symbol = "$") {
   const abs = Math.abs(n);
-  if (abs >= 1e12) return `$${(n / 1e12).toFixed(1)}T`;
-  if (abs >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
-  if (abs >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
-  return `$${n.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
+  const num = (div: number, digits: number) =>
+    (n / div).toLocaleString("en-US", { maximumFractionDigits: digits, minimumFractionDigits: 0 });
+  if (abs >= 1e12) return `${symbol}${num(1e12, abs / 1e12 >= 100 ? 0 : 1)}T`;
+  if (abs >= 1e9) return `${symbol}${num(1e9, 1)}B`;
+  if (abs >= 1e6) return `${symbol}${num(1e6, 1)}M`;
+  return `${symbol}${n.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
+}
+
+export function fmtUsdCompact(n: number) {
+  return fmtCompact(n, "$");
 }
