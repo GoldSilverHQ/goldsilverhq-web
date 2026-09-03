@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { ClockBoards } from "@/components/ClockBoards";
+import { SpotTape } from "@/components/SpotTape";
 import { Tile, fmtMoney, fmtTonnes } from "@/components/clock-ui";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
 import { COMPILED_OFFICIAL } from "@/lib/dashboard/clock-prints";
 import { getSpotLite } from "@/lib/dashboard/spot";
 import { IMF_GOV_DEBT, SILVER_2024, coverPct, silverVisibleMonths } from "@/lib/dashboard/stocks";
+import { useEffect, useState } from "react";
 
 type Spot = { gold: number; silver: number; ratio: number; asOf?: string };
 
@@ -93,9 +95,11 @@ export function MetalsClock() {
           live={silverVisibleMonths().toFixed(1)}
         />
       </section>
-      <p className="mt-5 text-center text-sm text-muted">
+      <SpotTape compact />
+      <ClockBoards />
+      <p className="mt-8 text-center text-sm text-muted">
         <Link to="/desk" className="text-gold hover:text-gold-soft">
-          Full desk →
+          1980 ATH, dollar, and central-bank gold →
         </Link>
       </p>
     </div>

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Gold, silver, the ratio, official gold, and how much of world government debt that gold covers. Media only.",
+          "Gold and silver dashboard: spot, official stocks, printers, and who holds the metal. Media only.",
       },
     ],
   }),

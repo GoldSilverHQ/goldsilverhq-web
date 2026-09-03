@@ -43,7 +43,7 @@ function fmt(n: number, d: number) {
   return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
 }
 
-export function SpotTape() {
+export function SpotTape({ compact = false }: { compact?: boolean }) {
   const [desk, setDesk] = useState<SpotDesk | null>(null);
 
   useEffect(() => {
@@ -63,13 +63,17 @@ export function SpotTape() {
   const ratio = desk?.ratio;
 
   return (
-    <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Tape</p>
-      <h2 className="mt-2 font-display text-3xl">Five years of the screen</h2>
-      <p className="mt-2 max-w-xl text-sm text-muted">
-        COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
-      </p>
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
+    <section className="mt-8">
+      {compact ? null : (
+        <>
+          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Tape</p>
+          <h2 className="mt-2 font-display text-3xl">Five years of the screen</h2>
+          <p className="mt-2 max-w-xl text-sm text-muted">
+            COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
+          </p>
+        </>
+      )}
+      <div className={`grid gap-4 md:grid-cols-3 ${compact ? "" : "mt-6"}`}>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-gold">

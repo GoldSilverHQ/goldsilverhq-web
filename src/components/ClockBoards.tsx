@@ -80,12 +80,7 @@ export function ClockBoards() {
   const silverGap = silverSupplyGapT();
 
   return (
-    <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Stocks, printers, books</p>
-      <h2 className="mt-2 font-display text-3xl">Behind the six numbers</h2>
-      <p className="mt-2 max-w-xl text-sm text-muted">
-        Dated prints. Two official gold books on purpose: our country sum is not the WGC above-ground split.
-      </p>
+    <section className="mt-8">
 
       <Board icon={Landmark} title="Stock versus flow" kicker="the spine" open>
         <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] sm:col-span-2">
@@ -156,7 +151,7 @@ export function ClockBoards() {
         </article>
       </Board>
 
-      <Board icon={Globe2} title="Who holds the gold" kicker={`WGC Q2 2026 · ${fmtTonnes(WGC_STOCK.aboveGroundT)} t`}>
+      <Board icon={Globe2} title="Who holds the gold" kicker={`WGC Q2 2026 · ${fmtTonnes(WGC_STOCK.aboveGroundT)} t`} open>
         <Tile
           kicker="Official"
           label="Central banks and IFIs"
@@ -228,7 +223,7 @@ export function ClockBoards() {
         />
       </Board>
 
-      <Board icon={Globe2} title="Sovereign debt vs gold" kicker="two different stocks">
+      <Board icon={Globe2} title="Sovereign debt vs gold" kicker="two different stocks" open>
         <Tile
           kicker="World"
           label="Global sovereign debt"
@@ -279,6 +274,7 @@ export function ClockBoards() {
         icon={Banknote}
         title="Four printers"
         kicker={printers.source === "live" ? "ECB live · Asia compiled" : "compiled prints"}
+        open
       >
         <Tile
           kicker="USD"
