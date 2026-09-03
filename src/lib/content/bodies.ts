@@ -242,20 +242,34 @@ const goldRecall1933: Section[] = [
   {
     heading: "What Order 6102 did",
     paragraphs: [
-      "On 5 April 1933 Franklin Roosevelt signed Executive Order 6102, requiring most domestic gold coin, bullion, and certificates to be delivered to the government at the official price. Exceptions existed for industry, art, and small amounts. The Gold Reserve Act of 1934 then vested title to gold in the United States and reset the official dollar price from $20.67 to $35 an ounce.",
-      "The public claim on gold at the old mint price was removed by statute. After that, official gold is a Treasury asset, not circulating money.",
+      "On **5 April 1933** Franklin Roosevelt signed Executive Order 6102, requiring most domestic gold coin, bullion, and certificates to be delivered to the government at the official price — then **$20.67 an ounce**. Exceptions existed for industry, art, and small personal amounts. Failure to deliver was a federal offence.",
+      "The Gold Reserve Act of **30 January 1934** then vested title to monetary gold in the United States and forbade the Treasury from redeeming currency in gold for the public. The official dollar price was reset from $20.67 to **$35 an ounce**. That is a devaluation of the gold dollar by statute, not a market print.",
+      "The public claim on gold at the old mint price was removed. After that, official gold is a Treasury asset, not circulating money.",
+    ],
+  },
+  {
+    heading: "A short documentary sequence",
+    paragraphs: ["The order, then the statute, then the new official price. Not a single weekend."],
+    list: [
+      "**6 March 1933.** A national bank holiday. Gold payments and exports are already constrained.",
+      "**5 April 1933.** Order 6102: deliver gold coin, bullion, and gold certificates.",
+      "**1 May 1933.** Delivery deadline in the order (later practice and exemptions matter more than the date on the paper).",
+      "**30 January 1934.** Gold Reserve Act. Title vests in the United States. Official price $35.",
+      "**1934–1974.** Domestic monetary gold holding remains restricted. The next break on this cluster is [1971](/history/20th-century/bretton-woods-nixon-1971), a different claim.",
     ],
   },
   {
     heading: "The stated rationale",
     paragraphs: [
       "The contemporaneous justification was Depression emergency: stop hoarding, expand the money stock, raise the price level. Whether that worked as advertised is a later argument. This page stays on the documentary sequence: order, delivery, statute, new official price.",
+      "It is not the [wartime end of convertibility in 1914](/history/20th-century/classical-gold-standard-end). It is not the Nixon shock. Mixing the three makes all three unreadable.",
     ],
   },
   {
     heading: "After 1933",
     paragraphs: [
       "Americans could not legally hold monetary gold for decades. Foreign governments still had a gold window on the dollar until [August 1971](/history/20th-century/bretton-woods-nixon-1971). Those are two different claims, two different decades.",
+      "When private gold ownership was later restored, the $35 official price was already a bookkeeping fossil. The metal had a market; the dollar did not have a public gold contract.",
     ],
   },
 ];
@@ -628,8 +642,15 @@ const potosi: Section[] = [
   {
     heading: "A mountain that moved the world’s silver",
     paragraphs: [
-      "Cerro Rico at Potosí (in today’s Bolivia), worked from the 1540s, became the great silver source of the early modern Spanish empire. Output flooded Spain, Europe, and — via the Manila galleon — China.",
-      "The [world map](/maps) is the visual companion. Production and reserves sit there, not on this page.",
+      "Cerro Rico at Potosí — in today’s Bolivia — was worked from the **1540s**. For a century and more it was the great silver source of the Spanish empire. Output did not stay in the Andes. It moved to the mint, to the fleet, to Seville, into European payments, and — via the **Manila galleon** — toward China, where silver was the settlement metal of a much larger commercial system.",
+      "The lesson for this map is flow, not romance: a mountain can set the silver stock of two oceans. The [world map](/maps) is the visual companion. Production and reserves sit there, not on this page.",
+    ],
+  },
+  {
+    heading: "Why the silver moved",
+    paragraphs: [
+      "Spain needed silver to pay armies, to settle Asia trade, and to keep a far-flung fiscal machine from seizing. Europe needed a money metal that was already priced in every port. China, after the collapse of earlier paper experiments, took silver as the unit that actually arrived.",
+      "The [piece of eight](/history/silver/piece-of-eight) is the coin face of that flow. Potosí is the hole in the ground.",
     ],
   },
 ];
@@ -657,7 +678,15 @@ const silverThursday: Section[] = [
   {
     heading: "A squeeze, then a rule change",
     paragraphs: [
-      "In 1979–80 Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. The price ran toward $50 an ounce in January 1980. In late March, after exchange and dealer rule changes that raised margins and limited buys, the price collapsed. “Silver Thursday” (27 March 1980) is the name of the break.",
+      "In 1979–80 Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. The price ran toward **$50 an ounce** in January 1980. In late March, after exchange and dealer rule changes that raised margins and limited buys, the price collapsed. **Silver Thursday** — **27 March 1980** — is the name of the break.",
+      "This page stays factual: positions, rules, the print, the break. It is not a forecast, and it is not a stock story. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+    ],
+  },
+  {
+    heading: "What changed at the exchange",
+    paragraphs: [
+      "A concentrated long can bid a thin physical market. It can also meet a rulebook. COMEX and related dealers tightened margin and restricted new longs. Liquidity that had been assumed on the way up was not there on the way down. The Hunts’ brokers demanded more capital. Forced selling followed.",
+      "The [1980 high](/desk) on this site’s desk is the January print, not a target. Silver Thursday is the March unwind of that run.",
     ],
   },
 ];

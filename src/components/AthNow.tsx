@@ -96,7 +96,7 @@ export function AthNow() {
         stock.
       </p>
 
-      <div className="mt-6 grid w-full gap-4 sm:w-[35%]">
+      <div className="mt-6 grid w-full gap-4 sm:grid-cols-2">
         <MetalAth
           name="Gold"
           print={ATH_1980.gold.usd}

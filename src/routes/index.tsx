@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomeEditorial } from "@/components/HomeEditorial";
 import { MetalsClock } from "@/components/MetalsClock";
 import { SiteShell } from "@/components/SiteShell";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Global precious metals clock — GoldSilverHQ" },
+      { title: "Gold, silver, and sound money — GoldSilverHQ" },
       {
         name: "description",
         content:
-          "Gold and silver against world debt, money supply, central-bank reserves, and mine output. Clock skeleton — feeds next.",
+          "Global precious metals clock, plus the map: sound money, monetary history, and practical notes on physical metal. Media only.",
       },
     ],
   }),
@@ -20,6 +21,7 @@ function Home() {
   return (
     <SiteShell>
       <MetalsClock />
+      <HomeEditorial />
     </SiteShell>
   );
 }

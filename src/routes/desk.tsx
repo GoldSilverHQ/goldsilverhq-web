@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MetalDesk } from "@/components/MetalDesk";
+import { MoneyPath } from "@/components/MoneyPath";
 import { SiteShell } from "@/components/SiteShell";
 import { pillars } from "@/lib/content/map";
 
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/desk")({
       {
         name: "description",
         content:
-          "Gold and silver desk: 1980 highs, dollar purchasing power, and central-bank gold by country.",
+          "Gold and silver desk: five-year COMEX tape, 1980 highs, dollar purchasing power, and central-bank gold by country.",
       },
     ],
   }),
@@ -21,8 +22,11 @@ function DeskPage() {
   return (
     <SiteShell>
       <MetalDesk />
+      <div className="mx-auto max-w-6xl px-4">
+        <MoneyPath />
+      </div>
 
-      <section className="mx-auto max-w-6xl px-4 pb-12">
+      <section className="mx-auto max-w-6xl px-4 pb-12 pt-12">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read next</p>
         <h2 className="mt-2 font-display text-3xl">History and the map</h2>
         <p className="mt-2 max-w-xl text-muted">

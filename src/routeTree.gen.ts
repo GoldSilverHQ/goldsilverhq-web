@@ -10,9 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as DeskRouteImport } from './routes/desk'
 import { Route as FlowsRouteImport } from './routes/flows'
+import { Route as KitRouteImport } from './routes/kit'
 import { Route as MapsRouteImport } from './routes/maps'
+import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -26,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeskRoute = DeskRouteImport.update({
   id: '/desk',
   path: '/desk',
@@ -36,9 +44,19 @@ const FlowsRoute = FlowsRouteImport.update({
   path: '/flows',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KitRoute = KitRouteImport.update({
+  id: '/kit',
+  path: '/kit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MapsRoute = MapsRouteImport.update({
   id: '/maps',
   path: '/maps',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoldSilverIndexRoute = GoldSilverIndexRouteImport.update({
@@ -79,9 +97,12 @@ const HistoryClusterEpisodeRoute = HistoryClusterEpisodeRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
+  '/quiz': typeof QuizRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -92,9 +113,12 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
+  '/quiz': typeof QuizRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
@@ -106,9 +130,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
+  '/quiz': typeof QuizRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -121,9 +148,12 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/desk'
     | '/flows'
+    | '/kit'
     | '/maps'
+    | '/quiz'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -134,9 +164,12 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/desk'
     | '/flows'
+    | '/kit'
     | '/maps'
+    | '/quiz'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver'
@@ -147,9 +180,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/desk'
     | '/flows'
+    | '/kit'
     | '/maps'
+    | '/quiz'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -161,9 +197,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   DeskRoute: typeof DeskRoute
   FlowsRoute: typeof FlowsRoute
+  KitRoute: typeof KitRoute
   MapsRoute: typeof MapsRoute
+  QuizRoute: typeof QuizRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
@@ -182,6 +221,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/desk': {
       id: '/desk'
       path: '/desk'
@@ -196,11 +242,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlowsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kit': {
+      id: '/kit'
+      path: '/kit'
+      fullPath: '/kit'
+      preLoaderRoute: typeof KitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/maps': {
       id: '/maps'
       path: '/maps'
       fullPath: '/maps'
       preLoaderRoute: typeof MapsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold-silver/': {
@@ -257,9 +317,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   DeskRoute: DeskRoute,
   FlowsRoute: FlowsRoute,
+  KitRoute: KitRoute,
   MapsRoute: MapsRoute,
+  QuizRoute: QuizRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
