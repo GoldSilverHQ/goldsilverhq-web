@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Global precious metals clock, plus the map: sound money, monetary history, and practical notes on physical metal. Media only.",
+          "Gold, silver, the ratio, official gold, and how much of world government debt that gold covers. Media only.",
       },
     ],
   }),

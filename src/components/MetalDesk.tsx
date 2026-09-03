@@ -9,6 +9,7 @@ import {
   type CbTimeframe,
 } from "@/lib/dashboard/central-banks";
 import { getCbDesk } from "@/lib/dashboard/cb-desk";
+import { ClockBoards } from "@/components/ClockBoards";
 import { DollarPower } from "@/components/DollarPower";
 import { AthNow } from "@/components/AthNow";
 import { Segmented } from "@/components/Segmented";
@@ -58,7 +59,7 @@ export function MetalDesk() {
         <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
-        Prices live in the bar above. The tape is five years of COMEX. Then the 1980 highs in today’s money.
+        Five-year COMEX tape, 1980 in today’s money, printers, and the official books.
       </p>
 
       <SpotTape />
@@ -66,6 +67,8 @@ export function MetalDesk() {
       <AthNow />
 
       <DollarPower />
+
+      <ClockBoards />
 
       <section className="mt-10">
         <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">Official sector</p>

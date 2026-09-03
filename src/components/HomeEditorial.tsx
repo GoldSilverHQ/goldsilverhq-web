@@ -9,7 +9,7 @@ export function HomeEditorial() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read first</p>
         <h2 className="mt-2 font-display text-3xl sm:text-4xl">The map, not the tape</h2>
         <p className="mt-2 max-w-xl text-muted">
-          The clock is the numbers. These four pages are why the numbers have a date.
+          The six numbers above are the tape. These four pages are why they have a date.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {FEATURED.map((item) => (
