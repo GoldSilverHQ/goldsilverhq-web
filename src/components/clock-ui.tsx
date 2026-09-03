@@ -54,6 +54,7 @@ export function Tile({
   asOf,
   wide,
   live,
+  aside,
 }: {
   kicker: string;
   label: string;
@@ -64,6 +65,7 @@ export function Tile({
   asOf?: string;
   wide?: boolean;
   live?: ReactNode;
+  aside?: ReactNode;
 }) {
   return (
     <article className={`rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] ${wide ? "sm:col-span-2" : ""}`}>
@@ -72,7 +74,10 @@ export function Tile({
         <p className="text-xs text-faint">{asOf ?? cadence}</p>
       </div>
       <h3 className="mt-1 text-sm text-muted">{label}</h3>
-      <div className="mt-3">{live ? <Live tone={tone} unit={unit}>{live}</Live> : <Dash tone={tone} unit={unit} />}</div>
+      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        {live ? <Live tone={tone} unit={unit}>{live}</Live> : <Dash tone={tone} unit={unit} />}
+        {aside ? <p className="font-display text-lg tabular-nums text-muted">{aside}</p> : null}
+      </div>
       {note ? <p className="mt-2 text-xs text-faint">{note}</p> : null}
     </article>
   );

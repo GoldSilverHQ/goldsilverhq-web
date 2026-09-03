@@ -156,7 +156,7 @@ export function ClockBoards() {
         </article>
       </Board>
 
-      <Board icon={Globe2} title="Who holds the gold" kicker="WGC Q2 2026">
+      <Board icon={Globe2} title="Who holds the gold" kicker={`WGC Q2 2026 · ${fmtTonnes(WGC_STOCK.aboveGroundT)} t`}>
         <Tile
           kicker="Official"
           label="Central banks and IFIs"
@@ -164,6 +164,7 @@ export function ClockBoards() {
           cadence="yearly"
           asOf={formatAsOf(WGC_STOCK.asOf)}
           live={wgcShare(WGC_STOCK.officialT).toFixed(0)}
+          aside={`${fmtTonnes(WGC_STOCK.officialT)} t`}
           note="WGC above-ground split. Wider than our official book."
         />
         <Tile
@@ -173,6 +174,7 @@ export function ClockBoards() {
           cadence="yearly"
           asOf={formatAsOf(WGC_STOCK.asOf)}
           live={wgcShare(WGC_STOCK.jewelryT).toFixed(0)}
+          aside={`${fmtTonnes(WGC_STOCK.jewelryT)} t`}
           note="Mostly India and China. Not a vault float."
         />
         <Tile
@@ -182,6 +184,7 @@ export function ClockBoards() {
           cadence="yearly"
           asOf={formatAsOf(WGC_STOCK.asOf)}
           live={wgcShare(WGC_STOCK.barsCoinsT + WGC_STOCK.etfT).toFixed(0)}
+          aside={`${fmtTonnes(WGC_STOCK.barsCoinsT + WGC_STOCK.etfT)} t`}
         />
         <Tile
           kicker="Other"
@@ -190,6 +193,7 @@ export function ClockBoards() {
           cadence="yearly"
           asOf={formatAsOf(WGC_STOCK.asOf)}
           live={wgcShare(WGC_STOCK.otcT + WGC_STOCK.otherT).toFixed(0)}
+          aside={`${fmtTonnes(WGC_STOCK.otcT + WGC_STOCK.otherT)} t`}
         />
       </Board>
 
