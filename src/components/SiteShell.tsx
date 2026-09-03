@@ -9,6 +9,7 @@ const NAV = [
   { href: "/sound-money", label: "Sound Money" },
   { href: "/history", label: "History" },
   { href: "/gold-silver", label: "In Practice" },
+  { href: "/quiz", label: "Quiz" },
   { href: "/maps", label: "Maps" },
 ];
 
@@ -51,7 +52,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div className="hidden min-w-0 flex-1 md:block">
             <PriceTicker />
           </div>
-          <nav className="ml-auto hidden items-center gap-6 lg:flex">
+          <nav className="ml-auto hidden items-center gap-5 xl:flex">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -71,7 +72,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </nav>
           <button
             type="button"
-            className="ml-auto grid size-11 place-items-center text-fg lg:hidden"
+            className="ml-auto grid size-11 place-items-center text-fg xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
@@ -82,7 +83,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <PriceTicker />
         </div>
         {open ? (
-          <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 lg:hidden">
+          <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 xl:hidden">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -124,19 +125,31 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 <Link to="/sound-money" className="text-muted hover:text-gold-soft">Sound Money</Link>
                 <Link to="/history" className="text-muted hover:text-gold-soft">History</Link>
                 <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
+                <Link to="/quiz" className="text-muted hover:text-gold-soft">Quiz</Link>
+                <Link to="/kit" className="text-muted hover:text-gold-soft">Kit</Link>
                 <Link to="/maps" className="text-muted hover:text-gold-soft">Maps</Link>
               </div>
             </div>
             <div className="text-sm">
               <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Connect</p>
-              <a
-                href="https://x.com/goldsilverhq"
-                className="text-muted hover:text-gold-soft"
-                target="_blank"
-                rel="noreferrer"
-              >
-                @GoldSilverHQ on X
-              </a>
+              <div className="flex flex-col gap-2">
+                <Link to="/about" className="text-muted hover:text-gold-soft">About</Link>
+                <Link
+                  to="/sound-money/$slug"
+                  params={{ slug: "information-not-advice" }}
+                  className="text-muted hover:text-gold-soft"
+                >
+                  Information vs advice
+                </Link>
+                <a
+                  href="https://x.com/goldsilverhq"
+                  className="text-muted hover:text-gold-soft"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @GoldSilverHQ on X
+                </a>
+              </div>
             </div>
           </div>
           <p className="mt-10 text-xs text-faint">© 2026 GoldSilverHQ. Educational media. BaFin-clean.</p>

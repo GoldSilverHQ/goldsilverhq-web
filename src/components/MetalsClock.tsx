@@ -13,6 +13,13 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Segmented } from "@/components/Segmented";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
+import {
+  COMPILED_OFFICIAL,
+  dollarLostVsGold,
+  fmtUsdCompact,
+  latestUsM2,
+  officialMtmUsd,
+} from "@/lib/dashboard/clock-prints";
 import { getSpotLite } from "@/lib/dashboard/spot";
 
 type Tone = "gold" | "silver" | "fg";
@@ -124,7 +131,7 @@ function Board({
 export function MetalsClock() {
   const [face, setFace] = useState<Face>("both");
   const [spot, setSpot] = useState<Spot | null>(null);
-  const [official, setOfficial] = useState<OfficialGold | null>(null);
+  const [official, setOfficial] = useState<OfficialGold>(COMPILED_OFFICIAL);
 
   useEffect(() => {
     let on = true;
@@ -154,6 +161,9 @@ export function MetalsClock() {
     ? new Date(`${spot.asOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
     : "live";
   const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
+  const goldLoss = spot ? dollarLostVsGold(spot.gold) : null;
+  const m2 = latestUsM2();
+  const officialMtm = spot ? officialMtmUsd(official.world.tonnes, spot.gold) : null;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
@@ -214,8 +224,8 @@ export function MetalsClock() {
           label="World official gold"
           unit="t"
           cadence="yearly"
-          asOf={official ? formatAsOf(official.world.asOf) : "yearly"}
-          live={official ? fmtTonnes(official.world.tonnes) : undefined}
+          asOf={formatAsOf(official.world.asOf)}
+          live={fmtTonnes(official.world.tonnes)}
           note="Countries + IMF + ECB, one year-end vintage. Not BIS. 2026 buying is not in this stock yet."
         />
         <Tile
@@ -243,13 +253,9 @@ export function MetalsClock() {
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <div>
                 <p className="text-xs text-faint">Official reserves</p>
-                {official ? (
-                  <Live tone="gold" unit="t">
-                    {fmtTonnes(official.world.tonnes)}
-                  </Live>
-                ) : (
-                  <Dash tone="gold" unit="t" />
-                )}
+                <Live tone="gold" unit="t">
+                  {fmtTonnes(official.world.tonnes)}
+                </Live>
               </div>
               <div>
                 <p className="text-xs text-faint">Net official buying, YTD</p>
@@ -344,7 +350,15 @@ export function MetalsClock() {
         <Board icon={Globe2} title="Sovereign debt vs gold" kicker="two different stocks">
           <Tile kicker="World" label="Global sovereign debt" unit="USD" cadence="monthly" wide />
           <Tile kicker="All gold" label="Above-ground gold, mark-to-market" unit="USD" cadence="yearly" note="Jewelry plus vaults. Not all of it can be sold at the posted price." />
-          <Tile kicker="Official" label="Official gold, mark-to-market" unit="USD" cadence="monthly" />
+          <Tile
+            kicker="Official"
+            label="Official gold, mark-to-market"
+            unit="USD"
+            cadence="live"
+            asOf={spotAsOf}
+            live={officialMtm != null ? fmtUsdCompact(officialMtm) : undefined}
+            note="World official tonnes × spot. A mark, not a bid for the whole stack."
+          />
           <Tile kicker="Cover" label="All gold vs world gov debt" unit="%" cadence="yearly" />
           <Tile kicker="Cover" label="Official gold vs world gov debt" unit="%" cadence="monthly" />
         </Board>
@@ -352,11 +366,27 @@ export function MetalsClock() {
 
       {fiatOn ? (
         <Board icon={Banknote} title="Four printers" kicker="not a world M2 gag">
-          <Tile kicker="USD" label="US M2" unit="USD" cadence="monthly" note="FRED. Not per-second." />
+          <Tile
+            kicker="USD"
+            label="US M2"
+            unit="USD"
+            cadence="yearly"
+            asOf={String(m2.year)}
+            live={fmtUsdCompact(m2.bn * 1e9)}
+            note="FRED M2SL, compiled year. Not per-second. 2026 is latest, not a completed year."
+          />
           <Tile kicker="EUR" label="Euro-area M3" unit="EUR" cadence="monthly" />
           <Tile kicker="CNY" label="China M2" unit="CNY" cadence="monthly" note="Dwarfs the others. Do not hide it in a world sum." />
           <Tile kicker="JPY" label="Japan M2" unit="JPY" cadence="monthly" />
-          <Tile kicker="USD" label="Dollar vs gold since 1971" unit="% lost" cadence="monthly" note="Bretton Woods closed 15 Aug 1971." />
+          <Tile
+            kicker="USD"
+            label="Dollar vs gold since 1971"
+            unit="% lost"
+            cadence="live"
+            asOf={spotAsOf}
+            live={goldLoss != null ? `${Math.round(goldLoss * 100)}` : undefined}
+            note="Share of the 1971 gold ounce a dollar no longer buys. Bretton Woods closed 15 Aug 1971."
+          />
           <Tile kicker="EUR" label="Euro vs gold since 1999" unit="% lost" cadence="monthly" />
           <Tile kicker="CNY" label="Yuan vs gold since 1971" unit="% lost" cadence="monthly" />
           <Tile kicker="JPY" label="Yen vs gold since 1971" unit="% lost" cadence="monthly" />
@@ -389,16 +419,16 @@ export function MetalsClock() {
             label="United States official gold"
             unit="t"
             cadence="yearly"
-            asOf={official?.usa ? formatAsOf(official.usa.asOf) : "yearly"}
-            live={official?.usa ? fmtTonnes(official.usa.tonnes) : undefined}
+            asOf={official.usa ? formatAsOf(official.usa.asOf) : "yearly"}
+            live={official.usa ? fmtTonnes(official.usa.tonnes) : undefined}
           />
           <Tile
             kicker="ECB"
             label="ECB gold (institution)"
             unit="t"
             cadence="yearly"
-            asOf={official?.ecb ? formatAsOf(official.ecb.asOf) : "yearly"}
-            live={official?.ecb ? fmtTonnes(official.ecb.tonnes) : undefined}
+            asOf={official.ecb ? formatAsOf(official.ecb.asOf) : "yearly"}
+            live={official.ecb ? fmtTonnes(official.ecb.tonnes) : undefined}
             note="The ECB’s own book. Eurosystem (national banks + ECB) is a larger sum, not this tile."
           />
           <Tile
@@ -406,8 +436,8 @@ export function MetalsClock() {
             label="China reported official gold"
             unit="t"
             cadence="monthly"
-            asOf={official?.chn ? formatAsOf(official.chn.asOf) : "monthly"}
-            live={official?.chn ? fmtTonnes(official.chn.tonnes) : undefined}
+            asOf={official.chn ? formatAsOf(official.chn.asOf) : "monthly"}
+            live={official.chn ? fmtTonnes(official.chn.tonnes) : undefined}
             note="Latest PBoC/SAFE print. Newer than the world year-end stock."
           />
           <Tile
@@ -415,9 +445,9 @@ export function MetalsClock() {
             label="All official gold"
             unit="t"
             cadence="yearly"
-            asOf={official ? formatAsOf(official.world.asOf) : "yearly"}
-            live={official ? fmtTonnes(official.world.tonnes) : undefined}
-            note="Same figure as the face. Dec 2025 vintage."
+            asOf={formatAsOf(official.world.asOf)}
+            live={fmtTonnes(official.world.tonnes)}
+            note="Same figure as the face. Compiled seed if GSHQ is offline."
           />
         </Board>
       ) : null}

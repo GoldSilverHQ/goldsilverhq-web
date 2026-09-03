@@ -10,9 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as DeskRouteImport } from './routes/desk'
 import { Route as FlowsRouteImport } from './routes/flows'
+import { Route as KitRouteImport } from './routes/kit'
 import { Route as MapsRouteImport } from './routes/maps'
+import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -26,9 +29,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeskRoute = DeskRouteImport.update({
   id: '/desk',
   path: '/desk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KitRoute = KitRouteImport.update({
+  id: '/kit',
+  path: '/kit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FlowsRoute = FlowsRouteImport.update({
@@ -79,7 +97,10 @@ const HistoryClusterEpisodeRoute = HistoryClusterEpisodeRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
+  '/kit': typeof KitRoute
+  '/quiz': typeof QuizRoute
   '/flows': typeof FlowsRoute
   '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -92,7 +113,10 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
+  '/kit': typeof KitRoute
+  '/quiz': typeof QuizRoute
   '/flows': typeof FlowsRoute
   '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -106,7 +130,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
+  '/kit': typeof KitRoute
+  '/quiz': typeof QuizRoute
   '/flows': typeof FlowsRoute
   '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -121,7 +148,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/desk'
+    | '/kit'
+    | '/quiz'
     | '/flows'
     | '/maps'
     | '/gold-silver/$slug'
@@ -134,7 +164,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/desk'
+    | '/kit'
+    | '/quiz'
     | '/flows'
     | '/maps'
     | '/gold-silver/$slug'
@@ -147,7 +180,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/desk'
+    | '/kit'
+    | '/quiz'
     | '/flows'
     | '/maps'
     | '/gold-silver/$slug'
@@ -161,7 +197,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   DeskRoute: typeof DeskRoute
+  KitRoute: typeof KitRoute
+  QuizRoute: typeof QuizRoute
   FlowsRoute: typeof FlowsRoute
   MapsRoute: typeof MapsRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
@@ -182,11 +221,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/desk': {
       id: '/desk'
       path: '/desk'
       fullPath: '/desk'
       preLoaderRoute: typeof DeskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kit': {
+      id: '/kit'
+      path: '/kit'
+      fullPath: '/kit'
+      preLoaderRoute: typeof KitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flows': {
@@ -257,7 +317,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   DeskRoute: DeskRoute,
+  KitRoute: KitRoute,
+  QuizRoute: QuizRoute,
   FlowsRoute: FlowsRoute,
   MapsRoute: MapsRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
