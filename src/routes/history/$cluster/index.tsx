@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Breadcrumb, RichText } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getCluster, seoTitle } from "@/lib/content/map";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/history/$cluster/")({
   loader: ({ params }) => {
@@ -9,18 +10,17 @@ export const Route = createFileRoute("/history/$cluster/")({
     if (!cluster) throw notFound();
     return cluster;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.title ?? "History") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData }) =>
+    pageHead({
+      title: seoTitle(loaderData?.title ?? "History"),
+      description: loaderData?.summary ?? "",
+      path: `/history/${loaderData?.slug ?? ""}`,
+    }),
   component: ClusterPage,
 });
 
 function ClusterPage() {
   const cluster = Route.useLoaderData();
-  const ready = cluster.episodes.filter((e) => e.status === "ready").length;
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -39,9 +39,6 @@ function ClusterPage() {
             <RichText text={p} />
           </p>
         ))}
-        <p className="mt-6 text-sm text-faint">
-          {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
-        </p>
         <ol className="mt-10 grid gap-3">
           {cluster.episodes.map((ep, i) => (
             <li key={ep.slug}>
@@ -54,9 +51,6 @@ function ClusterPage() {
                 <span>
                   <span className="block font-medium">{ep.title}</span>
                   <span className="text-sm text-muted">{ep.summary}</span>
-                  <span className="mt-1 block text-xs text-faint">
-                    {ep.status === "ready" ? "Draft" : "Skeleton"}
-                  </span>
                 </span>
               </Link>
             </li>

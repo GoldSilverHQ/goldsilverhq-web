@@ -16,7 +16,7 @@ Hub: `/sound-money`
 4. What “backed money” means (and what it doesn’t)
 5. Information vs investment advice (short, BaFin-clean line)
 
-**Sell:** newsletter  
+**Sell:** none yet — map first  
 **Do not** park Weimar/Nixon stories here.
 
 ---
@@ -24,7 +24,7 @@ Hub: `/sound-money`
 ## Pillar 2 — Sound Money History
 Hub: `/history`  
 Overview + links to the 5 clusters below.  
-**Sell:** ebook *A Short History of Sound Money*
+**Sell:** none yet — map first
 
 ### Cluster 2.1 — Ancient money & coinage
 Hub: `/history/ancient`
@@ -72,7 +72,7 @@ Hub: `/history/silver`
 5. Silver: monetary history and industry (facts only)
 
 **History linking:**  
-episode → cluster hub → `/history` → ebook.  
+episode → cluster hub → `/history`.  
 Cross-link clusters only where it helps (e.g. America ↔ 20th century).
 
 ---
@@ -87,7 +87,7 @@ Hub: `/gold-silver`
 5. Beginner checklist: first ounces
 6. Buying online: what to watch for
 
-**Sell:** partner / sponsored link (if deal) + newsletter
+**Sell:** none yet — map first
 
 ---
 
@@ -109,16 +109,8 @@ Hub: `/gold-silver`
 
 ## Build order
 
-**Phase 1 (ebook launch):**  
-`/history` + cluster 2.4 (3 episodes: Weimar, Bretton Woods/Nixon, Fed 1907) + cluster 2.2 episode John Law
+**Now (Search Console):** structure live — pillars, clusters, episodes, sitemap, robots. Deepen copy after Google can crawl.
 
-**Phase 2:**  
-Pillar 1 hub + “What is sound money?”
-
-**Phase 3:**  
-Finish clusters 2.4 / 2.2; start pillar 3
-
-**Phase 4:**  
-Fill clusters 2.1, 2.3, 2.5 (newsletter = raw material)
+**Later:** newsletter and ebook can hang off the same map. Do not invent them on the pages first.
 
 X rule: one post → **one** episode or **one** cluster hub.

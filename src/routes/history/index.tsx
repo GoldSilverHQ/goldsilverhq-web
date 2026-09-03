@@ -3,18 +3,16 @@ import { Breadcrumb } from "@/components/Article";
 import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { SiteShell } from "@/components/SiteShell";
 import { historyClusters } from "@/lib/content/map";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/history/")({
-  head: () => ({
-    meta: [
-      { title: "History of sound money — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Interactive timeline of gold, silver, and paper money: from Lydia’s first coins through Weimar, 1933, and the Nixon shock of 1971.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "History of sound money — GoldSilverHQ",
+      description:
+        "Interactive timeline of gold, silver, and paper money: from Lydia’s first coins through Weimar, 1933, and the Nixon shock of 1971.",
+      path: "/history",
+    }),
   component: HistoryHub,
 });
 
@@ -23,11 +21,11 @@ function HistoryHub() {
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "History" }]} />
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">History</p>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Pillar 2</p>
         <h1 className="mt-2 font-display text-4xl sm:text-5xl">A short history of sound money</h1>
         <p className="mt-4 max-w-prose text-lg leading-relaxed text-muted">
-          From ancient coinage to the closing of the gold window. The timeline is the spine.
-          The clusters below group the same episodes for reading in order.
+          From ancient coinage to the closing of the gold window. The timeline is the spine. The clusters
+          below group the same episodes for reading in order.
         </p>
 
         <HistoryTimeline />
@@ -49,14 +47,6 @@ function HistoryHub() {
             </Link>
           ))}
         </div>
-        <aside className="mt-12 max-w-prose rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Ebook companion</p>
-          <p className="mt-2 font-display text-2xl text-fg">A Short History of Sound Money</p>
-          <p className="mt-2 text-sm text-muted">The book follows this same spine.</p>
-          <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-            Get launch notes →
-          </a>
-        </aside>
       </div>
     </SiteShell>
   );

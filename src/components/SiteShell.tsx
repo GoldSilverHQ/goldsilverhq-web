@@ -1,16 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { Newsletter } from "@/components/Newsletter";
 import { PriceTicker } from "@/components/PriceTicker";
 
 const NAV = [
-  { href: "/desk", label: "Desk" },
   { href: "/sound-money", label: "Sound Money" },
   { href: "/history", label: "History" },
   { href: "/gold-silver", label: "In Practice" },
-  { href: "/quiz", label: "Quiz" },
-  { href: "/maps", label: "Maps" },
+  { href: "/about", label: "About" },
 ];
 
 function Wordmark() {
@@ -54,21 +51,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </div>
           <nav className="ml-auto hidden items-center gap-5 xl:flex">
             {NAV.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-sm text-muted hover:text-gold-soft"
-              >
+              <Link key={item.href} to={item.href} className="text-sm text-muted hover:text-gold-soft">
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/"
-              hash="newsletter"
-              className="btn-gold inline-flex min-h-11 items-center rounded-full px-4 text-sm font-medium"
-            >
-              Newsletter
-            </Link>
           </nav>
           <button
             type="button"
@@ -94,46 +80,50 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/"
-              hash="newsletter"
-              onClick={() => setOpen(false)}
-              className="btn-gold mt-2 inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm font-medium"
-            >
-              Newsletter
-            </Link>
           </nav>
         ) : null}
       </header>
       <main>{children}</main>
       <footer className="mt-16 border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <Newsletter />
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <p className="text-lg">
                 <Brand compact />
               </p>
               <p className="mt-2 max-w-xs text-sm text-muted">
-                Media only. Sound money, history, and practical notes on physical metal. Not investment advice.
+                Media only. A topical map of sound money and monetary history. Not investment advice.
               </p>
             </div>
             <div className="text-sm">
-              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Pillars</p>
+              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Map</p>
               <div className="flex flex-col gap-2">
-                <Link to="/desk" className="text-muted hover:text-gold-soft">Desk</Link>
-                <Link to="/sound-money" className="text-muted hover:text-gold-soft">Sound Money</Link>
-                <Link to="/history" className="text-muted hover:text-gold-soft">History</Link>
-                <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
-                <Link to="/quiz" className="text-muted hover:text-gold-soft">Quiz</Link>
-                <Link to="/kit" className="text-muted hover:text-gold-soft">Kit</Link>
-                <Link to="/maps" className="text-muted hover:text-gold-soft">Maps</Link>
+                <Link to="/sound-money" className="text-muted hover:text-gold-soft">
+                  Sound Money
+                </Link>
+                <Link to="/history" className="text-muted hover:text-gold-soft">
+                  History
+                </Link>
+                <Link to="/gold-silver" className="text-muted hover:text-gold-soft">
+                  In Practice
+                </Link>
+                <Link to="/about" className="text-muted hover:text-gold-soft">
+                  About
+                </Link>
               </div>
             </div>
             <div className="text-sm">
-              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Connect</p>
+              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Tools</p>
               <div className="flex flex-col gap-2">
-                <Link to="/about" className="text-muted hover:text-gold-soft">About</Link>
+                <Link to="/desk" className="text-muted hover:text-gold-soft">
+                  Desk
+                </Link>
+                <Link to="/maps" className="text-muted hover:text-gold-soft">
+                  Maps
+                </Link>
+                <Link to="/quiz" className="text-muted hover:text-gold-soft">
+                  Quiz
+                </Link>
                 <Link
                   to="/sound-money/$slug"
                   params={{ slug: "information-not-advice" }}

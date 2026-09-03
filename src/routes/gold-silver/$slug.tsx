@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getPractice, seoTitle } from "@/lib/content/map";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/gold-silver/$slug")({
   loader: ({ params }) => {
@@ -9,12 +10,13 @@ export const Route = createFileRoute("/gold-silver/$slug")({
     if (!page) throw notFound();
     return page;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.title ?? "Gold & Silver") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData }) =>
+    pageHead({
+      title: seoTitle(loaderData?.title ?? "Gold & Silver"),
+      description: loaderData?.summary ?? "",
+      path: `/gold-silver/${loaderData?.slug ?? ""}`,
+      type: "article",
+    }),
   component: PracticePage,
 });
 
@@ -30,10 +32,7 @@ function PracticePage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">
-          Episode · Pillar 3
-          {page.status === "ready" ? " · Phase 3 draft" : " · Skeleton"}
-        </p>
+        <p className="text-xs text-muted">Pillar 3 · In practice</p>
         <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">

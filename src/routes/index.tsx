@@ -1,16 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { HomeEditorial } from "@/components/HomeEditorial";
-import { MetalsClock } from "@/components/MetalsClock";
+import { HomeMap } from "@/components/HomeMap";
 import { SiteShell } from "@/components/SiteShell";
+import { pageHead, siteOrigin } from "@/lib/seo";
+
+const title = "Sound money history — GoldSilverHQ";
+const description =
+  "A topical map of sound money: what it means, what happened from coinage to 1971, and how people handle gold and silver. Media only.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Gold, silver, and sound money — GoldSilverHQ" },
+    ...pageHead({ title, description, path: "/" }),
+    scripts: [
       {
-        name: "description",
-        content:
-          "Gold and silver dashboard: spot, official stocks, printers, and who holds the metal. Media only.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "GoldSilverHQ",
+          url: siteOrigin(),
+          description,
+        }),
       },
     ],
   }),
@@ -20,8 +29,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <SiteShell>
-      <MetalsClock />
-      <HomeEditorial />
+      <HomeMap />
     </SiteShell>
   );
 }
