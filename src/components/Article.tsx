@@ -1,4 +1,5 @@
-import type { Episode } from "@/lib/content/map";
+import { getBody } from "@/lib/content/bodies";
+import { continueLinks, type Episode } from "@/lib/content/map";
 
 export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
   return (
@@ -19,21 +20,99 @@ export function Breadcrumb({ items }: { items: { href?: string; label: string }[
   );
 }
 
-export function EpisodeBody({ episode }: { episode: Episode }) {
+export function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (link) {
+          const href = link[2];
+          const external = href.startsWith("http");
+          return (
+            <a
+              key={i}
+              href={href}
+              className="text-gold-soft underline decoration-line-gold underline-offset-4 hover:text-gold"
+              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+            >
+              {link[1]}
+            </a>
+          );
+        }
+        const bold = part.match(/^\*\*([^*]+)\*\*$/);
+        if (bold) return <strong key={i} className="font-semibold text-fg">{bold[1]}</strong>;
+        return <span key={i}>{part}</span>;
+      })}
+    </>
+  );
+}
+
+function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
+  if (kind === "newsletter") {
+    return (
+      <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Newsletter</p>
+        <p className="mt-2 font-display text-2xl text-fg">Notes from the map</p>
+        <p className="mt-2 text-sm text-muted">Definitions and history, not tips. Media only.</p>
+        <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
+          Subscribe →
+        </a>
+      </aside>
+    );
+  }
+  return (
+    <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Ebook companion</p>
+      <p className="mt-2 font-display text-2xl text-fg">A Short History of Sound Money</p>
+      <p className="mt-2 text-sm text-muted">The book follows this same map. Media only — not a recommendation.</p>
+      <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
+        Get launch notes →
+      </a>
+    </aside>
+  );
+}
+
+export function EpisodeBody({
+  episode,
+  clusterSlug,
+}: {
+  episode: Episode;
+  clusterSlug?: string;
+}) {
+  const sections = clusterSlug ? getBody(clusterSlug, episode.slug) : null;
+  const blocks = sections ?? [{ heading: "", paragraphs: episode.paragraphs }];
+
   return (
     <article className="max-w-prose">
-      {episode.status === "skeleton" ? (
+      {episode.status === "skeleton" && !sections ? (
         <p className="mb-6 text-sm text-gold">Skeleton in the topical map — structure first, full draft next.</p>
       ) : null}
-      {episode.paragraphs.map((p) => (
-        <p key={p.slice(0, 40)} className="mb-4 text-lg leading-relaxed text-fg/90">
-          {p}
-        </p>
+      {blocks.map((block, i) => (
+        <section key={block.heading || i} className="mb-10">
+          {block.heading ? (
+            <h2 className="mb-4 font-display text-3xl text-fg">{block.heading}</h2>
+          ) : null}
+          {block.paragraphs.map((p) => (
+            <p key={p.slice(0, 48)} className="mb-4 text-lg leading-relaxed text-fg/90">
+              <RichText text={p} />
+            </p>
+          ))}
+          {block.list?.length ? (
+            <ol className="mb-4 list-decimal space-y-3 pl-6 text-lg leading-relaxed text-fg/90">
+              {block.list.map((item) => (
+                <li key={item.slice(0, 40)}>
+                  <RichText text={item} />
+                </li>
+              ))}
+            </ol>
+          ) : null}
+        </section>
       ))}
       <div className="mt-12 border-t border-line pt-8">
         <h2 className="mb-4 font-display text-xl text-silver">Continue the map</h2>
         <ul className="grid gap-2 sm:grid-cols-2">
-          {episode.related.map((r) => (
+          {continueLinks(episode, clusterSlug).map((r) => (
             <li key={r.href}>
               <a
                 href={r.href}
@@ -45,14 +124,9 @@ export function EpisodeBody({ episode }: { episode: Episode }) {
           ))}
         </ul>
       </div>
-      <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Ebook companion</p>
-        <p className="mt-2 font-display text-2xl text-fg">A Short History of Sound Money</p>
-        <p className="mt-2 text-sm text-muted">The book follows this same map. Media only — not a recommendation.</p>
-        <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-          Get launch notes →
-        </a>
-      </aside>
+      <Conversion
+        kind={clusterSlug === "sound-money" || clusterSlug === "gold-silver" ? "newsletter" : "ebook"}
+      />
     </article>
   );
 }

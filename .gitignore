@@ -12,3 +12,6 @@ dist
 !.env.example
 screenshots
 .grok
+
+.node_modules.lock
+public/__grok/

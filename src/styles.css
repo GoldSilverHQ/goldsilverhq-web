@@ -9,6 +9,8 @@
   --color-faint: #6e6860;
   --color-gold: #c9a227;
   --color-gold-soft: #e8d48b;
+  --color-gold-deep: #7a5e10;
+  --color-gold-bright: #f3dc9a;
   --color-silver: #c5cdd4;
   --color-line: color-mix(in oklab, #f2ede4 12%, transparent);
   --color-line-gold: color-mix(in oklab, #c9a227 38%, transparent);
@@ -60,7 +62,64 @@
   }
 }
 
+@layer components {
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-bg);
+    background: linear-gradient(
+      160deg,
+      var(--color-gold-bright) 0%,
+      var(--color-gold) 38%,
+      var(--color-gold-deep) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 color-mix(in oklab, white 26%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--color-gold-deep) 55%, transparent);
+  }
+
+  .cb-bar-row {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 8rem) 1fr minmax(4.5rem, auto);
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .clock-value {
+    font-size: 1.85rem;
+    line-height: 1.1;
+  }
+
+  .clock-chevron {
+    transition: transform 150ms ease-out;
+  }
+
+  details[open] > summary .clock-chevron {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes clock-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .clock-value {
+    font-size: 2.15rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .clock-dash {
+    animation: none;
+  }
+
   html:focus-within {
     scroll-behavior: auto;
   }

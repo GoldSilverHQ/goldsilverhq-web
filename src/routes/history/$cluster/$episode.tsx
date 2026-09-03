@@ -12,7 +12,7 @@ export const Route = createFileRoute("/history/$cluster/$episode")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: seoTitle(loaderData?.episode?.title ?? "History") },
+      { title: seoTitle(loaderData?.episode?.seo?.titleTag ?? loaderData?.episode?.title ?? "History") },
       { name: "description", content: loaderData?.episode?.summary ?? "" },
     ],
   }),
@@ -34,12 +34,12 @@ function EpisodePage() {
         />
         <p className="text-xs text-muted">
           Episode · {cluster.title}
-          {episode.status === "ready" ? " · Phase 1 draft" : " · Skeleton"}
+          {episode.status === "skeleton" ? " · Skeleton" : ""}
         </p>
         <h1 className="mt-2 font-display text-4xl">{episode.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{episode.summary}</p>
         <div className="mt-10">
-          <EpisodeBody episode={episode} />
+          <EpisodeBody episode={episode} clusterSlug={cluster.slug} />
         </div>
       </div>
     </SiteShell>

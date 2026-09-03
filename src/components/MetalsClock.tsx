@@ -1,0 +1,433 @@
+import { Link } from "@tanstack/react-router";
+import {
+  Banknote,
+  Building2,
+  ChevronDown,
+  Globe2,
+  Landmark,
+  Pickaxe,
+  Scale,
+  type LucideIcon,
+} from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Segmented } from "@/components/Segmented";
+import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
+import { formatAsOf } from "@/lib/dashboard/central-banks";
+import { getSpotLite } from "@/lib/dashboard/spot";
+
+type Tone = "gold" | "silver" | "fg";
+type Face = "both" | "gold" | "silver" | "fiat";
+type Cadence = "live" | "daily" | "monthly" | "yearly" | "const";
+
+type Spot = { gold: number; silver: number; ratio: number; asOf?: string };
+
+function fmtMoney(n: number, d: number) {
+  return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+}
+
+function fmtTonnes(n: number) {
+  return Math.round(n).toLocaleString("en-US");
+}
+
+function Dash({ tone = "gold", unit }: { tone?: Tone; unit?: string }) {
+  const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
+  return (
+    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+      <span className="clock-dash">— — —</span>
+      {unit ? (
+        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
+      ) : null}
+    </p>
+  );
+}
+
+function Live({
+  children,
+  tone = "gold",
+  unit,
+}: {
+  children: ReactNode;
+  tone?: Tone;
+  unit?: string;
+}) {
+  const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
+  return (
+    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+      {children}
+      {unit ? (
+        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
+      ) : null}
+    </p>
+  );
+}
+
+function Tile({
+  kicker,
+  label,
+  tone = "gold",
+  unit,
+  note,
+  cadence,
+  asOf,
+  wide,
+  live,
+}: {
+  kicker: string;
+  label: string;
+  tone?: Tone;
+  unit?: string;
+  note?: string;
+  cadence: Cadence;
+  asOf?: string;
+  wide?: boolean;
+  live?: ReactNode;
+}) {
+  return (
+    <article className={`rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] ${wide ? "sm:col-span-2" : ""}`}>
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-xs font-semibold tracking-[0.16em] text-faint uppercase">{kicker}</p>
+        <p className="text-xs text-faint">{asOf ?? cadence}</p>
+      </div>
+      <h3 className="mt-1 text-sm text-muted">{label}</h3>
+      <div className="mt-3">{live ? <Live tone={tone} unit={unit}>{live}</Live> : <Dash tone={tone} unit={unit} />}</div>
+      {note ? <p className="mt-2 text-xs text-faint">{note}</p> : null}
+    </article>
+  );
+}
+
+function Board({
+  icon: Icon,
+  title,
+  kicker,
+  open,
+  children,
+}: {
+  icon: LucideIcon;
+  title: string;
+  kicker?: string;
+  open?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <details open={open} className="mt-6 rounded-lg bg-raised/40 p-1 shadow-[var(--shadow-border)]">
+      <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-md px-3 py-2 [&::-webkit-details-marker]:hidden">
+        <Icon className="size-4 shrink-0 text-gold" aria-hidden />
+        <span className="font-display text-2xl">{title}</span>
+        {kicker ? <span className="ml-auto text-xs text-faint">{kicker}</span> : <span className="ml-auto" />}
+        <ChevronDown className="clock-chevron size-4 text-faint" aria-hidden />
+      </summary>
+      <div className="grid gap-3 p-3 pt-1 sm:grid-cols-2 lg:grid-cols-4">{children}</div>
+    </details>
+  );
+}
+
+export function MetalsClock() {
+  const [face, setFace] = useState<Face>("both");
+  const [spot, setSpot] = useState<Spot | null>(null);
+  const [official, setOfficial] = useState<OfficialGold | null>(null);
+
+  useEffect(() => {
+    let on = true;
+    const load = () =>
+      getSpotLite()
+        .then((s) => {
+          if (on) setSpot(s);
+        })
+        .catch(() => undefined);
+    load();
+    getOfficialGold()
+      .then((d) => {
+        if (on && d) setOfficial(d);
+      })
+      .catch(() => undefined);
+    const id = setInterval(load, 15 * 60_000);
+    return () => {
+      on = false;
+      clearInterval(id);
+    };
+  }, []);
+
+  const goldOn = face === "both" || face === "gold";
+  const silverOn = face === "both" || face === "silver";
+  const fiatOn = face === "both" || face === "fiat";
+  const spotAsOf = spot?.asOf
+    ? new Date(`${spot.asOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+    : "live";
+  const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">
+        Global precious metals clock
+      </p>
+      <h1 className="mt-2 text-center font-display text-4xl leading-tight sm:text-5xl">
+        Gold is a stock. Silver is a flow.
+      </h1>
+      <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
+        Six numbers on the face. Boards underneath. Only spot ticks. Everything else waits for a dated print.
+      </p>
+      <div className="mt-5 flex justify-center">
+        <Segmented
+          label="Clock face"
+          value={face}
+          onChange={setFace}
+          options={[
+            { id: "both", label: "Both" },
+            { id: "gold", label: "Gold" },
+            { id: "silver", label: "Silver" },
+            { id: "fiat", label: "Fiat" },
+          ]}
+        />
+      </div>
+
+      <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <Tile
+          kicker="Au"
+          label="Gold spot"
+          unit="USD / oz"
+          cadence="live"
+          asOf={spotAsOf}
+          live={spot ? `$${fmtMoney(spot.gold, 0)}` : undefined}
+          note="15-minute print. Weekends stay last close."
+        />
+        <Tile
+          kicker="Ag"
+          label="Silver spot"
+          tone="silver"
+          unit="USD / oz"
+          cadence="live"
+          asOf={spotAsOf}
+          live={spot ? `$${fmtMoney(spot.silver, 2)}` : undefined}
+          note="Same feed as gold. Not a tick-by-tick tape."
+        />
+        <Tile
+          kicker="GSR"
+          label="Gold–silver ratio"
+          unit="oz Ag / oz Au"
+          cadence="live"
+          asOf={spotAsOf}
+          live={spot ? spot.ratio.toFixed(1) : undefined}
+          note="Live ratio. 15:1 is history, not a target."
+        />
+        <Tile
+          kicker="Official"
+          label="World official gold"
+          unit="t"
+          cadence="yearly"
+          asOf={official ? formatAsOf(official.world.asOf) : "yearly"}
+          live={official ? fmtTonnes(official.world.tonnes) : undefined}
+          note="Countries + IMF + ECB, one year-end vintage. Not BIS. 2026 buying is not in this stock yet."
+        />
+        <Tile
+          kicker="Cover"
+          label="World gov debt / official gold"
+          unit="%"
+          cadence="monthly"
+          note="How much of sovereign debt official gold covers — not all above-ground gold."
+        />
+        <Tile
+          kicker="Silver"
+          label="Visible silver / a year of industry"
+          tone="silver"
+          unit="months"
+          cadence="yearly"
+          note="Investment stock in vaults and ETFs, divided by annual fabrication. Gold has no analogue."
+        />
+      </section>
+
+      {goldOn || silverOn ? (
+        <Board icon={Landmark} title="Stock versus flow" kicker="the spine" open>
+          <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] sm:col-span-2">
+            <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">Gold — a stock</p>
+            <h3 className="mt-1 text-sm text-muted">Almost all ever mined still exists</h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div>
+                <p className="text-xs text-faint">Official reserves</p>
+                {official ? (
+                  <Live tone="gold" unit="t">
+                    {fmtTonnes(official.world.tonnes)}
+                  </Live>
+                ) : (
+                  <Dash tone="gold" unit="t" />
+                )}
+              </div>
+              <div>
+                <p className="text-xs text-faint">Net official buying, YTD</p>
+                <Dash tone="gold" unit="t" />
+              </div>
+              <div>
+                <p className="text-xs text-faint">CB take of mine supply</p>
+                <Dash tone="gold" unit="%" />
+              </div>
+              <div>
+                <p className="text-xs text-faint">Investment gold per person</p>
+                <Dash tone="gold" unit="g" />
+              </div>
+            </div>
+            <p className="mt-3 text-xs text-faint">Bars, jewelry, official. Deficit vs mines is not the story.</p>
+          </article>
+          <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] sm:col-span-2">
+            <p className="text-xs font-semibold tracking-[0.16em] text-silver uppercase">Silver — a flow</p>
+            <h3 className="mt-1 text-sm text-muted">A large share is used up, not stored</h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div>
+                <p className="text-xs text-faint">Official silver</p>
+                <Dash tone="silver" unit="t" />
+              </div>
+              <div>
+                <p className="text-xs text-faint">Mine + recycle vs fabrication</p>
+                <Dash tone="silver" unit="t" />
+              </div>
+              <div>
+                <p className="text-xs text-faint">Months of visible cover</p>
+                <Dash tone="silver" unit="mo" />
+              </div>
+              <div>
+                <p className="text-xs text-faint">Investment silver per person</p>
+                <Dash tone="silver" unit="oz" />
+              </div>
+            </div>
+            <p className="mt-3 text-xs text-faint">CBs hold almost none. Solar and electronics eat the leftover stock.</p>
+          </article>
+        </Board>
+      ) : null}
+
+      {goldOn ? (
+        <Board icon={Globe2} title="Who holds the gold" kicker="yearly split">
+          <Tile kicker="Official" label="Central banks and IFIs" unit="%" cadence="yearly" note="Reported holdings only." />
+          <Tile kicker="Jewelry" label="Jewelry stock" unit="%" cadence="yearly" note="Mostly India and China. Not a vault float." />
+          <Tile kicker="Investment" label="Bars, coins, ETFs" unit="%" cadence="yearly" />
+          <Tile kicker="Other" label="Industry, teeth, unaccounted" unit="%" cadence="yearly" />
+        </Board>
+      ) : null}
+
+      {goldOn || silverOn ? (
+        <Board icon={Scale} title="Ratios" kicker="price vs geology">
+          <Tile
+            kicker="Live"
+            label="Gold–silver ratio"
+            unit="×"
+            cadence="live"
+            asOf={spotAsOf}
+            live={spot ? spot.ratio.toFixed(1) : undefined}
+          />
+          <Tile
+            kicker="History"
+            label="Bimetallic mint ratio"
+            unit="Ag : Au"
+            cadence="const"
+            asOf="const"
+            live="15 : 1"
+            note="Rome / 19th-c. US coinage. Not a forecast."
+          />
+          <Tile
+            kicker="Spread"
+            label="Today vs 15 : 1"
+            unit="×"
+            cadence="live"
+            asOf={spotAsOf}
+            live={spread ? spread.toFixed(1) : undefined}
+            note="How many times the old mint ratio the market is paying."
+          />
+          <Tile
+            kicker="Geology"
+            label="Mine output ratio"
+            tone="silver"
+            unit="Ag : Au"
+            cadence="yearly"
+            note="Tonnes mined. A byproduct fact, not fair value."
+          />
+        </Board>
+      ) : null}
+
+      {goldOn ? (
+        <Board icon={Globe2} title="Sovereign debt vs gold" kicker="two different stocks">
+          <Tile kicker="World" label="Global sovereign debt" unit="USD" cadence="monthly" wide />
+          <Tile kicker="All gold" label="Above-ground gold, mark-to-market" unit="USD" cadence="yearly" note="Jewelry plus vaults. Not all of it can be sold at the posted price." />
+          <Tile kicker="Official" label="Official gold, mark-to-market" unit="USD" cadence="monthly" />
+          <Tile kicker="Cover" label="All gold vs world gov debt" unit="%" cadence="yearly" />
+          <Tile kicker="Cover" label="Official gold vs world gov debt" unit="%" cadence="monthly" />
+        </Board>
+      ) : null}
+
+      {fiatOn ? (
+        <Board icon={Banknote} title="Four printers" kicker="not a world M2 gag">
+          <Tile kicker="USD" label="US M2" unit="USD" cadence="monthly" note="FRED. Not per-second." />
+          <Tile kicker="EUR" label="Euro-area M3" unit="EUR" cadence="monthly" />
+          <Tile kicker="CNY" label="China M2" unit="CNY" cadence="monthly" note="Dwarfs the others. Do not hide it in a world sum." />
+          <Tile kicker="JPY" label="Japan M2" unit="JPY" cadence="monthly" />
+          <Tile kicker="USD" label="Dollar vs gold since 1971" unit="% lost" cadence="monthly" note="Bretton Woods closed 15 Aug 1971." />
+          <Tile kicker="EUR" label="Euro vs gold since 1999" unit="% lost" cadence="monthly" />
+          <Tile kicker="CNY" label="Yuan vs gold since 1971" unit="% lost" cadence="monthly" />
+          <Tile kicker="JPY" label="Yen vs gold since 1971" unit="% lost" cadence="monthly" />
+        </Board>
+      ) : null}
+
+      {goldOn || silverOn ? (
+        <Board icon={Pickaxe} title="Paper is three rows" kicker="not one multiple">
+          {goldOn ? (
+            <>
+              <Tile kicker="COMEX Au" label="Open interest vs registered" unit="×" cadence="daily" note="Futures claims vs metal in the registered category." />
+              <Tile kicker="LBMA" label="Clearing vs vaulted gold" unit="×" cadence="monthly" note="Turnover, not the same as COMEX." />
+              <Tile kicker="ETFs" label="Gold ETF tonnes" unit="t" cadence="daily" />
+            </>
+          ) : null}
+          {silverOn ? (
+            <>
+              <Tile kicker="COMEX Ag" label="Open interest vs registered" tone="silver" unit="×" cadence="daily" />
+              <Tile kicker="Vaults" label="London / COMEX vaulted silver" tone="silver" unit="moz" cadence="daily" />
+              <Tile kicker="ETFs" label="Silver ETF tonnes" tone="silver" unit="t" cadence="daily" />
+            </>
+          ) : null}
+        </Board>
+      ) : null}
+
+      {goldOn ? (
+        <Board icon={Building2} title="Three official books" kicker="drill-in" open>
+          <Tile
+            kicker="Fed"
+            label="United States official gold"
+            unit="t"
+            cadence="yearly"
+            asOf={official?.usa ? formatAsOf(official.usa.asOf) : "yearly"}
+            live={official?.usa ? fmtTonnes(official.usa.tonnes) : undefined}
+          />
+          <Tile
+            kicker="ECB"
+            label="ECB gold (institution)"
+            unit="t"
+            cadence="yearly"
+            asOf={official?.ecb ? formatAsOf(official.ecb.asOf) : "yearly"}
+            live={official?.ecb ? fmtTonnes(official.ecb.tonnes) : undefined}
+            note="The ECB’s own book. Eurosystem (national banks + ECB) is a larger sum, not this tile."
+          />
+          <Tile
+            kicker="PBoC"
+            label="China reported official gold"
+            unit="t"
+            cadence="monthly"
+            asOf={official?.chn ? formatAsOf(official.chn.asOf) : "monthly"}
+            live={official?.chn ? fmtTonnes(official.chn.tonnes) : undefined}
+            note="Latest PBoC/SAFE print. Newer than the world year-end stock."
+          />
+          <Tile
+            kicker="World"
+            label="All official gold"
+            unit="t"
+            cadence="yearly"
+            asOf={official ? formatAsOf(official.world.asOf) : "yearly"}
+            live={official ? fmtTonnes(official.world.tonnes) : undefined}
+            note="Same figure as the face. Dec 2025 vintage."
+          />
+        </Board>
+      ) : null}
+
+      <p className="mt-8 text-center text-sm text-muted">
+        Dashes are missing prints, not broken widgets.{" "}
+        <Link to="/desk" className="text-gold hover:text-gold-soft">
+          Desk with the figures we already store →
+        </Link>
+      </p>
+    </div>
+  );
+}

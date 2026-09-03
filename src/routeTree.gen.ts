@@ -10,7 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DeskRouteImport } from './routes/desk'
 import { Route as FlowsRouteImport } from './routes/flows'
+import { Route as MapsRouteImport } from './routes/maps'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -24,9 +26,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DeskRoute = DeskRouteImport.update({
+  id: '/desk',
+  path: '/desk',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FlowsRoute = FlowsRouteImport.update({
   id: '/flows',
   path: '/flows',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapsRoute = MapsRouteImport.update({
+  id: '/maps',
+  path: '/maps',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoldSilverIndexRoute = GoldSilverIndexRouteImport.update({
@@ -67,7 +79,9 @@ const HistoryClusterEpisodeRoute = HistoryClusterEpisodeRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -78,7 +92,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
@@ -90,7 +106,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
+  '/maps': typeof MapsRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -103,7 +121,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/desk'
     | '/flows'
+    | '/maps'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -114,7 +134,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/desk'
     | '/flows'
+    | '/maps'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver'
@@ -125,7 +147,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/desk'
     | '/flows'
+    | '/maps'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -137,7 +161,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DeskRoute: typeof DeskRoute
   FlowsRoute: typeof FlowsRoute
+  MapsRoute: typeof MapsRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
@@ -156,11 +182,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/desk': {
+      id: '/desk'
+      path: '/desk'
+      fullPath: '/desk'
+      preLoaderRoute: typeof DeskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/flows': {
       id: '/flows'
       path: '/flows'
       fullPath: '/flows'
       preLoaderRoute: typeof FlowsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/maps': {
+      id: '/maps'
+      path: '/maps'
+      fullPath: '/maps'
+      preLoaderRoute: typeof MapsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold-silver/': {
@@ -217,7 +257,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DeskRoute: DeskRoute,
   FlowsRoute: FlowsRoute,
+  MapsRoute: MapsRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,

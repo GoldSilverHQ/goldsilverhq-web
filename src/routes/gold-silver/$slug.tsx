@@ -30,11 +30,14 @@ function PracticePage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">Episode · Pillar 3</p>
+        <p className="text-xs text-muted">
+          Episode · Pillar 3
+          {page.status === "ready" ? " · Phase 3 draft" : " · Skeleton"}
+        </p>
         <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">
-          <EpisodeBody episode={page} />
+          <EpisodeBody episode={page} clusterSlug="gold-silver" />
         </div>
       </div>
     </SiteShell>
