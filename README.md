@@ -16,7 +16,7 @@ Media only. Not investment advice.
 
 History is three levels: pillar → cluster → episode. See [`topical-map.md`](./topical-map.md).
 
-Tools (not pillars): `/desk` (live numbers), `/maps`, `/quiz`.
+Homepage `/` is the metals dashboard. `/desk` is the longer tape (1980, dollar, central-bank gold). `/maps` and `/quiz` are tools.
 
 ## Search Console
 
