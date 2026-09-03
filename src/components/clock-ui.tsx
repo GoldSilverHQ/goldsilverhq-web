@@ -15,7 +15,7 @@ export function fmtTonnes(n: number) {
 export function Dash({ tone = "gold", unit }: { tone?: ClockTone; unit?: string }) {
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
-    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+    <p className={`clock-value text-center font-display tabular-nums tracking-tight ${color}`}>
       <span className="clock-dash">— — —</span>
       {unit ? (
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
@@ -35,7 +35,7 @@ export function Live({
 }) {
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
-    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+    <p className={`clock-value text-center font-display tabular-nums tracking-tight ${color}`}>
       {children}
       {unit ? (
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
@@ -68,13 +68,13 @@ export function Tile({
   aside?: ReactNode;
 }) {
   return (
-    <article className={`rounded-lg bg-surface p-4 shadow-[var(--shadow-border)] ${wide ? "sm:col-span-2" : ""}`}>
+    <article className={`rounded-lg bg-surface p-4 text-center shadow-[var(--shadow-border)] ${wide ? "sm:col-span-2" : ""}`}>
       <div className="flex items-baseline justify-between gap-2">
         <p className="text-xs font-semibold tracking-[0.16em] text-faint uppercase">{kicker}</p>
         <p className="text-xs text-faint">{asOf ?? cadence}</p>
       </div>
       <h3 className="mt-1 text-sm text-muted">{label}</h3>
-      <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+      <div className="mt-3 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1">
         {live ? <Live tone={tone} unit={unit}>{live}</Live> : <Dash tone={tone} unit={unit} />}
         {aside ? <p className="font-display text-lg tabular-nums text-muted">{aside}</p> : null}
       </div>

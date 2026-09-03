@@ -74,21 +74,21 @@ export function SpotTape({ compact = false }: { compact?: boolean }) {
         </>
       )}
       <div className={`grid gap-4 md:grid-cols-3 ${compact ? "" : "mt-6"}`}>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-gold">
             {gold ? `$${fmt(gold, 0)}` : "—"}
           </p>
           <Spark points={desk?.goldSeries ?? []} color="#c9a227" label="Gold, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-silver">
             {silver ? `$${fmt(silver, 2)}` : "—"}
           </p>
           <Spark points={desk?.silverSeries ?? []} color="#c5cdd4" label="Silver, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold-soft uppercase">Ratio</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-gold-soft">
             {ratio ? `${ratio.toFixed(1)}×` : "—"}
