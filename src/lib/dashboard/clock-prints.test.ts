@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { dollarLostVsGold, fmtCompact, fmtUsdCompact, officialMtmUsd } from "./clock-prints.ts";
+import { dollarLostVsGold, fmtCompact, fmtUsdCompact, officialMtmUsd, pctLostDisplay } from "./clock-prints.ts";
 
 describe("clock prints", () => {
   it("marks official gold to market", () => {
@@ -24,5 +24,11 @@ describe("clock prints", () => {
     assert.equal(fmtCompact(17.637718e12, "€"), "€17.6T");
     assert.equal(fmtCompact(355.51e12, "CN¥"), "CN¥355.5T");
     assert.equal(fmtCompact(1_297e12, "¥"), "¥1,297T");
+  });
+
+  it("does not round a leftover gold gram to 100% lost", () => {
+    assert.equal(pctLostDisplay(0.997), "99.7");
+    assert.equal(pctLostDisplay(0.94), "94");
+    assert.equal(pctLostDisplay(0.99), "99");
   });
 });

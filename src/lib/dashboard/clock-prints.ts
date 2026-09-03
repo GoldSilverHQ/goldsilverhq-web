@@ -23,6 +23,13 @@ export function dollarLostVsGold(spotPerOz: number) {
   return 1 - start / spotPerOz;
 }
 
+/** Never round a remainder up to 100 — 99.7% lost is not “all of it.” */
+export function pctLostDisplay(p: number) {
+  const n = p * 100;
+  if (n >= 99.5 && n < 100) return n.toFixed(1);
+  return String(Math.round(n));
+}
+
 export function latestUsM2() {
   const row = MONEY_PATH[MONEY_PATH.length - 1];
   return { bn: row.m2, year: row.year };

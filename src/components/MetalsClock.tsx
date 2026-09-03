@@ -20,6 +20,7 @@ import {
   fmtUsdCompact,
   latestUsM2,
   officialMtmUsd,
+  pctLostDisplay,
 } from "@/lib/dashboard/clock-prints";
 import { COMPILED_PRINTERS, getPrinters, type Printers } from "@/lib/dashboard/printers";
 import { getSpotLite } from "@/lib/dashboard/spot";
@@ -538,7 +539,7 @@ export function MetalsClock() {
             unit="% lost"
             cadence="live"
             asOf={spotAsOf}
-            live={goldLoss != null ? `${Math.round(goldLoss * 100)}` : undefined}
+            live={goldLoss != null ? pctLostDisplay(goldLoss) : undefined}
             note="Share of the 1971 gold ounce a dollar no longer buys. Bretton Woods closed 15 Aug 1971."
           />
           <Tile
@@ -547,7 +548,7 @@ export function MetalsClock() {
             unit="% lost"
             cadence="live"
             asOf={spotAsOf}
-            live={eurLoss != null ? `${Math.round(eurLoss * 100)}` : undefined}
+            live={eurLoss != null ? pctLostDisplay(eurLoss) : undefined}
             note="First euro session, 4 Jan 1999 (~€244/oz). Gold in euros = USD gold ÷ EURUSD."
           />
           <Tile
@@ -556,7 +557,7 @@ export function MetalsClock() {
             unit="% lost"
             cadence="live"
             asOf={spotAsOf}
-            live={cnyLoss != null ? `${Math.round(cnyLoss * 100)}` : undefined}
+            live={cnyLoss != null ? pctLostDisplay(cnyLoss) : undefined}
             note="Official 1971 rate, not a market yuan. Same gold-window dollar as the USD tile."
           />
           <Tile
@@ -565,7 +566,7 @@ export function MetalsClock() {
             unit="% lost"
             cadence="live"
             asOf={spotAsOf}
-            live={jpyLoss != null ? `${Math.round(jpyLoss * 100)}` : undefined}
+            live={jpyLoss != null ? pctLostDisplay(jpyLoss) : undefined}
             note="¥360 × $40.62 at the gold window. Bretton Woods closed 15 Aug 1971."
           />
         </Board>
