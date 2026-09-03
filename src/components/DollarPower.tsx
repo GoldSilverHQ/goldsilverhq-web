@@ -63,17 +63,17 @@ export function DollarPower() {
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Lost</p>
           <p className="mt-2 font-display text-3xl tabular-nums">{lost.toFixed(1)}%</p>
           <p className="mt-1 text-sm text-muted">of 1913 purchasing power</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Left</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-gold">{cents(left)}</p>
           <p className="mt-1 text-sm text-muted">what $1 from 1913 buys now</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">To match $1 then</p>
           <p className="mt-2 font-display text-3xl tabular-nums">${DOLLAR_MULTIPLE.toFixed(0)}</p>
           <p className="mt-1 text-sm text-muted">today’s dollars</p>

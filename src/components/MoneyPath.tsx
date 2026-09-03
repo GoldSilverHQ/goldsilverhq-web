@@ -105,19 +105,19 @@ export function MoneyPath() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">US M2</p>
           <p className="mt-2 font-display text-3xl tabular-nums">{fmtX(stats.m2x)}</p>
           <p className="mt-1 text-sm text-muted">since {stats.from.year}</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-gold">{fmtX(stats.goldx)}</p>
           <p className="mt-1 text-sm text-muted">
             M2-implied ${fmtMoney(stats.impliedGold)} · actual ${fmtMoney(stats.to.gold)}
           </p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-display text-3xl tabular-nums text-silver">{fmtX(stats.silverx)}</p>
           <p className="mt-1 text-sm text-muted">

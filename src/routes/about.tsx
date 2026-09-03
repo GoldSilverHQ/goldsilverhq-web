@@ -2,18 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { pillars } from "@/lib/content/map";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice. BaFin-clean.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "About GoldSilverHQ",
+      description:
+        "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice. BaFin-clean.",
+      path: "/about",
+    }),
   component: AboutPage,
 });
 
@@ -23,14 +21,14 @@ function AboutPage() {
       <div className="mx-auto max-w-3xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "About" }]} />
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">About</p>
-        <h1 className="mt-2 font-display text-4xl sm:text-5xl">Media. Not a desk that sells you a bar.</h1>
+        <h1 className="mt-2 font-display text-4xl sm:text-5xl">A topical map of sound money</h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
-          GoldSilverHQ publishes educational media about sound money, monetary history, and how people handle
-          physical gold and silver. The working copy is this site. The public voice is{" "}
+          GoldSilverHQ publishes educational pages about sound money, monetary history, and how people handle
+          physical gold and silver. The public voice is{" "}
           <a href="https://x.com/goldsilverhq" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
             @GoldSilverHQ
           </a>
-          .
+          . There is no newsletter or ebook on this site yet.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-muted">
           Nothing here is investment advice, a solicitation, or a personal recommendation. Markets move. Laws

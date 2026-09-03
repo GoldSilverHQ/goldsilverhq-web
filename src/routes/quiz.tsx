@@ -2,18 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { SoundMoneyQuiz } from "@/components/SoundMoneyQuiz";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/quiz")({
-  head: () => ({
-    meta: [
-      { title: "Sound money quiz — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Eight questions on sound money, backing, Weimar, 1933, and the Nixon shock. Educational media. Not investment advice.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Sound money quiz — GoldSilverHQ",
+      description:
+        "Eight questions on sound money, backing, Weimar, 1933, and the Nixon shock. Educational media. Not investment advice.",
+      path: "/quiz",
+    }),
   component: QuizPage,
 });
 

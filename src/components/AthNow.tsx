@@ -53,7 +53,7 @@ function MetalAth({
   color: string;
 }) {
   return (
-    <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+    <article className="rounded-xl bg-surface p-5 text-center shadow-[var(--shadow-border)]">
       <p className={`text-center text-xs font-semibold tracking-[0.14em] uppercase ${color}`}>{name}</p>
       <p className="mt-2 text-center text-sm text-muted">
         Printed ${money(print)} · {when}

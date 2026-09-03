@@ -48,31 +48,6 @@ export function RichText({ text }: { text: string }) {
   );
 }
 
-function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
-  if (kind === "newsletter") {
-    return (
-      <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Newsletter</p>
-        <p className="mt-2 font-display text-2xl text-fg">Notes from the map</p>
-        <p className="mt-2 text-sm text-muted">Definitions and history, not tips. Media only.</p>
-        <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-          Subscribe →
-        </a>
-      </aside>
-    );
-  }
-  return (
-    <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Ebook companion</p>
-      <p className="mt-2 font-display text-2xl text-fg">A Short History of Sound Money</p>
-      <p className="mt-2 text-sm text-muted">The book follows this same map. Media only — not a recommendation.</p>
-      <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-        Get launch notes →
-      </a>
-    </aside>
-  );
-}
-
 export function EpisodeBody({
   episode,
   clusterSlug,
@@ -124,9 +99,6 @@ export function EpisodeBody({
           ))}
         </ul>
       </div>
-      <Conversion
-        kind={clusterSlug === "sound-money" || clusterSlug === "gold-silver" ? "newsletter" : "ebook"}
-      />
     </article>
   );
 }

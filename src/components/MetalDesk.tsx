@@ -58,7 +58,7 @@ export function MetalDesk() {
         <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
-        Prices live in the bar above. The tape is five years of COMEX. Then the 1980 highs in today’s money.
+        Five-year COMEX tape, the 1980 highs in today’s money, and reported central-bank gold.
       </p>
 
       <SpotTape />

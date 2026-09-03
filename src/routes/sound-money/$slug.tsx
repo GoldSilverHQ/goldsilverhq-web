@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getIdea, seoTitle } from "@/lib/content/map";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/sound-money/$slug")({
   loader: ({ params }) => {
@@ -9,12 +10,13 @@ export const Route = createFileRoute("/sound-money/$slug")({
     if (!page) throw notFound();
     return page;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.title ?? "Sound Money") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData }) =>
+    pageHead({
+      title: seoTitle(loaderData?.title ?? "Sound Money"),
+      description: loaderData?.summary ?? "",
+      path: `/sound-money/${loaderData?.slug ?? ""}`,
+      type: "article",
+    }),
   component: IdeaPage,
 });
 
@@ -30,10 +32,7 @@ function IdeaPage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">
-          Episode · Pillar 1
-          {page.status === "ready" ? " · Phase 2 draft" : " · Skeleton"}
-        </p>
+        <p className="text-xs text-muted">Pillar 1 · Sound money</p>
         <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">
