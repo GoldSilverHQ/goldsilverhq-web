@@ -2,71 +2,109 @@ export type Section = { heading: string; paragraphs: string[]; list?: string[] }
 
 const johnLaw: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt. It is not the same episode as France’s later assignats, and it is not “France printed Weimar.”",
+    ],
+  },
+  {
     heading: "Who John Law was",
     paragraphs: [
-      "John Law (1671–1729) was a Scottish projector who reached the centre of French finance after the death of Louis XIV. France was carrying a heavy public debt. Coin was scarce relative to the claims on it. Law’s offer was simple on paper: a public bank whose notes would circulate, and a trading company that would absorb state debt and pay it from colonial revenue.",
-      "He was not the first to notice that a receipt for metal can circulate as money. That path is the rest of this [banks and paper](/history/banks-paper) cluster. Law’s distinction was scale, and the fusion of the note issue with a rising stock.",
+      "John Law (1671–1729) was a Scottish financier and monetary theorist. He argued that a well-managed paper currency, backed by sound assets and careful issue, could expand trade beyond the limits of scarce coin. After exile and travel on the Continent, he gained the ear of the French Regent, Philippe d’Orléans, in the years after Louis XIV’s death.",
+      "France faced heavy public debts from long wars. Tax revenues were strained. Coin was hoarded or exported when confidence slipped. Law offered a modern-sounding fix: a bank that issued notes, and a company that could absorb state debt while developing colonial trade, especially around the Mississippi basin and Louisiana.",
+      "Law wrote and spoke as a reformer of credit, not as a carnival promoter in the first telling. His early proposals stressed order, reserves, and trade. The historical record then shows how political need and market mania outran those restraints. He was not a cartoon printer of endless paper from day one. His System grew by stages—bank notes, company shares, debt conversion, and monopoly privileges—until the pieces locked together and then broke.",
     ],
   },
   {
     heading: "The bank and the Mississippi Company",
     paragraphs: [
-      "In 1716 Law received a charter for the Banque Générale, later taken over as the Banque Royale. Notes were payable in coin and, for a time, were preferred to clipped or uncertain specie because they were convenient and officially protected.",
-      "In 1717 he organised the company that became the Compagnie des Indes — the Mississippi Company in English usage. It collected privileges over Louisiana and other French colonial trade. The company also took on government debt: creditors were induced to swap claims on the state for shares. The bank and the company were soon two sides of one machine.",
+      "In 1716 Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
+      "Alongside the bank stood the company later known as the Mississippi Company—first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
+      "Bank and company became partners in one System. Notes supported share demand. Share enthusiasm supported confidence in notes. Offices, privileges, and propaganda tied the story of colonial wealth to the paper that funded it.",
+      "Keep the instruments distinct. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound—and plentiful notes made shares easier to bid up.",
     ],
   },
   {
     heading: "How the Mississippi Bubble inflated",
     paragraphs: [
-      "Share prices in 1719–1720 rose far beyond any contemporaneous earnings from the colony. New shares were issued into that rise. Bank notes were issued into the same rise. Notes bought shares; higher share prices were taken as proof that more notes were safe. Paris used a new word, millionaire, for people who had done this on the way up.",
-      "Credit that can be expanded at will was used to bid for a claim whose price then justified more credit. There was no independent stop once the system was fully in motion.",
+      "Through 1719 the company’s privileges widened. Debt-conversion schemes pulled more rentiers into shares. Share prices rose with extraordinary speed. New issues and subscriptions absorbed paper wealth that had nowhere else to go under the Regent’s policy mix.",
+      "Note issue expanded as the System tried to keep credit easy and share markets firm. For a time, paper seemed to create prosperity. Luxury spending rose in Paris. Speculators crowded the rue Quincampoix. Foreign visitors described a city obsessed with subscriptions and price talk.",
+      "Metal moved the wrong way for a durable note system. Coin and bullion were drawn into the whirl, then increasingly driven out as people preferred to hold or export hard money while spending the paper. When confidence is high, notes displace coin in daily use. When confidence cracks, coin leaves circulation or leaves the country. The note becomes only a claim on a thinning reserve. Law’s System leaned on confidence longer than on metal.",
+      "The peak of Mississippi share mania sits in late 1719 and early 1720. Prices that had multiplied then struggled to find new buyers at the top. Attempts to manage the market—controls on coin, forced relations between notes and shares, and shifting decrees—signaled strain rather than mastery. Peak and bust belong to that narrow window: mania cresting around the turn into 1720, collapse unfolding across 1720 as policy patches failed.",
     ],
   },
   {
     heading: "The collapse of 1720",
     paragraphs: [
-      "In 1720 confidence broke. Attempts to hold the share price, to regulate the note issue, and to force the public to treat paper as equivalent to coin arrived together and failed together. By the end of the year the paper could not be converted without destroying the institutions that had issued it. Law left France.",
-      "England’s South Sea Bubble burst in the same year. A later French paper, the [assignats](/history/banks-paper/assignats), is a different episode.",
+      "In 1720 the System broke. Share prices fell from their peak. Bank notes lost credibility as convertibility and coin rules shifted under emergency decrees. Holders who could fled into metal and foreign exchange. Shops and markets relearned to distrust paper that had been mandatory or privileged only weeks before.",
+      "Law’s political protection evaporated as losses spread through the rentier class and the court. He left France. The Regency was left with ruined paper fortunes and a long memory of “paper systems.” Later French politics would invent new paper under new names. The 1720 scar remained part of public caution.",
+      "The bust was fast in market time. What had inflated as a joint note-and-share machine deflated as both legs failed together. The Banque Royale’s paper could not be defended once the company’s equity story died and coin fled.",
+      "Do not merge this episode with the French assignats of the 1790s. Assignats were revolutionary paper tied to confiscated church and émigré lands, issued decades later under a different regime and war finance. Do not merge it with Germany’s 1923 hyperinflation either. Weimar was a twentieth-century collapse of a national paper mark after war, reparations, and extreme monetization—one cautionary rhyme among many, not the same event or the same century.",
+      "John Law’s 1720 leaves a narrower documentary lesson. Fusing a note-issuing bank with a rising equity story can inflate both until metal drains and confidence snaps. The Mississippi Bubble was paper-and-shares under Regency debt politics. It was not Weimar, and it was not the assignats.",
     ],
   },
 ];
 
 const panic1907: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support when no public central bank existed. The Federal Reserve did not cause 1907. Congress created the Fed afterward, in 1913, in part because that panic showed how thin the country’s crisis plumbing was.",
+    ],
+  },
+  {
     heading: "What the Panic of 1907 was",
     paragraphs: [
-      "In **October 1907** New York’s trust companies faced a run. The Knickerbocker Trust Company failed to get a clearing-house rescue and closed its doors. Depositors queued at other trusts. Call-money rates spiked. The stock market cracked. There was no public central bank with a standing duty to lend into that panic.",
-      "J. P. Morgan and a small group of bankers coordinated what a later generation would call a lender of last resort: gold imports, Treasury deposits, clearing-house certificates, and pressure on the strong to support the weak. The panic was short. The political argument it left behind was not.",
+      "In October 1907 a run hit the Knickerbocker Trust Company on Fifth Avenue in New York. Depositors lined up for cash. Clerks paid out until the till could not meet the line. On 22 October Knickerbocker suspended payments. Fear then moved to other trusts and to the call-money market that funded Wall Street loans.",
+      "The week had already cracked around a failed copper corner linked to F. Augustus Heinze and Charles Morse. Banks and trusts tied to those names looked weak. Depositors did not wait for slow audits. They wanted notes they could spend that day.",
+      "Call money—the overnight rate for brokers—spiked sharply. Reports put rates at twenty-five percent and higher as credit seized up. On 24 October the New York Stock Exchange nearly shut for want of cash to clear trades. Gold still settled contracts in the wider monetary order. What failed was access to cash at the point of panic. The United States had no standing public lender of last resort with a legal duty to supply emergency liquidity to the whole banking field.",
+      "The scene at Knickerbocker was ordinary panic mechanics. A crowd forms. Payment slows. Rumor names the next door. Without a backstop that can lend against good assets, solvent firms can fail for lack of cash in the hour they need it.",
     ],
   },
   {
     heading: "Why the trusts were the weak point",
     paragraphs: [
-      "National banks in New York cleared through the Clearing House, which could issue certificates and impose discipline. Trust companies sat partly outside that club. They had grown fast, held thinner cash against deposits, and looked enough like banks that a rumour could empty them.",
-      "When Knickerbocker went, the run jumped to institutions that still had assets. Liquidity, not insolvency in every case, was the immediate problem. Without a statutory centre for reserves, rescue was personal: Morgan’s library, not a statute.",
+      "National banks in New York belonged to the Clearing House. Members could pledge good paper and borrow cash overnight through that club. Trust companies took deposits and made loans, but many sat outside the Clearing House. They had no automatic seat at the table that recycled liquidity during a run.",
+      "That gap mattered. A run on a trust was a crowd at a door with no club behind it. When Knickerbocker’s condition looked bad, Clearing House support was refused. The line then moved to other trusts. Institutions inside the club had a path to emergency cash. Trusts outside it became the panic’s weak point.",
+      "Trusts had grown quickly in the years before 1907. They offered deposit-like liabilities and competed for business that looked like banking. Regulation and mutual aid did not keep pace with that growth. In a calm year the gap stayed invisible. In October it became the map of the crisis.",
+      "The 1907 crisis was therefore not a simple story that “gold failed.” Metal still defined the monetary unit. The plumbing failed. Trusts held large runnable liabilities without the same mutual support that national banks could tap through the Clearing House.",
     ],
   },
   {
     heading: "A short timeline, 1907–1913",
-    paragraphs: ["Crisis, then study, then a law. That is the sequence — not a single meeting that invented a central bank."],
+    paragraphs: [],
     list: [
-      "**October 1907.** Knickerbocker fails to get support. Runs on trust companies. Morgan’s group organises gold, certificates, and forced cooperation.",
-      "**1908.** Aldrich-Vreeland Act: emergency currency in a future panic, and a National Monetary Commission to study other countries’ banks.",
-      "**1910–12.** Commission reports; the Aldrich plan; the Pujo hearings on the “money trust.” Jekyll Island is later folklore around a draft. It is not the statute.",
-      "**23 December 1913.** Wilson signs the Federal Reserve Act. Regional reserve banks plus a Board in Washington. A public centre for reserves, with a private-bank membership structure.",
+      "**Early October 1907:** Copper speculation tied to Heinze and Morse breaks; linked banks and trusts look fragile.",
+      "**22 October 1907:** Knickerbocker Trust faces a run and suspends payments.",
+      "**23–24 October 1907:** Runs spread among trusts; call money spikes; the Exchange nearly closes.",
+      "**Late October 1907:** Morgan’s group and allied banks organize pools to support solvent firms, steady trust runs where possible, and keep the market open.",
+      "**May 1908:** Aldrich-Vreeland Act allows emergency national-bank notes against broader collateral and creates the National Monetary Commission.",
+      "**November 1910:** Senator Nelson Aldrich and a small group meet on Jekyll Island, Georgia, to draft a reserve-association plan. That meeting is design folklore, not a statute.",
+      "**1912–1913:** Pujo hearings attack the “Money Trust”; political wrapping of reform shifts toward regional reserve banks.",
+      "**23 December 1913:** President Woodrow Wilson signs the Federal Reserve Act.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The sequence is created-after, not before. The Fed was built in the wake of 1907. It was not the institution that produced the panic.",
     ],
   },
   {
     heading: "What the Fed was built to do",
     paragraphs: [
-      "The 1913 Act is an American compromise: not the Bank of England, not the Second Bank that [Jackson had destroyed](/history/america/jackson-and-the-bank). Jackson’s fight was over a federally chartered corporation that issued notes and held government funds. The Fed is regional, statutory, and born from a bankers’ panic plus a Progressive-era Congress. The names and the charter are not the same event.",
-      "The new system was meant to pool reserves, issue an elastic currency, and discount commercial paper so that 1907 would not have to be repeated as a private rescue. What the Fed later became — in war, in depression, after 1971 — is other pages. This page stops at why it was created.",
+      "In the crisis weeks, Morgan’s library at 219 Madison Avenue became a private command post. Bankers met, books were checked, and pools were pledged. Some firms received support. Knickerbocker stayed closed. Gold imports and Treasury deposits helped at the margins. The documentary point is institutional, not hagiographic: a private coalition acted as a temporary last resort because statute had not built one.",
+      "Aldrich-Vreeland (1908) was the first legislative answer. Groups of national banks could issue emergency currency against assets other than only government bonds. The same law funded a National Monetary Commission to study a permanent system.",
+      "The commission toured Europe and studied banks that already had a legal last window. The Aldrich Plan that followed imagined a central reserve association with banker influence and elastic note issue. Public politics rejected a design that looked too much like Wall Street’s private club with a federal seal.",
+      "The Federal Reserve Act of 1913 created regional Federal Reserve Banks and a federal board structure. Member banks could discount commercial paper and receive Reserve notes. The public brief was elastic currency and a lender of last resort for banks, so an October run would not depend on one private library.",
+      "Jekyll Island belongs in the record as a drafting episode in the commission era. It is not the law itself. The statute is the December 1913 Act. Morgan’s 1907 rescue belongs as a private substitute for a missing public facility—stated as fact, not as hero worship, and not as proof that one man should own the last window forever.",
     ],
   },
   {
     heading: "What came next on this cluster",
     paragraphs: [
-      "The Reserve Banks were still new when Europe went to war in 1914. Convertibility and gold shipment, which had been the international stop, broke that summer. That is the next episode: the [wartime end of the classical gold standard](/history/20th-century/classical-gold-standard-end).",
+      "After 1913 the next hinge on this cluster is the wartime break with classical gold convertibility. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years therefore sit between a private panic rescue and the wider end of the classical gold order.",
+      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. Then read the classical gold standard’s end as the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
     ],
   },
 ];
@@ -144,52 +182,64 @@ const weimar: Section[] = [
 
 const nixon: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "On 15 August 1971 the United States suspended the dollar’s convertibility into gold for foreign official holders. That act did not invent fiat money overnight. It ended the last official gold link in the post-war dollar system. Private Americans had already been barred from monetary gold under the 1933 recall. Bretton Woods did not fail in a single night. Pressure had built for years.",
+    ],
+  },
+  {
     heading: "What the Nixon shock was",
     paragraphs: [
-      "On **15 August 1971** President Richard Nixon announced a New Economic Policy: a 90-day freeze on wages and prices, a surcharge on imports, and the suspension of dollar convertibility into gold for foreign official holders. That last measure is the closing of the gold window. The weekend is the Nixon shock.",
-      "Private Americans had already been barred from holding monetary gold under the [1933 gold recall](/history/20th-century/1933-gold-recall). What ended in 1971 was a different claim: the promise that a foreign government could present dollars at the U.S. Treasury and receive gold at a fixed price.",
+      "President Richard Nixon announced a New Economic Policy on Sunday evening, 15 August 1971. The package included a ninety-day wage and price freeze. It also added a temporary import surcharge. The line that mattered for money was simpler. The United States would suspend convertibility of the dollar into gold for foreign official holders.",
+      "That suspension is often called the closing of the gold window. The window was not a retail counter for citizens. It was the official channel through which foreign treasuries and central banks could present dollars and demand gold at the posted official price. Closing it meant the dollar was no longer redeemable in metal under Bretton Woods rules.",
+      "The shock was a policy choice under stress, not a sudden discovery that gold had vanished from history. The administration framed the move as temporary. It was not reversed.",
     ],
   },
   {
     heading: "How Bretton Woods actually worked",
     paragraphs: [
-      "At Bretton Woods in 1944, member currencies were pegged to the U.S. dollar, and the dollar was defined in gold at **$35 an ounce** for official settlement. Other countries held dollars as reserves. The United States, in principle, stood ready to convert those official dollars into gold.",
-      "That is a gold-exchange standard, not the [classical gold standard that ended in 1914](/history/20th-century/classical-gold-standard-end). Before 1914, notes of several countries were routinely convertible into coin for private holders, and gold actually shipped when exchange rates hit the gold points. After 1944, the public in the United States could not redeem dollars for gold. Only official holders had a window — and only while Washington honoured it.",
+      "Bretton Woods was negotiated in 1944 at Bretton Woods, New Hampshire. Member currencies were pegged to the US dollar within narrow bands. The dollar itself was defined against gold at the official rate of thirty-five dollars per troy ounce.",
+      "That design made the system a gold-exchange standard, not a classical gold standard. Most countries held dollars as reserves. They treated those dollars as claims that could, in theory, be turned into US gold. Ordinary people in the United States did not redeem paper for coin at the Treasury window. Their private gold rights had already been removed in 1933.",
+      "Under the classical gold standard before 1914, national currencies were convertible into gold for a wider set of holders, and settlement often moved metal directly between countries. Bretton Woods put the dollar in the middle. Gold sat behind the dollar for official partners. The rest of the world sat behind the dollar peg.",
+      "For a stranger to the arithmetic, the official price was a fixed conversion board. At thirty-five dollars an ounce, one dollar was defined as one thirty-fifth of an ounce of gold. If a foreign central bank held one billion dollars of official claims, those claims implied a right to about 28.6 million ounces of US gold at the posted rate—if convertibility still worked. When claims grew faster than the gold stock, the board stopped matching the vault.",
     ],
   },
   {
     heading: "Why the gold window came under pressure",
     paragraphs: [
-      "The system assumed two things at once: the world would need more dollars as trade grew, and those dollars would stay as good as gold at $35. Robert Triffin stated the contradiction: more dollars for liquidity made the gold pledge less credible.",
-      "The London Gold Pool (1961–1968) was a central-bank effort to hold the market price of gold at $35. It collapsed in **March 1968**. A two-tier market followed — an official price among central banks, a free price for everyone else. The $35 story was already cracked.",
-      "In 1971 the crack became a run in slow motion. West Germany let the mark float in May. France had converted dollars into gold over several years. Other governments asked questions at the Treasury window. By August, U.S. gold reserves were far below the stock of official dollar claims that could, in principle, be presented.",
+      "Economist Robert Triffin stated the contradiction in plain English. The world needed more dollars to trade and hold as reserves. Those dollars came from US deficits and capital outflows. The more dollars foreigners held, the larger the official claims on US gold. If the United States supplied enough dollars for growth, confidence in convertibility weakened. If it tightened enough to protect the gold stock, the world shorted dollars. That trap is the Triffin dilemma.",
+      "From 1961 to 1968 the London Gold Pool tried to hold the free-market gold price near thirty-five dollars. Major central banks sold gold into the market when the price rose. The pool collapsed in March 1968. A two-tier market followed. The official price remained for central-bank transactions. The free market price could move away from thirty-five.",
+      "Pressure did not stop there. In May 1971 West Germany let the Deutsche Mark float. France converted dollars into gold in earlier years and kept pressing the convertibility rule. By August 1971 US gold stocks were far smaller than outstanding official dollar claims. The window could not pay every claim at thirty-five dollars if many holders presented paper at once.",
+      "This episode is distinct from the 1933 gold recall. In 1933 the United States ordered private citizens to turn in monetary gold and then raised the official gold price for government accounting. In 1971 private Americans were already outside the official gold channel. What closed was the foreign official redemption of dollars for US gold.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The dates that matter for the dollar–gold link:"],
+    paragraphs: [],
     list: [
-      "**July 1944.** Bretton Woods: others peg to the dollar; the dollar is defined at $35 gold for official holders.",
-      "**1933, still in force.** Domestic U.S. gold holding remains restricted. The 1971 decision does not “take gold from Americans.” That had already happened.",
-      "**1961–March 1968.** London Gold Pool. Collapse, then a two-tier gold market.",
-      "**May 1971.** The D-mark floats. Pressure on the remaining parities.",
-      "**15 August 1971.** Gold window closed. Convertibility for official holders is suspended.",
-      "**December 1971.** Smithsonian: new parities, official gold price raised to $38, later $42.22. Accounting, not a restored window.",
-      "**1973.** Major currencies float against each other. The pegged Bretton Woods system is over.",
+      "**1944:** Bretton Woods agreement; dollar pegged at $35 per ounce for official convertibility.",
+      "**1961–1968:** London Gold Pool defends the free-market price near $35; collapses in March 1968.",
+      "**March 1968:** Two-tier gold market; official price and free price diverge in practice.",
+      "**May 1971:** Deutsche Mark floats; European pressure on the dollar intensifies.",
+      "**August 1971:** US gold reserves stand well below official foreign claims at $35.",
+      "**13–15 August 1971:** Camp David meetings with John Connally, Paul Volcker, and other advisers.",
+      "**15 August 1971:** Nixon announces the New Economic Policy; gold window suspended.",
+      "**December 1971:** Smithsonian Agreement; official gold price raised to $38 per ounce.",
+      "**1973:** Further devaluation to $42.22; major currencies move to floating rates.",
     ],
   },
   {
     heading: "15 August 1971",
     paragraphs: [
-      "At Camp David, Nixon’s advisers — including John Connally and Paul Volcker — chose suspension rather than a deflation tight enough to defend $35, and rather than a negotiated devaluation first. The window was closed unilaterally. Nixon called the pause temporary. It was not reversed.",
-      "The rest of the Sunday-night package (the freeze, the surcharge) was domestic politics and a bargaining chip on trade. For this map, the monetary fact is narrower: the last official gold contract on the dollar was broken that weekend.",
+      "The Camp David weekend framed the announcement. Treasury Secretary John Connally and Under Secretary Paul Volcker were central voices on the gold and exchange decisions. The public speech mixed domestic inflation politics with the external dollar problem. Wage and price controls addressed the home front. The surcharge pressed trading partners. The gold suspension addressed the mismatch between dollar claims and US gold.",
+      "The key legal and monetary fact remained narrow. Foreign official holders could no longer present dollars and receive gold at the fixed official price. The dollar stayed the world’s main reserve currency in practice. Its last official gold anchor did not.",
     ],
   },
   {
     heading: "What followed",
     paragraphs: [
-      "Smithsonian tried to reset the pegs and raise the official gold price. Those numbers sat on paper. By 1973 the major currencies were floating. Central banks still held gold. None of the large currencies was a standing, public, gold-redemption contract.",
-      "Whether floating fiat is better or worse is not this page’s job. The job is the date, the architecture it ended, and the architecture it was not.",
+      "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to $42.22. Pegs still failed under market pressure.",
+      "By 1973 major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
     ],
   },
 ];
@@ -741,3 +791,112 @@ const bodies: Record<string, Section[]> = {
 export function getBody(cluster: string, slug: string): Section[] | null {
   return bodies[`${cluster}/${slug}`] ?? null;
 }
+
+/** Pillar hub /history — rendered by the history index route. */
+export const historyHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This pillar records what happened when money was metal, paper, or both. It is a documentary path through coinage, banks, crises, and statute—not a glossary of sound-money definitions, and not a sales page.",
+    ],
+  },
+  {
+    heading: "What this pillar is",
+    paragraphs: [
+      "**/history** collects narrative episodes and cluster hubs about monetary regimes. Each episode sticks to a dated claim: who acted, what rule changed, what broke, and what followed. The tone is documentary. The aim is a readable record for adults who want cause and sequence without slogans.",
+      "Pages here treat money as an institutional fact. Coins are clipped or debased. Banks issue notes against reserves or against hope. Legislatures change mint ratios, suspend convertibility, or recall metal. Crowds run on doors that cannot pay. The pillar’s job is to put those events in order and keep the mechanisms clear.",
+      "The coverage spans ancient coinage and debasement, early banks and paper experiments, American monetary statutes and panics, silver’s long political fight, and the twentieth-century arc that ends with the 1971 gold-window close. Internal links let a reader walk a century without losing the hinge dates. Cluster hubs introduce a shelf; episodes do the dated work. This top hub only maps the path.",
+    ],
+  },
+  {
+    heading: "What this pillar is not",
+    paragraphs: [
+      "This pillar is not **/sound-money**. The sound-money section explains concepts, definitions, and frameworks. History tells events. Overlap exists—both care about gold, silver, and paper—but the jobs differ. If you want “what sound money means,” use the sound-money hub. If you want “what happened in 1720, 1907, or 1971,” stay here.",
+      "History pages also avoid buy language, price forecasts, and product calls. They state facts, mechanisms, and aftermath. They do not tell you what to purchase. They do not turn a panic into a pitch. BaFin-clean documentary voice means the record stands without a call to action.",
+      "Nor is this pillar a dump of disconnected trivia. Thin lists without mechanism do not count as episodes. Each full page should leave a reader able to explain the hinge in plain English.",
+    ],
+  },
+  {
+    heading: "How the five clusters form a path",
+    paragraphs: ["Read the clusters as a path, not as five essay dumps side by side:"],
+    list: [
+      "**/history/ancient** — Coinage, debasement, and early metallic money as political tools. Start here for weight, purity, and state power over the unit.",
+      "**/history/banks-paper** — Note-issuing banks, bubbles, and paper experiments before modern central banking. Law’s Mississippi System sits on this shelf.",
+      "**/history/america** — US statutes, banks, greenbacks, and silver politics inside one republic’s monetary fights.",
+      "**/history/silver** — Silver’s monetary and political arc where it needs its own shelf rather than a footnote in gold stories.",
+      "**/history/20th-century** — The dense modern door: panic and Fed, classical gold’s end, Weimar, 1933, Bretton Woods and 1971.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "A new reader can start in ancient coinage and walk forward in time. A modern reader can enter through the twentieth-century cluster and step back only when an older rhyme is needed. Cross-links exist so you are not trapped on one shelf. The path idea matters more than reading every page on day one.",
+    ],
+  },
+  {
+    heading: "How to read an episode",
+    paragraphs: [
+      "Each episode opens with a tight claim. Section headings keep the story in order: setting, mechanism, pressure, timeline, decision, aftermath. Related links point to one or two neighbors—usually the cluster hub and the next hinge—not a pile of weak matches.",
+      "When a page names a bank, a law, or an official price, it does so to fix the mechanism. Official gold prices, note rules, and statute dates are part of the record. They are not trading signals. Brief lists appear when a timeline helps; paragraphs carry the argument. Sentences stay short where possible so the mechanism stays visible.",
+      "If two episodes rhyme—paper collapses, gold suspensions, lender-of-last-resort politics—the text will say so once and then keep the centuries apart. Merging 1720 into 1923, or 1933 into 1971, blurs what actually changed. Rhyme is not identity.",
+      "Search titles on this site name the event in catalogue style. They are not punch openings. The body does the explaining; the title does the filing.",
+    ],
+  },
+  {
+    heading: "Where to enter the modern story",
+    paragraphs: [
+      "For the modern door, start at **/history/20th-century**. That cluster hub lines up private rescue after 1907, the Fed’s creation, the end of classical gold, Weimar, the 1933 US gold recall, and the 1971 close of the dollar’s gold window. From there, open any single episode, or return to this hub and choose another cluster.",
+      "You do not need to retell Weimar or Nixon on this hub page. Those stories live in their episodes. This page only orients: five clusters as a path, episodes as dated claims, and the twentieth century as the densest entrance for readers who live downstream of 1971.",
+      "If you prefer a slower on-ramp, begin with **/history/ancient** or **/history/banks-paper**, then move forward when the mechanism is clear. Either route is valid. What matters is finishing with a chain of dated claims rather than a pile of slogans. The path is the point—money’s history as linked events, from coinage toward that modern close.",
+    ],
+  },
+];
+
+/** Cluster hub /history/20th-century — rendered by the cluster route from Cluster.sections. */
+export const twentiethCenturyHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "One century closed the gold window. The path runs from a private rescue in 1907, through a new central bank, a paper collapse in Germany, a US gold recall in 1933, and the 1971 suspension of dollar convertibility into gold for foreign official holders. This cluster is the dense core of the history pillar’s modern story for gold, paper, and central banking.",
+    ],
+  },
+  {
+    heading: "The path in one paragraph",
+    paragraphs: [
+      "In October 1907 New York trusts faced a liquidity panic; J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Congress answered with emergency currency legislation in 1908 and the Federal Reserve Act in 1913. World War I then broke the classical gold standard’s peacetime convertibility among major powers. Germany’s mark collapsed in 1923 under war, reparations, and extreme paper issue. In 1933 the United States recalled private monetary gold and revalued official gold for government accounting. Bretton Woods in 1944 rebuilt a gold-exchange system on a dollar pegged at thirty-five dollars an ounce for official holders. On 15 August 1971 that official gold window closed. The century’s monetary arc ends there for this cluster: private rescue, central bank, paper collapse, gold recall, then the Nixon suspension.",
+    ],
+  },
+  {
+    heading: "Why this cluster is the dense core",
+    paragraphs: [
+      "Earlier clusters spread across long spans. Ancient coinage covers centuries of mint practice. Banks-paper stretches from early note experiments to pre-modern bubbles. America and silver each hold statute fights that unfold over decades. The twentieth century packs regime changes into a shorter run of calendar time.",
+      "Here, private crisis management becomes public central banking. Gold convertibility ends for wartime, returns in flawed forms, then ends again for US citizens and later for foreign official dollar holders. Paper money does not merely “inflate a little”; in Weimar it loses daily function. Official prices and windows matter because they are the legal hinges, not metaphors.",
+      "That density is why this hub exists. Readers who want the modern door should start here rather than hunting isolated dates. The episodes are written so they can be read in order. Each page still stands alone with a dated claim and a short related set. Search titles stay catalogue-plain so they file cleanly; the bodies carry the documentary weight.",
+      "Cross-links to **/history/banks-paper** appear only where an older paper rhyme helps. John Law’s 1720 note-and-share fusion is such a rhyme. It is not a merged century. Do not drag Regency France into Weimar, or Weimar into Nixon, as if they were one continuous print job. Keep the shelves labeled. A rhyme teaches mechanism; a merge erases dates.",
+    ],
+  },
+  {
+    heading: "Episode index",
+    paragraphs: [],
+    list: [
+      "**/history/20th-century/panic-1907-fed** — Trust-banking liquidity crisis and the political road to the Federal Reserve; the Fed did not cause 1907; created after, not before.",
+      "**/history/20th-century/classical-gold-standard-end** — How peacetime classical convertibility broke under World War I and what “gold standard” meant in the years that followed.",
+      "**/history/20th-century/weimar-1923** — The German mark’s collapse into hyperinflation; a paper-money catastrophe with its own causes, dates, and institutional setting.",
+      "**/history/20th-century/1933-gold-recall** — US private gold recall and official revaluation; citizens lose monetary gold rights years before 1971.",
+      "**/history/20th-century/bretton-woods-nixon-1971** — Bretton Woods as a gold-exchange dollar system at $35 an ounce, and the 15 August 1971 close of the gold window for foreign official holders.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: ["Each line is a job description. Open the episode for the full mechanism. Do not expect this hub to reprint every timeline."],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Read the index top to bottom if you want the century’s sequence. Jump to Weimar or 1971 if you already know the hinge you need. Return to **/history** when you want ancient, banks-paper, America, or silver shelves. Use banks-paper for John Law when the rhyme clarifies paper-and-confidence dynamics; keep the centuries distinct in your head.",
+      "This hub does not retell every episode in full. It does not turn 1907 into a personality cult, and it does not treat 1971 as a sudden invention of paper money. It fixes the path, names each page’s job, and keeps the claim sharp: from private rescue to central bank to paper collapse to gold recall to 1971.",
+      "A practical reading order for newcomers is linear: 1907 and the Fed, then classical gold’s end, then Weimar, then 1933, then Bretton Woods and Nixon. Readers who already know one hinge can enter sideways and still use the index to see what sits before and after. Related links on each episode stay short—usually the cluster hub plus one neighbor—so the path does not dissolve into a web of weak matches.",
+      "For orientation back to the whole pillar, use **/history**. For the Weimar mechanism in detail, open the Weimar episode linked above. For the gold-window close, open the Bretton Woods page. The cluster’s value is the ordered door—not a single megapage that tries to be all five stories at once.",
+    ],
+  },
+];
