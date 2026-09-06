@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Breadcrumb, RichText } from "@/components/Article";
+import { ArticleSections, Breadcrumb, RelatedLinks, RichText } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getCluster, seoTitle } from "@/lib/content/map";
 
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/history/$cluster/")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: seoTitle(loaderData?.title ?? "History") },
+      { title: seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "History") },
       { name: "description", content: loaderData?.summary ?? "" },
     ],
   }),
@@ -34,11 +34,17 @@ function ClusterPage() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Cluster</p>
         <h1 className="mt-2 font-display text-4xl">{cluster.title}</h1>
         <p className="mt-3 max-w-2xl text-lg text-muted">{cluster.summary}</p>
-        {cluster.intro?.map((p) => (
-          <p key={p.slice(0, 40)} className="mt-4 max-w-prose text-lg leading-relaxed text-fg/90">
-            <RichText text={p} />
-          </p>
-        ))}
+        {cluster.sections?.length ? (
+          <div className="mt-8">
+            <ArticleSections sections={cluster.sections} />
+          </div>
+        ) : (
+          cluster.intro?.map((p) => (
+            <p key={p.slice(0, 40)} className="mt-4 max-w-prose text-lg leading-relaxed text-fg/90">
+              <RichText text={p} />
+            </p>
+          ))
+        )}
         <p className="mt-6 text-sm text-faint">
           {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
         </p>
@@ -62,6 +68,7 @@ function ClusterPage() {
             </li>
           ))}
         </ol>
+        {cluster.related?.length ? <RelatedLinks links={cluster.related} /> : null}
         <p className="mt-10 text-sm">
           <a href="/history" className="text-gold hover:text-gold-soft">
             ← All five history clusters

@@ -1,4 +1,4 @@
-import { getBody } from "@/lib/content/bodies";
+import { getBody, type Section } from "@/lib/content/bodies";
 import { continueLinks, type Episode } from "@/lib/content/map";
 
 export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
@@ -73,22 +73,10 @@ function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
   );
 }
 
-export function EpisodeBody({
-  episode,
-  clusterSlug,
-}: {
-  episode: Episode;
-  clusterSlug?: string;
-}) {
-  const sections = clusterSlug ? getBody(clusterSlug, episode.slug) : null;
-  const blocks = sections ?? [{ heading: "", paragraphs: episode.paragraphs }];
-
+export function ArticleSections({ sections }: { sections: Section[] }) {
   return (
-    <article className="max-w-prose">
-      {episode.status === "skeleton" && !sections ? (
-        <p className="mb-6 text-sm text-gold">Skeleton in the topical map — structure first, full draft next.</p>
-      ) : null}
-      {blocks.map((block, i) => (
+    <>
+      {sections.map((block, i) => (
         <section key={block.heading || i} className="mb-10">
           {block.heading ? (
             <h2 className="mb-4 font-display text-3xl text-fg">{block.heading}</h2>
@@ -109,21 +97,48 @@ export function EpisodeBody({
           ) : null}
         </section>
       ))}
-      <div className="mt-12 border-t border-line pt-8">
-        <h2 className="mb-4 font-display text-xl text-silver">Continue the map</h2>
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {continueLinks(episode, clusterSlug).map((r) => (
-            <li key={r.href}>
-              <a
-                href={r.href}
-                className="block rounded-lg bg-surface px-4 py-3 text-sm text-fg shadow-[var(--shadow-border)] transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]"
-              >
-                {r.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    </>
+  );
+}
+
+export function RelatedLinks({ links }: { links: { title: string; href: string }[] }) {
+  if (!links.length) return null;
+  return (
+    <div className="mt-12 max-w-prose border-t border-line pt-8">
+      <h2 className="mb-4 font-display text-xl text-silver">Continue the map</h2>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {links.map((r) => (
+          <li key={r.href}>
+            <a
+              href={r.href}
+              className="block rounded-lg bg-surface px-4 py-3 text-sm text-fg shadow-[var(--shadow-border)] transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]"
+            >
+              {r.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function EpisodeBody({
+  episode,
+  clusterSlug,
+}: {
+  episode: Episode;
+  clusterSlug?: string;
+}) {
+  const sections = clusterSlug ? getBody(clusterSlug, episode.slug) : null;
+  const blocks = sections ?? [{ heading: "", paragraphs: episode.paragraphs }];
+
+  return (
+    <article className="max-w-prose">
+      {episode.status === "skeleton" && !sections ? (
+        <p className="mb-6 text-sm text-gold">Skeleton in the topical map — structure first, full draft next.</p>
+      ) : null}
+      <ArticleSections sections={blocks} />
+      <RelatedLinks links={continueLinks(episode, clusterSlug)} />
       <Conversion
         kind={clusterSlug === "sound-money" || clusterSlug === "gold-silver" ? "newsletter" : "ebook"}
       />

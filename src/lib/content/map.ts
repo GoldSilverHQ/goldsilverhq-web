@@ -1,3 +1,5 @@
+import { twentiethCenturyHubBody, type Section } from "./bodies";
+
 export type Episode = {
   slug: string;
   title: string;
@@ -21,7 +23,22 @@ export type Cluster = {
   title: string;
   summary: string;
   intro?: string[];
+  /** Optional Section[] body, same shape as episode pages. */
+  sections?: Section[];
+  related?: { title: string; href: string }[];
+  seo?: {
+    titleTag?: string;
+  };
   episodes: Episode[];
+};
+
+/** Pillar hub /history — search title and related; body lives in historyHubBody. */
+export const historyHub = {
+  titleTag: "Sound Money History: From Coinage to 1971",
+  related: [
+    { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+    { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+  ],
 };
 
 export type Pillar = {
@@ -365,13 +382,10 @@ export const historyClusters: Cluster[] = [
           "How John Law’s bank and Mississippi Company turned paper credit into a 1720 collapse — an early case of notes without a trusted stop.",
         status: "ready",
         paragraphs: [
-          "John Law offered France a system: a public bank issuing notes, a trading company absorbing state debt, and a promise that paper could do the work of scarce coin. For a short time Paris believed him.",
-          "The Mississippi Company and the bank became two sides of the same machine. Notes were used to bid up shares; shares were used to justify more notes. When confidence broke in 1720, the paper could not be converted without destroying the system that had issued it.",
-          "The episode belongs here, in banks and paper, not in the idea pillar. It is a case of credit without a trusted stop. Cross-link to Weimar only as a later rhyme, not as the same event.",
+          "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt. It is not the same episode as France’s later assignats, and it is not “France printed Weimar.”",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
-          { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
           { title: "Assignats", href: "/history/banks-paper/assignats" },
         ],
         seo: {
@@ -380,6 +394,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "John Law and the Mississippi Bubble (1720)",
         },
       },
       {
@@ -527,9 +542,14 @@ export const historyClusters: Cluster[] = [
     title: "20th century: Fed, gold, and 1971",
     summary:
       "From the Panic of 1907 and the Fed, through Weimar hyperinflation, to the Nixon shock that closed the gold window.",
-    intro: [
-      "One path: a private rescue in New York (1907), a central bank (1913), a European paper collapse (1923), a U.S. gold recall (1933), and the closing of the dollar’s gold window (1971).",
+    sections: twentiethCenturyHubBody,
+    related: [
+      { title: "Sound Money History", href: "/history" },
+      { title: "Weimar hyperinflation (1923)", href: "/history/20th-century/weimar-1923" },
     ],
+    seo: {
+      titleTag: "20th Century Gold: Fed, Weimar, Nixon 1971",
+    },
     episodes: [
       {
         slug: "panic-1907-fed",
@@ -538,10 +558,11 @@ export const historyClusters: Cluster[] = [
           "The 1907 bankers’ panic, J. P. Morgan’s rescue, and why the United States created the Federal Reserve in 1913.",
         status: "ready",
         paragraphs: [
-          "In October 1907 New York’s trust companies faced a run. J. P. Morgan coordinated liquidity because there was no public lender of last resort. The panic made the political case for the Federal Reserve Act of 1913.",
+          "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support when no public central bank existed. The Federal Reserve did not cause 1907. Congress created the Fed afterward, in 1913, in part because that panic showed how thin the country’s crisis plumbing was.",
         ],
         related: [
-          { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
         ],
         seo: {
           primary: "panic of 1907",
@@ -634,10 +655,11 @@ export const historyClusters: Cluster[] = [
           "August 15, 1971: the United States suspended dollar–gold convertibility. How Bretton Woods worked, and why it ended.",
         status: "ready",
         paragraphs: [
-          "In August 1971 the United States suspended convertibility of the dollar into gold for foreign governments. Bretton Woods had made the dollar the centre; that weekend ended the last official gold link.",
+          "On 15 August 1971 the United States suspended the dollar’s convertibility into gold for foreign official holders. That act did not invent fiat money overnight. It ended the last official gold link in the post-war dollar system. Private Americans had already been barred from monetary gold under the 1933 recall. Bretton Woods did not fail in a single night. Pressure had built for years.",
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
         ],
         seo: {
           primary: "nixon shock 1971",
