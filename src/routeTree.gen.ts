@@ -16,6 +16,8 @@ import { Route as FlowsRouteImport } from './routes/flows'
 import { Route as KitRouteImport } from './routes/kit'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -57,6 +59,16 @@ const MapsRoute = MapsRouteImport.update({
 const QuizRoute = QuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoldSilverIndexRoute = GoldSilverIndexRouteImport.update({
@@ -103,6 +115,8 @@ export interface FileRoutesByFullPath {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -119,6 +133,8 @@ export interface FileRoutesByTo {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
@@ -136,6 +152,8 @@ export interface FileRoutesById {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
@@ -154,6 +172,8 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -170,6 +190,8 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver'
@@ -186,6 +208,8 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/gold-silver/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
@@ -203,6 +227,8 @@ export interface RootRouteChildren {
   KitRoute: typeof KitRoute
   MapsRoute: typeof MapsRoute
   QuizRoute: typeof QuizRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
@@ -261,6 +287,20 @@ declare module '@tanstack/react-router' {
       path: '/quiz'
       fullPath: '/quiz'
       preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold-silver/': {
@@ -323,6 +363,8 @@ const rootRouteChildren: RootRouteChildren = {
   KitRoute: KitRoute,
   MapsRoute: MapsRoute,
   QuizRoute: QuizRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
