@@ -45,3 +45,17 @@ export function sitemapXmlResponse(): Response {
     },
   });
 }
+
+/** Google Search Console HTML-file verification (www.goldsilverhq.com). */
+export const GOOGLE_SITE_VERIFICATION_PATH = "/googleb53ee24d705afe09.html";
+export const GOOGLE_SITE_VERIFICATION_BODY =
+  "google-site-verification: googleb53ee24d705afe09.html";
+
+export function googleSiteVerificationResponse(): Response {
+  return new Response(GOOGLE_SITE_VERIFICATION_BODY, {
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "public, max-age=3600",
+    },
+  });
+}

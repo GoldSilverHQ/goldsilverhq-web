@@ -1,13 +1,19 @@
 /**
- * Production (Nitro/Vercel) half of robots.txt + sitemap.xml.
+ * Production (Nitro/Vercel) half of robots.txt + sitemap.xml + GSC
+ * HTML-file verification.
  *
- * `public/robots.txt` and `public/sitemap.xml` are served by Vite in `dev`
- * but are not emitted in a way that wins over the TanStack Start SPA on
- * Vercel — those paths 404 as the “Missing page” HTML shell. This
- * middleware is auto-registered via `serverDir: "./server"` (same as
- * grok-pwa) and returns the bodies before Start’s not-found route.
+ * `public/` static files are served by Vite in `dev` but are not emitted
+ * in a way that wins over the TanStack Start SPA on Vercel — those paths
+ * 404 as the “Missing page” HTML shell. This middleware is auto-registered
+ * via `serverDir: "./server"` (same as grok-pwa) and returns the bodies
+ * before Start’s not-found route.
  */
-import { robotsTxtResponse, sitemapXmlResponse } from "../../src/lib/seo/robots-sitemap.ts";
+import {
+  GOOGLE_SITE_VERIFICATION_PATH,
+  googleSiteVerificationResponse,
+  robotsTxtResponse,
+  sitemapXmlResponse,
+} from "../../src/lib/seo/robots-sitemap.ts";
 
 interface SeoEvent {
   url: URL;
@@ -24,5 +30,6 @@ export default function robotsSitemapMiddleware(
   const path = event.url.pathname;
   if (path === "/robots.txt") return robotsTxtResponse();
   if (path === "/sitemap.xml") return sitemapXmlResponse();
+  if (path === GOOGLE_SITE_VERIFICATION_PATH) return googleSiteVerificationResponse();
   return next();
 }
