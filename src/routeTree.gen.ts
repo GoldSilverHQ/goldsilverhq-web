@@ -16,6 +16,7 @@ import { Route as FlowsRouteImport } from './routes/flows'
 import { Route as KitRouteImport } from './routes/kit'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/googleb53ee24d705afe09[.]html'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
@@ -59,6 +60,11 @@ const MapsRoute = MapsRouteImport.update({
 const QuizRoute = QuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Googleb53ee24d705afe09DothtmlRoute = Googleb53ee24d705afe09DothtmlRouteImport.update({
+  id: '/googleb53ee24d705afe09.html',
+  path: '/googleb53ee24d705afe09.html',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -152,6 +160,7 @@ export interface FileRoutesById {
   '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
+  '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -172,6 +181,7 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/googleb53ee24d705afe09.html'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
@@ -190,6 +200,7 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/googleb53ee24d705afe09.html'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
@@ -208,6 +219,7 @@ export interface FileRouteTypes {
     | '/kit'
     | '/maps'
     | '/quiz'
+    | '/googleb53ee24d705afe09.html'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
@@ -227,6 +239,7 @@ export interface RootRouteChildren {
   KitRoute: typeof KitRoute
   MapsRoute: typeof MapsRoute
   QuizRoute: typeof QuizRoute
+  Googleb53ee24d705afe09DothtmlRoute: typeof Googleb53ee24d705afe09DothtmlRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
@@ -287,6 +300,13 @@ declare module '@tanstack/react-router' {
       path: '/quiz'
       fullPath: '/quiz'
       preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/googleb53ee24d705afe09.html': {
+      id: '/googleb53ee24d705afe09.html'
+      path: '/googleb53ee24d705afe09.html'
+      fullPath: '/googleb53ee24d705afe09.html'
+      preLoaderRoute: typeof Googleb53ee24d705afe09DothtmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -363,6 +383,7 @@ const rootRouteChildren: RootRouteChildren = {
   KitRoute: KitRoute,
   MapsRoute: MapsRoute,
   QuizRoute: QuizRoute,
+  Googleb53ee24d705afe09DothtmlRoute: Googleb53ee24d705afe09DothtmlRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,

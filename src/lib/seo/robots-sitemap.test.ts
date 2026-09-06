@@ -2,8 +2,11 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
   CANONICAL_ORIGIN,
+  GOOGLE_SITE_VERIFICATION_BODY,
+  GOOGLE_SITE_VERIFICATION_PATH,
   PHASE1_SITEMAP_PATHS,
   ROBOTS_TXT,
+  googleSiteVerificationResponse,
   sitemapXml,
 } from "./robots-sitemap.ts";
 
@@ -32,5 +35,18 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.doesNotMatch(xml, /sound-money|gold-silver|\/ancient|\/america|1933-gold|classical-gold|assignats/);
+  });
+
+  it("serves the Google Search Console HTML verification body", async () => {
+    assert.equal(GOOGLE_SITE_VERIFICATION_PATH, "/googleb53ee24d705afe09.html");
+    assert.equal(
+      GOOGLE_SITE_VERIFICATION_BODY,
+      "google-site-verification: googleb53ee24d705afe09.html",
+    );
+
+    const response = googleSiteVerificationResponse();
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get("content-type"), "text/html; charset=utf-8");
+    assert.equal(await response.text(), GOOGLE_SITE_VERIFICATION_BODY);
   });
 });
