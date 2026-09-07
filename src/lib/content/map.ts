@@ -1,4 +1,4 @@
-import { twentiethCenturyHubBody, type Section } from "./bodies";
+import { banksPaperHubBody, twentiethCenturyHubBody, type Section } from "./bodies";
 
 export type Episode = {
   slug: string;
@@ -306,17 +306,22 @@ export const historyClusters: Cluster[] = [
   {
     slug: "banks-paper",
     title: "Banks & paper money",
-    summary: "From warehouses to public banks, and the early paper experiments that failed in public.",
-    intro: [
-      "Paper money begins as a receipt for metal. This cluster follows that receipt until it is no longer a receipt — until notes circulate because a bank or a state says they will.",
-      "All five episodes now have first drafts: warehouses, Amsterdam, the Bank of England, John Law, assignats. Read in that order. Later rhymes live in the [20th-century cluster](/history/20th-century). Do not merge 1720 with 1790 with 1923.",
+    summary:
+      "Paper money begins as a metal warehouse receipt. This cluster follows that claim-check until bank and state notes are no longer warehouse claims.",
+    sections: banksPaperHubBody,
+    related: [
+      { title: "Sound Money History", href: "/history" },
+      { title: "John Law and the Mississippi Bubble (1720)", href: "/history/banks-paper/john-law" },
     ],
+    seo: {
+      titleTag: "Banks and Paper Money: From Warehouse Receipts to Notes",
+    },
     episodes: [
       {
         slug: "warehouses-to-public-banks",
         title: "From warehouses to public banks",
         summary: "A receipt for metal starts to circulate. That is when banking begins.",
-        status: "ready",
+        status: "skeleton",
         paragraphs: [
           "Paper money begins as a warehouse receipt. The moment the receipt circulates without the metal moving, banking has begun.",
         ],
@@ -337,7 +342,7 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-amsterdam",
         title: "Bank of Amsterdam",
         summary: "The 1609 Wisselbank: public deposits, bank money, then concealed lending.",
-        status: "ready",
+        status: "skeleton",
         paragraphs: [
           "The Bank of Amsterdam is the model public deposit bank. Its later concealed lending is part of the same story as its early reputation.",
         ],
@@ -358,7 +363,7 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-england",
         title: "Bank of England",
         summary: "1694: a private corporation, a war loan, and notes that became English money.",
-        status: "ready",
+        status: "skeleton",
         paragraphs: [
           "The Bank of England fused war finance and note issue. Understanding it is required before the 20th-century cluster.",
         ],
@@ -401,7 +406,7 @@ export const historyClusters: Cluster[] = [
         slug: "assignats",
         title: "Assignats and early paper collapses",
         summary: "Revolutionary paper “backed” by land. Quantity rose; the unit died. Not a second John Law.",
-        status: "ready",
+        status: "skeleton",
         paragraphs: [
           "Assignats were paper claims supposedly tied to confiscated land. Quantity rose; confidence did not. This is an overview for early paper collapses, not a second John Law biography.",
         ],

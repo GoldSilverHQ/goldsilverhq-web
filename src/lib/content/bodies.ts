@@ -900,3 +900,58 @@ export const twentiethCenturyHubBody: Section[] = [
     ],
   },
 ];
+
+/** Cluster hub /history/banks-paper — rendered by the cluster route from Cluster.sections. */
+export const banksPaperHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Paper money begins as a metal warehouse receipt — a claim check. Someone deposits coin or bullion; a goldsmith, a mint, or a public bank writes a paper that says the metal is there. The holder can return and collect the same weight. This cluster follows that receipt until it is no longer a warehouse claim: until notes circulate because a bank or a state says they will, and the window that once paid metal is optional, delayed, or gone.",
+      "Start from the [history pillar](/history) for the five-cluster path. The long episode on this shelf is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). Read the stops in order: warehouses, Amsterdam, the Bank of England, Law, then assignats. Do not mash 1720, the 1790s, and 1923 into one crisis.",
+    ],
+  },
+  {
+    heading: "The claim: a receipt, then a note",
+    paragraphs: [
+      "A warehouse receipt is not yet a currency. It is a named claim on a named pile of metal. Banking, in the sense this map uses the word, starts when the receipt itself is used to pay. The metal stays in the vault; the paper moves. Counterparties accept the check because they trust the warehouse, not because a statute has declared the paper to be money.",
+      "Convertibility is the test. If the holder can still get coin at the window, the note is a convenient claim. If the window closes, limits payout, or pays in more paper, the note has become a bank or state liability whose value depends on policy and confidence. This hub is that sequence — not a morality play about “printing,” and not a pitch to buy metal.",
+    ],
+  },
+  {
+    heading: "The path: warehouses to assignats",
+    paragraphs: [
+      "Late-medieval and early-modern Europe stored metal with people whose business was to keep it. Italian deposit banks already knew the warehouse model. London goldsmiths, in the seventeenth century, issued running-cash notes that merchants endorsed onward. As long as redemption was ordinary, the paper was a ticket, not a rival unit. The hinge is circulation without movement of the metal: once the ticket pays a debt, the issuer has a float. [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) names that hinge as a short map page, not a finished long episode.",
+      "In **1609** Amsterdam created the Wisselbank to take in coin, credit a deposit, and let merchants settle in bank money. For a long time its reputation was that it did not lend: a florin banco was a claim on metal in the vault. Bank money often stood at an agio over worn current coin. Later the bank made concealed advances to the city and the Dutch East India Company. When that lending became public in the **1780s–1790s**, the agio collapsed. That is a Dutch public-bank story. It is not 1720, and it is not the assignats. The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) page is that stop.",
+      "The [Bank of England](/history/banks-paper/bank-of-england) was not a copy of Amsterdam. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend to the Crown and to issue notes. Subscribers put up about **£1.2 million** as a war loan. Over the eighteenth century those notes became the ordinary paper of London: national money grown from war finance, not from a city warehouse ticket alone. In **1797** the Bank Restriction Act stopped gold payout on notes; resumption came in the **1820s**. Restriction is a wartime English statute. It is not the Mississippi Bubble, and it is not Weimar.",
+      "France after Louis XIV faced heavy public debts. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a colonial trading company. In **1716** he founded the Banque Générale, later the Banque Royale, alongside the company that became the Compagnie des Indes. Notes supported share demand; shares supported confidence in notes. Through **1719** privileges widened and prices soared. Coin drained. In **1720** the System broke. That is a paper-and-shares collapse under a regency seeking relief from war debt. Open [John Law and the Mississippi Bubble](/history/banks-paper/john-law) for the instruments and the dates. This hub only places 1720 on the receipt-to-note path.",
+      "Decades later, revolutionary France issued [assignats](/history/banks-paper/assignats): paper supposedly tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By **1795–96** the paper was not a unit anyone would hold. Law is **1720** and a royal bank-plus-company. Assignats are a revolutionary fiscal instrument with a land story. Keep them apart so 1720 does not swallow 1790.",
+    ],
+  },
+  {
+    heading: "Do not mash 1720, 1790, and 1923",
+    paragraphs: [
+      "Three paper disasters rhyme. They are not one event. Law’s Mississippi System is a **1720** fusion of bank notes and company shares in Regency France. Assignats are **1789–1796** revolutionary paper on confiscated land. Germany’s mark in **1923** is a twentieth-century collapse after war, reparations, and extreme monetization. Weimar lives on the [20th-century cluster](/history/20th-century), not here.",
+      "A rhyme teaches mechanism: paper can cease to be a trusted claim on metal. A merge erases dates, regimes, and the actual stop that failed. Weimar is not “France printed again.” The Nixon gold-window close of **1971** is not the invention of paper money. Those hinges have their own episodes.",
+    ],
+  },
+  {
+    heading: "Episode index",
+    paragraphs: [
+      "Each line is a job description. The long narrative on this shelf is Law. The other four pages exist so the path is labeled; they are shorter map stops, not a claim that every episode is a finished long draft.",
+    ],
+    list: [
+      "[From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) — A receipt for metal starts to circulate; banking begins when the ticket pays a debt.",
+      "[Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) — The 1609 Wisselbank as public deposit money, then concealed lending and a lost reputation.",
+      "[Bank of England](/history/banks-paper/bank-of-england) — The 1694 war-finance charter, notes that became English money, then restriction and resumption.",
+      "[John Law and the Mississippi Bubble](/history/banks-paper/john-law) — The 1720 note-and-share System under the Regency; the full episode on this cluster.",
+      "[Assignats](/history/banks-paper/assignats) — Revolutionary paper supposedly tied to land, 1789–1796; not a second Law, and not Weimar.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Read this page top to bottom if you want the receipt-to-note path. Jump to [John Law](/history/banks-paper/john-law) if you already need the 1720 mechanism in full. Return to [Sound Money History](/history) for ancient coinage, American statutes, silver, or the twentieth-century door. Use that later cluster for 1907, Weimar, and 1971; keep those dates off this shelf except as a labeled rhyme.",
+      "This hub does not retell every stop at episode length. It fixes the claim — paper begins as a warehouse receipt — and follows that claim until bank and state notes are no longer warehouse claims. Linear order is the on-ramp: warehouses, Amsterdam, Bank of England, Law, assignats. Related links stay short: the parent pillar, and the one thickened episode.",
+    ],
+  },
+];
