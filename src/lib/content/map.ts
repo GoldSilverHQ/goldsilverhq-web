@@ -320,15 +320,16 @@ export const historyClusters: Cluster[] = [
       {
         slug: "warehouses-to-public-banks",
         title: "From warehouses to public banks",
-        summary: "A receipt for metal starts to circulate. That is when banking begins.",
-        status: "skeleton",
+        summary:
+          "Before public banks, paper money is a warehouse or goldsmith receipt — a claim check on deposited metal. Banking begins when that ticket pays.",
+        status: "ready",
         paragraphs: [
-          "Paper money begins as a warehouse receipt. The moment the receipt circulates without the metal moving, banking has begun.",
+          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault. Later crises on this shelf depend on that handoff; they are not this episode, and they are not one another.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
           { title: "Bank of Amsterdam", href: "/history/banks-paper/bank-of-amsterdam" },
-          { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
+          { title: "John Law and the Mississippi Bubble", href: "/history/banks-paper/john-law" },
         ],
         seo: {
           primary: "origin of paper money",
@@ -336,6 +337,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "From Warehouses to Public Banks",
         },
       },
       {
