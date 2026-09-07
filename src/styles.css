@@ -14,6 +14,7 @@
   --color-silver: #c5cdd4;
   --color-line: color-mix(in oklab, #f2ede4 12%, transparent);
   --color-line-gold: color-mix(in oklab, #c9a227 38%, transparent);
+  --color-on-gold: #070605;
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: 8px;
@@ -30,6 +31,7 @@
   html {
     background: var(--color-bg);
     color: var(--color-fg);
+    color-scheme: dark;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -66,7 +68,7 @@
   .btn-gold {
     position: relative;
     overflow: hidden;
-    color: var(--color-bg);
+    color: var(--color-on-gold);
     background: linear-gradient(
       160deg,
       var(--color-gold-bright) 0%,
@@ -131,4 +133,24 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Unlayered so these beat Tailwind @theme :root tokens. */
+html[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f4efe4;
+  --color-surface: #fffdf8;
+  --color-raised: #ebe4d4;
+  --color-fg: #1a1611;
+  --color-muted: #5a5349;
+  --color-faint: #7a7368;
+  --color-gold: #9a7518;
+  --color-gold-soft: #7a5a10;
+  --color-gold-deep: #5c4308;
+  --color-gold-bright: #d4b04a;
+  --color-silver: #4a5560;
+  --color-line: color-mix(in oklab, #1a1611 14%, transparent);
+  --color-line-gold: color-mix(in oklab, #9a7518 42%, transparent);
+  --color-on-gold: #1a1611;
+  --shadow-border: 0 0 0 1px color-mix(in oklab, #1a1611 12%, transparent);
 }

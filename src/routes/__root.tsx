@@ -5,6 +5,8 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "GoldSilverHQ";
 
+const THEME_BOOT = `(function(){try{var t=localStorage.getItem("gshq-theme");if(t!=="light"&&t!=="dark")t="dark";var r=document.documentElement;r.setAttribute("data-theme",t);r.style.colorScheme=t;}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();`;
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -33,8 +35,9 @@ export const Route = createRootRoute({
     ],
   }),
   component: () => (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html lang="en" className="antialiased" data-theme="dark" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
         <HeadContent />
       </head>
       <body className="bg-bg text-fg font-sans">

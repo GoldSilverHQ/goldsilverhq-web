@@ -52,22 +52,22 @@ function PathChart({
     <svg viewBox={`0 0 ${w} ${h}`} className="h-64 w-full" role="img" aria-label="Gold, silver, and US M2 indexed">
       {ticks.map((t) => (
         <g key={t}>
-          <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="#f2ede4" strokeOpacity="0.1" />
-          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10">
+          <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="var(--color-fg)" strokeOpacity="0.1" />
+          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="var(--color-faint)" fontSize="10">
             {t}
           </text>
         </g>
       ))}
       <line x1={pad.l} x2={w - pad.r} y1={y(100)} y2={y(100)} stroke="#e8d48b" strokeOpacity="0.35" strokeDasharray="4 4" />
       {showM2 ? (
-        <path d={line("m2")} fill="none" stroke="#6e6860" strokeWidth="1.6" strokeDasharray="5 4" />
+        <path d={line("m2")} fill="none" stroke="var(--color-faint)" strokeWidth="1.6" strokeDasharray="5 4" />
       ) : null}
       <path d={line("silver")} fill="none" stroke="#c5cdd4" strokeWidth="2" />
       <path d={line("gold")} fill="none" stroke="#c9a227" strokeWidth="2.2" />
       {yearTicks.map((p) => {
         const i = points.indexOf(p);
         return (
-          <text key={p.year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10">
+          <text key={p.year} x={x(i)} y={h - 8} textAnchor="middle" fill="var(--color-faint)" fontSize="10">
             {p.year}
           </text>
         );

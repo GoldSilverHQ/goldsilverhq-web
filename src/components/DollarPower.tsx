@@ -29,8 +29,8 @@ function DollarChart() {
       </defs>
       {yTicks.map((t) => (
         <g key={t}>
-          <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="#f2ede4" strokeOpacity="0.1" />
-          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10">
+          <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="var(--color-fg)" strokeOpacity="0.1" />
+          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="var(--color-faint)" fontSize="10">
             {t === 0 ? "$0" : t === 1 ? "$1.00" : `${Math.round(t * 100)}¢`}
           </text>
         </g>
@@ -41,7 +41,7 @@ function DollarChart() {
         const i = DOLLAR_POWER.findIndex((p) => p.year === year);
         if (i < 0) return null;
         return (
-          <text key={year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10">
+          <text key={year} x={x(i)} y={h - 8} textAnchor="middle" fill="var(--color-faint)" fontSize="10">
             {year}
           </text>
         );

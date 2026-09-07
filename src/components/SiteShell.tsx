@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
   { href: "/sound-money", label: "Sound Money" },
@@ -64,6 +65,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
+          <ThemeToggle />
         </div>
         <div className="border-t border-line px-4 py-2 md:hidden">
           <PriceTicker />
