@@ -343,15 +343,16 @@ export const historyClusters: Cluster[] = [
       {
         slug: "bank-of-amsterdam",
         title: "Bank of Amsterdam",
-        summary: "The 1609 Wisselbank: public deposits, bank money, then concealed lending.",
-        status: "skeleton",
+        summary:
+          "The 1609 Wisselbank turns metal deposits into public giro balances — a civic ledger between warehouse receipts and later note banks.",
+        status: "ready",
         paragraphs: [
-          "The Bank of Amsterdam is the model public deposit bank. Its later concealed lending is part of the same story as its early reputation.",
+          "The Bank of Amsterdam is the model public deposit bank: mixed coin in, bank money out, bills settled by giro. Concealed lending later broke the reputation that a florin banco was only a claim on metal.",
         ],
         related: [
+          { title: "Banks & paper hub", href: "/history/banks-paper" },
           { title: "Warehouses to public banks", href: "/history/banks-paper/warehouses-to-public-banks" },
           { title: "Bank of England", href: "/history/banks-paper/bank-of-england" },
-          { title: "What “backed” means", href: "/sound-money/backed-money" },
         ],
         seo: {
           primary: "bank of amsterdam",
@@ -359,6 +360,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "The Bank of Amsterdam (Wisselbank, 1609)",
         },
       },
       {

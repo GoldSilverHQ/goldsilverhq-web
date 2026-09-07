@@ -582,16 +582,64 @@ const warehouses: Section[] = [
 
 const amsterdam: Section[] = [
   {
-    heading: "A public deposit bank, 1609",
+    heading: "",
     paragraphs: [
-      "The Bank of Amsterdam (Wisselbank) was set up by the city to take in coin, credit a deposit, and let merchants settle in bank guilders. Bills of exchange on Amsterdam were paid through its books. For a long time its reputation was that it did not lend: a florin banco was a claim on metal in the vault, not on a loan book.",
-      "A public bank can be a warehouse with better accounting. It can also become a lender in secret. Amsterdam did both, in sequence.",
+      "The Bank of Amsterdam — the Wisselbank, opened in **1609** — turns metal deposits into public transferable balances. A merchant brings mixed coin. The city credits a bank guilder. Bills on Amsterdam settle by giro: a book entry, without the metal leaving the vault. That civic ledger sits between a warehouse receipt and later note-issuing banks. It is not a modern central bank.",
+      "This stop on the [banks and paper](/history/banks-paper) shelf follows [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). The prior page is the hinge from a private claim-check to a public table. This page is the table: giro as settlement, the agio, then concealed lending.",
     ],
   },
   {
-    heading: "The concealed lending",
+    heading: "Why a civic ledger",
     paragraphs: [
-      "From the late seventeenth century, and more clearly in the eighteenth, the bank made advances to the city and to the Dutch East India Company that were not advertised as the old warehouse model. When that lending became public knowledge in the 1780s–1790s, the agio collapsed and the institution never recovered its old role.",
+      "Amsterdam in the early seventeenth century was a bill-of-exchange market. Large debts among merchants were written on the city. Payment still meant assembling a pile of coin — foreign dollars, clipped pieces, worn domestic issues — and arguing which pile counted. Private cashiers already kept money and made transfers. Failures and quality fights still reached the wholesale market.",
+      "The city answered with a public deposit bank. An ordinance of **31 January 1609** created the Amsterdamsche Wisselbank. Mixed specie went in. A standard credit came out. Large bills drawn on Amsterdam were to be settled through its books. The point was not to invent a national paper currency. It was to give the bill market one ledger everyone had to use — the public-bank job named on the [warehouses](/history/banks-paper/warehouses-to-public-banks) page.",
+    ],
+  },
+  {
+    heading: "How giro money settles",
+    paragraphs: [
+      "Giro is settlement by transfer of a balance. The depositor does not collect coin and cart it across the Dam. He orders the bank to debit his account and credit another. The metal stays. The books move. For a bill falling due, that is payment.",
+      "Keep the instruments distinct. A **warehouse receipt** is a claim on identified metal. A **giro balance** is a book credit at a public table, transferable to another account-holder. A **bank note** is a circulating promise to pay, typically issued by a later corporation with a loan book. Amsterdam’s ordinary machine is the second. It does not need a printed note walking the street. It needs a merchant with an account, or a cashier who has one, and a rule that large bills clear on those books.",
+      "Convertibility still mattered. Coin could be withdrawn, subject to fees and to the bank’s rules. Fees made leaving the metal in, and paying on the books, the cheaper habit. As long as the window was ordinary, the florin banco was a convenient claim on a civic vault.",
+      "From **1683** the bank issued receipts for coin left on deposit. The receipt was a claim on those coins. The bank balance was a transferable credit in banco. To take the original metal out, a holder needed the receipt. To pay a bill, he needed only the balance. The two claims could be sold apart. That split made bank money a settlement unit even when a given bag of coin stayed put. It is still not a Bank of England note. It is a more complete giro.",
+    ],
+  },
+  {
+    heading: "Florin banco and the agio",
+    paragraphs: [
+      "Bank money and current money were not the same pile. Current coin in daily circulation was worn, mixed, and often light. Banco was the credit on the Wisselbank’s books, written as a full-weight guilder. Because banco was better money for large settlement, it usually stood at a premium — the **agio** — over current coin. The premium often sat near **four to five percent** while the reputation held. The agio was quoted. Merchants treated it as information about the unit.",
+      "A florin banco, on the advertised model, was a claim on metal in the vault, not on a loan. That is why Adam Smith could still describe the bank, in **1776**, as a place that took in coin and did not lend. The later books would show the reputation running ahead of the vault.",
+      "None of this made Amsterdam a modern central bank. There was no national note issue. There was no statutory duty to backstop a private banking field. The Wisselbank was a municipal giro table for the bill market. It could be leaned on by the city that owned it. That fiscal temptation is the next section. It is not **1694** London.",
+    ],
+  },
+  {
+    heading: "Concealed lending",
+    paragraphs: [
+      "A public bank can be a warehouse with better accounting. It can also become a lender in secret. Amsterdam did both, in sequence.",
+      "From the late seventeenth century, and more clearly in the eighteenth, the bank made advances to the city of Amsterdam and to the Dutch East India Company that were not advertised as the old warehouse model. Overdrafts against the vault are still loans. They were not posted as the florin banco’s public story. For decades the agio and the reputation could live together because the market still treated banco as metal-quality money.",
+      "War strained the concealment. In the Fourth Anglo-Dutch War, **1780–1784**, lending to the Company and the city rose. The coin stock no longer matched the deposit book. When that lending became public knowledge in the **1780s–1790s**, the agio collapsed. Bank money went from a premium to a discount. The institution never recovered its old role as the settlement unit of the entrepôt.",
+      "French occupation in **1795** found a bank that had already lost the trust that made giro as good as a full vault. Liquidation was completed in **1819**. That is a Dutch public-bank story: reputation, concealed fiscal use of the metal, then a quoted premium that died when the books were known. It is not 1720. It is not the assignats.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: ["The order is Amsterdam’s, not a mash of later paper disasters."],
+    list: [
+      "**31 January 1609.** City ordinance: the Wisselbank takes in coin and credits bank money.",
+      "**Seventeenth century.** Large bills on Amsterdam settle by giro; banco stands at an agio over worn current coin.",
+      "**1683.** Receipts for deposited coin; balances and metal claims can be sold apart.",
+      "**Late seventeenth–eighteenth century.** Concealed advances to the city and the Dutch East India Company.",
+      "**1780–1784.** Fourth Anglo-Dutch War; lending against the vault rises.",
+      "**1780s–1790s.** The lending becomes public; the agio collapses; the old role is gone.",
+      "**1795–1819.** French occupation, then liquidation.",
+    ],
+  },
+  {
+    heading: "Why the civic ledger matters",
+    paragraphs: [
+      "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Later machines on this shelf do not copy Amsterdam. They use the habit it taught: book or paper money as settlement, with metal in the background until it is not.",
+      "The next dated stop is the [Bank of England](/history/banks-paper/bank-of-england): a **1694** war-finance charter with a note issue attached, not a city giro table. Law’s Mississippi System is **1720**. Assignats are **1789–1796**. Germany’s mark in **1923** is a later rhyme on another shelf. A rhyme teaches mechanism: a claim treated as metal-quality money can cease to be one. A merge erases dates.",
+      "This episode’s job on the [banks and paper](/history/banks-paper) shelf is the model public deposit bank. The prior hinge is [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). Then London, then Law, then the assignats. Do not mash **1720**, the **1790s**, and **1923** into one Dutch ledger.",
     ],
   },
 ];
@@ -956,7 +1004,7 @@ export const banksPaperHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "Paper money begins as a metal warehouse receipt — a claim check. Someone deposits coin or bullion; a goldsmith, a mint, or a public bank writes a paper that says the metal is there. The holder can return and collect the same weight. This cluster follows that receipt until it is no longer a warehouse claim: until notes circulate because a bank or a state says they will, and the window that once paid metal is optional, delayed, or gone.",
-      "Start from the [history pillar](/history) for the five-cluster path. Long episodes on this shelf are [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) and [John Law and the Mississippi Bubble](/history/banks-paper/john-law). Read the stops in order: warehouses, Amsterdam, the Bank of England, Law, then assignats. Do not mash 1720, the 1790s, and 1923 into one crisis.",
+      "Start from the [history pillar](/history) for the five-cluster path. Long episodes on this shelf are [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks), the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), and [John Law and the Mississippi Bubble](/history/banks-paper/john-law). Read the stops in order: warehouses, Amsterdam, the Bank of England, Law, then assignats. Do not mash 1720, the 1790s, and 1923 into one crisis.",
     ],
   },
   {
@@ -986,7 +1034,7 @@ export const banksPaperHubBody: Section[] = [
   {
     heading: "Episode index",
     paragraphs: [
-      "Each line is a job description. Warehouses and Law are the long narratives on this shelf. Amsterdam, the Bank of England, and assignats remain shorter map stops.",
+      "Each line is a job description. Warehouses, Amsterdam, and Law are the long narratives on this shelf. The Bank of England and assignats remain shorter map stops.",
     ],
     list: [
       "[From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) — A receipt for metal starts to circulate; banking begins when the ticket pays a debt.",
