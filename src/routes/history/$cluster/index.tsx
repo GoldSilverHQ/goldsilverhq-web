@@ -45,9 +45,11 @@ function ClusterPage() {
             </p>
           ))
         )}
-        <p className="mt-6 text-sm text-faint">
-          {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
-        </p>
+        {cluster.slug !== "banks-paper" ? (
+          <p className="mt-6 text-sm text-faint">
+            {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
+          </p>
+        ) : null}
         <ol className="mt-10 grid gap-3">
           {cluster.episodes.map((ep, i) => (
             <li key={ep.slug}>
