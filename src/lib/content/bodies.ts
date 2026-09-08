@@ -646,16 +646,71 @@ const amsterdam: Section[] = [
 
 const england: Section[] = [
   {
-    heading: "A charter for a war, 1694",
+    heading: "",
     paragraphs: [
-      "The Bank of England was a private corporation with a public job: lend to the Crown, in the Nine Years’ War, against a stream of taxes, and issue notes. It was not a copy of Amsterdam. It was born as war finance with a note issue attached.",
-      "The charter was renewed because the state still needed the machine. Over the eighteenth century its notes became the ordinary paper of London.",
+      "The Bank of England — chartered in **1694** — is a private corporation with a public job: lend to the Crown in the Nine Years’ War, and issue notes. Subscribers put up about **£1.2 million** as a war loan. The paper that came back was a circulating promise to pay, not a city giro balance. This is not a copy of Amsterdam.",
+      "This stop on the [banks and paper](/history/banks-paper) shelf follows the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam). The prior page is a civic deposit table: mixed coin in, bank money out, bills settled by giro. This page is a war-finance charter with a note issue attached.",
     ],
   },
   {
-    heading: "Restriction, resumption",
+    heading: "Not a city giro table",
     paragraphs: [
-      "In 1797, under the Revolutionary and Napoleonic wars, convertibility of notes into gold was restricted. It returned in the 1820s. That cycle — suspend for war, resume later — is the English version of a pattern this map meets again in 1914.",
+      "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Concealed lending, and the later collapse of the agio, belong on that page.",
+      "London in the 1690s had a different problem. William III was at war with Louis XIV. The Crown needed a large loan at once. Goldsmith running-cash notes already circulated; the Stop of the Exchequer in **1672** had shown that a sovereign can close a window. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass.",
+      "Keep the instruments distinct. A **giro balance** is a book credit at a public table. A **goldsmith note** is a private claim on metal left with a keeper. A **Bank of England note** is a circulating promise to pay, issued by a chartered corporation that has already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine is war finance with that habit attached.",
+    ],
+  },
+  {
+    heading: "A charter for a war, 1694",
+    paragraphs: [
+      "Parliament needed money for the Nine Years’ War. The scheme that became the Bank offered a subscription: about **£1.2 million** lent to the government, at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England. The corporation could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
+      "William Paterson and others had argued for such a bank. The political fact is the charter: a private company received a public privilege because the fiscal need was urgent. The notes were the Bank’s own paper, accepted because the window paid and because London learned to treat that paper as cash.",
+      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start. That is why it is not an Amsterdam clone.",
+    ],
+  },
+  {
+    heading: "Notes become London paper",
+    paragraphs: [
+      "Over the eighteenth century those notes became the ordinary paper of London. A merchant could pay a debt with a Bank note without carting coin across the City. As long as redemption was ordinary, the note was a convenient claim on metal. The unit remained the pound. The paper was how it moved.",
+      "Country banks issued their own notes outside London. In the capital, Bank of England paper crowded the field. Statute helped. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing. The result was national money grown from a war loan, not from a city warehouse ticket alone.",
+      "Convertibility was the ordinary test. Holders could present notes and ask for gold. Counterparties took the paper because they trusted that window. When the window is open, a note is a claim. When the window closes, the same note is a wartime unit that still spends if the public will hold it.",
+    ],
+  },
+  {
+    heading: "Restriction, 1797",
+    paragraphs: [
+      "War with revolutionary France strained the gold stock. Coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes. The Bank Restriction Act of **1797** made that suspension statute. The notes stayed in circulation. The window did not.",
+      "Restriction is a wartime English fact. The pound kept its name. The public could no longer test the name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
+      "Do not merge this statute with John Law’s **1720** System, or with the assignats of the **1790s**. Restriction is an English bank closing the gold window while its notes remain everyday money. The dates sit near each other. The machines do not.",
+    ],
+  },
+  {
+    heading: "Resumption in the 1820s",
+    paragraphs: [
+      "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**. That is the resumption this map means when it says the **1820s**.",
+      "The cycle is England’s own: suspend for war, keep the notes in use, resume later at the old metal unit. A rhyme teaches mechanism — a claim treated as money can lose its metal stop. A merge erases dates. This cycle is not **1720**, not the assignats, and not **1923**.",
+      "Resumption did not make the Bank a warehouse. The loan book and the note issue remained. What returned was the ordinary test at the window.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: ["The order is England’s, not a mash of later paper disasters."],
+    list: [
+      "**1672.** Stop of the Exchequer; private paper that funded the Crown meets a closed sovereign window.",
+      "**1694.** Bank of England charter: about £1.2 million as a war loan, with a note issue attached.",
+      "**1708.** Joint-stock note-issue monopoly in England; Bank paper becomes the London standard.",
+      "**Eighteenth century.** Bank notes become the ordinary paper of London.",
+      "**February–May 1797.** Order in Council, then the Bank Restriction Act: gold payout on notes stops.",
+      "**1810.** Bullion Report: notes trade at a discount to gold.",
+      "**1819–1821.** Peel’s Act; cash payments resume. Restriction ends in the 1820s.",
+    ],
+  },
+  {
+    heading: "Why the war bank matters",
+    paragraphs: [
+      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. Later machines on this shelf do not copy London. They use the habit it taught: a great state’s daily money can be a bank’s paper.",
+      "Keep the disasters on their own dates. The next dated stop is [John Law and the Mississippi Bubble](/history/banks-paper/john-law): a **1720** note-and-share System, not an English restriction. Assignats are **1789–1796**. Germany’s mark in **1923** is a later rhyme on another shelf.",
+      "This episode’s job on the [banks and paper](/history/banks-paper) shelf is the war-finance note bank. The prior stop is the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam). Then Law, then the assignats. Do not mash **1720**, the **1790s**, and **1923** into one London charter.",
     ],
   },
 ];
