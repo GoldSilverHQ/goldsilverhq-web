@@ -16,6 +16,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/history/banks-paper/bank-of-amsterdam",
   "/history/banks-paper/bank-of-england",
   "/history/banks-paper/john-law",
+  "/history/banks-paper/assignats",
 ] as const;
 
 export const ROBOTS_TXT = [
