@@ -593,12 +593,15 @@ export const historyClusters: Cluster[] = [
         slug: "classical-gold-standard-end",
         title: "Classical gold standard and its wartime end",
         summary:
-          "How the pre-1914 gold standard worked — convertibility, gold points, London — and why the First World War ended it.",
+          "The pre-1914 gold standard was convertibility, gold points, and London settlement — not a treaty. World War I ended that peacetime order. What followed was a different architecture.",
         status: "ready",
         paragraphs: [
           "The classical gold standard was a set of practices: convertibility, gold shipping, and interest rates that responded to reserve drains. The First World War suspended it. What came after was not the same system with a pause. It was a different architecture.",
         ],
-        related: [],
+        related: [
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Panic of 1907 and the birth of the Fed", href: "/history/20th-century/panic-1907-fed" },
+        ],
         seo: {
           primary: "classical gold standard",
           secondary: [
@@ -606,6 +609,7 @@ export const historyClusters: Cluster[] = [
             "end of the gold standard 1914",
             "gold points",
             "gold exchange standard genoa",
+            "currency and bank notes act 1914",
           ],
           demand: "mid",
           difficulty: "high",
