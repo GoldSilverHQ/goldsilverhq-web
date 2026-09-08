@@ -411,16 +411,16 @@ export const historyClusters: Cluster[] = [
       {
         slug: "assignats",
         title: "Assignats and early paper collapses",
-        summary: "Revolutionary paper “backed” by land. Quantity rose; the unit died. Not a second John Law.",
-        status: "skeleton",
+        summary:
+          "Revolutionary France issued land-tied paper — the assignats — then over-issued it until the unit died. Not John Law’s 1720, not England’s Restriction, not Weimar.",
+        status: "ready",
         paragraphs: [
-          "Assignats were paper claims supposedly tied to confiscated land. Quantity rose; confidence did not. This is an overview for early paper collapses, not a second John Law biography.",
+          "Assignats began as paper tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By 1795–96 the paper was not a unit anyone would hold. That is a revolutionary fiscal instrument with a land story. It is not John Law’s 1720 bank-and-company System, not England’s Restriction and resumption, and not Germany’s 1923 mark.",
         ],
         related: [
-          { title: "John Law", href: "/history/banks-paper/john-law" },
-          { title: "What “backed” means", href: "/sound-money/backed-money" },
-          { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
           { title: "Banks & paper hub", href: "/history/banks-paper" },
+          { title: "John Law and the Mississippi Bubble", href: "/history/banks-paper/john-law" },
+          { title: "Bank of England", href: "/history/banks-paper/bank-of-england" },
         ],
         seo: {
           primary: "assignats",
@@ -428,6 +428,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "French Assignats (1789–1796)",
         },
       },
     ],
