@@ -13,6 +13,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/history/20th-century/panic-1907-fed",
   "/history/banks-paper",
   "/history/banks-paper/warehouses-to-public-banks",
+  "/history/banks-paper/bank-of-amsterdam",
   "/history/banks-paper/john-law",
 ] as const;
 
