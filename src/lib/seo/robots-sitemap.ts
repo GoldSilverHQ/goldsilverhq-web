@@ -8,9 +8,11 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
 export const PHASE1_SITEMAP_PATHS = [
   "/history",
   "/history/20th-century",
-  "/history/20th-century/weimar-1923",
-  "/history/20th-century/bretton-woods-nixon-1971",
   "/history/20th-century/panic-1907-fed",
+  "/history/20th-century/classical-gold-standard-end",
+  "/history/20th-century/weimar-1923",
+  "/history/20th-century/1933-gold-recall",
+  "/history/20th-century/bretton-woods-nixon-1971",
   "/history/banks-paper",
   "/history/banks-paper/warehouses-to-public-banks",
   "/history/banks-paper/bank-of-amsterdam",
