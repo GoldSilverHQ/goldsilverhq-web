@@ -247,23 +247,41 @@ const nixon: Section[] = [
 
 const classicalGold: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "The classical gold standard was a set of practices: convertibility, gold shipping, and interest rates that responded to reserve drains. The First World War suspended it. What came after was not the same system with a pause. It was a different architecture.",
+      "This stop on the [20th century](/history/20th-century) shelf follows the [Panic of 1907](/history/20th-century/panic-1907-fed). That page is a US liquidity crisis and a new central bank. This page is the peacetime gold order those years still sat inside, and the wartime break that ended it.",
+    ],
+  },
+  {
     heading: "What the classical gold standard was",
     paragraphs: [
       "Before 1914 the international monetary system was a set of practices, not a single treaty. A currency on the classical gold standard was convertible into a defined weight of gold. Notes and deposits were claims that could, in ordinary times, be turned into coin or bullion at a published mint price. Gold could be imported and exported.",
-      "That convertibility, plus the cost of shipping metal, produced **gold points**: exchange rates could only wander so far before it became cheaper to send gold. Central banks — above all the Bank of England — used Bank rate and other devices to attract or repel metal. London was the centre. Other members kept their promises because a broken promise showed up as a gold drain.",
+      "Keep the instruments distinct. A **mint price** is the official gold definition of the unit. A **note** is a circulating promise to pay that gold. A **deposit** is a book claim that can be drawn as notes or coin. Convertibility is the ordinary test: the holder can still get metal at the window. Counterparties take the paper because they trust that window, not because a conference has declared the paper to be gold.",
+      "Membership was practice, not a club card. Britain had been on gold, in the modern sense, since the early nineteenth century. Germany, France, and others joined as they defined their units in gold and opened the window. The United States did so after resumption and the Gold Standard Act of **1900**. The map is several national promises, mutually convertible because each promise pointed at the same metal.",
+    ],
+  },
+  {
+    heading: "Gold points and London settlement",
+    paragraphs: [
+      "That convertibility, plus the cost of shipping metal, produced **gold points**. Sterling’s mint par against the dollar sat near **$4.86**. If sterling cheapened far enough, a New York house could take gold in London and ship it home more cheaply than paying the market rate. If sterling dearened, gold moved the other way. The band was mint par plus freight, insurance, and interest while the metal was at sea — a few cents either side of $4.86.",
+      "Inside the points, bills and credits did the settling. Outside them, gold actually moved. A broken promise showed up as a drain. A central bank that lost gold had to attract it back or lose the right to call its paper a gold claim.",
+      "London was the centre. Sterling bills financed trade far from Britain. The Bank of England’s Bank rate was the price of credit in that market. Raise the rate, and balances and metal were pulled toward Threadneedle Street. Lower it, and gold could leave. Quieter “gold devices” — the price paid for bars, the terms of advances — moved the cost of taking metal by a few pennies. They did not abolish the points. People and foreigners could still ask for gold.",
     ],
   },
   {
     heading: "How it actually worked",
     paragraphs: [
-      "Textbooks later called this the “rules of the game”: lose gold, tighten; gain gold, ease. Real central banks did not always play that cleanly. They sterilised flows, used gold devices, and protected domestic credit when they could. The constraint still mattered. A bank that promised gold on demand could not expand without limit if people and foreigners were free to take the metal.",
-      "The United States entered the century with a gold dollar and, after 1913, a new central bank — the sequel to the [Panic of 1907](/history/20th-century/panic-1907-fed). The classical system around that Fed was already older than the Fed. The break came from war, not from 1907.",
+      "Textbooks later called this the “rules of the game”: lose gold, tighten; gain gold, ease. Real central banks did not always play that cleanly. They sterilised flows, used gold devices, and protected domestic credit when they could. The constraint still mattered. A bank that promised gold on demand could not expand without limit if people and foreigners were free to take the metal. Close the window, or block the ship, and the same note is wartime paper that still spends if the public will hold it.",
+      "The United States entered the century with a gold dollar and, after 1913, a new central bank — the sequel to the [Panic of 1907](/history/20th-century/panic-1907-fed). The classical system around that Fed was already older than the Fed. 1907 was a trust-banking liquidity failure. Metal still defined the unit. The break with convertibility came from war, not from 1907.",
     ],
   },
   {
     heading: "Why 1914 ended it",
     paragraphs: [
-      "The First World War made convertibility and free gold movement incompatible with war finance. Governments needed to spend faster than tax and genuine borrowing would allow. Gold exports were blocked or licensed. Notes were protected from internal drains. Britain’s Currency and Bank Notes Act of **1914** is one legal marker; similar suspensions ran across the belligerents that summer and autumn.",
+      "The First World War made convertibility and free gold movement incompatible with war finance. Governments needed to spend faster than tax and genuine borrowing would allow. Gold exports were blocked or licensed. Notes were protected from internal drains. Stock exchanges closed. The peacetime machine assumed ships, open windows, and a public that would take paper because it could still test the paper.",
+      "Britain’s Currency and Bank Notes Act of **6 August 1914** is one legal marker. Treasury notes of one pound and ten shillings entered daily use. Bank of England notes were made legal tender more broadly. Similar suspensions ran across the belligerents that summer and autumn. The mark, the franc, and other gold names remained on coins and accounts. The public could no longer test those names at the window.",
+      "England’s Restriction in **1797** was a wartime stop of gold payout, with resumption in the **1820s**. 1914 is another wartime stop. What did not return after 1918 was the old machine: several centres, private convertibility, gold that moved when the points were hit.",
       "The United States, not yet in the war, stayed closer to gold than the European combatants. New York, not London, became the place dollars and gold accumulated. That does not mean the classical system survived. A standard that only some members still honour, while the rest fight on inconvertible paper, is no longer the pre-1914 order.",
     ],
   },
@@ -273,16 +291,20 @@ const classicalGold: Section[] = [
     list: [
       "**Before 1914.** Convertibility, gold shipment, gold points. London at the centre.",
       "**July–August 1914.** War. Gold exports blocked or licensed. Notes protected. The stop is gone for the belligerents.",
+      "**6 August 1914.** Britain’s Currency and Bank Notes Act; Treasury notes; similar suspensions on the Continent.",
       "**1914–18.** War finance on inconvertible paper. Prices rise; the gold name remains on some coins and accounts.",
       "**1922, Genoa.** A gold-*exchange* sketch: hold currencies that are themselves gold-convertible, instead of gold. Not the old machine.",
-      "**1925–1931.** Britain restores the pre-war gold parity, then leaves gold. Other “returns” reuse the word. Private convertibility and routine metal shipment among several centres do not come back as they were.",
+      "**1925–1931.** Britain restores the pre-war gold parity, then leaves gold. Other “returns” reuse the word. The old private convertibility does not come back.",
     ],
   },
   {
     heading: "What came after was not a pause",
     paragraphs: [
-      "After 1918 many countries tried to “return to gold.” They reused the word. They did not restore the old machinery: several centres, private convertibility, gold that actually moved when the points were hit.",
-      "Where the wartime stop never returned, paper could run for the Treasury. [Weimar hyperinflation](/history/20th-century/weimar-1923) is the European extreme of that break — war finance first, then a mark that ceased to work as money.",
+      "After 1918 many countries tried to “return to gold.” They reused the word. They did not restore the old machinery. Genoa asked members to hold gold-convertible currencies as reserves. That is a gold-*exchange* design: one or two convertible centres, and a ring of claims on those centres. It is not several windows with gold moving between them when the points are hit.",
+      "Britain’s 1925 return at the pre-war sterling–dollar parity reused a number. It did not rebuild the 1913 world. In **1931** Britain left gold again. Other interwar “gold standards” were pegs, exchange controls, and official gold — a different architecture wearing a familiar name.",
+      "Where the wartime stop never returned, paper could run for the Treasury. [Weimar hyperinflation](/history/20th-century/weimar-1923) is the European extreme of that break — war finance first, then a mark that ceased to work as money. That is not a pause in the classical system.",
+      "Keep the later American hinges on their own dates. The [1933 gold recall](/history/20th-century/1933-gold-recall) removes the public claim on gold at the old mint price. The [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) is 1971: the last official gold window on the dollar, for foreign official holders. Neither is 1914. Mixing the three makes all three unreadable.",
+      "This episode’s job on the [20th century](/history/20th-century) shelf is the peacetime classical order and its wartime end. The prior stop is the [Panic of 1907](/history/20th-century/panic-1907-fed). Then Weimar, then 1933, then Bretton Woods and 1971.",
     ],
   },
 ];
