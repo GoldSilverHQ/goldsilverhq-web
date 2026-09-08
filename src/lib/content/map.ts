@@ -366,15 +366,16 @@ export const historyClusters: Cluster[] = [
       {
         slug: "bank-of-england",
         title: "Bank of England",
-        summary: "1694: a private corporation, a war loan, and notes that became English money.",
-        status: "skeleton",
+        summary:
+          "The 1694 charter is war finance with a note issue attached — not a city giro table. Those notes became London paper; Restriction and resumption are England’s own cycle.",
+        status: "ready",
         paragraphs: [
-          "The Bank of England fused war finance and note issue. Understanding it is required before the 20th-century cluster.",
+          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam. Its notes became the ordinary paper of London. Restriction in 1797 and resumption in the 1820s are an English suspend–resume cycle, not 1720 and not Weimar.",
         ],
         related: [
+          { title: "Banks & paper hub", href: "/history/banks-paper" },
           { title: "Bank of Amsterdam", href: "/history/banks-paper/bank-of-amsterdam" },
-          { title: "John Law", href: "/history/banks-paper/john-law" },
-          { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
+          { title: "John Law and the Mississippi Bubble", href: "/history/banks-paper/john-law" },
         ],
         seo: {
           primary: "bank of england founding",
@@ -382,6 +383,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "The Bank of England (1694)",
         },
       },
       {
