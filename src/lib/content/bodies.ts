@@ -290,36 +290,71 @@ const classicalGold: Section[] = [
 
 const goldRecall1933: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
+      "That is a different claim from the [wartime end of classical convertibility in 1914](/history/20th-century/classical-gold-standard-end). It is a different claim from the [1971 close of the gold window](/history/20th-century/bretton-woods-nixon-1971) for foreign official holders. Mixing the three makes all three unreadable.",
+    ],
+  },
+  {
     heading: "What Order 6102 did",
     paragraphs: [
-      "On **5 April 1933** Franklin Roosevelt signed Executive Order 6102, requiring most domestic gold coin, bullion, and certificates to be delivered to the government at the official price — then **$20.67 an ounce**. Exceptions existed for industry, art, and small personal amounts. Failure to deliver was a federal offence.",
-      "The Gold Reserve Act of **30 January 1934** then vested title to monetary gold in the United States and forbade the Treasury from redeeming currency in gold for the public. The official dollar price was reset from $20.67 to **$35 an ounce**. That is a devaluation of the gold dollar by statute, not a market print.",
-      "The public claim on gold at the old mint price was removed. After that, official gold is a Treasury asset, not circulating money.",
+      "On **5 April 1933** Franklin Roosevelt signed Executive Order 6102. It required persons in the United States to deliver most gold coin, gold bullion, and gold certificates to a Federal Reserve Bank, a member bank, or an agent of the Treasury. Payment was at the official price then in force: **$20.67 an ounce**. The deadline printed on the order was **1 May 1933**. Later licenses and exemptions matter more than that date alone.",
+      "The order did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January."
+    ],
+  },
+  {
+    heading: "The bank holiday and the power to call gold",
+    paragraphs: [
+      "The week before the inauguration, gold was already leaving banks. On **6 March 1933** a national bank holiday stopped ordinary payments. Gold exports and gold payments were constrained with the banks themselves. The Emergency Banking Act of **9 March 1933** ratified the holiday and gave the President broad power over gold, silver, and foreign exchange during the emergency.",
+      "That March statute is the legal floor under Order 6102. The order used a power Congress had just written. Banks reopened under license. Gold that had been a customer’s coin became, by stages, a thing the Treasury could call in.",
+      "In May, the Thomas Amendment to the Agricultural Adjustment Act added another lever: the President could reduce the gold content of the dollar by as much as fifty percent. The public still faced a delivery order at $20.67. The statute already contemplated a lighter gold dollar. That is not yet the $35 price.",
+    ],
+  },
+  {
+    heading: "Gold clauses, then the Gold Reserve Act",
+    paragraphs: [
+      "On **5 June 1933** a Joint Resolution of Congress declared gold clauses against public policy. A promise to pay in gold coin, or in a sum measured by gold, was to be discharged in legal tender. The Supreme Court later upheld the main line of that policy in the Gold Clause Cases of **1935**. Once gold could be called in, gold-denominated private contracts could not stand as a parallel unit.",
+      "The Gold Reserve Act of **30 January 1934** vested title to monetary gold in the United States. Federal Reserve Banks transferred their gold to the Treasury and received gold certificates in exchange. The Treasury was forbidden to redeem currency in gold for the public. The President set a new official dollar price of **$35 an ounce** — a devaluation of the gold dollar by statute, not a market print.",
+      "At $20.67, one dollar had been a known weight of fine gold. At $35, that weight was cut. The same official stock, marked to the new price, produced a book profit on the Treasury’s accounts. Part of that increment funded the Exchange Stabilization Fund. The metal did not multiply. Official gold is then a government asset at an official price — not a pile the public can test at a window."
     ],
   },
   {
     heading: "A short documentary sequence",
-    paragraphs: ["The order, then the statute, then the new official price. Not a single weekend."],
+    paragraphs: ["The holiday, the order, the contracts, the statute, then the new official price. Not a single weekend."],
     list: [
-      "**6 March 1933.** A national bank holiday. Gold payments and exports are already constrained.",
-      "**5 April 1933.** Order 6102: deliver gold coin, bullion, and gold certificates.",
-      "**1 May 1933.** Delivery deadline in the order (later practice and exemptions matter more than the date on the paper).",
+      "**6 March 1933.** National bank holiday. Gold payments and exports already constrained.",
+      "**9 March 1933.** Emergency Banking Act. Presidential authority over gold in the emergency.",
+      "**5 April 1933.** Order 6102: deliver gold coin, bullion, and gold certificates at $20.67.",
+      "**1 May 1933.** Delivery deadline in the order. Licenses and exemptions continue.",
+      "**12 May 1933.** Thomas Amendment: authority to cut the gold content of the dollar.",
+      "**5 June 1933.** Joint Resolution voids gold clauses in contracts.",
       "**30 January 1934.** Gold Reserve Act. Title vests in the United States. Official price $35.",
-      "**1934–1974.** Domestic monetary gold holding remains restricted. The next break on this cluster is [1971](/history/20th-century/bretton-woods-nixon-1971), a different claim.",
+      "**1934–1974.** Domestic monetary gold holding remains restricted. The next official-window break is [1971](/history/20th-century/bretton-woods-nixon-1971), a different claim.",
     ],
   },
   {
     heading: "The stated rationale",
     paragraphs: [
-      "The contemporaneous justification was Depression emergency: stop hoarding, expand the money stock, raise the price level. Whether that worked as advertised is a later argument. This page stays on the documentary sequence: order, delivery, statute, new official price.",
-      "It is not the [wartime end of convertibility in 1914](/history/20th-century/classical-gold-standard-end). It is not the Nixon shock. Mixing the three makes all three unreadable.",
+      "The contemporaneous justification was Depression emergency: stop hoarding, reopen banks, expand the money stock, and raise the domestic price level. Officials argued that gold in private hoards and in bank vaults as coin blocked recovery, and that a higher official gold price would cheapen the dollar in gold terms.",
+      "Whether that program worked as advertised is a later argument. This page stays on the documentary sequence: holiday, order, delivery, gold-clause resolution, statute, new official price."
+    ],
+  },
+  {
+    heading: "Not 1914, not 1971",
+    paragraphs: [
+      "The [classical gold standard](/history/20th-century/classical-gold-standard-end) ended as a working international system in **1914**, when war finance blocked gold shipment and protected notes from internal drains. That break is about convertibility and metal movement among countries. It is not a domestic recall of coin from American households.",
+      "The 1933–34 sequence is a United States statute story. Private monetary gold rights are removed. Title to official gold vests in the Treasury. The official price moves from $20.67 to $35. Americans lose a public claim they had still possessed after 1914.",
+      "Bretton Woods, in **1944**, defined the dollar against gold at **$35** for official convertibility. Ordinary people in the United States did not redeem paper at the Treasury window. On **15 August 1971** the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) closed the remaining window: foreign official holders could no longer present dollars and demand US gold at the posted price.",
+      "Keep the three files separate. **1914** ends classical convertibility under war. **1933–34** removes the US public claim and revalues official gold. **1971** ends official dollar–gold convertibility for foreign holders. A rhyme — gold stops being a right you can test — is not identity.",
     ],
   },
   {
     heading: "After 1933",
     paragraphs: [
-      "Americans could not legally hold monetary gold for decades. Foreign governments still had a gold window on the dollar until [August 1971](/history/20th-century/bretton-woods-nixon-1971). Those are two different claims, two different decades.",
-      "When private gold ownership was later restored, the $35 official price was already a bookkeeping fossil. The metal had a market; the dollar did not have a public gold contract.",
+      "Americans could not legally hold monetary gold for decades. Licenses covered industry, dentistry, and art. The prohibition lasted until the end of **1974**, when statute again allowed citizens to hold gold bullion. Restoration of private holding did not restore a public convertibility contract. The $35 official price was already a bookkeeping fossil. The metal had a market. The dollar did not have a public gold window.",
+      "Between 1934 and 1971 the official price still mattered for foreign official holders and for Treasury accounts. It did not matter as a price at which an American could walk in with a note and walk out with coin. This episode is a domestic recall and a revaluation for government accounting. [1971](/history/20th-century/bretton-woods-nixon-1971) is the close of an official foreign window built on the $35 price the 1934 Act had set.",
+      "Read this page as the middle hinge on the [twentieth-century cluster](/history/20th-century): after classical gold’s wartime end, before Bretton Woods and 1971. Statute took the public’s monetary gold rights and rewrote the official ounce. It did not invent paper money.",
     ],
   },
 ];
