@@ -717,16 +717,71 @@ const england: Section[] = [
 
 const assignats: Section[] = [
   {
-    heading: "Paper on confiscated land",
+    heading: "",
     paragraphs: [
-      "Assignats were notes of the French Revolution, first issued in 1789–90, supposed to be backed by the sale of confiscated church and émigré land — the *biens nationaux*. The land was real. The promise was that paper would be retired as land was sold. Quantity rose faster than retirement. Confidence did not keep up.",
-      "This is a different episode from [John Law](/history/banks-paper/john-law). Law is 1720 and a royal bank-plus-company. Assignats are a revolutionary fiscal instrument with a land story.",
+      "Assignats were notes of revolutionary France, first issued in **1789–90**, supposed to be retired from the sale of confiscated church and émigré land — the biens nationaux. The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. By **1795–96** the paper was not a unit anyone would hold. The Directory returned toward metal.",
+      "This stop on the [banks and paper](/history/banks-paper) shelf follows [John Law and the Mississippi Bubble](/history/banks-paper/john-law). Law is **1720** and a royal bank-plus-company. Assignats are a revolutionary fiscal instrument with a land story. They are not the same episode. They are not England’s Restriction. They are not Weimar.",
     ],
   },
   {
-    heading: "How the paper died",
+    heading: "What an assignat was",
     paragraphs: [
-      "As the wars and the Revolution demanded more, new assignats were printed. Prices in assignats ran away; metal went to a premium and then to hiding. By 1795–96 the paper was not a unit anyone would hold. The Directory returned toward metal.",
+      "The National Assembly inherited a broken treasury. In **November 1789** it placed church property at the disposal of the nation. That stock — later enlarged by émigré estates — became the biens nationaux. The first assignats, decreed in **December 1789**, were large, interest-bearing paper: more a state claim to be paid from land sales than a daily note.",
+      "Keep the instruments distinct. A **warehouse receipt** is a claim on identified metal at a window. A **Bank of England note** is a circulating promise to pay coin, subject to the Bank’s rules. A **Law note** was a bank promise fused with a rising company share. An **assignat** was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
+      "The land story was the political sale. Metal was scarce in the till. Land was visible. If the paper was a claim on that land, the argument ran, it could not become worthless. Land can be real and still fail as a stop if issue is not retired and no window pays a fixed thing.",
+    ],
+  },
+  {
+    heading: "From bond to currency",
+    paragraphs: [
+      "In **April 1790** the paper was recast as circulating money. Interest was cut, then removed. Denominations fell until assignats could pay wages and buy bread. What had been a fiscal instrument for absorbing debt became the everyday unit.",
+      "The Assembly treated quantity as a vote. **September 1790** added a large new issue and called the total a ceiling. The ceiling did not hold. Later years added more paper against the same land story, then against war. Once small notes exist, the state can pay in its own slip. Retirement becomes a hope about future sales, not a nightly burning that matches the press.",
+      "Authorized totals moved from a few hundred million livres in the first decrees toward tens of billions by the mid-1790s. Series disagree on the last digit. The order does not: issue outran the sales meant to cancel it.",
+    ],
+  },
+  {
+    heading: "Quantity outran retirement",
+    paragraphs: [
+      "The advertised mechanism was simple. Sell a parcel of the biens nationaux. Take assignats in payment. Destroy those notes. The stock of paper falls as the stock of unsold land falls. In a clean ledger that could work.",
+      "The ledger was not clean. Sales were slower than new decrees. Buyers paid in the same paper the state was still printing. Burning some notes while issuing more is not a stop. The land remained; the claim on it multiplied. A backing story without a hard limit on issue is a story.",
+      "Prices in assignats rose. Metal went to a premium, then out of sight. Shops quoted two worlds: a paper price that moved, and a coin price that people preferred. That is the ordinary death of a unit — not a missing acre on a map, but a public that will not hold the slip.",
+    ],
+  },
+  {
+    heading: "War, the Maximum, and a dead unit",
+    paragraphs: [
+      "In **April 1792** France went to war. Armies, contractors, and the later levée en masse were paid in new assignats. Revolution at home and war abroad used the same press. The Terror’s **Maximum** (1793–94) tried to freeze prices in paper. Controls can hide a price for a time. They do not retire paper. After Thermidor the Maximum was repealed. The hidden price became the street price.",
+      "By **1795** the assignat was failing as a store of value and as a unit of account. Markets reached for coin, barter, or foreign units. In **February 1796** the printing plates were destroyed in public. The Directory had already begun to live with metal again. A brief sequel, the mandats territoriaux, tried another land paper in **1796** and died in months. That is a postscript, not a second System.",
+      "The paper did not vanish from drawers. It ceased to be money. France returned toward specie by abandoning the assignat, not by promising to redeem the same notes later at an old metal definition.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: ["Exact issue totals vary by series. The order does not."],
+    list: [
+      "**November 1789.** Church property placed at the nation’s disposal — the first biens nationaux.",
+      "**December 1789.** First assignats: large, interest-bearing paper against future land sales.",
+      "**April 1790.** Recast as circulating money; interest cut, then removed; smaller notes follow.",
+      "**September 1790.** A large new issue; the Assembly calls the total a ceiling. The ceiling does not hold.",
+      "**April 1792.** War; the press becomes war finance as well as land finance.",
+      "**1793–94.** The Maximum tries to freeze paper prices; after Thermidor the controls go.",
+      "**1795–February 1796.** The unit dies; plates destroyed; the Directory returns toward metal.",
+      "**1796.** Mandats territoriaux: a short second land paper, then gone.",
+    ],
+  },
+  {
+    heading: "Not Law, not Restriction, not Weimar",
+    paragraphs: [
+      "Do not merge this episode with [John Law](/history/banks-paper/john-law). Law’s System fused a note-issuing bank with a colonial trading company under the Regency. Notes and Mississippi shares inflated together and broke in **1720**. Assignats have no Banque Royale and no rue Quincampoix. They are revolutionary state paper with a land story, issued decades later under a different regime and a different war.",
+      "Do not merge it with the [Bank of England](/history/banks-paper/bank-of-england) Restriction either. In **1797** the Bank stopped paying gold for its notes. The notes stayed everyday English money. Resumption in the **1820s** brought the window back. Restriction is a suspend-and-resume cycle. Assignats are a paper that died. The dates sit near each other because the same wars strained both treasuries. The machines do not.",
+      "Do not merge it with Germany’s 1923 hyperinflation. Weimar was a twentieth-century collapse of a national paper mark after war, reparations, and extreme monetization — a later rhyme, not the same event or the same century. A rhyme teaches mechanism. A merge erases dates.",
+    ],
+  },
+  {
+    heading: "Why this stop matters",
+    paragraphs: [
+      "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
+      "This episode’s job on the [banks and paper](/history/banks-paper) shelf is the revolutionary land paper. The prior French stop is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). England’s Restriction, on the [Bank of England](/history/banks-paper/bank-of-england) page, is a labeled wartime rhyme, not a sequel. Do not mash **1720**, the **1790s**, and **1923** into one French print job.",
     ],
   },
 ];
