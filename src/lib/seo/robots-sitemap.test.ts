@@ -15,13 +15,15 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
   });
 
-  it("lists only the eleven Phase-1 www URLs", () => {
+  it("lists only the thirteen Phase-1 www URLs", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
       "/history/20th-century",
-      "/history/20th-century/weimar-1923",
-      "/history/20th-century/bretton-woods-nixon-1971",
       "/history/20th-century/panic-1907-fed",
+      "/history/20th-century/classical-gold-standard-end",
+      "/history/20th-century/weimar-1923",
+      "/history/20th-century/1933-gold-recall",
+      "/history/20th-century/bretton-woods-nixon-1971",
       "/history/banks-paper",
       "/history/banks-paper/warehouses-to-public-banks",
       "/history/banks-paper/bank-of-amsterdam",
@@ -36,10 +38,10 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 11);
+    assert.equal(locs.length, 13);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
-    assert.doesNotMatch(xml, /sound-money|gold-silver|\/ancient|\/america|1933-gold|classical-gold/);
+    assert.doesNotMatch(xml, /sound-money|gold-silver|\/ancient|\/america/);
   });
 
   it("serves the Google Search Console HTML verification body", async () => {
