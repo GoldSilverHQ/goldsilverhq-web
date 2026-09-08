@@ -300,7 +300,7 @@ const goldRecall1933: Section[] = [
     heading: "What Order 6102 did",
     paragraphs: [
       "On **5 April 1933** Franklin Roosevelt signed Executive Order 6102. It required persons in the United States to deliver most gold coin, gold bullion, and gold certificates to a Federal Reserve Bank, a member bank, or an agent of the Treasury. Payment was at the official price then in force: **$20.67 an ounce**. The deadline printed on the order was **1 May 1933**. Later licenses and exemptions matter more than that date alone.",
-      "The order did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins with numismatic value. Failure to deliver the monetary gold it covered was a federal offence. Order 6102 sat on emergency banking authority from March. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January.",
+      "The order did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January."
     ],
   },
   {
@@ -337,7 +337,7 @@ const goldRecall1933: Section[] = [
     heading: "The stated rationale",
     paragraphs: [
       "The contemporaneous justification was Depression emergency: stop hoarding, reopen banks, expand the money stock, and raise the domestic price level. Officials argued that gold in private hoards and in bank vaults as coin blocked recovery, and that a higher official gold price would cheapen the dollar in gold terms.",
-      "Whether that program worked as advertised is a later argument. This page stays on the documentary sequence: holiday, order, delivery, gold-clause resolution, statute, new official price. The rationale belongs in the record as what was said — not as a verdict.",
+      "Whether that program worked as advertised is a later argument. This page stays on the documentary sequence: holiday, order, delivery, gold-clause resolution, statute, new official price."
     ],
   },
   {
