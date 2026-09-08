@@ -14,6 +14,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/history/banks-paper",
   "/history/banks-paper/warehouses-to-public-banks",
   "/history/banks-paper/bank-of-amsterdam",
+  "/history/banks-paper/bank-of-england",
   "/history/banks-paper/john-law",
 ] as const;
 
