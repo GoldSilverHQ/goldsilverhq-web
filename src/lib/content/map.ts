@@ -641,12 +641,16 @@ export const historyClusters: Cluster[] = [
         slug: "1933-gold-recall",
         title: "1933 U.S. gold recall (Executive Order 6102)",
         summary:
-          "Documentary record: Order 6102, the Gold Reserve Act, $20.67 to $35 — not a polemic, and not the same event as 1914 or 1971.",
+          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Not the 1914 convertibility break, and not the 1971 gold-window close.",
         status: "ready",
         paragraphs: [
-          "In 1933 the United States required most domestic gold coin and bullion to be delivered to the government. The page will stay documentary: statute, executive order, and contemporaneous justification — not a polemic.",
+          "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of 1934 then vested title to monetary gold in the United States and reset the official price from $20.67 to $35 an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
         ],
-        related: [],
+        related: [
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
+          { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
+        ],
         seo: {
           primary: "executive order 6102",
           secondary: [
@@ -658,6 +662,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "1933 U.S. Gold Recall: Executive Order 6102",
         },
       },
       {
