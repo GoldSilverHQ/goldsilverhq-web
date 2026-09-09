@@ -1,4 +1,4 @@
-import { banksPaperHubBody, twentiethCenturyHubBody, type Section } from "./bodies";
+import { ancientHubBody, banksPaperHubBody, twentiethCenturyHubBody, type Section } from "./bodies";
 
 export type Episode = {
   slug: string;
@@ -191,11 +191,16 @@ export const historyClusters: Cluster[] = [
   {
     slug: "ancient",
     title: "Ancient money & coinage",
-    summary: "Why markets chose gold and silver, and how coins spread from Lydia through Greece and Rome.",
-    intro: [
-      "Metal first, stamp second. This cluster is why gold and silver were money, how coinage started in Lydia, Greek silver trade, Roman debasement, and the solidus that kept its weight.",
-      "All five episodes now have first drafts. Paper receipts wait in [banks and paper](/history/banks-paper). Do not start this pillar in 1971.",
+    summary:
+      "Markets chose gold and silver for tradeability. Coinage from Lydia through Greece to Rome is metal first, stamp second — not a story that starts in 1971.",
+    sections: ancientHubBody,
+    related: [
+      { title: "Sound Money History", href: "/history" },
+      { title: "Banks & paper money", href: "/history/banks-paper" },
     ],
+    seo: {
+      titleTag: "Ancient Money and Coinage: Metal First, Stamp Second",
+    },
     episodes: [
       {
         slug: "why-markets-chose-gold-silver",

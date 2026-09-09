@@ -45,7 +45,7 @@ function ClusterPage() {
             </p>
           ))
         )}
-        {cluster.slug !== "banks-paper" ? (
+        {cluster.slug !== "banks-paper" && cluster.slug !== "ancient" ? (
           <p className="mt-6 text-sm text-faint">
             {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
           </p>
