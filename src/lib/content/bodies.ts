@@ -1219,3 +1219,67 @@ export const banksPaperHubBody: Section[] = [
     ],
   },
 ];
+
+/** Cluster hub /history/ancient — rendered by the cluster route from Cluster.sections. */
+export const ancientHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Markets chose gold and silver because they were tradeable: portable, durable, divisible, and recognizable. Struck coinage from Lydia through Greece to Rome is a later technology for verifying metal. The metal came first. The stamp came second. Sound-money history does not begin when a gold window closed in 1971.",
+      "Start from the [history pillar](/history) for the five-cluster path. This shelf is the on-ramp: why two metals kept winning, how a stamp lowered the cost of checking them, and what happened when a state lightened the coin. Paper receipts — warehouse tickets that become notes — wait on [banks and paper](/history/banks-paper). Read metal and coin first.",
+    ],
+  },
+  {
+    heading: "The claim: metal first, stamp second",
+    paragraphs: [
+      "A coin is a piece of metal plus a mark. The mark is a claim about weight and fineness. It is not the money itself. Before any mint, traders already settled in gold and silver by weight. The invention of coinage is a cut in verification cost, not the birth of monetary metal.",
+      "That order matters for this pillar. If you start the story in 1971, you start at a late official window. If you start it with a warehouse receipt, you start after people already trusted a named pile of coin. This cluster sits earlier. It asks why gold and silver were the pile, and what a stamp did to that pile.",
+      "The stamp does not abolish trust. It relocates it. You no longer weigh every lump in a market of strangers. You decide whether the issuer’s type is honest enough for the trade. When the type is trusted, coin travels farther than anonymous metal. When it is debased, people return to weight or hoard the better pieces."
+    ],
+  },
+  {
+    heading: "Why markets chose gold and silver",
+    paragraphs: [
+      "Many things have been money in a local range: cattle, grain, shells, copper. For high-value, long-distance settlement, two metals kept winning. The selection is a trade result, not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand.",
+      "Portability is value per weight. Durability is survival across a generation: gold does not rot; silver tarnishes but does not disappear. Divisibility is the ability to make change without destroying the good — metal can be cut and recast. Recognizability is how cheaply a stranger can tell the stuff from a look-alike. Scarcity sits under all four. A metal that can be planted like wheat cannot stay a unit for long.",
+      "None of this is a pitch to hold metal. It is why traders kept returning to the same two. [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the first-draft stop for those properties. This hub only names the selection.",
+    ],
+  },
+  {
+    heading: "The path: Lydia to the solidus",
+    paragraphs: [
+      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh and sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. Croesus is the name attached to separating gold and silver issues. The invention is the stamp that cut the cost of verifying metal. You still needed to trust the issuer. You no longer needed to weigh every lump. [Lydia and the first coins](/history/ancient/lydia-first-coins) is that stop.",
+      "Greek city-states turned mines and mints into a commercial network. Athens’ Laurion silver and the owl tetradrachm are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets. [Greece: silver and trade](/history/ancient/greece-silver-trade) places that network.",
+      "Rome ran gold and silver together: the aureus and the denarius as the famous pair, with bronze for small change. When the mint ratio and the market ratio drift, the legally overvalued metal stays and the other leaves. Debasement of the silver coin was gradual, then obvious. The third-century crisis made the coinage a fiscal instrument. The lesson is fiscal, not moral: when spending outruns metal, the coin is lightened. [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) is that stop.",
+      "Constantine’s solidus, in the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine nomisma. Continuity of weight is the story, not a romance of Rome. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) carries that continuity. It is not a sequel about paper, and it is not 1971.",
+    ],
+  },
+  {
+    heading: "Paper comes later",
+    paragraphs: [
+      "A coin is metal you can hold. A warehouse receipt is a claim on metal you are not holding. Banking, in the sense the next cluster uses the word, starts when that claim-check pays a debt and the metal stays in the vault. That handoff is not ancient coinage. It lives on [banks and paper](/history/banks-paper).",
+      "Do not mash the stamp and the receipt. Lydia’s punch is a verification mark on electrum. Amsterdam’s florin banco is a ledger credit against a vault. Law’s 1720 notes are a System fused with shares. Those later machines rhyme — a claim can cease to be trusted — but they are not this shelf.",
+      "Do not start this pillar in 1971 either. The Nixon gold-window close is a late official hinge on another cluster. It is not the invention of money, and it is not the first time a state spent past its metal. Return to the [history pillar](/history) for that modern door. Use this cluster for the older order: metal, then stamp, then — much later — paper.",
+    ],
+  },
+  {
+    heading: "Episode index",
+    paragraphs: [
+      "Each line is a job description. All five stops have first drafts. None is yet a long documentary page on the scale of Weimar or John Law, and this hub is not pretending they are sitemap-ready.",
+    ],
+    list: [
+      "[Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — Selection by trade: portability, durability, divisibility, recognizability; metal before the mint.",
+      "[Lydia and the first coins](/history/ancient/lydia-first-coins) — Electrum, a stamp, and a lower cost of verifying metal in western Anatolia.",
+      "[Greece: silver and trade](/history/ancient/greece-silver-trade) — Laurion and the Attic owl; silver as a Mediterranean language.",
+      "[Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) — Two metals, one state; when spending outran metal, the coin was lightened.",
+      "[After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) — Constantine’s gold unit keeps its weight into Byzantium; continuity, not romance.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Read this page top to bottom if you want the metal-then-stamp path. Jump to a first-draft episode if you already know the stop you need. Return to [Sound Money History](/history) for the five-cluster map. When the story leaves the coin for a ticket, open [banks and paper](/history/banks-paper). Keep 1720, the 1790s, 1923, and 1971 off this shelf except as labeled later hinges.",
+      "This hub does not retell every stop at episode length. It does not treat 1971 as the beginning of monetary history. It fixes the claim — markets chose gold and silver for tradeability; coinage is metal first, stamp second — and orients the ancient cluster. Linear order is the on-ramp: why the metals, then Lydia, then Greece, then Rome, then the solidus. Related links stay short: the parent pillar, and the later paper cluster. The episode list below is a shelf index, not a promise that every page is already thick.",
+    ],
+  },
+];
