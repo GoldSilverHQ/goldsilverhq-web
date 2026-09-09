@@ -7,6 +7,7 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
  */
 export const PHASE1_SITEMAP_PATHS = [
   "/history",
+  "/history/ancient",
   "/history/20th-century",
   "/history/20th-century/panic-1907-fed",
   "/history/20th-century/classical-gold-standard-end",
