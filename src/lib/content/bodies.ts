@@ -1310,8 +1310,8 @@ export const marketsHubBody: Section[] = [
   {
     heading: "What this pillar is not",
     paragraphs: [
-      "This pillar is not [**/history**](/history). History tells what happened: coinage, banks, 1933, 1971. Markets uses those dates only when a leftover rule or a named peak still sits on a current ledger. The narrative stays on the history shelf. If you want Weimar, the Fed, or the Nixon shock as a story, go there. If you want the leftover $42.22 book rate as a present fact, stay here.",
-      "This pillar is not [**/gold-silver**](/gold-silver). Practice is how people handle bars, coins, premiums, storage, and fakes. Markets does not tell you how to buy an ounce. It does not rank dealers. It does not publish a first-ounces checklist. Those pages have their own hub.",
+      "This pillar is not [Sound Money History](/history). History tells what happened: coinage, banks, 1933, 1971. Markets uses those dates only when a leftover rule or a named peak still sits on a current ledger. The narrative stays on the history shelf. If you want Weimar, the Fed, or the Nixon shock as a story, go there. If you want the leftover $42.22 book rate as a present fact, stay here.",
+      "This pillar is not [gold and silver in practice](/gold-silver). Practice is how people handle bars, coins, premiums, storage, and fakes. Markets does not tell you how to buy an ounce. It does not rank dealers. It does not publish a first-ounces checklist. Those pages have their own hub.",
       "This pillar is also not a tips desk. No page here names a miner, a target, or a reason to prefer one metal. BaFin-clean documentary voice means the figures stand without a call to action. The live tape on the desk is a clock. These pages are why a few of those numbers have a statute or a definition attached.",
     ],
   },
@@ -1341,7 +1341,7 @@ export const marketsHubBody: Section[] = [
   {
     heading: "Where the other pillars sit",
     paragraphs: [
-      "For the documentary path from coinage to 1971, start at [Sound Money History](/history). That pillar is narrative. This one is not. A single light link is enough: history is elsewhere. For definitions of sound money, hard money, and “backed,” use [**/sound-money**](/sound-money). For handling metal, use [**/gold-silver**](/gold-silver).",
+      "For the documentary path from coinage to 1971, start at [Sound Money History](/history). That pillar is narrative. This one is not. A single light link is enough: history is elsewhere. For definitions of sound money, hard money, and “backed,” use [Sound Money](/sound-money). For handling metal, use [gold and silver in practice](/gold-silver).",
       "You do not need to finish all three spokes on day one. Book value is the cleanest entry if you have just read 1971 and want to know why $42.22 still appears on a Treasury line. Central-bank reserves are the entry if you have just looked at the desk’s country bars. The ratio is the entry if you have just seen GSR on the tape and want the definition without a story about catch-up.",
       "This hub’s job is the orientation: three fact pages, not a history cluster, not a buying guide. The claim is narrow on purpose. Current metal-market facts live here. Narrative lives on history. Practice lives on gold-silver. Keep the shelves labeled.",
       "A reader who arrives from the tape can treat the spokes as captions. GSR on the clock is the ratio page. A country bar on the desk is the reserve page. A U.S. official-gold line that still looks too small in dollars is the book-value page. The captions do not replace the clock. They stop a figure from being read as a tip.",
