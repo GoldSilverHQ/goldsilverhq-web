@@ -148,6 +148,7 @@
 
   .data-ui table,
   .data-ui .clock-value,
+  .data-ui .tabular-nums,
   .data-ui text {
     font-family: var(--font-sans);
     font-variant-numeric: tabular-nums lining-nums;
