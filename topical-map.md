@@ -91,6 +91,24 @@ Hub: `/gold-silver`
 
 ---
 
+## Pillar 4 — Gold & silver markets (facts, not tips)
+Hub: `/markets`
+
+Current metal-market facts. Not sound-money history. Not how-to buying.
+
+1. Official gold book value — `/markets/official-gold-book-value`
+2. Central-bank gold reserves — `/markets/central-bank-gold-reserves` (Poland documentary block lives **inside** this page; no `/markets/poland-…`)
+3. Gold–silver ratio — `/markets/gold-silver-ratio`
+
+**Sell:** newsletter only. No ebook CTA on this pillar.  
+**Do not** park Weimar/Nixon narrative here. **Do not** add thin extra spokes (COMEX, physical-by-country, Poland own URL).  
+**Sitemap:** out of scope until these pages are merged, live, and thick.
+
+**Markets linking:**  
+spoke → `/markets` → (optional light) `/history`. No spaghetti.
+
+---
+
 ## Cheat sheet
 
 | Level | Example |
@@ -104,6 +122,7 @@ Hub: `/gold-silver`
 | 1 Idea | What does sound money *mean*? |
 | 2 History | What *happened*? |
 | 3 Practice | How do I handle metal? |
+| 4 Markets | What do the current figures *say*? |
 
 ---
 

@@ -25,8 +25,8 @@ function AboutPage() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">About</p>
         <h1 className="mt-2 font-display text-4xl sm:text-5xl">Media. Not a desk that sells you a bar.</h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
-          GoldSilverHQ publishes educational media about sound money, monetary history, and how people handle
-          physical gold and silver. The working copy is this site. The public voice is{" "}
+          GoldSilverHQ publishes educational media about sound money, monetary history, metal-market facts, and
+          how people handle physical gold and silver. The working copy is this site. The public voice is{" "}
           <a href="https://x.com/goldsilverhq" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
             @GoldSilverHQ
           </a>
@@ -37,7 +37,7 @@ function AboutPage() {
           differ by country. If you act, you do so on your own judgment.
         </p>
 
-        <h2 className="mt-12 font-display text-3xl">The three pillars</h2>
+        <h2 className="mt-12 font-display text-3xl">The four pillars</h2>
         <ol className="mt-6 grid gap-3">
           {pillars.map((p) => (
             <li key={p.id}>

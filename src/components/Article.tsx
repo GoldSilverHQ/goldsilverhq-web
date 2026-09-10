@@ -140,7 +140,11 @@ export function EpisodeBody({
       <ArticleSections sections={blocks} />
       <RelatedLinks links={continueLinks(episode, clusterSlug)} />
       <Conversion
-        kind={clusterSlug === "sound-money" || clusterSlug === "gold-silver" ? "newsletter" : "ebook"}
+        kind={
+          clusterSlug === "sound-money" || clusterSlug === "gold-silver" || clusterSlug === "markets"
+            ? "newsletter"
+            : "ebook"
+        }
       />
     </article>
   );

@@ -28,9 +28,9 @@ export function HomeEditorial() {
       </section>
 
       <section className="mt-14">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Three pillars</p>
-        <h2 className="mt-2 font-display text-3xl">Idea, history, practice</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Four pillars</p>
+        <h2 className="mt-2 font-display text-3xl">Idea, history, markets, practice</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
           {pillars.map((p) => (
             <a
               key={p.id}
