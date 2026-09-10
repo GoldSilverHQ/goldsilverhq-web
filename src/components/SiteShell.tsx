@@ -45,7 +45,7 @@ export function SiteShell({
   ui,
 }: {
   children: ReactNode;
-  /** `data` = desk/maps sans + tabular nums. `markets` = sans titles. History stays editorial. */
+  /** `data` = desk/maps sans + tabular nums. `markets` = Figtree titles, body, and figures. */
   ui?: "data" | "markets";
 }) {
   const [open, setOpen] = useState(false);

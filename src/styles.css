@@ -154,9 +154,26 @@
     font-variant-numeric: tabular-nums lining-nums;
   }
 
-  /* Markets pillar: sans titles. History stays on the global display serif. */
-  .markets :is(h1, h2, h3),
+  /* Markets pillar: no Cormorant on titles, body, or figures. History stays editorial. */
+  .markets,
+  .markets :where(*) {
+    font-family: var(--font-sans);
+  }
+
+  .markets :is(h1, h2, h3, h4),
   .markets .font-display {
     font-family: var(--font-sans);
+  }
+
+  .markets {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .markets table,
+  .markets ol,
+  .markets ul,
+  .markets .tabular-nums {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums lining-nums;
   }
 }

@@ -26,7 +26,7 @@ function MarketsHub() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Markets</p>
         <h1 className="mt-2 font-sans text-4xl sm:text-5xl">Gold &amp; silver markets</h1>
         <div className="mt-8">
-          <ArticleSections sections={marketsHubBody} />
+          <ArticleSections sections={marketsHubBody} face="sans" />
         </div>
 
         <h2 className="mt-16 font-sans text-3xl">Read by topic</h2>
@@ -46,7 +46,7 @@ function MarketsHub() {
             </Link>
           ))}
         </div>
-        <RelatedLinks links={marketsHub.related} />
+        <RelatedLinks links={marketsHub.related} face="sans" />
       </div>
     </SiteShell>
   );
