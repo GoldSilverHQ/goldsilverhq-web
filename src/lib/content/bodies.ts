@@ -1014,6 +1014,178 @@ const silverIndustry: Section[] = [
   },
 ];
 
+const officialGoldBookValue: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "United States official gold is still carried on the Treasury books at **$42.22** a fine troy ounce. That figure is a statutory book value left from the last official dollar–gold par. It is not the London or COMEX print. It is not a forecast, and it is not a price anyone can present metal against today.",
+    ],
+  },
+  {
+    heading: "Book versus spot",
+    paragraphs: [
+      "Two numbers sit on the same pile of metal. **Spot** is the market print: a London PM fix, a COMEX nearby, or another dated quote in dollars per troy ounce. **Book** is the value written into the U.S. fiscal accounts. The Treasury’s Status Report of U.S. Treasury-Owned Gold, and the Federal Reserve’s H.4.1 gold-stock line, still use the statutory rate of **$42.2222** per fine troy ounce — usually shortened to $42.22.",
+      "The stock itself is large and slow-moving. Treasury reports on the order of **261.5 million** fine troy ounces of official gold, held mainly as “deep storage” at Fort Knox, West Point, and Denver, with a smaller working stock at the Mint. At the book rate that stock is about **$11.041 billion**. At a market print of, say, two thousand dollars an ounce, the same ounces are a different arithmetic product. The ounces did not change. The unit of account did.",
+      "Gold certificates issued by the Treasury to Federal Reserve Banks match that book stock. The certificate is an intra-government claim, not a public window. No citizen, and no foreign official holder, can present dollars and demand those ounces at $42.22. The [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) ended official convertibility for foreign holders. The book rate survived as an accounting leftover.",
+    ],
+  },
+  {
+    heading: "How the official price got to $42.22",
+    paragraphs: [
+      "The Gold Reserve Act of **1934** reset the official U.S. gold price from $20.67 to **$35** an ounce after the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods then used that $35 par for official dollar–gold convertibility. The market print and the official par were meant to stay near each other. After the mid-1960s they did not.",
+      "On **15 August 1971** the United States suspended convertibility for foreign official holders. In **December 1971** the Smithsonian Agreement raised the official par to **$38**. The Par Value Modification Act of **31 March 1972** (Public Law 92-268) wrote that $38 figure into U.S. law. A further devaluation followed. Public Law **93-110** of **21 September 1973** set the par at **$42.2222** per fine troy ounce.",
+      "That 1973 statute is the last official U.S. gold par. Congress did not raise the book rate again when the market floated. Spot left $42.22 behind. The Treasury continued to carry the same ounces at the same statutory dollars. H.4.1’s gold-stock line still prints in that book unit, not in market dollars.",
+    ],
+  },
+  {
+    heading: "A short arithmetic table",
+    paragraphs: [
+      "The divisions below are arithmetic only: a named spot, or this site’s LBMA/COMEX **year average** from the money-path series, divided by the two official pars. They do not say gold is cheap or dear. They do not project a path. $35 is the 1934–1971 official par. $42.22 is the 1973–present book rate. For years before September 1973, the $42.22 column is a later yardstick applied backward, not a par that then existed.",
+    ],
+    list: [
+      "**1971 year average $40.62** (LBMA/COMEX series used on this site): $40.62 ÷ $35 = **1.16×**; $40.62 ÷ $42.22 = **0.96×**.",
+      "**1973 year average $97.32**: $97.32 ÷ $35 = **2.78×**; $97.32 ÷ $42.22 = **2.31×**. The $42.22 par was written that September.",
+      "**21 January 1980 London PM $850** (this site’s 1980 gold print): $850 ÷ $35 = **24.29×**; $850 ÷ $42.22 = **20.13×**. The 1980 **year average** was $612.56 → **17.50×** and **14.51×**.",
+      "**2000 year average $279.11**: $279.11 ÷ $35 = **7.97×**; $279.11 ÷ $42.22 = **6.61×**.",
+      "**6 September 2011 London PM $1,895**: $1,895 ÷ $35 = **54.14×**; $1,895 ÷ $42.22 = **44.88×**. The 2011 **year average** was $1,571.52 → **44.90×** and **37.22×**.",
+      "**2020 year average $1,769.64**: $1,769.64 ÷ $35 = **50.56×**; $1,769.64 ÷ $42.22 = **41.91×**.",
+      "**2024 year average $2,386**: $2,386 ÷ $35 = **68.17×**; $2,386 ÷ $42.22 = **56.51×**.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Read any row as a ratio of two published dollars, not as a valuation model. The Treasury still books the stock at the last statutory par. The market prints another number. Both can be true at once because they answer different questions.",
+    ],
+  },
+  {
+    heading: "What the book number is for",
+    paragraphs: [
+      "Fiscal accounts need a dollar figure for a government asset. After 1973 the United States chose not to mark official gold to the market on the main Treasury gold line. The book stays at $42.22. Market-value illustrations — ounces times spot — appear in commentary and on this site’s [desk](/desk). They are a different product. They do not rewrite the statute.",
+      "Other official holders treat gold differently. Some central banks revalue gold toward market prices on their own balance sheets. Some keep a historical cost. The IMF’s International Financial Statistics report physical gold and a dollar value used for reserve arithmetic. Those are reporting conventions. They are not a U.S. statutory par, and they are not this page’s $42.22.",
+      "Keep the jobs apart. [Sound Money History](/history) tells how $35 and $42.22 became law. This page only records that the book rate is still $42.22, that spot is a different series, and that dividing one by the other is arithmetic. How people handle bars and coins lives under [gold and silver in practice](/gold-silver), not here.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page does not say the Treasury “should” revalue gold. It does not treat $42.22 as a secret price, a floor, or a target. It does not turn a book-to-spot multiple into a reason to buy or sell metal. Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers.",
+      "Return to [gold and silver markets](/markets) for the other two fact pages on this pillar: how central banks report gold in reserves, and what the gold–silver ratio measures. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
+    ],
+  },
+];
+
+const centralBankGoldReserves: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
+    ],
+  },
+  {
+    heading: "How gold enters the reserve statement",
+    paragraphs: [
+      "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, SDRs, and IMF reserve positions in one reserve total.",
+      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) at $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not name a policy.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, about **8,133 tonnes**. Germany, Italy, and France hold large legacy European stocks. Russia and China report stocks above **2,300 tonnes** each; China’s published official figure is widely treated as a floor, not a full geological census.",
+    ],
+  },
+  {
+    heading: "Vaults and where the bars sit",
+    paragraphs: [
+      "Reported gold is not always in the reporting capital. For much of the postwar period, European and other official holders kept bars at the Federal Reserve Bank of New York, the Bank of England, and the Banque de France. Custody was a service. Title stayed with the owner. The location still matters for politics and for logistics: a bar in New York is not a bar in Frankfurt.",
+      "The 2010s brought a documented repatriation wave. The Deutsche Bundesbank’s 2013–2017 programme moved gold from New York and Paris to Frankfurt (300 tonnes from the New York Fed and 374 tonnes from the Banque de France under that plan). De Nederlandsche Bank announced in 2014 that it would bring 122 tonnes from New York to Amsterdam. Austria, Hungary, and others published their own transfers. The Bank of England remains a major custodian for official gold that has not been called home.",
+      "Storage preferences are facts about custody, not a ranking of vaults. A central bank can hold gold at home, at a foreign central bank, or split between the two. The report to the IMF is about ownership of monetary gold, not about which door a visitor would knock on.",
+    ],
+  },
+  {
+    heading: "Recent official purchases, dated",
+    paragraphs: [
+      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net central-bank buying in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
+      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (treated at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
+      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household.",
+    ],
+  },
+  {
+    heading: "Poland: a short documentary block",
+    paragraphs: [
+      "Narodowy Bank Polski is the named European buyer of the early 2020s. This is not a separate URL. It is a subsection of how official gold is reported and accumulated.",
+      "At the end of **2017** NBP’s reported gold stock was about **103 tonnes**. In **2018–2019** the bank bought on the order of **126 tonnes**, taking the stock to about **229 tonnes** by end-2019. In **July 2019** NBP announced that it would transfer **100 tonnes** from the Bank of England to vaults in Poland — a custody move, not a purchase. Title was already Polish; the bars changed address.",
+      "Buying resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, **+90 tonnes** in 2024, and further additions in 2025–2026. The same compilation’s latest stock line for Poland is **550 tonnes**. NBP communications in this period named gold as a growing share of foreign-exchange reserves, with a public aim in the region of **20 percent**. Governor Adam Glapiński’s remarks treated gold as a reserve asset, not as a trading book.",
+      "Read those sentences as a dated official-sector record. They do not say a private reader should follow NBP. They do not rank Poland against other buyers as an investment case. They show one central bank raising a reported gold stock, moving metal home, and stating a reserve-share aim — the same three facts this page tracks for the official sector as a whole.",
+    ],
+  },
+  {
+    heading: "What the figures do not say",
+    paragraphs: [
+      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share can be an old European inheritance or a new emerging-market programme. The mechanism is the report: quantity, sometimes value, sometimes location.",
+      "This pillar stays on current metal-market facts. The [markets hub](/markets) orients the three spokes. How $42.22 became the U.S. book rate is the first spoke. What the gold–silver ratio measures is the third. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
+    ],
+  },
+];
+
+const goldSilverRatio: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "The gold–silver ratio is one market price divided by another. At a stated time, take the gold print in dollars per troy ounce and divide by the silver print in dollars per troy ounce. The result is how many ounces of silver equal one ounce of gold at those two prints. It is a dated snapshot. It is not a fair-value claim.",
+    ],
+  },
+  {
+    heading: "What the ratio measures",
+    paragraphs: [
+      "Call gold G and silver S, both in the same currency per troy ounce. The ratio is G ÷ S. If gold is $2,000 and silver is $25, the ratio is 80. Eighty ounces of silver then have the same dollar value as one ounce of gold at that pair of prints. Change either print and the ratio changes. There is no third hidden input.",
+      "The two prices must share a clock. A London gold PM fix against a COMEX silver nearby from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from the same tape. This page uses **named prints** and **year averages** so the arithmetic can be checked. The money-path series on the site is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s print.",
+      "Historically, states also wrote a **mint ratio**: a legal number of silver units per gold unit. The Coinage Act of 1792 used 15 to 1. Later statutes used 16 to 1. That legal ratio is a mint rule. It is not the market ratio. When the two diverge, the legally overvalued metal tends to stay in coin and the other tends to leave — the ordinary bimetallic problem, told as narrative under [bimetallism](/history/silver/bimetallism). This page keeps the market quotient.",
+    ],
+  },
+  {
+    heading: "What the ratio does not measure",
+    paragraphs: [
+      "The ratio does not measure a natural law. Geology, mine supply, industrial use, and monetary demand all affect the two prices. None of them is “the” ratio. A number near 15 in a mint statute, or near 17 on a January 1980 tape, does not bind a later tape.",
+      "The ratio does not measure whether silver is behind or gold is ahead. It does not contain a mean that prices owe a return to. It does not forecast a catch-up. Those sentences are the ones this page will not make. A high ratio means gold’s dollar print is large relative to silver’s dollar print at that date. A low ratio means the opposite. That is the whole claim.",
+      "The ratio also does not measure industrial tightness by itself. Silver has a large fabrication use; gold’s fabrication use is smaller relative to its monetary stock. A squeeze in one metal can move the quotient without saying anything about the other metal’s “true” value. Keep the definition narrow so the snapshot stays honest.",
+    ],
+  },
+  {
+    heading: "1980 and 2011 as anchors",
+    paragraphs: [
+      "Two well-documented peaks are the anchors on this page. They are dates, not destinies.",
+      "In **January 1980** the London gold PM fix printed **$850** on 21 January. Silver’s nearby extreme in that same month, used on this site’s 1980 desk print, is **$49.45** on 18 January. Those two named prints give $850 ÷ $49.45 = **17.2**. That is a peak-week snapshot during the Hunt-era silver run, whose break is told as [Silver Thursday](/history/silver/silver-thursday). The **1980 year averages** on this site are $612.56 gold and $20.98 silver → **29.2**. The January tape and the year average are different snapshots. Both are arithmetic.",
+      "In **2011** the London gold PM fix printed **$1,895** on 6 September. Silver’s 2011 year average on this site is $35.12; gold’s is $1,571.52 → a year-average ratio of **44.7**. April 2011 saw silver nearby prints in the high forties while gold was still below the September fix, so intra-year ratios ran from the mid-thirties into the forties depending on the day. The useful habit is to name the two prices and the date. “The 2011 ratio” without a clock is a blur.",
+    ],
+  },
+  {
+    heading: "Year-average snapshots from the same series",
+    paragraphs: [
+      "Using only this site’s money-path year averages — so both metals share a method — a few more dated quotients sit in one table. Again: arithmetic, not a path.",
+    ],
+    list: [
+      "**1971:** $40.62 ÷ $1.39 = **29.2**.",
+      "**1980:** $612.56 ÷ $20.98 = **29.2** (year average; January peak prints ≈ **17.2**, above).",
+      "**2000:** $279.11 ÷ $4.95 = **56.4**.",
+      "**2011:** $1,571.52 ÷ $35.12 = **44.7**.",
+      "**2020:** $1,769.64 ÷ $20.55 = **86.1**.",
+      "**2024:** $2,386 ÷ $28.27 = **84.4**.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Those six rows show that a year-average ratio can sit near 29 in two different decades and near 84–86 in two later years without that fact implying a return trip. The 1980 January print near 17 is a third kind of snapshot: a peak-week pair, not a year. Keep the labels on the numbers.",
+    ],
+  },
+  {
+    heading: "How to read a snapshot",
+    paragraphs: [
+      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) is the parent for this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact.",
+      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. Practice’s job is bars, coins, and premiums. Mixing the three produces slogans. Keeping them apart produces a number you can check.",
+      "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
+      "If you want the older legal ratio as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A market ratio is a quotient. Keep the two labeled when you move between pillars.",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
   "banks-paper/john-law": johnLaw,
   "20th-century/panic-1907-fed": panic1907,
@@ -1050,6 +1222,9 @@ const bodies: Record<string, Section[]> = {
   "silver/bimetallism": bimetallism,
   "silver/silver-thursday": silverThursday,
   "silver/monetary-and-industry": silverIndustry,
+  "markets/official-gold-book-value": officialGoldBookValue,
+  "markets/central-bank-gold-reserves": centralBankGoldReserves,
+  "markets/gold-silver-ratio": goldSilverRatio,
 };
 
 export function getBody(cluster: string, slug: string): Section[] | null {
@@ -1112,6 +1287,64 @@ export const historyHubBody: Section[] = [
       "For the modern door, start at **/history/20th-century**. That cluster hub lines up private rescue after 1907, the Fed’s creation, the end of classical gold, Weimar, the 1933 US gold recall, and the 1971 close of the dollar’s gold window. From there, open any single episode, or return to this hub and choose another cluster.",
       "You do not need to retell Weimar or Nixon on this hub page. Those stories live in their episodes. This page only orients: five clusters as a path, episodes as dated claims, and the twentieth century as the densest entrance for readers who live downstream of 1971.",
       "If you prefer a slower on-ramp, begin with **/history/ancient** or **/history/banks-paper**, then move forward when the mechanism is clear. Either route is valid. What matters is finishing with a chain of dated claims rather than a pile of slogans. The path is the point—money’s history as linked events, from coinage toward that modern close.",
+    ],
+  },
+];
+
+/** Pillar hub /markets — rendered by the markets index route. */
+export const marketsHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This pillar records current metal-market facts: how official gold is booked, how central banks report gold in reserves, and what the gold–silver ratio measures. It is not Sound Money History, and it is not a how-to for buying metal.",
+    ],
+  },
+  {
+    heading: "What this pillar is",
+    paragraphs: [
+      "**/markets** holds dated figures and definitions that sit on today’s tape and today’s official books. A book value is a statute leftover. A reserve line is a reported stock. A ratio is one price divided by another at a named time. The tone is documentary. The aim is a readable record for adults who want the arithmetic without a pitch.",
+      "The three spokes do different jobs. [Official gold book value](/markets/official-gold-book-value) explains why the United States still carries Treasury gold at $42.22 an ounce while spot prints another number. [Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how gold appears in foreign-exchange reserves, where bars are often stored, and which official buyers have been named in recent tallies — including a short Poland block on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient and pins it to 1980 and 2011 snapshots. This hub only orients those three.",
+      "Numbers on this pillar come from public official series and from the same LBMA/COMEX averages this site already uses on the [desk](/desk). When a page divides spot by $35 or by $42.22, that is arithmetic on named prints. When a page cites a World Gold Council or IMF-based annual net, that is a dated official-sector line. None of those operations is a forecast.",
+    ],
+  },
+  {
+    heading: "What this pillar is not",
+    paragraphs: [
+      "This pillar is not [**/history**](/history). History tells what happened: coinage, banks, 1933, 1971. Markets uses those dates only when a leftover rule or a named peak still sits on a current ledger. The narrative stays on the history shelf. If you want Weimar, the Fed, or the Nixon shock as a story, go there. If you want the leftover $42.22 book rate as a present fact, stay here.",
+      "This pillar is not [**/gold-silver**](/gold-silver). Practice is how people handle bars, coins, premiums, storage, and fakes. Markets does not tell you how to buy an ounce. It does not rank dealers. It does not publish a first-ounces checklist. Those pages have their own hub.",
+      "This pillar is also not a tips desk. No page here names a miner, a target, or a reason to prefer one metal. BaFin-clean documentary voice means the figures stand without a call to action. The live tape on the desk is a clock. These pages are why a few of those numbers have a statute or a definition attached.",
+    ],
+  },
+  {
+    heading: "The three spokes",
+    paragraphs: ["Each line is a job description. Open the page for the full mechanism. This hub does not reprint every table."],
+    list: [
+      "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus spot; short arithmetic of named year averages and peak prints divided by $35 and by $42.22.",
+      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in FX reserves; vault and custody preferences; dated official purchases; Poland as a short documentary subsection, not its own URL.",
+      "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; what it does not measure; 1980 and 2011 as named anchors; year-average snapshots from the same series.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Read the three as a small shelf, not as a web. Book value is a U.S. accounting leftover from the last official par. Central-bank gold is an official-sector stock and flow. The ratio is a pair of market prints. They share a pillar because they are current metal-market facts. They do not share a cause, and they do not share a trade.",
+    ],
+  },
+  {
+    heading: "How to read a markets page",
+    paragraphs: [
+      "Each spoke opens with a tight claim. Headings keep book, report, and ratio in separate boxes. Related links stay short: this hub, one neighbor on the shelf, and at most one history page when a statute or a 1980 tape needs its narrative home. That is the ledger — spoke to hub, hub to history once, no spaghetti.",
+      "When a page names a year-average gold price, it uses the same money-path series as the desk. When it names a London PM print, it says so. When it names an IMF- or WGC-based official net, it treats that as a reported change, not as a signal. Lists appear when a table of divisions helps; paragraphs carry the claim.",
+      "If two facts rhyme — official gold on a book, official gold in a reserve statement — the text will say they are different jobs. The U.S. $42.22 line is a frozen par. A central bank’s reserve share may use a market-related dollar value. Mixing them produces a slogan. Keeping them labeled produces a figure you can check.",
+    ],
+  },
+  {
+    heading: "Where the other pillars sit",
+    paragraphs: [
+      "For the documentary path from coinage to 1971, start at [Sound Money History](/history). That pillar is narrative. This one is not. A single light link is enough: history is elsewhere. For definitions of sound money, hard money, and “backed,” use [**/sound-money**](/sound-money). For handling metal, use [**/gold-silver**](/gold-silver).",
+      "You do not need to finish all three spokes on day one. Book value is the cleanest entry if you have just read 1971 and want to know why $42.22 still appears on a Treasury line. Central-bank reserves are the entry if you have just looked at the desk’s country bars. The ratio is the entry if you have just seen GSR on the tape and want the definition without a story about catch-up.",
+      "This hub’s job is the orientation: three fact pages, not a history cluster, not a buying guide. The claim is narrow on purpose. Current metal-market facts live here. Narrative lives on history. Practice lives on gold-silver. Keep the shelves labeled.",
+      "A reader who arrives from the tape can treat the spokes as captions. GSR on the clock is the ratio page. A country bar on the desk is the reserve page. A U.S. official-gold line that still looks too small in dollars is the book-value page. The captions do not replace the clock. They stop a figure from being read as a tip.",
     ],
   },
 ];

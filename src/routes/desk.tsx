@@ -32,7 +32,7 @@ function DeskPage() {
         <p className="mt-2 max-w-xl text-muted">
           The desk is the numbers. The pillars are why they matter.
         </p>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
           {pillars.map((p) => (
             <a
               key={p.id}

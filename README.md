@@ -14,6 +14,7 @@ Media only. Not investment advice. Checkout: [@GoldSilverHQ](https://x.com/GoldS
 | --- | --- |
 | Sound money | `/sound-money` |
 | History of money | `/history` |
+| Gold & silver markets | `/markets` |
 | Gold & silver in practice | `/gold-silver` |
 | Desk | `/desk` |
 | Quiz | `/quiz` |

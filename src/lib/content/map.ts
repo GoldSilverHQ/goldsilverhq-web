@@ -13,7 +13,7 @@ export type Episode = {
     secondary: string[];
     demand: "low" | "mid" | "high";
     difficulty: "low" | "mid" | "high";
-    intent: "history" | "definition" | "practical";
+    intent: "history" | "definition" | "practical" | "markets";
     titleTag?: string;
   };
 };
@@ -38,11 +38,23 @@ export const historyHub = {
   related: [
     { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+    { title: "Gold & silver markets (facts, not history)", href: "/markets" },
+  ],
+};
+
+/** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
+export const marketsHub = {
+  titleTag: "Gold & Silver Markets: Facts, Not Tips",
+  related: [
+    { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+    { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
+    { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
+    { title: "Sound Money History (narrative lives there)", href: "/history" },
   ],
 };
 
 export type Pillar = {
-  id: "sound-money" | "history" | "gold-silver";
+  id: "sound-money" | "history" | "gold-silver" | "markets";
   path: string;
   title: string;
   kicker: string;
@@ -81,6 +93,16 @@ export const pillars: Pillar[] = [
     summary:
       "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist. Neutral and educational.",
     sell: "Newsletter + partner link if a deal exists",
+  },
+  {
+    id: "markets",
+    path: "/markets",
+    title: "Gold & Silver Markets",
+    kicker: "Pillar 4 · Current figures",
+    question: "What do the current figures say?",
+    summary:
+      "Official book value, central-bank gold, and the gold–silver ratio — dated market facts. Not sound-money history, and not how to buy a bar.",
+    sell: "Newsletter",
   },
 ];
 
@@ -966,6 +988,79 @@ export function getPractice(slug: string) {
   return practicePages.find((p) => p.slug === slug);
 }
 
+export const marketPages: Episode[] = [
+  {
+    slug: "official-gold-book-value",
+    title: "Why U.S. official gold is still booked at $42.22",
+    summary:
+      "Statutory book versus spot. The Treasury still carries official gold at $42.22 an ounce — a leftover par, not a market quote.",
+    status: "ready",
+    paragraphs: [
+      "United States official gold is still carried on the Treasury books at $42.22 a fine troy ounce. That number is a statutory book value. It is not the London or COMEX print, and it is not a forecast.",
+    ],
+    related: [
+      { title: "Gold & silver markets", href: "/markets" },
+      { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
+    ],
+    seo: {
+      primary: "official gold book value 42.22",
+      secondary: ["us gold official price 42.22", "treasury gold book value", "statutory gold price vs spot"],
+      demand: "mid",
+      difficulty: "mid",
+      intent: "markets",
+      titleTag: "U.S. Official Gold Book Value: Still $42.22 an Ounce",
+    },
+  },
+  {
+    slug: "central-bank-gold-reserves",
+    title: "How central banks report gold in FX reserves",
+    summary:
+      "Share of reserves, vault preferences, and dated official purchases. Poland’s recent buys sit here as a short documentary block — not a separate page.",
+    status: "ready",
+    paragraphs: [
+      "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
+    ],
+    related: [
+      { title: "Gold & silver markets", href: "/markets" },
+      { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+    ],
+    seo: {
+      primary: "central bank gold reserves",
+      secondary: ["official gold holdings", "imf gold reserves", "poland central bank gold"],
+      demand: "high",
+      difficulty: "mid",
+      intent: "markets",
+      titleTag: "Central-Bank Gold Reserves: Share, Vaults, Official Buys",
+    },
+  },
+  {
+    slug: "gold-silver-ratio",
+    title: "What the gold–silver ratio measures (and what it does not)",
+    summary:
+      "Gold price divided by silver price at a dated print. A snapshot, not a fair-value claim. 1980 and 2011 are the named anchors.",
+    status: "ready",
+    paragraphs: [
+      "The gold–silver ratio is one price divided by another. It records how many ounces of silver equal one ounce of gold at those two prints. It does not name a destined level.",
+    ],
+    related: [
+      { title: "Gold & silver markets", href: "/markets" },
+      { title: "Bimetallism (silver cluster)", href: "/history/silver/bimetallism" },
+    ],
+    seo: {
+      primary: "gold silver ratio",
+      secondary: ["gold to silver ratio", "gsr 1980", "gold silver ratio 2011"],
+      demand: "high",
+      difficulty: "mid",
+      intent: "markets",
+      titleTag: "Gold–Silver Ratio: Definition and Dated Snapshots",
+    },
+  },
+];
+
+export function getMarket(slug: string) {
+  return marketPages.find((p) => p.slug === slug);
+}
+
 /** Locked nav: cluster prev/next, then related[] as extra context. Hubs and the disclaimer page are omitted — breadcrumbs and footer already cover them. */
 export function continueLinks(
   episode: Episode,
@@ -1000,6 +1095,11 @@ export function continueLinks(
     const i = list.findIndex((e) => e.slug === episode.slug);
     if (i > 0) add(`← ${list[i - 1].title}`, `/gold-silver/${list[i - 1].slug}`);
     if (i >= 0 && i < list.length - 1) add(`${list[i + 1].title} →`, `/gold-silver/${list[i + 1].slug}`);
+  } else if (clusterSlug === "markets") {
+    const list = marketPages;
+    const i = list.findIndex((e) => e.slug === episode.slug);
+    if (i > 0) add(`← ${list[i - 1].title}`, `/markets/${list[i - 1].slug}`);
+    if (i >= 0 && i < list.length - 1) add(`${list[i + 1].title} →`, `/markets/${list[i + 1].slug}`);
   }
 
   const skip = new Set([

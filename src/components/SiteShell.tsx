@@ -8,6 +8,7 @@ const NAV = [
   { href: "/desk", label: "Desk" },
   { href: "/sound-money", label: "Sound Money" },
   { href: "/history", label: "History" },
+  { href: "/markets", label: "Markets" },
   { href: "/gold-silver", label: "In Practice" },
   { href: "/quiz", label: "Quiz" },
   { href: "/maps", label: "Maps" },
@@ -115,7 +116,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 <Brand compact />
               </p>
               <p className="mt-2 max-w-xs text-sm text-muted">
-                Media only. Sound money, history, and practical notes on physical metal. Not investment advice.
+                Media only. Sound money, history, metal-market facts, and practical notes on physical metal. Not
+                investment advice.
               </p>
             </div>
             <div className="text-sm">
@@ -124,6 +126,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 <Link to="/desk" className="text-muted hover:text-gold-soft">Desk</Link>
                 <Link to="/sound-money" className="text-muted hover:text-gold-soft">Sound Money</Link>
                 <Link to="/history" className="text-muted hover:text-gold-soft">History</Link>
+                <Link to="/markets" className="text-muted hover:text-gold-soft">Markets</Link>
                 <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
                 <Link to="/quiz" className="text-muted hover:text-gold-soft">Quiz</Link>
                 <Link to="/kit" className="text-muted hover:text-gold-soft">Kit</Link>
