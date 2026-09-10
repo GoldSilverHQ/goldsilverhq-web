@@ -20,7 +20,7 @@ export const Route = createFileRoute("/desk")({
 
 function DeskPage() {
   return (
-    <SiteShell>
+    <SiteShell ui="data">
       <MetalDesk />
       <div className="mx-auto max-w-6xl px-4">
         <MoneyPath />
@@ -28,7 +28,7 @@ function DeskPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-12 pt-12">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read next</p>
-        <h2 className="mt-2 font-display text-3xl">History and the map</h2>
+        <h2 className="mt-2 font-sans text-3xl">History and the map</h2>
         <p className="mt-2 max-w-xl text-muted">
           The desk is the numbers. The pillars are why they matter.
         </p>
@@ -40,7 +40,7 @@ function DeskPage() {
               className="group rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]"
             >
               <p className="text-xs font-semibold tracking-[0.12em] text-gold uppercase">{p.kicker}</p>
-              <h3 className="mt-3 font-display text-2xl">{p.title}</h3>
+              <h3 className="mt-3 font-sans text-2xl">{p.title}</h3>
               <p className="mt-2 text-sm text-muted">{p.summary}</p>
               <p className="mt-5 text-sm font-medium text-gold group-hover:text-gold-soft">Enter →</p>
             </a>

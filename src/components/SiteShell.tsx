@@ -40,7 +40,14 @@ function Brand({ compact = false }: { compact?: boolean }) {
   );
 }
 
-export function SiteShell({ children }: { children: ReactNode }) {
+export function SiteShell({
+  children,
+  ui,
+}: {
+  children: ReactNode;
+  /** `data` = desk/maps sans + tabular nums. `markets` = sans titles. History stays editorial. */
+  ui?: "data" | "markets";
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -106,7 +113,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </nav>
         ) : null}
       </header>
-      <main>{children}</main>
+      <main className={ui === "data" ? "data-ui" : ui === "markets" ? "markets" : undefined}>{children}</main>
       <footer className="mt-16 border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <Newsletter />

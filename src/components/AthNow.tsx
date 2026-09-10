@@ -22,7 +22,7 @@ function Col({
   return (
     <div className="flex h-full min-w-0 flex-col text-center">
       <p className="min-h-10 text-[10px] font-semibold leading-tight tracking-[0.06em] text-faint uppercase">{label}</p>
-      <p className="mt-2 font-display text-3xl tabular-nums leading-none">${money(value)}</p>
+      <p className="mt-2 font-sans text-3xl tabular-nums leading-none">${money(value)}</p>
       <p className={`mt-2 text-xs tabular-nums ${cleared ? "text-gold" : "text-muted"}`}>
         {cleared ? "above" : `${(pct * 100).toFixed(0)}% of ATH`}
       </p>
@@ -90,7 +90,7 @@ export function AthNow() {
   return (
     <section className="mt-10">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">January 1980</p>
-      <h2 className="mt-2 font-display text-3xl">The 1980 ATH, in today’s dollars</h2>
+      <h2 className="mt-2 font-sans text-3xl">The 1980 ATH, in today’s dollars</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
         Gold’s London print was $850. Silver’s Hunt-era print was $49.45. CPI is official inflation. M2 is the money
         stock.

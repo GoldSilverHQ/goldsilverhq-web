@@ -21,7 +21,7 @@ export const Route = createFileRoute("/markets/$slug")({
 function MarketPage() {
   const page = Route.useLoaderData();
   return (
-    <SiteShell>
+    <SiteShell ui="markets">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb
           items={[
@@ -34,7 +34,7 @@ function MarketPage() {
           Markets
           {page.status === "skeleton" ? " · Skeleton" : ""}
         </p>
-        <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
+        <h1 className="mt-2 font-sans text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">
           <EpisodeBody episode={page} clusterSlug="markets" />

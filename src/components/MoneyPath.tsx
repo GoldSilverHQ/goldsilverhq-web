@@ -53,7 +53,7 @@ function PathChart({
       {ticks.map((t) => (
         <g key={t}>
           <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="#f2ede4" strokeOpacity="0.1" />
-          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10">
+          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10" fontFamily="var(--font-sans)">
             {t}
           </text>
         </g>
@@ -67,7 +67,7 @@ function PathChart({
       {yearTicks.map((p) => {
         const i = points.indexOf(p);
         return (
-          <text key={p.year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10">
+          <text key={p.year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10" fontFamily="var(--font-sans)">
             {p.year}
           </text>
         );
@@ -95,7 +95,7 @@ export function MoneyPath() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Money stock</p>
-          <h2 className="mt-2 font-display text-3xl">Gold & silver vs US M2</h2>
+          <h2 className="mt-2 font-sans text-3xl">Gold & silver vs US M2</h2>
           <p className="mt-2 max-w-xl text-sm text-muted">{copy}</p>
         </div>
         <div className="flex flex-col items-start gap-2 sm:items-end">
@@ -107,19 +107,19 @@ export function MoneyPath() {
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">US M2</p>
-          <p className="mt-2 font-display text-3xl tabular-nums">{fmtX(stats.m2x)}</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums">{fmtX(stats.m2x)}</p>
           <p className="mt-1 text-sm text-muted">since {stats.from.year}</p>
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-gold">{fmtX(stats.goldx)}</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums text-gold">{fmtX(stats.goldx)}</p>
           <p className="mt-1 text-sm text-muted">
             M2-implied ${fmtMoney(stats.impliedGold)} · actual ${fmtMoney(stats.to.gold)}
           </p>
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-silver">{fmtX(stats.silverx)}</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums text-silver">{fmtX(stats.silverx)}</p>
           <p className="mt-1 text-sm text-muted">
             M2-implied ${fmtMoney(stats.impliedSilver)} · actual ${fmtMoney(stats.to.silver)}
           </p>
@@ -137,7 +137,7 @@ export function MoneyPath() {
       </div>
 
       <div className="mt-6 w-full overflow-x-auto rounded-xl bg-surface shadow-[var(--shadow-border)] sm:w-1/2">
-        <table className="w-full text-left text-sm">
+        <table className="w-full text-left text-sm tabular-nums">
           <thead>
             <tr className="border-b border-line text-xs tracking-[0.12em] text-faint uppercase">
               <th className="px-4 py-3 font-medium">Year</th>

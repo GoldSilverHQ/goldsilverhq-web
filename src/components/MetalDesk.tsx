@@ -54,7 +54,7 @@ export function MetalDesk() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Metals desk</p>
-      <h1 className="mt-2 font-display text-4xl leading-tight sm:text-5xl">
+      <h1 className="mt-2 font-sans text-4xl leading-tight sm:text-5xl">
         <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
@@ -69,7 +69,7 @@ export function MetalDesk() {
 
       <section className="mt-10">
         <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">Official sector</p>
-        <h2 className="mt-2 text-center font-display text-3xl">Central bank gold</h2>
+        <h2 className="mt-2 text-center font-sans text-3xl">Central bank gold</h2>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted">
           {mode === "relative"
             ? "Relative: reported net change as a share of that country’s gold at the start of the window."
@@ -93,7 +93,7 @@ export function MetalDesk() {
           />
         </div>
 
-        <p className="mt-6 text-center font-display text-3xl tabular-nums text-gold">
+        <p className="mt-6 text-center font-sans text-3xl tabular-nums text-gold">
           {fmtTonnes(world)}
           <span className="ml-2 font-sans text-sm text-muted">
             {cbRange === "1Y"
@@ -130,7 +130,7 @@ export function MetalDesk() {
         </div>
 
         <div className="overflow-x-auto rounded-xl bg-surface shadow-[var(--shadow-border)]">
-          <table className="w-full text-left text-sm">
+          <table className="w-full text-left text-sm tabular-nums">
             <thead>
               <tr className="border-b border-line text-xs tracking-[0.12em] text-faint uppercase">
                 <th className="px-4 py-3 font-medium">#</th>

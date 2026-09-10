@@ -86,7 +86,9 @@
   }
 
   .clock-value {
+    font-family: var(--font-sans);
     font-size: 1.85rem;
+    font-variant-numeric: tabular-nums lining-nums;
     line-height: 1.1;
   }
 
@@ -130,5 +132,30 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  /* Desk / clock / maps: Figtree headings and lining tabular digits. */
+  .data-ui :is(h1, h2, h3),
+  .data-ui .font-display {
+    font-family: var(--font-sans);
+  }
+
+  .data-ui {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .data-ui table,
+  .data-ui .clock-value,
+  .data-ui text {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  /* Markets pillar: sans titles. History stays on the global display serif. */
+  .markets :is(h1, h2, h3),
+  .markets .font-display {
+    font-family: var(--font-sans);
   }
 }

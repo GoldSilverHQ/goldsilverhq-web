@@ -61,7 +61,7 @@ function fmtTonnes(n: number) {
 function Dash({ tone = "gold", unit }: { tone?: Tone; unit?: string }) {
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
-    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+    <p className={`clock-value font-sans tabular-nums tracking-tight ${color}`}>
       <span className="clock-dash">— — —</span>
       {unit ? (
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
@@ -81,7 +81,7 @@ function Live({
 }) {
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
-    <p className={`clock-value font-display tabular-nums tracking-tight ${color}`}>
+    <p className={`clock-value font-sans tabular-nums tracking-tight ${color}`}>
       {children}
       {unit ? (
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
@@ -141,7 +141,7 @@ function Board({
     <details open={open} className="mt-6 rounded-lg bg-raised/40 p-1 shadow-[var(--shadow-border)]">
       <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-md px-3 py-2 [&::-webkit-details-marker]:hidden">
         <Icon className="size-4 shrink-0 text-gold" aria-hidden />
-        <span className="font-display text-2xl">{title}</span>
+        <span className="font-sans text-2xl">{title}</span>
         {kicker ? <span className="ml-auto text-xs text-faint">{kicker}</span> : <span className="ml-auto" />}
         <ChevronDown className="clock-chevron size-4 text-faint" aria-hidden />
       </summary>
@@ -204,11 +204,11 @@ export function MetalsClock() {
   const silverGap = silverSupplyGapT();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+    <div className="data-ui mx-auto max-w-6xl px-4 py-8 sm:py-10">
       <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">
         Global precious metals clock
       </p>
-      <h1 className="mt-2 text-center font-display text-4xl leading-tight sm:text-5xl">
+      <h1 className="mt-2 text-center font-sans text-4xl leading-tight sm:text-5xl">
         Gold is a stock. Silver is a flow.
       </h1>
       <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
