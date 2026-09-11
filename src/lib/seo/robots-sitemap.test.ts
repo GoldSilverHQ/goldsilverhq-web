@@ -15,10 +15,11 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
   });
 
-  it("lists only the nineteen Phase-1 www URLs", () => {
+  it("lists only the twenty Phase-1 www URLs", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
       "/history/ancient",
+      "/history/ancient/why-markets-chose-gold-silver",
       "/history/20th-century",
       "/history/20th-century/panic-1907-fed",
       "/history/20th-century/classical-gold-standard-end",
@@ -44,10 +45,13 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 19);
+    assert.equal(locs.length, 20);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
-    assert.doesNotMatch(xml, /sound-money|\/gold-silver(?:\/|<)|\/ancient\/|\/america|comex|physical-by-country/);
+    assert.doesNotMatch(
+      xml,
+      /sound-money|\/gold-silver(?:\/|<)|\/ancient\/(?!why-markets-chose-gold-silver)|\/america|comex|physical-by-country|lydia-first-coins|greece-silver-trade|rome-denarius|solidus-continuity/,
+    );
   });
 
   it("serves the Google Search Console HTML verification body", async () => {
