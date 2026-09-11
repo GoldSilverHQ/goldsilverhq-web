@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { Info } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   GOLD_MINE_2026E,
   SILVER_MINE_2026F,
@@ -10,6 +11,55 @@ import {
 
 function fmtOz(n: number) {
   return Math.floor(n).toLocaleString("en-US");
+}
+
+function InfoHint({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <span className="relative shrink-0">
+      <button
+        type="button"
+        className="peer grid size-7 place-items-center rounded-full text-faint hover:text-gold-soft focus-visible:text-gold-soft focus-visible:outline-none"
+        aria-label={label}
+      >
+        <Info className="size-3.5" strokeWidth={1.75} />
+      </button>
+      <span
+        role="tooltip"
+        className="invisible absolute right-0 z-50 mt-1 w-60 rounded-md bg-raised px-3 py-2 text-left text-xs leading-relaxed font-normal tracking-normal text-muted normal-case shadow-[var(--shadow-border)] peer-hover:visible peer-focus:visible"
+      >
+        {children}
+      </span>
+    </span>
+  );
+}
+
+function PaceTile({
+  kicker,
+  tone,
+  unit,
+  value,
+  info,
+}: {
+  kicker: string;
+  tone: "gold" | "silver" | "gold-soft";
+  unit: string;
+  value: string;
+  info: string;
+}) {
+  const color =
+    tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-gold-soft";
+  return (
+    <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
+      <div className="flex items-start justify-between gap-2">
+        <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
+        <InfoHint label={`${kicker} details`}>{info}</InfoHint>
+      </div>
+      <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
+        {value}
+        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
+      </p>
+    </article>
+  );
 }
 
 export function MinePaceTicker() {
@@ -30,39 +80,27 @@ export function MinePaceTicker() {
   return (
     <section aria-label="Estimated mine production this year">
       <div className="grid gap-3 md:grid-cols-3">
-        <article className="rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">Gold mined this year</p>
-          <p className="mt-3 font-sans text-4xl tabular-nums tracking-tight text-gold sm:text-5xl">
-            {ytd ? fmtOz(ytd.goldOz) : "—"}
-            <span className="ml-2 align-middle text-sm tracking-widest text-muted">oz</span>
-          </p>
-          <p className="mt-3 text-xs leading-relaxed text-faint">
-            About {goldRate.toFixed(1)} troy ounces each second. {GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t{" "}
-            {GOLD_MINE_2026E.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.
-          </p>
-        </article>
-        <article className="rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.16em] text-silver uppercase">Silver mined this year</p>
-          <p className="mt-3 font-sans text-4xl tabular-nums tracking-tight text-silver sm:text-5xl">
-            {ytd ? fmtOz(ytd.silverOz) : "—"}
-            <span className="ml-2 align-middle text-sm tracking-widest text-muted">oz</span>
-          </p>
-          <p className="mt-3 text-xs leading-relaxed text-faint">
-            About {silverRate.toFixed(1)} troy ounces each second. {SILVER_MINE_2026F.moz.toLocaleString("en-US")} Moz{" "}
-            {SILVER_MINE_2026F.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.
-          </p>
-        </article>
-        <article className="rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold-soft)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.16em] text-gold-soft uppercase">Mining ratio</p>
-          <p className="mt-3 font-sans text-4xl tabular-nums tracking-tight text-gold-soft sm:text-5xl">
-            {ratio.toFixed(1)}
-            <span className="ml-2 align-middle text-sm tracking-widest text-muted">oz Ag / oz Au</span>
-          </p>
-          <p className="mt-3 text-xs leading-relaxed text-faint">
-            Silver mined per ounce of gold at the {GOLD_MINE_2026E.asOf}/{SILVER_MINE_2026F.asOf} pace. Not the price
-            ratio.
-          </p>
-        </article>
+        <PaceTile
+          kicker="Gold mined this year"
+          tone="gold"
+          unit="oz"
+          value={ytd ? fmtOz(ytd.goldOz) : "—"}
+          info={`About ${goldRate.toFixed(1)} troy ounces each second. ${GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t ${GOLD_MINE_2026E.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.`}
+        />
+        <PaceTile
+          kicker="Silver mined this year"
+          tone="silver"
+          unit="oz"
+          value={ytd ? fmtOz(ytd.silverOz) : "—"}
+          info={`About ${silverRate.toFixed(1)} troy ounces each second. ${SILVER_MINE_2026F.moz.toLocaleString("en-US")} Moz ${SILVER_MINE_2026F.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.`}
+        />
+        <PaceTile
+          kicker="Mining ratio"
+          tone="gold-soft"
+          unit="oz Ag / oz Au"
+          value={ratio.toFixed(1)}
+          info={`Silver mined per ounce of gold at the ${GOLD_MINE_2026E.asOf}/${SILVER_MINE_2026F.asOf} pace. Not the price ratio.`}
+        />
       </div>
     </section>
   );
