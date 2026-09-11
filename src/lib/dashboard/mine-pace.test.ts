@@ -5,6 +5,7 @@ import {
   SILVER_MINE_2026F,
   goldOzPerSecond,
   goldOzPerYear,
+  mineOzRatio,
   secondsInUtcYear,
   silverOzPerSecond,
   silverOzPerYear,
@@ -30,6 +31,12 @@ describe("mine pace estimates", () => {
     const s = silverOzPerSecond(2026);
     assert.ok(g > 3.5 && g < 4.1);
     assert.ok(s > 25 && s < 28);
+  });
+
+  it("is about seven ounces of silver mined per ounce of gold", () => {
+    const r = mineOzRatio();
+    assert.ok(r > 6.9 && r < 7.2);
+    assert.equal(r, silverOzPerYear() / goldOzPerYear());
   });
 
   it("is near zero at the UTC new year", () => {
