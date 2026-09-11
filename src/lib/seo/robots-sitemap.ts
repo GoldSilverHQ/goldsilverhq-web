@@ -24,6 +24,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/official-gold-book-value",
   "/markets/central-bank-gold-reserves",
   "/markets/gold-silver-ratio",
+  "/markets/physical-silver-demand-by-country",
 ] as const;
 
 export const ROBOTS_TXT = [

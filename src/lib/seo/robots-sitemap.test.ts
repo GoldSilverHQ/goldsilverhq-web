@@ -15,7 +15,7 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
   });
 
-  it("lists only the eighteen Phase-1 www URLs", () => {
+  it("lists only the nineteen Phase-1 www URLs", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
       "/history/ancient",
@@ -35,6 +35,7 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/official-gold-book-value",
       "/markets/central-bank-gold-reserves",
       "/markets/gold-silver-ratio",
+      "/markets/physical-silver-demand-by-country",
     ]);
 
     const xml = sitemapXml();
@@ -43,7 +44,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 18);
+    assert.equal(locs.length, 19);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.doesNotMatch(xml, /sound-money|\/gold-silver(?:\/|<)|\/ancient\/|\/america|comex|physical-by-country/);
