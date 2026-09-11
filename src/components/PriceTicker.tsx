@@ -29,33 +29,26 @@ export function PriceTicker() {
 
   const items = spot
     ? [
-        { k: "Au", v: `$${fmt(spot.gold, 0)}`, color: "text-gold" },
-        { k: "Ag", v: `$${fmt(spot.silver, 2)}`, color: "text-silver" },
-        { k: "GSR", v: `${spot.ratio.toFixed(1)}×`, color: "text-gold-soft" },
+        { k: "gold", v: `$${fmt(spot.gold, 0)}`, color: "text-gold" },
+        { k: "silver", v: `$${fmt(spot.silver, 2)}`, color: "text-silver" },
       ]
     : [
-        { k: "Au", v: "—", color: "text-gold" },
-        { k: "Ag", v: "—", color: "text-silver" },
-        { k: "GSR", v: "—", color: "text-gold-soft" },
+        { k: "gold", v: "—", color: "text-gold" },
+        { k: "silver", v: "—", color: "text-silver" },
       ];
-
-  const asOf = spot?.asOf
-    ? new Date(`${spot.asOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
-    : null;
 
   return (
     <Link
       to="/desk"
-      aria-label="Gold, silver, and gold–silver ratio"
+      aria-label="Gold and silver prices"
       className="flex min-w-0 items-center justify-center gap-3 sm:gap-5"
     >
       {items.map((it) => (
         <span key={it.k} className="flex items-baseline gap-1.5 font-sans tabular-nums">
-          <span className="text-xs font-semibold tracking-[0.12em] text-faint uppercase">{it.k}</span>
+          <span className="text-xs font-semibold tracking-[0.12em] text-faint">{it.k}</span>
           <span className={`text-xs font-medium sm:text-sm ${it.color}`}>{it.v}</span>
         </span>
       ))}
-      {asOf ? <span className="hidden text-[10px] text-faint sm:inline">{asOf}</span> : null}
     </Link>
   );
 }
