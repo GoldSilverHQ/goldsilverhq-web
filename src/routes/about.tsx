@@ -27,8 +27,20 @@ function AboutPage() {
         <p className="mt-4 text-lg leading-relaxed text-muted">
           GoldSilverHQ publishes educational media about sound money, monetary history, metal-market facts, and
           how people handle physical gold and silver. The working copy is this site. The public voice is{" "}
-          <a href="https://x.com/goldsilverhq" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
-            @GoldSilverHQ
+          <a href="https://x.com/GoldSilverHQ" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
+            X
+          </a>
+          ,{" "}
+          <a href="https://www.instagram.com/goldsilverhq/" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          ,{" "}
+          <a href="https://www.tiktok.com/@goldsilver.hq" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
+            TikTok
+          </a>
+          , and{" "}
+          <a href="https://www.youtube.com/@GoldSilverHQ" className="text-gold hover:text-gold-soft" target="_blank" rel="noreferrer">
+            YouTube
           </a>
           .
         </p>
