@@ -94,6 +94,18 @@ export function ArticleSections({
           {block.heading ? (
             <h2 className={`mb-4 ${faceClass(face)} text-3xl text-fg`}>{block.heading}</h2>
           ) : null}
+          {block.callout ? (
+            <aside className="mb-6 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
+              <p className="font-sans text-xs font-semibold tracking-[0.14em] text-silver uppercase">
+                {block.callout.label}
+              </p>
+              {block.callout.paragraphs.map((p) => (
+                <p key={p.slice(0, 48)} className={`mt-3 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+                  <RichText text={p} />
+                </p>
+              ))}
+            </aside>
+          ) : null}
           {block.paragraphs.map((p) => (
             <p key={p.slice(0, 48)} className={`mb-4 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
               <RichText text={p} />

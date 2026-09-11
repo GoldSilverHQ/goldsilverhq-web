@@ -1,4 +1,5 @@
-export type Section = { heading: string; paragraphs: string[]; list?: string[] };
+export type Callout = { label: string; paragraphs: string[] };
+export type Section = { heading: string; paragraphs: string[]; list?: string[]; callout?: Callout };
 
 const johnLaw: Section[] = [
   {
@@ -1111,8 +1112,10 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "Narodowy Bank Polski is the named European buyer of the early 2020s. This is not a separate URL. It is a subsection of how official gold is reported and accumulated.",
       "At the end of **2017** NBP’s reported gold stock was about **103 tonnes**. In **2018–2019** the bank bought on the order of **126 tonnes**, taking the stock to about **229 tonnes** by end-2019. In **July 2019** NBP announced that it would transfer **100 tonnes** from the Bank of England to vaults in Poland — a custody move, not a purchase. Title was already Polish; the bars changed address.",
-      "Buying resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, **+90 tonnes** in 2024, and further additions in 2025–2026. The same compilation’s latest stock line for Poland is **550 tonnes**. NBP communications in this period named gold as a growing share of foreign-exchange reserves, with a public aim in the region of **20 percent**. Governor Adam Glapiński’s remarks treated gold as a reserve asset, not as a trading book.",
-      "Read those sentences as a dated official-sector record. They do not say a private reader should follow NBP. They do not rank Poland against other buyers as an investment case. They show one central bank raising a reported gold stock, moving metal home, and stating a reserve-share aim — the same three facts this page tracks for the official sector as a whole.",
+      "Buying resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, and **+90 tonnes** in 2024, with further additions in **2025**. The desk’s latest Poland stock line of **550 tonnes** is the year-end-2025 starting point implied by later official additions: it is not the 2026 stock.",
+      "NBP’s first-quarter 2026 balance-of-payments note put the gold stock at **581.6 tonnes** at the end of **March 2026**, then **29.4 percent** of official reserve assets (valued at **PLN 319.5 billion** on that statement). The World Gold Council’s Gold Demand Trends for the second quarter, compiled from IMF and central-bank reports through **30 June 2026**, puts the stock at **632 tonnes** after about **+51 tonnes** in the quarter and about **+82 tonnes** in the first half. The Council’s 3 September 2026 monthly compilation, through **31 July 2026**, puts the stock at **640 tonnes**, after about **+8 tonnes** in July and about **+90 tonnes** year-to-date. Those later lines reconcile with the desk’s **550**: **550 + 82** reaches the end-June **632**; **550 + 90** reaches the end-July **640**.",
+      "The same WGC notes record NBP’s public stock aim of **700 tonnes**, with gold then about **28 percent** of total reserves. An earlier NBP communications line had named a reserve-share aim in the region of **20 percent**; the March 2026 NBP statement already sat above that share. Governor Adam Glapiński’s remarks in this period treated gold as a reserve asset, not as a trading book.",
+      "Read those sentences as a dated official-sector record. They do not say a private reader should follow NBP. They do not rank Poland against other buyers as an investment case. They show one central bank raising a reported gold stock, moving metal home, and stating a reserve-share and then a **700-tonne** stock aim — the same custody and report facts this page tracks for the official sector as a whole.",
     ],
   },
   {
@@ -1240,9 +1243,29 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
+    heading: "2025 coins and medals fabrication — a different table",
+    callout: {
+      label: "Fabrication countries ≠ investment offtake",
+      paragraphs: [
+        "Mint and medal fabrication is a different World Silver Survey job from the bar-and-coin buyer table. The ranking above is a demand address: which national markets took identified bars and coins. Coins-and-medals fabrication is a mint address: where silver was struck. Metal coined in Ottawa or Llantrisant can be bought in the United States. Canada and the United Kingdom can sit high on the mint table while remaining smaller on the buyer table. That is the point of keeping the two jobs labeled. Do not read a fabrication line as a substitute ranking, and do not treat either table as a country shopping list.",
+      ],
+    },
+    paragraphs: [
+      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints a separate **coins and medals fabrication** table for calendar **2025**. World fabrication in that series was **87.9 million ounces**, down 7 percent from 2024’s **94.7**. That world total matches the survey’s 2025 **coin fabrication** line in the coin-and-net-bar book. It is not this page’s 2024 country physical-investment total of **183.3**.",
+      "The five largest 2025 country lines in that mint table sit below. They are fabrication ounces. They do not replace the 2024 investment ranking above.",
+    ],
+    list: [
+      "**India 18.4** (2024: 14.8; **+25%**).",
+      "**United States 15.7** (2024: 28.5; **−45%**).",
+      "**Canada 11.4** (2024: 14.1; **−19%**).",
+      "**United Kingdom 9.8** (2024: 6.8; **+44%**).",
+      "**Australia 8.3** (2024: 10.0; **−17%**).",
+    ],
+  },
+  {
     heading: "How to read a country line",
     paragraphs: [
-      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024) or the country physical-investment table (world **183.3**). Then read the country as a demand address. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices lives on the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), or coins-and-medals fabrication (world **87.9** in 2025). Then read the country as a demand address or as a mint address. Do not swap the two. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices lives on the [gold–silver ratio](/markets/gold-silver-ratio).",
       "The [markets hub](/markets) is the parent for this fact page. History’s job, when silver’s two roles need a narrative shelf, is [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
       "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The ranking measures identified bar-and-coin offtake by country in a dated survey year. That is the claim, and that is the stop.",
     ],
