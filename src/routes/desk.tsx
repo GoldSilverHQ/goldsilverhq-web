@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MetalDesk } from "@/components/MetalDesk";
+import { MetalsClock } from "@/components/MetalsClock";
 import { MoneyPath } from "@/components/MoneyPath";
 import { SiteShell } from "@/components/SiteShell";
 import { pillars } from "@/lib/content/map";
@@ -22,6 +23,7 @@ function DeskPage() {
   return (
     <SiteShell ui="data">
       <MetalDesk />
+      <MetalsClock asSection />
       <div className="mx-auto max-w-6xl px-4">
         <MoneyPath />
       </div>

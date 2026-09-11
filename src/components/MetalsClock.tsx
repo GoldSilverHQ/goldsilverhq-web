@@ -150,7 +150,7 @@ function Board({
   );
 }
 
-export function MetalsClock() {
+export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
   const [face, setFace] = useState<Face>("both");
   const [spot, setSpot] = useState<Spot | null>(null);
   const [official, setOfficial] = useState<OfficialGold>(COMPILED_OFFICIAL);
@@ -204,13 +204,19 @@ export function MetalsClock() {
   const silverGap = silverSupplyGapT();
 
   return (
-    <div className="data-ui mx-auto max-w-6xl px-4 py-8 sm:py-10">
+    <div className={`data-ui mx-auto max-w-6xl px-4 ${asSection ? "pb-8 pt-4" : "py-8 sm:py-10"}`}>
       <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">
         Global precious metals clock
       </p>
-      <h1 className="mt-2 text-center font-sans text-4xl leading-tight sm:text-5xl">
-        Gold is a stock. Silver is a flow.
-      </h1>
+      {asSection ? (
+        <h2 className="mt-2 text-center font-sans text-3xl leading-tight sm:text-4xl">
+          Gold is a stock. Silver is a flow.
+        </h2>
+      ) : (
+        <h1 className="mt-2 text-center font-sans text-4xl leading-tight sm:text-5xl">
+          Gold is a stock. Silver is a flow.
+        </h1>
+      )}
       <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
         Six numbers on the face. Boards underneath. Spot ticks. The rest is a dated print, or a dash.
       </p>
