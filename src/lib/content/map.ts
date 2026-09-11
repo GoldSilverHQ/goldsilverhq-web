@@ -49,6 +49,7 @@ export const marketsHub = {
     { title: "Official gold book value", href: "/markets/official-gold-book-value" },
     { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
     { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
+    { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
     { title: "Sound Money History (narrative lives there)", href: "/history" },
   ],
 };
@@ -101,7 +102,7 @@ export const pillars: Pillar[] = [
     kicker: "Pillar 4 · Current figures",
     question: "What do the current figures say?",
     summary:
-      "Official book value, central-bank gold, and the gold–silver ratio — dated market facts. Not sound-money history, and not how to buy a bar.",
+      "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country — dated market facts. Not sound-money history, and not how to buy a bar.",
     sell: "Newsletter",
   },
 ];
@@ -1044,6 +1045,7 @@ export const marketPages: Episode[] = [
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },
+      { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
       { title: "Bimetallism (silver cluster)", href: "/history/silver/bimetallism" },
     ],
     seo: {
@@ -1053,6 +1055,32 @@ export const marketPages: Episode[] = [
       difficulty: "mid",
       intent: "markets",
       titleTag: "Gold–Silver Ratio: Definition and Dated Snapshots",
+    },
+  },
+  {
+    slug: "physical-silver-demand-by-country",
+    title: "What physical silver demand by country measures (and what it does not)",
+    summary:
+      "Identified retail and investment bars and coins by country. A demand address, not a mine ranking, and not a reason to buy metal in a named place.",
+    status: "ready",
+    paragraphs: [
+      "Country rankings of physical silver demand count identified bar and coin offtake in a calendar year. They do not rank mines, factories, or paper claims.",
+    ],
+    related: [
+      { title: "Gold & silver markets", href: "/markets" },
+      { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
+    ],
+    seo: {
+      primary: "physical silver demand by country",
+      secondary: [
+        "silver investment demand by country",
+        "silver bars and coins by country",
+        "world silver survey physical investment",
+      ],
+      demand: "mid",
+      difficulty: "mid",
+      intent: "markets",
+      titleTag: "Physical Silver Demand by Country: What Rankings Measure",
     },
   },
 ];

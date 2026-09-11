@@ -99,9 +99,10 @@ Current metal-market facts. Not sound-money history. Not how-to buying.
 1. Official gold book value — `/markets/official-gold-book-value`
 2. Central-bank gold reserves — `/markets/central-bank-gold-reserves` (Poland documentary block lives **inside** this page; no `/markets/poland-…`)
 3. Gold–silver ratio — `/markets/gold-silver-ratio`
+4. Physical silver demand by country — `/markets/physical-silver-demand-by-country`
 
 **Sell:** newsletter only. No ebook CTA on this pillar.  
-**Do not** park Weimar/Nixon narrative here. **Do not** add thin extra spokes (COMEX, physical-by-country, Poland own URL).  
+**Do not** park Weimar/Nixon narrative here. **Do not** add thin extra spokes (COMEX, Poland own URL).  
 **Sitemap:** out of scope until these pages are merged, live, and thick.
 
 **Markets linking:**  

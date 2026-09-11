@@ -1070,7 +1070,7 @@ const officialGoldBookValue: Section[] = [
     heading: "What this page is not",
     paragraphs: [
       "This page does not say the Treasury “should” revalue gold. It does not treat $42.22 as a secret price, a floor, or a target. It does not turn a book-to-spot multiple into a reason to buy or sell metal. Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers.",
-      "Return to [gold and silver markets](/markets) for the other two fact pages on this pillar: how central banks report gold in reserves, and what the gold–silver ratio measures. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
+      "Return to [gold and silver markets](/markets) for the other fact pages on this pillar: how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
     ],
   },
 ];
@@ -1119,7 +1119,7 @@ const centralBankGoldReserves: Section[] = [
     heading: "What the figures do not say",
     paragraphs: [
       "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share can be an old European inheritance or a new emerging-market programme. The mechanism is the report: quantity, sometimes value, sometimes location.",
-      "This pillar stays on current metal-market facts. The [markets hub](/markets) orients the three spokes. How $42.22 became the U.S. book rate is the first spoke. What the gold–silver ratio measures is the third. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
+      "This pillar stays on current metal-market facts. The [markets hub](/markets) orients the four spokes. How $42.22 became the U.S. book rate is the first spoke. What the gold–silver ratio measures is the third. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
     ],
   },
 ];
@@ -1178,10 +1178,73 @@ const goldSilverRatio: Section[] = [
   {
     heading: "How to read a snapshot",
     paragraphs: [
-      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) is the parent for this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact.",
+      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) is the parent for this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country).",
       "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. Practice’s job is bars, coins, and premiums. Mixing the three produces slogans. Keeping them apart produces a number you can check.",
       "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
       "If you want the older legal ratio as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A market ratio is a quotient. Keep the two labeled when you move between pillars.",
+    ],
+  },
+];
+
+const physicalSilverDemandByCountry: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure and a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand.",
+    ],
+  },
+  {
+    heading: "What a country ranking measures",
+    paragraphs: [
+      "The useful series is **physical investment**: bars and bullion-style coins attributed to a country, net of some dealer-stock swings, and excluding commemorative coins. Metals Focus publishes that table in the Silver Institute’s World Silver Survey. “United States, 2024, **64.9 million ounces**” means identified U.S. bar-and-coin offtake in that year, after those adjustments.",
+      "The country is the demand address, not the mine. Silver coined in Ottawa or Perth can be bought in the United States. Indian bar demand can be metal that arrived as imports. A ranking of physical investment is a map of buyers, not a map of holes in the ground.",
+      "Two published world totals sit next to each other and must stay labeled. This site’s desk already uses **190.9 million ounces** of world **coin and net bar demand** for calendar **2024** (World Silver Survey 2025). That series is coin fabrication plus net bar purchases. The country table’s global total for the same year is **183.3 million ounces**. The footnote is mechanical: the country series drops commemorative coins and adjusts dealer inventories. Do not treat 190.9 and 183.3 as a disagreement. They are two jobs.",
+    ],
+  },
+  {
+    heading: "What the ranking does not measure",
+    paragraphs: [
+      "It does not measure industrial fabrication. In the same 2024 survey, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products. It is not a bar in a household drawer. A country that fabricates a lot of solar paste can be small on the investment table.",
+      "It does not measure jewelry or silverware — about **208.7** and **54.2** million ounces in 2024. It does not measure official-sector silver, a rounding line of **1.5 million ounces** in that same world book, not a central-bank gold story.",
+      "It does not measure exchange-traded products, futures, or options. Indian silver ETP holdings rose by about **25 million ounces** in 2024, to **38.6 million ounces** at year-end. That inflow is a vault-backed fund holding. It is not India’s **59.8 million ounces** of bar-and-coin investment. A futures position is a different instrument again. Paper and funds sit outside the country ranking.",
+      "The ranking also does not measure whether silver is cheap, dear, behind gold, or due a return to an older ratio. A high U.S. line means U.S. buyers took more identified bars and coins that year. A falling German line means identified German offtake fell. That is the whole claim.",
+    ],
+  },
+  {
+    heading: "2024 country snapshots",
+    paragraphs: [
+      "Using the World Silver Survey 2025 physical-investment table — so the country lines share a method — the 2024 snapshot and the one-year change sit below. Figures are million troy ounces. The 2022 world peak in the same series was **337.6**. The 2023 world total was **238.2**. 2024’s **183.3** is a further drop, not a path.",
+    ],
+    list: [
+      "**United States 64.9** (2023: 120.8; **−46%**). Still the largest single country line. Lowest since 2019 in that series.",
+      "**India 59.8** (2023: 49.3; **+21%**). The only major physical market higher in 2024. 2022 was 79.4; 2020 was 8.7.",
+      "**Germany 9.9** (2023: 13.3; **−25%**). 2022 was 48.9. Europe as a whole printed **21.5** in 2024.",
+      "**Australia 9.3** (2023: 12.4; **−25%**).",
+      "**Canada 6.4** (2023: 7.9; **−18%**).",
+      "**China 5.5** (2023: 6.2; **−10%**).",
+      "**Other Europe 11.6**, **other East Asia 10.8**, **others 5.0**.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Four named countries — the United States, India, Germany, and Australia — still account for most of the identified world total, on the order of four-fifths in recent Metals Focus commentary on the same physical-investment series. Concentration is a fact about the table. It is not a reason to treat those four as a shopping list.",
+    ],
+  },
+  {
+    heading: "How the named countries differ",
+    paragraphs: [
+      "The United States has been the largest physical-investment market in most years of the 2010–2024 series. The exceptions in that book are **2018** and **2019**, when India printed the larger line. Cumulative U.S. net purchases over 2010–2024 are on the order of **1.5 billion ounces**. Coins take a larger share of U.S. offtake than in the rest of the world — sovereign bullion coins, then bars. 2024’s **64.9** is a drop from the 2021–2023 plateau near **120–138**.",
+      "India’s line is mostly bars. Cumulative 2010–2024 bar-and-coin demand in that series is about **840 million ounces**. 2024’s rebound followed a late-July cut in the Indian import duty on bullion, from **15 percent** to **6 percent**, which lowered the rupee offer after the local price had already printed near **Rs. 100,000** per kilogram. 2020’s **8.7** shows the same table can collapse when the rupee price spikes and metal comes back to the counter. ETPs, as already labeled, sit beside that physical line. They do not replace it.",
+      "Germany is the largest European silver-investment market in the same book, and the sharpest recent swing. Identified German offtake averaged about **48.5 million ounces** a year in 2020–2022, then fell to **13.3** in 2023 and **9.9** in 2024 after an end-2022 margin-tax change on some non-EU bullion coins, a 2023 VAT change on some silver products, and selling-back as euro prices crossed **€800** per kilogram. Australia’s 2024 **9.3** is another second-year decline with higher buybacks. Those are tax, price, and inventory facts — not a ranking of national character.",
+    ],
+  },
+  {
+    heading: "How to read a country line",
+    paragraphs: [
+      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024) or the country physical-investment table (world **183.3**). Then read the country as a demand address. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices lives on the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "The [markets hub](/markets) is the parent for this fact page. History’s job, when silver’s two roles need a narrative shelf, is [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
+      "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The ranking measures identified bar-and-coin offtake by country in a dated survey year. That is the claim, and that is the stop.",
     ],
   },
 ];
@@ -1225,6 +1288,7 @@ const bodies: Record<string, Section[]> = {
   "markets/official-gold-book-value": officialGoldBookValue,
   "markets/central-bank-gold-reserves": centralBankGoldReserves,
   "markets/gold-silver-ratio": goldSilverRatio,
+  "markets/physical-silver-demand-by-country": physicalSilverDemandByCountry,
 };
 
 export function getBody(cluster: string, slug: string): Section[] | null {
@@ -1296,15 +1360,15 @@ export const marketsHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "This pillar records current metal-market facts: how official gold is booked, how central banks report gold in reserves, and what the gold–silver ratio measures. It is not Sound Money History, and it is not a how-to for buying metal.",
+      "This pillar records current metal-market facts: how official gold is booked, how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. It is not Sound Money History, and it is not a how-to for buying metal.",
     ],
   },
   {
     heading: "What this pillar is",
     paragraphs: [
-      "**/markets** holds dated figures and definitions that sit on today’s tape and today’s official books. A book value is a statute leftover. A reserve line is a reported stock. A ratio is one price divided by another at a named time. The tone is documentary. The aim is a readable record for adults who want the arithmetic without a pitch.",
-      "The three spokes do different jobs. [Official gold book value](/markets/official-gold-book-value) explains why the United States still carries Treasury gold at $42.22 an ounce while spot prints another number. [Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how gold appears in foreign-exchange reserves, where bars are often stored, and which official buyers have been named in recent tallies — including a short Poland block on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient and pins it to 1980 and 2011 snapshots. This hub only orients those three.",
-      "Numbers on this pillar come from public official series and from the same LBMA/COMEX averages this site already uses on the [desk](/desk). When a page divides spot by $35 or by $42.22, that is arithmetic on named prints. When a page cites a World Gold Council or IMF-based annual net, that is a dated official-sector line. None of those operations is a forecast.",
+      "**/markets** holds dated figures and definitions that sit on today’s tape and today’s official books. A book value is a statute leftover. A reserve line is a reported stock. A ratio is one price divided by another at a named time. A country line is identified bar-and-coin offtake. The tone is documentary. The aim is a readable record for adults who want the arithmetic without a pitch.",
+      "The four spokes do different jobs. [Official gold book value](/markets/official-gold-book-value) explains why the United States still carries Treasury gold at $42.22 an ounce while spot prints another number. [Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how gold appears in foreign-exchange reserves, where bars are often stored, and which official buyers have been named in recent tallies — including a short Poland block on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient and pins it to 1980 and 2011 snapshots. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking and pins it to a 2024 World Silver Survey table. This hub only orients those four.",
+      "Numbers on this pillar come from public official series and from the same LBMA/COMEX averages this site already uses on the [desk](/desk). When a page divides spot by $35 or by $42.22, that is arithmetic on named prints. When a page cites a World Gold Council or IMF-based annual net, that is a dated official-sector line. When a page cites a World Silver Survey country line, that is identified retail offtake, not a mine ranking. None of those operations is a forecast.",
     ],
   },
   {
@@ -1316,25 +1380,26 @@ export const marketsHubBody: Section[] = [
     ],
   },
   {
-    heading: "The three spokes",
+    heading: "The four spokes",
     paragraphs: ["Each line is a job description. Open the page for the full mechanism. This hub does not reprint every table."],
     list: [
       "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus spot; short arithmetic of named year averages and peak prints divided by $35 and by $42.22.",
       "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in FX reserves; vault and custody preferences; dated official purchases; Poland as a short documentary subsection, not its own URL.",
       "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; what it does not measure; 1980 and 2011 as named anchors; year-average snapshots from the same series.",
+      "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; what the ranking does not measure; 2024 World Silver Survey snapshots.",
     ],
   },
   {
     heading: "",
     paragraphs: [
-      "Read the three as a small shelf, not as a web. Book value is a U.S. accounting leftover from the last official par. Central-bank gold is an official-sector stock and flow. The ratio is a pair of market prints. They share a pillar because they are current metal-market facts. They do not share a cause, and they do not share a trade.",
+      "Read the four as a small shelf, not as a web. Book value is a U.S. accounting leftover from the last official par. Central-bank gold is an official-sector stock and flow. The ratio is a pair of market prints. Physical silver by country is a retail demand address. They share a pillar because they are current metal-market facts. They do not share a cause, and they do not share a trade.",
     ],
   },
   {
     heading: "How to read a markets page",
     paragraphs: [
-      "Each spoke opens with a tight claim. Headings keep book, report, and ratio in separate boxes. Related links stay short: this hub, one neighbor on the shelf, and at most one history page when a statute or a 1980 tape needs its narrative home. That is the ledger — spoke to hub, hub to history once, no spaghetti.",
-      "When a page names a year-average gold price, it uses the same money-path series as the desk. When it names a London PM print, it says so. When it names an IMF- or WGC-based official net, it treats that as a reported change, not as a signal. Lists appear when a table of divisions helps; paragraphs carry the claim.",
+      "Each spoke opens with a tight claim. Headings keep book, report, ratio, and country offtake in separate boxes. Related links stay short: this hub, one neighbor on the shelf, and at most one history page when a statute or a 1980 tape needs its narrative home. That is the ledger — spoke to hub, hub to history once, no spaghetti.",
+      "When a page names a year-average gold price, it uses the same money-path series as the desk. When it names a London PM print, it says so. When it names an IMF- or WGC-based official net, it treats that as a reported change, not as a signal. When it names a World Silver Survey country line, it treats that as identified bar-and-coin offtake, not as a shopping list. Lists appear when a table of divisions helps; paragraphs carry the claim.",
       "If two facts rhyme — official gold on a book, official gold in a reserve statement — the text will say they are different jobs. The U.S. $42.22 line is a frozen par. A central bank’s reserve share may use a market-related dollar value. Mixing them produces a slogan. Keeping them labeled produces a figure you can check.",
     ],
   },
@@ -1342,9 +1407,9 @@ export const marketsHubBody: Section[] = [
     heading: "Where the other pillars sit",
     paragraphs: [
       "For the documentary path from coinage to 1971, start at [Sound Money History](/history). That pillar is narrative. This one is not. A single light link is enough: history is elsewhere. For definitions of sound money, hard money, and “backed,” use [Sound Money](/sound-money). For handling metal, use [gold and silver in practice](/gold-silver).",
-      "You do not need to finish all three spokes on day one. Book value is the cleanest entry if you have just read 1971 and want to know why $42.22 still appears on a Treasury line. Central-bank reserves are the entry if you have just looked at the desk’s country bars. The ratio is the entry if you have just seen GSR on the tape and want the definition without a story about catch-up.",
-      "This hub’s job is the orientation: three fact pages, not a history cluster, not a buying guide. The claim is narrow on purpose. Current metal-market facts live here. Narrative lives on history. Practice lives on gold-silver. Keep the shelves labeled.",
-      "A reader who arrives from the tape can treat the spokes as captions. GSR on the clock is the ratio page. A country bar on the desk is the reserve page. A U.S. official-gold line that still looks too small in dollars is the book-value page. The captions do not replace the clock. They stop a figure from being read as a tip.",
+      "You do not need to finish all four spokes on day one. Book value is the cleanest entry if you have just read 1971 and want to know why $42.22 still appears on a Treasury line. Central-bank reserves are the entry if you have just looked at the desk’s country bars. The ratio is the entry if you have just seen GSR on the tape and want the definition without a story about catch-up. Physical silver by country is the entry if you have just seen a bar-and-coin ranking and want the definition without a shopping list.",
+      "This hub’s job is the orientation: four fact pages, not a history cluster, not a buying guide. The claim is narrow on purpose. Current metal-market facts live here. Narrative lives on history. Practice lives on gold-silver. Keep the shelves labeled.",
+      "A reader who arrives from the tape can treat the spokes as captions. GSR on the clock is the ratio page. A country bar on the desk is the reserve page. A U.S. official-gold line that still looks too small in dollars is the book-value page. A country ranking of bars and coins is the physical-demand page. The captions do not replace the clock. They stop a figure from being read as a tip.",
     ],
   },
 ];
