@@ -31,6 +31,12 @@ function ImpressumPage() {
             <br />
             GoldSilverHQ
             <br />
+            c/o IP-Management #8221
+            <br />
+            Ludwig-Erhard-Str. 18
+            <br />
+            20459 Hamburg
+            <br />
             <a href="https://www.goldsilverhq.com" className="text-gold hover:text-gold-soft">
               www.goldsilverhq.com
             </a>
@@ -49,7 +55,15 @@ function ImpressumPage() {
 
         <section className="mt-10">
           <h2 className="font-display text-2xl">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-          <p className="mt-3 text-lg leading-relaxed text-muted">Florian Lahr</p>
+          <p className="mt-3 text-lg leading-relaxed text-muted">
+            Florian Lahr
+            <br />
+            c/o IP-Management #8221
+            <br />
+            Ludwig-Erhard-Str. 18
+            <br />
+            20459 Hamburg
+          </p>
         </section>
 
         <section className="mt-10">
