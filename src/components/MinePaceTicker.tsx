@@ -34,9 +34,9 @@ export function MinePaceTicker() {
             {ytd ? fmtOz(ytd.goldOz) : "—"}
             <span className="ml-2 align-middle text-sm tracking-widest text-muted">oz</span>
           </p>
-          <p className="mt-3 text-xs text-faint">
-            ~{goldRate.toFixed(2)} oz/s · {GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t {GOLD_MINE_2026E.asOf}{" "}
-            mine pace, run evenly. Not a live mine feed.
+          <p className="mt-3 text-xs leading-relaxed text-faint">
+            About {goldRate.toFixed(1)} troy ounces each second. {GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t{" "}
+            {GOLD_MINE_2026E.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.
           </p>
         </article>
         <article className="rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
@@ -45,9 +45,9 @@ export function MinePaceTicker() {
             {ytd ? fmtOz(ytd.silverOz) : "—"}
             <span className="ml-2 align-middle text-sm tracking-widest text-muted">oz</span>
           </p>
-          <p className="mt-3 text-xs text-faint">
-            ~{silverRate.toFixed(1)} oz/s · {SILVER_MINE_2026F.moz.toLocaleString("en-US")} Moz {SILVER_MINE_2026F.asOf}{" "}
-            mine pace, run evenly. Not a live mine feed.
+          <p className="mt-3 text-xs leading-relaxed text-faint">
+            About {silverRate.toFixed(1)} troy ounces each second. {SILVER_MINE_2026F.moz.toLocaleString("en-US")} Moz{" "}
+            {SILVER_MINE_2026F.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.
           </p>
         </article>
       </div>
