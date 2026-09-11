@@ -9,7 +9,6 @@ const NAV = [
   { href: "/history", label: "History" },
   { href: "/markets", label: "Markets" },
   { href: "/gold-silver", label: "In Practice" },
-  { href: "/quiz", label: "Quiz" },
   { href: "/maps", label: "Maps" },
 ];
 
@@ -118,7 +117,6 @@ export function SiteShell({
                 <Link to="/history" className="text-muted hover:text-gold-soft">History</Link>
                 <Link to="/markets" className="text-muted hover:text-gold-soft">Markets</Link>
                 <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
-                <Link to="/quiz" className="text-muted hover:text-gold-soft">Quiz</Link>
                 <Link to="/maps" className="text-muted hover:text-gold-soft">Maps</Link>
               </div>
             </div>

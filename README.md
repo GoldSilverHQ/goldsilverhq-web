@@ -17,7 +17,6 @@ Media only. Not investment advice. Checkout: [@GoldSilverHQ](https://x.com/GoldS
 | Gold & silver markets | `/markets` |
 | Gold & silver in practice | `/gold-silver` |
 | Desk | `/desk` |
-| Quiz | `/quiz` |
 
 Phase 1 cluster: `/history/20th-century` → `/history/20th-century/weimar-1923`.
 

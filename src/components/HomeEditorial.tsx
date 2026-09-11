@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { FEATURED } from "@/lib/content/featured";
 import { pillars } from "@/lib/content/map";
 
@@ -44,22 +43,6 @@ export function HomeEditorial() {
               <p className="mt-5 text-sm font-medium text-gold group-hover:text-gold-soft">Enter →</p>
             </a>
           ))}
-        </div>
-      </section>
-
-      <section className="mt-14">
-        <div className="rounded-xl bg-raised px-6 py-8 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Eight questions</p>
-          <h2 className="mt-2 font-display text-3xl">Sound money quiz</h2>
-          <p className="mt-3 max-w-xl text-sm text-muted">
-            Definitions and dates only. A miss is a link, not a score to brag about.
-          </p>
-          <Link
-            to="/quiz"
-            className="btn-gold mt-6 inline-flex min-h-11 items-center rounded-full px-5 text-sm font-medium"
-          >
-            Take the quiz
-          </Link>
         </div>
       </section>
     </div>
