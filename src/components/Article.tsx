@@ -1,6 +1,12 @@
 import { getBody, type Section } from "@/lib/content/bodies";
 import { continueLinks, type Episode } from "@/lib/content/map";
 
+type ArticleFace = "display" | "sans";
+
+function faceClass(face: ArticleFace) {
+  return face === "sans" ? "font-sans" : "font-display";
+}
+
 export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-2 text-sm text-muted">
@@ -48,12 +54,12 @@ export function RichText({ text }: { text: string }) {
   );
 }
 
-function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
+function Conversion({ kind, face = "display" }: { kind: "ebook" | "newsletter"; face?: ArticleFace }) {
   if (kind === "newsletter") {
     return (
       <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Newsletter</p>
-        <p className="mt-2 font-display text-2xl text-fg">Notes from the map</p>
+        <p className={`mt-2 ${faceClass(face)} text-2xl text-fg`}>Notes from the map</p>
         <p className="mt-2 text-sm text-muted">Definitions and history, not tips. Media only.</p>
         <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
           Subscribe →
@@ -64,7 +70,7 @@ function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
   return (
     <aside className="mt-10 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Ebook companion</p>
-      <p className="mt-2 font-display text-2xl text-fg">A Short History of Sound Money</p>
+      <p className={`mt-2 ${faceClass(face)} text-2xl text-fg`}>A Short History of Sound Money</p>
       <p className="mt-2 text-sm text-muted">The book follows this same map. Media only — not a recommendation.</p>
       <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
         Get launch notes →
@@ -73,21 +79,28 @@ function Conversion({ kind }: { kind: "ebook" | "newsletter" }) {
   );
 }
 
-export function ArticleSections({ sections }: { sections: Section[] }) {
+export function ArticleSections({
+  sections,
+  face = "display",
+}: {
+  sections: Section[];
+  face?: ArticleFace;
+}) {
+  const nums = face === "sans" ? "tabular-nums" : "";
   return (
     <>
       {sections.map((block, i) => (
         <section key={block.heading || i} className="mb-10">
           {block.heading ? (
-            <h2 className="mb-4 font-display text-3xl text-fg">{block.heading}</h2>
+            <h2 className={`mb-4 ${faceClass(face)} text-3xl text-fg`}>{block.heading}</h2>
           ) : null}
           {block.paragraphs.map((p) => (
-            <p key={p.slice(0, 48)} className="mb-4 text-lg leading-relaxed text-fg/90">
+            <p key={p.slice(0, 48)} className={`mb-4 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
               <RichText text={p} />
             </p>
           ))}
           {block.list?.length ? (
-            <ol className="mb-4 list-decimal space-y-3 pl-6 text-lg leading-relaxed text-fg/90">
+            <ol className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
               {block.list.map((item) => (
                 <li key={item.slice(0, 40)}>
                   <RichText text={item} />
@@ -101,11 +114,17 @@ export function ArticleSections({ sections }: { sections: Section[] }) {
   );
 }
 
-export function RelatedLinks({ links }: { links: { title: string; href: string }[] }) {
+export function RelatedLinks({
+  links,
+  face = "display",
+}: {
+  links: { title: string; href: string }[];
+  face?: ArticleFace;
+}) {
   if (!links.length) return null;
   return (
     <div className="mt-12 max-w-prose border-t border-line pt-8">
-      <h2 className="mb-4 font-display text-xl text-silver">Continue the map</h2>
+      <h2 className={`mb-4 ${faceClass(face)} text-xl text-silver`}>Continue the map</h2>
       <ul className="grid gap-2 sm:grid-cols-2">
         {links.map((r) => (
           <li key={r.href}>
@@ -131,20 +150,22 @@ export function EpisodeBody({
 }) {
   const sections = clusterSlug ? getBody(clusterSlug, episode.slug) : null;
   const blocks = sections ?? [{ heading: "", paragraphs: episode.paragraphs }];
+  const face: ArticleFace = clusterSlug === "markets" ? "sans" : "display";
 
   return (
-    <article className="max-w-prose">
+    <article className={`max-w-prose ${face === "sans" ? "font-sans" : ""}`}>
       {episode.status === "skeleton" && !sections ? (
         <p className="mb-6 text-sm text-gold">Skeleton in the topical map — structure first, full draft next.</p>
       ) : null}
-      <ArticleSections sections={blocks} />
-      <RelatedLinks links={continueLinks(episode, clusterSlug)} />
+      <ArticleSections sections={blocks} face={face} />
+      <RelatedLinks links={continueLinks(episode, clusterSlug)} face={face} />
       <Conversion
         kind={
           clusterSlug === "sound-money" || clusterSlug === "gold-silver" || clusterSlug === "markets"
             ? "newsletter"
             : "ebook"
         }
+        face={face}
       />
     </article>
   );

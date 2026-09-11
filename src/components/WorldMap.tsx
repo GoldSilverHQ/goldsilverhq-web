@@ -246,7 +246,7 @@ export function WorldMap() {
             }}
           >
             <p className="font-medium text-fg">{hover.name}</p>
-            <p className={metal === "gold" ? "text-gold" : "text-silver"}>{formatTonnes(hoverVal)}</p>
+            <p className={`tabular-nums ${metal === "gold" ? "text-gold" : "text-silver"}`}>{formatTonnes(hoverVal)}</p>
           </div>
         ) : null}
 
@@ -258,8 +258,8 @@ export function WorldMap() {
         {selected ? (
           <div className="min-w-0 flex-1 rounded-xl bg-raised px-4 py-3 shadow-[var(--shadow-border)]">
             <p className="text-xs tracking-[0.12em] text-faint uppercase">{tab.label}</p>
-            <p className="font-display text-2xl text-fg">{selected.name}</p>
-            <p className={`text-lg ${metal === "gold" ? "text-gold" : "text-silver"}`}>
+            <p className="font-sans text-2xl text-fg">{selected.name}</p>
+            <p className={`text-lg tabular-nums ${metal === "gold" ? "text-gold" : "text-silver"}`}>
               {selectedVal == null ? "—" : selectedVal.toLocaleString("en-US")}
               <span className="ml-2 text-sm text-muted">{tab.unit}</span>
             </p>

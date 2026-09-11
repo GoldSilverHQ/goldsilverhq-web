@@ -50,7 +50,7 @@ export function PriceTicker() {
       className="flex min-w-0 items-center justify-center gap-3 sm:gap-5"
     >
       {items.map((it) => (
-        <span key={it.k} className="flex items-baseline gap-1.5 tabular-nums">
+        <span key={it.k} className="flex items-baseline gap-1.5 font-sans tabular-nums">
           <span className="text-xs font-semibold tracking-[0.12em] text-faint uppercase">{it.k}</span>
           <span className={`text-xs font-medium sm:text-sm ${it.color}`}>{it.v}</span>
         </span>

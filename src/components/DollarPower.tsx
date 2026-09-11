@@ -30,7 +30,7 @@ function DollarChart() {
       {yTicks.map((t) => (
         <g key={t}>
           <line x1={pad.l} x2={w - pad.r} y1={y(t)} y2={y(t)} stroke="#f2ede4" strokeOpacity="0.1" />
-          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10">
+          <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fill="#6e6860" fontSize="10" fontFamily="var(--font-sans)">
             {t === 0 ? "$0" : t === 1 ? "$1.00" : `${Math.round(t * 100)}¢`}
           </text>
         </g>
@@ -41,7 +41,7 @@ function DollarChart() {
         const i = DOLLAR_POWER.findIndex((p) => p.year === year);
         if (i < 0) return null;
         return (
-          <text key={year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10">
+          <text key={year} x={x(i)} y={h - 8} textAnchor="middle" fill="#6e6860" fontSize="10" fontFamily="var(--font-sans)">
             {year}
           </text>
         );
@@ -57,7 +57,7 @@ export function DollarPower() {
   return (
     <section className="mt-10">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Since the Fed</p>
-      <h2 className="mt-2 font-display text-3xl">The dollar since 1913</h2>
+      <h2 className="mt-2 font-sans text-3xl">The dollar since 1913</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
         Purchasing power of $1 at the founding of the Federal Reserve. Official CPI.
       </p>
@@ -65,17 +65,17 @@ export function DollarPower() {
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Lost</p>
-          <p className="mt-2 font-display text-3xl tabular-nums">{lost.toFixed(1)}%</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums">{lost.toFixed(1)}%</p>
           <p className="mt-1 text-sm text-muted">of 1913 purchasing power</p>
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Left</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-gold">{cents(left)}</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums text-gold">{cents(left)}</p>
           <p className="mt-1 text-sm text-muted">what $1 from 1913 buys now</p>
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">To match $1 then</p>
-          <p className="mt-2 font-display text-3xl tabular-nums">${DOLLAR_MULTIPLE.toFixed(0)}</p>
+          <p className="mt-2 font-sans text-3xl tabular-nums">${DOLLAR_MULTIPLE.toFixed(0)}</p>
           <p className="mt-1 text-sm text-muted">today’s dollars</p>
         </article>
       </div>

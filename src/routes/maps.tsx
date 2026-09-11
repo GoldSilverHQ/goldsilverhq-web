@@ -19,10 +19,10 @@ export const Route = createFileRoute("/maps")({
 
 function MapsPage() {
   return (
-    <SiteShell>
+    <SiteShell ui="data">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Maps" }]} />
-        <h1 className="font-display text-4xl sm:text-5xl">
+        <h1 className="font-sans text-4xl sm:text-5xl">
           The world in <span className="text-gold">gold</span> & <span className="text-silver">silver</span>
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-muted">

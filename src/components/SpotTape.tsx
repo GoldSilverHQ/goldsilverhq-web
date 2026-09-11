@@ -32,7 +32,14 @@ function Spark({
     <svg viewBox={`0 0 ${w} ${h}`} className="h-24 w-full" role="img" aria-label={label}>
       <path d={d} fill="none" stroke={color} strokeWidth="1.8" />
       <circle cx={x(points.length - 1)} cy={y(last)} r="2.4" fill={color} />
-      <text x={w - pad.r} y={12} textAnchor="end" fill={up ? "#c9a227" : "#c5cdd4"} fontSize="10">
+      <text
+        x={w - pad.r}
+        y={12}
+        textAnchor="end"
+        fill={up ? "#c9a227" : "#c5cdd4"}
+        fontSize="10"
+        fontFamily="var(--font-sans)"
+      >
         {up ? "▲" : "▼"} 5y
       </text>
     </svg>
@@ -65,28 +72,28 @@ export function SpotTape() {
   return (
     <section className="mt-10">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Tape</p>
-      <h2 className="mt-2 font-display text-3xl">Five years of the screen</h2>
+      <h2 className="mt-2 font-sans text-3xl">Five years of the screen</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
         COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-gold">
+          <p className="mt-2 font-sans text-3xl tabular-nums text-gold">
             {gold ? `$${fmt(gold, 0)}` : "—"}
           </p>
           <Spark points={desk?.goldSeries ?? []} color="#c9a227" label="Gold, five years" />
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-silver">
+          <p className="mt-2 font-sans text-3xl tabular-nums text-silver">
             {silver ? `$${fmt(silver, 2)}` : "—"}
           </p>
           <Spark points={desk?.silverSeries ?? []} color="#c5cdd4" label="Silver, five years" />
         </article>
         <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold-soft uppercase">Ratio</p>
-          <p className="mt-2 font-display text-3xl tabular-nums text-gold-soft">
+          <p className="mt-2 font-sans text-3xl tabular-nums text-gold-soft">
             {ratio ? `${ratio.toFixed(1)}×` : "—"}
           </p>
           <Spark points={desk?.ratioSeries ?? []} color="#e8d48b" label="Gold–silver ratio, five years" />
