@@ -133,34 +133,36 @@ export function SiteShell({
   return (
     <div className="min-h-screen bg-bg text-fg">
       <header className="sticky top-0 z-40 overflow-visible border-b border-line bg-bg/85 backdrop-blur-md">
-        <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-3 px-4">
+        <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-4 px-4">
           <Link to="/" className="shrink-0 text-[1.104rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
           <div className="hidden min-w-0 flex-1 md:block">
             <PriceTicker />
           </div>
-          <nav className="ml-auto hidden items-center gap-5 xl:flex">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-sm text-muted hover:text-gold-soft"
+          <div className="ml-auto flex shrink-0 items-center">
+            <nav className="hidden items-center gap-5 xl:flex xl:pr-7">
+              {NAV.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-sm text-muted hover:text-gold-soft"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-7">
+              <SocialLinks compact />
+              <button
+                type="button"
+                className="grid size-11 place-items-center text-fg xl:hidden"
+                aria-label={open ? "Close menu" : "Open menu"}
+                onClick={() => setOpen((v) => !v)}
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          <div className="ml-auto flex shrink-0 items-center gap-0.5 xl:ml-0">
-            <SocialLinks compact />
-            <button
-              type="button"
-              className="grid size-11 place-items-center text-fg xl:hidden"
-              aria-label={open ? "Close menu" : "Open menu"}
-              onClick={() => setOpen((v) => !v)}
-            >
-              {open ? <X className="size-5" /> : <Menu className="size-5" />}
-            </button>
+                {open ? <X className="size-5" /> : <Menu className="size-5" />}
+              </button>
+            </div>
           </div>
         </div>
         <div className="border-t border-line px-4 py-2 md:hidden">
