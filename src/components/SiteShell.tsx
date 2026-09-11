@@ -111,9 +111,9 @@ function Brand() {
       <img
         src="/logo.png?v=3"
         alt=""
-        width={45}
-        height={45}
-        className="size-[2.79rem] shrink-0 object-contain"
+        width={43}
+        height={43}
+        className="size-[2.65rem] shrink-0 object-contain"
       />
       <Wordmark />
     </span>
@@ -134,7 +134,7 @@ export function SiteShell({
     <div className="min-h-screen bg-bg text-fg">
       <header className="sticky top-0 z-40 overflow-visible border-b border-line bg-bg/85 backdrop-blur-md">
         <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-3 px-4">
-          <Link to="/" className="shrink-0 text-[1.1625rem]" aria-label="GoldSilverHQ home">
+          <Link to="/" className="shrink-0 text-[1.104rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
           <div className="hidden min-w-0 flex-1 md:block">

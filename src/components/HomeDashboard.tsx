@@ -29,7 +29,7 @@ function FaceTile({
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
     <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
-      <p className="text-xs font-semibold tracking-[0.16em] text-faint uppercase">{kicker}</p>
+      <p className="text-xs font-semibold tracking-[0.16em] text-faint">{kicker}</p>
       <h3 className="mt-1 text-sm text-muted">{label}</h3>
       <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
         {value ?? "—"}
@@ -57,18 +57,10 @@ export function HomeDashboard() {
 
   return (
     <div className="data-ui mx-auto max-w-6xl px-4 py-8 sm:py-10">
-      <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">GoldSilverHQ</p>
-      <h1 className="mt-2 text-center font-display text-4xl leading-tight sm:text-5xl">
-        Gold, silver, and the map behind the tape
-      </h1>
-      <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
-        A few live numbers on the face. History, definitions, and the full desk underneath. Media only — not a
-        recommendation.
-      </p>
-
-      <section className="mt-8 grid gap-3 sm:grid-cols-3">
+      <h1 className="sr-only">GoldSilverHQ</h1>
+      <section className="grid gap-3 sm:grid-cols-3">
         <FaceTile
-          kicker="Au"
+          kicker="gold"
           label="Gold spot"
           tone="gold"
           unit="USD / oz"
@@ -76,7 +68,7 @@ export function HomeDashboard() {
           note="Same print as the header tape."
         />
         <FaceTile
-          kicker="Ag"
+          kicker="silver"
           label="Silver spot"
           tone="silver"
           unit="USD / oz"
