@@ -11,7 +11,7 @@ export const Route = createFileRoute("/markets/")({
       {
         name: "description",
         content:
-          "Gold and silver market facts: official U.S. book value, central-bank reserves, and the gold–silver ratio. Documentary figures — not tips, and not sound-money history.",
+          "Gold and silver market facts: official U.S. book value, central-bank reserves, the gold–silver ratio, and physical silver demand by country. Documentary figures — not tips, and not sound-money history.",
       },
     ],
   }),
@@ -30,8 +30,8 @@ function MarketsHub() {
         </div>
 
         <h2 className="mt-16 font-sans text-3xl">Read by topic</h2>
-        <p className="mt-2 max-w-prose text-muted">Three fact pages. Start anywhere; each one returns here.</p>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <p className="mt-2 max-w-prose text-muted">Four fact pages. Start anywhere; each one returns here.</p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
           {marketPages.map((page, i) => (
             <Link
               key={page.slug}
