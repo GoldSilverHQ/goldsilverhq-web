@@ -82,6 +82,11 @@ function AboutPage() {
             Information vs investment advice →
           </Link>
         </p>
+        <p className="mt-3 text-sm">
+          <Link to="/impressum" className="text-gold hover:text-gold-soft">
+            Impressum →
+          </Link>
+        </p>
       </div>
     </SiteShell>
   );

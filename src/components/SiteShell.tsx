@@ -105,16 +105,15 @@ function Wordmark() {
   );
 }
 
-function Brand({ compact = false }: { compact?: boolean }) {
-  const px = compact ? 36 : 45;
+function Brand() {
   return (
     <span className="flex items-center gap-2.5">
       <img
         src="/logo.png?v=3"
         alt=""
-        width={px}
-        height={px}
-        className={compact ? "size-9 shrink-0 object-contain" : "size-[2.79rem] shrink-0 object-contain"}
+        width={45}
+        height={45}
+        className="size-[2.79rem] shrink-0 object-contain"
       />
       <Wordmark />
     </span>
@@ -186,46 +185,30 @@ export function SiteShell({
         ) : null}
       </header>
       <main className={ui === "data" ? "data-ui" : ui === "markets" ? "markets" : undefined}>{children}</main>
-      <footer className="mt-16 border-t border-line">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="grid gap-8 sm:grid-cols-3">
-            <div>
-              <p className="text-lg">
-                <Brand compact />
-              </p>
-              <p className="mt-2 max-w-xs text-sm text-muted">
-                Media only. Sound money, history, metal-market facts, and practical notes on physical metal. Not
-                investment advice.
-              </p>
-            </div>
-            <div className="text-sm">
-              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Pillars</p>
-              <div className="flex flex-col gap-2">
-                <Link to="/desk" className="text-muted hover:text-gold-soft">Desk</Link>
-                <Link to="/sound-money" className="text-muted hover:text-gold-soft">Sound Money</Link>
-                <Link to="/history" className="text-muted hover:text-gold-soft">History</Link>
-                <Link to="/markets" className="text-muted hover:text-gold-soft">Markets</Link>
-                <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
-                <Link to="/maps" className="text-muted hover:text-gold-soft">Maps</Link>
-              </div>
-            </div>
-            <div className="text-sm">
-              <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Connect</p>
-              <div className="flex flex-col gap-2">
-                <Link to="/about" className="text-muted hover:text-gold-soft">About</Link>
-                <Link
-                  to="/sound-money/$slug"
-                  params={{ slug: "information-not-advice" }}
-                  className="text-muted hover:text-gold-soft"
-                >
-                  Information vs advice
-                </Link>
-              </div>
-              <p className="mt-5 mb-3 text-xs font-semibold tracking-[0.14em] text-faint uppercase">Social</p>
-              <SocialLinks />
-            </div>
+      <footer className="mt-8 border-t border-line">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
+          <Link to="/" className="text-sm" aria-label="GoldSilverHQ home">
+            <Wordmark />
+          </Link>
+          <nav className="flex flex-wrap items-center gap-x-4 text-xs text-muted">
+            <Link to="/about" className="hover:text-gold-soft">
+              About
+            </Link>
+            <Link to="/impressum" className="hover:text-gold-soft">
+              Impressum
+            </Link>
+            <Link
+              to="/sound-money/$slug"
+              params={{ slug: "information-not-advice" }}
+              className="hover:text-gold-soft"
+            >
+              Information vs advice
+            </Link>
+          </nav>
+          <div className="ml-auto flex items-center gap-3">
+            <SocialLinks compact />
+            <p className="text-xs text-faint">© 2026</p>
           </div>
-          <p className="mt-10 text-xs text-faint">© 2026 GoldSilverHQ. Educational media. BaFin-clean.</p>
         </div>
       </footer>
     </div>
