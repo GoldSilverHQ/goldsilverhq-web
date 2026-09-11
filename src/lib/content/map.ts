@@ -1016,7 +1016,7 @@ export const marketPages: Episode[] = [
     slug: "central-bank-gold-reserves",
     title: "How central banks report gold in FX reserves",
     summary:
-      "Share of reserves, vault preferences, and dated official purchases. Poland’s recent buys sit here as a short documentary block — not a separate page.",
+      "Share of reserves, vault preferences, and dated official purchases. Poland’s 2026 NBP stock and 700-tonne aim sit here as a short documentary block — not a separate page.",
     status: "ready",
     paragraphs: [
       "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
@@ -1061,7 +1061,7 @@ export const marketPages: Episode[] = [
     slug: "physical-silver-demand-by-country",
     title: "What physical silver demand by country measures (and what it does not)",
     summary:
-      "Identified retail and investment bars and coins by country. A demand address, not a mine ranking, and not a reason to buy metal in a named place.",
+      "Identified retail and investment bars and coins by country. A demand address, not a mine ranking. Mint fabrication is a different World Silver Survey table.",
     status: "ready",
     paragraphs: [
       "Country rankings of physical silver demand count identified bar and coin offtake in a calendar year. They do not rank mines, factories, or paper claims.",
@@ -1076,6 +1076,7 @@ export const marketPages: Episode[] = [
         "silver investment demand by country",
         "silver bars and coins by country",
         "world silver survey physical investment",
+        "silver coins and medals fabrication",
       ],
       demand: "mid",
       difficulty: "mid",
