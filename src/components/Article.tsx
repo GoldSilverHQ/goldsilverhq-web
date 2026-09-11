@@ -96,7 +96,7 @@ export function ArticleSections({
           ) : null}
           {block.callout ? (
             <aside className="mb-6 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
-              <p className="font-sans text-xs font-semibold tracking-[0.14em] text-silver uppercase">
+              <p className="font-sans text-xs font-semibold tracking-[0.08em] text-silver">
                 {block.callout.label}
               </p>
               {block.callout.paragraphs.map((p) => (
