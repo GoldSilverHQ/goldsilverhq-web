@@ -900,10 +900,53 @@ const whyMarkets: Section[] = [
 
 const lydia: Section[] = [
   {
-    heading: "The stamp",
+    heading: "",
     paragraphs: [
-      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh–sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. Croesus is the name attached to separating gold and silver issues. The invention is not the metal. It is the stamp.",
-      "A stamp cuts the cost of verifying weight and fineness. You still need to trust the issuer. You no longer need to weigh every lump in a market of strangers.",
+      "Before anyone punched a die into electrum, traders already settled in metal by weight. Ingots, rings, cut pieces, dust in a pouch: the stuff was the payment. The scale and the touchstone were the cost of using it among strangers. You could trust a neighbor who had weighed the same lump last season. You could not assume that of a merchant from two valleys over, or of a caravan that would not return.",
+      "A stamp was worth inventing because those checks were expensive. Scales need a known weight. Touchstones need a practiced eye. Both take time, and both leave room for a quarrel. If an issuer will mark a piece and stand behind the mark, the stranger can skip the longest part of the test — not all of it, but enough that metal moves faster than unmarked dumps.",
+      "The invention is cheaper verification in a market of strangers. It is not the birth of money.",
+    ],
+  },
+  {
+    heading: "Western Anatolia, electrum",
+    paragraphs: [
+      "The conventional starting point is Lydia, in western Anatolia, in the seventh and sixth centuries BCE. The kingdom sat on a corridor between the Aegean coast and the interior. Sardis was the seat. The Pactolus and the region’s ores supplied electrum — gold and silver already blended, whether by the river or by the workshop. It was a mix, not a pair of pure metals.",
+      "Early struck pieces were that mix. They were not yet separate gold coins and silver coins. A punch, then a type, hit a dump of electrum that already had value as metal. The object is easy to romanticize as the first money. It is more modest: the first widely cited case of a public mark on a piece that markets already treated as settlement stuff.",
+      "Electrum is inconvenient if you care about a clean gold–silver split. The mix varies. One lump is richer in gold than the next. Weight alone does not tell you the gold content. A stamp that claims a standard is a stronger claim here than on a refined bar, because the hidden variable is larger. That is one reason a type was worth putting on this metal, in this corridor.",
+      "The date is a range, not a birthday. Archaeology and later Greek memory converge on Lydia without a single year that must be recited. What matters is the sequence. Metal by weight is older. The punch is later. Separate gold and silver issues come later still.",
+    ],
+  },
+  {
+    heading: "What the stamp does",
+    paragraphs: [
+      "A stamp is a claim about weight and fineness. It says: this piece is the unit we named; it is the metal we named; you need not put it on the scale if you trust the type. Trust moves from the lump to the issuer. The stranger no longer has to assay every dump. He has to decide whether the lion, or the later royal face, is honest enough for the trade.",
+      "That is a relocation of trust, not an abolition of it. You still need to trust the type. A punch can lie. A die can be copied. An issuer can lighten the next issue and keep the old look. The coin does not make the metal true. It makes a true type cheaper to accept than a pile of anonymous dumps.",
+      "In a market of people who already share a temple and a harvest, you may not need that shortcut. You know the family, the last bargain, the local weight. The stamp earns its keep when the counterparty is a stranger and the payment may travel. Verification cost is the problem coinage solves. It does not invent the desire to settle in gold and silver. That selection had already happened. [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the longer account of why those two metals were already the pile.",
+      "Once a type is known, a piece can be counted instead of weighed. Specialists can argue over workshop and king. The economic fact does not depend on naming every die. Counting is faster than weighing. That is the whole invention, stated without romance.",
+    ],
+  },
+  {
+    heading: "Croesus and two metals",
+    paragraphs: [
+      "Croesus is the name attached to the next turn: issues in gold and in silver, no longer only electrum. The mix is separated. A gold piece and a silver piece can be told apart by the metal itself, not only by a mark on an ambiguous alloy. That is a refinement of the same idea — a claim about what you are holding — not a new theory of money.",
+      "It is not modern mint-ratio law. Later states will write a legal price of gold in silver and then watch one metal leave when the market price moves. That pattern has a name and later pages of its own. This account does not borrow it. Croesus’s workshop, as the story is usually told, is a king issuing two metals that already did different jobs: gold for large value, silver closer to ordinary trade. The split is in the properties of the metals. It is not yet a statute that tries to freeze their ratio.",
+      "Do not drag Gresham onto the Pactolus. Bad money driving out good is a later observation about legal tender and a wrong official price. Lydian gold and silver as separate issues are a minting choice about what to stamp — the pieces later called Croeseids — not a lesson about circulating the overvalued coin.",
+    ],
+  },
+  {
+    heading: "What this is not",
+    paragraphs: [
+      "It is not 1971. The Nixon gold-window close is a late official hinge in a dollar system. It did not invent money, and it did not invent coin. Starting the story there skips the centuries in which metal was already the pile and a stamp was already a verification technology.",
+      "It is not warehouse paper. A receipt that claims a pile of coin comes after people already trusted the pile. Banking, in that later sense, starts when the claim-check pays a debt and the metal stays in the vault. Lydia’s punch is a mark on electrum you can hold. It is not a ticket.",
+      "It is not money invented by decree. A king can name a unit and require it for a tax. He cannot force a distant counterparty to treat a bad piece as good metal. Markets had already chosen gold and silver for tradeability. The Lydian type rides on that choice. It does not create it. The [ancient money hub](/history/ancient) keeps that order in view: metal first, stamp second.",
+      "If you want a sentence that will not survive the sources, it is “Lydia invented money.” What Lydia is credited with is struck coinage — a public mark on metal that was already a settlement good. That is a technology, not an origin myth.",
+    ],
+  },
+  {
+    heading: "When the type holds",
+    paragraphs: [
+      "A coin travels farther than a lump when the type is honest. Strangers will take a known face across a longer road than they will take an unmarked dump, because the face is a cheaper test. When the type is lightened — less metal, the same look — people return to the scale, or they hoard the heavier pieces and pass the light ones. The stamp does not repeal the properties of the metal. It only rents them.",
+      "Greek cities later turned silver mining and a familiar owl into a commercial network across the Aegean. That is a later hinge: a silver language that could move without a letter of introduction. It is not the Lydian invention. The sequence is enough. Metal by weight; then a mark on electrum; then separate gold and silver; then, farther west, silver as a network. When a later mint cheats the type, the old habit returns. Count if you trust the face. Weigh if you do not.",
     ],
   },
 ];
@@ -1624,7 +1667,7 @@ export const ancientHubBody: Section[] = [
   {
     heading: "Episode index",
     paragraphs: [
-      "Each line is a job description. Why markets chose gold and silver is the long narrative on this shelf. Lydia, Greece, Rome, and the solidus remain first drafts. This hub is not pretending the later stops are sitemap-ready.",
+      "Each line is a job description. Why markets chose gold and silver, and Lydia and the first coins, are the long narratives on this shelf. Greece, Rome, and the solidus remain first drafts. This hub is not pretending those later stops are sitemap-ready.",
     ],
     list: [
       "[Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — Selection by trade: portability, durability, divisibility, recognizability; metal before the mint.",

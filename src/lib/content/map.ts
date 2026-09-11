@@ -250,21 +250,23 @@ export const historyClusters: Cluster[] = [
       {
         slug: "lydia-first-coins",
         title: "Lydia and the first coins",
-        summary: "Electrum, a stamp, and a lower cost of verifying metal.",
+        summary:
+          "Struck coinage starts as a stamp on electrum that already settled trade — cheaper verification among strangers, not the birth of money.",
         status: "ready",
         paragraphs: [
-          "Lydia is the conventional starting point for struck coinage. The stamp reduced the cost of verifying metal. That is the invention, not the metal itself.",
+          "Before the punch, traders settled metal by weight. The stamp cut the cost of checking that metal among strangers. That is the invention of coinage — not the birth of money.",
         ],
         related: [
+          { title: "Ancient money hub", href: "/history/ancient" },
           { title: "Why markets chose gold and silver", href: "/history/ancient/why-markets-chose-gold-silver" },
-          { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
         ],
         seo: {
           primary: "first coins lydia",
-          secondary: ["croesus coins", "electrum coins", "invention of coinage"],
+          secondary: ["invention of coinage", "electrum coins", "croesus coins", "lydian coinage"],
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "Lydia and the First Coins: The Stamp That Verified Metal",
         },
       },
       {
@@ -1091,6 +1093,13 @@ export function getMarket(slug: string) {
   return marketPages.find((p) => p.slug === slug);
 }
 
+/** Thin ancient drafts — do not auto-promote as Continue destinations from a thickened spoke. */
+const THIN_ANCIENT_CONTINUES = new Set([
+  "greece-silver-trade",
+  "rome-denarius-aureus",
+  "solidus-continuity",
+]);
+
 /** Locked nav: cluster prev/next, then related[] as extra context. Hubs and the disclaimer page are omitted — breadcrumbs and footer already cover them. */
 export function continueLinks(
   episode: Episode,
@@ -1113,7 +1122,9 @@ export function continueLinks(
     }
     if (i >= 0 && i < cluster.episodes.length - 1) {
       const next = cluster.episodes[i + 1];
-      add(`${next.title} →`, `/history/${cluster.slug}/${next.slug}`);
+      if (!THIN_ANCIENT_CONTINUES.has(next.slug)) {
+        add(`${next.title} →`, `/history/${cluster.slug}/${next.slug}`);
+      }
     }
   } else if (clusterSlug === "sound-money") {
     const list = ideaPages.filter((p) => p.slug !== "information-not-advice");
