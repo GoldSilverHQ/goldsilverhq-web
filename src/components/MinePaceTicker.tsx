@@ -15,21 +15,21 @@ function fmtOz(n: number) {
 
 function InfoHint({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <span className="relative shrink-0">
+    <>
       <button
         type="button"
-        className="peer grid size-7 place-items-center rounded-full text-faint hover:text-gold-soft focus-visible:text-gold-soft focus-visible:outline-none"
+        className="peer absolute top-2.5 right-2 grid size-7 place-items-center rounded-full text-muted hover:text-gold-soft focus-visible:text-gold-soft focus-visible:outline-none"
         aria-label={label}
       >
-        <Info className="size-3.5" strokeWidth={1.75} />
+        <Info className="size-3.5" strokeWidth={2} />
       </button>
       <span
         role="tooltip"
-        className="invisible absolute right-0 z-50 mt-1 w-60 rounded-md bg-raised px-3 py-2 text-left text-xs leading-relaxed font-normal tracking-normal text-muted normal-case shadow-[var(--shadow-border)] peer-hover:visible peer-focus:visible"
+        className="invisible absolute top-full left-0 z-50 mt-1 w-full rounded-md bg-raised px-3 py-2 text-left text-xs leading-relaxed font-normal tracking-normal text-muted normal-case shadow-[var(--shadow-border)] peer-hover:visible peer-focus:visible"
       >
         {children}
       </span>
-    </span>
+    </>
   );
 }
 
@@ -49,11 +49,9 @@ function PaceTile({
   const color =
     tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-gold-soft";
   return (
-    <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
-      <div className="flex items-start justify-between gap-2">
-        <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
-        <InfoHint label={`${kicker} details`}>{info}</InfoHint>
-      </div>
+    <article className="relative rounded-lg bg-surface p-4 pr-10 shadow-[var(--shadow-border)]">
+      <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
+      <InfoHint label={`${kicker} details`}>{info}</InfoHint>
       <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
         {value}
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
