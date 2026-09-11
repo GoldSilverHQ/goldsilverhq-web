@@ -85,7 +85,7 @@ export function HomeDashboard() {
         />
       </section>
 
-      <div className="mt-8">
+      <div className="mt-3">
         <MinePaceTicker />
       </div>
 

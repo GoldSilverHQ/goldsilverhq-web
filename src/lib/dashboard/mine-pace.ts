@@ -34,6 +34,11 @@ export function silverOzPerYear() {
   return SILVER_MINE_2026F.moz * 1_000_000;
 }
 
+/** Troy ounces of silver mined per ounce of gold at the 2026e/F pace. */
+export function mineOzRatio() {
+  return silverOzPerYear() / goldOzPerYear();
+}
+
 export function goldOzPerSecond(year: number) {
   return goldOzPerYear() / secondsInUtcYear(year);
 }
