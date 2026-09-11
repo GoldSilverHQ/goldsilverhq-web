@@ -12,7 +12,7 @@ export const Route = createFileRoute("/desk")({
       {
         name: "description",
         content:
-          "Gold and silver desk: five-year COMEX tape, 1980 highs, dollar purchasing power, and central-bank gold by country.",
+          "Gold and silver desk: the full metals clock, five-year COMEX tape, 1980 highs, dollar purchasing power, and central-bank gold.",
       },
     ],
   }),
