@@ -47,11 +47,11 @@ export function HomeEditorial() {
         </div>
       </section>
 
-      <section className="mt-14 grid gap-4 md:grid-cols-2">
+      <section className="mt-14">
         <div className="rounded-xl bg-raised px-6 py-8 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Eight questions</p>
           <h2 className="mt-2 font-display text-3xl">Sound money quiz</h2>
-          <p className="mt-3 text-sm text-muted">
+          <p className="mt-3 max-w-xl text-sm text-muted">
             Definitions and dates only. A miss is a link, not a score to brag about.
           </p>
           <Link
@@ -59,16 +59,6 @@ export function HomeEditorial() {
             className="btn-gold mt-6 inline-flex min-h-11 items-center rounded-full px-5 text-sm font-medium"
           >
             Take the quiz
-          </Link>
-        </div>
-        <div className="rounded-xl bg-surface px-6 py-8 shadow-[var(--shadow-border)]">
-          <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Companion books</p>
-          <h2 className="mt-2 font-display text-3xl">The kit and the history</h2>
-          <p className="mt-3 text-sm text-muted">
-            Two ebooks on the same map. Launch list now. Checkout later via @GoldSilverHQ.
-          </p>
-          <Link to="/kit" className="mt-6 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-            See the kit →
           </Link>
         </div>
       </section>

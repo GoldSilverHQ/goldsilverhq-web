@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as DeskRouteImport } from './routes/desk'
 import { Route as FlowsRouteImport } from './routes/flows'
-import { Route as KitRouteImport } from './routes/kit'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/googleb53ee24d705afe09[.]html'
@@ -47,11 +46,6 @@ const DeskRoute = DeskRouteImport.update({
 const FlowsRoute = FlowsRouteImport.update({
   id: '/flows',
   path: '/flows',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KitRoute = KitRouteImport.update({
-  id: '/kit',
-  path: '/kit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapsRoute = MapsRouteImport.update({
@@ -130,7 +124,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
@@ -151,7 +144,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
@@ -173,7 +165,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
   '/maps': typeof MapsRoute
   '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
@@ -196,7 +187,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
     | '/maps'
     | '/quiz'
     | '/googleb53ee24d705afe09.html'
@@ -217,7 +207,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
     | '/maps'
     | '/quiz'
     | '/googleb53ee24d705afe09.html'
@@ -238,7 +227,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
     | '/maps'
     | '/quiz'
     | '/googleb53ee24d705afe09.html'
@@ -260,7 +248,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   DeskRoute: typeof DeskRoute
   FlowsRoute: typeof FlowsRoute
-  KitRoute: typeof KitRoute
   MapsRoute: typeof MapsRoute
   QuizRoute: typeof QuizRoute
   Googleb53ee24d705afe09DothtmlRoute: typeof Googleb53ee24d705afe09DothtmlRoute
@@ -305,13 +292,6 @@ declare module '@tanstack/react-router' {
       path: '/flows'
       fullPath: '/flows'
       preLoaderRoute: typeof FlowsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kit': {
-      id: '/kit'
-      path: '/kit'
-      fullPath: '/kit'
-      preLoaderRoute: typeof KitRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/maps': {
@@ -420,7 +400,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   DeskRoute: DeskRoute,
   FlowsRoute: FlowsRoute,
-  KitRoute: KitRoute,
   MapsRoute: MapsRoute,
   QuizRoute: QuizRoute,
   Googleb53ee24d705afe09DothtmlRoute: Googleb53ee24d705afe09DothtmlRoute,

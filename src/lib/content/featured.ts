@@ -32,22 +32,3 @@ export const FEATURED = [
     episode: "what-is-sound-money",
   },
 ] as const;
-
-export const KITS = [
-  {
-    id: "short-history",
-    kicker: "Ebook",
-    title: "A Short History of Sound Money",
-    blurb:
-      "The book follows this site’s map: pillar → cluster → episode. Weimar, the Fed, John Law, and the Nixon shock — in that architecture, not as a highlight reel.",
-    sell: "Launch notes on the list. Media, not a shop checkout.",
-  },
-  {
-    id: "survival-kit",
-    kicker: "Ebook",
-    title: "Sound Money Survival Kit",
-    blurb:
-      "Definitions, the history spine, and the first-ounces checklist. It is a reading order, not a recommendation to buy or sell metal.",
-    sell: "Same list. Same BaFin-clean line.",
-  },
-] as const;

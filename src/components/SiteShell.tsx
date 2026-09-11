@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { Newsletter } from "@/components/Newsletter";
 import { PriceTicker } from "@/components/PriceTicker";
 
 const NAV = [
@@ -25,7 +24,7 @@ function Wordmark() {
 }
 
 function Brand({ compact = false }: { compact?: boolean }) {
-  const px = compact ? 36 : 48;
+  const px = compact ? 36 : 45;
   return (
     <span className="flex items-center gap-2.5">
       <img
@@ -33,7 +32,7 @@ function Brand({ compact = false }: { compact?: boolean }) {
         alt=""
         width={px}
         height={px}
-        className={compact ? "size-9 shrink-0 object-contain" : "size-12 shrink-0 object-contain"}
+        className={compact ? "size-9 shrink-0 object-contain" : "size-[2.79rem] shrink-0 object-contain"}
       />
       <Wordmark />
     </span>
@@ -54,7 +53,7 @@ export function SiteShell({
     <div className="min-h-screen bg-bg text-fg">
       <header className="sticky top-0 z-40 overflow-visible border-b border-line bg-bg/85 backdrop-blur-md">
         <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-3 px-4">
-          <Link to="/" className="shrink-0 text-xl" aria-label="GoldSilverHQ home">
+          <Link to="/" className="shrink-0 text-[1.1625rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
           <div className="hidden min-w-0 flex-1 md:block">
@@ -70,13 +69,6 @@ export function SiteShell({
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/"
-              hash="newsletter"
-              className="btn-gold inline-flex min-h-11 items-center rounded-full px-4 text-sm font-medium"
-            >
-              Newsletter
-            </Link>
           </nav>
           <button
             type="button"
@@ -102,22 +94,13 @@ export function SiteShell({
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/"
-              hash="newsletter"
-              onClick={() => setOpen(false)}
-              className="btn-gold mt-2 inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm font-medium"
-            >
-              Newsletter
-            </Link>
           </nav>
         ) : null}
       </header>
       <main className={ui === "data" ? "data-ui" : ui === "markets" ? "markets" : undefined}>{children}</main>
       <footer className="mt-16 border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <Newsletter />
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <p className="text-lg">
                 <Brand compact />
@@ -136,7 +119,6 @@ export function SiteShell({
                 <Link to="/markets" className="text-muted hover:text-gold-soft">Markets</Link>
                 <Link to="/gold-silver" className="text-muted hover:text-gold-soft">In Practice</Link>
                 <Link to="/quiz" className="text-muted hover:text-gold-soft">Quiz</Link>
-                <Link to="/kit" className="text-muted hover:text-gold-soft">Kit</Link>
                 <Link to="/maps" className="text-muted hover:text-gold-soft">Maps</Link>
               </div>
             </div>

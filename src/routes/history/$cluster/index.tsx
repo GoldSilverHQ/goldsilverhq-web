@@ -47,7 +47,7 @@ function ClusterPage() {
         )}
         {cluster.slug !== "banks-paper" && cluster.slug !== "ancient" ? (
           <p className="mt-6 text-sm text-faint">
-            {ready} of {cluster.episodes.length} episodes drafted · episode → this hub → history pillar → ebook
+            {ready} of {cluster.episodes.length} episodes drafted
           </p>
         ) : null}
         <ol className="mt-10 grid gap-3">
