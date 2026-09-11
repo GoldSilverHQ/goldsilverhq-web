@@ -97,7 +97,7 @@ function SocialLinks({
 
 function Wordmark() {
   return (
-    <span className="font-sans font-semibold tracking-tight">
+    <span className="font-display font-bold tracking-tight">
       <span className="text-gold">Gold</span>
       <span className="text-silver">Silver</span>
       <span className="text-fg">HQ</span>
