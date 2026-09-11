@@ -228,15 +228,15 @@ export const historyClusters: Cluster[] = [
       {
         slug: "why-markets-chose-gold-silver",
         title: "Why markets chose gold and silver",
-        summary: "Durability, divisibility, scarcity — selection by trade, not a decree.",
+        summary:
+          "Markets selected gold and silver for trade — durability, divisibility, scarcity and homogeneity, recognizability and portability — not by decree. Coinage is a later stamp.",
         status: "ready",
         paragraphs: [
-          "Before states stamped coins, markets already used gold and silver as money. The properties that made them useful — scarcity, durability, divisibility — are the starting point of this cluster.",
+          "Before states stamped coins, traders already settled in gold and silver. The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
         ],
         related: [
-          { title: "Lydia and the first coins", href: "/history/ancient/lydia-first-coins" },
-          { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
           { title: "Ancient money hub", href: "/history/ancient" },
+          { title: "Lydia and the first coins", href: "/history/ancient/lydia-first-coins" },
         ],
         seo: {
           primary: "why gold and silver used as money",
@@ -244,6 +244,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "Why Markets Chose Gold and Silver: Metal First, Mint Later",
         },
       },
       {
