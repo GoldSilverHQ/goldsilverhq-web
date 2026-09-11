@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomeDashboard } from "@/components/HomeDashboard";
 import { HomeEditorial } from "@/components/HomeEditorial";
-import { MetalsClock } from "@/components/MetalsClock";
 import { SiteShell } from "@/components/SiteShell";
 
 export const Route = createFileRoute("/")({
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Global precious metals clock, plus the map: sound money, monetary history, and practical notes on physical metal. Media only.",
+          "A short gold and silver dashboard: live prices, estimated ounces mined this year, and the map of sound money and history. Media only.",
       },
     ],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <SiteShell>
-      <MetalsClock />
+      <HomeDashboard />
       <HomeEditorial />
     </SiteShell>
   );

@@ -17,8 +17,6 @@ Media only. Not investment advice. Checkout: [@GoldSilverHQ](https://x.com/GoldS
 | Gold & silver markets | `/markets` |
 | Gold & silver in practice | `/gold-silver` |
 | Desk | `/desk` |
-| Quiz | `/quiz` |
-| Kit | `/kit` |
 
 Phase 1 cluster: `/history/20th-century` → `/history/20th-century/weimar-1923`.
 
@@ -36,7 +34,3 @@ npm run dev      # http://127.0.0.1:8080
 npm run typecheck
 npm run build
 ```
-
-## Convert
-
-Newsletter + *Sound Money Survival Kit* ebook sit on every cluster and episode. Wire the form to your list when you are ready. The kit landing is `/kit`. The quiz is `/quiz`.

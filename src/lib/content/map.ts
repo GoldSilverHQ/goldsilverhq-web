@@ -61,7 +61,6 @@ export type Pillar = {
   kicker: string;
   question: string;
   summary: string;
-  sell: string;
 };
 
 export const pillars: Pillar[] = [
@@ -73,7 +72,6 @@ export const pillars: Pillar[] = [
     question: "What does sound money mean?",
     summary:
       "Definitions only: hard money versus fiat, purchasing power, and what “backed” does and does not mean. History stays in its own pillar.",
-    sell: "Newsletter",
   },
   {
     id: "history",
@@ -82,8 +80,7 @@ export const pillars: Pillar[] = [
     kicker: "Pillar 2 · What happened",
     question: "What happened?",
     summary:
-      "Five clusters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not in the idea pillar. Episode → cluster → this hub → ebook.",
-    sell: "Ebook: A Short History of Sound Money",
+      "Five clusters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not in the idea pillar.",
   },
   {
     id: "gold-silver",
@@ -93,7 +90,6 @@ export const pillars: Pillar[] = [
     question: "How do I handle metal?",
     summary:
       "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist. Neutral and educational.",
-    sell: "Newsletter + partner link if a deal exists",
   },
   {
     id: "markets",
@@ -103,7 +99,6 @@ export const pillars: Pillar[] = [
     question: "What do the current figures say?",
     summary:
       "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country — dated market facts. Not sound-money history, and not how to buy a bar.",
-    sell: "Newsletter",
   },
 ];
 

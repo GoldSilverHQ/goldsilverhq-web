@@ -45,7 +45,7 @@ export function PriceTicker() {
 
   return (
     <Link
-      to="/"
+      to="/desk"
       aria-label="Gold, silver, and gold–silver ratio"
       className="flex min-w-0 items-center justify-center gap-3 sm:gap-5"
     >

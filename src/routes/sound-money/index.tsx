@@ -6,7 +6,6 @@ import { ideaPages } from "@/lib/content/map";
 const INTRO = [
   "This pillar answers what sound money *means* — not what happened in 1923 or 1971, and not how to buy a bar. History has its own pillar. Practice has its own pillar.",
   "The four definition pages now have first drafts. The disclaimer is short and done. Cases stay in [history](/history).",
-  "Sell here is the newsletter, not the ebook.",
 ];
 
 export const Route = createFileRoute("/sound-money/")({
@@ -37,7 +36,7 @@ function IdeaHub() {
           </p>
         ))}
         <p className="mt-6 text-sm text-faint">
-          {ready} of {ideaPages.length} pages drafted · definition → this hub → newsletter
+          {ready} of {ideaPages.length} pages drafted
         </p>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page, i) => (
@@ -59,14 +58,6 @@ function IdeaHub() {
             </li>
           ))}
         </ol>
-        <aside className="mt-12 max-w-prose rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Newsletter</p>
-          <p className="mt-2 font-display text-2xl text-fg">Notes from the map</p>
-          <p className="mt-2 text-sm text-muted">Definitions and history. Media only.</p>
-          <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-            Subscribe →
-          </a>
-        </aside>
       </div>
     </SiteShell>
   );

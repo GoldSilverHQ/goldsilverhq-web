@@ -36,7 +36,7 @@ function PracticeHub() {
           </p>
         ))}
         <p className="mt-6 text-sm text-faint">
-          {ready} of {practicePages.length} pages drafted · practice → this hub → newsletter
+          {ready} of {practicePages.length} pages drafted
         </p>
         <ol className="mt-10 grid gap-3">
           {practicePages.map((page, i) => (
@@ -58,14 +58,6 @@ function PracticeHub() {
             </li>
           ))}
         </ol>
-        <aside className="mt-12 max-w-prose rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-gold)_28%,transparent)]">
-          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Newsletter</p>
-          <p className="mt-2 font-display text-2xl text-fg">Notes from the map</p>
-          <p className="mt-2 text-sm text-muted">Media only — not a recommendation to buy or sell.</p>
-          <a href="/#newsletter" className="mt-4 inline-flex min-h-11 items-center text-sm font-medium text-gold hover:text-gold-soft">
-            Subscribe →
-          </a>
-        </aside>
       </div>
     </SiteShell>
   );

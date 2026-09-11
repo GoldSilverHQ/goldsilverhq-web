@@ -11,11 +11,6 @@ export function NotFound() {
         <Link to="/" className="mt-8 inline-flex min-h-11 items-center rounded-full bg-gold px-5 text-sm font-medium text-bg">
           Home
         </Link>
-        <p className="mt-6 text-sm">
-          <Link to="/quiz" className="text-gold hover:text-gold-soft">
-            Or try the quiz →
-          </Link>
-        </p>
       </div>
     </SiteShell>
   );

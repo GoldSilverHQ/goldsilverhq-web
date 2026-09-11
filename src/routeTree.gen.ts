@@ -13,17 +13,16 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as DeskRouteImport } from './routes/desk'
 import { Route as FlowsRouteImport } from './routes/flows'
-import { Route as KitRouteImport } from './routes/kit'
-import { Route as MapsRouteImport } from './routes/maps'
-import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/googleb53ee24d705afe09[.]html'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as MapsRouteImport } from './routes/maps'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
+import { Route as HistoryIndexRouteImport } from './routes/history/index'
 import { Route as MarketsIndexRouteImport } from './routes/markets/index'
 import { Route as MarketsSlugRouteImport } from './routes/markets/$slug'
-import { Route as HistoryIndexRouteImport } from './routes/history/index'
 import { Route as SoundMoneyIndexRouteImport } from './routes/sound-money/index'
 import { Route as SoundMoneySlugRouteImport } from './routes/sound-money/$slug'
 import { Route as HistoryClusterIndexRouteImport } from './routes/history/$cluster/index'
@@ -49,24 +48,20 @@ const FlowsRoute = FlowsRouteImport.update({
   path: '/flows',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KitRoute = KitRouteImport.update({
-  id: '/kit',
-  path: '/kit',
+const Googleb53ee24d705afe09DothtmlRoute =
+  Googleb53ee24d705afe09DothtmlRouteImport.update({
+    id: '/googleb53ee24d705afe09.html',
+    path: '/googleb53ee24d705afe09.html',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapsRoute = MapsRouteImport.update({
   id: '/maps',
   path: '/maps',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuizRoute = QuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Googleb53ee24d705afe09DothtmlRoute = Googleb53ee24d705afe09DothtmlRouteImport.update({
-  id: '/googleb53ee24d705afe09.html',
-  path: '/googleb53ee24d705afe09.html',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -89,6 +84,11 @@ const GoldSilverSlugRoute = GoldSilverSlugRouteImport.update({
   path: '/gold-silver/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HistoryIndexRoute = HistoryIndexRouteImport.update({
+  id: '/history/',
+  path: '/history/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MarketsIndexRoute = MarketsIndexRouteImport.update({
   id: '/markets/',
   path: '/markets/',
@@ -97,11 +97,6 @@ const MarketsIndexRoute = MarketsIndexRouteImport.update({
 const MarketsSlugRoute = MarketsSlugRouteImport.update({
   id: '/markets/$slug',
   path: '/markets/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HistoryIndexRoute = HistoryIndexRouteImport.update({
-  id: '/history/',
-  path: '/history/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SoundMoneyIndexRoute = SoundMoneyIndexRouteImport.update({
@@ -130,18 +125,17 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
-  '/maps': typeof MapsRoute
-  '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
+  '/impressum': typeof ImpressumRoute
+  '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
-  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/markets/$slug': typeof MarketsSlugRoute
+  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
-  '/markets/': typeof MarketsIndexRoute
   '/history/': typeof HistoryIndexRoute
+  '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
   '/history/$cluster/': typeof HistoryClusterIndexRoute
@@ -151,18 +145,17 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
-  '/maps': typeof MapsRoute
-  '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
+  '/impressum': typeof ImpressumRoute
+  '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
-  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/markets/$slug': typeof MarketsSlugRoute
+  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
-  '/markets': typeof MarketsIndexRoute
   '/history': typeof HistoryIndexRoute
+  '/markets': typeof MarketsIndexRoute
   '/sound-money': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
   '/history/$cluster': typeof HistoryClusterIndexRoute
@@ -173,18 +166,17 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/desk': typeof DeskRoute
   '/flows': typeof FlowsRoute
-  '/kit': typeof KitRoute
-  '/maps': typeof MapsRoute
-  '/quiz': typeof QuizRoute
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
+  '/impressum': typeof ImpressumRoute
+  '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
-  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/markets/$slug': typeof MarketsSlugRoute
+  '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
-  '/markets/': typeof MarketsIndexRoute
   '/history/': typeof HistoryIndexRoute
+  '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
   '/history/$cluster/': typeof HistoryClusterIndexRoute
@@ -196,18 +188,17 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
-    | '/maps'
-    | '/quiz'
     | '/googleb53ee24d705afe09.html'
+    | '/impressum'
+    | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
-    | '/sound-money/$slug'
     | '/markets/$slug'
+    | '/sound-money/$slug'
     | '/gold-silver/'
-    | '/markets/'
     | '/history/'
+    | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
     | '/history/$cluster/'
@@ -217,18 +208,17 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
-    | '/maps'
-    | '/quiz'
     | '/googleb53ee24d705afe09.html'
+    | '/impressum'
+    | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
-    | '/sound-money/$slug'
     | '/markets/$slug'
+    | '/sound-money/$slug'
     | '/gold-silver'
-    | '/markets'
     | '/history'
+    | '/markets'
     | '/sound-money'
     | '/history/$cluster/$episode'
     | '/history/$cluster'
@@ -238,18 +228,17 @@ export interface FileRouteTypes {
     | '/about'
     | '/desk'
     | '/flows'
-    | '/kit'
-    | '/maps'
-    | '/quiz'
     | '/googleb53ee24d705afe09.html'
+    | '/impressum'
+    | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
-    | '/sound-money/$slug'
     | '/markets/$slug'
+    | '/sound-money/$slug'
     | '/gold-silver/'
-    | '/markets/'
     | '/history/'
+    | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
     | '/history/$cluster/'
@@ -260,18 +249,17 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   DeskRoute: typeof DeskRoute
   FlowsRoute: typeof FlowsRoute
-  KitRoute: typeof KitRoute
-  MapsRoute: typeof MapsRoute
-  QuizRoute: typeof QuizRoute
   Googleb53ee24d705afe09DothtmlRoute: typeof Googleb53ee24d705afe09DothtmlRoute
+  ImpressumRoute: typeof ImpressumRoute
+  MapsRoute: typeof MapsRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
-  SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   MarketsSlugRoute: typeof MarketsSlugRoute
+  SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
-  MarketsIndexRoute: typeof MarketsIndexRoute
   HistoryIndexRoute: typeof HistoryIndexRoute
+  MarketsIndexRoute: typeof MarketsIndexRoute
   SoundMoneyIndexRoute: typeof SoundMoneyIndexRoute
   HistoryClusterEpisodeRoute: typeof HistoryClusterEpisodeRoute
   HistoryClusterIndexRoute: typeof HistoryClusterIndexRoute
@@ -307,11 +295,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlowsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/kit': {
-      id: '/kit'
-      path: '/kit'
-      fullPath: '/kit'
-      preLoaderRoute: typeof KitRouteImport
+    '/googleb53ee24d705afe09.html': {
+      id: '/googleb53ee24d705afe09.html'
+      path: '/googleb53ee24d705afe09.html'
+      fullPath: '/googleb53ee24d705afe09.html'
+      preLoaderRoute: typeof Googleb53ee24d705afe09DothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/maps': {
@@ -319,20 +314,6 @@ declare module '@tanstack/react-router' {
       path: '/maps'
       fullPath: '/maps'
       preLoaderRoute: typeof MapsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quiz': {
-      id: '/quiz'
-      path: '/quiz'
-      fullPath: '/quiz'
-      preLoaderRoute: typeof QuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/googleb53ee24d705afe09.html': {
-      id: '/googleb53ee24d705afe09.html'
-      path: '/googleb53ee24d705afe09.html'
-      fullPath: '/googleb53ee24d705afe09.html'
-      preLoaderRoute: typeof Googleb53ee24d705afe09DothtmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -363,6 +344,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GoldSilverSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/history/': {
+      id: '/history/'
+      path: '/history'
+      fullPath: '/history/'
+      preLoaderRoute: typeof HistoryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/markets/': {
       id: '/markets/'
       path: '/markets'
@@ -375,13 +363,6 @@ declare module '@tanstack/react-router' {
       path: '/markets/$slug'
       fullPath: '/markets/$slug'
       preLoaderRoute: typeof MarketsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/history/': {
-      id: '/history/'
-      path: '/history'
-      fullPath: '/history/'
-      preLoaderRoute: typeof HistoryIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sound-money/': {
@@ -420,18 +401,17 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   DeskRoute: DeskRoute,
   FlowsRoute: FlowsRoute,
-  KitRoute: KitRoute,
-  MapsRoute: MapsRoute,
-  QuizRoute: QuizRoute,
   Googleb53ee24d705afe09DothtmlRoute: Googleb53ee24d705afe09DothtmlRoute,
+  ImpressumRoute: ImpressumRoute,
+  MapsRoute: MapsRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
-  SoundMoneySlugRoute: SoundMoneySlugRoute,
   MarketsSlugRoute: MarketsSlugRoute,
+  SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
-  MarketsIndexRoute: MarketsIndexRoute,
   HistoryIndexRoute: HistoryIndexRoute,
+  MarketsIndexRoute: MarketsIndexRoute,
   SoundMoneyIndexRoute: SoundMoneyIndexRoute,
   HistoryClusterEpisodeRoute: HistoryClusterEpisodeRoute,
   HistoryClusterIndexRoute: HistoryClusterIndexRoute,
