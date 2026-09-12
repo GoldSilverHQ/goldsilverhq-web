@@ -24,7 +24,7 @@ const IDEA_EPISODES = [
 ] as const;
 
 describe("idea / sound-money thicken (no new URLs)", () => {
-  it("thickens the four definition pages to Phase-1 depth without sitemap expansion", () => {
+  it("thickens the four definition pages to Phase-1 depth", () => {
     for (const slug of IDEA_EPISODES) {
       const body = getBody("sound-money", slug);
       assert.ok(body, `missing body for sound-money/${slug}`);
@@ -35,7 +35,16 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
 
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("/sound-money")));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/sound-money"));
+    for (const slug of IDEA_EPISODES) {
+      assert.ok(
+        PHASE1_SITEMAP_PATHS.includes(`/sound-money/${slug}` as (typeof PHASE1_SITEMAP_PATHS)[number]),
+        `expected /sound-money/${slug} in sitemap`,
+      );
+    }
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("information-not-advice")));
+    // Practice stays off-sitemap; use startsWith so the const tuple does not trip TS2367.
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver")));
   });
 
   it("locks backed-money as contract vs slogan (Flavio long-tail first)", () => {

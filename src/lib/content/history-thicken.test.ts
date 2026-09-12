@@ -52,7 +52,7 @@ const ANCIENT_REST_EPISODES = [
 ] as const;
 
 describe("ancient rest thicken Wave B (no new URLs)", () => {
-  it("thickens the four remaining episodes to Phase-1 depth without sitemap expansion", () => {
+  it("thickens the four remaining episodes to Phase-1 depth", () => {
     for (const slug of ANCIENT_REST_EPISODES) {
       const body = getBody("ancient", slug);
       assert.ok(body, `missing body for ancient/${slug}`);
@@ -63,15 +63,12 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
 
-    assert.ok(
-      !PHASE1_SITEMAP_PATHS.some(
-        (path) =>
-          path.includes("lydia-first-coins") ||
-          path.includes("greece-silver-trade") ||
-          path.includes("rome-denarius") ||
-          path.includes("solidus-continuity"),
-      ),
-    );
+    for (const slug of ANCIENT_REST_EPISODES) {
+      assert.ok(
+        PHASE1_SITEMAP_PATHS.includes(`/history/ancient/${slug}` as (typeof PHASE1_SITEMAP_PATHS)[number]),
+        `expected /history/ancient/${slug} in sitemap`,
+      );
+    }
   });
 
   it("locks Lydia as stamp-not-metal invention", () => {
@@ -130,7 +127,7 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
 });
 
 describe("america cluster thicken (no new URLs)", () => {
-  it("thickens all five episodes to Phase-1 depth without sitemap expansion", () => {
+  it("thickens all five episodes to Phase-1 depth", () => {
     for (const slug of AMERICA_EPISODES) {
       const body = getBody("america", slug);
       assert.ok(body, `missing body for america/${slug}`);
@@ -141,7 +138,13 @@ describe("america cluster thicken (no new URLs)", () => {
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
 
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("/america")));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/america"));
+    for (const slug of AMERICA_EPISODES) {
+      assert.ok(
+        PHASE1_SITEMAP_PATHS.includes(`/history/america/${slug}` as (typeof PHASE1_SITEMAP_PATHS)[number]),
+        `expected /history/america/${slug} in sitemap`,
+      );
+    }
   });
 
   it("locks Crime of 1873 as the silver-question hinge", () => {
@@ -228,7 +231,7 @@ const SILVER_EPISODES = [
 ] as const;
 
 describe("silver cluster thicken Wave C (no new URLs)", () => {
-  it("thickens all five episodes to Phase-1 depth without sitemap expansion", () => {
+  it("thickens all five episodes to Phase-1 depth", () => {
     for (const slug of SILVER_EPISODES) {
       const body = getBody("silver", slug);
       assert.ok(body, `missing body for silver/${slug}`);
@@ -239,7 +242,13 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
 
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("/history/silver")));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/silver"));
+    for (const slug of SILVER_EPISODES) {
+      assert.ok(
+        PHASE1_SITEMAP_PATHS.includes(`/history/silver/${slug}` as (typeof PHASE1_SITEMAP_PATHS)[number]),
+        `expected /history/silver/${slug} in sitemap`,
+      );
+    }
   });
 
   it("locks piece of eight as global Spanish dollar", () => {
