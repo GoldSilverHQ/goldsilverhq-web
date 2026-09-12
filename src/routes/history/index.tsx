@@ -4,17 +4,16 @@ import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { SiteShell } from "@/components/SiteShell";
 import { historyHubBody } from "@/lib/content/bodies";
 import { historyClusters, historyHub, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/history/")({
   head: () => ({
-    meta: [
-      { title: seoTitle(historyHub.titleTag) },
-      {
-        name: "description",
-        content:
-          "This pillar records what happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: seoTitle(historyHub.titleTag),
+      description:
+        "This pillar records what happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
+      path: "/history",
+    }),
   }),
   component: HistoryHub,
 });

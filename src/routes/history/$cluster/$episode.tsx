@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getCluster, getEpisode, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/history/$cluster/$episode")({
   loader: ({ params }) => {
@@ -10,12 +11,19 @@ export const Route = createFileRoute("/history/$cluster/$episode")({
     if (!cluster || !episode) throw notFound();
     return { cluster, episode };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.episode?.seo?.titleTag ?? loaderData?.episode?.title ?? "History") },
-      { name: "description", content: loaderData?.episode?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData, params }) => {
+    const title = seoTitle(
+      loaderData?.episode?.seo?.titleTag ?? loaderData?.episode?.title ?? "History",
+    );
+    const description = loaderData?.episode?.summary ?? "";
+    return {
+      meta: pageShareMeta({
+        title,
+        description,
+        path: `/history/${params.cluster}/${params.episode}`,
+      }),
+    };
+  },
   component: EpisodePage,
 });
 

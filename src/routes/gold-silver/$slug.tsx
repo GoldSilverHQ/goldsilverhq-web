@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getPractice, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/gold-silver/$slug")({
   loader: ({ params }) => {
@@ -10,10 +11,11 @@ export const Route = createFileRoute("/gold-silver/$slug")({
     return page;
   },
   head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.title ?? "Gold & Silver") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
+    meta: pageShareMeta({
+      title: seoTitle(loaderData?.title ?? "Gold & Silver"),
+      description: loaderData?.summary ?? "",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: PracticePage,
 });

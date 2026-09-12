@@ -5,6 +5,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { ogImagePathForRoute } from "../src/lib/seo/phase1-sitemap-paths.mjs";
 
 export const DEFAULT_APP_NAME = "Grok App";
 export const OG_SERVICE_URL_DEFAULT = "https://og.grok.me";
@@ -297,6 +298,17 @@ export function titleFromDocument(html) {
   return match ? unescapeHtml(match[1]).trim() : "";
 }
 
+export function descriptionFromDocument(html) {
+  const tags = String(html ?? "").match(/<meta\b[^>]*>/gi) ?? [];
+  for (const tag of tags) {
+    const name = tag.match(/\bname\s*=\s*["']([^"']+)["']/i)?.[1];
+    if (String(name ?? "").toLowerCase() !== "description") continue;
+    const content = tag.match(/\bcontent\s*=\s*["']([^"']*)["']/i)?.[1];
+    if (content != null) return unescapeHtml(content).trim();
+  }
+  return "";
+}
+
 export function resolveOgTitle(
   site = {},
   appName = DEFAULT_APP_NAME,
@@ -338,23 +350,35 @@ export function grokOgHeadTags({
   appName = DEFAULT_APP_NAME,
   site = {},
   documentTitle = "",
+  documentDescription = "",
+  pathname = "",
   cwd = process.cwd(),
 } = {}) {
-  const title = resolveOgTitle(site, appName, host, documentTitle);
+  // Prefer the page <title> for share unfurls; site.title remains the PWA app name.
+  const title =
+    String(documentTitle ?? "").trim() || resolveOgTitle(site, appName, host, documentTitle);
   const publicHost = resolvePublicHost(host);
   const tags = [
     `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta property="og:site_name" content="${escapeHtml(String(site.title ?? "GoldSilverHQ").trim() || "GoldSilverHQ")}">`,
     `<meta property="og:title" content="${escapeHtml(title)}">`,
+    `<meta name="twitter:title" content="${escapeHtml(title)}">`,
   ];
-  const description = String(site.description ?? "").trim();
+  const description =
+    String(documentDescription ?? "").trim() || String(site.description ?? "").trim();
   if (description) {
     tags.push(`<meta property="og:description" content="${escapeHtml(description)}">`);
+    tags.push(`<meta name="twitter:description" content="${escapeHtml(description)}">`);
   }
   if (String(site.type ?? "").toLowerCase() === "x:game") {
     tags.push(`<meta property="og:type" content="x:game">`);
+  } else {
+    tags.push(`<meta property="og:type" content="website">`);
   }
   if (publicHost) {
-    const asset = resolveOgCardAsset(site, cwd);
+    const routeAsset = pathname ? ogImagePathForRoute(pathname) : "";
+    const fallbackAsset = resolveOgCardAsset(site, cwd);
+    const asset = routeAsset || fallbackAsset;
     const custom = Boolean(asset);
     let image = custom
       ? `https://${publicHost}${asset.startsWith("/") ? asset : `/${asset}`}`
@@ -364,6 +388,7 @@ export function grokOgHeadTags({
     tags.push(`<meta property="og:image" content="${escapeHtml(image)}">`);
     tags.push(`<meta property="og:image:width" content="1200">`);
     tags.push(`<meta property="og:image:height" content="630">`);
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(image)}">`);
     const banner = String(site.banner ?? "").trim();
     if (banner) {
       const bannerUrl = `https://${publicHost}${banner.startsWith("/") ? banner : `/${banner}`}`;
@@ -426,6 +451,8 @@ export function injectGrokPwaHead(html, ctx = {}) {
   if (typeof html !== "string") return html;
   const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
+  const documentDescription = descriptionFromDocument(html);
+  const pathname = String(ctx.pathname ?? "").trim();
   const appName = resolveOgTitle(
     site,
     ctx.appName ?? DEFAULT_APP_NAME,
@@ -444,7 +471,15 @@ export function injectGrokPwaHead(html, ctx = {}) {
 
   next = insertAfterHeadOpen(
     next,
-    grokOgHeadTags({ host, appName, site, documentTitle, cwd }).join(""),
+    grokOgHeadTags({
+      host,
+      appName,
+      site,
+      documentTitle,
+      documentDescription,
+      pathname,
+      cwd,
+    }).join(""),
   );
 
   if (!next.includes("/grok-app-builder/extensions.js")) {
@@ -484,6 +519,7 @@ function findHeadClose(buf) {
  */
 export function createHeadInjector(ctx = {}) {
   const normalized = normalizeHeadContext(ctx);
+  const pathname = String(ctx.pathname ?? "").trim();
 
   /** @type {Buffer[]} */
   let pending = [];
@@ -498,6 +534,7 @@ export function createHeadInjector(ctx = {}) {
       host: normalized.host,
       cwd: normalized.cwd,
       site: normalized.site,
+      pathname,
     });
 
   return {

@@ -1,17 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/impressum")({
   head: () => ({
-    meta: [
-      { title: "Impressum — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Impressum von GoldSilverHQ: Diensteanbieter, Kontakt und redaktionelle Verantwortung. Medienangebot, keine Anlageberatung.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: "Impressum — GoldSilverHQ",
+      description:
+        "Impressum von GoldSilverHQ: Diensteanbieter, Kontakt und redaktionelle Verantwortung. Medienangebot, keine Anlageberatung.",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: ImpressumPage,
 });
