@@ -36,10 +36,7 @@ function MarketPage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">
-          Markets
-          {page.status === "skeleton" ? " · Skeleton" : ""}
-        </p>
+        <p className="text-xs text-muted">Markets</p>
         <h1 className="mt-2 font-sans text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">

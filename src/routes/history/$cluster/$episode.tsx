@@ -40,10 +40,7 @@ function EpisodePage() {
             { label: episode.title },
           ]}
         />
-        <p className="text-xs text-muted">
-          Episode · {cluster.title}
-          {episode.status === "skeleton" ? " · Skeleton" : ""}
-        </p>
+        <p className="text-xs text-muted">{cluster.title}</p>
         <h1 className="mt-2 font-display text-4xl">{episode.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{episode.summary}</p>
         <div className="mt-10">

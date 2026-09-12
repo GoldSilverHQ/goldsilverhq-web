@@ -26,7 +26,6 @@ export const Route = createFileRoute("/history/$cluster/")({
 
 function ClusterPage() {
   const cluster = Route.useLoaderData();
-  const ready = cluster.episodes.filter((e) => e.status === "ready").length;
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -37,7 +36,7 @@ function ClusterPage() {
             { label: cluster.title },
           ]}
         />
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Cluster</p>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">History</p>
         <h1 className="mt-2 font-display text-4xl">{cluster.title}</h1>
         <p className="mt-3 max-w-2xl text-lg text-muted">{cluster.summary}</p>
         {cluster.sections?.length ? (
@@ -51,11 +50,6 @@ function ClusterPage() {
             </p>
           ))
         )}
-        {cluster.slug !== "banks-paper" && cluster.slug !== "ancient" ? (
-          <p className="mt-6 text-sm text-faint">
-            {ready} of {cluster.episodes.length} episodes drafted
-          </p>
-        ) : null}
         <ol className="mt-10 grid gap-3">
           {cluster.episodes.map((ep, i) => (
             <li key={ep.slug}>
@@ -68,9 +62,6 @@ function ClusterPage() {
                 <span>
                   <span className="block font-medium">{ep.title}</span>
                   <span className="text-sm text-muted">{ep.summary}</span>
-                  <span className="mt-1 block text-xs text-faint">
-                    {ep.status === "ready" ? "Draft" : "Skeleton"}
-                  </span>
                 </span>
               </Link>
             </li>
@@ -79,7 +70,7 @@ function ClusterPage() {
         {cluster.related?.length ? <RelatedLinks links={cluster.related} /> : null}
         <p className="mt-10 text-sm">
           <a href="/history" className="text-gold hover:text-gold-soft">
-            ← All five history clusters
+            ← All history chapters
           </a>
         </p>
       </div>

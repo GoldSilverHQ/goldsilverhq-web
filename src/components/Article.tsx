@@ -111,7 +111,7 @@ export function RelatedLinks({
   if (!links.length) return null;
   return (
     <div className="mt-12 max-w-prose border-t border-line pt-8">
-      <h2 className={`mb-4 ${faceClass(face)} text-xl text-silver`}>Continue the map</h2>
+      <h2 className={`mb-4 ${faceClass(face)} text-xl text-silver`}>Continue reading</h2>
       <ul className="grid gap-2 sm:grid-cols-2">
         {links.map((r) => (
           <li key={r.href}>
@@ -142,7 +142,7 @@ export function EpisodeBody({
   return (
     <article className={`max-w-prose ${face === "sans" ? "font-sans" : ""}`}>
       {episode.status === "skeleton" && !sections ? (
-        <p className="mb-6 text-sm text-gold">Skeleton in the topical map — structure first, full draft next.</p>
+        <p className="mb-6 text-sm text-gold">This page is still being written.</p>
       ) : null}
       <ArticleSections sections={blocks} face={face} />
       <RelatedLinks links={continueLinks(episode, clusterSlug)} face={face} />

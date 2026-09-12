@@ -48,7 +48,7 @@ function AboutPage() {
           differ by country. If you act, you do so on your own judgment.
         </p>
 
-        <h2 className="mt-12 font-display text-3xl">The four pillars</h2>
+        <h2 className="mt-12 font-display text-3xl">Four sections</h2>
         <ol className="mt-6 grid gap-3">
           {pillars.map((p) => (
             <li key={p.id}>
@@ -66,7 +66,7 @@ function AboutPage() {
 
         <h2 className="mt-12 font-display text-3xl">What we will not do</h2>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-muted">
-          <li>Park Weimar or Nixon stories in the idea pillar.</li>
+          <li>Retell Weimar or Nixon inside a definitions page.</li>
           <li>Rank dealers or publish a buy list.</li>
           <li>Treat a historical mint ratio as a price target.</li>
           <li>Call a vault holding “backing” when the public has no claim on the metal.</li>

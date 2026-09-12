@@ -6,9 +6,9 @@ export function HomeEditorial() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-8">
       <section className="border-t border-line pt-10">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Best of the map</p>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Start here</p>
         <h2 className="mt-2 font-display text-3xl">Start with a date, or with a definition</h2>
-        <p className="mt-2 max-w-xl text-muted">Four pages that carry the rest of the site.</p>
+        <p className="mt-2 max-w-xl text-muted">Four pages that open the rest of the site.</p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {FEATURED.map((item) => (
             <a
@@ -25,7 +25,7 @@ export function HomeEditorial() {
       </section>
 
       <section className="mt-12">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Four pillars</p>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Four sections</p>
         <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p) => (
             <a

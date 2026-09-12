@@ -67,7 +67,7 @@ export function sharePageForPath(pathname: string): SharePage | null {
       cardTitle: historyHub.titleTag,
       title: seoTitle(historyHub.titleTag),
       description:
-        "This pillar records what happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
+        "What happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
       kicker: pillarKicker("history"),
     };
   }

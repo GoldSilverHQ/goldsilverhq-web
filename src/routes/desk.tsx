@@ -29,9 +29,9 @@ function DeskPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-12 pt-12">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read next</p>
-        <h2 className="mt-2 font-sans text-3xl">History and the map</h2>
+        <h2 className="mt-2 font-sans text-3xl">History and the ideas</h2>
         <p className="mt-2 max-w-xl text-muted">
-          The desk is the numbers. The pillars are why they matter.
+          The desk is the numbers. The articles explain why they matter.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {pillars.map((p) => (
