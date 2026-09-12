@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
     meta: pageShareMeta({
       title: "About GoldSilverHQ",
       description:
-        "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice. BaFin-clean.",
+        "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice.",
       imagePath: "/og.jpg",
     }),
   }),

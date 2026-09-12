@@ -32,7 +32,7 @@ function HistoryHub() {
         <HistoryTimeline />
 
         <h2 className="mt-16 font-display text-3xl">Read by chapter</h2>
-        <p className="mt-2 max-w-prose text-muted">Same stories, grouped. Start anywhere; the links keep the sequence.</p>
+        <p className="mt-2 max-w-prose text-muted">Five chapters in time order. Start anywhere; the links keep the sequence.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {historyClusters.map((cluster, i) => (
             <Link

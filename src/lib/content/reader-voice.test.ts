@@ -34,7 +34,7 @@ function bodyText(sections: Section[]) {
 
 /** Writer/taxonomy jargon that must not appear in reader-facing copy. */
 const FORBIDDEN =
-  /\b(Pillar\s*[1-4]|Flavio|thicken(?:ed|ing)?|sitemap-ready|write queue|long-tail first|topical map|episode stub|Continue the map|Best of the map|episodes drafted|Phase 3 draft)\b|\bSpoke\s+\d|\bCluster\s+\d|How this page sits in the pillar|Do not park Weimar/i;
+  /\b(Pillar\s*[1-4]|Flavio|thicken(?:ed|ing)?|sitemap-ready|write queue|long-tail first|topical map|episode stub|Continue the map|Best of the map|episodes drafted|Phase 3 draft|BaFin-clean|catalogue-plain|money-path series|List-building CTAs|visual companion to this episode|events live there|narrative lives there)\b|\bSpoke\s+\d|\bCluster\s+\d|How this page sits in the pillar|Do not park Weimar|Do not mash \d|no spaghetti|issuer-discretion test/i;
 
 function assertClean(label: string, text: string) {
   assert.doesNotMatch(text, FORBIDDEN, `${label} still has writer/taxonomy jargon`);
@@ -107,6 +107,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       "routes/desk.tsx",
       "components/Article.tsx",
       "components/HomeEditorial.tsx",
+      "components/HistoryTimeline.tsx",
       "components/NotFound.tsx",
     ];
     for (const rel of files) {
@@ -121,6 +122,16 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       assert.doesNotMatch(src, /Phase 3 draft/);
       assert.doesNotMatch(src, /Skeleton in the topical map/);
       assert.doesNotMatch(src, /Four pillars/);
+      assert.doesNotMatch(src, /BaFin-clean/);
+      assert.doesNotMatch(src, /Tap a year to open the episode/);
     }
+  });
+
+  it("keeps featured home cards free of unglossed insider openers", () => {
+    const featuredSrc = readFileSync(join(root, "lib/content/featured.ts"), "utf8");
+    assert.doesNotMatch(featuredSrc, /Then the Rentenmark\./);
+    assert.doesNotMatch(featuredSrc, /floating fiat\./);
+    assert.match(featuredSrc, /Rentenmark\) that restored/);
+    assert.match(featuredSrc, /fiat = money by law/);
   });
 });

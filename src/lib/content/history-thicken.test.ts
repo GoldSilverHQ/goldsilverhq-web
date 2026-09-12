@@ -213,7 +213,7 @@ describe("america cluster thicken (no new URLs)", () => {
     assert.match(text, /1900/);
     assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
     assert.match(text, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
-    assert.match(text, /Do not mash 1832, 1862, and 1913/);
+    assert.match(text, /Three fights, three centuries/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of AMERICA_EPISODES) {
@@ -320,7 +320,7 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     const words = wordCount(text);
     assert.ok(words >= 750 && words <= 1200, `hub: expected 750–1200 words, got ${words}`);
     assert.match(text, /Potosí|piece of eight|bimetallism|Silver Thursday/i);
-    assert.match(text, /Do not mash 1545, 1873, and 1980/);
+    assert.match(text, /Three silver stories, three hinges/);
     assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 

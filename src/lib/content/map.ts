@@ -45,7 +45,7 @@ export const historyHub = {
   related: [
     { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
-    { title: "Gold & silver markets (facts, not history)", href: "/markets" },
+    { title: "Gold & silver markets — current figures", href: "/markets" },
   ],
 };
 
@@ -57,7 +57,7 @@ export const soundMoneyHub = {
     { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
     { title: "What “backed” means", href: "/sound-money/backed-money" },
-    { title: "Sound Money History (events live there)", href: "/history" },
+    { title: "Sound Money History — what happened", href: "/history" },
   ],
 };
 
@@ -69,7 +69,7 @@ export const marketsHub = {
     { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
     { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
     { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
-    { title: "Sound Money History (narrative lives there)", href: "/history" },
+    { title: "Sound Money History — what happened", href: "/history" },
   ],
 };
 
@@ -195,7 +195,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "backed-money",
     title: "What “backed money” means (and what it doesn’t)",
-    summary: "Redeemability is a contract. Gold in a vault with no public claim is a slogan.",
+    summary: "“Backed” means a redeemable contract — present the note, take metal — not gold in a vault with no public claim.",
     status: "ready",
     paragraphs: [
       "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing. A currency said to be “supported by” gold sitting in a vault with no public claim on it is another.",
@@ -218,10 +218,10 @@ export const ideaPages: Episode[] = [
   {
     slug: "information-not-advice",
     title: "Information vs investment advice",
-    summary: "A short, BaFin-clean line: this site is media. It is not a recommendation to buy or sell.",
+    summary: "A short media line: this site informs; it does not recommend buying or selling.",
     status: "ready",
     paragraphs: [
-      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation.",
+      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation. The copy is written to stay clear of investment advice under German/EU rules (BaFin).",
       "Markets move. Laws differ by country. If you act, you do so on your own judgment and, where needed, with a licensed adviser in your jurisdiction.",
     ],
     related: [{ title: "Gold & silver in practice", href: "/gold-silver" }],
@@ -267,7 +267,7 @@ export const historyClusters: Cluster[] = [
       {
         slug: "lydia-first-coins",
         title: "Lydia and the first coins",
-        summary: "Electrum, a stamp, and a lower cost of verifying metal — not the birth of monetary gold and silver.",
+        summary: "A natural gold–silver mix (electrum), a royal stamp, and a cheaper way to check metal — not the invention of monetary gold and silver.",
         status: "ready",
         paragraphs: [
           "Lydia is the conventional starting point for struck coinage. The stamp reduced the cost of verifying metal. That is the invention, not the metal itself.",
@@ -394,10 +394,10 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-amsterdam",
         title: "Bank of Amsterdam",
         summary:
-          "The 1609 Wisselbank turns metal deposits into public giro balances — a civic ledger between warehouse receipts and later note banks.",
+          "Amsterdam’s Wisselbank (1609) took mixed coin and credited a standard bank guilder merchants could transfer on the city’s books (giro). That bank money usually traded at a premium — the agio — over worn street coin.",
         status: "ready",
         paragraphs: [
-          "The Bank of Amsterdam is the model public deposit bank: mixed coin in, bank money out, bills settled by giro. Concealed lending later broke the reputation that a florin banco was only a claim on metal.",
+          "The Bank of Amsterdam is the model public deposit bank: mixed coin in, bank money out, bills settled by book entry (giro). Concealed lending later broke the reputation that a florin banco was only a claim on metal.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -417,10 +417,10 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-england",
         title: "Bank of England",
         summary:
-          "The 1694 charter is war finance with a note issue attached — not a city giro table. Those notes became London paper; Restriction and resumption are England’s own cycle.",
+          "The 1694 charter is war finance with a note issue attached — not a city giro table. In 1797 the Bank stopped paying gold for notes (Restriction); gold payout returned in the 1820s (resumption).",
         status: "ready",
         paragraphs: [
-          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam. Its notes became the ordinary paper of London. Restriction in 1797 and resumption in the 1820s are an English suspend–resume cycle, not 1720 and not Weimar.",
+          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam. Its notes became the ordinary paper of London. When gold payout stopped in 1797 (Restriction) and returned in the 1820s (resumption), that was England’s own suspend–resume cycle — not 1720 and not Weimar.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -487,7 +487,7 @@ export const historyClusters: Cluster[] = [
     slug: "america",
     title: "America & gold/silver politics",
     summary:
-      "Bimetallism, greenbacks, 1873, and the long argument over what the dollar is — from the 1792 mint ratio to the Gold Standard Act of 1900.",
+      "Two-metal dollar law, Civil War paper, and the silver fight — from the 1792 mint ratio to the Gold Standard Act of 1900.",
     sections: americaHubBody,
     related: [
       { title: "Sound Money History", href: "/history" },
@@ -501,10 +501,10 @@ export const historyClusters: Cluster[] = [
       {
         slug: "early-us-coinage",
         title: "Early U.S. coinage / bimetallism",
-        summary: "1792 wrote gold and silver into law. The mint ratio decided which metal stayed.",
+        summary: "1792 wrote gold and silver into law at a fixed official exchange (the mint ratio). When world prices drifted, the cheaper metal at the mint stayed.",
         status: "ready",
         paragraphs: [
-          "The early United States legally recognized both gold and silver. The mint ratio, not a slogan, decided which metal actually circulated.",
+          "The early United States legally recognized both gold and silver at a fixed mint ratio. When world metal prices drifted, the cheaper metal at the mint stayed in the till and the other left — the practical face of bimetallism.",
         ],
         related: [
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
@@ -525,7 +525,7 @@ export const historyClusters: Cluster[] = [
         summary: "The 1832 veto and the fight over a central bank before the Fed existed.",
         status: "ready",
         paragraphs: [
-          "Jackson’s war on the Second Bank is American politics and monetary history at once. It belongs in this chapter, with a light cross-link to the later Fed article.",
+          "Jackson’s war on the Second Bank was a fight over who held the government’s money and who issued the country’s paper — decades before any Federal Reserve. The 1832 veto, “pet” banks, and the Panic of 1837 are the story; the Fed is a later answer to a later panic.",
         ],
         related: [
           { title: "America hub", href: "/history/america" },
@@ -543,7 +543,7 @@ export const historyClusters: Cluster[] = [
       {
         slug: "greenbacks-civil-war",
         title: "Greenbacks and the Civil War",
-        summary: "Inconvertible paper as a war measure, then a fight over resumption.",
+        summary: "Greenbacks were Union paper dollars made legal tender in 1862 — not redeemable in gold until specie payments returned in 1879.",
         status: "ready",
         paragraphs: [
           "Greenbacks financed the Union. They were a suspension, not a theory of money. The postwar fight was about whether and when to resume.",
@@ -585,10 +585,10 @@ export const historyClusters: Cluster[] = [
       {
         slug: "road-back-gold",
         title: "The road back toward the gold standard",
-        summary: "Resumption in 1879, Gold Standard Act 1900 — then stop. 1907 is the next chapter.",
+        summary: "Specie payments returned in 1879; the Gold Standard Act of 1900 defined the dollar in gold. 1907 opens the next chapter.",
         status: "ready",
         paragraphs: [
-          "After greenbacks came a political and legal path back toward gold payments. This overview stops before the Fed. The next chapter picks up in 1907.",
+          "After greenbacks, Congress and the Treasury spent a generation restoring gold payments: specie at par in 1879, then the Gold Standard Act of 1900. The next American liquidity crisis — and the Fed — open in the twentieth-century chapter with 1907.",
         ],
         related: [
           { title: "Greenbacks and the Civil War", href: "/history/america/greenbacks-civil-war" },
@@ -774,11 +774,11 @@ export const historyClusters: Cluster[] = [
         summary: "Cerro Rico, the Manila galleon, and a flood of silver into Eurasia.",
         status: "ready",
         paragraphs: [
-          "Potosí flooded Eurasia with silver. The world map is the visual companion to this episode.",
+          "Potosí flooded Eurasia with silver. For today’s country-by-country production and reserves picture, open the world map — same metal story, present geography.",
         ],
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
-          { title: "World map", href: "/maps" },
+          { title: "World map — production and reserves today", href: "/maps" },
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
         ],
         seo: {
@@ -1054,7 +1054,7 @@ export const marketPages: Episode[] = [
     slug: "central-bank-gold-reserves",
     title: "How central banks report gold in FX reserves",
     summary:
-      "Share of reserves, vault preferences, and dated official purchases. Poland’s 2026 NBP stock and 700-tonne aim sit here as a short documentary block — not a separate page.",
+      "Share of reserves, vault preferences, and dated official purchases. Poland’s recent buying is covered in a short section on that same page (not a separate article).",
     status: "ready",
     paragraphs: [
       "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
@@ -1102,7 +1102,7 @@ export const marketPages: Episode[] = [
       "Identified retail and investment bars and coins by country. A demand address, not a mine ranking. Mint fabrication is a different World Silver Survey table.",
     status: "ready",
     paragraphs: [
-      "Country rankings of physical silver demand count identified bar and coin offtake in a calendar year. They do not rank mines, factories, or paper claims.",
+      "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. They do not rank mines, factories, or paper claims.",
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },

@@ -144,7 +144,7 @@ export function HistoryTimeline() {
         From Lydia to the gold window
       </h2>
       <p className="mt-3 max-w-prose text-muted">
-        Tap a year to open the episode.
+        Tap a year to open the article.
       </p>
 
       <div className="sticky top-16 z-20 -mx-4 mt-8 border-y border-line bg-bg/90 backdrop-blur-md sm:top-[4.5rem]">
