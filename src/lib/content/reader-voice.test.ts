@@ -36,6 +36,10 @@ function bodyText(sections: Section[]) {
 const FORBIDDEN =
   /\b(Pillar\s*[1-4]|Flavio|thicken(?:ed|ing)?|sitemap-ready|write queue|long-tail first|topical map|episode stub|Continue the map|Best of the map|episodes drafted|Phase 3 draft|BaFin-clean|catalogue-plain|money-path series|List-building CTAs|visual companion to this episode|events live there|narrative lives there)\b|\bSpoke\s+\d|\bCluster\s+\d|How this page sits in the pillar|Do not park Weimar|Do not mash \d|no spaghetti|issuer-discretion test/i;
 
+/** Structural blog chrome that hubs must not lead with. */
+const STRUCTURAL_HUB_CHROME =
+  /What you will find here|What this is not|How to read an article|How to read a markets page|Where the other sections sit|A reading order|Where to start|Where to enter the modern story|How the five chapters form a path|Start with a date, or with a definition|Four pages that open the rest of the site|Read by chapter|Read by definition|Read by topic/;
+
 function assertClean(label: string, text: string) {
   assert.doesNotMatch(text, FORBIDDEN, `${label} still has writer/taxonomy jargon`);
 }
@@ -53,7 +57,14 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       ["ancient hub", ancientHubBody],
     ] as const) {
       assertClean(label, bodyText(body));
+      assert.doesNotMatch(bodyText(body), STRUCTURAL_HUB_CHROME, `${label} still has structural hub chrome`);
     }
+  });
+
+  it("opens history hub with a documentary stake, not a sitemap briefing", () => {
+    const opener = historyHubBody[0]?.paragraphs[0] ?? "";
+    assert.match(opener, /1923|1971/);
+    assert.doesNotMatch(opener, /This section records|not a glossary|not a sales page/);
   });
 
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
@@ -124,6 +135,11 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       assert.doesNotMatch(src, /Four pillars/);
       assert.doesNotMatch(src, /BaFin-clean/);
       assert.doesNotMatch(src, /Tap a year to open the episode/);
+      assert.doesNotMatch(src, /Start with a date, or with a definition/);
+      assert.doesNotMatch(src, /Four pages that open the rest of the site/);
+      assert.doesNotMatch(src, /Read by chapter/);
+      assert.doesNotMatch(src, /Read by definition/);
+      assert.doesNotMatch(src, /Read by topic/);
     }
   });
 

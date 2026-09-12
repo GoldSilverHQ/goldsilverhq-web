@@ -28,8 +28,8 @@ function MarketsHub() {
           <ArticleSections sections={marketsHubBody} face="sans" />
         </div>
 
-        <h2 className="mt-16 font-sans text-3xl">Read by topic</h2>
-        <p className="mt-2 max-w-prose text-muted">Four fact pages. Start anywhere; each one returns here.</p>
+        <h2 className="mt-16 font-sans text-3xl">The four topics</h2>
+        <p className="mt-2 max-w-prose text-muted">Book value, reserves, the ratio, and country offtake — open any one.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {marketPages.map((page, i) => (
             <Link

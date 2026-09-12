@@ -29,9 +29,9 @@ function IdeaHub() {
           <ArticleSections sections={soundMoneyHubBody} />
         </div>
 
-        <h2 className="mt-16 font-display text-3xl">Read by definition</h2>
+        <h2 className="mt-16 font-display text-3xl">The definitions</h2>
         <p className="mt-2 max-w-prose text-muted">
-          Four definition pages, plus a short media disclaimer. Start anywhere; each one returns here.
+          Four vocabulary pages, plus a short media disclaimer. Open any one; each links its neighbors.
         </p>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page, i) => (
