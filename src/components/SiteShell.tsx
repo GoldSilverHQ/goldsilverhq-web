@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
   { href: "/desk", label: "Desk" },
@@ -153,6 +154,7 @@ export function SiteShell({
               ))}
             </nav>
             <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-7">
+              <ThemeToggle />
               <SocialLinks compact />
               <button
                 type="button"

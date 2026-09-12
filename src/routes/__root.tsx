@@ -1,7 +1,9 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { pageShareMeta } from "@/lib/seo/share-meta";
+import { getThemeInitScript } from "@/lib/theme";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "GoldSilverHQ";
@@ -33,17 +35,20 @@ export const Route = createRootRoute({
       },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
     ],
+    scripts: [{ children: getThemeInitScript() }],
   }),
   component: () => (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html lang="en" className="dark antialiased" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body className="bg-bg text-fg font-sans">
         <PreviewHostBridge />
-        <AuthProvider>
-          <Outlet />
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <Outlet />
+          </AuthProvider>
+        </ThemeProvider>
         <Scripts />
       </body>
     </html>
