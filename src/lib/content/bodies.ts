@@ -618,110 +618,375 @@ const backedMoney: Section[] = [
 ];
 const barsVsCoins: Section[] = [
   {
-    heading: "What the choice is",
+    heading: "",
     paragraphs: [
-      "Physical gold and silver come mainly as minted coins or as cast or stamped bars. Both are metal. The difference is fabrication, recognisability, and how you later divide or resell a holding.",
-      "Dealers will have a view. So will forums. The map only needs the trade-off: bars usually cost less per ounce above spot; coins usually cost more and are easier for a stranger to recognise.",
+      "Physical gold and silver arrive mainly as minted coins or as cast or stamped bars. Both are metal by weight and fineness. The difference is fabrication, recognisability, divisibility, and how a later counterparty treats the piece. This page stays on that trade-off. It is not a shop, not a ranking, and not a recommendation. The standing line is [information versus advice](/sound-money/information-not-advice).",
     ],
   },
   {
-    heading: "Bars",
+    heading: "What the comparison actually is",
     paragraphs: [
-      "A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay cost over more ounces, so the [premium over spot](/gold-silver/premium-over-spot) is often lower. Storage is denser. Resale of a large bar can mean finding a counterparty who will assay or who trusts the brand and serial.",
-      "Small minted bars (one ounce and under) sit closer to coins on premium. The bar-vs-coin slogan is really about large wholesale bars versus government coins. Name the size, or the comparison is empty.",
+      "A bar is a piece of bullion with a stated weight, a stated fineness, and a maker’s mark. A bullion coin is usually a government or mint product whose metal content is the economic object and whose face value sits far below the metal. Forums turn the comparison into a morality tale. The documentary fact is narrower: fabrication cost, how strangers recognise the product, and how hard it is to split or resell later.",
+      "Dealers and comment threads will prefer one form. The map only needs the mechanism. Bars often carry a lower [premium over spot](/gold-silver/premium-over-spot) per ounce when the piece is large. Coins often carry a higher premium and travel more easily as named types. Name the size and the product family, or the slogan “bars are cheaper, coins are better” is empty.",
     ],
   },
   {
-    heading: "Coins",
+    heading: "Bars: weight, stamp, serial",
     paragraphs: [
-      "A bullion coin is a government or mint product with a face value that is far below the metal. The coin is recognised by design: Maple, Philharmonic, Krugerrand, and so on. That recognisability is what you pay the extra premium for. It can make small sales simpler. It does not make the coin “money” in the legal-tender-for-rent sense in most places.",
-      "Numismatic and proof coins are a different market. This pillar is about bullion — metal as metal — not collectibles. Mixing them is how beginners overpay.",
+      "Larger bars spread minting and assay cost over more ounces, so the ask above spot is often thinner. Storage is denser: more ounces per cubic centimetre. Resale of a large bar can require a counterparty who trusts the brand and serial, or who will assay. That is a logistics fact, not a verdict on bars as a category.",
+      "Small minted bars — one ounce and under — sit closer to coins on premium. The cast kilo and the minted gram are not the same product class. When people say “I prefer bars,” they often mean wholesale sizes. When they say “I prefer coins,” they often mean government one-ouncers. Put the weight on the table before comparing premiums.",
+      "Serial numbers, certificates, and sealed packaging are custody aids. They are not substitutes for weight and fineness. A certificate without a matching piece is paper. A piece without records is still metal, but harder to move through careful counterparties.",
+      "Refiner reputation is a market habit, not a metallurgical law. A well-known stamp lowers the cost of conversation with a desk. It does not remove the need for weight checks when the chain of custody is thin. Treat brand as a liquidity aid on the [premium](/gold-silver/premium-over-spot) page’s ledger, not as a purity oracle.",
+    ],
+  },
+  {
+    heading: "Coins: recognition and face value",
+    paragraphs: [
+      "A bullion coin is recognised by design: Maple, Philharmonic, Krugerrand, Eagle, and similar mint programmes. That recognisability is what the extra premium often pays for. A stranger who knows the type can check published specs without inventing a private brand story. Recognisability does not make the coin “money” for rent or tax in most jurisdictions. Face value is a legal label. The metal content is the economic object on this pillar.",
+      "Fractional coins raise fabrication cost per ounce. They can make smaller transfers simpler because the unit is already split. They do not change fineness rules. A tenth-ounce coin is still a fabricated product with its own bid–ask. Compare it to a larger coin of the same programme, not to a slogan about “always buy big.”",
+      "Legal-tender face value on bullion coins is easy to misread. In most places it does not set the commercial price of the metal, and it does not settle ordinary debts at melt. The documentary point is narrow: the stamp names a programme; the ounce does the economic work on this pillar.",
+    ],
+  },
+  {
+    heading: "Bullion versus collectibles",
+    paragraphs: [
+      "Numismatic, proof, and low-mintage pieces are a different market. Their ask often includes rarity, condition, and story. This pillar is about bullion — metal as metal. Mixing bullion with collectibles is a common way first parcels become expensive relative to melt. The documentary line is: if the price only makes sense as a collectible, the page you want is not this one.",
+      "Secondary-market liquidity also differs. Common bullion types have published specs and many desks that quote them. Odd bars and obscure coins can sit longer. Liquidity is not a forecast of next week’s price. It is a description of how many counterparties already know the product.",
+    ],
+  },
+  {
+    heading: "Divisibility, storage, and later sale",
+    paragraphs: [
+      "A large bar is hard to split without fabrication. A stack of coins is already divided. That matters when someone later needs a smaller transfer without remelting. It is a handling fact, not a reason to prefer one form in the abstract.",
+      "Storage density favours bars. Recognition and small-lot resale often favour common coins. The [storage](/gold-silver/storage) menu and the [premium](/gold-silver/premium-over-spot) page sit next to this comparison for that reason. Form, premium, and custody are one ledger. Reading only the ask on a website cuts the ledger in half.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not a list of which mint to prefer. It is not a tax guide. It is not a claim that coins are safer or that bars are “smarter.” Safety and counterparty risk live on [spotting fakes](/gold-silver/spotting-fakes) and on dealer identity, not on the shape of the metal alone.",
+      "It is not investment advice and not a call to acquire metal. Educational media describes forms people already use. [Information versus advice](/sound-money/information-not-advice) is the standing line. Parent hub: [gold and silver in practice](/gold-silver).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Read next with [premium over spot](/gold-silver/premium-over-spot) and the [beginner checklist](/gold-silver/beginner-checklist) as a named-decision index — still not a recommendation. Remote logistics live on [buying online](/gold-silver/buying-online). History of why markets used metal sits under [ancient money](/history/ancient), not here.",
+      "Keep the shelves labeled. Practice handles form and custody. Markets handles dated figures. Idea handles definitions. History handles events. This page only compares bars and coins as fabricated products.",
     ],
   },
 ];
 
 const premiumOverSpot: Section[] = [
   {
-    heading: "What premium is",
+    heading: "",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The product in hand is fabricated, shipped, insured, and sold by someone who must buy it back later. Premium is the difference. It is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market.",
-      "A coin can carry a large premium and still be a clean product. A bar can be near spot and still be hard to resell. Compare it to the [bars vs coins](/gold-silver/bars-vs-coins) trade-off, not to a morality tale.",
+      "Spot is a screen price for a reference ounce. The product in hand is fabricated, shipped, insured, inventoried, and quoted by someone who must also bid to buy it back. Premium is the gap between those worlds. It is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market. This page explains the gap. It does not tell anyone what to acquire. [Information versus advice](/sound-money/information-not-advice) remains the standing line.",
+    ],
+  },
+  {
+    heading: "Spot versus the product in hand",
+    paragraphs: [
+      "Paper and unallocated quotes move on screens. A minted coin or a sealed bar has already paid minting, assay, packaging, transport, and dealer overhead. The ask a desk shows for that object is rarely equal to the last print on a futures or spot feed. The difference — often stated as a percentage or as currency per ounce — is the premium.",
+      "A low premium does not prove virtue. A high premium does not prove fraud. A common government coin can print a fat ask and still be a clean, liquid product. A large bar can sit near spot and still be awkward to move. Compare premium to the [bars versus coins](/gold-silver/bars-vs-coins) trade-off, not to a morality tale.",
+    ],
+  },
+  {
+    heading: "What builds the ask",
+    paragraphs: [
+      "Fabrication: smaller pieces cost more per ounce to strike or cast. Distribution: insurance, vaulting before sale, and shipping widen the gap. Inventory: a desk that must hold stock prices that risk into the ask. Brand and programme: widely recognised types can carry a recognition premium; obscure types can carry a scarcity-of-buyers problem instead.",
+      "Silver often shows larger percentage premiums than gold for the same fabricated format, because fabrication is a larger share of a cheaper ounce. That is arithmetic of cost structure, not a tip about which metal to hold. Gold and silver share this pillar’s handling vocabulary; they do not share identical premium shapes.",
+      "Taxes, duties, and reporting rules can sit beside premium without being premium. A quote that looks “near spot” in one jurisdiction may omit a line that appears only at settlement. This page does not map tax law. It only warns that the ask on a screen is not always the all-in friction of taking delivery.",
     ],
   },
   {
     heading: "Bid, not only ask",
     paragraphs: [
-      "The number that matters later is the dealer’s buy price — the bid — not only what you paid. A thin product with a fat ask and a poor bid is expensive twice. Ask what they will pay today for the same item, before you care about the story on the reverse.",
+      "The number that matters when metal leaves a household again is the dealer’s buy price — the bid — not only what was paid on the way in. A thin product with a fat ask and a poor bid is expensive on both doors. Asking what a desk would pay today for the same item is a factual check on round-trip cost. It is not a forecast of next month’s spot.",
+      "Spreads widen in stress and for awkward sizes. They narrow for common bullion when desks are competing. None of those moves is a signal to “load up” or “stay out.” They are descriptions of a physical market’s transaction costs. Desk tape on this site is a clock. Premium is the friction around taking metal off that clock into a hand.",
+      "Comparing two asks without two bids is an incomplete comparison. Educational media can say that without ranking which desk to use. The mechanism is the round trip; the tip would be naming a winner.",
+    ],
+  },
+  {
+    heading: "Premium is not a purity score",
+    paragraphs: [
+      "Fineness is stamped and assayed. Premium is a market gap. A .9999 coin can carry a large premium. A .999 bar can sit closer to spot. Confusing the two produces bad comparisons: people treat a cheap ask as “purer” or a dear ask as “more real.” Read the stamp for fineness. Read the quote for friction.",
+      "Collectible markups are another layer again. When the ask only makes sense as rarity or proof finish, the premium is no longer mainly fabrication-versus-spot. This pillar’s bullion pages stop before that market. Mixing melt arithmetic with collectible asks is how educational text turns into a pitch.",
+    ],
+  },
+  {
+    heading: "Outliers and empty promises",
+    paragraphs: [
+      "An ask far below every other visible quote is information. It can mean a different product, a different settlement, a different custody story, or a counterfeit risk. The [spotting fakes](/gold-silver/spotting-fakes) page covers the high-level filter. This page only notes that premium outliers deserve the same scepticism as miracle discounts.",
+      "“Storage included” and “zero premium” slogans often move the cost into another line: account fees, spreads on exit, or an unallocated claim. Read those offers against the [storage](/gold-silver/storage) menu. If metal never ships and never names a bar list, the premium conversation was about a claim, not about a pile.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not a table of “fair” premiums. It is not a dealer ranking. It is not a claim that low premium equals good outcome. Outcomes depend on bid, custody, authenticity, and jurisdiction — topics this media site does not turn into personal recommendations.",
+      "Nothing here is a reason to acquire metal, and nothing here is a reason to avoid it. The page names a price gap. [Information versus advice](/sound-money/information-not-advice) is the compliance line. Parent hub: [gold and silver in practice](/gold-silver).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Form lives on [bars versus coins](/gold-silver/bars-vs-coins). Custody lives on [storage](/gold-silver/storage). Remote purchase logistics live on [buying online](/gold-silver/buying-online). Dated market quotients without a handling claim live on [Markets](/markets), including the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Keep premium talk on Practice. Do not import Weimar or Nixon. Do not turn a fabrication gap into a forecast. The hub at [gold and silver in practice](/gold-silver) orients the shelf when a reader needs the whole menu again.",
     ],
   },
 ];
 
 const storage: Section[] = [
   {
-    heading: "The trade-off",
+    heading: "",
     paragraphs: [
-      "Storage is access versus cost versus counterparty. Home is near and on you. A vault is distant and on them. Allocated means specific bars or coins in your name; pooled or unallocated is a claim on a stack. This page describes the menu. It does not pick.",
+      "Storage is a three-way trade-off: access, cost, and counterparty. Home keeps the metal near and the operational risk on the holder. A vault keeps the metal distant and the operational risk partly on a third party. Allocated custody names specific bars or coins; pooled or unallocated accounts are claims on a stack. This page describes the menu. It does not pick. It is not advice. Read [information versus advice](/sound-money/information-not-advice) if that line is unclear.",
     ],
   },
   {
-    heading: "Home",
+    heading: "Access, cost, counterparty",
     paragraphs: [
-      "Home storage keeps the metal in your control and the operational risk on you: fire, theft, forgetfulness, and the fact that a safe advertises itself. It has no vault fee. It has no auditor. Whether that is acceptable is a household question.",
+      "Access means how quickly a person can touch or move the metal. Cost means fees, insurance, transport, and the opportunity cost of awkward sizes. Counterparty means who else must stay honest, solvent, and reachable for the arrangement to work. Every storage story moves those three dials. Turning only one dial and ignoring the others is how custody surprises appear later.",
+      "Practice pages stay educational. They name mechanisms people already use. They do not rank vault brands, safe models, or jurisdictions. Laws differ by country. Insurance language differs by policy. The map’s job is vocabulary, not a personal plan.",
     ],
   },
   {
-    heading: "Allocated and vaults",
+    heading: "Home custody",
     paragraphs: [
-      "Allocated storage, done properly, identifies bars or coins as yours. You should be able to name what you own. Unallocated and “pool” accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile.",
+      "Home storage keeps control and operational risk together: fire, theft, forgetfulness, disclosure through talk or delivery patterns, and the fact that a visible safe advertises itself. There is no vault fee line. There is also no independent auditor of the drawer. Whether that balance is acceptable is a household and legal question this site does not answer.",
+      "Records still matter at home. Invoices, serials, and a private note of what exists and where it sits are custody tools. A pile without records is harder to insure, harder to prove, and harder to hand to an heir or a dealer. Record-keeping is not a tip to acquire more metal. It is a description of how physical holdings stay legible.",
+      "Split locations reduce single-point loss and increase operational complexity. Naming that trade-off is enough. Designing a household map is outside educational media.",
+    ],
+  },
+  {
+    heading: "Allocated vaults",
+    paragraphs: [
+      "Allocated storage, done properly, identifies bars or coins as belonging to a named owner. A bar list, serials, and segregation language are the documentary tests. If a customer cannot point to identified metal, the product may be a claim dressed in vault photography.",
+      "Fees, notice periods, withdrawal rules, and insurance scope belong in the written agreement. Educational media will not summarise every contract. The mechanism to watch is simple: specific metal versus a balance. Specific metal can still face custodian failure, lien fights, or access delays. Allocation reduces one confusion; it does not erase counterparty.",
+      "Audits and statements are part of the allocated story when they exist. A periodic bar list that matches serials is different from a marketing PDF that only shows a vault corridor. Readers can ask which document they would still understand a year later. That question is literacy, not a product endorsement.",
+    ],
+  },
+  {
+    heading: "Unallocated and pooled accounts",
+    paragraphs: [
+      "Unallocated and pool accounts are easier to run operationally. They are also easier to confuse with a bank deposit. The customer often holds a claim on a stack, not a titled bar. In calm markets the claim may be convenient. In stress, the difference between a pile and a promise is the whole story.",
+      "Some offers bundle “storage” with a purchase that never ships. That is the [buying online](/gold-silver/buying-online) problem wearing a vault costume. If the only exit is to sell back to the same desk into the same pool, the holding was never a segregated object in the customer’s hands. Name the claim structure before comparing fees to home storage.",
+      "Warehouse-receipt history on the [banks and paper](/history/banks-paper) shelf shows how claims on metal became banking. Modern unallocated accounts are not that history rewritten. They rhyme as claim structures. They are not a reason to paste 1609 or 1720 into a custody FAQ.",
+    ],
+  },
+  {
+    heading: "Insurance, transport, and jurisdiction",
+    paragraphs: [
+      "Insurance is a contract about named risks, deductibles, and exclusions — not a synonym for “safe.” Transport between home and vault, or between desks, reopens theft and loss questions that a quiet shelf had closed. Jurisdiction decides which court, which bail-in story, and which reporting rules apply. This page flags those headings. It does not give country advice.",
+      "Form and premium still sit beside custody. A large bar that is cheap per ounce on the ask can be expensive to move or store awkwardly. Coins that are easy to recognise may be easier to inventory in small lots. See [bars versus coins](/gold-silver/bars-vs-coins) and [premium over spot](/gold-silver/premium-over-spot). Custody is not a separate morality; it is the third column of the same ledger.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not a recommendation to store at home or in a vault. It is not a review of custodians. It is not a claim that allocated always beats unallocated in every scenario. Mechanisms differ; personal circumstances differ; this media product does not merge them into a tip.",
+      "It is not a tax or estate manual. Inheritance and reporting rules are local. The checklist page names “records” as a decision heading; it does not draft a will. Parent hub: [gold and silver in practice](/gold-silver).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Remote purchase logistics: [buying online](/gold-silver/buying-online). Authenticity filter: [spotting fakes](/gold-silver/spotting-fakes). Named first-parcel decisions: [beginner checklist](/gold-silver/beginner-checklist). Definitions of money live under [Sound Money](/sound-money). Dated figures live under [Markets](/markets).",
+      "History of warehouse receipts and public banks lives under [banks and paper](/history/banks-paper). That cluster explains how paper claims on metal became banking. This page only describes modern custody menus for physical bullion. Keep the shelves labeled.",
     ],
   },
 ];
 
 const spottingFakes: Section[] = [
   {
-    heading: "High level only",
+    heading: "",
     paragraphs: [
-      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defence is not a home laboratory. It is a counterparty you can still find in a year, a product that is common enough to be known, and a check of weight and dimensions against the published spec.",
-      "This is not a testing manual. It will not teach you to run acid, XRF, or ultrasound. A wrong test can damage a good piece. If a holding is large enough that a fake would matter, use a professional.",
+      "Counterfeits exist — especially of popular coins and of small bars that borrow famous stamps. The first defence is not a kitchen laboratory. It is a counterparty who can still be found later, a product common enough to have published specs, and a sober check of weight and dimensions. This page stays high level. It is not a testing manual, not a guarantee, and not advice to acquire or avoid metal. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "Gold and silver fail the same educational filters; the published specs differ by product. Keep the mechanism here and the product sheet elsewhere.",
     ],
   },
   {
-    heading: "What a beginner can actually do",
+    heading: "What this page refuses to be",
     paragraphs: [
-      "Weigh it. Measure it. Look at the edge, the reeding, the stamp, and whether the colour is trying too hard. Compare to a known genuine piece of the same product if you have one. None of that is conclusive. It is a filter for the obvious.",
-      "A price far below everyone else is information. Treat it as a warning, not a bargain.",
+      "It will not teach acid tests, XRF, ultrasound, or specific gravity as DIY procedures. A wrong test can damage a genuine piece. A confident wrong test can also create a false sense of security. When a holding is large enough that a fake would matter, professional assay and reputable settlement channels are the documentary answer — named as categories, not as a vendor list.",
+      "Educational media can describe how fakes usually fail obvious filters. It cannot certify a piece from a paragraph. Anyone who needs certification needs a process outside this site.",
+      "Law-enforcement and consumer-protection offices exist in many jurisdictions for clear fraud. This page does not draft a complaint. It only refuses to pretend a blog is a lab.",
+    ],
+  },
+  {
+    heading: "Counterparty before gadgetry",
+    paragraphs: [
+      "Most losses that look like “I was fooled by a bar” begin as “I could not name who sold it.” A desk with a verifiable address, a history outside its own FAQ, and a willingness to document product, weight, and fineness is a different risk object from an anonymous parcel. Identity does not make fakes impossible. It makes recourse and pattern-checking possible.",
+      "Common bullion types have published mint specifications. Obscure pieces force the buyer to trust a private story. Trusting a private story is how tungsten-filled bars and gold-plated base-metal coins find homes. The [buying online](/gold-silver/buying-online) page covers remote identity and shipping. This page only insists that authenticity starts before the calipers.",
+      "Secondary private sales inherit whoever stood upstream. A clean story from the last holder is still a story. Educational media can note the chain-of-custody idea without turning neighbors into a marketplace.",
+    ],
+  },
+  {
+    heading: "Weight, dimensions, and obvious tells",
+    paragraphs: [
+      "Weigh the piece. Measure diameter and thickness against the published spec for that product. Look at reeding, edges, stamps, and whether colour or wear looks theatrical. Compare to a known genuine example of the same type if one is available. None of that is conclusive. It is a filter for the obvious.",
+      "Density tricks and skilled castings defeat casual checks. That is why this text stops at the filter and does not pretend a blog post replaces a lab. A scale and a caliper are literacy tools. They are not a verdict engine.",
+      "Magnet myths circulate online. Some fakes are magnetic; some genuine pieces sit in magnetic packaging; some base-metal cores are chosen to frustrate casual magnet tests. A magnet anecdote is not a method section. Leave detailed physics to professionals.",
+    ],
+  },
+  {
+    heading: "Price outliers as information",
+    paragraphs: [
+      "An ask far below every other visible quote is a signal about process, product, or honesty — not a coupon. Treat it as a warning flag in the premium conversation on [premium over spot](/gold-silver/premium-over-spot). Miracle discounts and “too good” private sales are where counterfeit inventory concentrates in stories that later become case studies.",
+      "High premium does not prove authenticity either. Collectible markups and stressed spreads can both look expensive. Authenticity is a property of the object and the chain of custody, not of how dear the ask felt.",
+      "Social-platform listings compress the same risks into shorter captions. A polished photo is not a weight. A screenshot of “spot” is not an invoice. Remote theatre belongs with the watch-fors on the online-logistics page.",
+    ],
+  },
+  {
+    heading: "Packaging, certificates, and seals",
+    paragraphs: [
+      "Sealed mint packaging and certificates of authenticity are aids. They are also forgeable. A certificate without matching metal is paper. Broken seals require a new verification story. Serial numbers help inventory and insurance; they do not transmute base metal into gold.",
+      "Large bars with reputable refiner marks still get drilled and filled in criminal supply chains. Visual inspection of a stamp is not a metallurgical assay. The high-level lesson is humility: recognition of a logo is the start of a check, not the end of one.",
+      "When in doubt at scale, the documentary move is independent assay through a channel that will still be there after the test — not a viral video technique. This site will not name devices or labs to patronise.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not a complete catalogue of counterfeit methods. It is not legal advice about reporting fraud. It is not a recommendation to test at home or to skip testing. It does not name devices to purchase.",
+      "It is not investment advice. Spotting fakes is a handling topic on the Practice pillar. Parent hub: [gold and silver in practice](/gold-silver). Form context: [bars versus coins](/gold-silver/bars-vs-coins). Custody context: [storage](/gold-silver/storage).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Read it beside [buying online](/gold-silver/buying-online) when the channel is remote, and beside the [beginner checklist](/gold-silver/beginner-checklist) when the question is which decisions exist before a first parcel. Do not import history episodes about debasement here; clipped ancient coins and modern tungsten bars are different documentary objects.",
+      "Markets pages give dated figures without a how-to. Idea pages define money words. This page only narrows counterfeit risk to counterparty, specs, and professional limits. Keep the shelves labeled.",
     ],
   },
 ];
 
 const beginnerChecklist: Section[] = [
   {
-    heading: "First ounces are a process",
+    heading: "",
     paragraphs: [
-      "A first physical holding is four decisions: what form, from whom, where it lives, and what you write down. Skip any one and the others get expensive.",
+      "A first physical holding is a set of named decisions: form, counterparty, custody, and records. Skip any one and the others get expensive in friction, not in a moral sense. This page is a process index for those headings. It is educational media, not a personal plan, not a solicitation, and not a recommendation to acquire metal. The standing line is [information versus advice](/sound-money/information-not-advice).",
     ],
   },
   {
-    heading: "The list",
+    heading: "Why a checklist page exists",
     paragraphs: [
-      "One: decide [bar or coin](/gold-silver/bars-vs-coins), and the size, before you look at a price. Two: know the [premium over spot](/gold-silver/premium-over-spot) and the bid, not only the ask. Three: choose [storage](/gold-silver/storage) before the parcel moves. Four: if you buy remote, read [buying online](/gold-silver/buying-online). Five: keep invoices, serials, and a note of where the metal is — in a place that is not only the same drawer.",
-      "Six: stay off collectibles until you understand bullion. Seven: do not skip the fake filter on [spotting fakes](/gold-silver/spotting-fakes), and do not think a blog post replaces a test.",
+      "Searchers ask “how to start” because the market presents screens, mint names, vault ads, and forum slogans at once. A checklist can slow that noise into labeled boxes. It cannot choose for anyone. BaFin-clean discipline on this pillar means high disclaimer density and no buy-language. Where other Practice pages explain one mechanism, this page only maps the sequence of mechanisms.",
+      "If the reader’s real question is definitional — what sound money means — the answer lives under [Sound Money](/sound-money), not here. If the question is what happened in 1971, the answer lives under [history](/history). Practice only handles metal as an object in commerce.",
+      "X and other social posts that dump five mint names into one caption are the opposite of this index. One post, one mechanism — the site’s ordinary rule — keeps a checklist from becoming a shopping montage.",
+    ],
+  },
+  {
+    heading: "Form and size before a quote",
+    paragraphs: [
+      "The [bars versus coins](/gold-silver/bars-vs-coins) trade-off belongs before a price screen. Size belongs with form: a kilo bar and a tenth-ounce coin are different fabrication and resale objects. Collectibles are a different market again. Naming form and size first prevents a quote from choosing the product by accident.",
+      "This is description of decision order, not an instruction to place an order. Some households never hold physical metal. That outcome is compatible with reading this shelf. Media explains the menu; it does not fill a cart.",
+      "Silver and gold share the same form vocabulary and not the same premium shape. The checklist does not pick a metal. It only notes that form decisions repeat for each metal a person might research.",
+    ],
+  },
+  {
+    heading: "Premium and the round trip",
+    paragraphs: [
+      "[Premium over spot](/gold-silver/premium-over-spot) is fabrication and distribution friction, not a purity score. The bid — what a desk would pay to buy the same item back — belongs in the same glance as the ask. A checklist that only celebrates a low ask is half a checklist.",
+      "Outlier asks belong under scepticism, not under celebration. The fake filter on [spotting fakes](/gold-silver/spotting-fakes) is the paired heading. Miracle prices are information about process risk.",
+      "Spot prints on the [desk](/desk) are a clock. Premium is friction around leaving that clock. Confusing the two produces stories about “getting in at spot” that were never about a fabricated object.",
+    ],
+  },
+  {
+    heading: "Custody before the parcel moves",
+    paragraphs: [
+      "Where the metal will live is a decision that precedes shipping, not a surprise after delivery. The [storage](/gold-silver/storage) menu — home, allocated, unallocated — changes access, cost, and counterparty. Choosing custody after the parcel is in transit is how people invent storage under pressure.",
+      "If the offer is “we will store it for you” with no path to identified metal or shipment, the product may be a claim. Name that structure early. The checklist’s job is to keep claim and pile from swapping labels in the rush of a checkout page.",
+      "Jurisdiction and insurance language are local. The checklist names them as headings. It does not draft a policy. Readers who need licensed advice need a licensed adviser — not a thicker paragraph here.",
+    ],
+  },
+  {
+    heading: "Channel, identity, and documents",
+    paragraphs: [
+      "Remote channels add dealer identity, payment finality, shipping insurance, and empty-box procedures — the watch-fors on [buying online](/gold-silver/buying-online). Local channels still need identity and invoice discipline; face-to-face is not a substitute for paperwork.",
+      "Records: product description, weight, fineness, serials if any, premium paid, and where the metal sits — stored separately from the drawer that holds the metal. Records are custody literacy. They are not a tip to scale a position.",
+      "Heirs and future selves are part of the records story. A pile nobody can document is a custody failure even if the metal is genuine. That sentence is about legibility, not about encouraging larger holdings.",
+    ],
+  },
+  {
+    heading: "The seven headings as an index",
+    paragraphs: [
+      "One: form and size via [bars versus coins](/gold-silver/bars-vs-coins). Two: [premium](/gold-silver/premium-over-spot) and bid, not ask alone. Three: [storage](/gold-silver/storage) before transit. Four: channel risks on [buying online](/gold-silver/buying-online) when remote. Five: invoices and location notes. Six: bullion versus collectibles kept distinct. Seven: the high-level [fake filter](/gold-silver/spotting-fakes), with professional limits respected.",
+      "Those seven lines are an index into sibling pages. They are not a script that ends in a purchase. A reader can stop after any heading and leave the pillar. Leaving is a normal outcome for educational media.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not an investing guide for metal. It is not a portfolio template. It is not a dealer list, a coupon, or a partner ranking. Sell CTAs are paused on this site; Practice does not quietly reintroduce them as checklist steps.",
+      "It is not advice. Nothing here says metal belongs in a household. Nothing here names a quantity, a timing, or a target. Parent hub: [gold and silver in practice](/gold-silver). Compliance line: [information versus advice](/sound-money/information-not-advice). Markets figures without handling claims: [Markets](/markets).",
+      "If a sentence on this page ever sounds like a tip, read it again as a label on a mechanism — or treat it as a drafting error against the site’s media line. The intent is an index, not a plan.",
     ],
   },
 ];
 
 const buyingOnline: Section[] = [
   {
-    heading: "Logistics, not a ranking",
+    heading: "",
     paragraphs: [
-      "Buying metal through a screen is identity of the dealer, payment, shipping, and what happens if a parcel never arrives. This page is a watch-for list. It does not rank vendors.",
+      "Acquiring metal through a screen is a logistics problem: identity of the dealer, payment finality, shipping, documentation, and what happens if a parcel never arrives. This page is a watch-for list. It does not rank vendors, does not publish partners, and does not recommend a purchase. Educational tone only. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "The same diligence vocabulary applies whether the metal is gold or silver. Product specs differ; remote failure modes rhyme. Keep metal choice on other shelves if the question is history or markets; keep distance risks here.",
     ],
   },
   {
-    heading: "What to watch",
+    heading: "Why remote channels need their own page",
     paragraphs: [
-      "Who they are: a name, a place, a history you can check without their own FAQ. How you pay: some methods are cheap and reverse; some are final. How they ship: insured, signature, discreet, and to an address you control. What the invoice says: product, weight, fineness, serials if any, and the [premium](/gold-silver/premium-over-spot) you actually paid.",
-      "If they will only “store it for you” and never ship, you have the [storage](/gold-silver/storage) problem in another costume. If the price is an outlier, you have the [fakes](/gold-silver/spotting-fakes) problem in another costume.",
+      "A website compresses trust into typography. Photos of bars, countdown timers, and “spot plus zero” banners are easy to render and hard to verify. The documentary task is to separate checkout theatre from settlement facts: who receives funds, what product is named on the invoice, how the parcel is insured, and whether custody is shipment or a pooled claim.",
+      "In-person desks have their own risks. This page stays on remote channels because search demand clusters there. It is not a claim that online is safer or worse in the abstract. It is a claim that distance changes which failure modes dominate.",
+      "Phone and messaging-app “desks” that never publish a legal entity sit in the same remote bucket. A chat thread is not an invoice. A voice call is not a bar list.",
+    ],
+  },
+  {
+    heading: "Dealer identity",
+    paragraphs: [
+      "Who they are: a legal name, a place, a history checkable without their own FAQ. Registration details, long-lived domains, and third-party footprints are ordinary diligence categories. Anonymous storefronts and rotating brand names are ordinary warning categories. Diligence is not a guarantee. It is how counterparties become legible.",
+      "Customer-service scripts that refuse to name shipping carriers, insurance limits, or withdrawal rules are part of the identity story. Opacity is information. So is a clean invoice template that already lists weight, fineness, and serial fields before anyone asks.",
+      "Clone sites that mirror a known brand’s layout are a recurring remote failure mode. Matching a logo is not matching a payment beneficiary. The identity check is who receives the money and who appears on the invoice — not who owns the stock photography.",
+    ],
+  },
+  {
+    heading: "Payment and settlement",
+    paragraphs: [
+      "Some payment methods are reversible for a time; some are final when sent. Wire, card, and balance-transfer rails fail differently. Educational media will not prescribe a rail. It will say that finality and fraud-protection trade off, and that the person initiating payment should know which side they are on before funds move.",
+      "Prepaid “account credit” at a dealer is another claim structure. Spending credit inside one firm can be convenient and can also concentrate exit risk. Name whether funds are a bank payment for a titled parcel or a balance on a shop ledger.",
+      "Cryptocurrency rails, where offered, add volatility between quote and confirmation and often increase finality. Naming that trade-off is not an endorsement of any rail. It is a reminder that settlement design is part of remote risk.",
+    ],
+  },
+  {
+    heading: "Shipping, insurance, and empty boxes",
+    paragraphs: [
+      "Insured shipment, signature requirements, discreet packaging, and delivery to an address the recipient controls are standard watch-fors. Tracking that stops, signatures that were not the recipient’s, and boxes that arrive empty are failure modes people document after the fact. Policies differ; the category to read before checkout is who bears loss in transit and how a claim is opened.",
+      "Signature-on-delivery and hold-for-pickup options change access patterns. They also change who can intercept. This page names the tension. It does not design a household’s receiving procedure.",
+      "Declared value, carrier limits, and dealer-arranged insurance can disagree. Reading which contract actually responds after a loss is dull paperwork and more useful than a tracking emoji. Educational media stops at the category.",
+    ],
+  },
+  {
+    heading: "Invoice facts and premium honesty",
+    paragraphs: [
+      "The invoice should survive a year later: product name, weight, fineness, serials if any, price, and the [premium over spot](/gold-silver/premium-over-spot) actually paid. Vague line items (“bullion assortment”) fight every later custody and authenticity check.",
+      "If the merchant will only “store it for you” and never ship, the [storage](/gold-silver/storage) problem has returned in checkout clothing. If the price is an outlier against every visible peer quote, the [spotting fakes](/gold-silver/spotting-fakes) problem has returned in marketing clothing. Remote buying does not invent those risks; it packages them.",
+      "Order confirmations that vanish into a portal without a downloadable PDF are a records problem waiting for a hard drive failure. The [beginner checklist](/gold-silver/beginner-checklist) lists records as a heading for that reason.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "It is not a vendor ranking, affiliate table, or “best shops” list. Partner monetisation on Practice is an open map decision; the live site does not insert sponsored picks into this essay. It is not a consumer-law manual for every country.",
+      "It is not a call to acquire metal online or offline. Readers can use these watch-fors to understand news stories about failed deliveries without placing any order. Parent hub: [gold and silver in practice](/gold-silver).",
+      "Nothing here is investment advice. Remote logistics are a handling topic. Compliance line: [information versus advice](/sound-money/information-not-advice).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Form: [bars versus coins](/gold-silver/bars-vs-coins). Friction: [premium over spot](/gold-silver/premium-over-spot). Custody: [storage](/gold-silver/storage). Authenticity: [spotting fakes](/gold-silver/spotting-fakes). Sequence index: [beginner checklist](/gold-silver/beginner-checklist). Definitions elsewhere: [Sound Money](/sound-money). Figures elsewhere: [Markets](/markets).",
+      "Keep remote logistics on this page. Do not turn it into a history of mail-order fraud, and do not turn it into a shop. The hub orients the shelf; this spoke only documents distance.",
     ],
   },
 ];
@@ -2325,6 +2590,60 @@ export const soundMoneyHubBody: Section[] = [
       "Start anywhere on the four definition pages if you already know the confusion. Return here when you need the shelf map. Use [Sound Money History](/history) when you want dated claims. Use [Markets](/markets) when you want figures. Use practice when you want handling metal.",
       "Related links on each definition page stay short — usually this hub plus neighbor stops and at most one history hinge. That is the ledger: definition to hub, hub to history once, no spaghetti.",
       "This hub’s job is orientation only. It does not pretend the disclaimer page is a sixth thick essay, and it does not turn Pillar 1 into a history cluster. Read the index, open one definition, then leave when the next question is “what happened?” rather than “what does this word mean?”",
+    ],
+  },
+];
+
+/** Pillar hub /gold-silver — rendered by the practice index route. */
+export const practiceHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This pillar answers how people handle physical metal — bars versus coins, premiums, storage, fakes at a high level, first-parcel decisions, remote logistics. It is educational media. It is not a shop, not a partner table, and not advice. Read [information versus advice](/sound-money/information-not-advice) first if that line is unclear.",
+    ],
+  },
+  {
+    heading: "What this pillar is",
+    paragraphs: [
+      "Pillar 3 is a handling shelf. The six stops fix vocabulary for objects in commerce: [bars versus coins](/gold-silver/bars-vs-coins), [premium over spot](/gold-silver/premium-over-spot), [storage](/gold-silver/storage), [spotting fakes](/gold-silver/spotting-fakes), the [beginner checklist](/gold-silver/beginner-checklist), and [buying online](/gold-silver/buying-online). The tone is documentary. The aim is a readable menu for adults who want mechanisms without a pitch.",
+      "BaFin-clean discipline is stricter here than on History. Practice pages describe trade-offs people already face. They do not say metal belongs in a household, name a quantity, or rank a dealer. Where a sentence could be read as a tip, the page names the mechanism and points back to the disclaimer.",
+      "Search titles stay catalogue-plain. Bodies carry the weight. This hub only orients the shelf so a reader landing on premiums or storage can see the neighbors without turning Practice into Markets or History.",
+      "High disclaimer density is intentional. Practice is where search intent often sounds like shopping. The site answers with menus and watch-fors, then stops. That stop is the product.",
+    ],
+  },
+  {
+    heading: "What this pillar is not",
+    paragraphs: [
+      "This pillar is not [Sound Money](/sound-money) and not [Sound Money History](/history). Definitions and dated events live on those shelves. Practice may link them once for orientation. It does not retell Weimar, Nixon, or “what backed means.” Coinage history sits under [ancient money](/history/ancient), not under bars-versus-coins.",
+      "This pillar is not [Markets](/markets). Dated book values, reserve stocks, ratios, and country offtake figures are other jobs. Mixing a handling menu with a tape figure produces a tip. Keeping the label produces a process word you can reuse.",
+      "It is also not a capture shelf. Newsletter and download CTAs are paused on the site. Partner links on Practice remain an open map decision; live pages do not insert sponsored picks into these essays.",
+    ],
+  },
+  {
+    heading: "The six practice stops",
+    paragraphs: ["Each line is a job description. Open the page for the full mechanism. This hub does not reprint every paragraph."],
+    list: [
+      "[Gold bars vs coins](/gold-silver/bars-vs-coins) — Fabrication, recognition, divisibility; bullion versus collectibles.",
+      "[Premium over spot](/gold-silver/premium-over-spot) — Screen price versus product in hand; bid as well as ask.",
+      "[Storing gold and silver](/gold-silver/storage) — Access, cost, counterparty; home, allocated, unallocated.",
+      "[Spotting fakes](/gold-silver/spotting-fakes) — High-level filter only; counterparty and specs before gadgetry.",
+      "[Beginner checklist](/gold-silver/beginner-checklist) — Named decisions index; still not a recommendation.",
+      "[Buying online](/gold-silver/buying-online) — Remote identity, payment, shipping, invoice facts; no vendor ranking.",
+    ],
+  },
+  {
+    heading: "Flavio reading order on this shelf",
+    paragraphs: [
+      "Long-tail clarity first, then the entry checklist, then remote logistics, then this hub as orientation. A practical path is [bars versus coins](/gold-silver/bars-vs-coins), then [premium over spot](/gold-silver/premium-over-spot), then [storage](/gold-silver/storage), then [spotting fakes](/gold-silver/spotting-fakes), then the [beginner checklist](/gold-silver/beginner-checklist) as the sequence index, then [buying online](/gold-silver/buying-online) if the channel is remote.",
+      "Searchers who land on the checklist can still fan out sideways. When the handling vocabulary is clear, leave for [Markets](/markets) for figures or [History](/history) for events. Do not park 1971 or dealer coupons on this hub.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Start anywhere on the six stops if you already know the confusion. Return here when you need the shelf map. Use [Sound Money](/sound-money) for definitions. Use [Markets](/markets) for dated facts. Use History when the next question is what happened.",
+      "Related links on each practice page stay short — usually this hub, neighbor stops, and the disclaimer. That is the ledger: mechanism to hub, hub to idea once for compliance, no spaghetti and no shop.",
+      "This hub’s job is orientation only. It does not pretend Practice is ready for sitemap expansion until a later decision. Thick bodies can exist while robots still skip the pillar. Read the index, open one stop, then leave when the next question is a figure or a date rather than a handling word.",
     ],
   },
 ];
