@@ -2,6 +2,7 @@ import {
   americaHubBody,
   ancientHubBody,
   banksPaperHubBody,
+  silverHubBody,
   twentiethCenturyHubBody,
   type Section,
 } from "./bodies";
@@ -742,10 +743,15 @@ export const historyClusters: Cluster[] = [
     slug: "silver",
     title: "Silver in history",
     summary: "Potosí, the piece of eight, bimetallism, 1980, and silver’s dual monetary and industrial role.",
-    intro: [
-      "Silver is a monetary metal with its own path: a mountain, a global coin, a legal ratio, a 1980 squeeze, then industry. It is not a footnote to gold.",
-      "All five episodes now have first drafts. American statutes stay in the America cluster.",
+    sections: silverHubBody,
+    related: [
+      { title: "Sound Money History", href: "/history" },
+      { title: "America & gold/silver politics", href: "/history/america" },
+      { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
     ],
+    seo: {
+      titleTag: "Silver in History: Potosí to 1980 and Industry",
+    },
     episodes: [
       {
         slug: "potosi",
@@ -766,6 +772,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "Potosí: The Silver Mountain and Global Flow",
         },
       },
       {
@@ -787,6 +794,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "low",
           intent: "history",
+          titleTag: "Piece of Eight: The Spanish Dollar as Global Silver",
         },
       },
       {
@@ -808,6 +816,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "Bimetallism: Mint Ratio vs Market Ratio",
         },
       },
       {
@@ -829,6 +838,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "Silver Thursday 1980: Hunt Squeeze and the Break",
         },
       },
       {
@@ -850,6 +860,7 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "mid",
           intent: "history",
+          titleTag: "Silver: Monetary Memory and Industrial Demand",
         },
       },
     ],

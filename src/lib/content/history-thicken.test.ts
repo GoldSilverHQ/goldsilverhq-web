@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { americaHubBody, getBody } from "./bodies.ts";
+import { americaHubBody, getBody, silverHubBody } from "./bodies.ts";
 import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
 function bodyText(sections: NonNullable<ReturnType<typeof getBody>>) {
@@ -215,6 +215,108 @@ describe("america cluster thicken (no new URLs)", () => {
 
     for (const slug of AMERICA_EPISODES) {
       assert.match(text, new RegExp(`/history/america/${slug}`));
+    }
+  });
+});
+
+const SILVER_EPISODES = [
+  "piece-of-eight",
+  "silver-thursday",
+  "bimetallism",
+  "potosi",
+  "monetary-and-industry",
+] as const;
+
+describe("silver cluster thicken Wave C (no new URLs)", () => {
+  it("thickens all five episodes to Phase-1 depth without sitemap expansion", () => {
+    for (const slug of SILVER_EPISODES) {
+      const body = getBody("silver", slug);
+      assert.ok(body, `missing body for silver/${slug}`);
+      const text = bodyText(body);
+      const words = wordCount(text);
+      assert.ok(words >= 900 && words <= 1200, `${slug}: expected 900–1200 words, got ${words}`);
+      assert.ok(body.filter((s) => s.heading).length >= 6, `${slug}: expected ≥6 headed sections`);
+      assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
+    }
+
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("/history/silver")));
+  });
+
+  it("locks piece of eight as global Spanish dollar", () => {
+    const text = bodyText(getBody("silver", "piece-of-eight")!);
+    assert.match(text, /piece of eight|eight-real|Spanish dollar/i);
+    assert.match(text, /27 grams|twenty-seven grams/);
+    assert.match(text, /Manila galleon/);
+    assert.match(text, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    assert.match(text, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.match(text, /\[silver in history\]\(\/history\/silver\)/);
+  });
+
+  it("locks Silver Thursday as 1980 rule-change break", () => {
+    const text = bodyText(getBody("silver", "silver-thursday")!);
+    assert.match(text, /27 March 1980/);
+    assert.match(text, /Hunt/);
+    assert.match(text, /\$49\.45|\$50/);
+    assert.match(text, /COMEX|margin/i);
+    assert.match(text, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
+    assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.doesNotMatch(text, /should buy|price target to/i);
+  });
+
+  it("locks bimetallism as mint-ratio mechanics", () => {
+    const text = bodyText(getBody("silver", "bimetallism")!);
+    assert.match(text, /mint ratio/i);
+    assert.match(text, /market ratio/i);
+    assert.match(text, /Gresham/);
+    assert.match(text, /fifteen to one|15:1|15 to 1/);
+    assert.match(text, /Latin Monetary Union/);
+    assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
+    assert.match(text, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
+  });
+
+  it("locks Potosí as global silver flow", () => {
+    const text = bodyText(getBody("silver", "potosi")!);
+    assert.match(text, /Cerro Rico|Potosí/);
+    assert.match(text, /1540s/);
+    assert.match(text, /Manila galleon/);
+    assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
+    assert.match(text, /\/maps/);
+  });
+
+  it("locks monetary-and-industry as dual-role split", () => {
+    const text = bodyText(getBody("silver", "monetary-and-industry")!);
+    assert.match(text, /photography/i);
+    assert.match(text, /photovoltaic/i);
+    assert.match(text, /electronics/i);
+    assert.match(text, /monetary/i);
+    assert.match(text, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
+    assert.match(text, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+    assert.doesNotMatch(text, /ebook|LemonSqueezy|should buy/i);
+  });
+
+  it("wires a thickened Silver hub without new routes", () => {
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    assert.match(mapSrc, /silverHubBody/);
+    assert.match(mapSrc, /sections:\s*silverHubBody/);
+    assert.match(mapSrc, /titleTag:\s*"Silver in History: Potosí to 1980 and Industry"/);
+    assert.match(mapSrc, /titleTag:\s*"Piece of Eight: The Spanish Dollar as Global Silver"/);
+    assert.match(mapSrc, /titleTag:\s*"Silver Thursday 1980: Hunt Squeeze and the Break"/);
+    assert.match(mapSrc, /titleTag:\s*"Bimetallism: Mint Ratio vs Market Ratio"/);
+    assert.match(mapSrc, /titleTag:\s*"Potosí: The Silver Mountain and Global Flow"/);
+    assert.match(mapSrc, /titleTag:\s*"Silver: Monetary Memory and Industrial Demand"/);
+    assert.doesNotMatch(mapSrc, /slug:\s*"silver-(?!thursday")[\w-]+"/);
+
+    const text = bodyText(silverHubBody);
+    const words = wordCount(text);
+    assert.ok(words >= 750 && words <= 1200, `hub: expected 750–1200 words, got ${words}`);
+    assert.match(text, /Potosí|piece of eight|bimetallism|Silver Thursday/i);
+    assert.match(text, /Do not mash 1545, 1873, and 1980/);
+    assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
+    assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
+
+    for (const slug of SILVER_EPISODES) {
+      assert.match(text, new RegExp(`/history/silver/${slug}`));
     }
   });
 });

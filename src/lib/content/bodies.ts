@@ -1454,38 +1454,63 @@ const roadBack: Section[] = [
   },
 ];
 
-const potosi: Section[] = [
-  {
-    heading: "A mountain that moved the world’s silver",
-    paragraphs: [
-      "Cerro Rico at Potosí — in today’s Bolivia — was worked from the **1540s**. For a century and more it was the great silver source of the Spanish empire. Output did not stay in the Andes. It moved to the mint, to the fleet, to Seville, into European payments, and — via the **Manila galleon** — toward China, where silver was the settlement metal of a much larger commercial system.",
-      "The lesson for this map is flow, not romance: a mountain can set the silver stock of two oceans. The [world map](/maps) is the visual companion. Production and reserves sit there, not on this page.",
-    ],
-  },
-  {
-    heading: "Why the silver moved",
-    paragraphs: [
-      "Spain needed silver to pay armies, to settle Asia trade, and to keep a far-flung fiscal machine from seizing. Europe needed a money metal that was already priced in every port. China, after the collapse of earlier paper experiments, took silver as the unit that actually arrived.",
-      "The [piece of eight](/history/silver/piece-of-eight) is the coin face of that flow. Potosí is the hole in the ground.",
-    ],
-  },
-];
-
 const pieceOfEight: Section[] = [
   {
     heading: "A coin that crossed oceans",
     paragraphs: [
-      "The Spanish dollar — the eight-real piece, the piece of eight — was a silver coin of roughly 27 grams that circulated from the Americas to Europe to East Asia. The United States dollar was defined, in the 1790s, with this coin in mind.",
+      "The Spanish dollar — the eight-real piece, the **piece of eight** — was a silver coin of roughly **twenty-seven grams** that circulated from the Americas to Europe to East Asia for more than two centuries. Merchants priced cargo in it. Sailors cut it into bits for change. Asian markets took it as settlement metal. The early United States, when it named a dollar in the **1790s**, had this coin in mind.",
+      "This page is the coin face of the silver cluster. The hole in the ground is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). Parent hub: [silver in history](/history/silver). The claim here is narrow: one typed silver piece became a global unit of account long before any modern reserve currency.",
     ],
   },
-];
-
-const bimetallism: Section[] = [
   {
-    heading: "Two metals, one legal unit",
+    heading: "What the piece was",
     paragraphs: [
-      "Bimetallism is the attempt to keep gold and silver in the same monetary system at a fixed mint ratio. When the market ratio moves, Gresham’s pattern appears. The statute does not defeat arbitrage.",
-      "The American political event is the [Crime of 1873](/history/america/crime-of-1873). The mechanics are on this page.",
+      "Spanish colonial mints struck the **real de a ocho** — eight reales — as a large silver coin of roughly **27 grams** (about **0.87 troy ounces** of fine silver on familiar later reckoning, with mint and wear variation). The type carried the Habsburg or Bourbon arms, mint marks, and dates. Pieces from Mexico City, Potosí, Lima, and other American mints entered Atlantic and Pacific trade.",
+      "“Piece of eight” is the English name. “Spanish dollar” is the commercial name that stuck in North America and the Caribbean. Neither name invents a new metal. Both name a familiar weight of silver that strangers could recognise without a letter of credit from a local prince.",
+      "Subsidiary cuts — bits of eight — were everyday arithmetic. Two bits made a quarter of the dollar in later American slang. The parent coin stayed the large settlement piece. That divisibility in practice, not only in statute, helped the type travel.",
+    ],
+  },
+  {
+    heading: "From American mints to world ports",
+    paragraphs: [
+      "Colonial American silver did not stay in the Andes or New Spain. It moved to fleets, to Seville and Cádiz, into European payments, and — via the **Manila galleon** — toward China and the wider Asian silver market. The mountain story sits on [Potosí](/history/silver/potosi). This page keeps the coin: the piece that arrived as payment in ports that never saw Cerro Rico.",
+      "In the Caribbean and British North America, Spanish dollars were ordinary money when local coin was scarce. Contracts, wages, and taxes often meant that coin when they said “dollar.” East Asian trade absorbed Spanish silver as a settlement metal after earlier paper experiments had failed or been abandoned. A typed piece from a Spanish American mint could close a deal in Canton or Manila because the metal and the type were known.",
+      "Rival coins existed — Dutch, Portuguese, later British trade dollars. The Spanish eight-real piece won on volume and familiarity. Network effects matter in money: the coin you can spend tomorrow is the coin you accept today.",
+    ],
+  },
+  {
+    heading: "Why a typed silver piece worked as a global unit",
+    paragraphs: [
+      "A global coin is not a metaphor. It is a repeated claim about weight and fineness that markets actually use. The piece of eight combined three facts: Spanish American mines supplied silver at empire scale; colonial and metropolitan mints stamped a recognisable type; and commercial routes already priced goods in that type.",
+      "Trust still mattered. Clipped, plugged, and counterfeit pieces forced scales and assays. Familiarity lowered the cost of checking; it did not abolish checking. When a mint lightened the coin or a counterparty doubted the type, Gresham’s pattern and discounting returned. The stamp is a claim. Claims can fail. The piece of eight’s success was that, for long stretches, the claim held across oceans.",
+      "Keep the jobs labeled. [Greece’s owl](/history/ancient/greece-silver-trade) is an earlier silver network at Mediterranean scale. Potosí is early-modern volume. The piece of eight is the coin face of that volume. Do not mash Laurion into the Spanish dollar.",
+    ],
+  },
+  {
+    heading: "The United States inherits the habit",
+    paragraphs: [
+      "The [Coinage Act of 1792](/history/america/early-us-coinage) defined a silver dollar whose weight sat close to the Spanish piece Americans already used. Hamilton and Congress did not invent the dollar from blank paper. They wrote a statute beside a commercial habit. Gold sat beside silver at a fixed mint ratio — the opening of American [bimetallism](/history/silver/bimetallism).",
+      "That continuity is the hinge between this cluster and the America shelf. Spanish silver had already made a global coin. The United States adopted a unit traders understood, then fought for a century over whether gold, silver, or paper would rule the large unit. The piece of eight is the inherited face. The Crime of 1873 is a later American statute fight.",
+      "After independence, Spanish dollars continued to circulate in the United States for decades. Statute and mint output took time to replace a coin the Atlantic already knew. The documentary point is inheritance, not nostalgia.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1490s–1500s:** Spanish American conquest and early colonial mining; silver begins to enter Atlantic payments.",
+      "**1540s onward:** Potosí and other American mines feed colonial mints; eight-real pieces become empire coin.",
+      "**1565–1815 era:** Manila galleon links Acapulco silver to Asian settlement demand.",
+      "**17th–18th centuries:** Spanish dollars common money in Caribbean and British North America.",
+      "**1792:** U.S. Coinage Act defines a dollar near the Spanish silver weight; gold beside silver at a mint ratio.",
+      "**19th century:** National coinages and gold standards gradually displace the Spanish dollar as everyday unit — the type’s global job fades; the metal story continues.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. It is the documentary stop for the Spanish dollar as a circulating global silver unit.",
+      "Parent hub: [silver in history](/history/silver). Mountain: [Potosí](/history/silver/potosi). American inheritance: [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics: [bimetallism](/history/silver/bimetallism). Keep **1980** and industrial silver on their own stops.",
     ],
   },
 ];
@@ -1494,15 +1519,183 @@ const silverThursday: Section[] = [
   {
     heading: "A squeeze, then a rule change",
     paragraphs: [
-      "In 1979–80 Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. The price ran toward **$50 an ounce** in January 1980. In late March, after exchange and dealer rule changes that raised margins and limited buys, the price collapsed. **Silver Thursday** — **27 March 1980** — is the name of the break.",
-      "This page stays factual: positions, rules, the print, the break. It is not a forecast, and it is not a stock story. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "In **1979–80** Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. The price ran toward **$50 an ounce** in January **1980**. In late March, after exchange and dealer rule changes that raised margins and limited new longs, the price collapsed. **Silver Thursday** — **27 March 1980** — is the name of the break.",
+      "This page stays factual: positions, rules, the print, the break. It is not a forecast, not a stock story, and not a brief for repeating the trade. [Information versus advice](/sound-money/information-not-advice) is the standing line. Parent hub: [silver in history](/history/silver). The market quotient that uses 1980 as an arithmetic anchor sits on the [gold–silver ratio](/markets/gold-silver-ratio) fact page — a different job.",
+    ],
+  },
+  {
+    heading: "Who held what",
+    paragraphs: [
+      "The Hunt group and associated interests accumulated physical silver and long futures on a scale that mattered for a market thinner than gold’s. Contemporary estimates put the controlling interest in hundreds of millions of ounces when paper and metal are counted together — exact tallies still vary by source and by how one treats warehouse receipts and forward claims. The documentary fact is concentration: a small circle of names sat on a large share of deliverable and paper silver.",
+      "Motivation in the public record mixed inflation fear after the 1970s, distrust of paper claims, and a bet that silver’s monetary memory still mattered. This page does not psychoanalyse the Hunts. It records that a concentrated long met a physical and futures market that could not absorb unlimited demand at the old tape without a sharp print move.",
+      "Partners and financing arrangements mattered when the break came. Brokers who had financed the position demanded more capital as margins rose and prices fell. Forced selling is a plumbing fact, not a morality play.",
+    ],
+  },
+  {
+    heading: "The January 1980 run",
+    paragraphs: [
+      "Silver’s nearby extreme in the Hunt-era run, used on this site’s desk print, is **$49.45** on **18 January 1980**. London gold’s PM fix printed **$850** on **21 January**. Those two named prints give a gold–silver ratio near **17.2** for that peak week — arithmetic on the [ratio page](/markets/gold-silver-ratio), narrative here.",
+      "The January tape is not Silver Thursday. January is the run. March is the unwind. Keep the labels on the dates. Year-average silver for **1980** on this site’s money-path series is much lower than the January extreme; a year average and a peak-week print answer different questions.",
+      "Physical tightness, futures delivery pressure, and speculative follow-on buying all fed the print. A concentrated long can bid a thin market. It can also invite a rule book response. That response is the next section.",
     ],
   },
   {
     heading: "What changed at the exchange",
     paragraphs: [
-      "A concentrated long can bid a thin physical market. It can also meet a rulebook. COMEX and related dealers tightened margin and restricted new longs. Liquidity that had been assumed on the way up was not there on the way down. The Hunts’ brokers demanded more capital. Forced selling followed.",
-      "The [1980 high](/desk) on this site’s desk is the January print, not a target. Silver Thursday is the March unwind of that run.",
+      "COMEX and related dealers tightened margin requirements and restricted new long positions — famously moving toward rules that made it harder to add longs while shorts and liquidation remained possible. Liquidity that had been assumed on the way up was not there on the way down. The Hunts’ brokers demanded more capital. Forced selling followed.",
+      "Exchange rule changes are not a free-market parable and not a conspiracy slogan. They are the institutional fact of 1980’s silver break: a venue that had listed the contracts altered the terms under which new speculative demand could bid. Whether one judges those changes as prudence or as a rescue of shorts is politics. The documentary sequence is rule change → margin pressure → liquidation → collapse of the print.",
+      "Dealer and bank counterparties sat in the middle. When variation margin and credit lines moved against the longs, the position could not be held at the old size. Silver Thursday names the day the break became public theater.",
+    ],
+  },
+  {
+    heading: "27 March 1980 and the aftermath",
+    paragraphs: [
+      "**27 March 1980** — Silver Thursday — saw silver futures crash as liquidation hit a market already strained by higher margins and restricted new longs. The January extreme was gone. Brokers and the Hunt interests negotiated under intense pressure. Lawsuits, congressional attention, and exchange post-mortems followed in the months and years after.",
+      "The break did not erase silver’s industrial or monetary memory. It did show that a concentrated futures-and-bullion position can meet a rule book and a credit constraint faster than a narrative about remonetization can answer. Later silver markets still use 1980 as a dated print memory. This site’s desk treats the January high as a historical print, not a target.",
+      "Do not mash Silver Thursday into the [Crime of 1873](/history/america/crime-of-1873) or into [bimetallism](/history/silver/bimetallism). 1873 is a Mint list. Bimetallism is a mint-ratio statute problem. 1980 is a concentrated private position and an exchange response. Three silver stories; three hinges.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1970s:** Inflation and dollar weakness; private interest in monetary metals rises.",
+      "**1979:** Hunt-group accumulation of silver bullion and futures becomes a market-moving fact.",
+      "**18 January 1980:** Silver nearby extreme used on this site’s desk (~**$49.45**).",
+      "**21 January 1980:** London gold PM **$850** — peak-week pair for ratio arithmetic.",
+      "**Late March 1980:** Margin hikes and limits on new longs; liquidation pressure builds.",
+      "**27 March 1980:** Silver Thursday — sharp break as forced selling hits.",
+      "**After 1980:** Litigation, hearings, and a lasting cautionary memory of concentration plus rule change.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a recommendation to purchase or sell the metal, not a price target, and not a stock tip about any company tied to the Hunts or to COMEX. It is positions, rules, dated prints, and a March break — documentary only.",
+      "Parent hub: [silver in history](/history/silver). Dual role of the metal: [monetary history and industry](/history/silver/monetary-and-industry). Market quotient: [gold–silver ratio](/markets/gold-silver-ratio). Standing line: [information versus advice](/sound-money/information-not-advice).",
+    ],
+  },
+];
+
+const bimetallism: Section[] = [
+  {
+    heading: "Two metals, one legal unit",
+    paragraphs: [
+      "Bimetallism is the attempt to keep gold and silver in the same monetary system at a **fixed mint ratio**. The mint stands ready to coin both metals into full-weight money at that legal number. When the **market ratio** — the gold price of silver in trade — moves away from the mint number, Gresham’s pattern appears. The statute does not defeat arbitrage.",
+      "This page carries the general mechanics. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. Parent hub: [silver in history](/history/silver).",
+    ],
+  },
+  {
+    heading: "Mint ratio versus market ratio",
+    paragraphs: [
+      "A **mint ratio** is a law: so many units of silver equal one unit of gold at the Mint. The Coinage Act of **1792** used **fifteen to one**. Later U.S. practice and free-silver politics often spoke of **sixteen to one**. Those numbers are statutes or political demands. They are not geology.",
+      "A **market ratio** is a quotient of two prices at a date: gold’s print divided by silver’s print, or the trade price of one metal in terms of the other. Mines, industrial use, war, and monetary demand move that quotient. The Mint’s number can sit still while the market moves.",
+      "When the two diverge, one metal is legally overvalued at the Mint relative to the other. People bring the overvalued metal to be coined and melt or export the undervalued metal. The circulating coinage skews. That is not a moral failure of one metal. It is arithmetic under a fixed legal price.",
+    ],
+  },
+  {
+    heading: "Gresham’s pattern in mint dress",
+    paragraphs: [
+      "“Bad money drives out good” is the slogan. The mechanism under bimetallism is sharper: the metal that the Mint overvalues relative to the market tends to stay in coin; the metal the Mint undervalues tends to leave circulation. “Bad” and “good” here mean legally mispriced relative to trade, not moral labels.",
+      "States can change the mint ratio, suspend free coinage of one metal, or move to a gold or silver standard in practice while keeping the other metal as subsidiary coin. Europe’s late-nineteenth-century gold turn and America’s **1834** gold-friendlier correction are examples of ratio politics. The [Crime of 1873](/history/america/crime-of-1873) is the American omission of free coinage of the standard silver dollar — a different instrument from rewriting 15:1 on the page, with the same family of pressures behind it.",
+      "Keep the rhyme labeled. A mint-ratio fight is not a warehouse-receipt story from [banks and paper](/history/banks-paper), and it is not the 1980 Hunt squeeze. Different centuries, different instruments.",
+    ],
+  },
+  {
+    heading: "Europe’s gold turn and the Latin Monetary Union",
+    paragraphs: [
+      "Several European states entered the nineteenth century with bimetallic or silver habits and left it closer to gold. Germany’s shift after unification in the early **1870s** dumped silver onto the market and pressured other mints. France and partners in the **Latin Monetary Union** (from **1865**) tried to coordinate silver and gold coin standards across borders — a treaty about fineness and circulation, not a single central bank.",
+      "When silver’s gold price fell and gold became the preferred large-value standard among major trading states, bimetallism’s fixed ratios became harder to defend. Subsidiary silver — small change with limited legal tender — could remain while the large unit went gold. That European context sits behind America’s 1873 politics without being identical to them.",
+      "Union members still faced the same Gresham arithmetic when market and mint ratios drifted. Coordination of coin types does not freeze the world price of silver. This page does not retell every European statute. It names the pressure: a world market for silver, a gold preference among creditors and large-payment systems, and mint ratios that no longer matched trade.",
+    ],
+  },
+  {
+    heading: "America’s face of the same problem",
+    paragraphs: [
+      "The United States wrote gold and silver into law in **1792** at fifteen to one. When the world ratio drifted, the undervalued metal left. **1834** moved the U.S. ratio gold-friendlier. After the Civil War’s greenbacks and resumption fights, the [Coinage Act of 1873](/history/america/crime-of-1873) omitted free coinage of the standard silver dollar. Free silver at sixteen to one became the agrarian demand. Bryan’s **1896** campaign was the peak volume.",
+      "Open the America episodes for the statute narrative. This page only states the mechanism those statutes were fighting over: two metals, one legal unit, a ratio that markets will not freeze. Cross-links stay short so the silver shelf and the America shelf do not dissolve into one megapage.",
+      "After **1900** the United States defined the dollar in gold in statute. Silver’s political fight cooled as a remonetization campaign. Silver’s monetary memory and industrial job continued — the next stops on this cluster. The mint-ratio lesson remains: a legal number is not a market equilibrium, and renaming the fight does not repeal arbitrage.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1792:** U.S. Coinage Act — gold and silver at **15:1** mint ratio.",
+      "**1834:** U.S. gold-friendlier ratio correction.",
+      "**1865:** Latin Monetary Union begins coordinating coin standards among members.",
+      "**Early 1870s:** German gold shift; world silver price under pressure.",
+      "**1873:** U.S. Coinage Act omits free coinage of the standard silver dollar.",
+      "**1878–1890:** Bland–Allison and Sherman silver-purchase compromises (America shelf).",
+      "**1896:** Bryan free-silver campaign; gold side wins the election.",
+      "**1900:** U.S. Gold Standard Act — dollar defined in gold.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a brief for remonetizing silver, not a target for today’s gold–silver quotient, and not a pitch to hold either metal. It is mint ratio, market ratio, and Gresham under a two-metal statute — documentary only.",
+      "Parent hub: [silver in history](/history/silver). American statute hinge: [Crime of 1873](/history/america/crime-of-1873). Opening arithmetic: [early U.S. coinage](/history/america/early-us-coinage). Market quotient without a mint claim: [gold–silver ratio](/markets/gold-silver-ratio).",
+    ],
+  },
+];
+
+const potosi: Section[] = [
+  {
+    heading: "A mountain that moved the world’s silver",
+    paragraphs: [
+      "Cerro Rico at Potosí — in today’s Bolivia — was worked from the **1540s**. For a century and more it was the great silver source of the Spanish empire. Output did not stay in the Andes. It moved to the mint, to the fleet, to Seville, into European payments, and — via the **Manila galleon** — toward China, where silver was the settlement metal of a much larger commercial system.",
+      "The lesson for this map is flow, not romance: a mountain can set the silver stock of two oceans. The [world map](/maps) is the visual companion. Production and reserves sit there, not on this page. The coin face of the flow is the [piece of eight](/history/silver/piece-of-eight). Parent hub: [silver in history](/history/silver).",
+    ],
+  },
+  {
+    heading: "Discovery and the colonial machine",
+    paragraphs: [
+      "Indigenous and Spanish accounts place major silver discoveries at Potosí in the **1540s**. The crown organised extraction, refining, mita labour drafts, and a mint. Mercury amalgamation (the patio process and later refinements) raised recovery from poorer ores. Output in the later sixteenth and early seventeenth centuries reached a scale that contemporaries treated as a wonder and that modern economic historians still treat as a hinge in global silver supply.",
+      "Potosí was not the only American mine — New Spain (Mexico) and other Andean sites mattered — but Cerro Rico became the symbol and, for long stretches, the largest single source. A city grew at altitude around the mountain. The fiscal machine of the Spanish empire ran in part on that altitude. Without refining, labour, and a mint mark, ore in a mountain is not yet money in a port.",
+      "Exact annual tonnage series vary by reconstruction. The documentary claim this cluster needs is directional: Potosí-class American silver flooded Eurasian payments for generations. Geology plus empire organisation produced a monetary fact — a stock large enough that later mint ratios and Asian settlement habits had to live with it.",
+    ],
+  },
+  {
+    heading: "Why the silver moved",
+    paragraphs: [
+      "Spain needed silver to pay armies, to service debts, and to keep a far-flung fiscal machine from seizing. Europe needed a money metal already priced in every port. China, after the collapse or abandonment of earlier paper experiments, took silver as the unit that actually arrived in trade.",
+      "American silver therefore did three jobs at once: imperial finance, European liquidity, and Asian settlement. Those jobs pulled metal across the Atlantic and the Pacific. The mountain did not choose a destination. Ships, taxes, and trade balances did.",
+      "Price-level and terms-of-trade debates among historians — how much Potosí silver raised European prices, how much stayed in Spain, how much leaked to northern Europe — are real scholarly fights. This page does not settle them. It records the flow path: mine → mint → fleet → Eurasian payments. The [piece of eight](/history/silver/piece-of-eight) is what many counterparties held when those ounces arrived as coin.",
+    ],
+  },
+  {
+    heading: "The Manila galleon and Asian demand",
+    paragraphs: [
+      "From the late sixteenth century, the **Manila galleon** linked Acapulco to Manila, carrying American silver westward and Asian goods eastward. Chinese demand for silver as a settlement and tax metal made Spanish American ounces welcome in East Asian trade. Silver that never saw Seville still left the Americas.",
+      "That Pacific leg matters for the cluster’s claim. Silver history is not only a European inflation story. It is a two-ocean redistribution of monetary metal from a New World mountain into Old World and Asian ledgers. The [piece of eight](/history/silver/piece-of-eight) is what many counterparties actually handled when the ounces arrived as coin.",
+      "When Asian silver demand, European wars, or mine exhaustion shifted, the same routes carried different volumes. The galleon is infrastructure. The mountain is supply. Together they set a global silver stock that later mint ratios and gold standards had to live with.",
+    ],
+  },
+  {
+    heading: "What the flood changed — and what it did not",
+    paragraphs: [
+      "A sudden rise in silver supply changes relative prices, mint economics, and the political value of controlling mines. It does not invent money. Mediterranean and Asian silver habits already existed — [Greece’s Laurion network](/history/ancient/greece-silver-trade) is an earlier rhyme at smaller scale. Potosí is early-modern volume under a global empire.",
+      "Nor does a silver flood permanently freeze a mint ratio. Later centuries still saw Gresham under [bimetallism](/history/silver/bimetallism), Europe’s gold turn, and America’s silver question. More silver in the world stock is one input into those fights. It is not the whole statute story.",
+      "Keep the hinges labeled. Potosí is the hole in the ground. The piece of eight is the coin. Bimetallism is the legal ratio problem. Silver Thursday is a 1980 futures-and-bullion break. Industrial silver is a twentieth-century second job. One mountain does not swallow the shelf.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1540s:** Major Potosí silver working begins; colonial mint and labour regimes follow.",
+      "**Later 16th–early 17th centuries:** Peak decades of Cerro Rico fame and output in empire finance.",
+      "**1565 onward:** Manila galleon system links American silver to Asian settlement demand.",
+      "**17th–18th centuries:** American silver remains central to Spanish fiscal and global trade flows; other mines share the load.",
+      "**19th century:** Independence, new mining technology, and later Comstock-class strikes shift the geography of supply — Potosí’s monopoly fame fades; silver’s monetary politics continue.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a mining prospectus, not a travel brochure, and not a claim that today’s silver price “should” remember Potosí. It is the documentary stop for Cerro Rico as a global silver source — flow, mint, fleet, and Asian demand.",
+      "Parent hub: [silver in history](/history/silver). Coin face: [piece of eight](/history/silver/piece-of-eight). Visual companion: [world map](/maps). Earlier silver network rhyme: [Greece: silver and trade](/history/ancient/greece-silver-trade).",
     ],
   },
 ];
@@ -1512,6 +1705,58 @@ const silverIndustry: Section[] = [
     heading: "Two jobs at once",
     paragraphs: [
       "Silver is still money in memory: coins, bars, a hedge people name in the same breath as gold. It is also an industrial input — photography for a long twentieth century, then electronics, then photovoltaics. Those two jobs pull the metal in different directions. This page names the split. It does not forecast which job wins.",
+      "Parent hub: [silver in history](/history/silver). Monetary narrative stops on this shelf are [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), and [Silver Thursday](/history/silver/silver-thursday). Country rankings of bar-and-coin offtake live under [physical silver demand by country](/markets/physical-silver-demand-by-country) — a markets fact page, not this history stop.",
+    ],
+  },
+  {
+    heading: "Monetary memory",
+    paragraphs: [
+      "For most of recorded monetary history, silver was everyday money where gold was the large unit — or silver was the main unit where gold was scarce. Coins, plate, and bullion settled taxes and trade. That memory survives in language, in bullion markets, and in political slogans long after most states left silver as a standard for the large unit.",
+      "America’s silver question after **1873**, Europe’s gold turn, and the piece-of-eight’s global career are monetary stories. They explain why people still reach for silver when they talk about hard money. They do not decide how many ounces a solar factory needs next year.",
+      "Keep the label. Monetary demand is a stock-and-trust story: coins, bars, ETPs, and private hoards. Industrial demand is a flow-into-products story. Mixing the two without a label produces slogans about “shortage” that do not say which job is tight. A vault ounce and a paste ounce can print the same chemical symbol and still answer different questions. Official-sector silver, when it appears at all in modern survey books, is usually a rounding line beside those two larger jobs — not a second central-bank gold story.",
+    ],
+  },
+  {
+    heading: "Photography’s long century",
+    paragraphs: [
+      "Silver halide photography consumed large quantities of silver through the nineteenth and twentieth centuries. Film, paper, and X-ray plates locked metal into images. Recovery and recycling existed; much metal still left the monetary stock into industrial use.",
+      "Digital imaging cut that fabrication line sharply from the late twentieth century onward. The documentary point is not nostalgia for film. It is that an industrial job can dominate silver’s flow for a century and then shrink — without erasing silver’s monetary memory.",
+      "Survey tables on this site’s markets shelf separate fabrication from investment offtake for that reason. Photography is one fabrication chapter. It is not the whole industrial book, and it is not bar-and-coin demand. Readers who want dated country investment lines should open the markets spoke, not treat this history stop as a substitute table.",
+    ],
+  },
+  {
+    heading: "Electronics, then photovoltaics",
+    paragraphs: [
+      "Silver’s conductivity and reliability made it a standard input in electronics — contacts, pastes, and related uses. In the twenty-first century, **photovoltaic** silver paste became a major fabrication line in World Silver Survey–class tallies. Other industrial uses (brazing, soldering, chemistry) share the book.",
+      "Industrial demand is sensitive to technology and to thrifting: manufacturers reduce silver loading per unit when prices rise or when engineering allows. A high fabrication total is not a permanent floor under a spot print. It is a dated flow into products.",
+      "This page does not project solar build rates or electronics cycles. It records that silver’s second job is real, large in survey ounces relative to investment offtake in many years, and different in kind from a coin in a drawer. Jewelry and silverware are further fabrication and consumer lines — again labeled separately from monetary bars when honest survey books keep the jobs apart.",
+    ],
+  },
+  {
+    heading: "How to read the split",
+    paragraphs: [
+      "When a headline says “silver demand,” ask which series: coin-and-bar investment, jewelry, industrial fabrication, or official-sector lines. The [physical silver demand by country](/markets/physical-silver-demand-by-country) page explains the investment ranking. The [gold–silver ratio](/markets/gold-silver-ratio) page explains a dated price quotient. Neither page is a history of Potosí or of 1980.",
+      "History’s job on this stop is the dual role as a narrative fact: silver kept a monetary identity while acquiring industrial identities. Practice’s job — bars, coins, premiums — lives under [gold and silver in practice](/gold-silver). Mixing a fabrication survey with a how-to produces a pitch. Keeping the label produces a claim you can check.",
+      "Cross-links to America stay where statute politics need them ([Crime of 1873](/history/america/crime-of-1873), [bimetallism](/history/silver/bimetallism)). Cross-links to markets stay where current survey arithmetic lives. This episode does not reprint those tables. If a sentence cannot say whether it means money-stock demand or fabrication flow, it is not ready for this map.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**Pre-1800s:** Silver primarily a monetary and ornamental metal in the stories this pillar tells.",
+      "**1800s–1900s:** Photography and other chemical/industrial uses grow beside coinage and plate.",
+      "**Late 19th century:** Political fights over silver as money (America shelf; bimetallism) while industrial use rises.",
+      "**20th century:** Electronics and remaining photographic use; most states leave silver as the large-unit standard.",
+      "**21st century:** Photovoltaics and electronics as major fabrication lines in survey books; investment offtake tracked separately.",
+      "**1980:** Hunt-era squeeze — a monetary-market event on a metal that already had industrial demand ([Silver Thursday](/history/silver/silver-thursday)).",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a forecast of industrial tightness, not a solar investment case, and not a reason to purchase or sell the metal. It is the documentary naming of silver’s dual monetary and industrial role. A fabrication ounce and a vault ounce can share a chemical symbol without sharing a demand series.",
+      "Parent hub: [silver in history](/history/silver). Earlier monetary stops: [Potosí](/history/silver/potosi), [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), [Silver Thursday](/history/silver/silver-thursday). Markets companions: [physical silver demand by country](/markets/physical-silver-demand-by-country), [gold–silver ratio](/markets/gold-silver-ratio).",
     ],
   },
 ];
@@ -2040,6 +2285,63 @@ export const americaHubBody: Section[] = [
       "Cross-links to the [20th-century cluster](/history/20th-century) stay forward-only from the last episode and from Jackson’s light Fed pointer. Cross-links to [silver history](/history/silver/bimetallism) stay where bimetallism’s general mechanics help. Related links on each episode stay short so the path does not dissolve into a web of weak matches.",
       "This hub does not retell every stop at full length. It fixes the claim — the American argument over what the dollar is — and follows that argument until the 1900 gold statute. Linear order is the on-ramp: early coinage, Jackson, greenbacks, 1873, road back to gold. Readers who already know one hinge can enter sideways and still use the index to see what sits before and after.",
       "For orientation back to the whole pillar, use [Sound Money History](/history). For the modern door after 1900, use the twentieth-century hub linked above. The cluster’s value is the ordered door, not a single megapage that tries to be all five stories at once.",
+    ],
+  },
+];
+
+/** Cluster hub /history/silver — rendered by the cluster route from Cluster.sections. */
+export const silverHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This cluster is silver’s own shelf: a mountain, a global coin, a mint-ratio problem, a **1980** squeeze, then the metal’s dual monetary and industrial role. It is not a footnote to gold stories, and it is not a markets fact table.",
+      "Start from the [history pillar](/history) for the five-cluster path. Read the silver stops as flow → coin → statute mechanics → modern break → dual role, or enter at the hinge you need — [piece of eight](/history/silver/piece-of-eight) for the global coin, [bimetallism](/history/silver/bimetallism) for mint ratios, [Silver Thursday](/history/silver/silver-thursday) for 1980. American statute volume stays on the [America cluster](/history/america); cross-link, do not merge.",
+    ],
+  },
+  {
+    heading: "The claim: silver is not a gold footnote",
+    paragraphs: [
+      "Gold histories often treat silver as a supporting actor. This shelf reverses that habit for five stops. Potosí set a global silver stock. The piece of eight carried that stock as a typed coin. Bimetallism tried to freeze gold and silver in one legal unit. Silver Thursday showed a concentrated private position meeting an exchange rule book. Industrial demand then gave the metal a second job beside monetary memory.",
+      "This hub is not a pitch to hold silver, not a price target, and not a remonetization brief. It is an ordered door from early-modern flow to a dual-role present — documentary only.",
+    ],
+  },
+  {
+    heading: "The path: mountain to dual role",
+    paragraphs: [
+      "[Potosí](/history/silver/potosi) is Cerro Rico from the **1540s**: mine, mint, fleet, Seville, and the Manila galleon toward Asian settlement demand. Flow, not romance. The [world map](/maps) is the visual companion.",
+      "The [piece of eight](/history/silver/piece-of-eight) is the coin face — roughly **27 grams** of Spanish American silver that priced cargo from the Caribbean to East Asia. The early United States defined a dollar with that habit in mind; open [early U.S. coinage](/history/america/early-us-coinage) for the inheritance arithmetic.",
+      "[Bimetallism](/history/silver/bimetallism) is mint ratio versus market ratio and Gresham under a two-metal statute. America’s loud event is the [Crime of 1873](/history/america/crime-of-1873). Keep mechanics here and statute politics there.",
+      "[Silver Thursday](/history/silver/silver-thursday) is **27 March 1980**: Hunt-era concentration, January prints near **$50**, then margin hikes, limits on new longs, and a March break. Facts only — [information versus advice](/sound-money/information-not-advice).",
+      "[Monetary history and industry](/history/silver/monetary-and-industry) names the split: money in memory, industrial input in fabrication surveys. Country investment rankings and ratio arithmetic live under [markets](/markets), not as reprints on this hub.",
+    ],
+  },
+  {
+    heading: "Do not mash 1545, 1873, and 1980",
+    paragraphs: [
+      "Potosí is early-modern supply under empire. **1873** is a U.S. Mint list and a free-silver politics. **1980** is a private futures-and-bullion concentration plus an exchange response. Three silver centuries are not one crisis and not one lesson about “printing.”",
+      "Likewise: a mint ratio is a law; a market gold–silver quotient is a dated pair of prints; industrial fabrication is a flow into products. A rhyme teaches mechanism. A merge erases the instrument.",
+    ],
+  },
+  {
+    heading: "Episode index",
+    paragraphs: [
+      "Each line is a job description. All five episodes on this shelf are thickened narratives. This hub does not reprint every timeline.",
+    ],
+    list: [
+      "[Piece of eight](/history/silver/piece-of-eight) — Spanish dollar as a circulating global silver unit; U.S. dollar inheritance.",
+      "[Silver Thursday / Hunt Brothers 1980](/history/silver/silver-thursday) — Concentrated position, rule changes, 27 March 1980 break; facts only.",
+      "[Bimetallism](/history/silver/bimetallism) — Fixed mint ratio, market ratio drift, Gresham; link to Crime of 1873.",
+      "[Potosí](/history/silver/potosi) — Cerro Rico, Manila galleon, silver flow into Eurasian payments.",
+      "[Silver: monetary history and industry](/history/silver/monetary-and-industry) — Monetary memory versus photography, electronics, photovoltaics.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Read this page top to bottom if you want silver’s shelf from mountain to dual role. Jump to [piece of eight](/history/silver/piece-of-eight) if you need the global coin. Jump to [bimetallism](/history/silver/bimetallism) if you need mint-ratio mechanics beside America’s [Crime of 1873](/history/america/crime-of-1873). Jump to [Silver Thursday](/history/silver/silver-thursday) if you need 1980. Return to [Sound Money History](/history) for ancient coinage, banks-paper, America, or the twentieth-century door.",
+      "Cross-links to America stay where statute politics help. Cross-links to [markets](/markets) stay where current survey and ratio facts live. Related links on each episode stay short so the path does not dissolve into a web of weak matches.",
+      "This hub does not retell every stop at full length. It fixes the claim — silver needs its own shelf — and follows that claim through five stops. Linear order on the write queue was long-tail first; the reading path can still follow calendar and mechanism. Readers who already know one hinge can enter sideways and use the index to see what sits before and after.",
+      "For orientation back to the whole pillar, use [Sound Money History](/history). For bar-and-coin practice, use [gold and silver in practice](/gold-silver) — a different pillar with a different job. The cluster’s value is the ordered silver door, not a single megapage that tries to be mountain, statute, squeeze, and solar paste at once.",
     ],
   },
 ];
