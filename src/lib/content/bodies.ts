@@ -946,8 +946,58 @@ const earlyUs: Section[] = [
   {
     heading: "A republic that named both metals",
     paragraphs: [
-      "The Coinage Act of 1792 wrote gold and silver into United States law and fixed a mint ratio (fifteen to one). Which metal actually stayed in circulation was decided by the market ratio, not by the preamble.",
-      "When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded. The 1834 change toward a gold-friendlier ratio is part of the same arithmetic.",
+      "The Coinage Act of **1792** wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar was a unit that could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
+      "This page is the opening statute of the America cluster — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream. Start here for the arithmetic that made those fights possible.",
+    ],
+  },
+  {
+    heading: "What the Coinage Act of 1792 did",
+    paragraphs: [
+      "Congress established a Mint and defined the dollar in both gold and silver. A silver dollar was to contain **371.25 grains** of pure silver. Gold coins were set so that fifteen ounces of pure silver equaled one ounce of pure gold at the Mint. That **15:1** ratio was the legal bridge between the two metals.",
+      "The Act also named smaller silver coins and gold eagles, half-eagles, and quarter-eagles. Copper cents and half-cents covered small change. The design was bimetallic in law: either metal could settle a dollar debt at the posted weights. The statute did not invent money. It named a unit and a ratio for a republic that already traded in Spanish dollars and foreign coin.",
+      "Hamilton’s Report on the Establishment of a Mint (1791) had argued for a bimetallic dollar and for a ratio close to market practice. The 1792 Act is the legislative result. Later politics would treat “bimetallism” as a slogan. In 1792 it was a mint board: two metals, one legal unit, a fixed conversion.",
+    ],
+  },
+  {
+    heading: "The Spanish dollar in the background",
+    paragraphs: [
+      "The early United States did not invent its silver weight from blank paper. The Spanish eight-real piece — the [piece of eight](/history/silver/piece-of-eight) — had long been the common dollar of Atlantic trade. American contracts and statutes often meant that coin when they said “dollar.” The 1792 silver weight sat close to that familiar piece.",
+      "Foreign coin remained legal tender for years. The Mint was slow to supply enough domestic pieces. Circulation was a mix of Spanish and other foreign silver, scarce gold, and bank notes of uneven quality. The statute named an American unit. Daily payment still used what was in the bag.",
+      "That continuity matters for this map. Potosí silver and Spanish minting had already made a global silver coin. The United States adopted a dollar that traders already understood, then wrote gold beside it at a fixed ratio. The [silver cluster](/history/silver/bimetallism) carries the mechanics of two metals under one law. This page carries the American opening.",
+    ],
+  },
+  {
+    heading: "Mint ratio versus market ratio",
+    paragraphs: [
+      "A mint ratio is a legal price: how many ounces of silver equal one ounce of gold at the Mint. A market ratio is what traders actually pay in London, Amsterdam, or Paris. When the two drift, arbitrage follows. The metal that is cheaper at the Mint relative to the world is brought in for coinage. The metal that is dearer at the Mint is melted, exported, or hoarded.",
+      "That is Gresham’s pattern in mint dress: the legally overvalued metal stays in circulation; the undervalued metal leaves. The statute does not defeat the scale. [Bimetallism](/history/silver/bimetallism) is the general claim. Early U.S. coinage is the American instance.",
+      "Through the early nineteenth century, silver often looked cheap at 15:1 relative to European gold–silver prices. Gold tended to leave. The republic’s circulating coin leaned silver. The legal bridge still said both metals. The till said otherwise.",
+    ],
+  },
+  {
+    heading: "The 1834 correction",
+    paragraphs: [
+      "In **1834** Congress changed the gold content of the eagle so that the mint ratio moved toward roughly **16:1**. The intent was gold-friendlier: to bring gold back into circulation by making an ounce of gold buy more silver at the Mint than before.",
+      "After 1834, gold coins became more common in domestic use. Silver dollars and smaller silver still mattered, but the legal tilt had shifted. The arithmetic is the same as 1792 — a fixed ratio meeting a moving market — only the numbers changed. The later omission of the standard silver dollar in [1873](/history/america/crime-of-1873) sits on this path: once the system leaned gold, dropping free coinage of the silver dollar was easier to frame as clarification.",
+      "Do not read 1834 as the end of silver politics. Subsidiary silver and later “free silver” campaigns still filled the century. Read it as a ratio change that showed the Mint could rewrite the bridge when circulation failed the preamble.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1791:** Hamilton’s mint report argues for a bimetallic dollar and a practical gold–silver ratio.",
+      "**2 April 1792:** Coinage Act; Mint established; silver dollar at 371.25 grains pure; gold at 15:1.",
+      "**1790s–1820s:** Foreign silver (especially Spanish dollars) remains central to circulation; gold often scarce at 15:1.",
+      "**1834:** Gold content of the eagle adjusted; mint ratio moves toward ~16:1; gold returns more readily to the till.",
+      "**Later on this cluster:** Jackson’s bank war, greenbacks, the Coinage Act of 1873, resumption, Gold Standard Act 1900.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a collector guide, not a bullion pitch, and not a price target for either metal. It is the statute that named both metals and a ratio — and the market arithmetic that decided which metal stayed.",
+      "Parent hub: [America & gold/silver politics](/history/america). Next monetary fight on this shelf: [Jackson and the Bank](/history/america/jackson-and-the-bank). The silver question’s loud American event is the [Crime of 1873](/history/america/crime-of-1873). Cross-link for the coin that shaped the dollar: [piece of eight](/history/silver/piece-of-eight).",
     ],
   },
 ];
@@ -956,8 +1006,59 @@ const jackson: Section[] = [
   {
     heading: "A bank fight before the Fed",
     paragraphs: [
-      "Andrew Jackson’s war on the Second Bank of the United States (charter fight, 1832 veto, removal of deposits) is American politics and monetary history at once. The Bank was a federally chartered corporation that issued notes and held government funds. Jackson treated it as a concentrated power.",
-      "Federal deposits moved to state “pet” banks. The Specie Circular (1836) required gold and silver for public land. The Panic of 1837 followed. The later central-bank statute is 1913 — the [Panic of 1907](/history/20th-century/panic-1907-fed).",
+      "Andrew Jackson’s war on the Second Bank of the United States is American politics and monetary history at once. The Bank was a federally chartered corporation that issued notes, held government deposits, and sat at the center of the country’s credit. Jackson treated it as concentrated power. His **1832** veto blocked recharter. Federal deposits moved to state “pet” banks. The Specie Circular of **1836** required gold and silver for public land. The Panic of **1837** followed.",
+      "This page stays documentary: charter, veto, deposits, specie rule, panic. It is not a sermon for or against central banks, and it is not the [Panic of 1907](/history/20th-century/panic-1907-fed). The later Federal Reserve statute is **1913**. Jackson’s fight is an earlier American argument over who holds the government’s money and who issues the country’s paper.",
+    ],
+  },
+  {
+    heading: "What the Second Bank was",
+    paragraphs: [
+      "The First Bank of the United States (1791–1811) had already shown the pattern: a federal charter, mixed public and private ownership, note issue, and a role as the government’s fiscal agent. After the War of 1812, Congress chartered the Second Bank in **1816**, with a twenty-year term. Nicholas Biddle became its dominant president. The Bank’s notes circulated widely. It also restrained state banks by presenting their notes for specie.",
+      "Supporters called that discipline sound. Opponents called it a monopoly over credit and politics. The Bank was not a modern central bank with a dual mandate and open-market operations. It was a privileged corporation with a federal seal, a large capital, and the Treasury’s account. That was enough to make it a national issue.",
+      "By the early 1830s the charter’s end was in sight. Biddle and allies pressed for early recharter. Jackson and the Democratic coalition framed the Bank as a threat to equal rights and hard money. The fight was about power and specie as much as about balance sheets.",
+    ],
+  },
+  {
+    heading: "The 1832 veto and the election",
+    paragraphs: [
+      "Congress passed a recharter bill in **1832**, well before the 1836 expiry. Jackson vetoed it. His veto message attacked the Bank as unconstitutional, as a privilege for the wealthy, and as a foreign-influenced corporation. The message was politics as much as jurisprudence. It made the Bank the issue of the 1832 presidential campaign.",
+      "Jackson won reelection. The veto stood. The Bank would not receive a new federal charter on that bill. Biddle still ran the existing institution until the charter ran out, but the political verdict had landed: the federal center would not be renewed by that Congress and that President.",
+      "Do not confuse the veto with the later removal of deposits. The veto stopped recharter. The deposit removal was a separate executive move that starved the Bank of the government’s cash.",
+    ],
+  },
+  {
+    heading: "Pet banks and the Specie Circular",
+    paragraphs: [
+      "After the veto fight, Jackson’s Treasury began removing federal deposits from the Second Bank and placing them in selected state banks — the “pet banks” of contemporary abuse. The government’s money no longer sat in one federally chartered vault. It sat in a scattered set of state institutions whose note issue and lending the administration preferred to the Bank’s discipline.",
+      "Land sales in the West were booming. Speculators often paid with bank paper. In **1836** the Specie Circular ordered that public lands be paid for in gold and silver. The rule was a hard-money brake on paper land fever. It also drained specie from banks that had been extending credit against land notes.",
+      "The mix — deposit removal, state-bank expansion, then a sudden specie demand for land — belongs in any account of the mid-1830s. Whether one blames Jackson, Biddle, state banks, or the land boom depends on the historian. The documentary sequence does not.",
+    ],
+  },
+  {
+    heading: "Panic of 1837 and the aftermath",
+    paragraphs: [
+      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. This page does not pick a single villain. It notes that the panic followed the deposit and specie sequence by months, not decades.",
+      "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early 1840s. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the 1860s.",
+      "The next time a national liquidity panic forces a central-bank debate at full volume is [1907](/history/20th-century/panic-1907-fed). That episode creates the Fed. It does not replay Jackson’s veto. Keep the centuries labeled.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1816:** Second Bank of the United States chartered for twenty years.",
+      "**1832:** Congress passes recharter; Jackson vetoes; Jackson reelected with the Bank as a campaign issue.",
+      "**1833–34:** Federal deposits removed from the Bank to state “pet” banks.",
+      "**1836:** Specie Circular — gold and silver required for public-land purchases; Bank’s federal charter expires.",
+      "**1837:** Panic; widespread suspension of specie payments.",
+      "**1913 (later cluster):** Federal Reserve Act — after the Panic of 1907, not as a sequel to Jackson’s veto message.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not investment advice, not a brief for “end the Fed,” and not a biography of Jackson. It is the Bank war as a monetary-political event: charter, veto, deposits, specie, panic — then a country without a federal central bank until a later century’s statute.",
+      "Parent hub: [America & gold/silver politics](/history/america). Previous stop on the unit: [Early U.S. coinage](/history/america/early-us-coinage). Next war-finance hinge: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Cross-link forward: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed).",
     ],
   },
 ];
@@ -966,18 +1067,123 @@ const greenbacks: Section[] = [
   {
     heading: "Paper as a war measure",
     paragraphs: [
-      "The Union financed the Civil War in part with United States Notes — greenbacks — made legal tender in 1862. They were not redeemable in gold at the time. Gold traded at a premium to paper in a free gold market in New York.",
-      "Whether to contract the greenbacks, whether to resume gold payments, and at what parity, dominated postwar politics. The Resumption Act of 1875 set a date (1879).",
+      "The Union financed the Civil War in part with United States Notes — greenbacks — made legal tender by the Legal Tender Act of **1862**. They were not redeemable in gold at the time. Gold traded at a premium to paper in a free gold market in New York. Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever.",
+      "After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. This page covers issue, premium, and the road to that date. The [Crime of 1873](/history/america/crime-of-1873) and the [Gold Standard Act of 1900](/history/america/road-back-gold) are neighbors, not the same statute.",
+    ],
+  },
+  {
+    heading: "Why the Union issued greenbacks",
+    paragraphs: [
+      "War spending outran ordinary tax and bond finance. Banks suspended specie payments at the end of **1861**. The Treasury needed a currency the public and contractors would accept when gold coin was scarce in daily Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
+      "Legal tender meant creditors had to accept the notes for most public and private debts, with exceptions such as customs duties and interest on some bonds, which stayed closer to gold. The notes were obligations of the United States. They were not warehouse receipts for a named pile of coin. Convertibility into gold was suspended for the duration of the emergency.",
+      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. This page stays with the Union greenback — the paper that survived the war and then dominated peacetime politics.",
+    ],
+  },
+  {
+    heading: "Gold premium and the New York gold room",
+    paragraphs: [
+      "Once greenbacks were legal tender and gold was still the international and customs metal, two prices appeared. Goods and contracts quoted in “currency” (paper) diverged from prices in gold. In New York a gold market — informal, then more organized — posted the premium of gold over greenbacks.",
+      "When Union fortunes looked dark, the premium widened: more greenbacks were needed to buy a gold dollar. When military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. Ordinary wage earners felt the premium as higher currency prices for goods tied to gold or imports.",
+      "The premium is the documentary proof that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. [Inflation as purchasing-power erosion](/sound-money/inflation-purchasing-power) is the idea-pillar label for that squeeze. This page is the wartime instrument.",
+    ],
+  },
+  {
+    heading: "Legal tender cases and postwar politics",
+    paragraphs: [
+      "After the war, debtors liked paying in cheaper paper. Creditors wanted gold or contraction of the note issue. Courts eventually upheld the constitutionality of legal-tender notes for debts, in a tangled set of Legal Tender Cases that flipped and then settled in favor of the power Congress had used.",
+      "Politics split along familiar lines. “Hard money” voices wanted a rapid return to specie and a smaller greenback stock. Greenback Party and agrarian voices wanted more paper, or at least no contraction that would raise the real burden of debts. Bondholders who had lent in gold terms watched every Treasury signal.",
+      "National banking acts during and after the war created a federal note framework beside the greenback. The two paper stocks were not the same instrument: bank notes under national charter, United States Notes as direct Treasury obligations. Public argument often mashed them into one “paper money” complaint. The documentary split still matters for how resumption was staged.",
+      "The greenback was no longer only a war tool. It was a peacetime unit whose quantity and convertibility would decide winners and losers on every farm mortgage and railroad bond.",
+    ],
+  },
+  {
+    heading: "Resumption Act of 1875",
+    paragraphs: [
+      "The Specie Payment Resumption Act committed the Treasury to redeem United States Notes in coin on and after **1 January 1879**. The Act also allowed gradual reduction of the greenback circulation toward a floor, and it authorized gold accumulation to make the promise credible.",
+      "Resumption did not happen overnight in 1865. It took a decade of politics, surplus fiscal conditions in some years, and a Treasury that actually built a gold reserve. Opponents tried to repeal or soften the commitment; the date held. When the day came, greenbacks traded at par with gold; the wartime premium was gone. The paper note became again a claim on coin at a one-to-one practical rate.",
+      "Full legal definition of the dollar as a gold unit waited until the [Gold Standard Act of 1900](/history/america/road-back-gold). Resumption was the operational hinge. The 1900 statute was the label. Between them sat the silver fight that begins with the [Coinage Act of 1873](/history/america/crime-of-1873).",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**December 1861:** Banks suspend specie payments.",
+      "**February 1862:** Legal Tender Act — United States Notes (greenbacks) authorized as legal tender.",
+      "**1862–65:** Gold premium fluctuates with war news; greenbacks finance a large share of Union spending.",
+      "**1865–75:** Postwar fight over contraction versus more paper; Legal Tender Cases in the courts.",
+      "**January 1875:** Specie Payment Resumption Act; redemption date set for 1 January 1879.",
+      "**1 January 1879:** Specie payments resume; greenbacks at par with gold in practice.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a price target, not a tip to hold paper or metal, and not a full fiscal history of the Civil War. It is greenbacks as inconvertible war paper, a gold premium, and a dated path back to specie.",
+      "Parent hub: [America & gold/silver politics](/history/america). Earlier bank fight: [Jackson and the Bank](/history/america/jackson-and-the-bank). Next silver statute: [Crime of 1873](/history/america/crime-of-1873). Idea-pillar companion: [Inflation and purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
 ];
 
 const crime1873: Section[] = [
   {
-    heading: "What the act did",
+    heading: "What the Coinage Act of 1873 did",
     paragraphs: [
-      "The Coinage Act of 1873 omitted the standard silver dollar from the list of coins to be minted. In later agrarian politics that omission became the “Crime of 1873”: a conspiracy to demonetize silver. In the Treasury’s telling it was a clarification toward gold, aligned with Europe. The statute is the fact.",
-      "Silver producers and debtors wanted “free silver” — unlimited coinage at sixteen to one. William Jennings Bryan’s 1896 campaign is the loud face of a fight that started in this act.",
+      "The Coinage Act of **1873** revised the Mint’s list of coins. It omitted the standard silver dollar from the coins to be freely minted. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
+      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. The documentary fact is the statute’s list. The name “crime” is the political memory.",
+      "This page separates those layers. Parent hub: [America & gold/silver politics](/history/america). Mechanics of two metals under one law: [bimetallism](/history/silver/bimetallism). The road after the silver fight: [resumption and the 1900 gold statute](/history/america/road-back-gold).",
+    ],
+  },
+  {
+    heading: "Why silver was already under pressure",
+    paragraphs: [
+      "World silver supply rose in the late nineteenth century — Nevada’s Comstock and other Western mines among the sources — while several European states moved toward gold. Germany’s shift after unification dumped silver onto the market. The gold–silver market ratio moved away from older mint habits. Silver’s gold price fell.",
+      "The United States had already tilted gold-friendlier in [1834](/history/america/early-us-coinage). Greenback war finance had suspended specie. By the early 1870s, officials drafting a mint revision treated the silver dollar as a coin little used in large payments and awkward beside a gold unit. Dropping free coinage of that dollar looked, to them, like housekeeping.",
+      "Housekeeping in a mint statute can still reprice every farm debt. When silver could no longer be coined freely into full-weight dollars, silver producers lost a floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory.",
+    ],
+  },
+  {
+    heading: "Crime or clarification?",
+    paragraphs: [
+      "The “crime” charge held that the Act was slipped through without honest debate — that silver’s friends in Congress did not see the demonetization coming. Historians still argue how open the drafting was and how much Western silver interests understood at the time. What is not in dispute: the standard silver dollar left the free-coinage list, and gold’s primacy hardened.",
+      "The clarification charge held that the United States was joining a gold-standard world, that bimetallism at a stale ratio invited arbitrage, and that subsidiary silver was enough for small change. Europe’s gold turn is real context. It does not erase the domestic distributional fight that followed.",
+      "This map does not referee the moral word “crime.” It records the Act, the nickname, and the politics that nickname organized. Readers who want the general mechanism open [bimetallism](/history/silver/bimetallism). Readers who want the American statute stay here.",
+    ],
+  },
+  {
+    heading: "Free silver and the 16-to-1 demand",
+    paragraphs: [
+      "“Free silver” meant unlimited coinage of silver into dollars at a fixed mint ratio — famously **sixteen to one** with gold — without the limits that later compromise acts imposed. Silver producers wanted a Mint bid for their metal. Debtors wanted a larger money stock and a cheaper dollar relative to gold debts.",
+      "Congress did not ignore silver entirely after 1873. The Bland–Allison Act (**1878**) and the Sherman Silver Purchase Act (**1890**) required Treasury purchases of silver and limited coinage or note issue against it. Those were compromises, not free coinage at 16:1. Markets still watched whether the Treasury could hold gold payments while it accumulated silver.",
+      "The fight was national. Mining states, Southern and Western agrarians, and urban hard-money and creditor interests mapped onto parties and factions. The greenback generation’s paper fight and the silver generation’s metal fight were cousins: both asked whether the dollar would stay scarce relative to debts.",
+    ],
+  },
+  {
+    heading: "Bryan, 1896, and the cross of gold",
+    paragraphs: [
+      "William Jennings Bryan’s **1896** Democratic campaign is the loud face of the silver question. His “cross of gold” speech attacked a gold-only standard as crucifixion of the producing classes. The Republican ticket defended the gold dollar. Bryan lost. Gold discoveries and other conditions eased monetary stringency in the years that followed, but the political memory of 1873 did not vanish.",
+      "Bryan did not invent the silver question. He inherited a fight that began with the Mint list of 1873 and ran through purchase acts, Treasury gold drains, and the language of crime. The campaign is the peak volume, not the first statute.",
+      "After 1896 the path runs toward the [Gold Standard Act of 1900](/history/america/road-back-gold), which defined the dollar in gold in law. The Crime of 1873 is the silver hinge on the way there.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1871–73:** Germany and others move toward gold; world silver price under pressure.",
+      "**12 February 1873:** Coinage Act omits free coinage of the standard silver dollar.",
+      "**1878:** Bland–Allison Act — limited Treasury silver purchases and coinage.",
+      "**1890:** Sherman Silver Purchase Act — larger silver purchases; later linked to gold-reserve strain.",
+      "**1893:** Sherman Act repealed amid crisis; gold standard politics intensify.",
+      "**1896:** Bryan’s free-silver campaign; gold side wins the election.",
+      "**1900:** Gold Standard Act — dollar defined in gold (next page on this cluster).",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a bullion pitch, not a metal-ratio target, and not a brief for remonetization today. It is the 1873 Mint revision, the “crime” nickname, free silver, and Bryan — documentary only.",
+      "Parent hub: [America & gold/silver politics](/history/america). Earlier unit: [Early U.S. coinage](/history/america/early-us-coinage). War paper neighbor: [Greenbacks](/history/america/greenbacks-civil-war). Next: [Road back toward gold](/history/america/road-back-gold). Cross-cluster: [Bimetallism](/history/silver/bimetallism).",
     ],
   },
 ];
@@ -986,7 +1192,60 @@ const roadBack: Section[] = [
   {
     heading: "Resumption, then a gold statute",
     paragraphs: [
-      "Specie payments resumed in 1879: greenbacks could again be treated as claims on gold at par, in practice. The Gold Standard Act of 1900 defined the dollar in gold. The United States entered the twentieth century as a gold-standard country in law. The next cluster starts with the [Panic of 1907](/history/20th-century/panic-1907-fed).",
+      "After greenbacks came a political and legal path back toward gold payments. Specie payments resumed on **1 January 1879**: United States Notes could again be treated as claims on gold at par in practice. The **Gold Standard Act of 1900** then defined the dollar in gold in statute. The United States entered the twentieth century as a gold-standard country in law.",
+      "This overview stops before the Fed. The silver fight of [1873](/history/america/crime-of-1873) and the war paper of [1862–79](/history/america/greenbacks-civil-war) are the hinges behind resumption. The next cluster opens with the [Panic of 1907](/history/20th-century/panic-1907-fed). Do not drag 1913 or 1971 onto this page except as labeled forward links.",
+    ],
+  },
+  {
+    heading: "What resumption meant in 1879",
+    paragraphs: [
+      "Resumption meant the Treasury would pay coin for greenbacks at face value. The wartime gold premium — paper dollars trading below gold dollars — had to be closed by policy, fiscal conditions, and credibility, not by a speech alone. The Resumption Act of **1875** had named the date. The years between built a gold reserve and tested whether politics would let the date stand.",
+      "When **1879** arrived, greenbacks and gold met at par in the markets that mattered. The paper note was again a convenient claim on the metallic dollar, not a rival depreciated unit. That is an operational gold standard for the government’s notes. It is not yet the full statutory sentence of 1900.",
+      "Resumption also sat beside the silver question. Bland–Allison purchases and later Sherman purchases meant the Treasury dealt in silver while promising gold. The credibility of gold payments depended on the gold reserve, not on the nickname of the standard. A note at par with gold in January can still face a run if silver policy later looks like a second unit fighting the first.",
+    ],
+  },
+  {
+    heading: "Silver purchase acts and gold-reserve strain",
+    paragraphs: [
+      "Bland–Allison (**1878**) and Sherman (**1890**) required silver purchases that expanded silver coin or silver-backed notes. Holders who doubted the Treasury’s gold line could present claims and drain gold. In the early **1890s** gold outflows and reserve scares were part of public finance news. The panic year **1893** brought repeal of the Sherman purchase duty.",
+      "The Cleveland administrations’ gold-bond sales and defense of the reserve are part of this road. So is the political cost: defenders of gold looked like Wall Street’s allies; silver advocates looked like inflationists to the gold camp. The documentary point is mechanical. A Treasury that buys silver and pays gold needs enough gold — or enough credibility — to survive presentation of notes.",
+      "Bryan’s **1896** defeat reduced the odds of free silver at 16:1. New gold supplies in the late 1890s — including large finds that expanded the world gold stock — eased monetary stringency. The political path cleared for a statute that said gold without the same fear of an immediate silver flood. The [Crime of 1873](/history/america/crime-of-1873) page carries the nickname and the free-silver demand; this page carries the reserve arithmetic that made a gold statute feel safe enough to pass.",
+    ],
+  },
+  {
+    heading: "The Gold Standard Act of 1900",
+    paragraphs: [
+      "The Gold Standard Act defined the dollar as **25.8 grains** of gold nine-tenths fine — the familiar gold dollar parity — and put the gold commitment in clear statutory language. Silver remained in subsidiary and limited roles. The Act was the legal full stop after decades of greenback and silver argument.",
+      "“Gold standard” here means a legal definition and a redemption practice for the government’s money, not a promise that banks never fail or that prices never move. It means the unit was gold in law. The America cluster’s arc — [1792 bimetallism](/history/america/early-us-coinage), bank war, greenbacks, 1873, resumption — lands on that sentence.",
+      "International gold-standard practice among major economies was already the late-nineteenth-century norm. The 1900 Act aligned the United States’ legal text with that order. Domestic politics had spent a generation arguing whether silver would share the stage. The Act answered with gold as the definition of the dollar. The classical gold world’s wartime break comes later, on the [20th-century shelf](/history/20th-century/classical-gold-standard-end).",
+    ],
+  },
+  {
+    heading: "Where this cluster hands off",
+    paragraphs: [
+      "America’s shelf ends at the gold statute and the door to 1907. It does not narrate the Federal Reserve Act, the 1933 gold recall, or the 1971 gold-window close. Those are [20th-century](/history/20th-century) episodes with their own mechanisms and dates.",
+      "Read this page as the bridge: greenbacks back to par, silver politics contained enough for a gold definition, then stop. Open [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed) for the next liquidity crisis and the public central bank Jackson’s century did not build. That panic is about trust-company plumbing and a missing lender of last resort — not a replay of 1873’s Mint list.",
+      "Cross-links stay short. Silver mechanics live under [bimetallism](/history/silver/bimetallism). War paper detail lives under [greenbacks](/history/america/greenbacks-civil-war). The crime nickname lives under [1873](/history/america/crime-of-1873).",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**1875:** Specie Payment Resumption Act; redemption date set for 1879.",
+      "**1878–90:** Bland–Allison and Sherman silver-purchase frameworks.",
+      "**1 January 1879:** Specie payments resume; greenbacks at par with gold.",
+      "**1893:** Panic; Sherman Silver Purchase Act repealed.",
+      "**1896:** Bryan loses; gold-standard politics strengthened.",
+      "**14 March 1900:** Gold Standard Act; dollar defined in gold.",
+      "**Next cluster:** Panic of 1907 → Federal Reserve Act 1913.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a recommendation to hold gold, not a convertibility target, and not a full history of the classical gold standard worldwide. It is the American road from greenback resumption to the 1900 gold statute — then a clean handoff to 1907.",
+      "Parent hub: [America & gold/silver politics](/history/america). Previous silver hinge: [Crime of 1873](/history/america/crime-of-1873). War paper: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Forward: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed).",
     ],
   },
 ];
@@ -1520,6 +1779,63 @@ export const twentiethCenturyHubBody: Section[] = [
       "This hub does not retell every episode in full. It does not turn 1907 into a personality cult, and it does not treat 1971 as a sudden invention of paper money. It fixes the path, names each page’s job, and keeps the claim sharp: from private rescue to central bank to paper collapse to gold recall to 1971.",
       "A practical reading order for newcomers is linear: 1907 and the Fed, then classical gold’s end, then Weimar, then 1933, then Bretton Woods and Nixon. Readers who already know one hinge can enter sideways and still use the index to see what sits before and after. Related links on each episode stay short—usually the cluster hub plus one neighbor—so the path does not dissolve into a web of weak matches.",
       "For orientation back to the whole pillar, use **/history**. For the Weimar mechanism in detail, open the Weimar episode linked above. For the gold-window close, open the Bretton Woods page. The cluster’s value is the ordered door—not a single megapage that tries to be all five stories at once.",
+    ],
+  },
+];
+
+/** Cluster hub /history/america — rendered by the cluster route from Cluster.sections. */
+export const americaHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This cluster is the American argument over the unit: two metals in **1792**, Jackson’s bank war, greenbacks as war paper, the silver question after **1873**, then a gold-standard statute in **1900**. The shelf stops before the Fed. **1907**, **1933**, and **1971** live on the [20th-century cluster](/history/20th-century).",
+      "Start from the [history pillar](/history) for the five-cluster path. Read the America stops in calendar order, or enter at the hinge you need — [Crime of 1873](/history/america/crime-of-1873) for silver politics, [greenbacks](/history/america/greenbacks-civil-war) for war paper, [road back toward gold](/history/america/road-back-gold) for the handoff to 1907. Do not mash Jackson’s veto with the Federal Reserve Act.",
+    ],
+  },
+  {
+    heading: "The claim: what the dollar is",
+    paragraphs: [
+      "America’s monetary fights are statute fights. Congress names a mint ratio, charters or kills a bank, makes paper legal tender, omits a silver dollar from free coinage, then defines the dollar in gold. Markets answer with Gresham’s pattern, gold premiums, and reserve drains. The cluster’s claim is narrow: inside one republic, the unit’s metal and paper rules were contested in public law.",
+      "This hub is not a pitch to hold metal, not a price target, and not a brief for remonetization. It is an ordered door from bimetallism to the 1900 gold statute — then a clean stop so the next shelf can open with 1907.",
+    ],
+  },
+  {
+    heading: "The path: 1792 to 1900",
+    paragraphs: [
+      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The Spanish dollar shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
+      "[Jackson and the Bank](/history/america/jackson-and-the-bank) is the fight over the Second Bank: **1832** veto, pet banks, Specie Circular, Panic of **1837**. The country then lived a long stretch without a federally chartered central bank. That is not **1913**. Keep the centuries labeled.",
+      "[Greenbacks](/history/america/greenbacks-civil-war) financed the Union after **1862**. Legal tender paper floated below gold in New York until the Resumption Act’s date — **1 January 1879** — restored par in practice. War paper is a suspension, not a permanent theory of money.",
+      "The [Coinage Act of 1873](/history/america/crime-of-1873) omitted free coinage of the standard silver dollar. Agrarian politics called it a crime; officials called it clarification toward gold. Free silver, Bland–Allison, Sherman, and Bryan’s **1896** campaign are that fight’s volume. The mechanics of two metals under one law also sit on [bimetallism](/history/silver/bimetallism).",
+      "The [road back toward gold](/history/america/road-back-gold) closes the shelf: resumption in **1879**, Gold Standard Act in **1900**, then handoff to the [Panic of 1907](/history/20th-century/panic-1907-fed). This hub only places the bridge. Open the episode for the reserve strain and the statute’s grains.",
+    ],
+  },
+  {
+    heading: "Do not mash 1832, 1862, and 1913",
+    paragraphs: [
+      "Jackson’s bank war is a charter and deposit fight before any Federal Reserve. Greenbacks are Civil War legal tender. The Fed is a **1913** answer to **1907** trust-company plumbing. Three rhymes about credit and paper are not one institution and not one century.",
+      "Likewise: **1873** is a Mint list; **1900** is a gold definition; **1971** is a foreign official gold-window close on another cluster. A rhyme teaches mechanism. A merge erases dates.",
+    ],
+  },
+  {
+    heading: "Episode index",
+    paragraphs: [
+      "Each line is a job description. All five episodes on this shelf are thickened narratives. This hub does not reprint every timeline.",
+    ],
+    list: [
+      "[Early U.S. coinage / bimetallism](/history/america/early-us-coinage) — 1792 mint ratio, Spanish dollar background, 1834 gold-friendlier correction; Gresham at the Mint.",
+      "[Jackson and the Bank](/history/america/jackson-and-the-bank) — Second Bank, 1832 veto, pet banks, Specie Circular, Panic of 1837; not the Fed.",
+      "[Greenbacks and the Civil War](/history/america/greenbacks-civil-war) — Legal tender war paper, gold premium, Resumption Act, specie payments 1879.",
+      "[The Crime of 1873 and the silver question](/history/america/crime-of-1873) — Coinage Act omits the silver dollar; free silver; Bryan 1896.",
+      "[The road back toward the gold standard](/history/america/road-back-gold) — Resumption, silver-purchase strain, Gold Standard Act 1900; handoff to 1907.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Read this page top to bottom if you want the republic’s unit from 1792 to 1900. Jump to [Crime of 1873](/history/america/crime-of-1873) if you already need the silver hinge. Jump to [road back toward gold](/history/america/road-back-gold) if you need the bridge into the twentieth century. Return to [Sound Money History](/history) for ancient coinage, banks-paper, silver, or the modern door.",
+      "Cross-links to the [20th-century cluster](/history/20th-century) stay forward-only from the last episode and from Jackson’s light Fed pointer. Cross-links to [silver history](/history/silver/bimetallism) stay where bimetallism’s general mechanics help. Related links on each episode stay short so the path does not dissolve into a web of weak matches.",
+      "This hub does not retell every stop at full length. It fixes the claim — the American argument over what the dollar is — and follows that argument until the 1900 gold statute. Linear order is the on-ramp: early coinage, Jackson, greenbacks, 1873, road back to gold. Readers who already know one hinge can enter sideways and still use the index to see what sits before and after.",
+      "For orientation back to the whole pillar, use [Sound Money History](/history). For the modern door after 1900, use the twentieth-century hub linked above. The cluster’s value is the ordered door, not a single megapage that tries to be all five stories at once.",
     ],
   },
 ];

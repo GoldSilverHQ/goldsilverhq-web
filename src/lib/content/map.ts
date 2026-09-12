@@ -1,4 +1,10 @@
-import { ancientHubBody, banksPaperHubBody, twentiethCenturyHubBody, type Section } from "./bodies";
+import {
+  americaHubBody,
+  ancientHubBody,
+  banksPaperHubBody,
+  twentiethCenturyHubBody,
+  type Section,
+} from "./bodies";
 
 export type Episode = {
   slug: string;
@@ -460,11 +466,17 @@ export const historyClusters: Cluster[] = [
   {
     slug: "america",
     title: "America & gold/silver politics",
-    summary: "Bimetallism, greenbacks, 1873, and the long argument over what the dollar is.",
-    intro: [
-      "This cluster is the American argument over the unit: two metals in 1792, Jackson’s bank war, greenbacks, the silver question, then a gold-standard statute in 1900.",
-      "All five episodes now have first drafts. It stops before the Fed. 1907, 1933, and 1971 live in the [20th-century cluster](/history/20th-century).",
+    summary:
+      "Bimetallism, greenbacks, 1873, and the long argument over what the dollar is — from the 1792 mint ratio to the Gold Standard Act of 1900.",
+    sections: americaHubBody,
+    related: [
+      { title: "Sound Money History", href: "/history" },
+      { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+      { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
     ],
+    seo: {
+      titleTag: "America & Gold/Silver Politics: 1792 to 1900",
+    },
     episodes: [
       {
         slug: "early-us-coinage",
