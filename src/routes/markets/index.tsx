@@ -3,17 +3,16 @@ import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article"
 import { SiteShell } from "@/components/SiteShell";
 import { marketsHubBody } from "@/lib/content/bodies";
 import { marketPages, marketsHub, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/markets/")({
   head: () => ({
-    meta: [
-      { title: seoTitle(marketsHub.titleTag) },
-      {
-        name: "description",
-        content:
-          "Gold and silver market facts: official U.S. book value, central-bank reserves, the gold–silver ratio, and physical silver demand by country. Documentary figures — not tips, and not sound-money history.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: seoTitle(marketsHub.titleTag),
+      description:
+        "Gold and silver market facts: official U.S. book value, central-bank reserves, the gold–silver ratio, and physical silver demand by country. Documentary figures — not tips, and not sound-money history.",
+      path: "/markets",
+    }),
   }),
   component: MarketsHub,
 });

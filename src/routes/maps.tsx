@@ -2,17 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { WorldMap } from "@/components/WorldMap";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/maps")({
   head: () => ({
-    meta: [
-      { title: "The world in gold & silver — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Interactive world map of gold and silver: mine production and reserves. Toggle metal, pick a metric, inspect a country.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: "The world in gold & silver — GoldSilverHQ",
+      description:
+        "Interactive world map of gold and silver: mine production and reserves. Toggle metal, pick a metric, inspect a country.",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: MapsPage,
 });

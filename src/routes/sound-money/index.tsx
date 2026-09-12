@@ -3,17 +3,16 @@ import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article"
 import { SiteShell } from "@/components/SiteShell";
 import { soundMoneyHubBody } from "@/lib/content/bodies";
 import { ideaPages, seoTitle, soundMoneyHub } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/sound-money/")({
   head: () => ({
-    meta: [
-      { title: seoTitle(soundMoneyHub.titleTag) },
-      {
-        name: "description",
-        content:
-          "What sound money means: a unit that cannot be expanded at will. Hard money vs fiat, inflation, and backed money — definitions only. History lives elsewhere.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: seoTitle(soundMoneyHub.titleTag),
+      description:
+        "What sound money means: a unit that cannot be expanded at will. Hard money vs fiat, inflation, and backed money — definitions only. History lives elsewhere.",
+      path: "/sound-money",
+    }),
   }),
   component: IdeaHub,
 });

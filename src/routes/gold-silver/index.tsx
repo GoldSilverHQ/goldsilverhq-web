@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb, RichText } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { practicePages } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 const INTRO = [
   "This pillar answers how people handle metal — bars versus coins, premiums, storage, fakes at a high level, first ounces. It is educational. It is not a shop, and it is not advice. Read [information vs advice](/sound-money/information-not-advice) first if that line is unclear.",
@@ -10,14 +11,12 @@ const INTRO = [
 
 export const Route = createFileRoute("/gold-silver/")({
   head: () => ({
-    meta: [
-      { title: "Gold bars vs coins, storage, premiums — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Practical notes on gold bars versus coins, premiums over spot, storage, fakes, and first ounces. Neutral and educational. Not investment advice.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: "Gold bars vs coins, storage, premiums — GoldSilverHQ",
+      description:
+        "Practical notes on gold bars versus coins, premiums over spot, storage, fakes, and first ounces. Neutral and educational. Not investment advice.",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: PracticeHub,
 });

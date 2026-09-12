@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArticleSections, Breadcrumb, RelatedLinks, RichText } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getCluster, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/history/$cluster/")({
   loader: ({ params }) => {
@@ -9,12 +10,17 @@ export const Route = createFileRoute("/history/$cluster/")({
     if (!cluster) throw notFound();
     return cluster;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "History") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData, params }) => {
+    const title = seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "History");
+    const description = loaderData?.summary ?? "";
+    return {
+      meta: pageShareMeta({
+        title,
+        description,
+        path: `/history/${params.cluster}`,
+      }),
+    };
+  },
   component: ClusterPage,
 });
 

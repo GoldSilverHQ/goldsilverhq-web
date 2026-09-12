@@ -5,7 +5,7 @@ import {
   silverHubBody,
   twentiethCenturyHubBody,
   type Section,
-} from "./bodies";
+} from "./bodies.ts";
 
 export type Episode = {
   slug: string;

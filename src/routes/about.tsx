@@ -2,17 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { pillars } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [
-      { title: "About GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice. BaFin-clean.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: "About GoldSilverHQ",
+      description:
+        "GoldSilverHQ is educational media on sound money, monetary history, and physical metal. Not investment advice. BaFin-clean.",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: AboutPage,
 });

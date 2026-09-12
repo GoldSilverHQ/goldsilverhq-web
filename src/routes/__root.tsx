@@ -1,22 +1,24 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "GoldSilverHQ";
+const DEFAULT_DESCRIPTION =
+  "Sound money, monetary history, and practical gold and silver. Media only. Not investment advice.";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: APP_NAME },
-      {
-        name: "description",
-        content:
-          "Sound money, monetary history, and practical gold and silver. Media only. Not investment advice.",
-      },
       { name: "theme-color", content: "#070605" },
+      ...pageShareMeta({
+        title: APP_NAME,
+        description: DEFAULT_DESCRIPTION,
+        imagePath: "/og.jpg",
+      }),
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

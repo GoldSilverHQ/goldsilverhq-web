@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { getIdea, seoTitle } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/sound-money/$slug")({
   loader: ({ params }) => {
@@ -9,12 +10,17 @@ export const Route = createFileRoute("/sound-money/$slug")({
     if (!page) throw notFound();
     return page;
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "Sound Money") },
-      { name: "description", content: loaderData?.summary ?? "" },
-    ],
-  }),
+  head: ({ loaderData, params }) => {
+    const title = seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "Sound Money");
+    const description = loaderData?.summary ?? "";
+    return {
+      meta: pageShareMeta({
+        title,
+        description,
+        path: `/sound-money/${params.slug}`,
+      }),
+    };
+  },
   component: IdeaPage,
 });
 

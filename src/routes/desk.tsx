@@ -4,17 +4,16 @@ import { MetalsClock } from "@/components/MetalsClock";
 import { MoneyPath } from "@/components/MoneyPath";
 import { SiteShell } from "@/components/SiteShell";
 import { pillars } from "@/lib/content/map";
+import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/desk")({
   head: () => ({
-    meta: [
-      { title: "Metals desk — prices, ratio, central banks — GoldSilverHQ" },
-      {
-        name: "description",
-        content:
-          "Gold and silver desk: the full metals clock, five-year COMEX tape, 1980 highs, dollar purchasing power, and central-bank gold.",
-      },
-    ],
+    meta: pageShareMeta({
+      title: "Metals desk — prices, ratio, central banks — GoldSilverHQ",
+      description:
+        "Gold and silver desk: the full metals clock, five-year COMEX tape, 1980 highs, dollar purchasing power, and central-bank gold.",
+      imagePath: "/og.jpg",
+    }),
   }),
   component: DeskPage,
 });
