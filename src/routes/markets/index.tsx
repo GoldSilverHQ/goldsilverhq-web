@@ -38,7 +38,7 @@ function MarketsHub() {
               params={{ slug: page.slug }}
               className="rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
             >
-              <p className="text-xs text-gold">Spoke {i + 1}</p>
+              <p className="text-xs text-gold">Topic {i + 1}</p>
               <h3 className="mt-2 font-sans text-2xl">{page.title}</h3>
               <p className="mt-2 text-sm text-muted">{page.summary}</p>
               <p className="mt-4 text-sm text-gold">Open page →</p>

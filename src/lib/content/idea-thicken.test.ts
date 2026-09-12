@@ -101,7 +101,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.match(text, /\[Hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /\[Inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
     assert.match(text, /\[What “backed” means\]\(\/sound-money\/backed-money\)/);
-    assert.match(text, /Do not park Weimar or Nixon on this hub/);
+    assert.match(text, /Weimar and Nixon belong in history, not on this definitions page/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of IDEA_EPISODES) {

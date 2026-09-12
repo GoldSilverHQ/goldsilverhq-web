@@ -26,7 +26,7 @@ export const FEATURED = [
   {
     kicker: "The idea",
     title: "What is sound money?",
-    summary: "A unit whose supply cannot be expanded at will. History lives in the next pillar.",
+    summary: "A unit whose supply cannot be expanded at will. The dated stories live under History.",
     href: "/sound-money/what-is-sound-money",
     cluster: "sound-money",
     episode: "what-is-sound-money",

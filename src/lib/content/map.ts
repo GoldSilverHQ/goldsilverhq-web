@@ -87,25 +87,25 @@ export const pillars: Pillar[] = [
     id: "sound-money",
     path: "/sound-money",
     title: "Sound Money",
-    kicker: "Pillar 1 · The idea",
+    kicker: "The idea",
     question: "What does sound money mean?",
     summary:
-      "Definitions only: hard money versus fiat, purchasing power, and what “backed” does and does not mean. History stays in its own pillar.",
+      "Definitions only: hard money versus fiat, purchasing power, and what “backed” does and does not mean. Dated events live under History.",
   },
   {
     id: "history",
     path: "/history",
     title: "Sound Money History",
-    kicker: "Pillar 2 · What happened",
+    kicker: "What happened",
     question: "What happened?",
     summary:
-      "Five clusters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not in the idea pillar.",
+      "Five chapters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not under the definitions.",
   },
   {
     id: "gold-silver",
     path: "/gold-silver",
     title: "Gold & Silver in Practice",
-    kicker: "Pillar 3 · How to handle metal",
+    kicker: "How to handle metal",
     question: "How do I handle metal?",
     summary:
       "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist. Neutral and educational.",
@@ -114,7 +114,7 @@ export const pillars: Pillar[] = [
     id: "markets",
     path: "/markets",
     title: "Gold & Silver Markets",
-    kicker: "Pillar 4 · Current figures",
+    kicker: "Current figures",
     question: "What do the current figures say?",
     summary:
       "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country — dated market facts. Not sound-money history, and not how to buy a bar.",
@@ -129,8 +129,8 @@ export const ideaPages: Episode[] = [
     status: "ready",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. Historically that constraint came from the cost of mining gold and silver. The point of the idea is not nostalgia. It is about whether the unit of account stays honest over long periods.",
-      "This pillar stays on meaning. Weimar, Nixon, and the Fed belong in history. Mixing the two makes both weaker for readers and for search engines.",
-      "Use this page as the entry to hard money versus fiat, inflation, and what “backed” actually means.",
+      "This section stays on meaning. Weimar, Nixon, and the Fed belong in history. Mixing definitions with dated events makes both harder to follow.",
+      "From here, read hard money versus fiat, inflation, and what “backed” actually means.",
     ],
     related: [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
@@ -357,7 +357,7 @@ export const historyClusters: Cluster[] = [
     slug: "banks-paper",
     title: "Banks & paper money",
     summary:
-      "Paper money begins as a metal warehouse receipt. This cluster follows that claim-check until bank and state notes are no longer warehouse claims.",
+      "Paper money begins as a metal warehouse receipt. This chapter follows that claim-check until bank and state notes are no longer warehouse claims.",
     sections: banksPaperHubBody,
     related: [
       { title: "Sound Money History", href: "/history" },
@@ -374,7 +374,7 @@ export const historyClusters: Cluster[] = [
           "Before public banks, paper money is a warehouse or goldsmith receipt — a claim check on deposited metal. Banking begins when that ticket pays.",
         status: "ready",
         paragraphs: [
-          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault. Later crises on this shelf depend on that handoff; they are not this episode, and they are not one another.",
+          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault. Later crises in this chapter depend on that handoff; they are not this article, and they are not one another.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -507,7 +507,7 @@ export const historyClusters: Cluster[] = [
           "The early United States legally recognized both gold and silver. The mint ratio, not a slogan, decided which metal actually circulated.",
         ],
         related: [
-          { title: "Bimetallism (silver cluster)", href: "/history/silver/bimetallism" },
+          { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
         ],
@@ -525,7 +525,7 @@ export const historyClusters: Cluster[] = [
         summary: "The 1832 veto and the fight over a central bank before the Fed existed.",
         status: "ready",
         paragraphs: [
-          "Jackson’s war on the Second Bank is American politics and monetary history at once. It belongs in this cluster, with a light cross-link to the later Fed episode.",
+          "Jackson’s war on the Second Bank is American politics and monetary history at once. It belongs in this chapter, with a light cross-link to the later Fed article.",
         ],
         related: [
           { title: "America hub", href: "/history/america" },
@@ -571,7 +571,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
-          { title: "Bimetallism (silver cluster)", href: "/history/silver/bimetallism" },
+          { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Road back toward gold", href: "/history/america/road-back-gold" },
         ],
         seo: {
@@ -585,10 +585,10 @@ export const historyClusters: Cluster[] = [
       {
         slug: "road-back-gold",
         title: "The road back toward the gold standard",
-        summary: "Resumption in 1879, Gold Standard Act 1900 — then stop. 1907 is the next cluster.",
+        summary: "Resumption in 1879, Gold Standard Act 1900 — then stop. 1907 is the next chapter.",
         status: "ready",
         paragraphs: [
-          "After greenbacks came a political and legal path back toward gold payments. This overview stops before the Fed. The next cluster picks up in 1907.",
+          "After greenbacks came a political and legal path back toward gold payments. This overview stops before the Fed. The next chapter picks up in 1907.",
         ],
         related: [
           { title: "Greenbacks and the Civil War", href: "/history/america/greenbacks-civil-war" },
@@ -840,7 +840,7 @@ export const historyClusters: Cluster[] = [
         summary: "A concentrated position, exchange rule changes, a March 1980 break. Facts only.",
         status: "ready",
         paragraphs: [
-          "March 1980 ended a concentrated attempt to dominate the silver market. This page stays factual: positions, rules, and the break. No stock tips.",
+          "March 1980 ended a concentrated attempt to dominate the silver market. The page stays factual: positions, rules, and the break. No stock tips.",
         ],
         related: [
           { title: "Silver hub", href: "/history/silver" },
@@ -862,7 +862,7 @@ export const historyClusters: Cluster[] = [
         summary: "Money in memory, industrial input in fact. A split — not a forecast.",
         status: "ready",
         paragraphs: [
-          "Silver’s split personality — monetary metal and industrial metal — is the last episode in this cluster. Facts only; no forecasts.",
+          "Silver’s split personality — monetary metal and industrial metal — is the last article in this chapter. Facts only; no forecasts.",
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
@@ -889,7 +889,7 @@ export const practicePages: Episode[] = [
     summary: "Bars usually cost less per ounce. Coins cost more and are easier to recognise. Comparison only — not a recommendation.",
     status: "ready",
     paragraphs: [
-      "Bars minimise fabrication cost per ounce. Coins maximise recognisability. This page stays practical and neutral.",
+      "Bars minimise fabrication cost per ounce. Coins maximise recognisability. The tone stays practical and neutral.",
     ],
     related: [
       { title: "Premium over spot", href: "/gold-silver/premium-over-spot" },
@@ -931,7 +931,7 @@ export const practicePages: Episode[] = [
     summary: "Home, allocated, unallocated — access, cost, and counterparty. A menu, not a pick.",
     status: "ready",
     paragraphs: [
-      "Storage is a trade-off among access, cost, and counterparty. This page describes the menu, not a pick.",
+      "Storage is a trade-off among access, cost, and counterparty. The menu is described, not a pick.",
     ],
     related: [
       { title: "Buying online", href: "/gold-silver/buying-online" },
@@ -1084,7 +1084,7 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
-      { title: "Bimetallism (silver cluster)", href: "/history/silver/bimetallism" },
+      { title: "Bimetallism", href: "/history/silver/bimetallism" },
     ],
     seo: {
       primary: "gold silver ratio",

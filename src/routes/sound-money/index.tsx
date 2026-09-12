@@ -23,15 +23,15 @@ function IdeaHub() {
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Sound Money" }]} />
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Pillar 1</p>
-        <h1 className="mt-2 font-display text-4xl">Sound Money (the idea)</h1>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">The idea</p>
+        <h1 className="mt-2 font-display text-4xl">Sound Money</h1>
         <div className="mt-8">
           <ArticleSections sections={soundMoneyHubBody} />
         </div>
 
         <h2 className="mt-16 font-display text-3xl">Read by definition</h2>
         <p className="mt-2 max-w-prose text-muted">
-          Four thick definition pages, plus a short media disclaimer. Start anywhere; each one returns here.
+          Four definition pages, plus a short media disclaimer. Start anywhere; each one returns here.
         </p>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page, i) => (
