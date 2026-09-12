@@ -900,20 +900,124 @@ const whyMarkets: Section[] = [
 
 const lydia: Section[] = [
   {
-    heading: "The stamp",
+    heading: "A stamp on metal already money",
     paragraphs: [
-      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh–sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. Croesus is the name attached to separating gold and silver issues. The invention is not the metal. It is the stamp.",
-      "A stamp cuts the cost of verifying weight and fineness. You still need to trust the issuer. You no longer need to weigh every lump in a market of strangers.",
+      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the **seventh and sixth centuries BCE**. Early pieces were electrum — a natural or mixed gold–silver alloy — carrying a punch and, later, a recognisable type. Croesus is the royal name later attached to separating gold and silver issues. The invention is not the ore. It is the stamp.",
+      "This page sits after [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Traders already settled in metal by weight. Lydia cuts the cost of verifying that metal in a market of strangers. It does not invent monetary gold and silver. It invents a cheaper check.",
+    ],
+  },
+  {
+    heading: "Where and when",
+    paragraphs: [
+      "Western Anatolia sat on trade routes between the Aegean and the interior of Asia Minor. Lydia’s kings controlled river gold and electrum sources that made a local mint possible. Archaeology and literary tradition place the first true coins in this zone in the later seventh century BCE, with wider use in the sixth.",
+      "Exact first-year claims vary by dig and by how one defines “coin.” The documentary consensus is narrower: Lydia is where struck pieces with a state or royal mark become a habit of payment, not a one-off curiosity. Ionian cities nearby adopt and adapt the practice. The Aegean learns the stamp.",
+      "Do not read Lydia as the birth of money. Mesopotamian silver accounts and Levantine hacksilver already measured value by weight. Lydia is the birth of a portable claim about that weight — a type you can recognise without opening every bag to the scale.",
+    ],
+  },
+  {
+    heading: "Electrum, punch, and type",
+    paragraphs: [
+      "Early Lydian pieces are often electrum: gold and silver mixed, sometimes from alluvial metal whose ratio was hard to read by eye. A blank is prepared. A punch or die leaves a mark. Later issues carry a clearer type — a design that names the issuer and implies a standard.",
+      "Electrum’s mixed nature made the stamp especially useful. Without a trusted mark, every lump invited an assay argument. With a mark, the buyer still trusts the king or city, but the trust is concentrated: check the type, not every grain. The stamp relocates verification cost. It does not abolish trust.",
+      "Weights and denominations evolve. Small pieces settle everyday trade; larger pieces settle bigger claims. The metal remains the substance. The type is the shortcut. Numismatists still argue over how early blanks were cast or cut and how quickly a true reverse die appears. For this map the monetary fact is enough: a repeatable mark turns anonymous alloy into a circulating claim.",
+      "Hoards and find-spots show the pieces moving beyond the palace. That circulation is the test. A royal souvenir that never leaves the treasury is not yet the Aegean’s new payment habit. Lydia’s fame is that the habit stuck.",
+    ],
+  },
+  {
+    heading: "Croesus and separate gold and silver",
+    paragraphs: [
+      "Tradition credits **Croesus** (mid-sixth century BCE) with issuing pure gold and pure silver coins rather than only electrum. Whether every detail of that story is exact, the monetary logic is clear: separating the metals makes fineness easier to state and to check. Electrum hid a ratio. Gold and silver coins advertise what is in the piece.",
+      "Separate issues also prepare a world in which gold and silver do different jobs — large-value and everyday — under named standards. Later Greek silver networks and Rome’s aureus–denarius pair sit downstream of that habit. Lydia does not write a modern mint ratio into statute. It shows a state choosing what the stamp promises.",
+      "When Persia conquers Lydia, the minting habit does not vanish. Imperial coinage absorbs and extends the technology. The stamp travels with power. Subject cities and satrapal mints learn that a typed piece can move tax and trade farther than unmarked bullion — if the type is believed.",
+    ],
+  },
+  {
+    heading: "What the stamp changes — and what it does not",
+    paragraphs: [
+      "A stamp cuts the cost of verifying weight and fineness among strangers. You still need to trust the issuer. You no longer need to weigh every lump if the type is honest and familiar. Coin travels farther than anonymous hacksilver when that trust holds.",
+      "When the type is lightened or the alloy cheated, people return to the scale, discount the coin, or hoard the better pieces. The stamp is a claim. Claims can fail. Greece’s silver network, Rome’s slow debasement, and a later gold unit that keeps its weight are all stories about what happens after the mint exists. They are not proofs that metal needed a king before it could be money.",
+      "Metal first. Stamp second. That order is the hinge of this cluster. A king can accelerate adoption by requiring taxes in his coin. He cannot force a distant counterparty to treat a bad alloy as good gold. Markets still test the hand.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**Before coinage:** Silver and gold already settle by weight (shekels, hacksilver, ingots) across the Near East.",
+      "**Later 7th century BCE:** Struck electrum pieces appear in the Lydian–Ionian zone; punch and early types.",
+      "**6th century BCE:** Wider use of typed coin; Croesus tradition of separate gold and silver issues.",
+      "**After Lydia’s fall:** Persian and Greek mints carry the stamp technology into larger monetary networks.",
+      "**Next on this shelf:** [Greece: silver and trade](/history/ancient/greece-silver-trade) — Laurion and the Attic owl.",
+    ],
+  },
+  {
+    heading: "Why this stop matters",
+    paragraphs: [
+      "None of this is a pitch to hold metal or to collect electrum. It is the documentary first stop for struck coinage: a lower cost of checking metal that was already money.",
+      "Parent hub: [ancient money](/history/ancient). Previous stop: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Next: [Greece: silver and trade](/history/ancient/greece-silver-trade). Keep **1971** and warehouse receipts off this page except as labeled later hinges.",
     ],
   },
 ];
 
 const greece: Section[] = [
   {
-    heading: "Silver as a language",
+    heading: "Silver as a Mediterranean language",
     paragraphs: [
-      "Greek city-states turned mines and mints into a commercial network. Athens’ Laurion silver and the owl tetradrachm are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction.",
-      "Control of a mine was fiscal power. Laurion helped fund Athenian fleets.",
+      "Greek city-states turned mines and mints into a commercial network. Athens’ **Laurion** silver and the owl **tetradrachm** are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets and public life.",
+      "This page sits after [Lydia and the first coins](/history/ancient/lydia-first-coins). The stamp already exists. Greece shows what a silver standard looks like when city mints and trade routes share a metal language. It is not a collector catalogue, and it is not a modern mining prospectus.",
+    ],
+  },
+  {
+    heading: "City mints, not one empire mint",
+    paragraphs: [
+      "Classical Greece was a world of poleis — cities with their own laws, gods, and often their own coin. Aeginetan turtles, Corinthian pegasi, and Athenian owls are different types on related silver habits. Weight standards differed (Aeginetan, Attic, and others). Traders learned the types the way later merchants learned foreign coins: by familiarity and by the scale when familiarity failed.",
+      "Colonies and trade posts carried Greek coin habits around the Black Sea, into Magna Graecia, and along Levantine coasts. Silver was not only Athenian. Athens is the best-documented fiscal story because Laurion and the empire leave a thicker literary trail.",
+      "The network is the point. A stranger in a port could accept a known tetradrachm faster than anonymous bullion. That is Lydia’s stamp logic at Mediterranean scale. Exchange tables and money-changers still mattered when standards differed; the typed piece simply narrowed the argument to which city’s silver you held.",
+    ],
+  },
+  {
+    heading: "Laurion and Athenian fiscal power",
+    paragraphs: [
+      "The Laurion (Lavrion) mines in Attica produced silver that Athens coined and spent. Ancient accounts link Laurion output to naval power — notably the decision to build a large fleet from a rich strike in the early fifth century BCE. Exact tonnage figures are debated. The fiscal link is not: mine → mint → pay → ships and citizens.",
+      "Owning or controlling a silver source meant the city could pay without waiting for tax in kind alone. Coin wages and coin payments made a public economy that looked different from a palace distributing grain. Laurion was a strategic asset, not a footnote for numismatists.",
+      "Slave labour, galleries, and refining workshops made the district an industrial landscape by ancient standards. Output varied with veins, war, and management. When production fell or war disrupted the mines, Athens felt it in the till. Silver supply was policy as much as geology.",
+      "Other Greek regions had mines too. Laurion’s fame is the Athens story: a democracy that coined its mountain into sea power and public pay. The cluster uses that story because the literary trail is thick, not because silver began in Attica.",
+    ],
+  },
+  {
+    heading: "The Attic owl tetradrachm",
+    paragraphs: [
+      "The Athenian tetradrachm — Athena on the obverse, owl and olive on the reverse — became a widely trusted silver piece of roughly **seventeen grams** in the Attic standard. Its type was stable enough that markets from the Aegean to the Near East recognised it. That recognition is monetary infrastructure.",
+      "“Owl” is shorthand for a claim: this much silver, this fineness, this city’s reputation. Counterfeits existed; so did testing. The type still lowered verification cost compared with unmarked metal. Later imitations and eastern copies show how far the design traveled as a brand of silver weight.",
+      "Do not confuse fame with monopoly. Other cities coined. Persian sigloi and later Alexander’s types enter the same silver world. The owl is the teaching example for this cluster because it ties mine, mint, and Mediterranean circulation in one object.",
+      "Stability of type mattered as much as beauty. A merchant who saw the same Athena and owl year after year could price without a fresh assay on every bag. That is Lydia’s lesson at commercial scale.",
+    ],
+  },
+  {
+    heading: "Trade, tribute, and what silver did",
+    paragraphs: [
+      "Silver paid mercenaries, bought timber and grain, and settled balances between cities. Tribute under Athenian hegemony arrived in coin or was converted into it. Temples stored wealth; markets spent it. The metal moved as both public finance and private trade.",
+      "Gold existed and mattered for large stores and eastern contacts, but everyday Greek monetary talk is silver talk. That matches the property split named on the opener: silver’s value-per-weight suited commercial scale; gold packed more value into less mass. Greece’s shelf on this map is the silver network.",
+      "Ports from Sicily to the Black Sea priced cargoes in familiar silver weights. That shared language is why this stop sits between Lydia’s stamp and Rome’s two-metal state: the Aegean taught strangers to settle in typed silver before one empire tried to run gold and silver together under fiscal stress.",
+      "A much later rhyme — Potosí flooding the early modern world with silver — is a different century and a different volume. The [Potosí](/history/silver/potosi) stop belongs on the silver cluster. Keep the hinge labeled if you cross-link; do not mash Laurion into the Spanish mountain.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**Archaic period:** Greek cities adopt coinage after the Lydian–Ionian habit; multiple weight standards.",
+      "**Early 5th century BCE:** Laurion wealth tied to Athenian naval expansion in literary tradition.",
+      "**Classical pentekontaetia / empire years:** Owl tetradrachms circulate widely; tribute and trade in silver.",
+      "**4th century BCE and after:** Macedonian and Hellenistic coinages overlay and extend the silver language.",
+      "**Next on this shelf:** [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus) — two metals, then lightened silver.",
+    ],
+  },
+  {
+    heading: "Why this stop matters",
+    paragraphs: [
+      "None of this is investment advice or a pitch to hold metal. It is how a mine and a type became a Mediterranean settlement language.",
+      "Parent hub: [ancient money](/history/ancient). Previous: [Lydia and the first coins](/history/ancient/lydia-first-coins). Next: [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus). Cross-shelf rhyme only: [Potosí](/history/silver/potosi).",
     ],
   },
 ];
@@ -922,13 +1026,59 @@ const rome: Section[] = [
   {
     heading: "Two metals, one state",
     paragraphs: [
-      "Rome ran gold and silver together: the aureus and the denarius as the famous pair, with bronze for small change. When the mint ratio and the market ratio drift, the “wrong” metal leaves circulation.",
+      "Rome ran gold and silver together: the **aureus** and the **denarius** as the famous pair, with bronze for small change. When the mint’s legal relation and the market’s metal prices drifted, the legally overvalued metal tended to stay in the till and the other tended to leave. Debasement of the silver coin was gradual, then obvious. The third-century crisis made the coinage a fiscal instrument. When spending outruns metal, the coin is lightened.",
+      "This page is the fiscal stop on the ancient shelf — not a moral sermon about decadence, and not a pitch to hold bullion. It follows [Greece: silver and trade](/history/ancient/greece-silver-trade). It precedes [the solidus](/history/ancient/solidus-continuity). A much later American rhyme for mint-ratio arithmetic sits at [early U.S. coinage](/history/america/early-us-coinage); keep the centuries labeled.",
+    ],
+  },
+  {
+    heading: "Denarius and aureus in the early empire",
+    paragraphs: [
+      "The silver **denarius** had been Rome’s workhorse silver unit from the Republic onward. Under the early empire it was meant as a stable silver coin for pay, tax, and trade. The gold **aureus** sat above it for large payments and stores. Bronze and orichalcum pieces handled the smallest change. The system was multi-metallic in practice: different metals for different scales of payment.",
+      "Augustus and the Julio-Claudians inherited and adjusted weights and tariffs. The documentary point for this map is the design: a gold coin, a silver coin, and base metal underneath — a state naming how the metals relate in pay tables even when markets move.",
+      "Soldiers’ pay, grain contracts, and tax demands all touched these units. Coin was public finance in the hand.",
+    ],
+  },
+  {
+    heading: "Mint relation versus market metal",
+    paragraphs: [
+      "A state can post how many denarii equal an aureus in official accounts. Traders and goldsmiths watch the bullion market. When silver is cheap relative to the official bridge, silver coin is easier to bring to the mint or to spend; gold may be hoarded or exported. When silver is dear, the pattern flips. That is the same Gresham logic later written into modern bimetallism debates — not because Rome passed the Coinage Act of 1792, but because fixed official relations meet moving metal prices.",
+      "Rome’s story on this page is not only that ratio drift. It is what happens when the silver coin itself is watered: the official name stays; the metal inside falls. Then the “silver” unit becomes a fiscal token wearing a familiar face.",
     ],
   },
   {
     heading: "Slow, then obvious, debasement",
     paragraphs: [
-      "Silver fineness in the denarius and later the antoninianus fell as wars and donatives outran the mines. The third-century crisis made the coinage a fiscal instrument. When spending outruns metal, the coin is lightened.",
+      "Silver fineness in the denarius declined over the first and second centuries as costs — wars, donatives, administration — pressed the treasury. Nero’s reforms are an early famous adjustment of weight and alloy. Later reigns repeated the pattern. Each step could be defended as temporary. The cumulative result was a lighter, baser denarius.",
+      "In the third century the **antoninianus** (often called a double denarius in tariff) spread as a major silver-washed coin. Its silver content fell sharply over decades. By the worst years of the crisis, many pieces were bronze cores with a silver wash — a coin that looked like silver money and behaved like a forced token.",
+      "Prices rose in coin terms. People discounted bad money, demanded better coin or bullion for real settlement, and revised contracts. The mechanism is fiscal: obligations in coin outran honest metal supply, so the mint stretched the metal. It is not a cartoon of one emperor “printing.” It is repeated lightening under political survival pressure.",
+      "Hoards from the period show mixtures of better and worse pieces. Markets sorted what the mint blurred. That sorting is Gresham’s pattern in archaeological dress: good silver disappears into bags; washed tokens stay in the street price.",
+    ],
+  },
+  {
+    heading: "The third-century crisis as monetary pressure",
+    paragraphs: [
+      "Civil wars, frontier defense, and competing armies meant cash for troops now. Usurpers and legitimate emperors alike bought loyalty with coin. Mines and booty did not automatically match the payroll. Debasement was the available lever inside a metallic system that still used coin as the unit of pay.",
+      "Aurelian and later reformers attempted to restore order to the coinage. Diocletian’s price edict and Constantinian reforms belong to the recovery and transformation that follow. This page’s hinge is the lesson already visible before the solidus: when the silver unit is gutted, trust moves toward gold and toward better-known pieces — or toward payment in kind.",
+      "Do not flatten this into “Rome fell because of inflation” as a single cause. Military, political, and demographic stresses sit beside the mint. Do say that the coinage became an instrument of emergency finance, and that the silver unit paid the price first.",
+      "Soldiers who received baser coin still needed real goods. Official tariffs and market discounts diverged. That gap is how a metallic system can fail as a unit of account without anyone inventing paper notes.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**Republic–early empire:** Denarius as silver workhorse; aureus as gold unit; bronze for change.",
+      "**1st–2nd centuries CE:** Gradual reductions in denarius silver; occasional reforms reset expectations briefly.",
+      "**3rd century CE:** Antoninianus proliferates; silver content collapses; military pay pressure peaks.",
+      "**Late 3rd–early 4th:** Attempts to restabilise coinage; gold’s role as the honest large unit grows.",
+      "**Next on this shelf:** [After Rome: the solidus](/history/ancient/solidus-continuity) — a gold coin that keeps its weight.",
+    ],
+  },
+  {
+    heading: "Why this stop matters",
+    paragraphs: [
+      "None of this is a forecast for modern currency or a pitch to hold bullion. It is the documentary record of a bimetallic pay system meeting fiscal overload — and of silver lightened until the name outran the metal.",
+      "Parent hub: [ancient money](/history/ancient). Previous: [Greece: silver and trade](/history/ancient/greece-silver-trade). Next: [solidus continuity](/history/ancient/solidus-continuity). Later mint-ratio rhyme: [early U.S. coinage](/history/america/early-us-coinage). Keep **1971** off this page.",
     ],
   },
 ];
@@ -937,7 +1087,61 @@ const solidus: Section[] = [
   {
     heading: "A gold coin that keeps its weight",
     paragraphs: [
-      "Constantine’s solidus (early fourth century) was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine nomisma. Continuity of weight is the story, not a romance of Rome.",
+      "Constantine’s **solidus**, in the early **fourth century**, was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine **nomisma**. Continuity of weight is the story, not a romance of Rome and not a sequel about paper.",
+      "This page follows [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus), where silver was lightened under fiscal pressure. The solidus is the contrasting hinge: a gold unit defended as a standard for centuries. It is not the [Nixon gold-window close](/history/20th-century/nixon-shock), and it is not the birth of the warehouse receipt.",
+    ],
+  },
+  {
+    heading: "What Constantine changed",
+    paragraphs: [
+      "In the 310s Constantine’s minting settled on a gold solidus at roughly **1/72 of a Roman pound** — about **4.5 grams** of gold in the classic account — struck at high purity. Earlier tetrarchic gold experiments existed; Constantine’s solidus is the type that stuck as the empire’s premier gold unit.",
+      "Gold had already been the metal of large payments when silver tokenised. The solidus made that hierarchy explicit and durable: accounts, taxes, and elite payments could reference a coin whose metal content was meant to be trusted. Bronze and reformed base issues still handled small change under other names.",
+      "The political context is imperial consolidation after civil war. A stable gold unit supported a state that collected and spent across a huge territory. The documentary claim is monetary technique, not hagiography of Constantine.",
+      "Pay tables and tax assessments that could name a reliable gold piece reduced the chaos left by silver that no longer meant what its type claimed. That administrative usefulness is why the solidus outlived slogans about restoration and became the empire’s reference gold coin for long stretches.",
+    ],
+  },
+  {
+    heading: "Weight and fineness as the product",
+    paragraphs: [
+      "What made the solidus different from the late antoninianus was not a pretty type. It was discipline about mass and purity. A merchant or tax official could treat the coin as a known quantity of gold. That is the same verification logic as Lydia’s stamp — only now the promise is gold weight held for generations.",
+      "Debasement pressure never vanishes in a fiscal state. The solidus tradition is famous because, for long stretches, Byzantine authorities treated the nomisma’s standard as something to defend. When later medieval debasements and reforms occur, they are measured against that memory of a hard gold unit.",
+      "Silver and base coin could still be adjusted for local pay. The solidus’s job was the large, trusted settlement piece — the metal-first unit after silver’s reputation had been burned in the third century.",
+      "Fractions and multiples (semissis, tremissis, and later related issues) let the gold standard work at more than one scale without abandoning the gram-weight idea. The hierarchy still pointed at the full solidus as the reference.",
+    ],
+  },
+  {
+    heading: "From Rome to Byzantium: the nomisma",
+    paragraphs: [
+      "As imperial power centered on Constantinople, the solidus continued under Greek administrative language as the nomisma (and related denominations). Western successor kingdoms minted their own gold at times, often imitating familiar types. The eastern empire kept the solidus tradition as a living standard of Mediterranean and Near Eastern trade.",
+      "Foreigners called high-quality Byzantine gold by names that signaled trust — the medieval “bezant” in western sources is that reputation traveling. Continuity here means: a gold coin whose weight claim remained credible enough to price contracts and tribute across changing dynasties.",
+      "This is not a claim that nothing changed in Byzantine fiscal history. It is a claim that the ancient cluster’s last stop is metallic continuity, not the invention of modern central banking.",
+      "Trade routes still needed a settlement metal strangers would accept overnight. The nomisma filled that role for long stretches because the mint’s promise stayed close to the metal in the hand — the opposite lesson from washed silver of the third century.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a romance that “Rome never fell because the solidus lived.” Western political collapse and eastern survival are separate facts from mint metrology. Continuity of a gold weight standard can outlast a capital.",
+      "This page is not paper money. Warehouse receipts, public banks, and note issue live on [banks and paper](/history/banks-paper), beginning with [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). A solidus is coin you can hold. A receipt is a claim on coin you are not holding. Do not mash them.",
+      "This page is not **1971**. The Nixon shock ends a twentieth-century convertibility practice. It does not begin monetary history, and it does not explain Constantine’s mint. Keep that modern hinge on the twentieth-century shelf where it belongs.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: [],
+    list: [
+      "**Early 4th century:** Constantine’s solidus established as the premier gold unit (~1/72 lb).",
+      "**4th–5th centuries:** Gold solidus frames elite and fiscal payments as silver’s third-century damage lingers in memory.",
+      "**Byzantine centuries:** Nomisma continues the weight tradition; “bezant” fame in external trade language.",
+      "**Cluster handoff:** Ancient shelf ends on metallic continuity; paper and banks open on the next hub.",
+      "**Not on this page:** Assignats, Weimar, Fed, Nixon — labeled later hinges only.",
+    ],
+  },
+  {
+    heading: "Why this stop matters",
+    paragraphs: [
+      "None of this is a pitch to hold metal or to treat Byzantine types as an investment thesis. It is why a gold unit that keeps its weight became the ancient shelf’s closing hinge after silver was lightened.",
+      "Parent hub: [ancient money](/history/ancient). Previous: [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus). Next cluster door: [banks and paper](/history/banks-paper). Return to [Sound Money History](/history) for the five-cluster map. The ancient path ends when the story leaves the coin for a ticket — not before.",
     ],
   },
 ];

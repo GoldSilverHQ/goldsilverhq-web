@@ -251,7 +251,7 @@ export const historyClusters: Cluster[] = [
       {
         slug: "lydia-first-coins",
         title: "Lydia and the first coins",
-        summary: "Electrum, a stamp, and a lower cost of verifying metal.",
+        summary: "Electrum, a stamp, and a lower cost of verifying metal — not the birth of monetary gold and silver.",
         status: "ready",
         paragraphs: [
           "Lydia is the conventional starting point for struck coinage. The stamp reduced the cost of verifying metal. That is the invention, not the metal itself.",
@@ -266,6 +266,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "Lydia and the First Coins: Electrum, Stamp, Verification",
         },
       },
       {
@@ -287,6 +288,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "Greece: Laurion Silver and the Attic Owl",
         },
       },
       {
@@ -308,12 +310,13 @@ export const historyClusters: Cluster[] = [
           demand: "mid",
           difficulty: "low",
           intent: "history",
+          titleTag: "Rome: Denarius, Aureus, and Slow Debasement",
         },
       },
       {
         slug: "solidus-continuity",
         title: "After Rome: the solidus and early continuity",
-        summary: "Constantine’s gold unit kept its weight into Byzantium.",
+        summary: "Constantine’s gold unit kept its weight into Byzantium — continuity, not paper and not 1971.",
         status: "ready",
         paragraphs: [
           "The solidus carried gold coinage through late antiquity. Continuity of weight and fineness is the story, not a romance of empire.",
@@ -329,6 +332,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
+          titleTag: "The Solidus: Gold Weight Continuity after Rome",
         },
       },
     ],

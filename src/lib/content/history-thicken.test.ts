@@ -44,6 +44,91 @@ describe("ancient why-markets thicken (no new URLs)", () => {
   });
 });
 
+const ANCIENT_REST_EPISODES = [
+  "rome-denarius-aureus",
+  "lydia-first-coins",
+  "greece-silver-trade",
+  "solidus-continuity",
+] as const;
+
+describe("ancient rest thicken Wave B (no new URLs)", () => {
+  it("thickens the four remaining episodes to Phase-1 depth without sitemap expansion", () => {
+    for (const slug of ANCIENT_REST_EPISODES) {
+      const body = getBody("ancient", slug);
+      assert.ok(body, `missing body for ancient/${slug}`);
+      const text = bodyText(body);
+      const words = wordCount(text);
+      assert.ok(words >= 900 && words <= 1200, `${slug}: expected 900–1200 words, got ${words}`);
+      assert.ok(body.filter((s) => s.heading).length >= 6, `${slug}: expected ≥6 headed sections`);
+      assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
+    }
+
+    assert.ok(
+      !PHASE1_SITEMAP_PATHS.some(
+        (path) =>
+          path.includes("lydia-first-coins") ||
+          path.includes("greece-silver-trade") ||
+          path.includes("rome-denarius") ||
+          path.includes("solidus-continuity"),
+      ),
+    );
+  });
+
+  it("locks Lydia as stamp-not-metal invention", () => {
+    const text = bodyText(getBody("ancient", "lydia-first-coins")!);
+    assert.match(text, /electrum/i);
+    assert.match(text, /Croesus/);
+    assert.match(text, /stamp/i);
+    assert.match(text, /western Anatolia/);
+    assert.match(text, /\[why markets chose gold and silver\]\(\/history\/ancient\/why-markets-chose-gold-silver\)/);
+    assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
+    assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
+  });
+
+  it("locks Greece as Laurion–owl silver network", () => {
+    const text = bodyText(getBody("ancient", "greece-silver-trade")!);
+    assert.match(text, /Laurion/);
+    assert.match(text, /tetradrachm|owl/i);
+    assert.match(text, /Aegean/);
+    assert.match(text, /\[Lydia and the first coins\]\(\/history\/ancient\/lydia-first-coins\)/);
+    assert.match(text, /\[Rome: denarius/);
+    assert.match(text, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+  });
+
+  it("locks Rome as fiscal debasement of silver", () => {
+    const text = bodyText(getBody("ancient", "rome-denarius-aureus")!);
+    assert.match(text, /denarius/i);
+    assert.match(text, /aureus/i);
+    assert.match(text, /antoninianus/i);
+    assert.match(text, /third-century|3rd century/i);
+    assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
+    assert.match(text, /\[.*solidus.*\]\(\/history\/ancient\/solidus-continuity\)/);
+    assert.match(text, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
+  });
+
+  it("locks solidus as weight continuity, not paper or 1971", () => {
+    const text = bodyText(getBody("ancient", "solidus-continuity")!);
+    assert.match(text, /Constantine/);
+    assert.match(text, /solidus/i);
+    assert.match(text, /nomisma/i);
+    assert.match(text, /1\/72|4\.5 grams/);
+    assert.match(text, /\[Rome: denarius and aureus\]\(\/history\/ancient\/rome-denarius-aureus\)/);
+    assert.match(text, /\[warehouses to public banks\]\(\/history\/banks-paper\/warehouses-to-public-banks\)/);
+    assert.match(text, /\[ancient money\]\(\/history\/ancient\)/);
+    assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|should buy/i);
+  });
+
+  it("wires SEO titleTags for the four rest episodes without new routes", () => {
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    assert.match(mapSrc, /titleTag:\s*"Lydia and the First Coins/);
+    assert.match(mapSrc, /titleTag:\s*"Greece: Laurion Silver/);
+    assert.match(mapSrc, /titleTag:\s*"Rome: Denarius, Aureus/);
+    assert.match(mapSrc, /titleTag:\s*"The Solidus: Gold Weight Continuity/);
+    assert.doesNotMatch(mapSrc, /slug:\s*"ancient-[\w-]+"/);
+  });
+});
+
 describe("america cluster thicken (no new URLs)", () => {
   it("thickens all five episodes to Phase-1 depth without sitemap expansion", () => {
     for (const slug of AMERICA_EPISODES) {
