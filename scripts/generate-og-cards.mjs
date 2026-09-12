@@ -3,8 +3,9 @@
  * Generate branded 1200×630 Open Graph JPEG cards for Phase-1 sitemap URLs
  * (plus the site-wide public/og.jpg fallback).
  *
- * X-first: summary_large_image size, safe margins, high-contrast title,
- * large HQ medallion + GoldSilverHQ wordmark (readable at feed thumbnail scale).
+ * X-first: summary_large_image size (1200×630, 1.91:1), safe margins,
+ * HQ medallion + GoldSilverHQ wordmark inside an ~90px edge safe zone
+ * (readable at feed thumbnail scale; survives center-weighted preview crops).
  * Documentary dark desk + gold. No buy CTAs. No inline article images.
  *
  *   node --experimental-strip-types scripts/generate-og-cards.mjs
@@ -65,11 +66,15 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       position: relative;
       width: 1200px;
       height: 630px;
-      /* X-safe margins — keep brand + title inside timeline / preview crops */
-      padding: 44px 52px 40px;
+      /*
+       * Safe zone: critical brand (medal + wordmark) stays ≥100px inset
+       * from edges so X timeline / chat center-crops do not clip the left mark.
+       * (Outer 1px gold frame sits at the canvas edge; brand content is inside.)
+       */
+      padding: 88px 100px 80px;
       display: grid;
-      grid-template-columns: 268px 1fr;
-      column-gap: 36px;
+      grid-template-columns: 200px 1fr;
+      column-gap: 44px;
       border: 1px solid rgba(201, 162, 39, 0.34);
       box-shadow: inset 0 0 0 1px rgba(242, 237, 228, 0.05);
     }
@@ -79,14 +84,15 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       align-items: center;
       justify-content: flex-start;
       text-align: center;
-      gap: 20px;
-      padding: 8px 10px 12px;
+      gap: 16px;
+      /* Column already inside 100px L pad; tiny extra inset for the mark box */
+      padding: 4px 0 8px 8px;
       border-right: 1px solid rgba(201, 162, 39, 0.28);
       z-index: 1;
     }
     .mark {
-      width: 228px;
-      height: 228px;
+      width: 176px;
+      height: 176px;
       object-fit: contain;
       flex-shrink: 0;
       filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.65));
@@ -94,7 +100,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
     .wordmark {
       font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 700;
-      font-size: 34px;
+      font-size: 28px;
       letter-spacing: -0.035em;
       line-height: 1.05;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
@@ -106,7 +112,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       display: flex;
       flex-direction: column;
       min-width: 0;
-      padding: 4px 8px 0 4px;
+      padding: 0 0 0 4px;
       z-index: 1;
     }
     .brand-tag {
@@ -132,7 +138,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       line-height: 1.1;
       letter-spacing: -0.01em;
       color: #ffffff;
-      max-width: 820px;
+      max-width: 720px;
       text-wrap: balance;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     }
@@ -161,7 +167,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
 <body>
   <div class="frame">
     <div class="brand-col">
-      <img class="mark" src="${logoHref}" width="228" height="228" alt="" />
+      <img class="mark" src="${logoHref}" width="176" height="176" alt="" />
       <div class="wordmark"><span class="gold">Gold</span><span class="silver">Silver</span><span class="hq">HQ</span></div>
     </div>
     <div class="content">
