@@ -1,17 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Breadcrumb, RichText } from "@/components/Article";
+import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
-import { ideaPages } from "@/lib/content/map";
-
-const INTRO = [
-  "This pillar answers what sound money *means* — not what happened in 1923 or 1971, and not how to buy a bar. History has its own pillar. Practice has its own pillar.",
-  "The four definition pages now have first drafts. The disclaimer is short and done. Cases stay in [history](/history).",
-];
+import { soundMoneyHubBody } from "@/lib/content/bodies";
+import { ideaPages, seoTitle, soundMoneyHub } from "@/lib/content/map";
 
 export const Route = createFileRoute("/sound-money/")({
   head: () => ({
     meta: [
-      { title: "What sound money means — GoldSilverHQ" },
+      { title: seoTitle(soundMoneyHub.titleTag) },
       {
         name: "description",
         content:
@@ -23,20 +19,20 @@ export const Route = createFileRoute("/sound-money/")({
 });
 
 function IdeaHub() {
-  const ready = ideaPages.filter((p) => p.status === "ready").length;
+  const definitionPages = ideaPages.filter((p) => p.slug !== "information-not-advice");
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Sound Money" }]} />
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Pillar 1</p>
         <h1 className="mt-2 font-display text-4xl">Sound Money (the idea)</h1>
-        {INTRO.map((p) => (
-          <p key={p.slice(0, 32)} className="mt-4 max-w-prose text-lg leading-relaxed text-muted">
-            <RichText text={p} />
-          </p>
-        ))}
-        <p className="mt-6 text-sm text-faint">
-          {ready} of {ideaPages.length} pages drafted
+        <div className="mt-8">
+          <ArticleSections sections={soundMoneyHubBody} />
+        </div>
+
+        <h2 className="mt-16 font-display text-3xl">Read by definition</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Four thick definition pages, plus a short media disclaimer. Start anywhere; each one returns here.
         </p>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page, i) => (
@@ -51,13 +47,14 @@ function IdeaHub() {
                   <span className="block font-medium">{page.title}</span>
                   <span className="text-sm text-muted">{page.summary}</span>
                   <span className="mt-1 block text-xs text-faint">
-                    {page.status === "ready" ? "Draft" : "Skeleton"}
+                    {definitionPages.some((d) => d.slug === page.slug) ? "Definition" : "Disclaimer"}
                   </span>
                 </span>
               </Link>
             </li>
           ))}
         </ol>
+        <RelatedLinks links={soundMoneyHub.related} />
       </div>
     </SiteShell>
   );

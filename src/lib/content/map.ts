@@ -49,6 +49,18 @@ export const historyHub = {
   ],
 };
 
+/** Pillar hub /sound-money — search title and related; body lives in soundMoneyHubBody. */
+export const soundMoneyHub = {
+  titleTag: "Sound Money: Definitions, Not History",
+  related: [
+    { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+    { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
+    { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
+    { title: "What “backed” means", href: "/sound-money/backed-money" },
+    { title: "Sound Money History (events live there)", href: "/history" },
+  ],
+};
+
 /** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
 export const marketsHub = {
   titleTag: "Gold & Silver Markets: Facts, Not Tips",
@@ -132,6 +144,7 @@ export const ideaPages: Episode[] = [
       demand: "low",
       difficulty: "high",
       intent: "definition",
+      titleTag: "What Is Sound Money? A Working Definition",
     },
   },
   {
@@ -154,6 +167,7 @@ export const ideaPages: Episode[] = [
       demand: "mid",
       difficulty: "high",
       intent: "definition",
+      titleTag: "Hard Money vs Fiat: Costly Production vs Law and Habit",
     },
   },
   {
@@ -175,6 +189,7 @@ export const ideaPages: Episode[] = [
       demand: "high",
       difficulty: "high",
       intent: "definition",
+      titleTag: "Inflation and Purchasing Power: Prices as Surface",
     },
   },
   {
@@ -197,6 +212,7 @@ export const ideaPages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "definition",
+      titleTag: "What “Backed by Gold” Means: Contract vs Slogan",
     },
   },
   {
@@ -211,7 +227,6 @@ export const ideaPages: Episode[] = [
     related: [{ title: "Gold & silver in practice", href: "/gold-silver" }],
   },
 ];
-
 export const historyClusters: Cluster[] = [
   {
     slug: "ancient",
