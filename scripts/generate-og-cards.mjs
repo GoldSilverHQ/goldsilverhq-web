@@ -3,12 +3,14 @@
  * Generate branded 1200×630 Open Graph JPEG cards for Phase-1 sitemap URLs
  * (plus the site-wide public/og.jpg fallback).
  *
- * Design: documentary dark desk (site CSS tokens), title + GoldSilverHQ wordmark.
- * No buy CTAs. Re-run after title/summary changes on thick pages.
+ * X-first: summary_large_image size (1200×630, 1.91:1), safe margins,
+ * HQ medallion + GoldSilverHQ wordmark inside an ~90px edge safe zone
+ * (readable at feed thumbnail scale; survives center-weighted preview crops).
+ * Documentary dark desk + gold. No buy CTAs. No inline article images.
  *
  *   node --experimental-strip-types scripts/generate-og-cards.mjs
  */
-import { mkdirSync, writeFileSync, existsSync } from "node:fs";
+import { mkdirSync, writeFileSync, existsSync, copyFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { execFileSync } from "node:child_process";
@@ -25,6 +27,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const cardsDir = join(root, "public/og/cards");
 const tmpDir = join(root, ".tmp-og-cards");
+const logoSrc = join(root, "public/logo.png");
 
 function escapeHtml(s) {
   return String(s)
@@ -34,18 +37,18 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-function cardHtml({ cardTitle, kicker }) {
+function cardHtml({ cardTitle, kicker }, logoHref) {
   const title = escapeHtml(cardTitle);
   const label = escapeHtml(kicker);
   const long = cardTitle.length > 64;
-  const titleSize = long ? "54px" : cardTitle.length > 42 ? "60px" : "68px";
+  const titleSize = long ? "46px" : cardTitle.length > 42 ? "52px" : "58px";
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Figtree:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Figtree:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -53,104 +56,137 @@ function cardHtml({ cardTitle, kicker }) {
       height: 630px;
       overflow: hidden;
       font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
-      color: #f2ede4;
+      color: #f7f3ea;
       background:
-        radial-gradient(ellipse 80% 70% at 12% 18%, rgba(201, 162, 39, 0.14), transparent 55%),
-        radial-gradient(ellipse 60% 50% at 88% 88%, rgba(197, 205, 212, 0.08), transparent 50%),
-        linear-gradient(165deg, #12110e 0%, #070605 55%, #0a0908 100%);
+        radial-gradient(ellipse 70% 80% at 14% 50%, rgba(201, 162, 39, 0.2), transparent 58%),
+        radial-gradient(ellipse 50% 55% at 92% 88%, rgba(197, 205, 212, 0.08), transparent 48%),
+        linear-gradient(165deg, #14120f 0%, #070605 52%, #0a0908 100%);
     }
     .frame {
       position: relative;
       width: 1200px;
       height: 630px;
-      padding: 56px 64px 48px;
+      /*
+       * Safe zone: critical brand (medal + wordmark) stays ≥100px inset
+       * from edges so X timeline / chat center-crops do not clip the left mark.
+       * (Outer 1px gold frame sits at the canvas edge; brand content is inside.)
+       */
+      padding: 88px 100px 80px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      column-gap: 44px;
+      border: 1px solid rgba(201, 162, 39, 0.34);
+      box-shadow: inset 0 0 0 1px rgba(242, 237, 228, 0.05);
+    }
+    .brand-col {
       display: flex;
       flex-direction: column;
-      border: 1px solid rgba(201, 162, 39, 0.28);
-      box-shadow: inset 0 0 0 1px rgba(242, 237, 228, 0.04);
-    }
-    .top {
-      display: flex;
       align-items: center;
-      gap: 18px;
+      justify-content: flex-start;
+      text-align: center;
+      gap: 16px;
+      /* Column already inside 100px L pad; tiny extra inset for the mark box */
+      padding: 4px 0 8px 8px;
+      border-right: 1px solid rgba(201, 162, 39, 0.28);
+      z-index: 1;
     }
     .mark {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #f3dc9a, #c9a227 55%, #7a5e10);
-      box-shadow: 0 0 0 1px rgba(122, 94, 16, 0.55);
+      width: 176px;
+      height: 176px;
+      object-fit: contain;
       flex-shrink: 0;
+      filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.65));
     }
     .wordmark {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 700;
-      font-size: 36px;
-      letter-spacing: -0.02em;
-      line-height: 1;
+      font-size: 28px;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
     }
-    .wordmark .gold { color: #c9a227; }
-    .wordmark .silver { color: #c5cdd4; }
-    .wordmark .hq { color: #f2ede4; }
-    .kicker {
-      margin-top: 40px;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.16em;
+    .wordmark .gold { color: #f0c94a; }
+    .wordmark .silver { color: #eef2f5; }
+    .wordmark .hq { color: #ffffff; }
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0 0 0 4px;
+      z-index: 1;
+    }
+    .brand-tag {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #c9a227;
+      color: #f0c94a;
+    }
+    .kicker {
+      margin-top: 10px;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #f0c94a;
     }
     .title {
-      margin-top: 18px;
+      margin-top: 16px;
       font-family: "Cormorant Garamond", "Times New Roman", serif;
       font-weight: 600;
       font-size: ${titleSize};
-      line-height: 1.12;
+      line-height: 1.1;
       letter-spacing: -0.01em;
-      max-width: 980px;
+      color: #ffffff;
+      max-width: 720px;
       text-wrap: balance;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     }
     .foot {
       margin-top: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      border-top: 1px solid rgba(242, 237, 228, 0.12);
-      padding-top: 22px;
+      gap: 20px;
+      border-top: 1px solid rgba(242, 237, 228, 0.18);
+      padding-top: 18px;
     }
     .foot-left {
       font-size: 18px;
-      color: #9a9388;
+      color: #c4bcb0;
       font-weight: 500;
     }
     .foot-right {
-      font-size: 16px;
-      color: #6e6860;
-      letter-spacing: 0.04em;
+      font-size: 18px;
+      color: #b0a89c;
+      letter-spacing: 0.03em;
+      font-weight: 700;
     }
   </style>
 </head>
 <body>
   <div class="frame">
-    <div class="top">
-      <div class="mark" aria-hidden="true"></div>
+    <div class="brand-col">
+      <img class="mark" src="${logoHref}" width="176" height="176" alt="" />
       <div class="wordmark"><span class="gold">Gold</span><span class="silver">Silver</span><span class="hq">HQ</span></div>
     </div>
-    <p class="kicker">${label}</p>
-    <h1 class="title">${title}</h1>
-    <div class="foot">
-      <p class="foot-left">Educational media · Not investment advice</p>
-      <p class="foot-right">goldsilverhq.com</p>
+    <div class="content">
+      <p class="brand-tag">Sound money · documentary media</p>
+      <p class="kicker">${label}</p>
+      <h1 class="title">${title}</h1>
+      <div class="foot">
+        <p class="foot-left">Educational media · Not investment advice</p>
+        <p class="foot-right">goldsilverhq.com</p>
+      </div>
     </div>
   </div>
 </body>
 </html>`;
 }
 
-async function renderCard(page, browser, outJpg) {
+async function renderCard(page, browser, outJpg, logoHref) {
   const htmlPath = join(tmpDir, `${ogCardKey(page.path)}.html`);
-  writeFileSync(htmlPath, cardHtml(page), "utf8");
+  writeFileSync(htmlPath, cardHtml(page, logoHref), "utf8");
   const pngPath = join(tmpDir, `${ogCardKey(page.path)}.png`);
   const context = await browser.newPage({
     viewport: { width: 1200, height: 630 },
@@ -165,8 +201,17 @@ async function renderCard(page, browser, outJpg) {
 }
 
 async function main() {
+  if (!existsSync(logoSrc)) {
+    throw new Error(`Missing brand mark at ${logoSrc}`);
+  }
+
   mkdirSync(cardsDir, { recursive: true });
   mkdirSync(tmpDir, { recursive: true });
+
+  // Local HTML files need a file:// logo so Playwright can load the real medallion.
+  const logoTmp = join(tmpDir, "logo.png");
+  copyFileSync(logoSrc, logoTmp);
+  const logoHref = pathToFileURL(logoTmp).href;
 
   const pages = phase1SharePages();
   const defaultPage = sharePageForPath("/");
@@ -185,12 +230,12 @@ async function main() {
       const rel = ogImagePathForRoute(page.path) || DEFAULT_OG_IMAGE_PATH;
       const outJpg = join(root, "public", rel.replace(/^\//, ""));
       mkdirSync(dirname(outJpg), { recursive: true });
-      await renderCard(page, browser, outJpg);
+      await renderCard(page, browser, outJpg, logoHref);
       process.stdout.write(`wrote ${rel}\n`);
     }
 
     const fallbackJpg = join(root, "public", DEFAULT_OG_IMAGE_PATH.replace(/^\//, ""));
-    await renderCard(defaultPage, browser, fallbackJpg);
+    await renderCard(defaultPage, browser, fallbackJpg, logoHref);
     process.stdout.write(`wrote ${DEFAULT_OG_IMAGE_PATH}\n`);
   } finally {
     await browser.close();
