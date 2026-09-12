@@ -12,9 +12,9 @@ export const Route = createFileRoute("/gold-silver/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: pageShareMeta({
-      title: seoTitle(loaderData?.title ?? "Gold & Silver"),
+      title: seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "Gold & Silver"),
       description: loaderData?.summary ?? "",
-      imagePath: "/og.jpg",
+      path: `/gold-silver/${loaderData?.slug ?? ""}`,
     }),
   }),
   component: PracticePage,
@@ -32,10 +32,7 @@ function PracticePage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">
-          Episode · Pillar 3
-          {page.status === "ready" ? " · Phase 3 draft" : " · Skeleton"}
-        </p>
+        <p className="text-xs text-muted">Episode · Pillar 3 · Practice</p>
         <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
         <div className="mt-10">

@@ -61,6 +61,18 @@ export const soundMoneyHub = {
   ],
 };
 
+/** Pillar hub /gold-silver — search title and related; body lives in practiceHubBody. */
+export const practiceHub = {
+  titleTag: "Gold & Silver in Practice: Handling, Not Tips",
+  related: [
+    { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
+    { title: "Premium over spot", href: "/gold-silver/premium-over-spot" },
+    { title: "Beginner checklist", href: "/gold-silver/beginner-checklist" },
+    { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+    { title: "Gold & silver markets (facts, not handling)", href: "/markets" },
+  ],
+};
+
 /** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
 export const marketsHub = {
   titleTag: "Gold & Silver Markets: Facts, Not Tips",
@@ -902,6 +914,7 @@ export const practicePages: Episode[] = [
       demand: "high",
       difficulty: "high",
       intent: "practical",
+      titleTag: "Gold Bars vs Coins: Fabrication, Recognition, Divisibility",
     },
   },
   {
@@ -923,6 +936,7 @@ export const practicePages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "practical",
+      titleTag: "Premium over Spot: Fabrication Gap, Not a Trick",
     },
   },
   {
@@ -944,6 +958,7 @@ export const practicePages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "practical",
+      titleTag: "Storing Gold and Silver: Access, Cost, Counterparty",
     },
   },
   {
@@ -964,12 +979,13 @@ export const practicePages: Episode[] = [
       demand: "high",
       difficulty: "mid",
       intent: "practical",
+      titleTag: "Spotting Fake Gold and Silver: High-Level Filter Only",
     },
   },
   {
     slug: "beginner-checklist",
     title: "Beginner checklist: first ounces",
-    summary: "Form, seller, storage, records. A process — still not advice.",
+    summary: "Form, seller, storage, records. A process index — still not advice.",
     status: "ready",
     paragraphs: [
       "First ounces are a process: product type, seller, storage, and records. The checklist stays humble and linked to the disclaimer.",
@@ -986,6 +1002,7 @@ export const practicePages: Episode[] = [
       demand: "high",
       difficulty: "high",
       intent: "practical",
+      titleTag: "Beginner Checklist: Named Decisions, Not Advice",
     },
   },
   {
@@ -1007,6 +1024,7 @@ export const practicePages: Episode[] = [
       demand: "high",
       difficulty: "high",
       intent: "practical",
+      titleTag: "Buying Gold and Silver Online: Watch-Fors, Not Rankings",
     },
   },
 ];
