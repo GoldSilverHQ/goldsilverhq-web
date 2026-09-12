@@ -50,30 +50,37 @@ const panic1907: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support when no public central bank existed. The Federal Reserve did not cause 1907. Congress created the Fed afterward, in 1913, in part because that panic showed how thin the country’s crisis plumbing was.",
+      "On **22 October 1907**, depositors lined Fifth Avenue at the Knickerbocker Trust Company and kept lining up until the till could not meet the crowd. The trust suspended payments. Within two days, call money — the overnight credit that clears Wall Street — spiked toward twenty-five percent and higher, and the New York Stock Exchange nearly shut for want of cash to settle trades. Gold still defined the dollar. What failed was cash at the door.",
+      "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support because no public central bank existed. The Federal Reserve did not cause that October. Congress created the Fed afterward, in **1913**, in part because the panic showed how thin the country’s crisis plumbing was.",
     ],
   },
   {
-    heading: "What the Panic of 1907 was",
+    heading: "How the run began",
     paragraphs: [
-      "In October 1907 a run hit the Knickerbocker Trust Company on Fifth Avenue in New York. Depositors lined up for cash. Clerks paid out until the till could not meet the line. On 22 October Knickerbocker suspended payments. Fear then moved to other trusts and to the call-money market that funded Wall Street loans.",
       "The week had already cracked around a failed copper corner linked to F. Augustus Heinze and Charles Morse. Banks and trusts tied to those names looked weak. Depositors did not wait for slow audits. They wanted notes they could spend that day.",
-      "Call money—the overnight rate for brokers—spiked sharply. Reports put rates at twenty-five percent and higher as credit seized up. On 24 October the New York Stock Exchange nearly shut for want of cash to clear trades. Gold still settled contracts in the wider monetary order. What failed was access to cash at the point of panic. The United States had no standing public lender of last resort with a legal duty to supply emergency liquidity to the whole banking field.",
-      "The scene at Knickerbocker was ordinary panic mechanics. A crowd forms. Payment slows. Rumor names the next door. Without a backstop that can lend against good assets, solvent firms can fail for lack of cash in the hour they need it.",
+      "Knickerbocker’s suspension turned fear into a route map. Runs moved to other trusts and into the call-money market that funded broker loans. A crowd forms. Payment slows. Rumor names the next door. Without a backstop that can lend against good assets, solvent firms can fail for lack of cash in the hour they need it.",
+      "That is ordinary panic mechanics — and it is why the episode still matters. The United States had no standing public lender of last resort with a legal duty to supply emergency liquidity to the whole banking field. Metal still settled contracts in the wider monetary order. Access to cash at the point of panic did not.",
     ],
   },
   {
     heading: "Why the trusts were the weak point",
     paragraphs: [
       "National banks in New York belonged to the Clearing House. Members could pledge good paper and borrow cash overnight through that club. Trust companies took deposits and made loans, but many sat outside the Clearing House. They had no automatic seat at the table that recycled liquidity during a run.",
-      "That gap mattered. A run on a trust was a crowd at a door with no club behind it. When Knickerbocker’s condition looked bad, Clearing House support was refused. The line then moved to other trusts. Institutions inside the club had a path to emergency cash. Trusts outside it became the panic’s weak point.",
-      "Trusts had grown quickly in the years before 1907. They offered deposit-like liabilities and competed for business that looked like banking. Regulation and mutual aid did not keep pace with that growth. In a calm year the gap stayed invisible. In October it became the map of the crisis.",
-      "The 1907 crisis was therefore not a simple story that “gold failed.” Metal still defined the monetary unit. The plumbing failed. Trusts held large runnable liabilities without the same mutual support that national banks could tap through the Clearing House.",
+      "That gap decided who survived the first days. When Knickerbocker’s condition looked bad, Clearing House support was refused. The line then moved to other trusts. Institutions inside the club had a path to emergency cash. Trusts outside it became the panic’s weak point.",
+      "Trusts had grown quickly in the years before 1907. They offered deposit-like liabilities and competed for business that looked like banking. Regulation and mutual aid did not keep pace. In a calm year the gap stayed invisible. In October it became the map of the crisis.",
+      "So 1907 is not a story that “gold failed.” Metal still defined the monetary unit. The plumbing failed. Trusts held large runnable liabilities without the same mutual support that national banks could tap through the Clearing House.",
+    ],
+  },
+  {
+    heading: "A private last resort",
+    paragraphs: [
+      "In the crisis weeks, Morgan’s library at 219 Madison Avenue became a private command post. Bankers met, books were checked, and pools were pledged. Some firms received support. Knickerbocker stayed closed. Gold imports and Treasury deposits helped at the margins.",
+      "The documentary point is institutional, not hagiographic: a private coalition acted as a temporary last resort because statute had not built one. That fact later shaped the politics of reform. A country that had needed one man’s library to keep the Exchange open was a country ready to argue for a public facility — even if it argued for years about who should control it.",
     ],
   },
   {
     heading: "A short timeline, 1907–1913",
-    paragraphs: [],
+    paragraphs: ["The sequence is created-after, not before. The Fed was built in the wake of 1907. It was not the institution that produced the panic."],
     list: [
       "**Early October 1907:** Copper speculation tied to Heinze and Morse breaks; linked banks and trusts look fragile.",
       "**22 October 1907:** Knickerbocker Trust faces a run and suspends payments.",
@@ -86,26 +93,20 @@ const panic1907: Section[] = [
     ],
   },
   {
-    heading: "",
+    heading: "What Congress built afterward",
     paragraphs: [
-      "The sequence is created-after, not before. The Fed was built in the wake of 1907. It was not the institution that produced the panic.",
-    ],
-  },
-  {
-    heading: "What the Fed was built to do",
-    paragraphs: [
-      "In the crisis weeks, Morgan’s library at 219 Madison Avenue became a private command post. Bankers met, books were checked, and pools were pledged. Some firms received support. Knickerbocker stayed closed. Gold imports and Treasury deposits helped at the margins. The documentary point is institutional, not hagiographic: a private coalition acted as a temporary last resort because statute had not built one.",
-      "Aldrich-Vreeland (1908) was the first legislative answer. Groups of national banks could issue emergency currency against assets other than only government bonds. The same law funded a National Monetary Commission to study a permanent system.",
+      "Aldrich-Vreeland (**1908**) was the first legislative answer. Groups of national banks could issue emergency currency against assets other than only government bonds. The same law funded a National Monetary Commission to study a permanent system.",
       "The commission toured Europe and studied banks that already had a legal last window. The Aldrich Plan that followed imagined a central reserve association with banker influence and elastic note issue. Public politics rejected a design that looked too much like Wall Street’s private club with a federal seal.",
-      "The Federal Reserve Act of 1913 created regional Federal Reserve Banks and a federal board structure. Member banks could discount commercial paper and receive Reserve notes. The public brief was elastic currency and a lender of last resort for banks, so an October run would not depend on one private library.",
-      "Jekyll Island belongs in the record as a drafting episode in the commission era. It is not the law itself. The statute is the December 1913 Act. Morgan’s 1907 rescue belongs as a private substitute for a missing public facility—stated as fact, not as hero worship, and not as proof that one man should own the last window forever.",
+      "The Federal Reserve Act of **1913** created regional Federal Reserve Banks and a federal board structure. Member banks could discount commercial paper and receive Reserve notes. The public brief was elastic currency and a lender of last resort for banks, so an October run would not depend on one private library.",
+      "Jekyll Island belongs in the record as a drafting episode in the commission era. It is not the law itself. The statute is the December 1913 Act. Morgan’s 1907 rescue belongs as a private substitute for a missing public facility — stated as fact, not as hero worship, and not as proof that one man should own the last window forever.",
     ],
   },
   {
-    heading: "What came next",
+    heading: "Where the century turns next",
     paragraphs: [
       "After 1913 the next hinge in this chapter is the wartime break with classical gold convertibility. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years therefore sit between a private panic rescue and the wider end of the classical gold order.",
-      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. Then read the classical gold standard’s end as the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
+      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. Then open the [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) for the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
+      "This page stays on that dated claim — trusts, Clearing House gaps, private rescue, then a 1913 statute. It does not sell metal, forecast prices, or turn a panic into a brief for or against the Fed. Neighbor articles carry Weimar, the 1933 gold recall, and the [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) on their own dates.",
     ],
   },
 ];
@@ -113,18 +114,18 @@ const panic1907: Section[] = [
 
 const weimar: Section[] = [
   {
-    heading: "What Weimar hyperinflation was",
+    heading: "",
     paragraphs: [
-      "Weimar hyperinflation was the collapse of the German paper mark as money in 1922–23. Prices rose first by the month, then by the day, then by the hour. By November 1923 a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. People spent cash the afternoon they received it. Overnight, the notes were worth less.",
-      "The cartoons — wheelbarrows, wallpaper, children stacking bricks of notes — are not invented. They are also not the cause. Hyperinflation here is a sequence: war finance without a gold stop, a fiscal gap after Versailles, the Reichsbank printing against Treasury bills, then the Ruhr occupation. Printing is the mechanism. The start is the missing constraint.",
+      "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Wages paid at noon were spent before supper. Café prices rose between the first course and the bill. By November a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. Notes did not vanish. People stopped holding them, and stopped pricing in them.",
+      "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The wheelbarrow cartoons are not invented, and they are not the cause. The sequence is older: war finance without a gold stop, a fiscal gap after Versailles, a Reichsbank that created marks against Treasury bills, then the Ruhr occupation. Printing is the mechanism. The start is the missing constraint.",
     ],
   },
   {
-    heading: "What caused Weimar hyperinflation",
+    heading: "War finance without a stop",
     paragraphs: [
       "Germany paid for the First World War largely by borrowing and expanding the note issue, not by taxation on a wartime scale. [Gold convertibility ended with the war in 1914](/history/20th-century/classical-gold-standard-end). The mark kept its gold name; it lost the stop that had made the name honest. By the armistice the stock of paper was already several times the pre-war circulation. Controlled wartime prices hid part of the pressure. The black market did not.",
-      "Peace did not restore the old constraint. The republic inherited domestic war debt, social claims, and reparations payable in gold or in kind. Tax collection was weak. The Reichsbank discounted Treasury bills — it created marks so the government could pay. Inflation was already visible in 1919–1921. That was still ordinary, if severe, inflation. Hyperinflation is a later phase: roughly when prices rise about 50% or more in a month. Germany crossed that line in **mid-1922**.",
-      "Once expectations broke, the fiscal problem and the money problem fed each other. Tax arrived in marks worth less than when the liability was assessed. The gap was closed with more paper. Real cash balances collapsed. Velocity exploded: nobody would hold the unit. That is the mechanical core, not a morality play about “Germans printing money.”",
+      "Peace did not restore the old constraint. The republic inherited domestic war debt, social claims, and reparations payable in gold or in kind. Tax collection was weak. The Reichsbank discounted Treasury bills — it created marks so the government could pay. Inflation was already visible in **1919–1921**. That was still ordinary, if severe, inflation.",
+      "Hyperinflation is a later phase: roughly when prices rise about **50%** or more in a month. Germany crossed that line in **mid-1922**. Once expectations broke, the fiscal problem and the money problem fed each other. Tax arrived in marks worth less than when the liability was assessed. The gap was closed with more paper. Real cash balances collapsed. Velocity exploded: nobody would hold the unit. That is the mechanical core, not a morality play about “Germans printing money.”",
     ],
   },
   {
@@ -141,19 +142,19 @@ const weimar: Section[] = [
     ],
   },
   {
-    heading: "The Ruhr occupation and the final spiral",
+    heading: "The Ruhr and the final spiral",
     paragraphs: [
       "On **11 January 1923** French and Belgian troops occupied the Ruhr, Germany’s industrial core. Berlin called for passive resistance: do not cooperate; the Reich will cover wages. Production in the occupied zone fell. Tax from the region dried up. The wage and subsidy bill was met, again, by paper created through the Reichsbank.",
       "There was a short intervention in the foreign-exchange market in early 1923. Reserves were not large enough. When support ended, the slide resumed. By autumn, wholesale prices could rise on the order of **20% in a day** at the peak. At that speed the “money supply” is not a stock anyone holds. It is a hot potato. C. H. Bresciani-Turroni’s contemporary account is still the place historians send readers for the monthly tables.",
-      "That is what it means for money to die: notes do not vanish. Nobody will hold them or price in them.",
+      "That is what it means for money to die as a unit: the notes remain in pockets and drawers, but contracts, wages, and shopkeepers abandon the paper mark for foreign currency, gold units, or goods.",
     ],
   },
   {
-    heading: "How high prices and the dollar rate went",
+    heading: "How far the dollar rate ran",
     paragraphs: [
       "Pre-war parity: about **4.2 marks per U.S. dollar**. By late 1922 the rate was already in the thousands. Through 1923 it moved through millions and billions into trillions. On the November stabilisation the official rate was set at **4.2 trillion paper marks per dollar** — twelve zeros relative to the gold-mark parity.",
       "Everyday prices followed. A loaf of bread that cost a fraction of a mark before the war was in the hundreds of billions of marks by November 1923. Postage, tram fares, and café bills were revised so often that a price at the start of a meal was not the price at the end. Banknotes were overprinted with new face values because new plates could not keep up.",
-      "Exact multipliers differ by series — wholesale, retail, exchange. The qualitative fact does not: the paper mark ceased to work as a store of value or a unit of account. Accounting, wages, and trade shifted toward foreign currency, gold units, or goods.",
+      "Exact multipliers differ by series — wholesale, retail, exchange. The qualitative fact does not: the paper mark ceased to work as a store of value or a unit of account.",
     ],
   },
   {
@@ -164,7 +165,7 @@ const weimar: Section[] = [
     ],
   },
   {
-    heading: "How it was stopped: the Rentenmark",
+    heading: "How the Rentenmark stopped it",
     paragraphs: [
       "Stabilisation needed two things together: a stop to marks created for the Treasury, and a unit people would accept. Mid-October 1923 decrees established the Deutsche Rentenbank. Rentenmarks entered circulation from **15 November 1923**. Conversion: **one trillion paper marks to one Rentenmark**. On **20 November** the exchange rate was held at 4.2 Rentenmarks per dollar.",
       "The notes were called “backed” by mortgages forced onto agricultural and industrial property. A holder could not walk to a window and demand a weight of gold. The mortgages were a legal charge on land and plant — a way to make the new issue look limited — not coin in a vault with a public claim on it.",
@@ -173,10 +174,10 @@ const weimar: Section[] = [
     ],
   },
   {
-    heading: "Was it “only printing money”?",
+    heading: "Printing was the channel, not the whole cause",
     paragraphs: [
       "Printing is how the stock expanded. It is not a complete cause. A government that can tax and that faces a hard stop — gold convertibility, a currency board, a public that will not accept more notes — cannot do this for long. Weimar had a fiscal gap it would not close, a central bank that monetised Treasury paper, a lost war, reparations, and then the Ruhr. Remove the stop, keep the spending, and the unit fails.",
-      "It is a documented extreme, not a script every paper currency has to finish.",
+      "It is a documented extreme, not a script every paper currency has to finish. Open the [1933 gold recall](/history/20th-century/1933-gold-recall) or the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) for later American hinges — different years, different laws, different claims. This page stays with the German mark’s death and the Rentenmark halt. It does not sell metal or turn 1923 into a forecast.",
     ],
   },
 ];
@@ -185,38 +186,39 @@ const nixon: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The postwar system negotiated at **Bretton Woods** (1944) pegged other currencies to the dollar, and the dollar to gold at $35 for foreign official holders. On 15 August 1971 the United States suspended that convertibility. The act did not invent fiat money overnight. It ended the last official gold link in the post-war dollar system. Private Americans had already been barred from monetary gold under the 1933 recall. Bretton Woods did not fail in a single night. Pressure had built for years.",
+      "On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
+      "The act did not invent fiat money overnight. Private Americans had already been barred from monetary gold under the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods did not fail in a single night either. Pressure had built for years. What ended was the official gold window — the channel through which foreign treasuries and central banks could still present dollars and demand US gold at the posted price.",
     ],
   },
   {
-    heading: "What the Nixon shock was",
+    heading: "The gold window, not a retail counter",
     paragraphs: [
-      "President Richard Nixon announced a New Economic Policy on Sunday evening, 15 August 1971. The package included a ninety-day wage and price freeze. It also added a temporary import surcharge. The line that mattered for money was simpler. The United States would suspend convertibility of the dollar into gold for foreign official holders.",
-      "That suspension is often called the closing of the gold window. The window was not a retail counter for citizens. It was the official channel through which foreign treasuries and central banks could present dollars and demand gold at the posted official price. Closing it meant the dollar was no longer redeemable in metal under Bretton Woods rules.",
+      "Nixon’s New Economic Policy mixed a ninety-day wage and price freeze with a temporary import surcharge. The line that mattered for money was simpler: suspend convertibility of the dollar into gold for foreign official holders.",
+      "That suspension is often called the closing of the gold window. The window was not a teller for citizens. It was the official redemption channel under Bretton Woods rules. Closing it meant the dollar was no longer redeemable in metal for the partners who had treated dollars as claims on US gold.",
       "The shock was a policy choice under stress, not a sudden discovery that gold had vanished from history. The administration framed the move as temporary. It was not reversed.",
     ],
   },
   {
     heading: "How Bretton Woods actually worked",
     paragraphs: [
-      "Bretton Woods was negotiated in 1944 at Bretton Woods, New Hampshire. Member currencies were pegged to the US dollar within narrow bands. The dollar itself was defined against gold at the official rate of thirty-five dollars per troy ounce.",
-      "That design made the system a gold-exchange standard, not a classical gold standard. Most countries held dollars as reserves. They treated those dollars as claims that could, in theory, be turned into US gold. Ordinary people in the United States did not redeem paper for coin at the Treasury window. Their private gold rights had already been removed in 1933.",
+      "Bretton Woods was negotiated in **1944** at Bretton Woods, New Hampshire. Member currencies were pegged to the US dollar within narrow bands. The dollar itself was defined against gold at thirty-five dollars per troy ounce.",
+      "That design made the system a **gold-exchange** standard, not a classical gold standard. Most countries held dollars as reserves. They treated those dollars as claims that could, in theory, be turned into US gold. Ordinary people in the United States did not redeem paper for coin at the Treasury window. Their private gold rights had already been removed in 1933.",
       "Under the classical gold standard before 1914, national currencies were convertible into gold for a wider set of holders, and settlement often moved metal directly between countries. Bretton Woods put the dollar in the middle. Gold sat behind the dollar for official partners. The rest of the world sat behind the dollar peg.",
-      "For a stranger to the arithmetic, the official price was a fixed conversion board. At thirty-five dollars an ounce, one dollar was defined as one thirty-fifth of an ounce of gold. If a foreign central bank held one billion dollars of official claims, those claims implied a right to about 28.6 million ounces of US gold at the posted rate—if convertibility still worked. When claims grew faster than the gold stock, the board stopped matching the vault.",
+      "At thirty-five dollars an ounce, one dollar was defined as one thirty-fifth of an ounce of gold. If a foreign central bank held one billion dollars of official claims, those claims implied a right to about **28.6 million ounces** of US gold at the posted rate — if convertibility still worked. When claims grew faster than the gold stock, the board stopped matching the vault.",
     ],
   },
   {
-    heading: "Why the gold window came under pressure",
+    heading: "Why the window came under pressure",
     paragraphs: [
       "Economist Robert Triffin stated the contradiction in plain English. The world needed more dollars to trade and hold as reserves. Those dollars came from US deficits and capital outflows. The more dollars foreigners held, the larger the official claims on US gold. If the United States supplied enough dollars for growth, confidence in convertibility weakened. If it tightened enough to protect the gold stock, the world shorted dollars. That trap is the Triffin dilemma.",
-      "From 1961 to 1968 the London Gold Pool tried to hold the free-market gold price near thirty-five dollars. Major central banks sold gold into the market when the price rose. The pool collapsed in March 1968. A two-tier market followed. The official price remained for central-bank transactions. The free market price could move away from thirty-five.",
-      "Pressure did not stop there. In May 1971 West Germany let the Deutsche Mark float. France converted dollars into gold in earlier years and kept pressing the convertibility rule. By August 1971 US gold stocks were far smaller than outstanding official dollar claims. The window could not pay every claim at thirty-five dollars if many holders presented paper at once.",
-      "This episode is distinct from the 1933 gold recall. In 1933 the United States ordered private citizens to turn in monetary gold and then raised the official gold price for government accounting. In 1971 private Americans were already outside the official gold channel. What closed was the foreign official redemption of dollars for US gold.",
+      "From **1961 to 1968** the London Gold Pool tried to hold the free-market gold price near thirty-five dollars. Major central banks sold gold into the market when the price rose. The pool collapsed in **March 1968**. A two-tier market followed. The official price remained for central-bank transactions. The free market price could move away from thirty-five.",
+      "Pressure did not stop there. In **May 1971** West Germany let the Deutsche Mark float. France converted dollars into gold in earlier years and kept pressing the convertibility rule. By August 1971 US gold stocks were far smaller than outstanding official dollar claims. The window could not pay every claim at thirty-five dollars if many holders presented paper at once.",
+      "Keep **1933** and **1971** labeled. In 1933 the United States ordered private citizens to turn in monetary gold and then raised the official gold price for government accounting. In 1971 private Americans were already outside the official gold channel. What closed was foreign official redemption of dollars for US gold.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["The August decision sits at the end of a long mismatch between dollar claims and US gold — not as a surprise invented that weekend."],
     list: [
       "**1944:** Bretton Woods agreement; dollar pegged at $35 per ounce for official convertibility.",
       "**1961–1968:** London Gold Pool defends the free-market price near $35; collapses in March 1968.",
@@ -230,17 +232,18 @@ const nixon: Section[] = [
     ],
   },
   {
-    heading: "15 August 1971",
+    heading: "Camp David and the Sunday speech",
     paragraphs: [
       "The Camp David weekend framed the announcement. Treasury Secretary John Connally and Under Secretary Paul Volcker were central voices on the gold and exchange decisions. The public speech mixed domestic inflation politics with the external dollar problem. Wage and price controls addressed the home front. The surcharge pressed trading partners. The gold suspension addressed the mismatch between dollar claims and US gold.",
       "The key legal and monetary fact remained narrow. Foreign official holders could no longer present dollars and receive gold at the fixed official price. The dollar stayed the world’s main reserve currency in practice. Its last official gold anchor did not.",
     ],
   },
   {
-    heading: "What followed",
+    heading: "What the temporary close became",
     paragraphs: [
-      "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to $42.22. Pegs still failed under market pressure.",
-      "By 1973 major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
+      "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to **$42.22**. Pegs still failed under market pressure.",
+      "By **1973** major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
+      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
     ],
   },
 ];
@@ -1484,11 +1487,10 @@ const greenbacks: Section[] = [
 
 const crime1873: Section[] = [
   {
-    heading: "What the Coinage Act of 1873 did",
+    heading: "",
     paragraphs: [
-      "The Coinage Act of **1873** revised the Mint’s list of coins. It omitted the standard silver dollar from the coins to be freely minted. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
-      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. The documentary fact is the statute’s list. The name “crime” is the political memory.",
-      "This page separates those layers. Return to [America & gold/silver politics](/history/america). Mechanics of two metals under one law: [bimetallism](/history/silver/bimetallism). The road after the silver fight: [resumption and the 1900 gold statute](/history/america/road-back-gold).",
+      "On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
+      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. The documentary fact is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
     ],
   },
   {
@@ -1496,7 +1498,7 @@ const crime1873: Section[] = [
     paragraphs: [
       "World silver supply rose in the late nineteenth century — Nevada’s Comstock and other Western mines among the sources — while several European states moved toward gold. Germany’s shift after unification dumped silver onto the market. The gold–silver market ratio moved away from older mint habits. Silver’s gold price fell.",
       "The United States had already tilted gold-friendlier in [1834](/history/america/early-us-coinage). Greenback war finance had suspended specie. By the early 1870s, officials drafting a mint revision treated the silver dollar as a coin little used in large payments and awkward beside a gold unit. Dropping free coinage of that dollar looked, to them, like housekeeping.",
-      "Housekeeping in a mint statute can still reprice every farm debt. When silver could no longer be coined freely into full-weight dollars, silver producers lost a floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory.",
+      "Housekeeping in a mint statute can still reprice every farm debt. When silver could no longer be coined freely into full-weight dollars, silver producers lost a floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory. The general mechanism of two metals under one law sits under [bimetallism](/history/silver/bimetallism); this page stays with the American statute and the fight that followed.",
     ],
   },
   {
@@ -1504,7 +1506,7 @@ const crime1873: Section[] = [
     paragraphs: [
       "The “crime” charge held that the Act was slipped through without honest debate — that silver’s friends in Congress did not see the demonetization coming. Historians still argue how open the drafting was and how much Western silver interests understood at the time. What is not in dispute: the standard silver dollar left the free-coinage list, and gold’s primacy hardened.",
       "The clarification charge held that the United States was joining a gold-standard world, that bimetallism at a stale ratio invited arbitrage, and that subsidiary silver was enough for small change. Europe’s gold turn is real context. It does not erase the domestic distributional fight that followed.",
-      "These pages do not referee the moral word “crime.” It records the Act, the nickname, and the politics that nickname organized. Readers who want the general mechanism open [bimetallism](/history/silver/bimetallism). Readers who want the American statute stay here.",
+      "These pages do not referee the moral word “crime.” They record the Act, the nickname, and the politics that nickname organized. Readers who want the mint-ratio arithmetic open [bimetallism](/history/silver/bimetallism). Readers who want the American hinge stay here, then walk [America & gold/silver politics](/history/america) for the chapter arc.",
     ],
   },
   {
@@ -1525,7 +1527,7 @@ const crime1873: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["The nickname came later. The Mint list changed first."],
     list: [
       "**1871–73:** Germany and others move toward gold; world silver price under pressure.",
       "**12 February 1873:** Coinage Act omits free coinage of the standard silver dollar.",
@@ -1537,10 +1539,10 @@ const crime1873: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "After the nickname",
     paragraphs: [
-      "This page is not a bullion pitch, not a metal-ratio target, and not a brief for remonetization today. It is the 1873 Mint revision, the “crime” nickname, free silver, and Bryan — documentary only.",
-      "Return to [America & gold/silver politics](/history/america). Earlier unit: [Early U.S. coinage](/history/america/early-us-coinage). War paper neighbor: [Greenbacks](/history/america/greenbacks-civil-war). Next: [Road back toward gold](/history/america/road-back-gold). Related chapter: [Bimetallism](/history/silver/bimetallism).",
+      "The Act, the “crime” label, free silver, and Bryan are the documentary spine of this page — not a bullion pitch, not a remonetization brief, and not a target for today’s metal ratio. Earlier unit arithmetic sits under [early U.S. coinage](/history/america/early-us-coinage). War paper sits under [greenbacks](/history/america/greenbacks-civil-war). The road after the silver fight is [resumption and the 1900 gold statute](/history/america/road-back-gold).",
+      "Return to [America & gold/silver politics](/history/america) for the chapter overview, or open [bimetallism](/history/silver/bimetallism) when the next question is the mint-ratio machine rather than the American statute fight.",
     ],
   },
 ];
@@ -1609,14 +1611,14 @@ const roadBack: Section[] = [
 
 const pieceOfEight: Section[] = [
   {
-    heading: "A coin that crossed oceans",
+    heading: "",
     paragraphs: [
-      "The Spanish dollar — the eight-real piece, the **piece of eight** — was a silver coin of roughly **twenty-seven grams** that circulated from the Americas to Europe to East Asia for more than two centuries. Merchants priced cargo in it. Sailors cut it into bits for change. Asian markets took it as settlement metal. The early United States, when it named a dollar in the **1790s**, had this coin in mind.",
-      "This page is the coin face of the silver chapter. The hole in the ground is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). Return to [silver in history](/history/silver). The claim here is narrow: one typed silver piece became a global unit of account long before any modern reserve currency.",
+      "For more than two centuries, merchants across the Atlantic and Pacific priced cargo in one familiar silver piece: the Spanish dollar — the eight-real coin, the **piece of eight**. Sailors cut it into bits for change. Asian markets took it as settlement metal. When the early United States named a dollar in the **1790s**, this coin was already in the room.",
+      "The claim here is narrow and documentary. One typed silver piece of roughly **twenty-seven grams** became a global unit of account long before any modern reserve currency. The hole in the ground that fed so much of that metal is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
-    heading: "What the piece was",
+    heading: "Eight reales, one recognisable weight",
     paragraphs: [
       "Spanish colonial mints struck the **real de a ocho** — eight reales — as a large silver coin of roughly **27 grams** (about **0.87 troy ounces** of fine silver on familiar later reckoning, with mint and wear variation). The type carried the Habsburg or Bourbon arms, mint marks, and dates. Pieces from Mexico City, Potosí, Lima, and other American mints entered Atlantic and Pacific trade.",
       "“Piece of eight” is the English name. “Spanish dollar” is the commercial name that stuck in North America and the Caribbean. Neither name invents a new metal. Both name a familiar weight of silver that strangers could recognise without a letter of credit from a local prince.",
@@ -1632,7 +1634,7 @@ const pieceOfEight: Section[] = [
     ],
   },
   {
-    heading: "Why a typed silver piece worked as a global unit",
+    heading: "Why a typed silver piece travelled",
     paragraphs: [
       "A global coin is not a metaphor. It is a repeated claim about weight and fineness that markets actually use. The piece of eight combined three facts: Spanish American mines supplied silver at empire scale; colonial and metropolitan mints stamped a recognisable type; and commercial routes already priced goods in that type.",
       "Trust still mattered. Clipped, plugged, and counterfeit pieces forced scales and assays. Familiarity lowered the cost of checking; it did not abolish checking. When a mint lightened the coin or a counterparty doubted the type, Gresham’s pattern and discounting returned. The stamp is a claim. Claims can fail. The piece of eight’s success was that, for long stretches, the claim held across oceans.",
@@ -1649,7 +1651,7 @@ const pieceOfEight: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["The type’s job was empire-scale settlement before national coinages finished replacing it."],
     list: [
       "**1490s–1500s:** Spanish American conquest and early colonial mining; silver begins to enter Atlantic payments.",
       "**1540s onward:** Potosí and other American mines feed colonial mints; eight-real pieces become empire coin.",
@@ -1660,10 +1662,10 @@ const pieceOfEight: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "One coin, several later fights",
     paragraphs: [
-      "This page is not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. It is the documentary stop for the Spanish dollar as a circulating global silver unit.",
-      "Return to [silver in history](/history/silver). Mountain: [Potosí](/history/silver/potosi). American inheritance: [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics: [bimetallism](/history/silver/bimetallism). Keep **1980** and industrial silver on their own pages.",
+      "This page is the Spanish dollar as a circulating global silver unit — not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. The mountain that fed so much of the metal is [Potosí](/history/silver/potosi). American inheritance is [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics live under [bimetallism](/history/silver/bimetallism). Keep **1980** and industrial silver on their own pages.",
+      "Return to [silver in history](/history/silver) when you want the chapter’s full arc rather than this one coin face.",
     ],
   },
 ];
@@ -1732,10 +1734,10 @@ const silverThursday: Section[] = [
 
 const bimetallism: Section[] = [
   {
-    heading: "Two metals, one legal unit",
+    heading: "",
     paragraphs: [
-      "Bimetallism is the attempt to keep gold and silver in the same monetary system at a **fixed mint ratio**. The mint stands ready to coin both metals into full-weight money at that legal number. When the **market ratio** — the gold price of silver in trade — moves away from the mint number, Gresham’s pattern appears. The statute does not defeat arbitrage.",
-      "This page carries the general mechanics. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. Return to [silver in history](/history/silver).",
+      "A government can write a law that says so many ounces of silver equal one ounce of gold at the Mint — and markets can refuse to freeze that number. **Bimetallism** is the attempt to keep both metals in the same monetary system at a **fixed mint ratio**. The mint stands ready to coin both into full-weight money at that legal number. When the **market ratio** — the gold price of silver in trade — drifts away, Gresham’s pattern appears. The statute does not defeat arbitrage.",
+      "This page carries that general machine. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1772,7 +1774,7 @@ const bimetallism: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["The legal number can sit still for decades. The trade price of silver rarely does."],
     list: [
       "**1792:** U.S. Coinage Act — gold and silver at **15:1** mint ratio.",
       "**1834:** U.S. gold-friendlier ratio correction.",
@@ -1785,20 +1787,20 @@ const bimetallism: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Law versus the scale",
     paragraphs: [
-      "This page is not a brief for remonetizing silver, not a target for today’s gold–silver quotient, and not a pitch to hold either metal. It is mint ratio, market ratio, and Gresham under a two-metal statute — documentary only.",
-      "Return to [silver in history](/history/silver). American statute article: [Crime of 1873](/history/america/crime-of-1873). Opening arithmetic: [early U.S. coinage](/history/america/early-us-coinage). Market quotient without a mint claim: [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Mint ratio, market ratio, and Gresham under a two-metal statute are the documentary spine here — not a brief for remonetizing silver, not a target for today’s gold–silver quotient, and not a pitch to hold either metal. The American statute fight lives under the [Crime of 1873](/history/america/crime-of-1873). Opening arithmetic sits under [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim sits on the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Return to [silver in history](/history/silver) for the chapter’s mountain-to-industry arc.",
     ],
   },
 ];
 
 const potosi: Section[] = [
   {
-    heading: "A mountain that moved the world’s silver",
+    heading: "",
     paragraphs: [
-      "Cerro Rico at Potosí — in today’s Bolivia — was worked from the **1540s**. For a century and more it was the great silver source of the Spanish empire. Output did not stay in the Andes. It moved to the mint, to the fleet, to Seville, into European payments, and — via the **Manila galleon** — toward China, where silver was the settlement metal of a much larger commercial system.",
-      "The lesson for these pages is flow, not romance: a mountain can set the silver stock of two oceans. For today’s country-by-country production and reserves picture, open the [world map](/maps). Production and reserves sit there, not on this page. The coin face of the flow is the [piece of eight](/history/silver/piece-of-eight). Return to [silver in history](/history/silver).",
+      "From the **1540s**, Cerro Rico at Potosí — in today’s Bolivia — poured silver into a Spanish imperial machine that reached two oceans. Ore left the mountain for the mint, the fleet, Seville, European payments, and — via the **Manila galleon** — China, where silver was the settlement metal of a much larger commercial system.",
+      "The lesson is flow, not romance: a mountain can set the silver stock of an age. Today’s country-by-country production and reserves picture sits on the [world map](/maps), not here. The coin face of the flow is the [piece of eight](/history/silver/piece-of-eight). The chapter overview is [silver in history](/history/silver).",
     ],
   },
   {
@@ -1835,7 +1837,7 @@ const potosi: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["The mountain’s fame was early-modern. The metal’s later politics did not end when Cerro Rico’s monopoly faded."],
     list: [
       "**1540s:** Major Potosí silver working begins; colonial mint and labour regimes follow.",
       "**Later 16th–early 17th centuries:** Peak decades of Cerro Rico fame and output in empire finance.",
@@ -1845,10 +1847,10 @@ const potosi: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Flow, not romance",
     paragraphs: [
-      "This page is not a mining prospectus, not a travel brochure, and not a claim that today’s silver price “should” remember Potosí. It is the documentary stop for Cerro Rico as a global silver source — flow, mint, fleet, and Asian demand.",
-      "Return to [silver in history](/history/silver). Coin face: [piece of eight](/history/silver/piece-of-eight). Present geography: [world map](/maps). Earlier silver network: [Greece: silver and trade](/history/ancient/greece-silver-trade).",
+      "Cerro Rico as a global silver source — flow, mint, fleet, and Asian demand — is the documentary spine here. This is not a mining prospectus, not a travel brochure, and not a claim that today’s silver price “should” remember Potosí. The coin face is the [piece of eight](/history/silver/piece-of-eight). Present geography sits on the [world map](/maps). An earlier silver network is [Greece: silver and trade](/history/ancient/greece-silver-trade).",
+      "Return to [silver in history](/history/silver) for the chapter’s full path from mountain to industry.",
     ],
   },
 ];
