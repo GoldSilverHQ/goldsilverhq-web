@@ -73,16 +73,6 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       border: 1px solid rgba(201, 162, 39, 0.34);
       box-shadow: inset 0 0 0 1px rgba(242, 237, 228, 0.05);
     }
-    .watermark {
-      position: absolute;
-      right: -40px;
-      bottom: -60px;
-      width: 420px;
-      height: 420px;
-      opacity: 0.14;
-      pointer-events: none;
-      filter: saturate(1.1);
-    }
     .brand-col {
       display: flex;
       flex-direction: column;
@@ -170,7 +160,6 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
 </head>
 <body>
   <div class="frame">
-    <img class="watermark" src="${logoHref}" width="420" height="420" alt="" aria-hidden="true" />
     <div class="brand-col">
       <img class="mark" src="${logoHref}" width="228" height="228" alt="" />
       <div class="wordmark"><span class="gold">Gold</span><span class="silver">Silver</span><span class="hq">HQ</span></div>
