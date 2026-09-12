@@ -31,8 +31,8 @@ function HistoryHub() {
 
         <HistoryTimeline />
 
-        <h2 className="mt-16 font-display text-3xl">Read by chapter</h2>
-        <p className="mt-2 max-w-prose text-muted">Five chapters in time order. Start anywhere; the links keep the sequence.</p>
+        <h2 className="mt-16 font-display text-3xl">The five chapters</h2>
+        <p className="mt-2 max-w-prose text-muted">From ancient coinage to the modern gold-window close. Enter at any chapter; links keep the sequence.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {historyClusters.map((cluster, i) => (
             <Link
