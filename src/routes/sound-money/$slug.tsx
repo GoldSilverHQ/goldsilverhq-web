@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sound-money/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: seoTitle(loaderData?.title ?? "Sound Money") },
+      { title: seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "Sound Money") },
       { name: "description", content: loaderData?.summary ?? "" },
     ],
   }),
@@ -32,7 +32,7 @@ function IdeaPage() {
         />
         <p className="text-xs text-muted">
           Episode · Pillar 1
-          {page.status === "ready" ? " · Phase 2 draft" : " · Skeleton"}
+          {page.status === "ready" ? " · Definition" : " · Skeleton"}
         </p>
         <h1 className="mt-2 font-display text-4xl">{page.title}</h1>
         <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>

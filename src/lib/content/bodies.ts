@@ -384,85 +384,238 @@ const goldRecall1933: Section[] = [
 
 const whatIsSoundMoney: Section[] = [
   {
-    heading: "A working definition",
+    heading: "",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically redeemability into a defined weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+    ],
+  },
+  {
+    heading: "A working definition",
+    paragraphs: [
       "If a treasury or a central bank can create more units without a matching real cost, the money is not sound in this sense. It may still circulate. It may still be legal tender. Circulation is not the test. The test is whether the issuer can dilute the stock as a matter of policy.",
+      "Historically the constraint was the cost of mining and minting gold and silver, or a redeemability rule that let holders present paper and take a known weight of metal. When that stop is gone, the unit can still work as a medium of exchange. It no longer passes the sound-money test used on this map.",
+      "Three money jobs sit in the background of the definition: medium of exchange, unit of account, and store of value. Sound money is the claim that the third job is not optional packaging. A unit that clears today’s till but cannot be held across years without political permission to dilute it fails the store-of-value half of the idea.",
+      "Use this page as the entry to the other definition stops: [hard money versus fiat](/sound-money/hard-money-vs-fiat), [inflation and purchasing power](/sound-money/inflation-purchasing-power), and [what “backed” means](/sound-money/backed-money). Cases and statutes live on [Sound Money History](/history).",
     ],
   },
   {
     heading: "Where the phrase comes from",
     paragraphs: [
       "Older English used “sound” in two related ways: the ring of a good coin (as against a counterfeit or a clipped piece), and sound as in healthy, not debased. Both senses survive. A sound coin rang true. A sound monetary standard did not quietly lighten the unit.",
-      "The phrase is now also used in crypto glossaries. That is a different search. This site uses it for metal-constrained money and for the ideas needed to read the history.",
+      "Nineteenth-century writers used the phrase for metal standards and for convertibility rules that kept paper honest. Debates over free silver, bank notes, and gold clauses all leaned on that vocabulary: was the unit honest, or was it a political instrument dressed as money? The map keeps that older job — a name for a constrained unit — not a brand for every asset someone prefers.",
+      "The vocabulary later migrated into textbooks, hard-money pamphlets, and modern glossaries. Along the way it picked up slogans. This site strips the slogan back to a testable claim about issuer discretion and cost of production.",
+      "The phrase is also used in crypto glossaries. That is a different search. This site uses it for metal-constrained money and for the ideas needed to read the history. A token with a capped schedule may borrow the adjective; it is not the documentary object of these pages.",
+    ],
+  },
+  {
+    heading: "The test: issuer discretion",
+    paragraphs: [
+      "Ask one question of any unit: can the issuer expand the stock as policy, without a matching real cost or an enforceable redeemability contract? If yes, the money fails the sound-money test here — even when it is popular, even when it is legal tender, even when it once had a gold story attached.",
+      "A gold coin can fail in practice through clipping, through a false mint ratio, or through a statute that ends public convertibility. Those are failures of the stop, not proofs that the definition was wrong. The definition names a constraint. It does not guarantee that every gold standard was well run.",
+      "Paper that is redeemable on demand in a defined weight of metal can qualify while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That hinge is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the names on this pillar.",
+      "The test is institutional, not aesthetic. A beautiful coin with a false weight fails. An ugly note with a working redeemability window can pass while the window is open. Look at the stop, not the branding on the face.",
+    ],
+  },
+  {
+    heading: "Metal, paper, and the stop",
+    paragraphs: [
+      "Metal entered money because markets needed a costly, recognisable, divisible stock — the story told on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Stamps and statutes came later. Paper entered as a claim on metal or as a warehouse receipt before it became a free-standing unit.",
+      "Sound money, on this map, is not “only coins forever.” It is the presence of a stop that the issuer cannot casually repeal for fiscal convenience. Mining cost is one stop. A public convertibility contract is another. A slogan that gold sits in a vault without a holder’s claim is not a stop — that confusion lives on [what “backed” means](/sound-money/backed-money).",
+      "When history pages show wartime suspensions, gold recalls, or closed windows, they are documenting the stop being removed. The idea page only names what was removed.",
     ],
   },
   {
     heading: "What the definition is not",
     paragraphs: [
-      "It is not a claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. The definition names a constraint, not a guarantee.",
+      "It is not a claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. Relative prices still move under a hard unit. Sound money constrains one source of a general rise in prices; it does not freeze bread against rent.",
+      "It is not a buying brief, a remonetization campaign, or a forecast. This pillar answers what the words mean. [Information versus advice](/sound-money/information-not-advice) is the standing line for the whole site.",
+      "It is not a dump of Weimar, Nixon, or the Fed onto a definition page. Those are history jobs. Mixing the idea shelf with the event shelf makes both weaker for readers and for search.",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Pillar 1 is definitions only. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans.",
+      "The hub at [Sound Money](/sound-money) orients the shelf. History starts at [Sound Money History](/history). Markets figures and practice pages are other jobs. Keep the shelves labeled: meaning here, events there, figures and handling elsewhere.",
+      "Open [hard money vs fiat](/sound-money/hard-money-vs-fiat) if you need the supply-side contrast. Open [backed money](/sound-money/backed-money) if a reserve claim is the confusion. Open [inflation](/sound-money/inflation-purchasing-power) if the question is purchasing power rather than the name of the unit. When the definition is clear and you want dates, leave this pillar: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary episodes, not glossary entries.",
     ],
   },
 ];
 
 const hardMoneyVsFiat: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways. Circulation does not decide the category.",
+    ],
+  },
+  {
     heading: "Hard money",
     paragraphs: [
       "Hard money is money that is costly to produce. Historically that cost was mining and minting gold or silver. You cannot create a new ounce with a vote or a keystroke. You can steal it, debase the coin, or suspend convertibility — those are different failures — but the metal itself does not appear because a treasury needs it.",
-      "Hard is not a synonym for “never changes price.” An ounce of gold can buy more or less bread. The hardness is on the supply side: expanding the stock takes real resources.",
+      "Hard is not a synonym for “never changes price.” An ounce of gold can buy more or less bread. The hardness is on the supply side: expanding the stock takes real resources. That is why [markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) before stamps and statutes finished the story.",
+      "A redeemable note that is a claim on a defined weight of metal can sit in the hard category while the contract holds. The hardness is the metal stop, not the paper in the wallet. Drop the stop and the same paper migrates into the fiat column without changing its ink.",
+      "Scarcity alone is not enough. A rare collectible can be scarce and still not be money. Hard money couples costly production with monetary use — settlement, pricing, and holding balances — under rules that make new units expensive to create.",
     ],
   },
   {
     heading: "Fiat money",
     paragraphs: [
       "Fiat money is a claim created by a state or a bank, accepted because of law and habit. The Latin *fiat* is “let it be done.” The unit exists because an authority says it does, and because people need it for taxes, debts, and daily settlement.",
-      "Fiat can be well managed or badly managed. That is not the distinction. The distinction is the stop. If the issuer can expand the stock as policy, the money is fiat in this map’s language even when it once had a gold story attached.",
+      "Fiat can be well managed or badly managed. That is not the distinction on this page. The distinction is the stop. If the issuer can expand the stock as policy, the money is fiat in this map’s language even when it once had a gold story attached.",
+      "Legal tender rules, tax acceptance, and clearing habit keep fiat useful. Usefulness is not hardness. A convenient unit can still be discretionary paper. Central-bank independence, inflation targets, and fiscal rules are management tools inside fiat; they are not a return to mining-cost constraints.",
     ],
   },
   {
     heading: "Both can circulate",
     paragraphs: [
       "Circulation does not decide the category. People have used salt, cigarettes, paper notes, bank deposits, and gold coin. A circulating fiat unit can be more convenient than coin. A hard unit can be hoarded and disappear from the till. The question on this page is the constraint, not the popularity.",
-      "When convertibility is suspended, a note that was a claim on metal becomes, for practical purposes, fiat. That is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the names.",
+      "When convertibility is suspended, a note that was a claim on metal becomes, for practical purposes, fiat. That is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the names. The paper did not change color overnight. The stop did.",
+      "Wartime greenbacks in the United States floated below gold until resumption restored par in practice. That episode is war paper and statute, not a proof that “paper always equals metal.” Read it on [greenbacks and the Civil War](/history/america/greenbacks-civil-war).",
+      "Gresham’s pattern — bad money driving good money out of the till when legal ratios misprice metals — is a circulation fact under hard regimes. It does not turn the undervalued metal into fiat. It shows that statute and market ratio can disagree while both metals remain costly to produce.",
+    ],
+  },
+  {
+    heading: "Where the line blurs",
+    paragraphs: [
+      "Gold-exchange systems, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. The vocabulary of “gold” survived longer than the public claim.",
+      "Bank deposits that settle in fiat are claims on a banking system, not ounces. Covering a note issue with government bonds is a claim on a tax office, not metal backing. Those confusions belong next to [what “backed” means](/sound-money/backed-money).",
+      "Do not mash hard money with “assets I like,” or fiat with “money I dislike.” The map’s line is production cost and issuer discretion, stated as definitions for reading history — not as a ranking of virtue. A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
+    ],
+  },
+  {
+    heading: "Failures on each side",
+    paragraphs: [
+      "Hard money fails by debasement, by false mint ratios, by clipping, and by suspending convertibility. The metal can still exist while the unit stops being honest. [Bimetallism](/history/silver/bimetallism) shows how a legal ratio can push one metal out of circulation without abolishing either metal. The [Crime of 1873](/history/america/crime-of-1873) shows how statute can redefine which metal the unit points at.",
+      "Fiat fails by over-issue relative to the goods and claims it is asked to measure, by broken fiscal stops, and by loss of confidence that collapses demand for balances. [Weimar 1923](/history/20th-century/weimar-1923) is the extreme documentary case on this site — a history page, not a definition rewrite.",
+      "Both categories can finance wars, pay taxes, and clear trade. The category names the stop. The history pages name the episodes. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what holders feel when the unit weakens under either label.",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Parent hub: [Sound Money](/sound-money). Companion definitions: [what is sound money?](/sound-money/what-is-sound-money), [inflation and purchasing power](/sound-money/inflation-purchasing-power), [what “backed” means](/sound-money/backed-money).",
+      "For events, leave this pillar. For dated market figures, use [Markets](/markets). For handling metal, use [gold and silver in practice](/gold-silver). This page only splits costly production from law-and-habit claims. Keep Weimar, Nixon, and greenbacks as linked cases, not as pasted timelines that turn a definition into a cluster hub.",
     ],
   },
 ];
 
 const inflation: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+    ],
+  },
+  {
     heading: "What inflation is on this site",
     paragraphs: [
-      "Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure.",
-      "An hour of work is a useful check. If the same hour buys less bread, less rent, or less metal over years, the unit has weakened. That can happen with or without a dramatic crisis. Hyperinflation is a special case, not the definition.",
+      "The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check. If the same hour buys less bread, less rent, or less metal over years, the unit has weakened. That can happen with or without a dramatic crisis.",
+      "Consumer-price indexes and wholesale indexes are measurement tools. They are not the definition. The definition is purchasing-power erosion of the unit. Indexes help document that erosion; they do not invent it. Basket choice, quality adjustments, and base years matter for reading a series — they do not rewrite the idea.",
+      "This page stays on the idea. [Weimar 1923](/history/20th-century/weimar-1923) is the documentary extreme. Do not paste Weimar into every mild rise in a price index. Ordinary inflation and hyperinflation share a channel when money stock is discretionary; they do not share a severity or a timeline. A two-percent annual rise and a monthly fifty-percent rise are not the same documentary object.",
     ],
   },
   {
     heading: "Money stock and prices",
     paragraphs: [
       "Prices can rise because goods are scarce, because demand shifts, or because more units chase the same things. Hard-money writers emphasise the last channel. A complete account of any year needs all three. The map only needs the distinction: a unit that can be issued without cost makes the last channel a policy choice.",
-      "Sound money does not make relative prices stand still. It constrains one source of a general rise. [Weimar 1923](/history/20th-century/weimar-1923) is the extreme case of that channel running without a stop.",
+      "Sound money does not make relative prices stand still. It constrains one source of a general rise. Harvest failures, war damage, and demand shifts still move particular prices under a hard unit. A gold standard that holds convertibility can still see wartime scarcity lift food prices without rewriting the unit.",
+      "When the issuer can expand the stock as policy, a fiscal gap can be closed with new units. Tax arrives later in weaker money. Real cash balances fall; people spend faster; velocity rises. That feedback is the mechanical core of severe inflation episodes — stated as mechanism, not as a morality play.",
+    ],
+  },
+  {
+    heading: "Purchasing power as the check",
+    paragraphs: [
+      "Ask what a unit buys over time: a basket of goods, an hour of common labor, a weight of metal. If the basket shrinks for the same nominal wage, purchasing power fell. If metal rises sharply in the unit while the metal’s mining cost did not jump overnight, the unit may be the thing that weakened.",
+      "Premiums, taxes, and local scarcity still matter for any single price. The purchasing-power check is about the unit across many goods, not one headline. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names which units make stock expansion a policy lever.",
+      "Greenbacks during the American Civil War traded at a gold premium in New York. That premium was the market’s measure of paper versus metal — a wartime purchasing-power fact, documented on [greenbacks and the Civil War](/history/america/greenbacks-civil-war). Resumption later closed the gap in practice; the idea page only names what the gap measured.",
+      "Interest rates and bond prices can move with inflation expectations. That is macro plumbing for another desk. Here the claim stays narrow: purchasing power of the unit is the object; prices are the surface.",
+    ],
+  },
+  {
+    heading: "Hyperinflation is a case",
+    paragraphs: [
+      "Hyperinflation is usually marked when prices rise on the order of **50% or more in a month**. It is a phase, not a synonym for every inflation. Germany crossed that line in mid-**1922**; the paper mark then ceased to work as a store of value or a unit of account by autumn **1923**.",
+      "The cartoons — wheelbarrows, wallpaper notes — are evidence of velocity and refusal to hold balances. They are not the cause. The cause chain on the Weimar page is war finance, a missing gold stop, fiscal gaps, and monetisation of Treasury paper.",
+      "Assignats in revolutionary France and Law’s **1720** System are other paper collapses with their own dates and instruments. Rhyme teaches mechanism. Merge erases centuries. Keep them on [banks and paper](/history/banks-paper), not as footnotes that rewrite this definition.",
+      "Stabilisation after hyperinflation often needs a new unit, a fiscal stop, and a credible refusal to print for the treasury — the Rentenmark story on the Weimar page. That is history. The idea here is only that hyperinflation is inflation’s extreme phase, not its everyday meaning.",
+    ],
+  },
+  {
+    heading: "What this definition is not",
+    paragraphs: [
+      "It is not a forecast of next year’s index. It is not a recommendation to buy or sell metal, bonds, or anything else. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "It is not a claim that every price rise is “only printing.” Scarcity and demand shifts are real. The map’s job is to keep the money-stock channel visible when the unit can be issued without a stop.",
+      "It is not a substitute for [what is sound money?](/sound-money/what-is-sound-money). Sound money names the constraint. Inflation names what happens to purchasing power when the unit weakens — under any regime. It is also not a markets spoke: dated metal figures live on [Markets](/markets).",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Parent hub: [Sound Money](/sound-money). Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923).",
+      "History episodes stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history.",
     ],
   },
 ];
 
 const backedMoney: Section[] = [
   {
+    heading: "",
+    paragraphs: [
+      "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing: a contract. A currency said to be “supported by” gold sitting in a vault, with no public claim on it, is another: a slogan, or at best a reserve-management fact.",
+    ],
+  },
+  {
     heading: "A contract, or a slogan",
     paragraphs: [
-      "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing: a contract. A currency said to be “supported by” gold sitting in a vault, with no public right to present the note and take the metal, is another: a slogan, or at best a reserve-management fact.",
       "Redeemability is testable. Either a holder can demand the metal at a known price, or they cannot. Reserves on a balance sheet, without that right, do not make the unit hard.",
+      "A classical convertibility rule said: present the note, take the weight. The vault mattered because the public claim could empty it. A modern central-bank gold pile without that claim is a portfolio fact. It is not the same contract.",
+      "When writers say a currency is “backed by the full faith and credit” of a government, they name a tax and legal-tender story. That can be a strong fiscal claim. It is not metal backing in the sense this page uses.",
+      "The word “backed” sells confidence. The map asks for the mechanism. Without a presentment right, confidence is a story about the issuer — not a metal contract the holder can enforce at a teller window on a working day.",
     ],
   },
   {
     heading: "Three easy confusions",
     paragraphs: [
       "First: covering a note issue with government bonds is not metal backing. It is a claim on a tax office. Second: a gold-exchange standard, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. Third: the [Rentenmark](/history/20th-century/weimar-1923) was “backed” by mortgages. That was an accounting and political device to stop the press, not a pile of gold at the teller window.",
-      "The [1933 U.S. gold recall](/history/20th-century/1933-gold-recall) shows the other side: even a gold dollar can have the public claim removed by statute.",
+      "Official book value of U.S. gold — still carried at a statutory dollar price far from the market — is another trap for the word. The figure is an accounting convention. Read it on [official gold book value](/markets/official-gold-book-value), not as proof of public redeemability.",
+      "Central-bank reserve totals answer “how much metal does the state hold?” They do not answer “can a private holder present notes and take metal?” Keep [central-bank gold reserves](/markets/central-bank-gold-reserves) on the markets shelf. A rising reserve tonne chart can sit beside a pure fiat domestic unit without contradiction.",
+    ],
+  },
+  {
+    heading: "Redeemability in practice",
+    paragraphs: [
+      "Under a working gold or silver standard, banks and treasuries published rules for convertibility: which notes, which weights, which offices. The public test was the window. When the window closed for war or emergency, the note’s legal name might still say “gold.” The contract had changed.",
+      "The [1933 U.S. gold recall](/history/20th-century/1933-gold-recall) shows the other side: even a gold dollar can have the public claim removed by statute. Citizens lost monetary gold rights years before the **1971** close of the gold window for foreign official holders.",
+      "Bretton Woods then limited the remaining gold link to official holders at **$35** an ounce. Retail Americans were not walking into a Treasury window for coin. Calling that era “gold-backed money” without naming who could redeem is how the slogan swallows the contract.",
+      "Warehouse receipts and early bank notes started as claims on deposited metal — the banks-paper shelf’s opening story. When the receipt stops being payable in metal on demand, the instrument has changed category even if the engraved language lags behind.",
+    ],
+  },
+  {
+    heading: "Reserves without a public claim",
+    paragraphs: [
+      "A treasury can hold metal, foreign exchange, and securities while the domestic unit is pure fiat. The reserves may stabilise an exchange rate, satisfy creditors, or signal prudence. None of that restores redeemability for note holders unless law says so.",
+      "Mortgage “backing,” land “backing,” and commodity baskets in propaganda often mean: we assigned an accounting cover so the new issue looks limited. The Rentenmark’s mortgages were that kind of device. Holders could not demand a farm at the teller window.",
+      "Ask two questions of any “backed” claim: backed by what instrument, and who may present the claim? If the answer is “gold in a vault, for the central bank’s own books,” you have reserves. If the answer is “a defined weight, on demand, for the holder,” you have a contract.",
+      "Fractional reserves against redeemable notes are a banking topic: the note is still a claim on metal, subject to run risk. That is not the same as a non-redeemable unit whose issuer merely owns some gold. Keep the claim structure straight before arguing ratios.",
+    ],
+  },
+  {
+    heading: "What this definition is not",
+    paragraphs: [
+      "It is not a brief to restore a gold window, and not a forecast of exchange rates. It is not investment advice. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "It is not a claim that reserves are useless. Reserves are useful for states. The map only refuses to rename them as public convertibility when the public has no claim.",
+      "It is not a dump of every gold statute onto one page. [What is sound money?](/sound-money/what-is-sound-money) names the constraint. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names production cost. This page only polices the word “backed.”",
+    ],
+  },
+  {
+    heading: "How this page sits in the pillar",
+    paragraphs: [
+      "Parent hub: [Sound Money](/sound-money). Read next with [what is sound money?](/sound-money/what-is-sound-money) and [hard money vs fiat](/sound-money/hard-money-vs-fiat). History hinges: [1933 gold recall](/history/20th-century/1933-gold-recall), [Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971), [Weimar / Rentenmark](/history/20th-century/weimar-1923).",
+      "When a desk figure looks like “backing,” check whether the page is markets accounting or a redeemability story. This pillar stays on meaning. Markets stay on dated facts. Practice stays on handling metal. Do not let a vault photo rewrite a contract that does not exist.",
     ],
   },
 ];
-
 const barsVsCoins: Section[] = [
   {
     heading: "What the choice is",
@@ -2120,6 +2273,58 @@ export const historyHubBody: Section[] = [
       "For the modern door, start at **/history/20th-century**. That cluster hub lines up private rescue after 1907, the Fed’s creation, the end of classical gold, Weimar, the 1933 US gold recall, and the 1971 close of the dollar’s gold window. From there, open any single episode, or return to this hub and choose another cluster.",
       "You do not need to retell Weimar or Nixon on this hub page. Those stories live in their episodes. This page only orients: five clusters as a path, episodes as dated claims, and the twentieth century as the densest entrance for readers who live downstream of 1971.",
       "If you prefer a slower on-ramp, begin with **/history/ancient** or **/history/banks-paper**, then move forward when the mechanism is clear. Either route is valid. What matters is finishing with a chain of dated claims rather than a pile of slogans. The path is the point—money’s history as linked events, from coinage toward that modern close.",
+    ],
+  },
+];
+
+/** Pillar hub /sound-money — rendered by the sound-money index route. */
+export const soundMoneyHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "This pillar answers what sound money *means* — not what happened in 1923 or 1971, and not how to buy a bar. History has its own pillar. Practice has its own pillar. Markets has its own pillar. Keep the shelves labeled.",
+    ],
+  },
+  {
+    heading: "What this pillar is",
+    paragraphs: [
+      "Pillar 1 is a definition shelf. The four long stops fix vocabulary: [what is sound money?](/sound-money/what-is-sound-money), [hard money vs fiat](/sound-money/hard-money-vs-fiat), [inflation and purchasing power](/sound-money/inflation-purchasing-power), and [what “backed” means](/sound-money/backed-money). A short fifth page states the standing media line: [information versus advice](/sound-money/information-not-advice).",
+      "The tone is documentary. The aim is a readable glossary for adults who want the words straight before they open a dated episode. No page here is a remonetization brief, a metal shopping list, or a forecast. The claim is narrow on purpose: meaning first, events elsewhere.",
+      "Search titles stay catalogue-plain so they file cleanly. The bodies carry the weight. This hub only orients the shelf so a reader landing on any one definition can see the neighbors without turning the idea pillar into a history cluster.",
+    ],
+  },
+  {
+    heading: "What this pillar is not",
+    paragraphs: [
+      "This pillar is not [Sound Money History](/history). Weimar, the Fed, greenbacks, and Nixon live as events on the history shelf. Idea pages may link those episodes once as cases. They do not retell the timelines. A rhyme teaches mechanism; a pasted timeline erases the job split.",
+      "This pillar is not [Markets](/markets) and not [gold and silver in practice](/gold-silver). Dated figures and handling metal are other jobs. Mixing definition with tips produces a pitch. Keeping the label produces a word you can reuse on every later page.",
+      "It is also not a capture shelf. List-building CTAs are paused on the site. Do not expect a signup form here. The map may still name later monetization as an open decision; the live pages do not.",
+    ],
+  },
+  {
+    heading: "The definition stops",
+    paragraphs: ["Each line is a job description. Open the page for the full mechanism. This hub does not reprint every paragraph."],
+    list: [
+      "[What is sound money?](/sound-money/what-is-sound-money) — Working definition: a unit whose stock cannot be expanded at will; issuer-discretion test.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) — Costly production versus law-and-habit claims; circulation does not decide the category.",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) — Decline in what the unit buys; hyperinflation as a case, not the everyday meaning.",
+      "[What “backed” means](/sound-money/backed-money) — Redeemability contract versus reserve slogan; who may present the claim.",
+      "[Information vs advice](/sound-money/information-not-advice) — Short BaFin-clean media line; not a definition stop of the same length.",
+    ],
+  },
+  {
+    heading: "Flavio reading order on this shelf",
+    paragraphs: [
+      "Long-tail clarity first, then the entry definition, then this hub as orientation. A practical path for newcomers is [backed money](/sound-money/backed-money) (the word most often abused), then [hard money vs fiat](/sound-money/hard-money-vs-fiat), then [inflation](/sound-money/inflation-purchasing-power), then [what is sound money?](/sound-money/what-is-sound-money) as the summary entry. Searchers who land on the entry page can still fan out sideways.",
+      "When the vocabulary is clear, leave for history. Do not park Weimar or Nixon on this hub. One light link per case is enough. The history pillar’s five clusters already hold the dated claims; this shelf only prepares the reader to recognize the stops when they appear.",
+    ],
+  },
+  {
+    heading: "How to use this hub",
+    paragraphs: [
+      "Start anywhere on the four definition pages if you already know the confusion. Return here when you need the shelf map. Use [Sound Money History](/history) when you want dated claims. Use [Markets](/markets) when you want figures. Use practice when you want handling metal.",
+      "Related links on each definition page stay short — usually this hub plus neighbor stops and at most one history hinge. That is the ledger: definition to hub, hub to history once, no spaghetti.",
+      "This hub’s job is orientation only. It does not pretend the disclaimer page is a sixth thick essay, and it does not turn Pillar 1 into a history cluster. Read the index, open one definition, then leave when the next question is “what happened?” rather than “what does this word mean?”",
     ],
   },
 ];
