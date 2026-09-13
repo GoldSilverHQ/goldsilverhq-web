@@ -134,11 +134,11 @@ export function SiteShell({
   return (
     <div className="min-h-screen bg-bg text-fg">
       <header className="sticky top-0 z-40 overflow-visible border-b border-line bg-bg/85 backdrop-blur-md">
-        <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-4 px-4 xl:gap-10">
+        <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-4 px-4 xl:gap-12">
           <Link to="/" className="shrink-0 text-[1.159rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
-          <nav className="hidden min-w-0 flex-1 items-center gap-5 xl:flex xl:pl-2">
+          <nav className="hidden min-w-0 flex-1 items-center gap-5 xl:flex xl:pl-4">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -155,7 +155,7 @@ export function SiteShell({
             </div>
             <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-7">
               <SocialLinks compact />
-              <div className="ml-3 sm:ml-4">
+              <div className="ml-5 sm:ml-6">
                 <ThemeToggle />
               </div>
               <button
