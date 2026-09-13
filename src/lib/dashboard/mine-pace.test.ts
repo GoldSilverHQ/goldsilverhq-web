@@ -50,4 +50,13 @@ describe("mine pace estimates", () => {
     assert.ok(Math.abs(ytd.goldOz - goldOzPerYear()) < goldOzPerSecond(2026) * 2);
     assert.ok(Math.abs(ytd.silverOz - silverOzPerYear()) < silverOzPerSecond(2026) * 2);
   });
+
+  it("exposes full-year 2026 ounce totals for the desk secondary line", () => {
+    const gold = goldOzPerYear();
+    const silver = silverOzPerYear();
+    assert.equal(Math.floor(gold), 119_214_934);
+    assert.equal(silver, 844_100_000);
+    assert.equal(Math.floor(gold).toLocaleString("en-US"), "119,214,934");
+    assert.equal(Math.floor(silver).toLocaleString("en-US"), "844,100,000");
+  });
 });

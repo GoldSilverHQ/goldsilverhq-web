@@ -4,12 +4,14 @@ import {
   GOLD_MINE_2026E,
   SILVER_MINE_2026F,
   goldOzPerSecond,
+  goldOzPerYear,
   mineOzRatio,
   silverOzPerSecond,
+  silverOzPerYear,
   ytdMineOunces,
 } from "@/lib/dashboard/mine-pace";
 
-function fmtOz(n: number) {
+function fmtOunces(n: number) {
   return Math.floor(n).toLocaleString("en-US");
 }
 
@@ -38,12 +40,15 @@ function PaceTile({
   tone,
   unit,
   value,
+  estimate,
   info,
 }: {
   kicker: string;
   tone: "gold" | "silver" | "gold-soft";
   unit: string;
   value: string;
+  /** Smaller second line — full-year estimate for mined cards. */
+  estimate?: string;
   info: string;
 }) {
   const color =
@@ -56,6 +61,7 @@ function PaceTile({
         {value}
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
       </p>
+      {estimate ? <p className="mt-1.5 text-xs tabular-nums tracking-normal text-faint">{estimate}</p> : null}
     </article>
   );
 }
@@ -74,6 +80,8 @@ export function MinePaceTicker() {
   const goldRate = goldOzPerSecond(year);
   const silverRate = silverOzPerSecond(year);
   const ratio = mineOzRatio();
+  const goldFullYear = fmtOunces(goldOzPerYear());
+  const silverFullYear = fmtOunces(silverOzPerYear());
 
   return (
     <section aria-label="Estimated mine production this year">
@@ -81,21 +89,23 @@ export function MinePaceTicker() {
         <PaceTile
           kicker="Gold mined this year"
           tone="gold"
-          unit="oz"
-          value={ytd ? fmtOz(ytd.goldOz) : "—"}
-          info={`About ${goldRate.toFixed(1)} troy ounces each second. ${GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t ${GOLD_MINE_2026E.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.`}
+          unit="ounces"
+          value={ytd ? fmtOunces(ytd.goldOz) : "—"}
+          estimate={`est. 2026: ${goldFullYear} ounces`}
+          info={`About ${goldRate.toFixed(1)} troy ounces each second. Full-year estimate ${goldFullYear} ounces (${GOLD_MINE_2026E.tonnes.toLocaleString("en-US")} t ${GOLD_MINE_2026E.asOf}), spread evenly through the year. Estimate — not a live mine feed.`}
         />
         <PaceTile
           kicker="Silver mined this year"
           tone="silver"
-          unit="oz"
-          value={ytd ? fmtOz(ytd.silverOz) : "—"}
-          info={`About ${silverRate.toFixed(1)} troy ounces each second. ${SILVER_MINE_2026F.moz.toLocaleString("en-US")} Moz ${SILVER_MINE_2026F.asOf} mine pace, spread evenly through the year. Estimate — not a live mine feed.`}
+          unit="ounces"
+          value={ytd ? fmtOunces(ytd.silverOz) : "—"}
+          estimate={`est. 2026: ${silverFullYear} ounces`}
+          info={`About ${silverRate.toFixed(1)} troy ounces each second. Full-year estimate ${silverFullYear} ounces (${SILVER_MINE_2026F.moz.toLocaleString("en-US")} million ounces ${SILVER_MINE_2026F.asOf}), spread evenly through the year. Estimate — not a live mine feed.`}
         />
         <PaceTile
           kicker="Mining ratio"
           tone="gold-soft"
-          unit="oz Ag / oz Au"
+          unit="ounces Ag / ounces Au"
           value={ratio.toFixed(1)}
           info={`Silver mined per ounce of gold at the ${GOLD_MINE_2026E.asOf}/${SILVER_MINE_2026F.asOf} pace. Not the price ratio.`}
         />
