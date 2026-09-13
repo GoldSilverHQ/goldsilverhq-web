@@ -54,14 +54,16 @@ function PaceTile({
   const color =
     tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-gold-soft";
   return (
-    <article className="relative rounded-lg bg-surface p-4 pr-10 shadow-[var(--shadow-border)]">
+    <article className="relative flex min-h-[9.25rem] flex-col rounded-lg bg-surface px-4 pt-4 pb-5 pr-10 shadow-[var(--shadow-border)]">
       <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
       <InfoHint label={`${kicker} details`}>{info}</InfoHint>
       <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
         {value}
         <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
       </p>
-      {estimate ? <p className="mt-1.5 text-xs tabular-nums tracking-normal text-faint">{estimate}</p> : null}
+      {estimate ? (
+        <p className="mt-2 text-xs leading-snug tabular-nums tracking-normal text-faint">{estimate}</p>
+      ) : null}
     </article>
   );
 }
