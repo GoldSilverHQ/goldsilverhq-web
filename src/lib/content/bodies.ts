@@ -1004,23 +1004,23 @@ const whyMarkets: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Before states stamped coins, traders already settled in gold and silver. Cattle, grain, shells, and copper had their ranges. For high-value, long-distance settlement, two metals kept winning. The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand.",
-      "Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
+      "Before states stamped coins, traders already settled in gold and silver. Cattle paid a fine inside a village that already priced in livestock. Grain paid a tax if the collector took it before it spoiled. Cowries moved along coasts. Copper and bronze filled the till for small change. Each of those goods worked in a range. For a payment that had to travel, wait, and still be accepted by a stranger, the range closed. Two metals kept winning.",
+      "The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand. Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
     ],
   },
   {
     heading: "Selection, not a decree",
     paragraphs: [
-      "Many things have been money in a local range. Cattle settle a fine inside a community that already prices in cattle. Grain can pay a tax at harvest if the collector takes it before it spoils. Cowries have moved along coasts. Copper and bronze served as everyday small change in more than one ancient economy. People use what is at hand when the trade is near and the counterparties already know the stuff.",
+      "Many things have been money close to home. Cattle settle a fine inside a community that already prices in cattle. Grain can pay a tax at harvest if the collector takes it before it spoils. Cowries have moved along coasts. Copper and bronze served as everyday small change in more than one ancient economy. People use what is at hand when the trade is near and the counterparties already know the stuff.",
       "Those goods fail as distance and value rise. An ox cannot settle a debt two seas away. Grain rots. Shells vary. Copper is useful, therefore consumed, and bulky for a large payment. A unit that must travel, wait, and still be accepted by someone who did not raise it needs different properties.",
       "Gold and silver were already that unit by weight long before a punch hit electrum in western Anatolia. In Mesopotamia, silver measured accounts in shekels — a weight, not yet a coin. Ingots, rings, and cut pieces moved in the Levant as hacksilver: metal taken by the scale, not by a type. Egyptian gold did the same work at a higher value. Markets had a settlement metal. They did not wait for a king to invent money by stamping it.",
-      "A statute can name what taxes will accept. That is power over a till, not proof that distant traders will hold the named thing overnight. When it fails in the hand — too heavy, too perishable, too easy to fake, too easy to plant — the trade finds another. Gold and silver kept being found.",
+      "A statute can name what taxes will accept. That is power over a till, not proof that distant traders will hold the named thing overnight. When a unit fails in the hand — too heavy, too perishable, too easy to fake, too easy to plant — the trade finds another. Gold and silver kept being found.",
     ],
   },
   {
     heading: "What the properties actually do",
     paragraphs: [
-      "The properties are not a hymn. They are what a settlement good has to do when the other party is a stranger and the payment may sit for a year.",
+      "The six properties are mechanisms. They are what a settlement good has to do when the other party is a stranger and the payment may sit for a year.",
       "**Durability** means the unit can sit for a generation. Gold does not rot and does not rust in ordinary air. Silver tarnishes; the metal remains. Grain, cattle, and cloth do not offer that pause. A store of value is first a store: the thing must still be there.",
       "**Divisibility** means a debt can be paid without slaughtering an ox. Metal can be cut, weighed, and recast. The same stuff settles a large claim and leaves a remainder. A live animal or a finished cloth is damaged by being divided. Change is how a unit works at more than one scale.",
       "**Homogeneity** means one ounce is like another, once refined. Cattle are not interchangeable. Shells vary. Mixed copper is a guess. When pieces of the same fineness are alike, weight becomes a language. The scale replaces the argument about which cow or which lump.",
@@ -1034,22 +1034,22 @@ const whyMarkets: Section[] = [
     heading: "Two metals, not one law",
     paragraphs: [
       "Gold and silver are not the same instrument. Gold packs more value into a smaller weight. It suits tribute, stores, and large settlement. Silver sits closer to daily trade: enough value to move, enough bulk that ordinary payments do not require dust. Ancient economies often used both, with copper or bronze underneath for the smallest change. That is a habit of scales, not yet a mint ratio written into a republic’s statute.",
-      "Later pages will meet legal bimetallism — a fixed mint ratio, then Gresham’s pattern when the market ratio moves. That fight is not this episode. Traders already had two metals that did different jobs. No decree created that split. The split is in the properties: the same durability and homogeneity, different value per weight.",
+      "A later age would write a legal ratio between the two and then watch Gresham’s pattern when the market ratio moved: the legally overvalued metal stays in the till; the other leaves. That fight is about metals already in use. Traders had the split before any republic named it. No decree created two jobs. The split is in the properties: the same durability and homogeneity, different value per weight.",
     ],
   },
   {
     heading: "Metal first, mint later",
     paragraphs: [
       "Payment by weight is slow. Scales, touchstones, and arguments about fineness are the cost of using anonymous metal in a market of strangers. A stamp is a claim about that weight and that fineness. It does not create the metal. It cuts the cost of checking it.",
-      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh and sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. The invention is the mark, not the ore. You still need to trust the issuer. You no longer need to weigh every lump. [Lydia and the first coins](/history/ancient/lydia-first-coins) is that stop.",
+      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh and sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. The invention is the mark, not the ore. You still need to trust the issuer. You no longer need to weigh every lump. [Lydia and the first coins](/history/ancient/lydia-first-coins) follows that punch from electrum to a typed piece.",
       "The stamp relocates trust. It does not abolish it. When the type is honest, coin travels farther than hacksilver. When the type is lightened, people return to the scale or hoard the better pieces. Greece’s silver network, Rome’s debasement, and a gold unit that keeps its weight come after the mint exists. They are not the origin of the metal as money.",
-      "Do not start the story in **1971**. The Nixon gold-window close is a late official hinge, not the invention of money. Do not start it with a warehouse receipt either. Paper that claims a pile of coin comes after people already trusted the pile. This page is the pile: why gold and silver were the stuff in the bag.",
+      "The Nixon gold-window close of **1971** is a late official hinge: a government stopped redeeming dollars in metal for foreign treasuries. It is not when gold and silver became money. A warehouse receipt is later still in another sense — paper that claims a pile of coin, after people already trusted the pile. Gold and silver were the stuff in the bag long before either machine existed.",
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "After the metal, the mark",
     paragraphs: [
-      "None of this is a pitch to hold metal. It is why traders kept returning to the same two. The parent page is the [ancient money hub](/history/ancient): metal first, stamp second, then the path from Lydia to the solidus. The next hinge is [Lydia and the first coins](/history/ancient/lydia-first-coins) — electrum, a stamp, and a lower cost of verifying metal. Coinage is verification. It is not the birth of monetary metal.",
+      "None of this is a pitch to hold metal. It is why traders kept returning to the same two. [Ancient money](/history/ancient) follows that order from here: settlement metal first, then a stamp that made the metal cheaper to check among strangers. [Lydia and the first coins](/history/ancient/lydia-first-coins) is where a punch hits electrum in western Anatolia. Coinage is verification. It is not the birth of monetary metal.",
     ],
   },
 ];

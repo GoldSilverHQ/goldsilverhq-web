@@ -252,7 +252,7 @@ export const historyClusters: Cluster[] = [
           "Before states stamped coins, traders already settled in gold and silver. The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
         ],
         related: [
-          { title: "Ancient money hub", href: "/history/ancient" },
+          { title: "Ancient money", href: "/history/ancient" },
           { title: "Lydia and the first coins", href: "/history/ancient/lydia-first-coins" },
         ],
         seo: {
