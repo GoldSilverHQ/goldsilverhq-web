@@ -24,11 +24,13 @@ const AMERICA_EPISODES = [
   "road-back-gold",
 ] as const;
 
-describe("ancient why-markets thicken (no new URLs)", () => {
-  it("thickens the existing episode and locks a two-stop ledger", () => {
-    const text = bodyText(getBody("ancient", "why-markets-chose-gold-silver")!);
+describe("ancient why-markets polish (no new URLs)", () => {
+  it("keeps the existing episode in the reader band and locks a two-stop ledger", () => {
+    const body = getBody("ancient", "why-markets-chose-gold-silver");
+    assert.ok(body, "missing body for ancient/why-markets-chose-gold-silver");
+    const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 900 && words <= 1200, `expected 900–1200 words, got ${words}`);
+    assert.ok(words >= 1000 && words <= 1300, `expected 1000–1300 words, got ${words}`);
 
     assert.match(text, /Durability/);
     assert.match(text, /Divisibility/);
@@ -38,9 +40,33 @@ describe("ancient why-markets thicken (no new URLs)", () => {
     assert.match(text, /Portability/);
     assert.match(text, /metal came first/i);
     assert.match(text, /stamp came second/i);
-    assert.match(text, /\[ancient money hub\]\(\/history\/ancient\)/);
+    assert.match(text, /1971/);
+    assert.match(text, /warehouse receipt/i);
+    assert.match(text, /\[ancient money\]\(\/history\/ancient\)/i);
     assert.match(text, /\[Lydia and the first coins\]\(\/history\/ancient\/lydia-first-coins\)/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
+    assert.doesNotMatch(
+      text,
+      /Why this stop matters|continue the map|this page is|episode index|ancient money hub|Phase-1|spoke\b/i,
+    );
+
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    const whyBlock = mapSrc.match(
+      /slug:\s*"why-markets-chose-gold-silver"[\s\S]*?slug:\s*"lydia-first-coins"/,
+    )?.[0];
+    assert.ok(whyBlock, "missing why-markets episode block in map.ts");
+    const hrefs = [...whyBlock.matchAll(/href:\s*"([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual(hrefs, ["/history/ancient", "/history/ancient/lydia-first-coins"]);
+
+    assert.ok(
+      PHASE1_SITEMAP_PATHS.includes("/history/ancient/why-markets-chose-gold-silver"),
+      "expected why-markets to stay on the sitemap",
+    );
+    assert.equal(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/history/ancient")).length,
+      6,
+      "ancient sitemap set must stay parent + five episodes",
+    );
   });
 });
 
