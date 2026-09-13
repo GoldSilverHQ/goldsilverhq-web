@@ -27,7 +27,15 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 
 function bodyText(sections: Section[]) {
   return sections
-    .flatMap((s) => [s.heading, ...(s.callout?.paragraphs ?? []), ...s.paragraphs, ...(s.list ?? [])])
+    .flatMap((s) => [
+      s.heading,
+      ...(s.callout?.paragraphs ?? []),
+      ...s.paragraphs,
+      ...(s.list ?? []),
+      s.table?.caption,
+      ...(s.table?.headers ?? []),
+      ...(s.table?.rows.flat() ?? []),
+    ])
     .filter(Boolean)
     .join("\n");
 }

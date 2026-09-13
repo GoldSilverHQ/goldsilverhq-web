@@ -86,6 +86,40 @@ export function ArticleSections({
               <RichText text={p} />
             </p>
           ))}
+          {block.table ? (
+            <div className="-mx-1 mb-6 overflow-x-auto">
+              <table className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}>
+                {block.table.caption ? (
+                  <caption className="mb-3 caption-top text-left text-sm leading-relaxed text-muted">
+                    <RichText text={block.table.caption} />
+                  </caption>
+                ) : null}
+                <thead>
+                  <tr className="border-b border-line text-xs tracking-[0.12em] text-silver uppercase">
+                    {block.table.headers.map((header) => (
+                      <th key={header} className="px-3 py-3 font-semibold first:pl-0 last:pr-0">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.table.rows.map((row) => (
+                    <tr key={row[0]} className="border-b border-line last:border-0">
+                      {row.map((cell, i) => (
+                        <td
+                          key={`${row[0]}-${i}`}
+                          className={`px-3 py-3 align-top first:pl-0 last:pr-0 ${i === 1 ? "text-gold-soft" : ""}`}
+                        >
+                          <RichText text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
           {block.list?.length ? (
             <ol className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
               {block.list.map((item) => (
