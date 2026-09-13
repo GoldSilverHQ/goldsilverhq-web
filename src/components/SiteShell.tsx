@@ -134,26 +134,26 @@ export function SiteShell({
   return (
     <div className="min-h-screen bg-bg text-fg">
       <header className="sticky top-0 z-40 overflow-visible border-b border-line bg-bg/85 backdrop-blur-md">
-        <div className="mx-auto flex min-h-16 max-w-6xl items-center gap-4 px-4 xl:gap-12">
+        <div className="mx-auto flex min-h-16 max-w-6xl flex-nowrap items-center gap-4 px-4 xl:gap-8">
           <Link to="/" className="shrink-0 text-[1.159rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
-          <nav className="hidden min-w-0 flex-1 items-center gap-5 xl:flex xl:pl-4">
+          <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-3 whitespace-nowrap xl:flex xl:pl-2">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className="text-sm text-muted hover:text-gold-soft"
+                className="shrink-0 whitespace-nowrap text-[0.8125rem] text-muted hover:text-gold-soft"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
           <div className="ml-auto flex shrink-0 items-center">
-            <div className="hidden min-w-0 md:block xl:pr-7">
+            <div className="hidden min-w-0 md:block xl:pr-4">
               <PriceTicker />
             </div>
-            <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-7">
+            <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-5">
               <SocialLinks compact />
               <div className="ml-5 sm:ml-6">
                 <ThemeToggle />
