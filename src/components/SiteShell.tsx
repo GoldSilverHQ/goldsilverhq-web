@@ -143,7 +143,7 @@ export function SiteShell({
               <Link
                 key={item.href}
                 to={item.href}
-                className="shrink-0 whitespace-nowrap text-[0.8125rem] text-muted hover:text-gold-soft"
+                className="shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
               >
                 {item.label}
               </Link>
