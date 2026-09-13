@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
   { href: "/desk", label: "Desk" },
@@ -138,7 +137,7 @@ export function SiteShell({
           <Link to="/" className="shrink-0 text-[1.159rem]" aria-label="GoldSilverHQ home">
             <Brand />
           </Link>
-          <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-3 whitespace-nowrap xl:flex xl:pl-2">
+          <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-4 whitespace-nowrap xl:flex xl:pl-2">
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -150,14 +149,11 @@ export function SiteShell({
             ))}
           </nav>
           <div className="ml-auto flex shrink-0 items-center">
-            <div className="hidden min-w-0 md:block xl:pr-4">
+            <div className="hidden min-w-0 md:block xl:pr-5">
               <PriceTicker />
             </div>
             <div className="flex items-center gap-0.5 xl:border-l xl:border-line xl:pl-5">
               <SocialLinks compact />
-              <div className="ml-5 sm:ml-6">
-                <ThemeToggle />
-              </div>
               <button
                 type="button"
                 className="grid size-11 place-items-center text-fg xl:hidden"
