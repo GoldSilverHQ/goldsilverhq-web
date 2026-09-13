@@ -6,7 +6,15 @@ import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
 function bodyText(sections: NonNullable<ReturnType<typeof getBody>>) {
   return sections
-    .flatMap((s) => [s.heading, ...(s.callout?.paragraphs ?? []), ...s.paragraphs, ...(s.list ?? [])])
+    .flatMap((s) => [
+      s.heading,
+      ...(s.callout?.paragraphs ?? []),
+      ...s.paragraphs,
+      ...(s.list ?? []),
+      s.table?.caption,
+      ...(s.table?.headers ?? []),
+      ...(s.table?.rows.flat() ?? []),
+    ])
     .filter(Boolean)
     .join("\n");
 }

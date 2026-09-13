@@ -1,5 +1,6 @@
 export type Callout = { label: string; paragraphs: string[] };
-export type Section = { heading: string; paragraphs: string[]; list?: string[]; callout?: Callout };
+export type SectionTable = { caption?: string; headers: string[]; rows: string[][] };
+export type Section = { heading: string; paragraphs: string[]; list?: string[]; callout?: Callout; table?: SectionTable };
 
 const johnLaw: Section[] = [
   {
@@ -2005,7 +2006,63 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net central-bank buying in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
       "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (treated at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
-      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household.",
+      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household. The largest reported 2026 country additions, month by month, sit in the next section.",
+    ],
+  },
+  {
+    heading: "Reported net buyers, YTD through August 2026",
+    paragraphs: [
+      "The World Gold Council’s latest monthly compilation of publicly reported official changes — drawn from IMF International Financial Statistics and national central-bank releases — runs through **31 July 2026**. In the weeks after that note, a few named buyers published August stocks. The table keeps those two clocks in separate columns. A tonne here is a reported change in official monetary gold on the published books. It is not a private investment flow.",
+      "Reported world purchases in that July compilation were about **130 tonnes**. That headline is the sum of published country lines. It is not the Council’s broader Gold Demand Trends estimate, which also tries to capture unreported official buying. Kazakhstan’s August stock has not yet appeared in a matching national or WGC monthly line, so that row stays on July.",
+    ],
+    table: {
+      caption:
+        "Reported net official gold additions in 2026, through the latest month each line can support. Figures are rounded whole tonnes.",
+      headers: ["Country", "Reported tonnes", "Through", "Source"],
+      rows: [
+        [
+          "Poland",
+          "**98**",
+          "August 2026",
+          "NBP president, 10 September 2026 (**648 t** stock); WGC July **90 t**",
+        ],
+        [
+          "China",
+          "**80**",
+          "August 2026",
+          "SAFE official reserve assets, 7 September 2026 (**76.73 million oz**); WGC July **60 t**",
+        ],
+        [
+          "Uzbekistan",
+          "**48**",
+          "August 2026",
+          "CBU reserves, 7 September 2026 (**14.11 million oz** as of 1 September); WGC July **40 t**",
+        ],
+        [
+          "Kazakhstan",
+          "**29**",
+          "July 2026",
+          "WGC monthly (IMF IFS and NBK), through 31 July 2026",
+        ],
+        [
+          "Czech Republic",
+          "**14**",
+          "August 2026",
+          "CNB gold page (**85.8 t** at end-August); WGC July **12 t**",
+        ],
+      ],
+    },
+  },
+  {
+    heading: "",
+    callout: {
+      label: "Not a central bank",
+      paragraphs: [
+        "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it is not a row in the table above. Two published gold figures sit under that name and must stay labeled. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That H1 purchase is a company statement. No official August year-to-date purchase total has been published, and this page does not invent one.",
+      ],
+    },
+    paragraphs: [
+      "The table does not rank buyers as an investment case. It records reported official changes, dated to the month each line can support. A private issuer’s reserve book is a different instrument, kept off the official table.",
     ],
   },
   {
@@ -2014,7 +2071,8 @@ const centralBankGoldReserves: Section[] = [
       "Narodowy Bank Polski is the named European buyer of the early 2020s. This is not a separate URL. It is a subsection of how official gold is reported and accumulated.",
       "At the end of **2017** NBP’s reported gold stock was about **103 tonnes**. In **2018–2019** the bank bought on the order of **126 tonnes**, taking the stock to about **229 tonnes** by end-2019. In **July 2019** NBP announced that it would transfer **100 tonnes** from the Bank of England to vaults in Poland — a custody move, not a purchase. Title was already Polish; the bars changed address.",
       "Buying resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, and **+90 tonnes** in 2024, with further additions in **2025**. The desk’s latest Poland stock line of **550 tonnes** is the year-end-2025 starting point implied by later official additions: it is not the 2026 stock.",
-      "NBP’s first-quarter 2026 balance-of-payments note put the gold stock at **581.6 tonnes** at the end of **March 2026**, then **29.4 percent** of official reserve assets (valued at **PLN 319.5 billion** on that statement). The World Gold Council’s Gold Demand Trends for the second quarter, compiled from IMF and central-bank reports through **30 June 2026**, puts the stock at **632 tonnes** after about **+51 tonnes** in the quarter and about **+82 tonnes** in the first half. The Council’s 3 September 2026 monthly compilation, through **31 July 2026**, puts the stock at **640 tonnes**, after about **+8 tonnes** in July and about **+90 tonnes** year-to-date. Those later lines reconcile with the desk’s **550**: **550 + 82** reaches the end-June **632**; **550 + 90** reaches the end-July **640**.",
+      "NBP’s first-quarter 2026 balance-of-payments note put the gold stock at **581.6 tonnes** at the end of **March 2026**, then **29.4 percent** of official reserve assets (valued at **PLN 319.5 billion** on that statement). The World Gold Council’s Gold Demand Trends for the second quarter, compiled from IMF and central-bank reports through **30 June 2026**, puts the stock at **632 tonnes** after about **+51 tonnes** in the quarter and about **+82 tonnes** in the first half. The Council’s 3 September 2026 monthly compilation, through **31 July 2026**, puts the stock at **640 tonnes**, after about **+8 tonnes** in July and about **+90 tonnes** year-to-date.",
+      "On **10 September 2026**, NBP’s president stated that the stock at the end of **August 2026** was **648 tonnes**, valued at **PLN 344.8 billion** at then-current prices. That is about **+8 tonnes** in August and about **+98 tonnes** year-to-date against the desk’s **550-tonne** end-2025 starting point: **550 + 90** reaches the end-July **640**; **550 + 98** reaches the end-August **648**.",
       "The same WGC notes record NBP’s public stock aim of **700 tonnes**, with gold then about **28 percent** of total reserves. An earlier NBP communications line had named a reserve-share aim in the region of **20 percent**; the March 2026 NBP statement already sat above that share. Governor Adam Glapiński’s remarks in this period treated gold as a reserve asset, not as a trading book.",
       "Read those sentences as a dated official-sector record. They do not say a private reader should follow NBP. They do not rank Poland against other buyers as an investment case. They show one central bank raising a reported gold stock, moving metal home, and stating a reserve-share and then a **700-tonne** stock aim — the same custody and report facts this page tracks for the official sector as a whole.",
     ],
