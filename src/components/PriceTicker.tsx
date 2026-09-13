@@ -41,7 +41,7 @@ export function PriceTicker() {
     <Link
       to="/desk"
       aria-label="Gold and silver prices"
-      className="flex min-w-0 items-center justify-center gap-3 sm:gap-5"
+      className="flex min-w-0 items-center justify-end gap-3 sm:gap-5"
     >
       {items.map((it) => (
         <span key={it.k} className="flex items-baseline gap-1.5 font-sans tabular-nums">
