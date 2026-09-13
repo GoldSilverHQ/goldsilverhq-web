@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Class-based dark variant so toggle + OS preference share one switch. */
+/* Class-based dark variant so sparse `dark:` utilities match always-on dark chrome. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -29,27 +29,7 @@
   --shadow-border-hover: 0 0 0 1px var(--color-gold);
 }
 
-/* Light mode: warm paper invert of the dark desk — same gold/silver brand. */
-html.light {
-  --color-bg: #f3efe6;
-  --color-surface: #ebe5d9;
-  --color-raised: #e2dbcd;
-  --color-fg: #1a1712;
-  --color-muted: #5f584f;
-  --color-faint: #857c70;
-  --color-gold: #a8871c;
-  --color-gold-soft: #8f7114;
-  --color-gold-deep: #6b5210;
-  --color-gold-bright: #c9a227;
-  --color-silver: #5c6670;
-  --color-line: color-mix(in oklab, #1a1712 14%, transparent);
-  --color-line-gold: color-mix(in oklab, #a8871c 42%, transparent);
-  --shadow-border: 0 0 0 1px color-mix(in oklab, #1a1712 12%, transparent);
-  --shadow-border-hover: 0 0 0 1px var(--color-gold);
-  color-scheme: light;
-}
-
-html.dark {
+html {
   color-scheme: dark;
 }
 
