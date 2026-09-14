@@ -138,4 +138,86 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(page, /~40|40 t est|who to follow|forecast|Kauf|buy gold/i);
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("tether")));
   });
+
+  it("adds a dated China holdings block on the same reserves page", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const china = body.find((s) => s.heading.startsWith("China"));
+    assert.ok(china, "expected a China holdings section on the same spoke");
+    assert.ok(china.table);
+    const table = china.table.rows.flat().join("\n");
+    const page = body
+      .flatMap((s) => [
+        s.heading,
+        ...s.paragraphs,
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const text = [china.heading, ...china.paragraphs, china.table.caption, ...china.table.headers, table, page]
+      .filter(Boolean)
+      .join("\n");
+
+    assert.match(text, /395/);
+    assert.match(text, /600/);
+    assert.match(text, /1,054/);
+    assert.match(text, /1,658/);
+    assert.match(text, /1,760/);
+    assert.match(text, /1,948/);
+    assert.match(text, /1,950/);
+    assert.match(text, /2,235/);
+    assert.match(text, /2,280/);
+    assert.match(text, /2,306/);
+    assert.match(text, /2,332/);
+    assert.match(text, /2,387/);
+    assert.match(text, /76\.73 million oz/);
+    assert.match(text, /SAFE/);
+    assert.match(text, /do not say a private reader should follow the PBoC/i);
+    assert.doesNotMatch(text, /buy gold|Kauf|forecast|who to follow/i);
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("china")));
+  });
+
+  it("adds dated gold-as-share prints without inventing the X-hook percentages", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const share = body.find((s) => s.heading.startsWith("Gold as a share"));
+    assert.ok(share, "expected a reserve-share section on the same spoke");
+    assert.ok(share.table);
+    const table = share.table.rows.flat().join("\n");
+    const text = [share.heading, ...share.paragraphs, share.table.caption, ...share.table.headers, table]
+      .filter(Boolean)
+      .join("\n");
+
+    assert.match(text, /Q3 2024/);
+    assert.match(text, /\*\*19%\*\*/);
+    assert.match(text, /Q3 2025/);
+    assert.match(text, /\*\*26%\*\*/);
+    assert.match(text, /2010/);
+    assert.match(text, /~4%/);
+    assert.match(text, /\*\*15%\*\*/);
+    assert.match(text, /\*\*30%\*\*/);
+    assert.match(text, /\*\*8\.9%\*\*/);
+    assert.match(text, /\*\*29\.4%\*\*/);
+    assert.match(text, /two prints, not one spliced series/);
+    assert.doesNotMatch(text, /\b16%\b|\b22%\b|\b20%\b|\b27%\b|~29%/);
+    assert.doesNotMatch(text, /buy gold|Kauf|forecast|price target/i);
+
+    const page = getMarket("central-bank-gold-reserves");
+    assert.ok(page);
+    assert.equal(page.title, "How central banks report gold in FX reserves");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/markets", "/markets/official-gold-book-value"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /china-gold|gold-share-of-reserves/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /china-gold|gold-share/.test(path)));
+  });
 });

@@ -1990,7 +1990,37 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, **SDRs** (Special Drawing Rights — an IMF reserve asset), and IMF reserve positions in one reserve total.",
       "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) at $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not name a policy.",
-      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, about **8,133 tonnes**. Germany, Italy, and France hold large legacy European stocks. Russia and China report stocks above **2,300 tonnes** each; China’s published official figure is widely treated as a floor, not a full geological census.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, about **8,133 tonnes**. Germany, Italy, and France hold large legacy European stocks. Russia and China report stocks above **2,300 tonnes** each. China’s published official figure — dated in the holdings section below — is widely treated as a floor, not a full geological census.",
+    ],
+  },
+  {
+    heading: "Gold as a share of FX and gold reserves",
+    paragraphs: [
+      "A tonne stock and a reserve share are different jobs. The share used here is gold marked near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It is not the U.S. statutory **$42.22** book. It is not a claim about the next quarter’s percentage.",
+      "Two published world snapshots sit a year apart and must stay labeled. In the Council’s **2025** reserve-manager survey, the prompt stated that gold accounted for **19 percent** of total reported reserves — foreign exchange plus gold — in **Q3 2024**. The Council’s market primer dated **1 April 2026**, using IMF COFER and IFS, puts gold at **26 percent** of total global allocated reserves by **Q3 2025**. Those are two prints, not one spliced series.",
+      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited in the China section. Narodowy Bank Polski’s first-quarter **2026** statement, dated in the Poland section below, put gold at **29.4 percent** of official reserve assets at the end of **March 2026**. That is a smaller foreign-currency book and a different inheritance — not a larger gold mountain than China’s.",
+    ],
+    table: {
+      caption:
+        "Gold’s share of foreign-exchange reserves plus gold at a market value. Each row keeps its own clock and label.",
+      headers: ["Dated print", "Share", "Whose reserves", "Source"],
+      rows: [
+        ["Q3 2024", "**19%**", "World reported FX + gold", "WGC CBGR Survey 2025 prompt"],
+        ["Q3 2025", "**26%**", "World allocated FX + gold", "WGC primer, 1 April 2026 (IMF COFER / IFS)"],
+        ["2010", "**~4%**", "Emerging-market average", "WGC primer, 1 April 2026"],
+        ["2025", "**15%**", "Emerging-market average", "WGC primer, 1 April 2026"],
+        ["2025 (DM)", "**30%**", "Developed-market average", "WGC primer, 1 April 2026"],
+        ["End-2023", "**4%**", "China", "WGC Gold Demand Trends, FY 2023"],
+        ["End-2024", "**5%**", "China", "WGC Gold Demand Trends, FY 2024"],
+        ["May 2026", "**8.9%**", "China", "WGC, 12 June 2026, citing SAFE"],
+        ["March 2026", "**29.4%**", "Poland", "NBP Q1 2026 balance-of-payments note"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "A rising share can be more tonnes, a higher gold price on an unchanged stock, or a smaller foreign-currency book. The mechanism remains the dated report.",
     ],
   },
   {
@@ -2066,6 +2096,41 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
+    heading: "China: reported holdings since 2000",
+    paragraphs: [
+      "China reports official gold as a stock of monetary gold. The People’s Bank of China and the State Administration of Foreign Exchange publish the figure — in tonnes in some announcements, in fine troy ounces on the monthly official-reserve-assets table. The World Gold Council’s country book then carries that stock through IMF International Financial Statistics. What follows is that published book, dated. It is not a survey of every bar in the country.",
+      "For long stretches the book did not move in public. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** print held, in the WGC/IMF book, through **2010** and on to early **2015**.",
+      "In **July 2015** the PBoC said the stock at the end of **June 2015** was **1,658 tonnes** (**53.31 million ounces**). Monthly SAFE reporting followed. The WGC year-end **2015** line is **1,760 tonnes**. A later pause left the book near **1,948 tonnes** — **62.64 million ounces** at the end of **October 2019**, per PBoC data carried by Xinhua — and the WGC **2020** year-end line is **1,950 tonnes**.",
+      "Buying that was visible again in the IMF book then produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
+      "The 2026 monthly book is the same series the year-to-date table above uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the table above rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
+    ],
+    table: {
+      caption:
+        "Published official Chinese gold stock. Tonnes are the print named in the source, not a private estimate.",
+      headers: ["Dated print", "Reported tonnes", "Source"],
+      rows: [
+        ["End-2000", "**395**", "WGC / IMF IFS (PBoC later cited **394 t** before the 2001 step)"],
+        ["2003", "**600**", "PBoC (Hu Xiaolian, April 2009); WGC **2005** line is the same book"],
+        ["April 2009", "**1,054**", "PBoC / SAFE; WGC **2010** line holds this plateau"],
+        ["End-June 2015", "**1,658**", "PBoC, July 2015 (**53.31 million oz**)"],
+        ["End-2015", "**1,760**", "WGC / IMF IFS"],
+        ["October 2019", "**1,948**", "PBoC, **62.64 million oz** (Xinhua, 7 November 2019)"],
+        ["End-2020", "**1,950**", "WGC / IMF IFS"],
+        ["End-2023", "**2,235**", "WGC Gold Demand Trends, FY 2023"],
+        ["End-2024", "**2,280**", "WGC Gold Demand Trends, FY 2024 (**+44 t** reported)"],
+        ["End-2025", "**2,306**", "WGC / IMF IFS"],
+        ["May 2026", "**2,332**", "WGC, 12 June 2026, citing SAFE (**+10 t** in May)"],
+        ["August 2026", "**2,387**", "SAFE, **76.73 million oz**, 7 September 2026"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Read the table as a sequence of published official prints. The gaps are part of the record: years with no public change, then a step. A later month can revise a rounded tonne. These sentences do not say a private reader should follow the PBoC.",
+    ],
+  },
+  {
     heading: "Poland: a short documentary block",
     paragraphs: [
       "Narodowy Bank Polski is the named European buyer of the early 2020s. This is not a separate URL. It is a subsection of how official gold is reported and accumulated.",
@@ -2080,7 +2145,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "What the figures do not say",
     paragraphs: [
-      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share can be an old European inheritance or a new emerging-market programme. The mechanism is the report: quantity, sometimes value, sometimes location.",
+      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes and gold’s world reserve share are two jobs: a quantity on one book, and a market-value fraction on many books. The mechanism is the report: quantity, sometimes value, sometimes location.",
       "These pages stay on current metal-market facts. The [markets hub](/markets) orients the four topics. How $42.22 became the U.S. book rate is the first topic. What the gold–silver ratio measures is the third. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
     ],
   },
