@@ -61,6 +61,15 @@ export const soundMoneyHub = {
   ],
 };
 
+/** Pillar hub /gold-silver — search title and related; body lives in practiceHubBody. */
+export const practiceHub = {
+  titleTag: "Gold & Silver in Practice: Handling, Not a Shop",
+  related: [
+    { title: "Sound Money — vocabulary and disclaimer", href: "/sound-money" },
+    { title: "Why markets chose gold and silver", href: "/history/ancient/why-markets-chose-gold-silver" },
+  ],
+};
+
 /** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
 export const marketsHub = {
   titleTag: "Gold & Silver Markets: Facts, Not Tips",
