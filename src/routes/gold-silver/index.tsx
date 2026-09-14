@@ -1,21 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Breadcrumb, RichText } from "@/components/Article";
+import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
-import { practicePages } from "@/lib/content/map";
+import { practiceHubBody } from "@/lib/content/bodies";
+import { practiceHub, practicePages, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
-
-const INTRO = [
-  "These pages explain how people handle metal — bars versus coins, premiums, storage, fakes at a high level, first ounces. They are educational. This is not a shop, and it is not advice. Read [information vs advice](/sound-money/information-not-advice) first if that line is unclear.",
-  "The history of coinage still lives under [ancient money](/history/ancient), not here.",
-];
 
 export const Route = createFileRoute("/gold-silver/")({
   head: () => ({
     meta: pageShareMeta({
-      title: "Gold bars vs coins, storage, premiums — GoldSilverHQ",
+      title: seoTitle(practiceHub.titleTag),
       description:
-        "Practical notes on gold bars versus coins, premiums over spot, storage, fakes, and first ounces. Neutral and educational. Not investment advice.",
-      imagePath: "/og.jpg",
+        "How people handle physical gold and silver: bars versus coins, premiums, storage, fakes, and first ounces. An educational menu — not a shop, and not advice.",
+      path: "/gold-silver",
     }),
   }),
   component: PracticeHub,
@@ -28,11 +24,14 @@ function PracticeHub() {
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "In Practice" }]} />
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">In practice</p>
         <h1 className="mt-2 font-display text-4xl">Gold & Silver in Practice</h1>
-        {INTRO.map((p) => (
-          <p key={p.slice(0, 32)} className="mt-4 max-w-prose text-lg leading-relaxed text-muted">
-            <RichText text={p} />
-          </p>
-        ))}
+        <div className="mt-8">
+          <ArticleSections sections={practiceHubBody} />
+        </div>
+
+        <h2 className="mt-16 font-display text-3xl">The six notes</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Form, premium, storage, authenticity, first ounces, remote logistics — open any one.
+        </p>
         <ol className="mt-10 grid gap-3">
           {practicePages.map((page, i) => (
             <li key={page.slug}>
@@ -50,6 +49,7 @@ function PracticeHub() {
             </li>
           ))}
         </ol>
+        <RelatedLinks links={practiceHub.related} />
       </div>
     </SiteShell>
   );

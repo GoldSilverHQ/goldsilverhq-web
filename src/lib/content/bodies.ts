@@ -2360,6 +2360,55 @@ export const soundMoneyHubBody: Section[] = [
   },
 ];
 
+/** Pillar hub /gold-silver — rendered by the gold-silver index route. */
+export const practiceHubBody: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between those two facts sit fabrication, a premium, a place the object lives, and a later buyer who must believe the stamp. People who handle physical gold and silver already live in that gap. These pages name the usual decisions — form, premium, storage, authenticity, and starting size — as mechanics. They are an educational menu. They are not a shop, and they are not a recommendation.",
+      "The older question is why two metals kept winning in trade. That story lives on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver): portability, durability, divisibility, recognizability — metal before the mint. The vocabulary that must stay still before any handling note — hard, fiat, backed, and the line that information is not advice — lives under [Sound Money](/sound-money). Dated events stay under [Sound Money History](/history). Current figures stay under [Markets](/markets). This overview only describes how an object already moves through commerce.",
+    ],
+  },
+  {
+    heading: "Handling is not a history of money",
+    paragraphs: [
+      "History answers what happened when a mint lightened a coin, a bank wrote a receipt, or a statute closed a gold window. Markets answers what a leftover book rate, a reserve line, or a gold–silver quotient measures on a named date. Sound money answers what the words mean before those stories and figures can stay honest. Handling is a fourth job. It is the object: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
+      "Mixing the jobs produces a pitch. A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Weimar, the Fed, and **1971** belong on the history shelf. Country offtake tables and official reserve lines belong on Markets. If a word is slipping — “backed,” “hard,” “advice” — the definition pages are the stop, not a storage note.",
+      "This overview stays on the handling shelf. When the next question is a date, leave for History. When it is a caption on the tape, leave for Markets. When a word is the question, leave for Sound Money. The paragraphs below only name how people already move metal through form, price, custody, and authenticity — not a quantity, and not a dealer ranking.",
+    ],
+  },
+  {
+    heading: "Form, premium, storage, authenticity, size",
+    paragraphs: [
+      "Form is the first split. A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay cost over more ounces, so the premium above the screen is often lower. Storage is denser. Resale of a large bar can mean finding a counterparty who will assay or who already trusts the brand and serial. A bullion coin is a government or mint product with a face value far below the metal. The extra cost often buys recognizability: a stranger can name the type without a laboratory. Small minted bars sit closer to coins on premium. The slogan “bars versus coins” is empty until you name the size. Numismatic and proof pieces are a different market. These notes stay on bullion — metal as metal. Mixing collectibles into a first holding is how a premium becomes a story instead of a fabrication cost.",
+      "Premium is the gap between the screen and the object. Spot is a paper ounce. The product in hand was cast or struck, shipped, insured, and sold by someone who must later bid for it. That difference is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market. A coin can carry a large premium and still be a clean product. A bar can sit near spot and still be hard to resell. The number that matters later is the dealer’s buy price — the bid — not only the ask. A thin product with a fat ask and a poor bid is expensive twice. Compare the gap to the form trade-off, not to a morality tale about purity.",
+      "Storage is access versus cost versus counterparty. Home keeps the metal near and the operational risk on the household: fire, theft, forgetfulness, a safe that advertises itself. There is no vault fee and no auditor. A vault is distant and on them. Allocated storage, done properly, identifies bars or coins as yours; you should be able to name what you own. Pooled or unallocated accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile. A seller who will “store it for you” and never ship has only moved the custody question into another costume. This overview describes the menu. It does not pick a shelf.",
+      "Authenticity is a filter, not a laboratory course. Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defense is a counterparty you can still find in a year, a product common enough to be known, and a check of weight and dimensions against the published spec. Weigh it. Measure it. Look at the edge, the reeding, and the stamp. None of that is conclusive. A price far below everyone else is information: treat it as a warning, not a bargain. A wrong test can damage a good piece. If a fake would matter, use a professional. No page on this site replaces that test.",
+      "Starting size is a process, not a slogan. First ounces are four decisions: what form, from whom, where the metal lives, and what you write down. Skip any one and the others get expensive. Decide the form and the size before looking at a quote. Know the premium and the bid, not only the ask. Choose storage before a parcel moves. Keep invoices, serials, and a note of location that is not only the same drawer as the metal. Stay off collectibles until bullion is understood. If the channel is remote, the watch-fors are identity of the dealer, payment finality, shipping, and the empty-box case — logistics, not a vendor ranking. None of those steps is a reason to acquire metal. They are the decisions people already face when metal moves.",
+    ],
+  },
+  {
+    heading: "Six existing notes",
+    paragraphs: [
+      "Six short pages already sit under this heading. They stay brief. This overview names their jobs so a reader can open one without treating the list as a course, a shop, or a recommendation to hold metal.",
+    ],
+    list: [
+      "[Gold bars vs coins](/gold-silver/bars-vs-coins) — Fabrication, recognition, size; bullion versus collectibles.",
+      "[Premium over spot](/gold-silver/premium-over-spot) — Screen price versus product in hand; bid as well as ask.",
+      "[Storing gold and silver](/gold-silver/storage) — Access, cost, counterparty; home, allocated, unallocated.",
+      "[Spotting fakes](/gold-silver/spotting-fakes) — High-level filter only; counterparty and specs before gadgetry.",
+      "[Beginner checklist](/gold-silver/beginner-checklist) — Named decisions; still not a recommendation.",
+      "[Buying online](/gold-silver/buying-online) — Remote identity, payment, shipping, invoice; no vendor list.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "These pages inform. They do not advise a purchase, name a quantity, or rank a dealer. They do not turn a premium, a vault menu, or a first-ounces list into a cue to act. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. The standing line lives with the vocabulary under [Sound Money](/sound-money). Why two metals were chosen for trade lives on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Handling stays here. History, definitions, and market numbers stay on their own pages.",
+    ],
+  },
+];
+
 /** Pillar hub /markets — rendered by the markets index route. */
 export const marketsHubBody: Section[] = [
   {
