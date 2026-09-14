@@ -20,13 +20,11 @@ export const Route = createFileRoute("/desk")({
 
 function DeskConstructionBanner() {
   return (
-    <aside
-      role="status"
-      aria-label="Under construction"
-      className="border-b border-line-gold bg-raised"
-    >
-      <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-4 gap-y-1 px-4 py-3">
-        <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">Under construction</p>
+    <aside role="status" aria-label="Under construction" className="border-b border-line-gold bg-raised">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+        <p className="inline-flex items-center rounded-full border border-line-gold bg-surface px-2.5 py-1 text-xs font-semibold tracking-[0.16em] text-gold uppercase">
+          Under construction
+        </p>
         <p className="text-sm text-muted">This desk is not finished.</p>
       </div>
     </aside>
