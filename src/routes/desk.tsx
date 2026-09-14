@@ -20,7 +20,11 @@ export const Route = createFileRoute("/desk")({
 
 function DeskConstructionBanner() {
   return (
-    <aside role="status" aria-label="Under construction" className="border-b border-line-gold bg-raised">
+    <aside
+      role="status"
+      aria-label="Under construction"
+      className="border-b border-line-gold bg-raised"
+    >
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
         <p className="inline-flex items-center rounded-full border border-line-gold bg-surface px-2.5 py-1 text-xs font-semibold tracking-[0.16em] text-gold uppercase">
           Under construction
@@ -54,10 +58,14 @@ function DeskPage() {
               href={p.path}
               className="group rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]"
             >
-              <p className="text-xs font-semibold tracking-[0.12em] text-gold uppercase">{p.kicker}</p>
+              <p className="text-xs font-semibold tracking-[0.12em] text-gold uppercase">
+                {p.kicker}
+              </p>
               <h3 className="mt-3 font-sans text-2xl">{p.title}</h3>
               <p className="mt-2 text-sm text-muted">{p.summary}</p>
-              <p className="mt-5 text-sm font-medium text-gold group-hover:text-gold-soft">Enter →</p>
+              <p className="mt-5 text-sm font-medium text-gold group-hover:text-gold-soft">
+                Enter →
+              </p>
             </a>
           ))}
         </div>
