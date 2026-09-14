@@ -43,7 +43,7 @@ function bodyText(sections: Section[]) {
 
 /** Writer/taxonomy jargon that must not appear in reader-facing copy. */
 const FORBIDDEN =
-  /\b(Pillar\s*[1-4]|Flavio|thicken(?:ed|ing)?|sitemap-ready|write queue|long-tail first|topical map|episode stub|Continue the map|Best of the map|episodes drafted|Phase 3 draft|BaFin-clean|catalogue-plain|money-path series|List-building CTAs|visual companion to this episode|events live there|narrative lives there)\b|\bSpoke\s+\d|\bCluster\s+\d|How this page sits in the pillar|Do not park Weimar|Do not mash \d|no spaghetti|issuer-discretion test/i;
+  /\b(Pillar\s*[1-4]|Flavio|thicken(?:ed|ing)?|sitemap-ready|write queue|long-tail first|topical map|episode stub|Continue the map|Best of the map|episodes drafted|Phase 3 draft|BaFin-clean|catalogue-plain|money-path series|List-building CTAs|visual companion to this episode|events live there|narrative lives there)\b|\bSpoke\s+\d|\bCluster\s+\d|How this page sits in the pillar|Why this stop matters|this page sits|This hub is that sequence|History['’]s job on this stop|Do not park Weimar|Do not mash \d|no spaghetti|issuer-discretion test/i;
 
 /** Structural blog chrome that hubs must not lead with. */
 const STRUCTURAL_HUB_CHROME =

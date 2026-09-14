@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { MetalDesk } from "@/components/MetalDesk";
 import { MetalsClock } from "@/components/MetalsClock";
 import { MoneyPath } from "@/components/MoneyPath";
@@ -69,11 +69,6 @@ function DeskPage() {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-sm">
-          <Link to="/maps" className="text-gold hover:text-gold-soft">
-            Open the world map →
-          </Link>
-        </p>
       </section>
     </SiteShell>
   );

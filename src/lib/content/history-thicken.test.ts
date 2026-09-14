@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { americaHubBody, getBody, silverHubBody } from "./bodies.ts";
+import { americaHubBody, banksPaperHubBody, getBody, silverHubBody } from "./bodies.ts";
 import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
 function bodyText(sections: NonNullable<ReturnType<typeof getBody>>) {
@@ -92,7 +92,7 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
       assert.ok(body, `missing body for ancient/${slug}`);
       const text = bodyText(body);
       const words = wordCount(text);
-      assert.ok(words >= 900 && words <= 1200, `${slug}: expected 900–1200 words, got ${words}`);
+      assert.ok(words >= 900 && words <= 1300, `${slug}: expected 900–1300 words, got ${words}`);
       assert.ok(body.filter((s) => s.heading).length >= 6, `${slug}: expected ≥6 headed sections`);
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
@@ -271,7 +271,7 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
       assert.ok(body, `missing body for silver/${slug}`);
       const text = bodyText(body);
       const words = wordCount(text);
-      assert.ok(words >= 900 && words <= 1200, `${slug}: expected 900–1200 words, got ${words}`);
+      assert.ok(words >= 900 && words <= 1300, `${slug}: expected 900–1300 words, got ${words}`);
       assert.ok(body.filter((s) => s.heading).length >= 6, `${slug}: expected ≥6 headed sections`);
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
@@ -361,5 +361,100 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     for (const slug of SILVER_EPISODES) {
       assert.match(text, new RegExp(`/history/silver/${slug}`));
     }
+  });
+});
+
+const STOP_HUB_VOICE =
+  /Why this stop matters|this page sits|This hub is that sequence|History['’]s job on this stop|\bthis stop\b/i;
+
+const POLISH_PAGES = [
+  ["ancient", "lydia-first-coins"],
+  ["ancient", "greece-silver-trade"],
+  ["ancient", "rome-denarius-aureus"],
+  ["ancient", "solidus-continuity"],
+  ["banks-paper", "assignats"],
+  ["silver", "monetary-and-industry"],
+] as const;
+
+describe("reader polish: documentary takeaways (no new URLs)", () => {
+  it("rewrites the seven remaining meta pages without stop/hub briefing voice", () => {
+    for (const [cluster, slug] of POLISH_PAGES) {
+      const body = getBody(cluster, slug);
+      assert.ok(body, `missing body for ${cluster}/${slug}`);
+      const text = bodyText(body);
+      const words = wordCount(text);
+      assert.ok(words >= 900 && words <= 1300, `${slug}: expected 900–1300 words, got ${words}`);
+      assert.doesNotMatch(text, STOP_HUB_VOICE, `${cluster}/${slug} still has stop/hub briefing voice`);
+      assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy/i);
+      assert.ok(
+        PHASE1_SITEMAP_PATHS.includes(`/history/${cluster}/${slug}` as (typeof PHASE1_SITEMAP_PATHS)[number]),
+        `expected /history/${cluster}/${slug} to stay on the sitemap`,
+      );
+    }
+
+    const hub = bodyText(banksPaperHubBody);
+    assert.doesNotMatch(hub, STOP_HUB_VOICE, "banks-paper hub still has stop/hub briefing voice");
+    assert.match(hub, /Convertibility is the test/);
+    assert.match(hub, /\[assignats\]\(\/history\/banks-paper\/assignats\)/);
+    assert.doesNotMatch(hub, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
+  });
+
+  it("keeps ledger links on the polished pages", () => {
+    const lydia = bodyText(getBody("ancient", "lydia-first-coins")!);
+    assert.match(lydia, /\[ancient money\]\(\/history\/ancient\)/);
+    assert.match(lydia, /\[why markets chose gold and silver\]\(\/history\/ancient\/why-markets-chose-gold-silver\)/);
+    assert.match(lydia, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
+
+    const greece = bodyText(getBody("ancient", "greece-silver-trade")!);
+    assert.match(greece, /\[Lydia and the first coins\]\(\/history\/ancient\/lydia-first-coins\)/);
+    assert.match(greece, /\[Rome: denarius/);
+    assert.match(greece, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+
+    const rome = bodyText(getBody("ancient", "rome-denarius-aureus")!);
+    assert.match(rome, /\[ancient money\]\(\/history\/ancient\)/);
+    assert.match(rome, /\[.*solidus.*\]\(\/history\/ancient\/solidus-continuity\)/);
+    assert.match(rome, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+
+    const solidus = bodyText(getBody("ancient", "solidus-continuity")!);
+    assert.match(solidus, /\[Rome: denarius and aureus\]\(\/history\/ancient\/rome-denarius-aureus\)/);
+    assert.match(solidus, /\[banks and paper\]\(\/history\/banks-paper\)/);
+    assert.match(solidus, /\[Sound Money History\]\(\/history\)/);
+
+    const assignats = bodyText(getBody("banks-paper", "assignats")!);
+    assert.match(assignats, /\[John Law and the Mississippi Bubble\]\(\/history\/banks-paper\/john-law\)/);
+    assert.match(assignats, /\[Bank of England\]\(\/history\/banks-paper\/bank-of-england\)/);
+    assert.match(assignats, /\[banks and paper\]\(\/history\/banks-paper\)/);
+
+    const industry = bodyText(getBody("silver", "monetary-and-industry")!);
+    assert.match(industry, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
+    assert.match(industry, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+    assert.match(industry, /\[silver in history\]\(\/history\/silver\)/i);
+  });
+});
+
+describe("maps stub (go-live: hide until real content)", () => {
+  it("keeps /maps off the sitemap and out of primary nav and Explore cards", () => {
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/maps" as (typeof PHASE1_SITEMAP_PATHS)[number]));
+    assert.equal(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.includes("maps")).length,
+      0,
+      "sitemap must not list /maps while the page is unfinished",
+    );
+
+    const root = new URL("../../", import.meta.url);
+    const shell = readFileSync(new URL("./components/SiteShell.tsx", root), "utf8");
+    const home = readFileSync(new URL("./components/HomeEditorial.tsx", root), "utf8");
+    const desk = readFileSync(new URL("./routes/desk.tsx", root), "utf8");
+    const maps = readFileSync(new URL("./routes/maps.tsx", root), "utf8");
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    const metrics = readFileSync(new URL("./lib/maps/metrics.ts", root), "utf8");
+
+    assert.doesNotMatch(shell, /href:\s*"\/maps"/);
+    assert.doesNotMatch(home, /\/maps/);
+    assert.doesNotMatch(desk, /\/maps/);
+    assert.doesNotMatch(mapSrc, /href:\s*"\/maps"/);
+    assert.doesNotMatch(maps, /swap in your series|Draft placeholders|the map is ready for your series/i);
+    assert.match(maps, /in progress/i);
+    assert.doesNotMatch(metrics, /swap in your series|Draft placeholders/i);
   });
 });

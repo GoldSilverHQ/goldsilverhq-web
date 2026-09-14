@@ -993,10 +993,10 @@ const assignats: Section[] = [
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "Land on the advertisement, press in the till",
     paragraphs: [
       "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
-      "This article’s place on the [banks and paper](/history/banks-paper) path is the revolutionary land paper. The prior French stop is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). England’s Restriction, on the [Bank of England](/history/banks-paper/bank-of-england) page, is a labeled wartime parallel, not a sequel. This page is revolutionary land paper only — not Law’s **1720**, and not Germany’s **1923** mark.",
+      "The prior French episode is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). England’s Restriction, on the [Bank of England](/history/banks-paper/bank-of-england) page, is a labeled wartime parallel, not a sequel. Assignats are revolutionary land paper only — not Law’s **1720**, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
     ],
   },
 ];
@@ -1060,7 +1060,7 @@ const lydia: Section[] = [
     heading: "A stamp on metal already money",
     paragraphs: [
       "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the **seventh and sixth centuries BCE**. Early pieces were electrum — a natural or mixed gold–silver alloy — carrying a punch and, later, a recognisable type. Croesus is the royal name later attached to separating gold and silver issues. The invention is not the ore. It is the stamp.",
-      "This page sits after [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Traders already settled in metal by weight. Lydia cuts the cost of verifying that metal in a market of strangers. It does not invent monetary gold and silver. It invents a cheaper check.",
+      "Traders already settled in metal by weight — the selection told on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Lydia cuts the cost of verifying that metal in a market of strangers. It does not invent monetary gold and silver. It invents a cheaper check.",
     ],
   },
   {
@@ -1108,10 +1108,10 @@ const lydia: Section[] = [
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "A cheaper check, not a new metal",
     paragraphs: [
-      "None of this is a pitch to hold metal or to collect electrum. It is the documentary first stop for struck coinage: a lower cost of checking metal that was already money.",
-      "Return to [ancient money](/history/ancient). Previous article: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Next: [Greece: silver and trade](/history/ancient/greece-silver-trade). Keep **1971** and warehouse receipts off this page except as labeled later hinges.",
+      "None of this is a pitch to hold metal or to collect electrum. It is why a punch on already-monetary metal became the first struck-coin habit: a lower cost of checking what traders already used by weight. [ancient money](/history/ancient) keeps that order. [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the selection that came first. [Greece: silver and trade](/history/ancient/greece-silver-trade) is what a typed silver network looks like once the stamp exists.",
+      "Keep **1971** and warehouse receipts as later hinges. Coinage is verification. It is not the birth of monetary metal, and it is not a modern convertibility window.",
     ],
   },
 ];
@@ -1121,7 +1121,7 @@ const greece: Section[] = [
     heading: "Silver as a Mediterranean language",
     paragraphs: [
       "Greek city-states turned mines and mints into a commercial network. Athens’ **Laurion** silver and the owl **tetradrachm** are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets and public life.",
-      "This page sits after [Lydia and the first coins](/history/ancient/lydia-first-coins). The stamp already exists. Greece shows what a silver standard looks like when city mints and trade routes share a metal language. It is not a collector catalogue, and it is not a modern mining prospectus.",
+      "The stamp already exists — [Lydia and the first coins](/history/ancient/lydia-first-coins) is that punch. Greece shows what a silver standard looks like when city mints and trade routes share a metal language. It is not a collector catalogue, and it is not a modern mining prospectus.",
     ],
   },
   {
@@ -1155,7 +1155,7 @@ const greece: Section[] = [
     paragraphs: [
       "Silver paid mercenaries, bought timber and grain, and settled balances between cities. Tribute under Athenian hegemony arrived in coin or was converted into it. Temples stored wealth; markets spent it. The metal moved as both public finance and private trade.",
       "Gold existed and mattered for large stores and eastern contacts, but everyday Greek monetary talk is silver talk. That matches the property split named on the opener: silver’s value-per-weight suited commercial scale; gold packed more value into less mass. Greece’s place on this site is the silver network.",
-      "Ports from Sicily to the Black Sea priced cargoes in familiar silver weights. That shared language is why this stop sits between Lydia’s stamp and Rome’s two-metal state: the Aegean taught strangers to settle in typed silver before one empire tried to run gold and silver together under fiscal stress.",
+      "Ports from Sicily to the Black Sea priced cargoes in familiar silver weights. That shared language sits between Lydia’s stamp and Rome’s two-metal state: the Aegean taught strangers to settle in typed silver before one empire tried to run gold and silver together under fiscal stress.",
       "Centuries later, Potosí would flood Eurasia with silver at empire scale — same metal, different volume and century. Open [Potosí](/history/silver/potosi) for that flood; this page stays with Laurion and the Attic owl.",
     ],
   },
@@ -1171,10 +1171,10 @@ const greece: Section[] = [
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "A typed silver language",
     paragraphs: [
-      "None of this is investment advice or a pitch to hold metal. It is how a mine and a type became a Mediterranean settlement language.",
-      "Return to [ancient money](/history/ancient). Previous: [Lydia and the first coins](/history/ancient/lydia-first-coins). Next: [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus). A much later silver flood (different century): [Potosí](/history/silver/potosi).",
+      "None of this is investment advice or a pitch to hold metal. It is how a mine and a type became a Mediterranean settlement language. [ancient money](/history/ancient) keeps the chapter order. [Lydia and the first coins](/history/ancient/lydia-first-coins) is the stamp that made typed silver possible. [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) is what happens when one state runs two metals under fiscal stress.",
+      "A much later silver flood — different century, different volume — is [Potosí](/history/silver/potosi). Laurion and Cerro Rico are not the same mountain.",
     ],
   },
 ];
@@ -1184,7 +1184,7 @@ const rome: Section[] = [
     heading: "Two metals, one state",
     paragraphs: [
       "Rome ran gold and silver together: the **aureus** and the **denarius** as the famous pair, with bronze for small change. When the mint’s legal relation and the market’s metal prices drifted, the legally overvalued metal tended to stay in the till and the other tended to leave. Debasement of the silver coin was gradual, then obvious. The third-century crisis made the coinage a fiscal instrument. When spending outruns metal, the coin is lightened.",
-      "This page is the fiscal stop in the ancient chapter — not a moral sermon about decadence, and not a pitch to hold bullion. It follows [Greece: silver and trade](/history/ancient/greece-silver-trade). It precedes [the solidus](/history/ancient/solidus-continuity). A much later American rhyme for mint-ratio arithmetic sits at [early U.S. coinage](/history/america/early-us-coinage); keep the centuries labeled.",
+      "The lesson is fiscal, not a moral sermon about decadence, and not a pitch to hold bullion. It follows the silver network of [Greece: silver and trade](/history/ancient/greece-silver-trade). It precedes [the solidus](/history/ancient/solidus-continuity), a gold unit later defended by weight. A much later American rhyme for mint-ratio arithmetic sits at [early U.S. coinage](/history/america/early-us-coinage); keep the centuries labeled.",
     ],
   },
   {
@@ -1232,10 +1232,10 @@ const rome: Section[] = [
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "When the name outruns the metal",
     paragraphs: [
-      "None of this is a forecast for modern currency or a pitch to hold bullion. It is the documentary record of a bimetallic pay system meeting fiscal overload — and of silver lightened until the name outran the metal.",
-      "Return to [ancient money](/history/ancient). Previous: [Greece: silver and trade](/history/ancient/greece-silver-trade). Next: [solidus continuity](/history/ancient/solidus-continuity). Later mint-ratio parallel: [early U.S. coinage](/history/america/early-us-coinage). Keep **1971** off this page.",
+      "None of this is a forecast for modern currency or a pitch to hold bullion. It is the documentary record of a bimetallic pay system meeting fiscal overload — and of silver lightened until the name outran the metal. [ancient money](/history/ancient) keeps the chapter. [Greece: silver and trade](/history/ancient/greece-silver-trade) is the typed-silver network Rome inherited. [Solidus continuity](/history/ancient/solidus-continuity) is the gold unit that kept its weight after that silver was gutted.",
+      "A later mint-ratio parallel is [early U.S. coinage](/history/america/early-us-coinage). Keep **1971** in the twentieth-century chapter. Rome’s lightened denarius is not a gold-window close.",
     ],
   },
 ];
@@ -1245,7 +1245,7 @@ const solidus: Section[] = [
     heading: "A gold coin that keeps its weight",
     paragraphs: [
       "Constantine’s **solidus**, in the early **fourth century**, was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine **nomisma**. Continuity of weight is the story, not a romance of Rome and not a sequel about paper.",
-      "This page follows [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus), where silver was lightened under fiscal pressure. The solidus is the contrasting hinge: a gold unit defended as a standard for centuries. It is not the [Nixon gold-window close](/history/20th-century/nixon-shock), and it is not the birth of the warehouse receipt.",
+      "It follows [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus), where silver was lightened under fiscal pressure. The solidus is the contrasting hinge: a gold unit defended as a standard for centuries. It is not the [Nixon gold-window close](/history/20th-century/bretton-woods-nixon-1971), and it is not the birth of the warehouse receipt.",
     ],
   },
   {
@@ -1271,16 +1271,16 @@ const solidus: Section[] = [
     paragraphs: [
       "As imperial power centered on Constantinople, the solidus continued under Greek administrative language as the nomisma (and related denominations). Western successor kingdoms minted their own gold at times, often imitating familiar types. The eastern empire kept the solidus tradition as a living standard of Mediterranean and Near Eastern trade.",
       "Foreigners called high-quality Byzantine gold by names that signaled trust — the medieval “bezant” in western sources is that reputation traveling. Continuity here means: a gold coin whose weight claim remained credible enough to price contracts and tribute across changing dynasties.",
-      "This is not a claim that nothing changed in Byzantine fiscal history. It is a claim that the ancient chapter’s last stop is metallic continuity, not the invention of modern central banking.",
+      "This is not a claim that nothing changed in Byzantine fiscal history. It is a claim that the ancient chapter closes on metallic continuity, not the invention of modern central banking.",
       "Trade routes still needed a settlement metal strangers would accept overnight. The nomisma filled that role for long stretches because the mint’s promise stayed close to the metal in the hand — the opposite lesson from washed silver of the third century.",
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Coin, not a receipt",
     paragraphs: [
-      "This page is not a romance that “Rome never fell because the solidus lived.” Western political collapse and eastern survival are separate facts from mint metrology. Continuity of a gold weight standard can outlast a capital.",
-      "This page is not paper money. Warehouse receipts, public banks, and note issue live on [banks and paper](/history/banks-paper), beginning with [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). A solidus is coin you can hold. A receipt is a claim on coin you are not holding. Keep them distinct.",
-      "This page is not **1971**. The Nixon shock ends a twentieth-century convertibility practice. It does not begin monetary history, and it does not explain Constantine’s mint. Keep that modern hinge in the twentieth-century chapter where it belongs.",
+      "Continuity of a gold weight is not a romance that “Rome never fell because the solidus lived.” Western political collapse and eastern survival are separate facts from mint metrology. A gold standard can outlast a capital.",
+      "A solidus is coin you can hold. A receipt is a claim on coin you are not holding. Warehouse receipts, public banks, and note issue live on [banks and paper](/history/banks-paper), beginning with [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). Keep them distinct.",
+      "The Nixon shock ends a twentieth-century convertibility practice. It does not begin monetary history, and it does not explain Constantine’s mint. Keep that modern hinge in the twentieth-century chapter where it belongs.",
     ],
   },
   {
@@ -1291,14 +1291,14 @@ const solidus: Section[] = [
       "**4th–5th centuries:** Gold solidus frames elite and fiscal payments as silver’s third-century damage lingers in memory.",
       "**Byzantine centuries:** Nomisma continues the weight tradition; “bezant” fame in external trade language.",
       "Ancient coinage ends on metallic continuity; paper and banks open on the next chapter.",
-      "**Not on this page:** Assignats, Weimar, Fed, Nixon — labeled later hinges only.",
+      "Later hinges only, labeled elsewhere: assignats, Weimar, Fed, Nixon.",
     ],
   },
   {
-    heading: "Why this stop matters",
+    heading: "Weight held, then the ticket",
     paragraphs: [
-      "None of this is a pitch to hold metal or to treat Byzantine types as an investment thesis. It is why a gold unit that keeps its weight became the ancient chapter’s closing hinge after silver was lightened.",
-      "Return to [ancient money](/history/ancient). Previous: [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus). Next chapter: [banks and paper](/history/banks-paper). Return to [Sound Money History](/history) for the five-chapter overview. The ancient path ends when the story leaves the coin for a ticket — not before.",
+      "None of this is a pitch to hold metal or to treat Byzantine types as an investment thesis. It is why a gold unit that keeps its weight became the ancient chapter’s closing hinge after silver was lightened. [ancient money](/history/ancient) keeps the chapter. [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus) is the fiscal lightening that came first. [banks and paper](/history/banks-paper) is where the story leaves the coin for a ticket.",
+      "[Sound Money History](/history) holds the five-chapter overview. The ancient path ends when the story leaves the coin for a ticket — not before. Weight held is the last metallic claim. Paper begins only after that coin.",
     ],
   },
 ];
@@ -1877,7 +1877,7 @@ const silverIndustry: Section[] = [
     paragraphs: [
       "Silver halide photography consumed large quantities of silver through the nineteenth and twentieth centuries. Film, paper, and X-ray plates locked metal into images. Recovery and recycling existed; much metal still left the monetary stock into industrial use.",
       "Digital imaging cut that fabrication line sharply from the late twentieth century onward. The documentary point is not nostalgia for film. It is that an industrial job can dominate silver’s flow for a century and then shrink — without erasing silver’s monetary memory.",
-      "Survey tables under Markets separate fabrication from investment offtake for that reason. Photography is one fabrication chapter. It is not the whole industrial book, and it is not bar-and-coin demand. Readers who want dated country investment lines should open the markets pages, not treat this history stop as a substitute table.",
+      "Survey tables under Markets separate fabrication from investment offtake for that reason. Photography is one fabrication chapter. It is not the whole industrial book, and it is not bar-and-coin demand. Readers who want dated country investment lines should open the markets pages, not treat this history article as a substitute table.",
     ],
   },
   {
@@ -1892,7 +1892,7 @@ const silverIndustry: Section[] = [
     heading: "How to read the split",
     paragraphs: [
       "When a headline says “silver demand,” ask which series: coin-and-bar investment, jewelry, industrial fabrication, or official-sector lines. The [physical silver demand by country](/markets/physical-silver-demand-by-country) page explains the investment ranking. The [gold–silver ratio](/markets/gold-silver-ratio) page explains a dated price quotient. Neither page is a history of Potosí or of 1980.",
-      "History’s job on this stop is the dual role as a narrative fact: silver kept a monetary identity while acquiring industrial identities. Practice’s job — bars, coins, premiums — lives under [gold and silver in practice](/gold-silver). Mixing a fabrication survey with a how-to produces a pitch. Keeping the label produces a claim you can check.",
+      "The documentary fact is the dual role: silver kept a monetary identity while acquiring industrial identities. Practice — bars, coins, premiums — lives under [gold and silver in practice](/gold-silver). Mixing a fabrication survey with a how-to produces a pitch. Keeping the label produces a claim you can check.",
       "Cross-links to America stay where statute politics need them ([Crime of 1873](/history/america/crime-of-1873), [bimetallism](/history/silver/bimetallism)). Cross-links to markets stay where current survey arithmetic lives. This article does not reprint those tables. If a sentence cannot say whether it means money-stock demand or fabrication flow, it is not ready to publish.",
     ],
   },
@@ -1909,10 +1909,10 @@ const silverIndustry: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Two jobs, two series",
     paragraphs: [
-      "This page is not a forecast of industrial tightness, not a solar investment case, and not a reason to purchase or sell the metal. It is the documentary naming of silver’s dual monetary and industrial role. A fabrication ounce and a vault ounce can share a chemical symbol without sharing a demand series.",
-      "Return to [silver in history](/history/silver). Earlier monetary stops: [Potosí](/history/silver/potosi), [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), [Silver Thursday](/history/silver/silver-thursday). Markets companions: [physical silver demand by country](/markets/physical-silver-demand-by-country), [gold–silver ratio](/markets/gold-silver-ratio).",
+      "None of this is a forecast of industrial tightness, a solar investment case, or a reason to purchase or sell the metal. It is the documentary naming of silver’s dual monetary and industrial role. A fabrication ounce and a vault ounce can share a chemical symbol without sharing a demand series.",
+      "[Silver in history](/history/silver) holds the chapter. Earlier monetary articles are [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), and [Silver Thursday](/history/silver/silver-thursday). Markets companions stay where current survey arithmetic lives: [physical silver demand by country](/markets/physical-silver-demand-by-country) and the [gold–silver ratio](/markets/gold-silver-ratio).",
     ],
   },
 ];
@@ -2664,7 +2664,7 @@ export const banksPaperHubBody: Section[] = [
     heading: "The claim: a receipt, then a note",
     paragraphs: [
       "A warehouse receipt is not yet a currency. It is a named claim on a named pile of metal. Banking, in the sense these pages use the word, starts when the receipt itself is used to pay. The metal stays in the vault; the paper moves. Counterparties accept the check because they trust the warehouse, not because a statute has declared the paper to be money.",
-      "Convertibility is the test. If the holder can still get coin at the window, the note is a convenient claim. If the window closes, limits payout, or pays in more paper, the note has become a bank or state liability whose value depends on policy and confidence. This hub is that sequence — not a morality play about “printing,” and not a pitch to buy metal.",
+      "Convertibility is the test. If the holder can still get coin at the window, the note is a convenient claim. If the window closes, limits payout, or pays in more paper, the note has become a bank or state liability whose value depends on policy and confidence. That sequence — receipt, circulating note, then a window that can fail — is the chapter’s claim. It is not a morality play about “printing,” and not a pitch to buy metal.",
     ],
   },
   {

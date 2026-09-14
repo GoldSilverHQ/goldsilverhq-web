@@ -13,13 +13,13 @@ export const METRIC_TABS: MetricTab[] = [
     id: "production",
     label: "Production",
     unit: "tonnes / year",
-    hint: "Mine production. Draft placeholders — swap in your series.",
+    hint: "Mine production.",
   },
   {
     id: "reserves",
     label: "Reserves",
     unit: "tonnes",
-    hint: "Gold: official holdings. Silver: identified mineral reserves. Draft placeholders.",
+    hint: "Gold: official holdings. Silver: identified mineral reserves.",
   },
 ];
 

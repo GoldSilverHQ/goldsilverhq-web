@@ -787,7 +787,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
-          { title: "World map — production and reserves today", href: "/maps" },
+          { title: "Silver in history", href: "/history/silver" },
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
         ],
         seo: {
@@ -810,7 +810,7 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
-          { title: "World map", href: "/maps" },
+          { title: "Silver in history", href: "/history/silver" },
         ],
         seo: {
           primary: "piece of eight",
