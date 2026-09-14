@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { FEATURED } from "@/lib/content/featured";
 import { pillars } from "@/lib/content/map";
 
@@ -39,11 +38,6 @@ export function HomeEditorial() {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-sm">
-          <Link to="/maps" className="text-gold hover:text-gold-soft">
-            World map →
-          </Link>
-        </p>
       </section>
     </div>
   );

@@ -9,7 +9,6 @@ const NAV = [
   { href: "/history", label: "History" },
   { href: "/markets", label: "Markets" },
   { href: "/gold-silver", label: "In Practice" },
-  { href: "/maps", label: "Maps" },
 ];
 
 const SOCIALS = [

@@ -71,8 +71,9 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.doesNotMatch(
       xml,
-      /\/gold-silver(?:\/|<)|information-not-advice|comex|physical-by-country/,
+      /\/gold-silver(?:\/|<)|information-not-advice|comex|physical-by-country|\/maps/,
     );
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/maps" as (typeof PHASE1_SITEMAP_PATHS)[number]));
   });
 
   it("serves the Google Search Console HTML verification body", async () => {
