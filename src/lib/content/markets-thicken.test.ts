@@ -277,4 +277,95 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /china-gold|gold-share/.test(path)));
   });
+
+  it("adds dated official gold relative to GDP without inventing cells or new URLs", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
+    assert.ok(gdp, "expected a gold-to-GDP section on the same spoke");
+    assert.ok(gdp.table);
+    const share = body.find((s) => s.heading.startsWith("Gold as a share"));
+    assert.ok(share, "FX-share clock must stay on the page");
+    const china = body.find((s) => s.heading.startsWith("China"));
+    const poland = body.find((s) => s.heading.startsWith("Poland"));
+    const ytd = body.find((s) => s.heading.startsWith("Reported net buyers"));
+    assert.ok(china && poland && ytd, "China, Poland, and YTD clocks must stay");
+
+    const table = gdp.table.rows.flat().join("\n");
+    const text = [gdp.heading, ...gdp.paragraphs, gdp.table.caption, ...gdp.table.headers, table]
+      .filter(Boolean)
+      .join("\n");
+    const page = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+
+    assert.deepEqual(gdp.table.headers, ["Country", "Official tonnes", "2025 GDP", "Gold / GDP"]);
+    assert.match(text, /\$4,026\.60/);
+    assert.match(text, /31 July 2026/);
+    assert.match(text, /WEO April 2026|World Economic Outlook \*\*April 2026\*\*/);
+    assert.match(text, /32,150\.7466/);
+    assert.match(table, /Portugal/);
+    assert.match(table, /\*\*382\.7\*\*/);
+    assert.match(table, /\*\*14\.30%\*\*/);
+    assert.match(table, /Switzerland/);
+    assert.match(table, /\*\*1,039\.9\*\*/);
+    assert.match(table, /\*\*12\.90%\*\*/);
+    assert.match(table, /Italy/);
+    assert.match(table, /\*\*2,451\.8\*\*/);
+    assert.match(table, /\*\*12\.45%\*\*/);
+    assert.match(table, /Russian Federation/);
+    assert.match(table, /\*\*2,276\.8\*\*/);
+    assert.match(table, /\*\*11\.39%\*\*/);
+    assert.match(table, /France/);
+    assert.match(table, /\*\*2,437\.0\*\*/);
+    assert.match(table, /\*\*9\.36%\*\*/);
+    assert.match(table, /Germany/);
+    assert.match(table, /\*\*3,349\.5\*\*/);
+    assert.match(table, /\*\*8\.59%\*\*/);
+    assert.match(table, /United States/);
+    assert.match(table, /\*\*8,133\.5\*\*/);
+    assert.match(table, /\*\*3\.42%\*\*/);
+    assert.match(table, /Japan/);
+    assert.match(table, /\*\*846\.0\*\*/);
+    assert.match(table, /\*\*2\.47%\*\*/);
+    assert.match(table, /China/);
+    assert.match(table, /\*\*2,366\.3\*\*/);
+    assert.match(table, /\*\*1\.56%\*\*/);
+    assert.match(text, /640\.2 tonnes/);
+    assert.match(text, /\*\*8\.00 percent\*\*/);
+    assert.doesNotMatch(table, /Poland|Tether|Lebanon|Uzbekistan/i);
+    assert.doesNotMatch(text, /biggest gold vaults|heaviest relative|Kauf|buy gold|forecast|price target/i);
+    assert.match(page, /Gold as a share of FX/);
+    assert.match(page, /\*\*19%\*\*/);
+    assert.match(page, /\*\*26%\*\*/);
+    assert.match(page, /2,387/);
+    assert.match(page, /648 tonnes/);
+    assert.match(page, /Not a central bank/);
+    assert.match(page, /27\.1 tonnes/);
+
+    const pageMeta = getMarket("central-bank-gold-reserves");
+    assert.ok(pageMeta);
+    assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
+    assert.deepEqual(
+      pageMeta.related.map((r) => r.href),
+      ["/markets", "/markets/official-gold-book-value"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /gold-to-gdp|gold-relative-to-gdp|official-gold-gdp/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /gold-to-gdp|gold-relative-to-gdp|official-gold-gdp/.test(path)));
+  });
 });

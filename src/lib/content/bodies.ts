@@ -1982,7 +1982,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
+      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
     ],
   },
   {
@@ -1990,7 +1990,7 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, **SDRs** (Special Drawing Rights — an IMF reserve asset), and IMF reserve positions in one reserve total.",
       "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) at $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not name a policy.",
-      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, about **8,133 tonnes**. Germany, Italy, and France hold large legacy European stocks. Russia and China report stocks above **2,300 tonnes** each. China’s published official figure — dated in the holdings section below — is widely treated as a floor, not a full geological census.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table below. Germany, Italy, and France hold large legacy European stocks. China’s published official figure — dated in the holdings section below — sits above **2,300 tonnes** and is widely treated as a floor, not a full geological census. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
     ],
   },
   {
@@ -2021,6 +2021,37 @@ const centralBankGoldReserves: Section[] = [
     heading: "",
     paragraphs: [
       "A rising share can be more tonnes, a higher gold price on an unchanged stock, or a smaller foreign-currency book. The mechanism remains the dated report.",
+    ],
+  },
+  {
+    heading: "Official gold relative to GDP",
+    paragraphs: [
+      "A tonne stock and a reserve share still sit inside the reserve book. Official gold relative to GDP is a different division. Take the reported official gold stock, mark it at a named market price, and divide by that country’s nominal GDP. A large published vault can sit beside a large economy and look light on this clock. A smaller published stock can sit beside a smaller economy and look heavy. The job is the quotient, not a league table of vaults.",
+      "The country set below is short and labeled. Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared. That is the same July compilation the year-to-date buyer table uses. It is not the later August SAFE and NBP prints in the China and Poland sections. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026** — the end-month London print that matches that holdings month — and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
+      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP line. Switzerland’s **1,039.9 tonnes** are about **12.90 percent** of **$1,043.544 billion**. Italy’s **2,451.8 tonnes** are about **12.45 percent** of **$2,550.111 billion**. Russia’s **2,276.8 tonnes** are about **11.39 percent** of **$2,587.938 billion**. France (**2,437.0 tonnes**, **9.36 percent** of **$3,368.925 billion**) and Germany (**3,349.5 tonnes**, **8.59 percent** of **$5,048.059 billion**) sit in the same European neighborhood. The United States remains the largest published stock, **8,133.5 tonnes**, and about **3.42 percent** of **$30,767.075 billion**. Japan’s **846.0 tonnes** are about **2.47 percent** of **$4,435.163 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**.",
+      "The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP line — a mid-table print on this clock, kept off the table so it does not become a third Poland narrative. A later August NBP stock of **648 tonnes** belongs in the Poland section below. China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, belongs in the China holdings table. Do not splice those later months into this GDP quotient.",
+    ],
+    table: {
+      caption:
+        "Market value of reported official gold at the 31 July 2026 LBMA Gold Price PM ($4,026.60/oz), divided by 2025 current-price GDP from IMF WEO April 2026. Tonnes are the WGC / IMF IFS compilation dated 3 September 2026 (country books through 31 July 2026). Portugal’s 2025 GDP line in that WEO vintage is still an IMF estimate.",
+      headers: ["Country", "Official tonnes", "2025 GDP", "Gold / GDP"],
+      rows: [
+        ["Portugal", "**382.7**", "$346.412 bn", "**14.30%**"],
+        ["Switzerland", "**1,039.9**", "$1,043.544 bn", "**12.90%**"],
+        ["Italy", "**2,451.8**", "$2,550.111 bn", "**12.45%**"],
+        ["Russian Federation", "**2,276.8**", "$2,587.938 bn", "**11.39%**"],
+        ["France", "**2,437.0**", "$3,368.925 bn", "**9.36%**"],
+        ["Germany", "**3,349.5**", "$5,048.059 bn", "**8.59%**"],
+        ["United States", "**8,133.5**", "$30,767.075 bn", "**3.42%**"],
+        ["Japan", "**846.0**", "$4,435.163 bn", "**2.47%**"],
+        ["China", "**2,366.3**", "$19,626.247 bn", "**1.56%**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The percentage is market value of reported official gold divided by that 2025 GDP line. It is not gold’s share of foreign-exchange reserves. It is not a claim about a later year’s GDP, and it is not a reason to copy a reserve manager. Change the gold print or the GDP vintage and the percentage moves. The mechanism remains the dated division.",
     ],
   },
   {
@@ -2145,7 +2176,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "What the figures do not say",
     paragraphs: [
-      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes and gold’s world reserve share are two jobs: a quantity on one book, and a market-value fraction on many books. The mechanism is the report: quantity, sometimes value, sometimes location.",
+      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
       "These pages stay on current metal-market facts. The [markets hub](/markets) orients the four topics. How $42.22 became the U.S. book rate is the first topic. What the gold–silver ratio measures is the third. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
     ],
   },
@@ -2510,7 +2541,7 @@ export const marketsHubBody: Section[] = [
     ],
     list: [
       "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus the market price; arithmetic on named year averages and peak prints.",
-      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in foreign-exchange reserves; vault preferences; dated official purchases.",
+      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in foreign-exchange reserves; official gold relative to GDP; vault preferences; dated official purchases.",
       "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; three clocks — market price, mine output, London vault stocks; 1980 and 2011 as named anchors.",
       "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; what the ranking does not measure.",
     ],
