@@ -901,9 +901,8 @@ export const practicePages: Episode[] = [
       "Bars minimise fabrication cost per ounce. Coins maximise recognisability. The tone stays practical and neutral.",
     ],
     related: [
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
       { title: "Premium over spot", href: "/gold-silver/premium-over-spot" },
-      { title: "Beginner checklist", href: "/gold-silver/beginner-checklist" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
     ],
     seo: {
       primary: "gold bars vs coins",

@@ -622,24 +622,49 @@ const backedMoney: Section[] = [
 ];
 const barsVsCoins: Section[] = [
   {
-    heading: "What the choice is",
+    heading: "",
     paragraphs: [
-      "Physical gold and silver come mainly as minted coins or as cast or stamped bars. Both are metal. The difference is fabrication, recognisability, and how you later divide or resell a holding.",
-      "Dealers will have a view. So will forums. This site only needs the trade-off: bars usually cost less per ounce above spot; coins usually cost more and are easier for a stranger to recognise.",
+      "A bar and a coin can share the same metal, the same fineness, and the same troy-ounce arithmetic. What differs is the object: how the metal was formed, what stamp a stranger can read, and how much work it takes to turn the object back into a later bid. That is a comparison of form factor — fabrication, premium, and resale friction. It is an educational comparison. It is not a shop, and it is not a recommendation.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names form as the first handling decision. The paragraphs below stay on that decision. They do not rank a product, name a quantity, or treat a mint design as a reason to hold metal.",
     ],
   },
   {
-    heading: "Bars",
+    heading: "What the comparison measures",
     paragraphs: [
-      "A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay cost over more ounces, so the [premium over spot](/gold-silver/premium-over-spot) is often lower. Storage is denser. Resale of a large bar can mean finding a counterparty who will assay or who trusts the brand and serial.",
-      "Small minted bars (one ounce and under) sit closer to coins on premium. The bar-vs-coin slogan is really about large wholesale bars versus government coins. Name the size, or the comparison is empty.",
+      "The useful question is not which form wins. It is what the comparison is measuring. A poured kilo bar, a one-ounce minted bar, and a government bullion coin can all be .999 or .9999 fine gold or silver. They are not the same object in commerce. Weight and fineness describe the metal. Form describes the work done to the metal and the market that later has to accept it.",
+      "Size is part of form. A large wholesale bar spreads fabrication and assay cost over many ounces. A one-ounce piece carries that cost on a single ounce. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison. Small minted bars sit closer to coins on cost and on how easily they change hands. Name the size, or the comparison is empty.",
+      "Bullion and collectibles are different markets. A proof, a commemorative, or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication premium turns into a narrative price. Nothing here ranks collectibles, and nothing here says bullion is the right holding.",
     ],
   },
   {
-    heading: "Coins",
+    heading: "Minting, casting, pouring",
     paragraphs: [
-      "A bullion coin is a government or mint product with a face value that is far below the metal. The coin is recognised by design: Maple, Philharmonic, Krugerrand, and so on. That recognisability is what you pay the extra premium for. It can make small sales simpler. It does not make the coin “money” in the legal-tender-for-rent sense in most places.",
-      "Numismatic and proof coins are a different market. These pages are about bullion — metal as metal — not collectibles. Mixing them is how beginners overpay.",
+      "Fabrication is the work that turns refined metal into a countable piece. The two common shop-floor paths are pouring — casting — and striking, which is minting. A poured bar is melted, poured into a mold, cooled, and stamped with weight, fineness, and a maker’s name. Larger bars often carry a serial. The economics are simple: one mold, one stamp, many ounces.",
+      "A minted piece starts as a blank of known weight. Dies strike a design. Edges may be reeded. The mint’s job is repeatability: thousands of objects that match a published spec for diameter, thickness, and weight. That is more work per ounce than a pour. Dies wear. Inspection is tighter. The extra cost is not a moral grade. It is labor and equipment spread over fewer ounces.",
+      "Government mints and private refiners both do this work. A sovereign coin usually carries a face value far below the metal and a design the public already knows — Maple Leaf, Krugerrand, Philharmonic, and the rest. A private bar usually carries a refiner’s stamp and, above a certain size, a serial. Neither path is “more metal.” The difference is how much fabrication was spent per ounce, and how much of that spend is later recoverable when a counterparty has to believe the stamp without melting the piece.",
+    ],
+  },
+  {
+    heading: "Premium as a price of form",
+    paragraphs: [
+      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the [premium over spot](/gold-silver/premium-over-spot). It is a price of form and of liquidity. It is not automatically a trick, and it is not a tip.",
+      "A large bar often prints a smaller premium per ounce because fabrication and assay were spread. A common bullion coin often prints a larger premium because more work sat on each ounce and because the design is easy to name. A thin product with a fat ask and a poor bid is expensive twice: once when it leaves a dealer, again when it returns. The number that matters later is the bid, not only the ask.",
+      "Premiums move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can cheapen when many are offered and widen when they are scarce at retail. A large bar can sit near spot and still be awkward if the only later buyer wants a melt or a brand they do not know. Compare the gap to the form, not to a story about purity.",
+    ],
+  },
+  {
+    heading: "Recognition and resale friction",
+    paragraphs: [
+      "Recognition is the cost of convincing the next counterparty that the object is what the stamp says. A widely struck government coin is a type a stranger can name without a laboratory. That is why the extra fabrication often survives into the later bid: the next desk already knows the diameter, the design, and the usual fakes. A private bar is weight and a maker. If the maker is known and the serial can be checked, the friction is low. If the maker is unknown, or the bar is large enough that a desk would rather melt than inventory it, the friction rises.",
+      "Resale friction is that cost in time and in haircut. Dividing a holding is part of it. Ten one-ounce coins can leave in ones. A single large bar cannot. Storage density runs the other way: bars pack more metal into less space. None of those facts picks a winner. They are the mechanics of later sale. A coin’s face value does not make it rent money in most places; the face is a legal label far below the metal.",
+      "Counterfeits exist for popular coins and for small bars with famous stamps. That is an authenticity problem, not a form ranking. A common type is easier to check against a published spec and easier for a fake to copy. High-level filters — weight, dimensions, a counterparty who will still be there next year — belong with the other handling notes. The form comparison only needs the friction: recognition is a cost that some objects have already paid in fabrication.",
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "The comparison measures form factor: how the metal was made, what that work costs per ounce, how the premium prices that work and that liquidity, and how much friction a later sale carries. It does not measure which object anyone ought to hold. It does not rank a dealer. It does not name a quantity.",
+      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the gap between the screen and the object, open [premium over spot](/gold-silver/premium-over-spot).",
     ],
   },
 ];
@@ -2505,7 +2530,7 @@ export const practiceHubBody: Section[] = [
   {
     heading: "Six existing notes",
     paragraphs: [
-      "Six short pages already sit under this heading. They stay brief. This overview names their jobs so a reader can open one without treating the list as a course, a shop, or a recommendation to hold metal.",
+      "Six pages already sit under this heading. This overview names their jobs so a reader can open one without treating the list as a course, a shop, or a recommendation to hold metal.",
     ],
     list: [
       "[Gold bars vs coins](/gold-silver/bars-vs-coins) — Fabrication, recognition, size; bullion versus collectibles.",
