@@ -73,7 +73,7 @@ export function SpotTape() {
   return (
     <section className="mt-10">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">COMEX</p>
-      <h2 className="mt-2 font-sans text-3xl">Five-year tape</h2>
+      <h2 className="mt-2 font-sans text-3xl">Five-year price history</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
         Daily COMEX closes. Spot in the header bar uses the same metals feed.
       </p>
@@ -85,10 +85,10 @@ export function SpotTape() {
               gold
                 ? {
                     kicker: "COMEX",
-                    label: "Gold, five-year tape",
+                    label: "Gold, five-year price history",
                     value: `$${fmt(gold, 0)}`,
                     unit: "USD / oz",
-                    note: "Latest COMEX-linked print on the five-year tape.",
+                    note: "Latest COMEX-linked print on the five-year series.",
                     tone: "gold",
                   }
                 : null
@@ -107,10 +107,10 @@ export function SpotTape() {
               silver
                 ? {
                     kicker: "COMEX",
-                    label: "Silver, five-year tape",
+                    label: "Silver, five-year price history",
                     value: `$${fmt(silver, 2)}`,
                     unit: "USD / oz",
-                    note: "Latest COMEX-linked print on the five-year tape.",
+                    note: "Latest COMEX-linked print on the five-year series.",
                     tone: "silver",
                   }
                 : null
@@ -129,7 +129,7 @@ export function SpotTape() {
               ratio
                 ? {
                     kicker: "COMEX",
-                    label: "Gold–silver ratio, five-year tape",
+                    label: "Gold–silver ratio, five-year price history",
                     value: ratio.toFixed(1),
                     unit: "×",
                     note: "COMEX gold ÷ silver closes.",

@@ -252,7 +252,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
           cadence="live"
           asOf={spotAsOf}
           live={spot ? `$${fmtMoney(spot.silver, 2)}` : undefined}
-          note="Same feed as gold. Not a tick-by-tick tape."
+          note="Same feed as gold. Not a tick-by-tick feed."
         />
         <Tile
           kicker="GSR"
@@ -603,7 +603,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={fmtTonnes(WGC_STOCK.etfT)}
-                note="WGC above-ground split, Q2 2026. Not a daily holdings tape."
+                note="WGC above-ground split, Q2 2026. Not a daily holdings series."
               />
             </>
           ) : null}

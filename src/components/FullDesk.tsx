@@ -53,7 +53,7 @@ const DESK_TABS: {
   {
     id: "prices",
     label: "Prices",
-    blurb: "Spot, the five-year COMEX tape, ratios, and the 1980 highs in today’s dollars.",
+    blurb: "Spot, five-year COMEX price history, ratios, and the 1980 highs in today’s dollars.",
   },
   {
     id: "official",
@@ -214,7 +214,7 @@ export function FullDesk() {
                 cadence="live"
                 asOf={spotAsOf}
                 live={spot ? `$${fmtMoney(spot.silver, 2)}` : undefined}
-                note="Same feed as gold. Not a tick-by-tick tape."
+                note="Same feed as gold. Not a tick-by-tick feed."
               />
               <DeskMetricTile
                 kicker="GSR"
@@ -495,7 +495,7 @@ export function FullDesk() {
                 note={
                   printers.source === "live"
                     ? "ECB BSI M3, latest month. China and Japan M2 stay compiled — FRED dropped those series."
-                    : "Compiled ECB print (Jul 2026). Live feed missed; this is the seed, not a gag."
+                    : "Compiled ECB print (Jul 2026). Live feed missed; showing the stored seed."
                 }
               />
               <DeskMetricTile
@@ -629,7 +629,7 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={fmtTonnes(WGC_STOCK.etfT)}
-                note="WGC above-ground split, Q2 2026. Not a daily holdings tape."
+                note="WGC above-ground split, Q2 2026. Not a daily holdings series."
               />
               <DeskMetricTile
                 kicker="COMEX Ag"

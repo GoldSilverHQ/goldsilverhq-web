@@ -9,7 +9,7 @@ export const Route = createFileRoute("/desk")({
     meta: pageShareMeta({
       title: "Metals desk — prices, official gold, money — GoldSilverHQ",
       description:
-        "Gold and silver desk by category: prices and COMEX tape, official gold books, stocks and flows, money supply, and exchange paper.",
+        "Gold and silver desk by category: prices and five-year COMEX history, official gold holdings, stocks and flows, money supply, and exchange paper.",
       imagePath: "/og.jpg",
     }),
   }),
