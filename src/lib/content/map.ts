@@ -1085,7 +1085,7 @@ export const marketPages: Episode[] = [
     slug: "gold-silver-ratio",
     title: "What the gold–silver ratio measures (and what it does not)",
     summary:
-      "Gold price divided by silver price at a dated print. A snapshot, not a fair-value claim. A mining ratio is a different quotient. 1980 and 2011 are the named peak anchors.",
+      "Gold price divided by silver price at a dated print. A snapshot, not a fair-value claim. Mine output and London vault stocks are different quotients. 1980 and 2011 are the named peak anchors.",
     status: "ready",
     paragraphs: [
       "The gold–silver ratio is one price divided by another. It records how many ounces of silver equal one ounce of gold at those two prints. It does not name a destined level.",

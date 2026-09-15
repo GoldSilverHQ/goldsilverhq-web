@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { getBody } from "./bodies.ts";
+import { getBody, marketsHubBody } from "./bodies.ts";
 import { getMarket } from "./map.ts";
 import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
@@ -73,6 +73,63 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(sitemapSrc, /\/markets\/gold-silver-ratio/);
     assert.doesNotMatch(sitemapSrc, /mining-ratio/);
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("mining-ratio")));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/gold-silver-ratio"));
+  });
+
+  it("adds London vault holdings as a custody inventory on the same ratio page", () => {
+    const body = getBody("markets", "gold-silver-ratio");
+    assert.ok(body);
+
+    const vault = body.find((s) => s.heading === "London vault holdings — a custody inventory");
+    assert.ok(vault, "expected London vault holdings under the existing ratio page");
+    const text = body
+      .flatMap((s) => [
+        s.heading,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+      ])
+      .join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+    const neighbor = getBody("markets", "physical-silver-demand-by-country");
+    assert.ok(neighbor);
+    const neighborText = neighbor.flatMap((s) => s.paragraphs).join("\n");
+
+    assert.match(text, /Three contemporaneous clocks/);
+    assert.match(text, /market price, mine output, and London vault stocks/);
+    assert.match(text, /9,632 tonnes/);
+    assert.match(text, /28,431 tonnes/);
+    assert.match(text, /310 million ounces/);
+    assert.match(text, /914 million ounces/);
+    assert.match(text, /~3\.0/);
+    assert.match(text, /August 2026/);
+    assert.match(text, /custody inventory/);
+    assert.match(text, /not a world aboveground census/);
+    assert.match(text, /https:\/\/www\.lbma\.org\.uk\/articles\/london-gold-and-silver-vault-data-for-august-2026/);
+    assert.match(text, /https:\/\/www\.lbma\.org\.uk\/prices-and-data\/london-vault-data/);
+    assert.match(text, /not a fair-value/);
+    assert.match(text, /not a mean/i);
+    assert.match(text, /\[markets\]\(\/markets\)/);
+    assert.match(text, /\[Physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
+    assert.match(hubText, /three clocks/);
+    assert.match(hubText, /London vault stocks/);
+    assert.match(neighborText, /dated London vault inventory/);
+    assert.doesNotMatch(text, /15:1 catch-up|\$217|\$290|Kauf|ebook|buy gold|buy silver/i);
+
+    const page = getMarket("gold-silver-ratio");
+    assert.ok(page);
+    assert.equal(page.title, "What the gold–silver ratio measures (and what it does not)");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/markets", "/markets/physical-silver-demand-by-country"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/gold-silver-ratio/);
+    assert.doesNotMatch(sitemapSrc, /vault-holdings|london-vault/);
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /vault-holdings|london-vault/.test(path)));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/gold-silver-ratio"));
   });
 
