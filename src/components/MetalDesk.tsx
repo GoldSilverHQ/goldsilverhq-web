@@ -12,7 +12,7 @@ import { getCbDesk } from "@/lib/dashboard/cb-desk";
 import { DollarPower } from "@/components/DollarPower";
 import { AthNow } from "@/components/AthNow";
 import { Segmented } from "@/components/Segmented";
-import { SpotTape } from "@/components/SpotTape";
+import { SpotPriceHistory } from "@/components/SpotPriceHistory";
 
 function fmtTonnes(n: number) {
   const sign = n > 0 ? "+" : "";
@@ -61,7 +61,7 @@ export function MetalDesk() {
         Prices live in the bar above. Below: five-year COMEX price history, then the 1980 highs in today’s money.
       </p>
 
-      <SpotTape />
+      <SpotPriceHistory />
 
       <AthNow />
 

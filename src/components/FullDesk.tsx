@@ -4,7 +4,7 @@ import { DollarPower } from "@/components/DollarPower";
 import { CentralBankGold } from "@/components/desk/CentralBankGold";
 import { DeskBoard, DeskMetricTile } from "@/components/desk/DeskMetricTile";
 import { MoneyPath } from "@/components/MoneyPath";
-import { SpotTape } from "@/components/SpotTape";
+import { SpotPriceHistory } from "@/components/SpotPriceHistory";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
 import {
@@ -226,7 +226,7 @@ export function FullDesk() {
                 note="Live ratio. 15:1 is history, not a target."
               />
             </section>
-            <SpotTape />
+            <SpotPriceHistory />
             <AthNow />
             <DeskBoard title="Ratios" kicker="price history">
               <DeskMetricTile

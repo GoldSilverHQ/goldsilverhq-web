@@ -51,7 +51,7 @@ function fmt(n: number, d: number) {
   return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
 }
 
-export function SpotTape() {
+export function SpotPriceHistory() {
   const [desk, setDesk] = useState<SpotDesk | null>(null);
 
   useEffect(() => {
