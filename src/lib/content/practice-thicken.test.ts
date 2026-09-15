@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { getBody, practiceHubBody } from "./bodies.ts";
-import { practiceHub } from "./map.ts";
+import { getPractice, practiceHub } from "./map.ts";
 import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
 function bodyText(sections: NonNullable<ReturnType<typeof getBody>>) {
@@ -34,6 +34,8 @@ const PRACTICE_EPISODES = [
   "buying-online",
 ] as const;
 
+const THIN_PRACTICE_EPISODES = PRACTICE_EPISODES.filter((slug) => slug !== "bars-vs-coins");
+
 const BAFIN_FORBIDDEN =
   /ebook|LemonSqueezy|buy gold now|buy silver now|Kauf|should buy|you should buy|price target|best dealer|we recommend buying|load up on/i;
 
@@ -41,13 +43,13 @@ const SEO_HUB_META =
   /\b(this pillar|Continue the map|Phase-?1|Phase 3|Flavio|sitemap expansion|BaFin-clean|long-tail first|no spaghetti)\b/i;
 
 describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () => {
-  it("thickens only the hub to documentary depth and leaves the six notes thin", () => {
+  it("thickens the hub to documentary depth and leaves the five unthickened notes thin", () => {
     const text = bodyText(practiceHubBody);
     const words = wordCount(text);
     assert.ok(words >= 800 && words <= 1500, `hub: expected 800–1500 words, got ${words}`);
     assert.ok(words >= 900 && words <= 1300, `hub: target 900–1300 words, got ${words}`);
 
-    for (const slug of PRACTICE_EPISODES) {
+    for (const slug of THIN_PRACTICE_EPISODES) {
       const body = getBody("gold-silver", slug);
       assert.ok(body, `missing body for gold-silver/${slug}`);
       const spokeWords = wordCount(bodyText(body));
@@ -109,6 +111,65 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
     assert.match(sitemapSrc, /"\/gold-silver"/);
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+  });
+});
+
+describe("practice / bars-vs-coins thicken (no new URLs, spoke off sitemap)", () => {
+  it("thickens bars-vs-coins to documentary depth", () => {
+    const body = getBody("gold-silver", "bars-vs-coins");
+    assert.ok(body, "missing body for gold-silver/bars-vs-coins");
+    const text = bodyText(body);
+    const words = wordCount(text);
+    assert.ok(words >= 800 && words <= 1200, `bars-vs-coins: expected 800–1200 words, got ${words}`);
+    assert.ok(body.filter((s) => s.heading).length >= 5, "bars-vs-coins: expected ≥5 headed sections");
+
+    const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
+    assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
+    assert.match(routeSrc, /getPractice/);
+    assert.match(routeSrc, /EpisodeBody/);
+    assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
+  });
+
+  it("locks the claim: form factor, fabrication, premium, resale — not a shop", () => {
+    const text = bodyText(getBody("gold-silver", "bars-vs-coins")!);
+    assert.match(text, /form factor/);
+    assert.match(text, /not a shop/);
+    assert.match(text, /not a recommendation/);
+    assert.match(text, /Minting, casting, pouring/);
+    assert.match(text, /premium over spot/);
+    assert.match(text, /Recognition and resale friction/);
+    assert.match(text, /Information only/);
+    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.match(text, /\[premium over spot\]\(\/gold-silver\/premium-over-spot\)/);
+    assert.doesNotMatch(text, BAFIN_FORBIDDEN);
+    assert.doesNotMatch(text, SEO_HUB_META);
+    assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
+  });
+
+  it("keeps a two-link causal ledger and leaves the spoke off the sitemap", () => {
+    const page = getPractice("bars-vs-coins");
+    assert.ok(page, "missing bars-vs-coins in map.ts");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/gold-silver", "/gold-silver/premium-over-spot"],
+    );
+    assert.equal(page.related.length, 2);
+    assert.equal(page.slug, "bars-vs-coins");
+    assert.equal(page.title, "Gold bars vs coins");
+
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    const barsBlock = mapSrc.match(/slug:\s*"bars-vs-coins"[\s\S]*?slug:\s*"premium-over-spot"/)?.[0];
+    assert.ok(barsBlock, "missing bars-vs-coins episode block in map.ts");
+    const hrefs = [...barsBlock.matchAll(/href:\s*"([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual(hrefs, ["/gold-silver", "/gold-silver/premium-over-spot"]);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /"\/gold-silver"/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\/bars-vs-coins/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
   });
 });
