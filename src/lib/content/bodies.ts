@@ -2155,7 +2155,7 @@ const goldSilverRatio: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The gold–silver ratio is one market price divided by another. At a stated time, take the gold print in dollars per troy ounce and divide by the silver print in dollars per troy ounce. The result is how many ounces of silver equal one ounce of gold at those two prints. It is a dated snapshot. It is not a fair-value claim.",
+      "The gold–silver ratio is one market price divided by another. At a stated time, take the gold print in dollars per troy ounce and divide by the silver print in dollars per troy ounce. The result is how many ounces of silver equal one ounce of gold at those two prints. It is a dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
     ],
   },
   {
@@ -2174,6 +2174,25 @@ const goldSilverRatio: Section[] = [
       "A dated market print sits far from that mine-supply neighborhood. On **10 September 2026**, COMEX December gold closed at **$4,364.50** and COMEX December silver at **$64.28**. Those two nearby futures share a session and a venue. Divide them and the market ratio is **67.9** — near **68**, with silver in the mid-sixties. Name the clock: COMEX December nearby closes, 10 September 2026. The next session’s pair can move a point without changing the definition.",
       "Keep three labels on the table. A **mint ratio** is a legal number of silver units per gold unit — fifteen to one in the Coinage Act of 1792, later sixteen to one. A **mining ratio** is ounces mined per ounce mined in a survey year. A **market ratio** is gold’s dollar print divided by silver’s dollar print at a named pair of prices. The mint number is a statute story, told under [bimetallism](/history/silver/bimetallism). Mine supply is how much metal leaves the ground. The market number is the job of this page, under the [markets](/markets) hub. [Physical silver demand by country](/markets/physical-silver-demand-by-country) is the neighbor that counts identified bars and coins taken off the shelf — offtake, not holes in the ground, and not a price quotient.",
       "The gap between a mine-supply ratio near **7** and a market ratio near **68** is a fact about two different divisions. It is not a fair-value gap. It is not a mean that later tapes owe a return to. It does not say silver is behind, gold is ahead, or that either metal should catch up. Mine supply, industrial use, and monetary demand all affect the two prices. None of them is entitled to set the other quotient. The market ratio remains one dated pair of prints.",
+    ],
+  },
+  {
+    heading: "London vault holdings — a custody inventory",
+    paragraphs: [
+      "A third contemporaneous clock is the metal sitting in London custody. The London Bullion Market Association’s [London vault holdings](https://www.lbma.org.uk/prices-and-data/london-vault-data) series counts gold and silver in London commercial vaults, plus the Bank of England’s gold (the Bank does not hold silver). The print is month-end, published one month in arrears, and covers metal inside the M25: wholesale bars, coins, kilo bars, and small bars. It does not count jewellery, household metal, or smaller vaults outside the London clearing system. It is not a world aboveground census.",
+      "The dated [August 2026 print](https://www.lbma.org.uk/articles/london-gold-and-silver-vault-data-for-august-2026), published 7 September 2026, names **9,632 tonnes** of gold and **28,431 tonnes** of silver. Using the LBMA’s stated conversion — 1 gram = 0.0321507465 troy ounces — those tonnes become about **310 million ounces** of gold and about **914 million ounces** of silver. Divide the silver stock by the gold stock and the vault ratio is about **3.0** ounces of silver per ounce of gold. Name the clock: LBMA London Vault Holdings Data, August 2026.",
+    ],
+    list: [
+      "**Gold 9,632 tonnes** — about **310 million ounces**.",
+      "**Silver 28,431 tonnes** — about **914 million ounces**.",
+      "**Vault ratio ~3.0** — ounces of silver per ounce of gold in that same book.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "That **3.0** is a custody inventory ratio. It is not the mining ratio near **7** on the homepage card. It is not the market ratio near **68** on the 10 September 2026 COMEX nearby pair. London is one settlement hub. Metal in New York, Shanghai, Zurich, or a household safe is outside this book. The next month’s print can move without rewriting the definition.",
+      "The gap between a vault ratio near **3**, a mine-supply ratio near **7**, and a market ratio near **68** is a fact about three clocks. It is not a fair-value gap. It is not a mean. It does not say silver is scarce in London, gold is plentiful, or that either metal should catch up. A custody book records what those vaults held on a named day. The market ratio remains one dated pair of prints.",
     ],
   },
   {
@@ -2216,9 +2235,9 @@ const goldSilverRatio: Section[] = [
     heading: "How to read a snapshot",
     paragraphs: [
       "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) orients this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country).",
-      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. The homepage mining-ratio card’s job is ounces mined per ounce mined. Practice’s job is bars, coins, and premiums. Mixing the four produces slogans. Keeping them apart produces a number you can check.",
+      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. The homepage mining-ratio card’s job is ounces mined per ounce mined. London vault stocks are a third contemporaneous clock — custody inventory, not a price and not a mine book. Practice’s job is bars, coins, and premiums. Mixing those jobs produces slogans. Keeping them apart produces a number you can check.",
       "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
-      "If you want the older legal ratio — **bimetallism**, both metals legal at a fixed mint ratio — as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A mining ratio is ounces mined. A market ratio is a price quotient. Keep the three labeled when you move between History, the homepage card, and Markets.",
+      "If you want the older legal ratio — **bimetallism**, both metals legal at a fixed mint ratio — as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A mining ratio is ounces mined. A market ratio is a price quotient. A vault ratio is ounces held in a named custody book. Keep the four labeled when you move between History, the homepage card, Markets, and the London print.",
     ],
   },
 ];
@@ -2299,7 +2318,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "How to read a country line",
     paragraphs: [
-      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), or coins-and-medals fabrication (world **87.9** in 2025). Then read the country as a demand address or as a mint address. Do not swap the two. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices lives on the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), or coins-and-medals fabrication (world **87.9** in 2025). Then read the country as a demand address or as a mint address. Do not swap the two. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices, and a dated London vault inventory, live on the [gold–silver ratio](/markets/gold-silver-ratio).",
       "The [markets hub](/markets) orients this fact page. History’s job, when silver’s two roles need a narrative home, is [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
       "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The ranking measures identified bar-and-coin offtake by country in a dated survey year. That is the claim, and that is the stop.",
     ],
@@ -2487,12 +2506,12 @@ export const marketsHubBody: Section[] = [
     heading: "Four current facts",
     paragraphs: [
       "A **book value** is the dollar figure a government still writes into its books for gold — often a leftover legal rate, not the market price. A reserve line is how much gold a central bank reports holding. A ratio is one price divided by another at a named time. A country line is how much bar-and-coin silver buyers in that country took off the shelf in a survey year (**offtake** = that identified purchase volume).",
-      "[Official gold book value](/markets/official-gold-book-value) is the cleanest entry if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) is the entry if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, distinguishes a mining ratio from the market ratio, and pins the market number to **1980** and **2011** snapshots — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table.",
+      "[Official gold book value](/markets/official-gold-book-value) is the cleanest entry if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) is the entry if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and **2011** snapshots — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table.",
     ],
     list: [
       "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus the market price; arithmetic on named year averages and peak prints.",
       "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in foreign-exchange reserves; vault preferences; dated official purchases.",
-      "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; mining ratio versus market ratio; 1980 and 2011 as named anchors.",
+      "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; three clocks — market price, mine output, London vault stocks; 1980 and 2011 as named anchors.",
       "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; what the ranking does not measure.",
     ],
   },
