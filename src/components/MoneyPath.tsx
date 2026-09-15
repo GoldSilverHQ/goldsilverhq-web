@@ -8,6 +8,7 @@ import {
   type PathMode,
   type PathWindow,
 } from "@/lib/dashboard/money-path";
+import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { Segmented } from "@/components/Segmented";
 
 function fmtX(n: number) {
@@ -105,19 +106,52 @@ export function MoneyPath() {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Money stock",
+              label: "US M2 multiple",
+              value: fmtX(stats.m2x),
+              unit: "",
+              note: `US M2 since ${stats.from.year}.`,
+              tone: "fg",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">US M2</p>
           <p className="mt-2 font-sans text-3xl tabular-nums">{fmtX(stats.m2x)}</p>
           <p className="mt-1 text-sm text-muted">since {stats.from.year}</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Money stock",
+              label: "Gold vs US M2",
+              value: fmtX(stats.goldx),
+              unit: "",
+              note: `M2-implied $${fmtMoney(stats.impliedGold)} · actual $${fmtMoney(stats.to.gold)}. Since ${stats.from.year}.`,
+              tone: "gold",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold">{fmtX(stats.goldx)}</p>
           <p className="mt-1 text-sm text-muted">
             M2-implied ${fmtMoney(stats.impliedGold)} · actual ${fmtMoney(stats.to.gold)}
           </p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Money stock",
+              label: "Silver vs US M2",
+              value: fmtX(stats.silverx),
+              unit: "",
+              note: `M2-implied $${fmtMoney(stats.impliedSilver)} · actual $${fmtMoney(stats.to.silver)}. Since ${stats.from.year}.`,
+              tone: "silver",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-silver">{fmtX(stats.silverx)}</p>
           <p className="mt-1 text-sm text-muted">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { getSpotDesk, type PricePoint, type SpotDesk } from "@/lib/dashboard/spot";
 
 function Spark({
@@ -77,21 +78,66 @@ export function SpotTape() {
         COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              gold
+                ? {
+                    kicker: "Tape",
+                    label: "Gold, five-year COMEX",
+                    value: `$${fmt(gold, 0)}`,
+                    unit: "USD / oz",
+                    note: "Latest COMEX-linked print on the five-year tape.",
+                    tone: "gold",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold">
             {gold ? `$${fmt(gold, 0)}` : "—"}
           </p>
           <Spark points={desk?.goldSeries ?? []} color="#c9a227" label="Gold, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              silver
+                ? {
+                    kicker: "Tape",
+                    label: "Silver, five-year COMEX",
+                    value: `$${fmt(silver, 2)}`,
+                    unit: "USD / oz",
+                    note: "Latest COMEX-linked print on the five-year tape.",
+                    tone: "silver",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-silver">
             {silver ? `$${fmt(silver, 2)}` : "—"}
           </p>
           <Spark points={desk?.silverSeries ?? []} color="#c5cdd4" label="Silver, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              ratio
+                ? {
+                    kicker: "Tape",
+                    label: "Gold–silver ratio, five years",
+                    value: ratio.toFixed(1),
+                    unit: "×",
+                    note: "COMEX gold ÷ silver closes.",
+                    tone: "gold",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold-soft uppercase">Ratio</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold-soft">
             {ratio ? `${ratio.toFixed(1)}×` : "—"}

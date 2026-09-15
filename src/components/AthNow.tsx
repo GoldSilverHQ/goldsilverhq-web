@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { ATH_1980, adjAth, getAthNow } from "@/lib/dashboard/ath-1980";
+import type { MetricShareTone } from "@/lib/dashboard/metric-share-card";
 
 type Desk = { cpi: number; m2: number; cpiDate: string; m2Date: string; gold: number; silver: number };
 
@@ -43,6 +45,7 @@ function MetalAth({
   cpiAdj,
   m2Adj,
   color,
+  tone,
 }: {
   name: string;
   print: number;
@@ -51,9 +54,22 @@ function MetalAth({
   cpiAdj: number;
   m2Adj: number;
   color: string;
+  tone: MetricShareTone;
 }) {
   return (
-    <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+    <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+      <MetricDownloadButton
+        className="absolute top-3 right-3"
+        payload={{
+          kicker: "1980",
+          label: `${name} CPI-adjusted ATH`,
+          value: `$${money(cpiAdj)}`,
+          unit: "USD / oz",
+          note: `Printed $${money(print)} · ${when}. Spot $${money(spot)}. M2-adjusted $${money(m2Adj)}.`,
+          tone,
+          secondary: `M2-adj $${money(m2Adj)} · spot $${money(spot)}`,
+        }}
+      />
       <p className={`text-center text-xs font-semibold tracking-[0.14em] uppercase ${color}`}>{name}</p>
       <p className="mt-2 text-center text-sm text-muted">
         Printed ${money(print)} · {when}
@@ -105,6 +121,7 @@ export function AthNow() {
           cpiAdj={adjAth(ATH_1980.gold.usd, ATH_1980.cpiThen, cpi)}
           m2Adj={adjAth(ATH_1980.gold.usd, ATH_1980.m2Then, m2)}
           color="text-gold"
+          tone="gold"
         />
         <MetalAth
           name="Silver"
@@ -114,6 +131,7 @@ export function AthNow() {
           cpiAdj={adjAth(ATH_1980.silver.usd, ATH_1980.cpiThen, cpi)}
           m2Adj={adjAth(ATH_1980.silver.usd, ATH_1980.m2Then, m2)}
           color="text-silver"
+          tone="silver"
         />
       </div>
       <p className="mt-3 text-xs text-faint">
