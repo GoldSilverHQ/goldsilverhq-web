@@ -3,7 +3,6 @@ import { AthNow } from "@/components/AthNow";
 import { DollarPower } from "@/components/DollarPower";
 import { CentralBankGold } from "@/components/desk/CentralBankGold";
 import { DeskBoard, DeskMetricTile } from "@/components/desk/DeskMetricTile";
-import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { MoneyPath } from "@/components/MoneyPath";
 import { SpotTape } from "@/components/SpotTape";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
@@ -64,7 +63,7 @@ const DESK_TABS: {
   {
     id: "stocks",
     label: "Stocks & flows",
-    blurb: "Above-ground gold stock, silver as an industrial flow, and who holds what.",
+    blurb: "Above-ground metal, mine output, and who holds what.",
   },
   {
     id: "money",
@@ -120,38 +119,6 @@ function DeskTabBar({
           );
         })}
       </div>
-    </div>
-  );
-}
-
-function StockFlowMini({
-  kicker,
-  label,
-  value,
-  unit,
-  tone,
-  note,
-}: {
-  kicker: string;
-  label: string;
-  value: string;
-  unit: string;
-  tone: "gold" | "silver";
-  note?: string;
-}) {
-  return (
-    <div className="relative pr-10">
-      <MetricDownloadButton
-        className="absolute top-0 right-0"
-        payload={{ kicker, label, value, unit, note, tone }}
-      />
-      <p className="text-xs text-faint">{label}</p>
-      <p
-        className={`clock-value mt-1 font-sans tabular-nums tracking-tight ${tone === "gold" ? "text-gold" : "text-silver"}`}
-      >
-        {value}
-        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
-      </p>
     </div>
   );
 }
@@ -374,103 +341,80 @@ export function FullDesk() {
 
         {tab === "stocks" ? (
           <>
-            <section className="mt-8">
-              <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Stock versus flow</p>
-              <h2 className="mt-2 font-sans text-3xl">Gold is a stock. Silver is a flow.</h2>
-              <p className="mt-2 max-w-2xl text-sm text-muted">
-                Almost all gold ever mined still exists. A large share of silver is used up, not stored.
-              </p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
-                  <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">Gold — a stock</p>
-                  <h3 className="mt-1 text-sm text-muted">Almost all ever mined still exists</h3>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    <StockFlowMini
-                      kicker="Official"
-                      label="Official reserves"
-                      value={fmtTonnes(official.world.tonnes)}
-                      unit="t"
-                      tone="gold"
-                    />
-                    <StockFlowMini
-                      kicker="Buying"
-                      label="Net official buying, YTD"
-                      value={fmtTonnes(CB_YTD_2026.tonnes)}
-                      unit="t"
-                      tone="gold"
-                      note="Also under Official gold."
-                    />
-                    <StockFlowMini
-                      kicker="Mine"
-                      label="CB take of mine supply"
-                      value={(cbTakeOfMine() * 100).toFixed(0)}
-                      unit="%"
-                      tone="gold"
-                    />
-                    <StockFlowMini
-                      kicker="Investment"
-                      label="Investment gold per person"
-                      value={investmentGoldGramsPerPerson().toFixed(1)}
-                      unit="g"
-                      tone="gold"
-                    />
-                  </div>
-                  <p className="mt-3 text-xs text-faint">
-                    Buying is WGC GDT H1 2026. Take is 2025 official / WGC mine. Grams: bars, coins, ETFs over 8.2bn
-                    people.
-                  </p>
-                </article>
-                <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
-                  <p className="text-xs font-semibold tracking-[0.16em] text-silver uppercase">Silver — a flow</p>
-                  <h3 className="mt-1 text-sm text-muted">A large share is used up, not stored</h3>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    <StockFlowMini
-                      kicker="Official"
-                      label="Official silver"
-                      value={String(Math.round(silverOfficialT()))}
-                      unit="t"
-                      tone="silver"
-                    />
-                    <StockFlowMini
-                      kicker="Balance"
-                      label="Mine + recycle vs demand"
-                      value={`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
-                      unit="t"
-                      tone="silver"
-                    />
-                    <StockFlowMini
-                      kicker="Cover"
-                      label="Months of visible cover"
-                      value={silverVisibleMonths().toFixed(1)}
-                      unit="mo"
-                      tone="silver"
-                    />
-                    <StockFlowMini
-                      kicker="Investment"
-                      label="Investment silver per person"
-                      value={investmentSilverOzPerPerson().toFixed(2)}
-                      unit="oz"
-                      tone="silver"
-                    />
-                  </div>
-                  <p className="mt-3 text-xs text-faint">
-                    2024 Silver Institute. Official sector is a rounding error. Visible ounces are vaulted bullion, not
-                    jewelry.
-                  </p>
-                </article>
-              </div>
-            </section>
-
-            <section className="mt-8 grid gap-3 sm:grid-cols-2">
+            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <DeskMetricTile
-                kicker="Silver"
-                label="Visible silver / a year of industry"
+                kicker="Official"
+                label="Official reserves"
+                unit="t"
+                cadence="yearly"
+                asOf={formatAsOf(official.world.asOf)}
+                live={fmtTonnes(official.world.tonnes)}
+                note="Countries + IMF + ECB, one year-end vintage. Also under Official gold."
+              />
+              <DeskMetricTile
+                kicker="Buying"
+                label="Net official buying"
+                unit="t"
+                cadence="yearly"
+                asOf={CB_YTD_2026.asOf ?? "2026"}
+                live={fmtTonnes(CB_YTD_2026.tonnes)}
+                note="WGC GDT H1 2026 YTD. Also under Official gold."
+              />
+              <DeskMetricTile
+                kicker="Mine"
+                label="CB share of mine supply"
+                unit="%"
+                cadence="yearly"
+                live={(cbTakeOfMine() * 100).toFixed(0)}
+                note="2025 official demand ÷ WGC mine supply."
+              />
+              <DeskMetricTile
+                kicker="Investment"
+                label="Investment gold per person"
+                unit="g"
+                cadence="yearly"
+                live={investmentGoldGramsPerPerson().toFixed(1)}
+                note="Bars, coins, ETFs over 8.2bn people."
+              />
+              <DeskMetricTile
+                kicker="Official"
+                label="Official silver"
                 tone="silver"
-                unit="months"
+                unit="t"
+                cadence="yearly"
+                asOf={SILVER_2024.asOf}
+                live={String(Math.round(silverOfficialT()))}
+                note="2024 Silver Institute. Official sector is a rounding error."
+              />
+              <DeskMetricTile
+                kicker="Balance"
+                label="Mine + recycle vs demand"
+                tone="silver"
+                unit="t"
+                cadence="yearly"
+                asOf={SILVER_2024.asOf}
+                live={`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
+                note="2024 Silver Institute. Negative = deficit."
+              />
+              <DeskMetricTile
+                kicker="Cover"
+                label="Months of visible cover"
+                tone="silver"
+                unit="mo"
                 cadence="yearly"
                 asOf={SILVER_2024.asOf}
                 live={silverVisibleMonths().toFixed(1)}
-                note="Identifiable bullion (vaults) ÷ 2024 fabrication. Gold has no analogue."
+                note="Identifiable bullion (vaults) ÷ 2024 fabrication. Not jewelry."
+              />
+              <DeskMetricTile
+                kicker="Investment"
+                label="Investment silver per person"
+                tone="silver"
+                unit="oz"
+                cadence="yearly"
+                asOf={SILVER_2024.asOf}
+                live={investmentSilverOzPerPerson().toFixed(2)}
+                note="2024 Silver Institute investment stock over 8.2bn people."
               />
               <DeskMetricTile
                 kicker="Geology"
@@ -487,7 +431,7 @@ export function FullDesk() {
             <DeskBoard title="Who holds the gold" kicker="WGC Q2 2026 · holdings mix">
               <DeskMetricTile
                 kicker="Jewelry"
-                label="Jewelry stock"
+                label="Jewelry"
                 unit="%"
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
