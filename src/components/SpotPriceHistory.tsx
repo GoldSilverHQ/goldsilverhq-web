@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { getSpotDesk, type PricePoint, type SpotDesk } from "@/lib/dashboard/spot";
 
 function Spark({
@@ -50,7 +51,7 @@ function fmt(n: number, d: number) {
   return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
 }
 
-export function SpotTape() {
+export function SpotPriceHistory() {
   const [desk, setDesk] = useState<SpotDesk | null>(null);
 
   useEffect(() => {
@@ -71,27 +72,72 @@ export function SpotTape() {
 
   return (
     <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Tape</p>
-      <h2 className="mt-2 font-sans text-3xl">Five years of the screen</h2>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">COMEX</p>
+      <h2 className="mt-2 font-sans text-3xl">Five-year price history</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
+        Daily COMEX closes. Spot in the header bar uses the same metals feed.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              gold
+                ? {
+                    kicker: "COMEX",
+                    label: "Gold, five-year price history",
+                    value: `$${fmt(gold, 0)}`,
+                    unit: "USD / oz",
+                    note: "Latest COMEX-linked print on the five-year series.",
+                    tone: "gold",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold">
             {gold ? `$${fmt(gold, 0)}` : "—"}
           </p>
           <Spark points={desk?.goldSeries ?? []} color="#c9a227" label="Gold, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              silver
+                ? {
+                    kicker: "COMEX",
+                    label: "Silver, five-year price history",
+                    value: `$${fmt(silver, 2)}`,
+                    unit: "USD / oz",
+                    note: "Latest COMEX-linked print on the five-year series.",
+                    tone: "silver",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-silver">
             {silver ? `$${fmt(silver, 2)}` : "—"}
           </p>
           <Spark points={desk?.silverSeries ?? []} color="#c5cdd4" label="Silver, five years" />
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={
+              ratio
+                ? {
+                    kicker: "COMEX",
+                    label: "Gold–silver ratio, five-year price history",
+                    value: ratio.toFixed(1),
+                    unit: "×",
+                    note: "COMEX gold ÷ silver closes.",
+                    tone: "gold",
+                  }
+                : null
+            }
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold-soft uppercase">Ratio</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold-soft">
             {ratio ? `${ratio.toFixed(1)}×` : "—"}

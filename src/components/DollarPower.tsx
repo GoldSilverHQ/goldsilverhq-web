@@ -1,3 +1,4 @@
+import { MetricDownloadButton } from "@/components/desk/MetricDownloadButton";
 import { DOLLAR_LOSS, DOLLAR_MULTIPLE, DOLLAR_NOW, DOLLAR_POWER } from "@/lib/dashboard/dollar-power";
 
 function cents(pp: number) {
@@ -56,24 +57,57 @@ export function DollarPower() {
 
   return (
     <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Since the Fed</p>
-      <h2 className="mt-2 font-sans text-3xl">The dollar since 1913</h2>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Purchasing power</p>
+      <h2 className="mt-2 font-sans text-3xl">US dollar since 1913</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        Purchasing power of $1 at the founding of the Federal Reserve. Official CPI.
+        Purchasing power of $1 from the Fed’s founding year. Official CPI.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Dollar",
+              label: "Purchasing power lost since 1913",
+              value: `${lost.toFixed(1)}%`,
+              unit: "lost",
+              note: "Official CPI. Share of 1913 purchasing power gone.",
+              tone: "gold",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Lost</p>
           <p className="mt-2 font-sans text-3xl tabular-nums">{lost.toFixed(1)}%</p>
           <p className="mt-1 text-sm text-muted">of 1913 purchasing power</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Dollar",
+              label: "What $1 from 1913 buys now",
+              value: cents(left),
+              unit: "",
+              note: "Official CPI purchasing power left.",
+              tone: "gold",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Left</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold">{cents(left)}</p>
           <p className="mt-1 text-sm text-muted">what $1 from 1913 buys now</p>
         </article>
-        <article className="rounded-xl bg-surface p-5 shadow-[var(--shadow-border)]">
+        <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
+          <MetricDownloadButton
+            className="absolute top-3 right-3"
+            payload={{
+              kicker: "Dollar",
+              label: "To match $1 in 1913",
+              value: `$${DOLLAR_MULTIPLE.toFixed(0)}`,
+              unit: "today",
+              note: "Today’s dollars needed to match one 1913 dollar of purchasing power.",
+              tone: "gold",
+            }}
+          />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">To match $1 then</p>
           <p className="mt-2 font-sans text-3xl tabular-nums">${DOLLAR_MULTIPLE.toFixed(0)}</p>
           <p className="mt-1 text-sm text-muted">today’s dollars</p>
