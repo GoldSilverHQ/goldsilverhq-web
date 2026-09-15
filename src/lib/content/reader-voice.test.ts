@@ -79,7 +79,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
 
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
     for (const path of PHASE1_SITEMAP_PATHS) {
-      if (path === "/history" || path === "/sound-money" || path === "/markets") continue;
+      if (path === "/history" || path === "/sound-money" || path === "/gold-silver" || path === "/markets") continue;
       const parts = path.split("/").filter(Boolean);
       if (parts[0] === "history" && parts.length === 3) {
         const body = getBody(parts[1], parts[2]);

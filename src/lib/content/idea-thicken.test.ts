@@ -51,8 +51,9 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       );
     }
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("information-not-advice")));
-    // Practice stays off-sitemap; use startsWith so the const tuple does not trip TS2367.
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver")));
+    // Practice hub is on-sitemap; spokes stay off. startsWith("/gold-silver/") avoids TS2367.
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
   });
 
   it("locks backed-money as contract vs slogan (Flavio long-tail first)", () => {

@@ -6,6 +6,7 @@ import {
   historyHub,
   marketsHub,
   pillars,
+  practiceHub,
   seoTitle,
   soundMoneyHub,
 } from "../content/map.ts";
@@ -41,7 +42,7 @@ export function absoluteOgImageUrl(pathname: string, origin = CANONICAL_ORIGIN):
   return `${origin}${ogImagePathForRouteOrDefault(pathname)}`;
 }
 
-function pillarKicker(id: "sound-money" | "history" | "markets"): string {
+function pillarKicker(id: "sound-money" | "history" | "gold-silver" | "markets"): string {
   const pillar = pillars.find((p) => p.id === id);
   return pillar?.kicker ?? "GoldSilverHQ";
 }
@@ -79,6 +80,16 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: seoTitle(soundMoneyHub.titleTag),
       description: pillars.find((p) => p.id === "sound-money")?.summary ?? "",
       kicker: pillarKicker("sound-money"),
+    };
+  }
+
+  if (path === "/gold-silver") {
+    return {
+      path,
+      cardTitle: "Gold & Silver in Practice",
+      title: seoTitle(practiceHub.titleTag),
+      description: pillars.find((p) => p.id === "gold-silver")?.summary ?? "",
+      kicker: pillarKicker("gold-silver"),
     };
   }
 
