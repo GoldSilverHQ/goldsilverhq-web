@@ -57,7 +57,7 @@ export function CentralBankGold() {
   return (
     <section className="mt-8">
       <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">
-        Official sector
+        Reported buying
       </p>
       <h2 className="mt-2 text-center font-sans text-3xl">Central bank gold</h2>
       <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted">

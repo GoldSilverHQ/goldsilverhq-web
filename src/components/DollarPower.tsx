@@ -57,10 +57,10 @@ export function DollarPower() {
 
   return (
     <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Since the Fed</p>
-      <h2 className="mt-2 font-sans text-3xl">The dollar since 1913</h2>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Purchasing power</p>
+      <h2 className="mt-2 font-sans text-3xl">US dollar since 1913</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        Purchasing power of $1 at the founding of the Federal Reserve. Official CPI.
+        Purchasing power of $1 from the Fed’s founding year. Official CPI.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">

@@ -73,7 +73,7 @@ const DESK_TABS: {
   {
     id: "paper",
     label: "Exchange paper",
-    blurb: "Claims vs vaulted metal and ETF stock. Some prints are still dashes — missing feeds, not broken widgets.",
+    blurb: "Claims versus vaulted metal and ETF holdings. Some prints are still dashes — missing feeds, not broken widgets.",
   },
 ];
 
@@ -273,16 +273,16 @@ export function FullDesk() {
               />
               <DeskMetricTile
                 kicker="Buying"
-                label="Net official buying, YTD"
+                label="Net official buying"
                 unit="t"
                 cadence="yearly"
                 asOf={CB_YTD_2026.asOf ?? "2026"}
                 live={fmtTonnes(CB_YTD_2026.tonnes)}
-                note="WGC GDT H1 2026. Includes unreported."
+                note="WGC GDT H1 2026 YTD. Includes unreported."
               />
               <DeskMetricTile
                 kicker="Mine"
-                label="CB take of mine supply"
+                label="CB share of mine supply"
                 unit="%"
                 cadence="yearly"
                 live={(cbTakeOfMine() * 100).toFixed(0)}
@@ -299,7 +299,7 @@ export function FullDesk() {
               />
             </section>
             <CentralBankGold />
-            <DeskBoard title="Official holdings" kicker="country and IFI books">
+            <DeskBoard title="Official holdings" kicker="country and IFI prints">
               <DeskMetricTile
                 kicker="Fed"
                 label="United States official gold"
@@ -428,7 +428,7 @@ export function FullDesk() {
               />
             </section>
 
-            <DeskBoard title="Who holds the gold" kicker="WGC Q2 2026 · holdings mix">
+            <DeskBoard title="Gold holdings" kicker="WGC Q2 2026">
               <DeskMetricTile
                 kicker="Jewelry"
                 label="Jewelry"
@@ -517,7 +517,7 @@ export function FullDesk() {
                 note="BOJ Jul 2026. FRED’s Japan M2 series stopped years ago."
               />
             </DeskBoard>
-            <DeskBoard title="Currencies vs gold" kicker="purchasing power lost">
+            <DeskBoard title="FX vs gold" kicker="% of purchasing power lost">
               <DeskMetricTile
                 kicker="USD"
                 label="Dollar vs gold since 1971"
@@ -555,7 +555,7 @@ export function FullDesk() {
                 note="¥360 × $40.62 at the gold window. Bretton Woods closed 15 Aug 1971."
               />
             </DeskBoard>
-            <DeskBoard title="Sovereign debt vs gold" kicker="two different stocks">
+            <DeskBoard title="Sovereign debt vs gold" kicker="IMF debt · WGC / official gold">
               <DeskMetricTile
                 kicker="World"
                 label="Global sovereign debt"
@@ -607,7 +607,7 @@ export function FullDesk() {
 
         {tab === "paper" ? (
           <>
-            <DeskBoard title="Claims vs metal" kicker="exchange paper · not one multiple">
+            <DeskBoard title="Claims vs metal" kicker="COMEX · LBMA · ETFs">
               <DeskMetricTile
                 kicker="COMEX Au"
                 label="Open interest vs registered"

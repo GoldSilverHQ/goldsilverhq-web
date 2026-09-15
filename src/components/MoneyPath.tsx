@@ -95,8 +95,8 @@ export function MoneyPath() {
     <section className="mt-10">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Money stock</p>
-          <h2 className="mt-2 font-sans text-3xl">Gold & silver vs US M2</h2>
+          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">US M2</p>
+          <h2 className="mt-2 font-sans text-3xl">Gold and silver vs US M2</h2>
           <p className="mt-2 max-w-xl text-sm text-muted">{copy}</p>
         </div>
         <div className="flex flex-col items-start gap-2 sm:items-end">
@@ -110,7 +110,7 @@ export function MoneyPath() {
           <MetricDownloadButton
             className="absolute top-3 right-3"
             payload={{
-              kicker: "Money stock",
+              kicker: "US M2",
               label: "US M2 multiple",
               value: fmtX(stats.m2x),
               unit: "",
@@ -126,7 +126,7 @@ export function MoneyPath() {
           <MetricDownloadButton
             className="absolute top-3 right-3"
             payload={{
-              kicker: "Money stock",
+              kicker: "US M2",
               label: "Gold vs US M2",
               value: fmtX(stats.goldx),
               unit: "",
@@ -144,7 +144,7 @@ export function MoneyPath() {
           <MetricDownloadButton
             className="absolute top-3 right-3"
             payload={{
-              kicker: "Money stock",
+              kicker: "US M2",
               label: "Silver vs US M2",
               value: fmtX(stats.silverx),
               unit: "",

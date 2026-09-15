@@ -105,11 +105,10 @@ export function AthNow() {
 
   return (
     <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">January 1980</p>
-      <h2 className="mt-2 font-sans text-3xl">The 1980 ATH, in today’s dollars</h2>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">1980</p>
+      <h2 className="mt-2 font-sans text-3xl">1980 ATH (CPI / M2)</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        Gold’s London print was $850. Silver’s Hunt-era print was $49.45. CPI is official inflation. M2 is the money
-        stock.
+        London gold $850; Hunt-era silver $49.45. CPI = official inflation. M2 = US money supply.
       </p>
 
       <div className="mt-6 grid w-full gap-4 sm:grid-cols-2">

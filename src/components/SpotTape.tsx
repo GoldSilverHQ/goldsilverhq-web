@@ -72,10 +72,10 @@ export function SpotTape() {
 
   return (
     <section className="mt-10">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Tape</p>
-      <h2 className="mt-2 font-sans text-3xl">Five years of the screen</h2>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">COMEX</p>
+      <h2 className="mt-2 font-sans text-3xl">Five-year tape</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        COMEX closes, not a tick tape. Spot in the bar is the same metals feed as the clock.
+        Daily COMEX closes. Spot in the header bar uses the same metals feed.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
@@ -84,8 +84,8 @@ export function SpotTape() {
             payload={
               gold
                 ? {
-                    kicker: "Tape",
-                    label: "Gold, five-year COMEX",
+                    kicker: "COMEX",
+                    label: "Gold, five-year tape",
                     value: `$${fmt(gold, 0)}`,
                     unit: "USD / oz",
                     note: "Latest COMEX-linked print on the five-year tape.",
@@ -106,8 +106,8 @@ export function SpotTape() {
             payload={
               silver
                 ? {
-                    kicker: "Tape",
-                    label: "Silver, five-year COMEX",
+                    kicker: "COMEX",
+                    label: "Silver, five-year tape",
                     value: `$${fmt(silver, 2)}`,
                     unit: "USD / oz",
                     note: "Latest COMEX-linked print on the five-year tape.",
@@ -128,8 +128,8 @@ export function SpotTape() {
             payload={
               ratio
                 ? {
-                    kicker: "Tape",
-                    label: "Gold–silver ratio, five years",
+                    kicker: "COMEX",
+                    label: "Gold–silver ratio, five-year tape",
                     value: ratio.toFixed(1),
                     unit: "×",
                     note: "COMEX gold ÷ silver closes.",
