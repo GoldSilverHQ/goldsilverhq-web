@@ -213,10 +213,11 @@ async function main() {
   copyFileSync(logoSrc, logoTmp);
   const logoHref = pathToFileURL(logoTmp).href;
 
-  const pages = phase1SharePages();
+  const only = process.argv.slice(2).filter((arg) => arg.startsWith("/"));
+  const pages = phase1SharePages().filter((page) => only.length === 0 || only.includes(page.path));
   const defaultPage = sharePageForPath("/");
   if (!defaultPage) throw new Error("Missing default share page for /");
-  if (pages.length !== PHASE1_SITEMAP_PATHS.length) {
+  if (only.length === 0 && pages.length !== PHASE1_SITEMAP_PATHS.length) {
     throw new Error(`Expected ${PHASE1_SITEMAP_PATHS.length} cards, got ${pages.length}`);
   }
 
@@ -234,9 +235,11 @@ async function main() {
       process.stdout.write(`wrote ${rel}\n`);
     }
 
-    const fallbackJpg = join(root, "public", DEFAULT_OG_IMAGE_PATH.replace(/^\//, ""));
-    await renderCard(defaultPage, browser, fallbackJpg, logoHref);
-    process.stdout.write(`wrote ${DEFAULT_OG_IMAGE_PATH}\n`);
+    if (only.length === 0) {
+      const fallbackJpg = join(root, "public", DEFAULT_OG_IMAGE_PATH.replace(/^\//, ""));
+      await renderCard(defaultPage, browser, fallbackJpg, logoHref);
+      process.stdout.write(`wrote ${DEFAULT_OG_IMAGE_PATH}\n`);
+    }
   } finally {
     await browser.close();
   }

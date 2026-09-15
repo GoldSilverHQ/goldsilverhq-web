@@ -40,7 +40,7 @@ const BAFIN_FORBIDDEN =
 const SEO_HUB_META =
   /\b(this pillar|Continue the map|Phase-?1|Phase 3|Flavio|sitemap expansion|BaFin-clean|long-tail first|no spaghetti)\b/i;
 
-describe("practice / gold-silver hub thicken (no new URLs, off-sitemap)", () => {
+describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () => {
   it("thickens only the hub to documentary depth and leaves the six notes thin", () => {
     const text = bodyText(practiceHubBody);
     const words = wordCount(text);
@@ -87,7 +87,7 @@ describe("practice / gold-silver hub thicken (no new URLs, off-sitemap)", () => 
     assert.doesNotMatch(mapSrc, /slug:\s*"(?!gold-silver-ratio)gold-silver-[\w-]+"/);
   });
 
-  it("keeps a two-link causal ledger and stays off the sitemap", () => {
+  it("keeps a two-link causal ledger and lists only the hub on the sitemap", () => {
     assert.deepEqual(
       practiceHub.related.map((r) => r.href),
       ["/sound-money", "/history/ancient/why-markets-chose-gold-silver"],
@@ -106,8 +106,9 @@ describe("practice / gold-silver hub thicken (no new URLs, off-sitemap)", () => 
     assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver(?:\/|"|,|\s)/);
-    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver")));
+    assert.match(sitemapSrc, /"\/gold-silver"/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
   });
 });
