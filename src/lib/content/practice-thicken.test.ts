@@ -245,10 +245,18 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
+    assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\/premium-over-spot/);
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
+    assert.doesNotMatch(
+      sitemapSrc,
+      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+    );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
   });
 });
