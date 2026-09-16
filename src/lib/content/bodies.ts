@@ -406,7 +406,7 @@ const whatIsSoundMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Sound money is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
     ],
   },
   {
@@ -445,19 +445,18 @@ const whatIsSoundMoney: Section[] = [
     ],
   },
   {
-    heading: "What the definition is not",
+    heading: "The stop, not nostalgia",
     paragraphs: [
-      "It is not a claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. Relative prices still move under a hard unit. Sound money constrains one source of a general rise in prices; it does not freeze bread against rent.",
-      "It is not a buying brief, a campaign to restore metal money, or a forecast. These pages answer what the words mean. [Information versus advice](/sound-money/information-not-advice) is the standing line for the whole site.",
-      "It is not a dump of Weimar, Nixon, or the Fed onto a definition page. Those belong in history. Mixing definitions with dated events makes both harder to follow.",
+      "The definition does not claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. Relative prices still move under a hard unit. Sound money constrains one source of a general rise in prices; it does not freeze bread against rent.",
+      "These pages answer what the words mean — not a buying brief, not a campaign to restore metal money, and not a forecast. [Information versus advice](/sound-money/information-not-advice) is the standing line for the whole site.",
+      "Weimar, Nixon, and the Fed belong in history, not pasted onto a definition. Mixing definitions with dated events makes both harder to follow.",
     ],
   },
   {
-    heading: "Where to go next",
+    heading: "Definitions first, then dates",
     paragraphs: [
-      "These pages are definitions only. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans.",
-      "Return to [Sound Money](/sound-money) for the overview. History starts at [Sound Money History](/history). Markets figures and practice pages answer different questions: meaning here, events there, figures and handling elsewhere.",
-      "Open [hard money vs fiat](/sound-money/hard-money-vs-fiat) if you need the supply-side contrast. Open [backed money](/sound-money/backed-money) if a reserve claim is the confusion. Open [inflation](/sound-money/inflation-purchasing-power) if the question is purchasing power rather than the name of the unit. When the definition is clear and you want dates, leave these definitions: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries.",
+      "These pages stay on meaning. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans. The overview sits under [Sound Money](/sound-money).",
+      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures and practice pages answer different questions — meaning here, events there, figures and handling elsewhere.",
     ],
   },
 ];
@@ -466,7 +465,7 @@ const hardMoneyVsFiat: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways. Circulation does not decide the category.",
+      "The same engraved note can change category overnight when a convertibility window closes. Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways. Circulation does not decide the category.",
     ],
   },
   {
@@ -512,10 +511,10 @@ const hardMoneyVsFiat: Section[] = [
     ],
   },
   {
-    heading: "Where to go next",
+    heading: "Costly production versus law and habit",
     paragraphs: [
-      "Return to [Sound Money](/sound-money). Related definitions: [what is sound money?](/sound-money/what-is-sound-money), [inflation and purchasing power](/sound-money/inflation-purchasing-power), [what “backed” means](/sound-money/backed-money).",
-      "For events, leave these definitions. For dated market figures, use [Markets](/markets). For handling metal, use [gold and silver in practice](/gold-silver). This page only splits costly production from law-and-habit claims. Keep Weimar, Nixon, and greenbacks as linked cases, not as pasted timelines that turn a definition into a history index.",
+      "This page only splits costly production from law-and-habit claims. Related definitions: [what is sound money?](/sound-money/what-is-sound-money), [inflation and purchasing power](/sound-money/inflation-purchasing-power), [what “backed” means](/sound-money/backed-money). The overview sits under [Sound Money](/sound-money).",
+      "For events, leave these definitions. For dated market figures, use [Markets](/markets). For handling metal, use [gold and silver in practice](/gold-silver). Keep Weimar, Nixon, and greenbacks as linked cases, not as pasted timelines that turn a definition into a history index.",
     ],
   },
 ];
@@ -524,13 +523,13 @@ const inflation: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
     ],
   },
   {
     heading: "What inflation is on this site",
     paragraphs: [
-      "The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check. If the same hour buys less bread, less rent, or less metal over years, the unit has weakened. That can happen with or without a dramatic crisis.",
+      "The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check. If the same hour buys less across years, the unit has weakened. That can happen with or without a dramatic crisis.",
       "Consumer-price indexes and wholesale indexes are measurement tools. They are not the definition. The definition is purchasing-power erosion of the unit. Indexes help document that erosion; they do not invent it. Basket choice, quality adjustments, and base years matter for reading a series — they do not rewrite the idea.",
       "This page stays on the idea. [Weimar 1923](/history/20th-century/weimar-1923) is the documentary extreme. Do not paste Weimar into every mild rise in a price index. Ordinary inflation and hyperinflation share a channel when money stock is discretionary; they do not share a severity or a timeline. A two-percent annual rise and a monthly fifty-percent rise are not the same documentary object.",
     ],
@@ -562,17 +561,17 @@ const inflation: Section[] = [
     ],
   },
   {
-    heading: "What this definition is not",
+    heading: "Purchasing power, not a forecast",
     paragraphs: [
-      "It is not a forecast of next year’s index. It is not a recommendation to buy or sell metal, bonds, or anything else. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
-      "It is not a claim that every price rise is “only printing.” Scarcity and demand shifts are real. The job here is to keep the money-stock channel visible when the unit can be issued without a stop.",
-      "It is not a substitute for [what is sound money?](/sound-money/what-is-sound-money). Sound money names the constraint. Inflation names what happens to purchasing power when the unit weakens — under any regime. It is also not a markets page: dated metal figures live on [Markets](/markets).",
+      "This page does not forecast next year’s index. It is not a recommendation to buy or sell metal, bonds, or anything else. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "It does not claim that every price rise is “only printing.” Scarcity and demand shifts are real. The job here is to keep the money-stock channel visible when the unit can be issued without a stop.",
+      "Sound money names the constraint on [what is sound money?](/sound-money/what-is-sound-money). Inflation names what happens to purchasing power when the unit weakens — under any regime. Dated metal figures live on [Markets](/markets), not here.",
     ],
   },
   {
-    heading: "Where to go next",
+    heading: "The idea, then the extreme case",
     paragraphs: [
-      "Return to [Sound Money](/sound-money). Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923).",
+      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
       "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history.",
     ],
   },
@@ -582,7 +581,7 @@ const backedMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing: a contract. A currency said to be “supported by” gold sitting in a vault, with no public claim on it, is another: a slogan, or at best a reserve-management fact.",
+      "A vault photograph and a teller window are not the same claim. “Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing: a contract. A currency said to be “supported by” gold sitting in a vault, with no public claim on it, is another: a slogan, or at best a reserve-management fact.",
     ],
   },
   {
@@ -621,18 +620,18 @@ const backedMoney: Section[] = [
     ],
   },
   {
-    heading: "What this definition is not",
+    heading: "Policing the word",
     paragraphs: [
-      "It is not a brief to restore a gold window, and not a forecast of exchange rates. It is not investment advice. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
-      "It is not a claim that reserves are useless. Reserves are useful for states. This site only refuses to rename them as public convertibility when the public has no claim.",
-      "It is not a dump of every gold statute onto one page. [What is sound money?](/sound-money/what-is-sound-money) names the constraint. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names production cost. This page only polices the word “backed.”",
+      "This page only polices the word “backed.” It is not a brief to restore a gold window, not a forecast of exchange rates, and not investment advice. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
+      "Reserves are useful for states. This site only refuses to rename them as public convertibility when the public has no claim. A vault total without a presentment right is still useful accounting — it is not the older contract.",
+      "[What is sound money?](/sound-money/what-is-sound-money) names the constraint. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names production cost.",
     ],
   },
   {
-    heading: "Where to go next",
+    heading: "Meaning first, then the statute cases",
     paragraphs: [
-      "Return to [Sound Money](/sound-money). Read next with [what is sound money?](/sound-money/what-is-sound-money) and [hard money vs fiat](/sound-money/hard-money-vs-fiat). Dated cases: [1933 gold recall](/history/20th-century/1933-gold-recall), [Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971), [Weimar / Rentenmark](/history/20th-century/weimar-1923).",
-      "When a desk figure looks like “backing,” check whether the page is markets accounting or a redeemability story. This section stays on meaning. Markets cover dated facts. Practice covers handling metal. Do not let a vault photo rewrite a contract that does not exist. A clear word for “backed” makes every later history page easier to read.",
+      "Read next with [what is sound money?](/sound-money/what-is-sound-money) and [hard money vs fiat](/sound-money/hard-money-vs-fiat). Dated cases: [1933 gold recall](/history/20th-century/1933-gold-recall), [Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971), [Weimar / Rentenmark](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
+      "When a desk figure looks like “backing,” check whether the page is markets accounting or a redeemability story. Markets cover dated facts. Practice covers handling metal. Do not let a vault photo rewrite a contract that does not exist. A clear word for “backed” makes every later history page easier to read.",
     ],
   },
 ];
@@ -1987,7 +1986,7 @@ const officialGoldBookValue: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
+      "After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
     ],
   },
   {
@@ -2036,10 +2035,10 @@ const officialGoldBookValue: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Two ledgers, one stock",
     paragraphs: [
-      "This page does not say the Treasury “should” revalue gold. It does not treat $42.22 as a secret price, a floor, or a target. It does not turn a book-to-spot multiple into a reason to buy or sell metal. Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers.",
-      "Return to [gold and silver markets](/markets) for the other fact pages under Markets: how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
+      "Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers — not a secret price, a floor, or a target, and not a reason to buy or sell metal. This page does not say the Treasury “should” revalue gold.",
+      "The other fact pages under [gold and silver markets](/markets) cover how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
     ],
   },
 ];
@@ -2048,7 +2047,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
+      "A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
     ],
   },
   {
@@ -2272,10 +2271,10 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
-    heading: "What the figures do not say",
+    heading: "Composition, custody, and clocks",
     paragraphs: [
       "A rising official stock is a change in a reserve composition. It is not a price target. A reported official sale is the same kind of fact as a reported official purchase: a dated change in a reserve book, not a private-flow instruction. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
-      "These pages stay on current metal-market facts. The [markets hub](/markets) orients the four topics. How $42.22 became the U.S. book rate is the first topic. What the gold–silver ratio measures is the third. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
+      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). What the gold–silver ratio measures is the third topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
     ],
   },
 ];
@@ -2284,7 +2283,7 @@ const goldSilverRatio: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The gold–silver ratio is one market price divided by another. At a stated time, take the gold print in dollars per troy ounce and divide by the silver print in dollars per troy ounce. The result is how many ounces of silver equal one ounce of gold at those two prints. It is a dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
+      "On a named day, two prints share a clock: divide gold’s dollar price by silver’s and you get how many ounces of silver equal one ounce of gold at that pair. The gold–silver ratio is that dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
     ],
   },
   {
@@ -2325,7 +2324,7 @@ const goldSilverRatio: Section[] = [
     ],
   },
   {
-    heading: "What the ratio does not measure",
+    heading: "A dated pair, not a mean",
     paragraphs: [
       "The ratio does not measure a natural law. Geology, mine supply, industrial use, and monetary demand all affect the two prices. None of them is “the” ratio. A number near 15 in a mint statute, or near 17 on a January 1980 tape, does not bind a later tape.",
       "The ratio does not measure whether silver is behind or gold is ahead. It does not contain a mean that prices owe a return to. It does not forecast a catch-up. Those sentences are the ones this page will not make. A high ratio means gold’s dollar print is large relative to silver’s dollar print at that date. A low ratio means the opposite. That is the whole claim.",
@@ -2361,10 +2360,10 @@ const goldSilverRatio: Section[] = [
     ],
   },
   {
-    heading: "How to read a snapshot",
+    heading: "Name the prints, keep the clocks apart",
     paragraphs: [
-      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) orients this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country) — industrial fabrication is labeled on that same page, as a separate factory table.",
-      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. The homepage mining-ratio card’s job is ounces mined per ounce mined. London vault stocks are a third contemporaneous clock — custody inventory, not a price and not a mine book. Practice’s job is bars, coins, and premiums. Mixing those jobs produces slogans. Keeping them apart produces a number you can check.",
+      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country) — industrial fabrication as a factory table sits on that same page. The [markets](/markets) hub holds the four topics.",
+      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient — what the ratio measures when both prices share a clock. The homepage mining-ratio card’s job is ounces mined per ounce mined. London vault stocks are a third contemporaneous clock — custody inventory, not a price and not a mine book. Practice’s job is bars, coins, and premiums. Mixing those jobs produces slogans. Keeping them apart produces a number you can check.",
       "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
       "If you want the older legal ratio — **bimetallism**, both metals legal at a fixed mint ratio — as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A mining ratio is ounces mined. A market ratio is a price quotient. A vault ratio is ounces held in a named custody book. Keep the four labeled when you move between History, the homepage card, Markets, and the London print.",
     ],
@@ -2375,7 +2374,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure, a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand, and — labeled separately — a 2025 industrial-fabrication table and a 2025 coins-and-medals mint table from World Silver Survey 2026.",
+      "In **2024**, identified U.S. bar-and-coin offtake fell hard while India’s line rose — two national markets, one survey table, no shared path. Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure, a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand, and — labeled separately — a 2025 industrial-fabrication table and a 2025 coins-and-medals mint table from World Silver Survey 2026.",
     ],
   },
   {
@@ -2387,7 +2386,7 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "What the ranking does not measure",
+    heading: "Buyer, mint, and factory addresses",
     paragraphs: [
       "It does not measure industrial fabrication. In the same 2024 survey vintage this page uses for the investment ranking, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products. It is not a bar in a household drawer. A country that fabricates a lot of solar paste can be small on the investment table. World Silver Survey 2026’s **2025** industrial book — world **657.4 million ounces**, with its own country ranking — sits in a separate block below. It is a factory address, not a substitute for the investment ranking.",
       "It does not measure jewelry or silverware — about **208.7** and **54.2** million ounces in 2024. It does not measure official-sector silver, a rounding line of **1.5 million ounces** in that same world book, not a central-bank gold story.",
@@ -2503,10 +2502,10 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "How to read a country line",
+    heading: "Label the series before the country",
     paragraphs: [
       "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), coins-and-medals fabrication (world **87.9** in 2025), or industrial fabrication (world **657.4** in 2025). Then read the country as a demand address, a mint address, or a factory address. Do not swap the three. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices, and a dated London vault inventory, live on the [gold–silver ratio](/markets/gold-silver-ratio).",
-      "The [markets hub](/markets) orients this fact page. History’s job, when silver’s two roles need a narrative home, is [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
+      "When silver’s two roles need a narrative home, open [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. The [markets](/markets) hub holds the fact pages. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
       "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The investment ranking measures identified bar-and-coin offtake by country in a dated survey year. The industrial table measures fabrication into products. Those are the claims, and that is the stop.",
     ],
   },
