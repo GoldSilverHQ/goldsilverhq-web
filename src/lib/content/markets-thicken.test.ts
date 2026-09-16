@@ -110,7 +110,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(page.title, "What physical silver demand by country measures (and what it does not)");
     assert.deepEqual(
       page.related.map((r) => r.href),
-      ["/markets", "/markets/gold-silver-ratio"],
+      ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
@@ -150,7 +150,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.deepEqual(
       page.related.map((r) => r.href),
-      ["/markets", "/markets/physical-silver-demand-by-country"],
+      [
+        "/markets",
+        "/markets/physical-silver-demand-by-country",
+        "/history/silver/monetary-and-industry",
+        "/sound-money/hard-money-vs-fiat",
+      ],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
@@ -207,7 +212,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(page.title, "What the gold–silver ratio measures (and what it does not)");
     assert.deepEqual(
       page.related.map((r) => r.href),
-      ["/markets", "/markets/physical-silver-demand-by-country"],
+      [
+        "/markets",
+        "/markets/physical-silver-demand-by-country",
+        "/history/silver/monetary-and-industry",
+        "/sound-money/hard-money-vs-fiat",
+      ],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");

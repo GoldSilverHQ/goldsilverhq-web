@@ -168,6 +168,7 @@ export const ideaPages: Episode[] = [
       { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Gold–silver ratio (mining vs market)", href: "/markets/gold-silver-ratio" },
       { title: "Sound Money History", href: "/history" },
     ],
     seo: {
@@ -1092,6 +1093,8 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
+      { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
+      { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     ],
     seo: {
       primary: "gold silver ratio",
@@ -1114,6 +1117,7 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
+      { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
     ],
     seo: {
       primary: "physical silver demand by country",
