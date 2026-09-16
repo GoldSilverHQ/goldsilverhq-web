@@ -915,15 +915,15 @@ export const practicePages: Episode[] = [
   {
     slug: "premium-over-spot",
     title: "Premium over spot",
-    summary: "Spot is the screen. Premium is fabrication, distribution, and bid–ask — not automatically a trick.",
+    summary:
+      "Spot is a reference price. The premium is the price of form, brand, mint, and liquidity — not a tip and not a forecast of what is cheap.",
     status: "ready",
     paragraphs: [
-      "Premium is the difference between spot and the product in hand. It is not a trick by itself. It is fabrication, distribution, and bid-ask.",
+      "Premium over spot is the markup of an object above a screen or LBMA reference. It prices form, brand, mint, and liquidity. It is not a shopping tip and not a forecast of which premiums are cheap.",
     ],
     related: [
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
       { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
-      { title: "Beginner checklist", href: "/gold-silver/beginner-checklist" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
     ],
     seo: {
       primary: "gold premium over spot",

@@ -34,7 +34,10 @@ const PRACTICE_EPISODES = [
   "buying-online",
 ] as const;
 
-const THIN_PRACTICE_EPISODES = PRACTICE_EPISODES.filter((slug) => slug !== "bars-vs-coins");
+const THICK_PRACTICE_EPISODES = ["bars-vs-coins", "premium-over-spot"] as const;
+const THIN_PRACTICE_EPISODES = PRACTICE_EPISODES.filter(
+  (slug) => !(THICK_PRACTICE_EPISODES as readonly string[]).includes(slug),
+);
 
 const BAFIN_FORBIDDEN =
   /ebook|LemonSqueezy|buy gold now|buy silver now|Kauf|should buy|you should buy|price target|best dealer|we recommend buying|load up on/i;
@@ -43,7 +46,7 @@ const SEO_HUB_META =
   /\b(this pillar|Continue the map|Phase-?1|Phase 3|Flavio|sitemap expansion|BaFin-clean|long-tail first|no spaghetti)\b/i;
 
 describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () => {
-  it("thickens the hub to documentary depth and leaves the five unthickened notes thin", () => {
+  it("thickens the hub to documentary depth and leaves the four unthickened notes thin", () => {
     const text = bodyText(practiceHubBody);
     const words = wordCount(text);
     assert.ok(words >= 800 && words <= 1500, `hub: expected 800–1500 words, got ${words}`);
@@ -183,5 +186,69 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () 
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
       ["/gold-silver", "/gold-silver/bars-vs-coins"],
     );
+  });
+});
+
+describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)", () => {
+  it("thickens premium-over-spot to documentary depth", () => {
+    const body = getBody("gold-silver", "premium-over-spot");
+    assert.ok(body, "missing body for gold-silver/premium-over-spot");
+    const text = bodyText(body);
+    const words = wordCount(text);
+    assert.ok(words >= 800 && words <= 1200, `premium-over-spot: expected 800–1200 words, got ${words}`);
+    assert.ok(body.filter((s) => s.heading).length >= 5, "premium-over-spot: expected ≥5 headed sections");
+
+    const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
+    assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
+    assert.match(routeSrc, /getPractice/);
+    assert.match(routeSrc, /EpisodeBody/);
+    assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
+  });
+
+  it("locks the claim: form, brand, mint, liquidity — not a tip, not a cheap forecast", () => {
+    const text = bodyText(getBody("gold-silver", "premium-over-spot")!);
+    assert.match(text, /form, brand, mint, and liquidity/);
+    assert.match(text, /not a shopping tip/);
+    assert.match(text, /not a forecast of which premiums are cheap/);
+    assert.match(text, /LBMA/);
+    assert.match(text, /dealer’s ask/);
+    assert.match(text, /Fabrication is the first cost/);
+    assert.match(text, /Distribution is the second/);
+    assert.match(text, /Inventory is the third/);
+    assert.match(text, /Recognition is the fourth/);
+    assert.match(text, /not a timing tip/);
+    assert.match(text, /fairly valued/);
+    assert.match(text, /Information only/);
+    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
+    assert.doesNotMatch(text, BAFIN_FORBIDDEN);
+    assert.doesNotMatch(text, SEO_HUB_META);
+    assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
+  });
+
+  it("keeps a two-link causal ledger and leaves the spoke off the sitemap", () => {
+    const page = getPractice("premium-over-spot");
+    assert.ok(page, "missing premium-over-spot in map.ts");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
+    assert.equal(page.related.length, 2);
+    assert.equal(page.slug, "premium-over-spot");
+    assert.equal(page.title, "Premium over spot");
+
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    const premiumBlock = mapSrc.match(/slug:\s*"premium-over-spot"[\s\S]*?slug:\s*"storage"/)?.[0];
+    assert.ok(premiumBlock, "missing premium-over-spot episode block in map.ts");
+    const hrefs = [...premiumBlock.matchAll(/href:\s*"([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual(hrefs, ["/gold-silver", "/gold-silver/bars-vs-coins"]);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /"\/gold-silver"/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\/premium-over-spot/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
   });
 });
