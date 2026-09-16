@@ -874,14 +874,14 @@ const amsterdam: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The Bank of Amsterdam — the Wisselbank, opened in **1609** — turns metal deposits into public transferable balances. A merchant brings mixed coin. The city credits a bank guilder. Bills on Amsterdam settle by giro: a book entry, without the metal leaving the vault. That civic ledger sits between a warehouse receipt and later note-issuing banks. It is not a modern central bank.",
-      "In **1609** Amsterdam opened a public bank so merchants could settle large bills by book entry instead of haggling over worn coin. **Giro** balances and the **agio** (the premium of bank money over street coin) are the machinery; concealed lending is how the reputation later broke. It follows [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks); it is not yet a note-issuing war bank.",
+      "On the Dam in the early seventeenth century, a bill drawn on Amsterdam could still turn into an argument over metal: foreign dollars, clipped pieces, worn domestic coin — which pile counted as payment? In **1609** the city opened a public answer. Mixed specie went into the Wisselbank. A standard bank guilder came out on the books. Large settlement moved by **giro** — a debit and a credit — while the vault stayed shut.",
+      "That civic ledger sits between a warehouse receipt and later note-issuing banks. It follows [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). The **agio** — the premium of bank money over street coin — is how the market priced the unit while the reputation held. Concealed lending is how the reputation later broke. It is not yet a note-issuing war bank, and it is not a modern central bank.",
     ],
   },
   {
     heading: "Why a civic ledger",
     paragraphs: [
-      "Amsterdam in the early seventeenth century was a bill-of-exchange market. Large debts among merchants were written on the city. Payment still meant assembling a pile of coin — foreign dollars, clipped pieces, worn domestic issues — and arguing which pile counted. Private cashiers already kept money and made transfers. Failures and quality fights still reached the wholesale market.",
+      "Amsterdam was a bill-of-exchange market. Large debts among merchants were written on the city. Payment still meant assembling a pile of coin and haggling over quality. Private cashiers already kept money and made transfers. Failures and quality fights still reached the wholesale market.",
       "The city answered with a public deposit bank. An ordinance of **31 January 1609** created the Amsterdamsche Wisselbank. Mixed specie went in. A standard credit came out. Large bills drawn on Amsterdam were to be settled through its books. The point was not to invent a national paper currency. It was to give the bill market one ledger everyone had to use — the public-bank job named on the [warehouses](/history/banks-paper/warehouses-to-public-banks) page.",
     ],
   },
@@ -908,7 +908,7 @@ const amsterdam: Section[] = [
       "A public bank can be a warehouse with better accounting. It can also become a lender in secret. Amsterdam did both, in sequence.",
       "From the late seventeenth century, and more clearly in the eighteenth, the bank made advances to the city of Amsterdam and to the Dutch East India Company that were not advertised as the old warehouse model. Overdrafts against the vault are still loans. They were not posted as the florin banco’s public story. For decades the agio and the reputation could live together because the market still treated banco as metal-quality money.",
       "War strained the concealment. In the Fourth Anglo-Dutch War, **1780–1784**, lending to the Company and the city rose. The coin stock no longer matched the deposit book. When that lending became public knowledge in the **1780s–1790s**, the agio collapsed. Bank money went from a premium to a discount. The institution never recovered its old role as the settlement unit of the entrepôt.",
-      "French occupation in **1795** found a bank that had already lost the trust that made giro as good as a full vault. Liquidation was completed in **1819**. That is a Dutch public-bank story: reputation, concealed fiscal use of the metal, then a quoted premium that died when the books were known. It is not 1720. It is not the assignats.",
+      "French occupation in **1795** found a bank that had already lost the trust that made giro as good as a full vault. Liquidation was completed in **1819**. That is a Dutch public-bank story: reputation, concealed fiscal use of the metal, then a quoted premium that died when the books were known. It is not **1720**. It is not the assignats.",
     ],
   },
   {
@@ -925,11 +925,11 @@ const amsterdam: Section[] = [
     ],
   },
   {
-    heading: "Why the civic ledger matters",
+    heading: "One book the market had to use",
     paragraphs: [
       "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Later machines in this chapter do not copy Amsterdam. They use the habit it taught: book or paper money as settlement, with metal in the background until it is not.",
       "The next dated article is the [Bank of England](/history/banks-paper/bank-of-england): a **1694** war-finance charter with a note issue attached, not a city giro table. Law’s Mississippi System is **1720**. Assignats are **1789–1796**. Germany’s mark in **1923** is a later parallel in another chapter. Similar mechanisms can teach; merging dates erases which claim failed.",
-      "This article’s place on the [banks and paper](/history/banks-paper) path is the model public deposit bank. The previous article is [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). Then London, then Law, then the assignats. This page is Amsterdam’s civic ledger only — not Law’s **1720**, not the **1790s** assignats, and not Germany’s **1923** mark.",
+      "This page is Amsterdam’s civic ledger only — after [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks), before London, Law, and the [assignats](/history/banks-paper/assignats). It is not Law’s **1720**, not the **1790s** land paper, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
     ],
   },
 ];
@@ -938,8 +938,8 @@ const england: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The Bank of England — chartered in **1694** — is a private corporation with a public job: lend to the Crown in the Nine Years’ War, and issue notes. Subscribers put up about **£1.2 million** as a war loan. The paper that came back was a circulating promise to pay, not a city giro balance. This is not a copy of Amsterdam.",
-      "The Bank of England was a war-finance charter with a note issue attached — not a copy of Amsterdam’s civic deposit table. It follows the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) on the banks-and-paper path: mixed coin in and giro settlement there; here, a private corporation lending to the Crown and issuing notes.",
+      "In **February 1797**, the Bank of England stopped paying gold for its notes. An Order in Council closed the window; the Restriction Act made the suspension statute. The notes stayed in London’s tills. The pound kept its name. Holders could no longer test that name in coin at Threadneedle Street. Gold went to a premium against paper. That wartime stop is England’s own cycle — not Amsterdam’s giro table, not Law’s **1720**, and not the assignats.",
+      "The machine that could close a window had been built for war a century earlier. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend about **£1.2 million** to the Crown and to issue notes. It follows the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) on the banks-and-paper path: mixed coin and giro settlement there; here, a war loan with circulating paper attached.",
     ],
   },
   {
@@ -996,11 +996,11 @@ const england: Section[] = [
     ],
   },
   {
-    heading: "Why the war bank matters",
+    heading: "War finance with a note attached",
     paragraphs: [
       "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. Later machines in this chapter do not copy London. They use the habit it taught: a great state’s daily money can be a bank’s paper.",
       "Keep the disasters on their own dates. The next dated article is [John Law and the Mississippi Bubble](/history/banks-paper/john-law): a **1720** note-and-share System, not an English restriction. Assignats are **1789–1796**. Germany’s mark in **1923** is a later parallel in another chapter.",
-      "This article’s place on the [banks and paper](/history/banks-paper) path is the war-finance note bank. The previous article is the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam). Then Law, then the assignats. This page is London’s war-finance charter only — not Law’s **1720**, not the **1790s** assignats, and not Germany’s **1923** mark.",
+      "This page is London’s war-finance charter only — after the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), before Law and the [assignats](/history/banks-paper/assignats). It is not Law’s **1720**, not the **1790s** land paper, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
     ],
   },
 ];
