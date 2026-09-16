@@ -809,8 +809,8 @@ const warehouses: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. A goldsmith, a mint, or a private banker writes that the weight is there. The holder can return and collect the same coin or bullion. Banking, on this site, starts when that paper pays a debt without the metal leaving the vault.",
-      "This article is the turning point between a ticket and a note. Later articles on [banks and paper](/history/banks-paper) — Amsterdam, the Bank of England, John Law, assignats — depend on that handoff. They are not this article, and they are not one another.",
+      "In **1640**, Charles I seized merchants’ bullion stored in the Tower mint. The Crown needed cash for war. Depositors who thought a royal warehouse was safe learned that a sovereign can close a window. After the Restoration, London’s custom shifted toward goldsmiths — private keepers whose running-cash notes could be endorsed onward while the metal stayed put.",
+      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking, on this site, starts when that paper pays a debt without the metal leaving the vault. Later articles on [banks and paper](/history/banks-paper) — Amsterdam, the Bank of England, [John Law](/history/banks-paper/john-law), [assignats](/history/banks-paper/assignats) — depend on that handoff. They are not this article, and they are not one another.",
     ],
   },
   {
@@ -1126,10 +1126,10 @@ const whyMarkets: Section[] = [
 
 const lydia: Section[] = [
   {
-    heading: "A stamp on metal already money",
+    heading: "",
     paragraphs: [
-      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the **seventh and sixth centuries BCE**. Early pieces were electrum — a natural or mixed gold–silver alloy — carrying a punch and, later, a recognisable type. Croesus is the royal name later attached to separating gold and silver issues. The invention is not the ore. It is the stamp.",
-      "Traders already settled in metal by weight — the selection told on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Lydia cuts the cost of verifying that metal in a market of strangers. It does not invent monetary gold and silver. It invents a cheaper check.",
+      "In a market of strangers in western Anatolia, a lump of electrum still invited an argument at the scale. Then a punch — later a recognisable type — let a buyer check the king’s mark instead of every grain. Lydia, in the **seventh and sixth centuries BCE**, is the conventional starting point for struck coinage. Croesus is the royal name later attached to separating gold and silver issues. The invention is not the ore. It is the stamp.",
+      "Traders already settled in metal by weight — the selection told on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Lydia cuts the cost of verifying that metal. It does not invent monetary gold and silver. It invents a cheaper check.",
     ],
   },
   {
@@ -1187,9 +1187,9 @@ const lydia: Section[] = [
 
 const greece: Section[] = [
   {
-    heading: "Silver as a Mediterranean language",
+    heading: "",
     paragraphs: [
-      "Greek city-states turned mines and mints into a commercial network. Athens’ **Laurion** silver and the owl **tetradrachm** are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets and public life.",
+      "A stranger in an Aegean port could accept a known Athenian owl faster than anonymous bullion. Greek city-states turned mines and mints into a commercial network. Athens’ **Laurion** silver and the owl **tetradrachm** are the familiar face: a recognised weight of silver that could move across the sea without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets and public life.",
       "The stamp already exists — [Lydia and the first coins](/history/ancient/lydia-first-coins) is that punch. Greece shows what a silver standard looks like when city mints and trade routes share a metal language. It is not a collector catalogue, and it is not a modern mining prospectus.",
     ],
   },
@@ -1250,9 +1250,9 @@ const greece: Section[] = [
 
 const rome: Section[] = [
   {
-    heading: "Two metals, one state",
+    heading: "",
     paragraphs: [
-      "Rome ran gold and silver together: the **aureus** and the **denarius** as the famous pair, with bronze for small change. When the mint’s legal relation and the market’s metal prices drifted, the legally overvalued metal tended to stay in the till and the other tended to leave. Debasement of the silver coin was gradual, then obvious. The third-century crisis made the coinage a fiscal instrument. When spending outruns metal, the coin is lightened.",
+      "By the worst years of the third century, many “silver” coins were bronze cores with a wash that still wore a familiar face. Rome had run gold and silver together — the **aureus** and the **denarius** as the famous pair, with bronze for small change. Debasement of the silver coin was gradual, then obvious. When spending outran metal, the mint lightened the piece. The coinage became a fiscal instrument.",
       "The lesson is fiscal, not a moral sermon about decadence, and not a pitch to hold bullion. It follows the silver network of [Greece: silver and trade](/history/ancient/greece-silver-trade). It precedes [the solidus](/history/ancient/solidus-continuity), a gold unit later defended by weight. A much later American rhyme for mint-ratio arithmetic sits at [early U.S. coinage](/history/america/early-us-coinage); keep the centuries labeled.",
     ],
   },
@@ -1311,19 +1311,19 @@ const rome: Section[] = [
 
 const solidus: Section[] = [
   {
-    heading: "A gold coin that keeps its weight",
+    heading: "",
     paragraphs: [
-      "Constantine’s **solidus**, in the early **fourth century**, was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine **nomisma**. Continuity of weight is the story, not a romance of Rome and not a sequel about paper.",
+      "After silver had been washed thin, pay tables and tax assessments still needed a piece strangers would trust overnight. Constantine’s **solidus**, in the early **fourth century**, was a gold coin of tightly held weight and fineness — roughly **1/72 of a Roman pound**, about **4.5 grams** in the classic account. It outlasted the western empire as the Byzantine **nomisma**. Continuity of weight is the story, not a romance of Rome and not a sequel about paper.",
       "It follows [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus), where silver was lightened under fiscal pressure. The solidus is the contrasting hinge: a gold unit defended as a standard for centuries. It is not the [Nixon gold-window close](/history/20th-century/bretton-woods-nixon-1971), and it is not the birth of the warehouse receipt.",
     ],
   },
   {
     heading: "What Constantine changed",
     paragraphs: [
-      "In the 310s Constantine’s minting settled on a gold solidus at roughly **1/72 of a Roman pound** — about **4.5 grams** of gold in the classic account — struck at high purity. Earlier tetrarchic gold experiments existed; Constantine’s solidus is the type that stuck as the empire’s premier gold unit.",
+      "In the 310s Constantine’s minting settled on that gold solidus. Earlier tetrarchic gold experiments existed; Constantine’s type is the one that stuck as the empire’s premier gold unit.",
       "Gold had already been the metal of large payments when silver tokenised. The solidus made that hierarchy explicit and durable: accounts, taxes, and elite payments could reference a coin whose metal content was meant to be trusted. Bronze and reformed base issues still handled small change under other names.",
       "The political context is imperial consolidation after civil war. A stable gold unit supported a state that collected and spent across a huge territory. The documentary claim is monetary technique, not hagiography of Constantine.",
-      "Pay tables and tax assessments that could name a reliable gold piece reduced the chaos left by silver that no longer meant what its type claimed. That administrative usefulness is why the solidus outlived slogans about restoration and became the empire’s reference gold coin for long stretches.",
+      "Pay tables that could name a reliable gold piece reduced the chaos left by silver that no longer meant what its type claimed. That administrative usefulness is why the solidus outlived slogans about restoration and became the empire’s reference gold coin for long stretches.",
     ],
   },
   {
@@ -1374,10 +1374,10 @@ const solidus: Section[] = [
 
 const earlyUs: Section[] = [
   {
-    heading: "A republic that named both metals",
+    heading: "",
     paragraphs: [
-      "The Coinage Act of **1792** wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar was a unit that could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
-      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream. Start here for the arithmetic that made those fights possible.",
+      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
+      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
     ],
   },
   {
@@ -1424,10 +1424,10 @@ const earlyUs: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "The statute, not a pitch",
     paragraphs: [
-      "This page is not a collector guide, not a bullion pitch, and not a price target for either metal. It is the statute that named both metals and a ratio — and the market arithmetic that decided which metal stayed.",
-      "Return to [America & gold/silver politics](/history/america). Next monetary fight in this chapter: [Jackson and the Bank](/history/america/jackson-and-the-bank). The silver question’s loud American event is the [Crime of 1873](/history/america/crime-of-1873). For the coin that shaped the dollar: [piece of eight](/history/silver/piece-of-eight).",
+      "This page stays with the Coinage Act of **1792**, the Spanish dollar habit behind it, and the **1834** ratio correction — documentary mint arithmetic, not a collector guide and not a price target for either metal. The market decided which metal stayed; the statute only named the bridge.",
+      "Next in this chapter: [Jackson and the Bank](/history/america/jackson-and-the-bank). The silver question’s loud American event is the [Crime of 1873](/history/america/crime-of-1873). For the coin that shaped the dollar: [piece of eight](/history/silver/piece-of-eight). The America overview sits under [America & gold/silver politics](/history/america).",
     ],
   },
 ];
@@ -1617,9 +1617,9 @@ const crime1873: Section[] = [
 
 const roadBack: Section[] = [
   {
-    heading: "Resumption, then a gold statute",
+    heading: "",
     paragraphs: [
-      "After greenbacks came a political and legal path back toward gold payments. Specie payments resumed on **1 January 1879**: United States Notes could again be treated as claims on gold at par in practice. The **Gold Standard Act of 1900** then defined the dollar in gold in statute. The United States entered the twentieth century as a gold-standard country in law.",
+      "On **1 January 1879**, the United States resumed specie payments: United States Notes could again be treated as claims on gold at par in practice. The wartime greenback premium had closed. The **Gold Standard Act of 1900** then defined the dollar in gold in statute — **25.8 grains** of gold nine-tenths fine. The country entered the twentieth century as a gold-standard country in law.",
       "After greenbacks, Congress and the Treasury spent a generation restoring gold payments. The silver fight of [1873](/history/america/crime-of-1873) and the war paper of [1862–79](/history/america/greenbacks-civil-war) sit behind resumption. The next American liquidity crisis — and the Fed — open in the twentieth-century chapter with the [Panic of 1907](/history/20th-century/panic-1907-fed). Keep 1913 and 1971 as labeled forward links only.",
     ],
   },
@@ -1669,10 +1669,10 @@ const roadBack: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "Gold payments restored, then the handoff",
     paragraphs: [
-      "This page is not a recommendation to hold gold, not a convertibility target, and not a full history of the classical gold standard worldwide. It is the American road from greenback resumption to the 1900 gold statute — then a clean handoff to 1907.",
-      "Return to [America & gold/silver politics](/history/america). Previous silver article: [Crime of 1873](/history/america/crime-of-1873). War paper: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Forward: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed).",
+      "This page stays with the American road from greenback resumption to the **1900** gold statute — then a clean handoff to 1907. It is not a recommendation to hold gold, not a convertibility target, and not a full history of the classical gold standard worldwide.",
+      "Previous silver article: [Crime of 1873](/history/america/crime-of-1873). War paper: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Forward: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed). The chapter overview sits under [America & gold/silver politics](/history/america).",
     ],
   },
 ];
@@ -1924,10 +1924,10 @@ const potosi: Section[] = [
 
 const silverIndustry: Section[] = [
   {
-    heading: "Two jobs at once",
+    heading: "",
     paragraphs: [
-      "Silver is still money in memory: coins, bars, a hedge people name in the same breath as gold. It is also an industrial input — photography for a long twentieth century, then electronics, then photovoltaics. Those two jobs pull the metal in different directions. This page names the split. It does not forecast which job wins.",
-      "Return to [silver in history](/history/silver). Monetary narrative articles in this chapter are [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), and [Silver Thursday](/history/silver/silver-thursday). Country rankings of bar-and-coin offtake live under [physical silver demand by country](/markets/physical-silver-demand-by-country) — a markets fact page, not this history article.",
+      "A vault ounce and a paste ounce can print the same chemical symbol and still answer different questions. Silver is still money in memory: coins, bars, a hedge people name in the same breath as gold. It is also an industrial input — photography for a long twentieth century, then electronics, then photovoltaics. Those two jobs pull the metal in different directions. This page names the split. It does not forecast which job wins.",
+      "Monetary narrative articles in this chapter are [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), and [Silver Thursday](/history/silver/silver-thursday). Country rankings of bar-and-coin offtake live under [physical silver demand by country](/markets/physical-silver-demand-by-country) — a markets fact page, not this history article. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1955,7 +1955,7 @@ const silverIndustry: Section[] = [
     ],
   },
   {
-    heading: "How to read the split",
+    heading: "Which series the headline means",
     paragraphs: [
       "When a headline says “silver demand,” ask which series: coin-and-bar investment, jewelry, industrial fabrication, or official-sector lines. The [physical silver demand by country](/markets/physical-silver-demand-by-country) page explains the investment ranking. The [gold–silver ratio](/markets/gold-silver-ratio) page explains a dated price quotient. Neither page is a history of Potosí or of 1980.",
       "The documentary fact is the dual role: silver kept a monetary identity while acquiring industrial identities. Practice — bars, coins, premiums — lives under [gold and silver in practice](/gold-silver). Mixing a fabrication survey with a how-to produces a pitch. Keeping the label produces a claim you can check.",
