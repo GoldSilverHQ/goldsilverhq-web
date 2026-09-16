@@ -36,6 +36,7 @@ describe("branded OG share cards", () => {
     assert.equal(ogImagePathForRoute("/desk"), "");
     assert.equal(ogImagePathForRoute("/gold-silver"), "/og/cards/gold-silver.jpg");
     assert.equal(ogImagePathForRoute("/gold-silver/bars-vs-coins"), "/og/cards/gold-silver-bars-vs-coins.jpg");
+    assert.equal(ogImagePathForRoute("/gold-silver/premium-over-spot"), "");
     assert.equal(ogImagePathForRoute("/gold-silver/storage"), "");
     assert.equal(ogImagePathForRouteOrDefault("/desk"), "/og.jpg");
     assert.match(

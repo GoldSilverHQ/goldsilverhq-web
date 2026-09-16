@@ -671,16 +671,50 @@ const barsVsCoins: Section[] = [
 
 const premiumOverSpot: Section[] = [
   {
-    heading: "What premium is",
+    heading: "",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The product in hand is fabricated, shipped, insured, and sold by someone who must buy it back later. Premium is the difference. It is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market.",
-      "A coin can carry a large premium and still be a clean product. A bar can be near spot and still be hard to resell. Compare it to the [bars vs coins](/gold-silver/bars-vs-coins) trade-off, not to a morality tale.",
+      "A dealing screen prints a price for an ounce that no one has to ship. The object on a counter was poured or struck, branded, insured, and offered by a desk that must later bid for it. The gap is the premium over spot — the price of form, brand, mint, and liquidity. It is a documentary measure of that markup. It is not a shopping tip, and it is not a forecast of which premiums are cheap.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names premium as one handling fact among form, storage, authenticity, and starting size. These paragraphs stay on that fact. They do not rank a product.",
     ],
   },
   {
-    heading: "Bid, not only ask",
+    heading: "What the premium measures",
     paragraphs: [
-      "The number that matters later is the dealer’s buy price — the bid — not only what you paid. A thin product with a fat ask and a poor bid is expensive twice. Ask what they will pay today for the same item, before you care about the story on the reverse.",
+      "Spot is a reference print for a paper ounce. In the gold and silver trade the usual references are the London Bullion Market Association prices — the LBMA Gold Price and the LBMA Silver Price — and the nearby futures prints that move with them. Those numbers describe unallocated metal of a published specification. They do not describe a one-ounce coin in a flip, or a cast bar in a retail safe.",
+      "The dealer’s ask is the price of a specific object: a named form, a named weight, a named stamp. Subtract the spot reference from that ask and the remainder is the premium. Both sides of the comparison can be .999 or .9999 fine. The premium measures the work and the market around the ounce, not a second chemistry.",
+      "The later number is the bid: what a desk will pay for that same object today. An ask far above spot can still be a clean quote for a common coin. A bid close to spot can still be a poor exit if the object is awkward to name. The spread between ask and bid is part of the physical market. Reading only the ask is reading only half the tape.",
+    ],
+  },
+  {
+    heading: "Why a premium exists",
+    paragraphs: [
+      "Fabrication is the first cost. Refined metal must be poured or struck into a countable piece, stamped with weight and fineness, and — above a certain size — given a serial. Dies, molds, inspection, and assay do not disappear because the screen already has a number. A large bar spreads that work. A small piece concentrates it.",
+      "Distribution is the second. The object has to leave a mint, sit in insured transit, and arrive at a desk that will still be there when someone wants the same stamp back. Freight, insurance, and capital tied up in transit are not in the LBMA print. They are in the ask.",
+      "Inventory is the third. A dealer who shows a coin or a bar has already paid for it, or borrowed to hold it, and must carry the metal through a quiet week. The bid–ask is how that book is funded. A wide ask with a thin bid can mean the desk does not want more of that stamp. A tight pair can mean the stamp is easy to turn. Neither reading is a tip.",
+      "Recognition is the fourth. A stamp a stranger can name without a laboratory is easier to bid for. A government mint mark, a well-known refiner, a common weight — those facts reduce the next counterparty’s checking cost. Brand and mint are part of liquidity: how quickly the object can change hands without a melt. Liquidity has a price. The premium is where that price often shows up.",
+    ],
+  },
+  {
+    heading: "Form and size",
+    paragraphs: [
+      "Form and size change the gap because they change how much work sits on each ounce and how easy the object is to name later. A wholesale bar can print a smaller premium per ounce because fabrication and assay were spread. A common bullion coin can print a larger one because more work sat on a single ounce and because the design is already in the public vocabulary. Small minted bars sit between those poles. The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This page only needs the price consequence: the premium moves with the form.",
+      "Silver often shows a larger percentage gap than gold for the same reason of scale. Striking or pouring a one-ounce silver piece costs labor that is a bigger share of a cheaper ounce. That is arithmetic of fabrication, not a verdict that silver is dear or gold is cheap.",
+      "Premiums also move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can tighten when many are offered and widen when retail stock is thin. A large bar can sit near the London print and still be awkward if the only later buyer wants a melt or a brand they do not know. Those moves describe supply of objects, not a signal that the metal itself has become a bargain.",
+    ],
+  },
+  {
+    heading: "What the premium is not",
+    paragraphs: [
+      "The premium is not a measure of whether gold or silver is fairly valued. Spot already is a market print for the paper ounce. Adding fabrication and a dealer’s book does not produce a second, truer price of the metal. It produces the price of a particular object. Treating a low premium as proof that metal is cheap, or a high premium as proof that metal is dear, confuses the object with the ounce.",
+      "The premium is not a timing tip. A narrow gap does not say it is time to acquire metal. A wide gap does not say it is time to wait. Those sentences would be advice. Premiums can be wide when objects are scarce at retail and tight when they are plentiful. That is inventory and mint runs — not a forecast of the next print, and not a rule for when a holding is cheap.",
+      "The premium is not a morality tale about dealers, and not a ranking of brands. A large markup can be the ordinary cost of a small, well-known coin. A small markup can sit on a bar that is hard to move. Neither fact picks a winner. Neither fact names a shop. Compare the gap to the form and to the later bid — not to a story about purity, and not to a shopping list.",
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "The premium over spot measures the markup of an object above a London or screen reference: form, brand, mint, and the liquidity of a physical book. It does not measure fair value of the metal. It does not say which gap is cheap.",
+      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the object rather than the gap, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
     ],
   },
 ];
