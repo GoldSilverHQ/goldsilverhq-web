@@ -3,7 +3,8 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
 
 /**
  * Thick topical-map URLs only (Phase-1 discipline). Thin stubs stay off the
- * sitemap (omitted, not noindexed): Practice spokes, Sell, and short disclaimers.
+ * sitemap (omitted, not noindexed): remaining Practice spokes, Sell, and short
+ * disclaimers. `/gold-silver` and `/gold-silver/bars-vs-coins` are listed.
  * Plain ESM so OG card scripts and the Grok head injector can share it.
  */
 export const PHASE1_SITEMAP_PATHS = [
@@ -44,6 +45,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/sound-money/inflation-purchasing-power",
   "/sound-money/backed-money",
   "/gold-silver",
+  "/gold-silver/bars-vs-coins",
   "/markets",
   "/markets/official-gold-book-value",
   "/markets/central-bank-gold-reserves",

@@ -15,7 +15,7 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
   });
 
-  it("lists only the forty-two thick www URLs", () => {
+  it("lists only the forty-three thick www URLs", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
       "/history/ancient",
@@ -54,6 +54,7 @@ describe("phase-1 robots and sitemap", () => {
       "/sound-money/inflation-purchasing-power",
       "/sound-money/backed-money",
       "/gold-silver",
+      "/gold-silver/bars-vs-coins",
       "/markets",
       "/markets/official-gold-book-value",
       "/markets/central-bank-gold-reserves",
@@ -67,14 +68,17 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 42);
+    assert.equal(locs.length, 43);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
+    assert.match(xml, /\/gold-silver\/bars-vs-coins/);
     assert.doesNotMatch(
       xml,
-      /\/gold-silver\/|information-not-advice|comex|physical-by-country|\/maps/,
+      /\/gold-silver\/(?!bars-vs-coins)|information-not-advice|comex|physical-by-country|\/maps/,
     );
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/maps" as (typeof PHASE1_SITEMAP_PATHS)[number]));
   });

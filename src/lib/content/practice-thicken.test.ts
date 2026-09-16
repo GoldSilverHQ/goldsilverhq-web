@@ -89,7 +89,7 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
     assert.doesNotMatch(mapSrc, /slug:\s*"(?!gold-silver-ratio)gold-silver-[\w-]+"/);
   });
 
-  it("keeps a two-link causal ledger and lists only the hub on the sitemap", () => {
+  it("keeps a two-link causal ledger and lists only the hub plus bars-vs-coins on the sitemap", () => {
     assert.deepEqual(
       practiceHub.related.map((r) => r.href),
       ["/sound-money", "/history/ancient/why-markets-chose-gold-silver"],
@@ -109,13 +109,19 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+    assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
+    assert.doesNotMatch(
+      sitemapSrc,
+      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+    );
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
   });
 });
 
-describe("practice / bars-vs-coins thicken (no new URLs, spoke off sitemap)", () => {
+describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () => {
   it("thickens bars-vs-coins to documentary depth", () => {
     const body = getBody("gold-silver", "bars-vs-coins");
     assert.ok(body, "missing body for gold-silver/bars-vs-coins");
@@ -147,7 +153,7 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke off sitemap)", ()
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
   });
 
-  it("keeps a two-link causal ledger and leaves the spoke off the sitemap", () => {
+  it("keeps a two-link causal ledger and lists the spoke on the sitemap", () => {
     const page = getPractice("bars-vs-coins");
     assert.ok(page, "missing bars-vs-coins in map.ts");
     assert.deepEqual(
@@ -166,10 +172,16 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke off sitemap)", ()
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver\/bars-vs-coins/);
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver\//);
+    assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
+    assert.doesNotMatch(
+      sitemapSrc,
+      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+    );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
   });
 });
