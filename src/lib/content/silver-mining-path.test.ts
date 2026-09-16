@@ -97,3 +97,4 @@ describe("silver-mining intent path (existing URLs only)", () => {
     assert.match(desk, /hard-money-vs-fiat/);
   });
 });
+
