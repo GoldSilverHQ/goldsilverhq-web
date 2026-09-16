@@ -88,6 +88,21 @@ export function HomeDashboard() {
       <div className="mt-3">
         <MinePaceTicker />
       </div>
+      <p className="mt-3 max-w-3xl text-sm text-muted">
+        Mine supply is ounces leaving the ground — not a stock tip. Start with the{" "}
+        <Link to="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
+          mining vs market ratio
+        </Link>
+        , open{" "}
+        <Link to="/desk" className="text-gold hover:text-gold-soft">
+          Stocks &amp; flows on the desk
+        </Link>
+        , or the{" "}
+        <Link to="/markets" className="text-gold hover:text-gold-soft">
+          markets
+        </Link>{" "}
+        hub.
+      </p>
 
       <section className="mt-3 grid gap-3 sm:grid-cols-2">
         <FaceTile

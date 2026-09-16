@@ -63,7 +63,8 @@ const DESK_TABS: {
   {
     id: "stocks",
     label: "Stocks & flows",
-    blurb: "Above-ground metal, mine output, and who holds what.",
+    blurb:
+      "Above-ground metal, mine output, and who holds what. Mine supply is ounces leaving the ground — a geology and survey clock, not a miner tip or a fair-value claim.",
   },
   {
     id: "money",
@@ -455,6 +456,25 @@ export function FullDesk() {
                 live={wgcShare(WGC_STOCK.otcT + WGC_STOCK.otherT).toFixed(0)}
               />
             </DeskBoard>
+            <p className="mt-6 max-w-2xl text-sm text-muted">
+              Mine output and visible cover are survey clocks, not equity tips. Read the{" "}
+              <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
+                mining vs market ratio
+              </a>
+              ,{" "}
+              <a href="/markets/physical-silver-demand-by-country" className="text-gold hover:text-gold-soft">
+                physical silver demand by country
+              </a>
+              ,{" "}
+              <a href="/history/silver/monetary-and-industry" className="text-gold hover:text-gold-soft">
+                silver’s monetary and industrial roles
+              </a>
+              , or{" "}
+              <a href="/sound-money/hard-money-vs-fiat" className="text-gold hover:text-gold-soft">
+                hard money vs fiat
+              </a>
+              .
+            </p>
           </>
         ) : null}
 
