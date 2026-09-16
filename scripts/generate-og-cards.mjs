@@ -22,6 +22,7 @@ import {
   ogImagePathForRoute,
 } from "../src/lib/seo/phase1-sitemap-paths.mjs";
 import { phase1SharePages, sharePageForPath } from "../src/lib/seo/og-cards.ts";
+import { articleHeroOgOverridePaths } from "../src/lib/content/article-media.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -214,11 +215,25 @@ async function main() {
   const logoHref = pathToFileURL(logoTmp).href;
 
   const only = process.argv.slice(2).filter((arg) => arg.startsWith("/"));
-  const pages = phase1SharePages().filter((page) => only.length === 0 || only.includes(page.path));
+  // Custom article heroes (illustration = OG) must not be overwritten by branded text cards.
+  const heroOverrides = new Set(articleHeroOgOverridePaths());
+  const forceHero = process.env.OG_FORCE_HERO === "1";
+  const pages = phase1SharePages().filter((page) => {
+    if (only.length && !only.includes(page.path)) return false;
+    if (!forceHero && only.length === 0 && heroOverrides.has(page.path)) return false;
+    if (!forceHero && only.includes(page.path) && heroOverrides.has(page.path)) return false;
+    return true;
+  });
+  const skippedHeroes =
+    only.length === 0 && !forceHero
+      ? [...heroOverrides].filter((p) => PHASE1_SITEMAP_PATHS.includes(p))
+      : [];
   const defaultPage = sharePageForPath("/");
   if (!defaultPage) throw new Error("Missing default share page for /");
-  if (only.length === 0 && pages.length !== PHASE1_SITEMAP_PATHS.length) {
-    throw new Error(`Expected ${PHASE1_SITEMAP_PATHS.length} cards, got ${pages.length}`);
+  if (only.length === 0 && pages.length + skippedHeroes.length !== PHASE1_SITEMAP_PATHS.length) {
+    throw new Error(
+      `Expected ${PHASE1_SITEMAP_PATHS.length} cards, got ${pages.length} (+ ${skippedHeroes.length} hero overrides)`,
+    );
   }
 
   const browser = await chromium.launch({
@@ -248,7 +263,14 @@ async function main() {
     execFileSync("rm", ["-rf", tmpDir]);
   }
 
-  process.stdout.write(`OK ${pages.length + 1} cards\n`);
+  for (const path of skippedHeroes) {
+    process.stdout.write(`skip hero-og ${path}\n`);
+  }
+  process.stdout.write(
+    `OK ${pages.length + (only.length === 0 ? 1 : 0)} cards` +
+      (skippedHeroes.length ? ` (${skippedHeroes.length} hero-og preserved)` : "") +
+      `\n`,
+  );
 }
 
 main().catch((err) => {

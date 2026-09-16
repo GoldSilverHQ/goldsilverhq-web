@@ -1,4 +1,5 @@
 import { getBody, type Section } from "@/lib/content/bodies";
+import type { ArticleHero as ArticleHeroMeta } from "@/lib/content/article-media";
 import { continueLinks, type Episode } from "@/lib/content/map";
 
 type ArticleFace = "display" | "sans";
@@ -159,6 +160,30 @@ export function RelatedLinks({
         ))}
       </ul>
     </div>
+  );
+}
+
+/** Titlebild for articles that also use the same artwork as the OG / X card. */
+export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
+  return (
+    <figure className="mt-8">
+      <img
+        src={hero.src}
+        alt={hero.alt}
+        width={1024}
+        height={850}
+        className="w-full border border-line object-cover object-center"
+        decoding="async"
+        fetchPriority="high"
+      />
+      {hero.caption || hero.credit ? (
+        <figcaption className="mt-3 max-w-prose text-sm leading-relaxed text-muted">
+          {hero.caption ? <span>{hero.caption}</span> : null}
+          {hero.caption && hero.credit ? <span> </span> : null}
+          {hero.credit ? <span>{hero.credit}</span> : null}
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }
 
