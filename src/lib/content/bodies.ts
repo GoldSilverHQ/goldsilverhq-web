@@ -2260,7 +2260,7 @@ const goldSilverRatio: Section[] = [
       "The market ratio is one price divided by another. A mining ratio is one mine-supply total divided by another. Both can be spoken as “ounces of silver per ounce of gold.” They are still two different quotients. The first uses two dated dollar prints. The second uses two mine-production books for a stated year. The hole in the ground does not set the tape, and the tape does not rewrite the mine book.",
       "This site’s homepage mining-ratio card prints about **7.1**. That figure is Silver Institute / Metals Focus World Silver Survey 2026 mine supply of **844.1 million ounces** (2026F) divided by this site’s World Gold Council–based 2026e gold mine pace of **3,708 tonnes**. USGS Mineral Commodity Summaries 2026 prints a same-book 2025e pair — **3,300 tonnes** of gold and **26,000 tonnes** of silver — about **7.9** ounces of silver per ounce of gold by mass. The USGS gold total sits below the World Gold Council mine book this site uses for the card, so the two official mine-supply quotients land near seven and near eight. Neither figure is a price.",
       "A dated market print sits far from that mine-supply neighborhood. On **10 September 2026**, COMEX December gold closed at **$4,364.50** and COMEX December silver at **$64.28**. Those two nearby futures share a session and a venue. Divide them and the market ratio is **67.9** — near **68**, with silver in the mid-sixties. Name the clock: COMEX December nearby closes, 10 September 2026. The next session’s pair can move a point without changing the definition.",
-      "Keep three labels on the table. A **mint ratio** is a legal number of silver units per gold unit — fifteen to one in the Coinage Act of 1792, later sixteen to one. A **mining ratio** is ounces mined per ounce mined in a survey year. A **market ratio** is gold’s dollar print divided by silver’s dollar print at a named pair of prices. The mint number is a statute story, told under [bimetallism](/history/silver/bimetallism). Mine supply is how much metal leaves the ground. The market number is the job of this page, under the [markets](/markets) hub. [Physical silver demand by country](/markets/physical-silver-demand-by-country) is the neighbor that counts identified bars and coins taken off the shelf — offtake, not holes in the ground, and not a price quotient.",
+      "Keep three labels on the table. A **mint ratio** is a legal number of silver units per gold unit — fifteen to one in the Coinage Act of 1792, later sixteen to one. A **mining ratio** is ounces mined per ounce mined in a survey year. A **market ratio** is gold’s dollar print divided by silver’s dollar print at a named pair of prices. The mint number is a statute story, told under [bimetallism](/history/silver/bimetallism). Mine supply is how much metal leaves the ground. The market number is the job of this page, under the [markets](/markets) hub. [Physical silver demand by country](/markets/physical-silver-demand-by-country) is the neighbor that counts identified bars and coins taken off the shelf — offtake, not holes in the ground, and not a price quotient. The same page also labels **2025** industrial fabrication as a factory table, so a solar-paste ounce is not mistaken for a bar.",
       "The gap between a mine-supply ratio near **7** and a market ratio near **68** is a fact about two different divisions. It is not a fair-value gap. It is not a mean that later tapes owe a return to. It does not say silver is behind, gold is ahead, or that either metal should catch up. Mine supply, industrial use, and monetary demand all affect the two prices. None of them is entitled to set the other quotient. The market ratio remains one dated pair of prints.",
     ],
   },
@@ -2322,7 +2322,7 @@ const goldSilverRatio: Section[] = [
   {
     heading: "How to read a snapshot",
     paragraphs: [
-      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) orients this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country).",
+      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. The [markets hub](/markets) orients this fact page. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country) — industrial fabrication is labeled on that same page, as a separate factory table.",
       "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient. The homepage mining-ratio card’s job is ounces mined per ounce mined. London vault stocks are a third contemporaneous clock — custody inventory, not a price and not a mine book. Practice’s job is bars, coins, and premiums. Mixing those jobs produces slogans. Keeping them apart produces a number you can check.",
       "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
       "If you want the older legal ratio — **bimetallism**, both metals legal at a fixed mint ratio — as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). Those are history episodes. They explain how a mint number or a concentrated position entered the record. They do not rewrite the definition on this page. A mint ratio is a law. A mining ratio is ounces mined. A market ratio is a price quotient. A vault ratio is ounces held in a named custody book. Keep the four labeled when you move between History, the homepage card, Markets, and the London print.",
@@ -2334,7 +2334,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure and a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand.",
+      "Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure, a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand, and — labeled separately — a 2025 industrial-fabrication table and a 2025 coins-and-medals mint table from World Silver Survey 2026.",
     ],
   },
   {
@@ -2348,7 +2348,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "What the ranking does not measure",
     paragraphs: [
-      "It does not measure industrial fabrication. In the same 2024 survey, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products. It is not a bar in a household drawer. A country that fabricates a lot of solar paste can be small on the investment table.",
+      "It does not measure industrial fabrication. In the same 2024 survey vintage this page uses for the investment ranking, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products. It is not a bar in a household drawer. A country that fabricates a lot of solar paste can be small on the investment table. World Silver Survey 2026’s **2025** industrial book — world **657.4 million ounces**, with its own country ranking — sits in a separate block below. It is a factory address, not a substitute for the investment ranking.",
       "It does not measure jewelry or silverware — about **208.7** and **54.2** million ounces in 2024. It does not measure official-sector silver, a rounding line of **1.5 million ounces** in that same world book, not a central-bank gold story.",
       "It does not measure exchange-traded products, futures, or options. Indian silver ETP holdings rose by about **25 million ounces** in 2024, to **38.6 million ounces** at year-end. That inflow is a vault-backed fund holding. It is not India’s **59.8 million ounces** of bar-and-coin investment. A futures position is a different instrument again. Paper and funds sit outside the country ranking.",
       "The ranking also does not measure whether silver is cheap, dear, behind gold, or due a return to an older ratio. A high U.S. line means U.S. buyers took more identified bars and coins that year. A falling German line means identified German offtake fell. That is the whole claim.",
@@ -2404,11 +2404,69 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
+    heading: "2025 industrial fabrication by country — a third table",
+    callout: {
+      label: "Industrial fabrication ≠ investment offtake",
+      paragraphs: [
+        "Industrial fabrication is a third World Silver Survey job. The 2024 ranking above is a buyer address: which national markets took identified bars and coins. The coins-and-medals block is a mint address: where silver was struck. Industrial demand is a factory address: where silver went into electrical and electronics, photovoltaics, brazing alloys and solders, and other industrial uses. China can sit first on the industrial table and remain small on the investment table. The United States can sit first on the investment table and second on the industrial table. Those are two jobs, not a disagreement. Do not read an industrial line as a substitute ranking, and do not treat any of the three tables as a country shopping list.",
+      ],
+    },
+    paragraphs: [
+      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints an **Industrial Demand by Country** table for calendar **2025**. World industrial fabrication in that series was **657.4 million ounces**, down 3 percent from the same book’s **679.0** for 2024. That is the first post-pandemic contraction in the industrial line after four years of growth. It is not this page’s 2024 country physical-investment total of **183.3**, and it is not the 2025 coins-and-medals fabrication total of **87.9**.",
+      "The five largest 2025 country lines in that industrial table sit below. Figures are million troy ounces. They are fabrication ounces consumed in products. They do not replace the 2024 investment ranking or the 2025 mint ranking.",
+    ],
+    table: {
+      caption:
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Industrial demand by country, calendar 2025. Million troy ounces. Factory address — not bar-and-coin offtake, and not coins-and-medals minting.",
+      headers: ["Country", "2025", "2024", "Y/Y"],
+      rows: [
+        ["China", "**282.9**", "275.4", "+3%"],
+        ["United States", "**125.5**", "126.9", "−1%"],
+        ["Japan", "**68.8**", "94.8", "−27%"],
+        ["Germany", "**31.0**", "31.6", "−2%"],
+        ["United Kingdom", "**21.6**", "20.5", "+5%"],
+        ["World industrial", "**657.4**", "679.0", "−3%"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "China’s **282.9** is about **43 percent** of the 2025 world industrial total — 282.9 ÷ 657.4. The same survey vintage this page uses for physical investment still prints China at **5.5** in 2024. That is the labeling point. East Asia as a whole printed **384.6** in 2025, down 4 percent; the survey attributes most of that regional loss to photovoltaic silver, where East Asian powder makers dominate. China’s own industrial line still rose 3 percent. Electrical and electronics inside China rose 5 percent, to **221.8 million ounces**.",
+      "Japanese industrial fabrication fell **27 percent**, to **68.8**. The survey names fierce competition from Chinese silver-powder manufacturers as the main driver of that Japanese drop. Japan’s electrical-and-electronics line in the same book fell **32 percent**, to **53.7**. The United States printed **125.5**, down 1 percent from **126.9**. Germany printed **31.0**, down 2 percent. The United Kingdom printed **21.6**, up 5 percent. Those are factory facts. They do not rewrite the U.S. or Indian investment lines above.",
+    ],
+  },
+  {
+    heading: "Where 2025 industrial ounces went",
+    paragraphs: [
+      "The same World Silver Survey 2026 book splits the **657.4 million ounce** industrial total by sector. Electrical and electronics printed **449.5 million ounces**, of which photovoltaics were **186.6**. Subtract those two printed cells and electrical and electronics excluding photovoltaics is **262.9**. Brazing alloys and solders printed **50.5**. Other industrial printed **157.4**. Photography is a separate demand line in that book — **24.2 million ounces** in 2025 — and is not inside the 657.4 industrial total.",
+      "Rounded shares of 657.4 sit in the table below. Photovoltaics are large. They are not the whole factory floor. Electrical and electronics excluding solar remain the single largest industrial slice.",
+    ],
+    table: {
+      caption:
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Breakdown of industrial demand by sector, calendar 2025. Shares are the printed million-ounce cells divided by 657.4, then rounded. Photovoltaics sit inside the electrical-and-electronics total in the survey; the ex-PV row is that total minus the photovoltaics line.",
+      headers: ["Industrial slice", "Million ounces", "Share of 657.4"],
+      rows: [
+        ["Electrical & electronics, excluding PV", "**262.9**", "**40%**"],
+        ["Photovoltaics", "**186.6**", "**28%**"],
+        ["Other industrial", "**157.4**", "**24%**"],
+        ["Brazing alloys & solders", "**50.5**", "**8%**"],
+        ["World industrial", "**657.4**", "**100%**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Against the same book’s 2024 cells, electrical and electronics fell 2 percent, photovoltaics fell 6 percent, other industrial fell 7 percent, and brazing alloys and solders rose 1 percent. The survey names photovoltaic thrifting and substitution, and a slower pace of ethylene-oxide catalyst additions, as the main industrial losses. Automotive and aerospace strength supported the small brazing gain. None of those sentences is a path for 2026.",
+    ],
+  },
+  {
     heading: "How to read a country line",
     paragraphs: [
-      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), or coins-and-medals fabrication (world **87.9** in 2025). Then read the country as a demand address or as a mint address. Do not swap the two. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices, and a dated London vault inventory, live on the [gold–silver ratio](/markets/gold-silver-ratio).",
+      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), coins-and-medals fabrication (world **87.9** in 2025), or industrial fabrication (world **657.4** in 2025). Then read the country as a demand address, a mint address, or a factory address. Do not swap the three. A mine-production ranking is a different list, and this site does not keep one here. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices, and a dated London vault inventory, live on the [gold–silver ratio](/markets/gold-silver-ratio).",
       "The [markets hub](/markets) orients this fact page. History’s job, when silver’s two roles need a narrative home, is [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
-      "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The ranking measures identified bar-and-coin offtake by country in a dated survey year. That is the claim, and that is the stop.",
+      "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The investment ranking measures identified bar-and-coin offtake by country in a dated survey year. The industrial table measures fabrication into products. Those are the claims, and that is the stop.",
     ],
   },
 ];
@@ -2594,13 +2652,13 @@ export const marketsHubBody: Section[] = [
     heading: "Four current facts",
     paragraphs: [
       "A **book value** is the dollar figure a government still writes into its books for gold — often a leftover legal rate, not the market price. A reserve line is how much gold a central bank reports holding. A ratio is one price divided by another at a named time. A country line is how much bar-and-coin silver buyers in that country took off the shelf in a survey year (**offtake** = that identified purchase volume).",
-      "[Official gold book value](/markets/official-gold-book-value) is the cleanest entry if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) is the entry if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and **2011** snapshots — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table.",
+      "[Official gold book value](/markets/official-gold-book-value) is the cleanest entry if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) is the entry if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and **2011** snapshots — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table, and labels a separate **2025** industrial-fabrication ranking from World Silver Survey 2026.",
     ],
     list: [
       "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus the market price; arithmetic on named year averages and peak prints.",
       "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in foreign-exchange reserves; official gold relative to GDP; vault preferences; dated official purchases.",
       "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; three clocks — market price, mine output, London vault stocks; 1980 and 2011 as named anchors.",
-      "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; what the ranking does not measure.",
+      "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; 2025 industrial fabrication as a separate factory table; what the ranking does not measure.",
     ],
   },
   {

@@ -1106,7 +1106,7 @@ export const marketPages: Episode[] = [
     slug: "physical-silver-demand-by-country",
     title: "What physical silver demand by country measures (and what it does not)",
     summary:
-      "Identified retail and investment bars and coins by country. A demand address, not a mine ranking. Mint fabrication is a different World Silver Survey table.",
+      "Identified retail and investment bars and coins by country. A demand address, not a mine ranking. Mint fabrication and industrial fabrication are different World Silver Survey tables.",
     status: "ready",
     paragraphs: [
       "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. They do not rank mines, factories, or paper claims.",
@@ -1122,6 +1122,7 @@ export const marketPages: Episode[] = [
         "silver bars and coins by country",
         "world silver survey physical investment",
         "silver coins and medals fabrication",
+        "industrial silver demand by country",
       ],
       demand: "mid",
       difficulty: "mid",

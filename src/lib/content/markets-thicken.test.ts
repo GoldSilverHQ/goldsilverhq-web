@@ -36,6 +36,90 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(text, /forecast|ebook|buy silver in India/i);
   });
 
+  it("adds dated WSS 2026 industrial fabrication without replacing the investment ranking", () => {
+    const body = getBody("markets", "physical-silver-demand-by-country");
+    assert.ok(body);
+
+    const investment = body.find((s) => s.heading === "2024 country snapshots");
+    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
+    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
+    assert.ok(investment, "2024 investment ranking must stay");
+    assert.ok(coins, "coins-and-medals mint table must stay");
+    assert.ok(industrial, "expected a separate 2025 industrial country block");
+    assert.ok(mix, "expected a 2025 industrial-mix block");
+    assert.ok(industrial.table);
+    assert.ok(mix.table);
+
+    const text = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const industrialTable = industrial.table.rows.flat().join("\n");
+    const mixTable = mix.table.rows.flat().join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+    const neighbor = getBody("markets", "gold-silver-ratio");
+    assert.ok(neighbor);
+    const neighborText = neighbor.flatMap((s) => s.paragraphs).join("\n");
+
+    assert.match(text, /United States 64\.9/);
+    assert.match(text, /India 59\.8/);
+    assert.match(text, /Fabrication countries ≠ investment offtake/);
+    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /India 18\.4/);
+    assert.match(text, /87\.9 million ounces/);
+    assert.match(text, /657\.4 million ounces/);
+    assert.match(industrialTable, /China/);
+    assert.match(industrialTable, /\*\*282\.9\*\*/);
+    assert.match(industrialTable, /United States/);
+    assert.match(industrialTable, /\*\*125\.5\*\*/);
+    assert.match(industrialTable, /Japan/);
+    assert.match(industrialTable, /\*\*68\.8\*\*/);
+    assert.match(industrialTable, /Germany/);
+    assert.match(industrialTable, /\*\*31\.0\*\*/);
+    assert.match(industrialTable, /United Kingdom/);
+    assert.match(industrialTable, /\*\*21\.6\*\*/);
+    assert.match(industrialTable, /\*\*657\.4\*\*/);
+    assert.match(mixTable, /\*\*262\.9\*\*/);
+    assert.match(mixTable, /\*\*40%\*\*/);
+    assert.match(mixTable, /\*\*186\.6\*\*/);
+    assert.match(mixTable, /\*\*28%\*\*/);
+    assert.match(mixTable, /\*\*157\.4\*\*/);
+    assert.match(mixTable, /\*\*24%\*\*/);
+    assert.match(mixTable, /\*\*50\.5\*\*/);
+    assert.match(mixTable, /\*\*8%\*\*/);
+    assert.match(text, /449\.5 million ounces/);
+    assert.match(text, /factory address/i);
+    assert.match(hubText, /2025.*industrial-fabrication/);
+    assert.match(neighborText, /industrial fabrication as a factory table/);
+    assert.doesNotMatch(text, /639\.6|forecast|ebook|Kauf|buy silver in India|price target/i);
+
+    const page = getMarket("physical-silver-demand-by-country");
+    assert.ok(page);
+    assert.equal(page.title, "What physical silver demand by country measures (and what it does not)");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/markets", "/markets/gold-silver-ratio"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/physical-silver-demand-by-country/);
+    assert.doesNotMatch(sitemapSrc, /industrial-silver|silver-fabrication-by-country/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/physical-silver-demand-by-country"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /industrial-silver|silver-fabrication/.test(path)));
+  });
+
   it("adds mining-vs-market on the gold–silver ratio page without new URLs", () => {
     const body = getBody("markets", "gold-silver-ratio");
     assert.ok(body);
