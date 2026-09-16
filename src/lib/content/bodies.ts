@@ -6,43 +6,60 @@ const johnLaw: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt. It is not the same episode as France’s later assignats, and it is not “France printed Weimar.”",
+      "On the rue Quincampoix in late **1719**, Paris priced a dream: Mississippi Company shares that multiplied while Banque Royale notes poured into the same crowd. Rentiers, servants, and foreign visitors pressed for subscriptions. Coin still mattered in the till. For a season, paper and equity felt like the same fortune.",
+      "John Law’s System fused a note-issuing bank with a rising colonial trading company under the Regency of Philippe d’Orléans. In **1719–1720** notes and shares inflated together. The bust of **1720** was a paper-and-shares collapse under a court seeking relief from war debt — not France’s later [assignats](/history/banks-paper/assignats), and not “France printed [Weimar](/history/20th-century/weimar-1923).”",
     ],
   },
   {
-    heading: "Who John Law was",
+    heading: "A Scot at the Regent’s table",
     paragraphs: [
-      "John Law (1671–1729) was a Scottish financier and monetary theorist. He argued that a well-managed paper currency, backed by sound assets and careful issue, could expand trade beyond the limits of scarce coin. After exile and travel on the Continent, he gained the ear of the French Regent, Philippe d’Orléans, in the years after Louis XIV’s death.",
-      "France faced heavy public debts from long wars. Tax revenues were strained. Coin was hoarded or exported when confidence slipped. Law offered a modern-sounding fix: a bank that issued notes, and a company that could absorb state debt while developing colonial trade, especially around the Mississippi basin and Louisiana.",
-      "Law wrote and spoke as a reformer of credit, not as a carnival promoter in the first telling. His early proposals stressed order, reserves, and trade. The historical record then shows how political need and market mania outran those restraints. He was not a cartoon printer of endless paper from day one. His System grew by stages—bank notes, company shares, debt conversion, and monopoly privileges—until the pieces locked together and then broke.",
+      "John Law (**1671–1729**) was a Scottish financier and monetary theorist. He argued that carefully issued paper, tied to sound assets and trade, could expand credit beyond scarce coin. After exile and years on the Continent, he gained the ear of the French Regent in the years after Louis XIV’s death.",
+      "France carried heavy public debts from long wars. Tax revenues strained. Coin was hoarded or exported when confidence slipped. Law offered a modern-sounding fix: a bank that issued notes, and a company that could absorb state debt while developing colonial trade around the Mississippi basin and Louisiana.",
+      "His early proposals stressed order, reserves, and commerce — a reform of credit, not a carnival from day one. Political need and market mania then outran those restraints. The System grew by stages — bank notes, company shares, debt conversion, monopoly privileges — until the pieces locked together and broke.",
     ],
   },
   {
-    heading: "The bank and the Mississippi Company",
+    heading: "Bank notes and company shares",
     paragraphs: [
-      "In 1716 Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
-      "Alongside the bank stood the company later known as the Mississippi Company—first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
-      "Bank and company became partners in one System. Notes supported share demand. Share enthusiasm supported confidence in notes. Offices, privileges, and propaganda tied the story of colonial wealth to the paper that funded it.",
-      "Keep the instruments distinct. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound—and plentiful notes made shares easier to bid up.",
+      "In **1716** Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
+      "Alongside the bank stood the company later known as the Mississippi Company — first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
+      "Keep the instruments distinct. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
     ],
   },
   {
-    heading: "How the Mississippi Bubble inflated",
+    heading: "How the bubble inflated",
     paragraphs: [
-      "Through 1719 the company’s privileges widened. Debt-conversion schemes pulled more rentiers into shares. Share prices rose with extraordinary speed. New issues and subscriptions absorbed paper wealth that had nowhere else to go under the Regent’s policy mix.",
-      "Note issue expanded as the System tried to keep credit easy and share markets firm. For a time, paper seemed to create prosperity. Luxury spending rose in Paris. Speculators crowded the rue Quincampoix. Foreign visitors described a city obsessed with subscriptions and price talk.",
-      "Metal moved the wrong way for a durable note system. Coin and bullion were drawn into the whirl, then increasingly driven out as people preferred to hold or export hard money while spending the paper. When confidence is high, notes displace coin in daily use. When confidence cracks, coin leaves circulation or leaves the country. The note becomes only a claim on a thinning reserve. Law’s System leaned on confidence longer than on metal.",
-      "The peak of Mississippi share mania sits in late 1719 and early 1720. Prices that had multiplied then struggled to find new buyers at the top. Attempts to manage the market—controls on coin, forced relations between notes and shares, and shifting decrees—signaled strain rather than mastery. Peak and bust belong to that narrow window: mania cresting around the turn into 1720, collapse unfolding across 1720 as policy patches failed.",
+      "Through **1719** the company’s privileges widened. Debt-conversion schemes pulled more rentiers into shares. Share prices rose with extraordinary speed. New issues and subscriptions absorbed paper wealth that had nowhere else to go under the Regent’s policy mix.",
+      "Note issue expanded as the System tried to keep credit easy and share markets firm. Luxury spending rose in Paris. Speculators crowded the rue Quincampoix. Foreign visitors described a city obsessed with subscriptions and price talk.",
+      "Metal moved the wrong way for a durable note system. Coin and bullion were drawn into the whirl, then driven out as people preferred to hold or export hard money while spending the paper. When confidence is high, notes displace coin in daily use. When confidence cracks, coin leaves circulation or leaves the country. The note becomes a claim on a thinning reserve. Law’s System leaned on confidence longer than on metal.",
+      "Peak mania sits in late **1719** and early **1720**. Prices that had multiplied then struggled to find new buyers. Controls on coin, forced relations between notes and shares, and shifting decrees signaled strain rather than mastery. Peak and bust belong to that narrow window.",
     ],
   },
   {
     heading: "The collapse of 1720",
     paragraphs: [
-      "In 1720 the System broke. Share prices fell from their peak. Bank notes lost credibility as convertibility and coin rules shifted under emergency decrees. Holders who could fled into metal and foreign exchange. Shops and markets relearned to distrust paper that had been mandatory or privileged only weeks before.",
-      "Law’s political protection evaporated as losses spread through the rentier class and the court. He left France. The Regency was left with ruined paper fortunes and a long memory of “paper systems.” Later French politics would invent new paper under new names. The 1720 scar remained part of public caution.",
-      "The bust was fast in market time. What had inflated as a joint note-and-share machine deflated as both legs failed together. The Banque Royale’s paper could not be defended once the company’s equity story died and coin fled.",
-      "Do not merge this episode with the French assignats of the 1790s. Assignats were revolutionary paper tied to confiscated church and émigré lands, issued decades later under a different regime and war finance. Do not merge it with Germany’s 1923 hyperinflation either. Weimar was a twentieth-century collapse of a national paper mark after war, reparations, and extreme monetization—one cautionary parallel among many, not the same event or the same century.",
-      "John Law’s 1720 leaves a narrower documentary lesson. Fusing a note-issuing bank with a rising equity story can inflate both until metal drains and confidence snaps. The Mississippi Bubble was paper-and-shares under Regency debt politics. It was not Weimar, and it was not the assignats.",
+      "In **1720** the System broke. Share prices fell from their peak. Bank notes lost credibility as convertibility and coin rules shifted under emergency decrees. Holders who could fled into metal and foreign exchange. Shops relearned to distrust paper that had been mandatory or privileged only weeks before.",
+      "Law’s political protection evaporated as losses spread through the rentier class and the court. He left France. The Regency was left with ruined paper fortunes and a long memory of “paper systems.” Later French politics would invent new paper under new names. The **1720** scar remained part of public caution.",
+      "What had inflated as a joint note-and-share machine deflated as both legs failed together. The Banque Royale’s paper could not be defended once the company’s equity story died and coin fled.",
+    ],
+  },
+  {
+    heading: "A short timeline",
+    paragraphs: ["Bank, company, mania, bust — in that order."],
+    list: [
+      "**1716:** Banque Générale founded; notes payable in coin under stated rules.",
+      "**1717–19:** Compagnie d’Occident / Mississippi privileges widen; debt conversion into shares.",
+      "**1718–19:** Banque Royale; note issue and share demand reinforce each other.",
+      "**Late 1719–early 1720:** Share mania peaks on the rue Quincampoix.",
+      "**1720:** Collapse — share crash, strained convertibility, flight into metal; Law leaves France.",
+      "**1790s (later chapter):** [Assignats](/history/banks-paper/assignats) — revolutionary land paper, not this System.",
+    ],
+  },
+  {
+    heading: "Paper and shares, not land and not Weimar",
+    paragraphs: [
+      "Do not merge this episode with the French [assignats](/history/banks-paper/assignats) of the **1790s**. Assignats were revolutionary paper tied to confiscated church and émigré lands, issued decades later under a different regime and war finance. Do not merge it with Germany’s **1923** hyperinflation either. [Weimar](/history/20th-century/weimar-1923) was a twentieth-century collapse of a national paper mark — one cautionary parallel among many, not the same event or the same century.",
+      "John Law’s **1720** leaves a narrower documentary lesson. Fusing a note-issuing bank with a rising equity story can inflate both until metal drains and confidence snaps. The Mississippi Bubble was paper-and-shares under Regency debt politics. It was not Weimar, and it was not the assignats. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
     ],
   },
 ];
@@ -254,14 +271,14 @@ const classicalGold: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The classical gold standard was a set of practices: convertibility, gold shipping, and interest rates that responded to reserve drains. The First World War suspended it. What came after was not the same system with a pause. It was a different architecture.",
-      "Before World War I, major currencies were convertible into gold at fixed rates in peacetime — the classical gold standard. This article follows the [Panic of 1907](/history/20th-century/panic-1907-fed): that page is a US liquidity crisis and a new central bank; this page is the peacetime gold order those years still sat inside, and the wartime break that ended it.",
+      "In the first days of August **1914**, as armies mobilized, the peacetime gold window closed across Europe. Britain’s Currency and Bank Notes Act of **6 August** put Treasury notes of one pound and ten shillings into daily use and made Bank of England notes legal tender more broadly. Gold exports were blocked or licensed. The mark, the franc, and other gold names remained on coins and accounts. The public could no longer test those names at the teller.",
+      "Before that summer, major currencies were convertible into gold at fixed rates in peacetime — the classical gold standard. This article follows the [Panic of 1907](/history/20th-century/panic-1907-fed): that page is a US liquidity crisis and a new central bank; this page is the peacetime gold order those years still sat inside, and the wartime break that ended it. What came after was not the same system with a pause. It was a different architecture.",
     ],
   },
   {
-    heading: "What the classical gold standard was",
+    heading: "Convertibility, mint price, and practice",
     paragraphs: [
-      "Before 1914 the international monetary system was a set of practices, not a single treaty. A currency on the classical gold standard was convertible into a defined weight of gold. Notes and deposits were claims that could, in ordinary times, be turned into coin or bullion at a published mint price. Gold could be imported and exported.",
+      "Before **1914** the international monetary system was a set of practices, not a single treaty. A currency on the classical gold standard was convertible into a defined weight of gold. Notes and deposits were claims that could, in ordinary times, be turned into coin or bullion at a published mint price. Gold could be imported and exported.",
       "Keep the instruments distinct. A **mint price** is the official gold definition of the unit. A **note** is a circulating promise to pay that gold. A **deposit** is a book claim that can be drawn as notes or coin. Convertibility is the ordinary test: the holder can still get metal at the window. Counterparties take the paper because they trust that window, not because a conference has declared the paper to be gold.",
       "Membership was practice, not a club card. Britain had been on gold, in the modern sense, since the early nineteenth century. Germany, France, and others joined as they defined their units in gold and opened the window. The United States did so after resumption and the Gold Standard Act of **1900**. The map is several national promises, mutually convertible because each promise pointed at the same metal.",
     ],
@@ -275,18 +292,17 @@ const classicalGold: Section[] = [
     ],
   },
   {
-    heading: "How it actually worked",
+    heading: "Rules of the game — and the real constraint",
     paragraphs: [
       "Textbooks later called this the “rules of the game”: lose gold, tighten; gain gold, ease. Real central banks did not always play that cleanly. They sterilised flows, used gold devices, and protected domestic credit when they could. The constraint still mattered. A bank that promised gold on demand could not expand without limit if people and foreigners were free to take the metal. Close the window, or block the ship, and the same note is wartime paper that still spends if the public will hold it.",
-      "The United States entered the century with a gold dollar and, after 1913, a new central bank — the sequel to the [Panic of 1907](/history/20th-century/panic-1907-fed). The classical system around that Fed was already older than the Fed. 1907 was a trust-banking liquidity failure. Metal still defined the unit. The break with convertibility came from war, not from 1907.",
+      "The United States entered the century with a gold dollar and, after **1913**, a new central bank — the sequel to the [Panic of 1907](/history/20th-century/panic-1907-fed). The classical system around that Fed was already older than the Fed. **1907** was a trust-banking liquidity failure. Metal still defined the unit. The break with convertibility came from war, not from **1907**.",
     ],
   },
   {
     heading: "Why 1914 ended it",
     paragraphs: [
       "The First World War made convertibility and free gold movement incompatible with war finance. Governments needed to spend faster than tax and genuine borrowing would allow. Gold exports were blocked or licensed. Notes were protected from internal drains. Stock exchanges closed. The peacetime machine assumed ships, open windows, and a public that would take paper because it could still test the paper.",
-      "Britain’s Currency and Bank Notes Act of **6 August 1914** is one legal marker. Treasury notes of one pound and ten shillings entered daily use. Bank of England notes were made legal tender more broadly. Similar suspensions ran across the belligerents that summer and autumn. The mark, the franc, and other gold names remained on coins and accounts. The public could no longer test those names at the window.",
-      "England’s Restriction in **1797** was a wartime stop of gold payout, with resumption in the **1820s**. 1914 is another wartime stop. What did not return after 1918 was the old machine: several centres, private convertibility, gold that moved when the points were hit.",
+      "Britain’s Currency and Bank Notes Act of **6 August 1914** is one legal marker. Similar suspensions ran across the belligerents that summer and autumn. England’s Restriction in **1797** was an earlier wartime stop of gold payout, with resumption in the **1820s**. **1914** is another wartime stop. What did not return after **1918** was the old machine: several centres, private convertibility, gold that moved when the points were hit.",
       "The United States, not yet in the war, stayed closer to gold than the European combatants. New York, not London, became the place dollars and gold accumulated. That does not mean the classical system survived. A standard that only some members still honour, while the rest fight on inconvertible paper, is no longer the pre-1914 order.",
     ],
   },
@@ -305,11 +321,11 @@ const classicalGold: Section[] = [
   {
     heading: "What came after was not a pause",
     paragraphs: [
-      "After 1918 many countries tried to “return to gold.” They reused the word. They did not restore the old machinery. Genoa asked members to hold gold-convertible currencies as reserves. That is a gold-*exchange* design: one or two convertible centres, and a ring of claims on those centres. It is not several windows with gold moving between them when the points are hit.",
-      "Britain’s 1925 return at the pre-war sterling–dollar parity reused a number. It did not rebuild the 1913 world. In **1931** Britain left gold again. Other interwar “gold standards” were pegs, exchange controls, and official gold — a different architecture wearing a familiar name.",
+      "After **1918** many countries tried to “return to gold.” They reused the word. They did not restore the old machinery. Genoa asked members to hold gold-convertible currencies as reserves. That is a gold-*exchange* design: one or two convertible centres, and a ring of claims on those centres. It is not several windows with gold moving between them when the points are hit.",
+      "Britain’s **1925** return at the pre-war sterling–dollar parity reused a number. It did not rebuild the **1913** world. In **1931** Britain left gold again. Other interwar “gold standards” were pegs, exchange controls, and official gold — a different architecture wearing a familiar name.",
       "Where the wartime stop never returned, paper could run for the Treasury. [Weimar hyperinflation](/history/20th-century/weimar-1923) is the European extreme of that break — war finance first, then a mark that ceased to work as money. That is not a pause in the classical system.",
-      "Keep the later American hinges on their own dates. The [1933 gold recall](/history/20th-century/1933-gold-recall) removes the public claim on gold at the old mint price. The [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) is 1971: the last official gold window on the dollar, for foreign official holders. Neither is 1914. Mixing the three makes all three unreadable.",
-      "This article is the peacetime classical order and its wartime end. The previous article is the [Panic of 1907](/history/20th-century/panic-1907-fed). Then Weimar, then 1933, then Bretton Woods and 1971.",
+      "Keep the later American hinges on their own dates. The [1933 gold recall](/history/20th-century/1933-gold-recall) removes the public claim on gold at the old mint price. The [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) is **1971**: the last official gold window on the dollar, for foreign official holders. Neither is **1914**. Mixing the three makes all three unreadable.",
+      "This article stays with the peacetime classical order and its wartime end — after the [Panic of 1907](/history/20th-century/panic-1907-fed), before Weimar, **1933**, and **1971**. It does not sell metal or forecast prices.",
     ],
   },
 ];
@@ -319,21 +335,21 @@ const goldRecall1933: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
-      "That is a different claim from the [wartime end of classical convertibility in 1914](/history/20th-century/classical-gold-standard-end). It is a different claim from the [1971 close of the gold window](/history/20th-century/bretton-woods-nixon-1971) for foreign official holders. Mixing the three makes all three unreadable.",
+      "On **5 April 1933**, Franklin Roosevelt signed Executive Order **6102**. Most gold coin, gold bullion, and gold certificates in private American hands had to be delivered to a Federal Reserve Bank, a member bank, or a Treasury agent — at **$20.67 an ounce**, by a deadline printed as **1 May**. The week before inauguration, gold had already been leaving banks. A national bank holiday had stopped ordinary payments. The order made the call formal.",
+      "The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money. That is a different claim from the [wartime end of classical convertibility in 1914](/history/20th-century/classical-gold-standard-end), and a different claim from the [1971 close of the gold window](/history/20th-century/bretton-woods-nixon-1971) for foreign official holders.",
     ],
   },
   {
-    heading: "What Order 6102 did",
+    heading: "What Order 6102 required",
     paragraphs: [
-      "On **5 April 1933** Franklin Roosevelt signed Executive Order 6102. It required persons in the United States to deliver most gold coin, gold bullion, and gold certificates to a Federal Reserve Bank, a member bank, or an agent of the Treasury. Payment was at the official price then in force: **$20.67 an ounce**. The deadline printed on the order was **1 May 1933**. Later licenses and exemptions matter more than that date alone.",
-      "The order did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January."
+      "The order required persons in the United States to deliver most gold coin, gold bullion, and gold certificates. Payment was at the official price then in force: **$20.67 an ounce**. Later licenses and exemptions matter more than that May date alone.",
+      "It did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January.",
     ],
   },
   {
     heading: "The bank holiday and the power to call gold",
     paragraphs: [
-      "The week before the inauguration, gold was already leaving banks. On **6 March 1933** a national bank holiday stopped ordinary payments. Gold exports and gold payments were constrained with the banks themselves. The Emergency Banking Act of **9 March 1933** ratified the holiday and gave the President broad power over gold, silver, and foreign exchange during the emergency.",
+      "On **6 March 1933** a national bank holiday stopped ordinary payments. Gold exports and gold payments were constrained with the banks themselves. The Emergency Banking Act of **9 March 1933** ratified the holiday and gave the President broad power over gold, silver, and foreign exchange during the emergency.",
       "That March statute is the legal floor under Order 6102. The order used a power Congress had just written. Banks reopened under license. Gold that had been a customer’s coin became, by stages, a thing the Treasury could call in.",
       "In May, the Thomas Amendment to the Agricultural Adjustment Act added another lever: the President could reduce the gold content of the dollar by as much as fifty percent. The public still faced a delivery order at $20.67. The statute already contemplated a lighter gold dollar. That is not yet the $35 price.",
     ],
@@ -343,7 +359,7 @@ const goldRecall1933: Section[] = [
     paragraphs: [
       "On **5 June 1933** a Joint Resolution of Congress declared gold clauses against public policy. A promise to pay in gold coin, or in a sum measured by gold, was to be discharged in legal tender. The Supreme Court later upheld the main line of that policy in the Gold Clause Cases of **1935**. Once gold could be called in, gold-denominated private contracts could not stand as a parallel unit.",
       "The Gold Reserve Act of **30 January 1934** vested title to monetary gold in the United States. Federal Reserve Banks transferred their gold to the Treasury and received gold certificates in exchange. The Treasury was forbidden to redeem currency in gold for the public. The President set a new official dollar price of **$35 an ounce** — a devaluation of the gold dollar by statute, not a market print.",
-      "At $20.67, one dollar had been a known weight of fine gold. At $35, that weight was cut. The same official stock, marked to the new price, produced a book profit on the Treasury’s accounts. Part of that increment funded the Exchange Stabilization Fund. The metal did not multiply. Official gold is then a government asset at an official price — not a pile the public can test at a window."
+      "At $20.67, one dollar had been a known weight of fine gold. At $35, that weight was cut. The same official stock, marked to the new price, produced a book profit on the Treasury’s accounts. Part of that increment funded the Exchange Stabilization Fund. The metal did not multiply. Official gold is then a government asset at an official price — not a pile the public can test at a window.",
     ],
   },
   {
@@ -364,14 +380,14 @@ const goldRecall1933: Section[] = [
     heading: "The stated rationale",
     paragraphs: [
       "The contemporaneous justification was Depression emergency: stop hoarding, reopen banks, expand the money stock, and raise the domestic price level. Officials argued that gold in private hoards and in bank vaults as coin blocked recovery, and that a higher official gold price would cheapen the dollar in gold terms.",
-      "Whether that program worked as advertised is a later argument. This page stays on the documentary sequence: holiday, order, delivery, gold-clause resolution, statute, new official price."
+      "Whether that program worked as advertised is a later argument. The documentary sequence stays: holiday, order, delivery, gold-clause resolution, statute, new official price.",
     ],
   },
   {
     heading: "Not 1914, not 1971",
     paragraphs: [
       "The [classical gold standard](/history/20th-century/classical-gold-standard-end) ended as a working international system in **1914**, when war finance blocked gold shipment and protected notes from internal drains. That break is about convertibility and metal movement among countries. It is not a domestic recall of coin from American households.",
-      "The 1933–34 sequence is a United States statute story. Private monetary gold rights are removed. Title to official gold vests in the Treasury. The official price moves from $20.67 to $35. Americans lose a public claim they had still possessed after 1914.",
+      "The **1933–34** sequence is a United States statute story. Private monetary gold rights are removed. Title to official gold vests in the Treasury. The official price moves from $20.67 to $35. Americans lose a public claim they had still possessed after **1914**.",
       "Bretton Woods, in **1944**, defined the dollar against gold at **$35** for official convertibility. Ordinary people in the United States did not redeem paper at the Treasury window. On **15 August 1971** the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) closed the remaining window: foreign official holders could no longer present dollars and demand US gold at the posted price.",
       "Keep three different breaks distinct: **1914** ends classical convertibility under war. **1933–34** removes the US public claim and revalues official gold. **1971** ends official dollar–gold convertibility for foreign holders. The shared lesson — gold stops being a right you can test — is not identity of the three events.",
     ],
@@ -380,8 +396,8 @@ const goldRecall1933: Section[] = [
     heading: "After 1933",
     paragraphs: [
       "Americans could not legally hold monetary gold for decades. Licenses covered industry, dentistry, and art. The prohibition lasted until the end of **1974**, when statute again allowed citizens to hold gold bullion. Restoration of private holding did not restore a public convertibility contract. The $35 official price was already a bookkeeping fossil. The metal had a market. The dollar did not have a public gold window.",
-      "Between 1934 and 1971 the official price still mattered for foreign official holders and for Treasury accounts. It did not matter as a price at which an American could walk in with a note and walk out with coin. This episode is a domestic recall and a revaluation for government accounting. [1971](/history/20th-century/bretton-woods-nixon-1971) is the close of an official foreign window built on the $35 price the 1934 Act had set.",
-      "Read this page as the middle turning point of the [twentieth-century chapter](/history/20th-century): after classical gold’s wartime end, before Bretton Woods and 1971. Statute took the public’s monetary gold rights and rewrote the official ounce. It did not invent paper money.",
+      "Between **1934** and **1971** the official price still mattered for foreign official holders and for Treasury accounts. It did not matter as a price at which an American could walk in with a note and walk out with coin. This episode is a domestic recall and a revaluation for government accounting. [1971](/history/20th-century/bretton-woods-nixon-1971) is the close of an official foreign window built on the $35 price the **1934** Act had set.",
+      "Read this as the middle turning point of the twentieth-century chapter: after classical gold’s wartime end, before Bretton Woods and **1971**. Statute took the public’s monetary gold rights and rewrote the official ounce. It did not invent paper money, sell metal, or forecast prices.",
     ],
   },
 ];
@@ -959,8 +975,8 @@ const assignats: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Assignats were notes of revolutionary France, first issued in **1789–90**, supposed to be retired from the sale of confiscated church and émigré land — the biens nationaux. The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. By **1795–96** the paper was not a unit anyone would hold. The Directory returned toward metal.",
-      "**Assignats** were revolutionary France’s paper money, supposedly retired by sales of seized church and émigré land. This article follows [John Law and the Mississippi Bubble](/history/banks-paper/john-law): Law is **1720** and a royal bank-plus-company. Assignats are a later fiscal instrument with a land story. They are not the same event. They are not England’s Restriction. They are not Weimar.",
+      "By **1795**, shops in revolutionary France quoted two worlds: a paper price that moved by the week, and a coin price people preferred. Assignats — notes first issued in **1789–90**, supposedly retired by sales of seized church and émigré land — still filled drawers. They no longer filled the role of money. The Directory was already returning toward metal.",
+      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. This article follows [John Law and the Mississippi Bubble](/history/banks-paper/john-law): Law is **1720** and a royal bank-plus-company. Assignats are a later fiscal instrument with a land story. They are not the same event. They are not England’s Restriction. They are not Weimar.",
     ],
   },
   {
@@ -990,7 +1006,7 @@ const assignats: Section[] = [
   {
     heading: "War, the Maximum, and a dead unit",
     paragraphs: [
-      "In **April 1792** France went to war. Armies, contractors, and the later levée en masse were paid in new assignats. Revolution at home and war abroad used the same press. The Terror’s **Maximum** (1793–94) tried to freeze prices in paper. Controls can hide a price for a time. They do not retire paper. After Thermidor the Maximum was repealed. The hidden price became the street price.",
+      "In **April 1792** France went to war. Armies, contractors, and the later levée en masse were paid in new assignats. Revolution at home and war abroad used the same press. The Terror’s **Maximum** (**1793–94**) tried to freeze prices in paper. Controls can hide a price for a time. They do not retire paper. After Thermidor the Maximum was repealed. The hidden price became the street price.",
       "By **1795** the assignat was failing as a store of value and as a unit of account. Markets reached for coin, barter, or foreign units. In **February 1796** the printing plates were destroyed in public. The Directory had already begun to live with metal again. A brief sequel, the mandats territoriaux, tried another land paper in **1796** and died in months. That is a postscript, not a second System.",
       "The paper did not vanish from drawers. It ceased to be money. France returned toward specie by abandoning the assignat, not by promising to redeem the same notes later at an old metal definition.",
     ],
@@ -1010,18 +1026,12 @@ const assignats: Section[] = [
     ],
   },
   {
-    heading: "Not Law, not Restriction, not Weimar",
-    paragraphs: [
-      "Do not merge this episode with [John Law](/history/banks-paper/john-law). Law’s System fused a note-issuing bank with a colonial trading company under the Regency. Notes and Mississippi shares inflated together and broke in **1720**. Assignats have no Banque Royale and no rue Quincampoix. They are revolutionary state paper with a land story, issued decades later under a different regime and a different war.",
-      "Do not merge it with the [Bank of England](/history/banks-paper/bank-of-england) Restriction either. In **1797** the Bank stopped paying gold for its notes. The notes stayed everyday English money. Resumption in the **1820s** brought the window back. Restriction is a suspend-and-resume cycle. Assignats are a paper that died. The dates sit near each other because the same wars strained both treasuries. The machines do not.",
-      "Do not merge it with Germany’s 1923 hyperinflation. Weimar was a twentieth-century collapse of a national paper mark after war, reparations, and extreme monetization — a later parallel, not the same event or the same century. Similar mechanisms can teach; merging dates erases what changed.",
-    ],
-  },
-  {
     heading: "Land on the advertisement, press in the till",
     paragraphs: [
       "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
-      "The prior French episode is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). England’s Restriction, on the [Bank of England](/history/banks-paper/bank-of-england) page, is a labeled wartime parallel, not a sequel. Assignats are revolutionary land paper only — not Law’s **1720**, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
+      "Do not merge this episode with [John Law](/history/banks-paper/john-law). Law’s System fused a note-issuing bank with a colonial trading company under the Regency. Notes and Mississippi shares inflated together and broke in **1720**. Assignats have no Banque Royale and no rue Quincampoix. They are revolutionary state paper with a land story, issued decades later under a different regime and a different war.",
+      "Do not merge it with the [Bank of England](/history/banks-paper/bank-of-england) Restriction either. In **1797** the Bank stopped paying gold for its notes. The notes stayed everyday English money. Resumption in the **1820s** brought the window back. Restriction is a suspend-and-resume cycle. Assignats are a paper that died. The dates sit near each other because the same wars strained both treasuries. The machines do not.",
+      "Do not merge it with Germany’s **1923** hyperinflation. [Weimar](/history/20th-century/weimar-1923) was a twentieth-century collapse of a national paper mark — a later parallel, not the same event or the same century. The prior French episode is Law. Assignats are revolutionary land paper only. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
     ],
   },
 ];
@@ -1030,7 +1040,7 @@ const whyMarkets: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Before states stamped coins, traders already settled in gold and silver. Cattle paid a fine inside a village that already priced in livestock. Grain paid a tax if the collector took it before it spoiled. Cowries moved along coasts. Copper and bronze filled the till for small change. Each of those goods worked in a range. For a payment that had to travel, wait, and still be accepted by a stranger, the range closed. Two metals kept winning.",
+      "Long before a punch hit electrum in western Anatolia, traders already settled large debts in gold and silver by weight. Cattle paid a fine inside a village that already priced in livestock. Grain paid a tax if the collector took it before it spoiled. Cowries moved along coasts. Copper and bronze filled the till for small change. Each of those goods worked in a range. For a payment that had to travel, wait, and still be accepted by a stranger, the range closed. Two metals kept winning.",
       "The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand. Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
     ],
   },
@@ -1390,25 +1400,25 @@ const earlyUs: Section[] = [
 
 const jackson: Section[] = [
   {
-    heading: "A bank fight before the Fed",
+    heading: "",
     paragraphs: [
-      "Andrew Jackson’s war on the Second Bank of the United States is American politics and monetary history at once. The Bank was a federally chartered corporation that issued notes, held government deposits, and sat at the center of the country’s credit. Jackson treated it as concentrated power. His **1832** veto blocked recharter. Federal deposits moved to state “pet” banks. The Specie Circular of **1836** required gold and silver for public land. The Panic of **1837** followed.",
-      "This page stays documentary: charter, veto, deposits, specie rule, panic. It is not a sermon for or against central banks, and it is not the [Panic of 1907](/history/20th-century/panic-1907-fed). The later Federal Reserve statute is **1913**. Jackson’s fight is an earlier American argument over who holds the government’s money and who issues the country’s paper.",
+      "In **1832**, Congress sent Andrew Jackson a bill to recharter the Second Bank of the United States years before the charter expired. He vetoed it. The veto message attacked the Bank as unconstitutional privilege and foreign-tinged power. The presidential campaign that autumn made the Bank the issue. Jackson won. The federal center would not be renewed on that bill.",
+      "What followed was monetary politics in sequence: federal deposits moved to state “pet” banks, the Specie Circular of **1836** required gold and silver for public land, and the Panic of **1837** hit American banks and commerce. This is a documentary account of charter, veto, deposits, specie rule, and panic — not a sermon for or against central banks, and not the [Panic of 1907](/history/20th-century/panic-1907-fed). The Federal Reserve statute is **1913**. Jackson’s fight is an earlier American argument over who holds the government’s money and who issues the country’s paper.",
     ],
   },
   {
     heading: "What the Second Bank was",
     paragraphs: [
-      "The First Bank of the United States (1791–1811) had already shown the pattern: a federal charter, mixed public and private ownership, note issue, and a role as the government’s fiscal agent. After the War of 1812, Congress chartered the Second Bank in **1816**, with a twenty-year term. Nicholas Biddle became its dominant president. The Bank’s notes circulated widely. It also restrained state banks by presenting their notes for specie.",
+      "The First Bank of the United States (**1791–1811**) had already shown the pattern: a federal charter, mixed public and private ownership, note issue, and a role as the government’s fiscal agent. After the War of 1812, Congress chartered the Second Bank in **1816**, with a twenty-year term. Nicholas Biddle became its dominant president. The Bank’s notes circulated widely. It also restrained state banks by presenting their notes for specie.",
       "Supporters called that discipline sound. Opponents called it a monopoly over credit and politics. The Bank was not a modern central bank with a dual mandate and open-market operations. It was a privileged corporation with a federal seal, a large capital, and the Treasury’s account. That was enough to make it a national issue.",
-      "By the early 1830s the charter’s end was in sight. Biddle and allies pressed for early recharter. Jackson and the Democratic coalition framed the Bank as a threat to equal rights and hard money. The fight was about power and specie as much as about balance sheets.",
+      "By the early **1830s** the charter’s end was in sight. Biddle and allies pressed for early recharter. Jackson and the Democratic coalition framed the Bank as a threat to equal rights and hard money. The fight was about power and specie as much as about balance sheets.",
     ],
   },
   {
     heading: "The 1832 veto and the election",
     paragraphs: [
-      "Congress passed a recharter bill in **1832**, well before the 1836 expiry. Jackson vetoed it. His veto message attacked the Bank as unconstitutional, as a privilege for the wealthy, and as a foreign-influenced corporation. The message was politics as much as jurisprudence. It made the Bank the issue of the 1832 presidential campaign.",
-      "Jackson won reelection. The veto stood. The Bank would not receive a new federal charter on that bill. Biddle still ran the existing institution until the charter ran out, but the political verdict had landed: the federal center would not be renewed by that Congress and that President.",
+      "Congress passed a recharter bill in **1832**, well before the **1836** expiry. Jackson’s veto message was politics as much as jurisprudence. It made the Bank the issue of the **1832** presidential campaign.",
+      "Jackson won reelection. The veto stood. Biddle still ran the existing institution until the charter ran out, but the political verdict had landed: the federal center would not be renewed by that Congress and that President.",
       "Do not confuse the veto with the later removal of deposits. The veto stopped recharter. The deposit removal was a separate executive move that starved the Bank of the government’s cash.",
     ],
   },
@@ -1423,14 +1433,14 @@ const jackson: Section[] = [
   {
     heading: "Panic of 1837 and the aftermath",
     paragraphs: [
-      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. This page does not pick a single villain. It notes that the panic followed the deposit and specie sequence by months, not decades.",
-      "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early 1840s. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the 1860s.",
+      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. This account does not pick a single villain. It notes that the panic followed the deposit and specie sequence by months, not decades.",
+      "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early **1840s**. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the **1860s**.",
       "The next time a national liquidity panic forces a central-bank debate at full volume is [1907](/history/20th-century/panic-1907-fed). That episode creates the Fed. It does not replay Jackson’s veto. Keep the centuries labeled.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["Veto first, then deposits, then specie, then panic."],
     list: [
       "**1816:** Second Bank of the United States chartered for twenty years.",
       "**1832:** Congress passes recharter; Jackson vetoes; Jackson reelected with the Bank as a campaign issue.",
@@ -1441,28 +1451,27 @@ const jackson: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "A bank war, not a Fed brief",
     paragraphs: [
-      "This page is not investment advice, not a brief for “end the Fed,” and not a biography of Jackson. It is the Bank war as a monetary-political event: charter, veto, deposits, specie, panic — then a country without a federal central bank until a later century’s statute.",
-      "Return to [America & gold/silver politics](/history/america). Previous article on the unit: [Early U.S. coinage](/history/america/early-us-coinage). Next war-finance article: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Later chapter: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed).",
+      "Charter, veto, pet banks, Specie Circular, and the Panic of **1837** are the spine — not investment advice, not a brief to “end the Fed,” and not a biography of Jackson. Early unit arithmetic sits under [early U.S. coinage](/history/america/early-us-coinage). War paper sits under [greenbacks and the Civil War](/history/america/greenbacks-civil-war). The later liquidity hinge is the [Panic of 1907](/history/20th-century/panic-1907-fed).",
     ],
   },
 ];
 
 const greenbacks: Section[] = [
   {
-    heading: "Paper as a war measure",
+    heading: "",
     paragraphs: [
-      "The Union financed the Civil War in part with United States Notes — greenbacks — made legal tender by the Legal Tender Act of **1862**. They were not redeemable in gold at the time. Gold traded at a premium to paper in a free gold market in New York. Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever.",
-      "After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. This page covers issue, premium, and the road to that date. The [Crime of 1873](/history/america/crime-of-1873) and the [Gold Standard Act of 1900](/history/america/road-back-gold) are neighbors, not the same statute.",
+      "In **February 1862**, Congress authorized United States Notes — greenbacks — as legal tender for most public and private debts. Banks had already suspended specie payments at the end of **1861**. Gold still priced customs and foreign exchange. In New York a gold market posted the premium of coin over paper. When Union fortunes looked dark, that premium widened.",
+      "Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever. After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. Issue, premium, and the road to that date are the spine here. The [Crime of 1873](/history/america/crime-of-1873) and the [Gold Standard Act of 1900](/history/america/road-back-gold) are neighbors, not the same statute.",
     ],
   },
   {
     heading: "Why the Union issued greenbacks",
     paragraphs: [
-      "War spending outran ordinary tax and bond finance. Banks suspended specie payments at the end of **1861**. The Treasury needed a currency the public and contractors would accept when gold coin was scarce in daily Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
+      "War spending outran ordinary tax and bond finance. The Treasury needed a currency the public and contractors would accept when gold coin was scarce in daily Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
       "Legal tender meant creditors had to accept the notes for most public and private debts, with exceptions such as customs duties and interest on some bonds, which stayed closer to gold. The notes were obligations of the United States. They were not warehouse receipts for a named pile of coin. Convertibility into gold was suspended for the duration of the emergency.",
-      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. This page stays with the Union greenback — the paper that survived the war and then dominated peacetime politics.",
+      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. This account stays with the Union greenback — the paper that survived the war and then dominated peacetime politics.",
     ],
   },
   {
@@ -1470,7 +1479,7 @@ const greenbacks: Section[] = [
     paragraphs: [
       "Once greenbacks were legal tender and gold was still the international and customs metal, two prices appeared. Goods and contracts quoted in “currency” (paper) diverged from prices in gold. In New York a gold market — informal, then more organized — posted the premium of gold over greenbacks.",
       "When Union fortunes looked dark, the premium widened: more greenbacks were needed to buy a gold dollar. When military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. Ordinary wage earners felt the premium as higher currency prices for goods tied to gold or imports.",
-      "The premium is the documentary proof that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. [Inflation as purchasing-power erosion](/sound-money/inflation-purchasing-power) is the definition page for that squeeze. This page is the wartime instrument.",
+      "The premium is the documentary proof that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. [Inflation as purchasing-power erosion](/sound-money/inflation-purchasing-power) is the definition page for that squeeze. This article is the wartime instrument.",
     ],
   },
   {
@@ -1486,13 +1495,13 @@ const greenbacks: Section[] = [
     heading: "Resumption Act of 1875",
     paragraphs: [
       "The Specie Payment Resumption Act committed the Treasury to redeem United States Notes in coin on and after **1 January 1879**. The Act also allowed gradual reduction of the greenback circulation toward a floor, and it authorized gold accumulation to make the promise credible.",
-      "Resumption did not happen overnight in 1865. It took a decade of politics, surplus fiscal conditions in some years, and a Treasury that actually built a gold reserve. Opponents tried to repeal or soften the commitment; the date held. When the day came, greenbacks traded at par with gold; the wartime premium was gone. The paper note became again a claim on coin at a one-to-one practical rate.",
-      "Full legal definition of the dollar as a gold unit waited until the [Gold Standard Act of 1900](/history/america/road-back-gold). Resumption was the operational hinge. The 1900 statute was the label. Between them sat the silver fight that begins with the [Coinage Act of 1873](/history/america/crime-of-1873).",
+      "Resumption did not happen overnight in **1865**. It took a decade of politics, surplus fiscal conditions in some years, and a Treasury that actually built a gold reserve. Opponents tried to repeal or soften the commitment; the date held. When the day came, greenbacks traded at par with gold; the wartime premium was gone. The paper note became again a claim on coin at a one-to-one practical rate.",
+      "Full legal definition of the dollar as a gold unit waited until the [Gold Standard Act of 1900](/history/america/road-back-gold). Resumption was the operational hinge. The **1900** statute was the label. Between them sat the silver fight that begins with the [Coinage Act of 1873](/history/america/crime-of-1873).",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["War paper first, then the dated path back to specie."],
     list: [
       "**December 1861:** Banks suspend specie payments.",
       "**February 1862:** Legal Tender Act — United States Notes (greenbacks) authorized as legal tender.",
@@ -1503,10 +1512,9 @@ const greenbacks: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "War paper, then a dated return",
     paragraphs: [
-      "This page is not a price target, not a tip to hold paper or metal, and not a full fiscal history of the Civil War. It is greenbacks as inconvertible war paper, a gold premium, and a dated path back to specie.",
-      "Return to [America & gold/silver politics](/history/america). Earlier bank fight: [Jackson and the Bank](/history/america/jackson-and-the-bank). Next silver statute: [Crime of 1873](/history/america/crime-of-1873). Related definition: [Inflation and purchasing power](/sound-money/inflation-purchasing-power).",
+      "Greenbacks as inconvertible war paper, a gold premium, and a path back to specie on **1 January 1879** are the claim — not a price target and not a tip to hold paper or metal. Earlier bank politics sit under [Jackson and the Bank](/history/america/jackson-and-the-bank). The next silver statute is the [Crime of 1873](/history/america/crime-of-1873). The related definition is [inflation and purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
 ];
@@ -1698,17 +1706,17 @@ const pieceOfEight: Section[] = [
 
 const silverThursday: Section[] = [
   {
-    heading: "A squeeze, then a rule change",
+    heading: "",
     paragraphs: [
-      "In **1979–80** Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. The price ran toward **$50 an ounce** in January **1980**. In late March, after exchange and dealer rule changes that raised margins and limited new longs, the price collapsed. **Silver Thursday** — **27 March 1980** — is the name of the break.",
-      "This page stays factual: positions, rules, the print, the break. It is not a forecast, not a stock story, and not a brief for repeating the trade. [Information versus advice](/sound-money/information-not-advice) is the standing line. Return to [silver in history](/history/silver). The market quotient that uses 1980 as an arithmetic anchor sits on the [gold–silver ratio](/markets/gold-silver-ratio) fact page — a different page.",
+      "On **27 March 1980** — Silver Thursday — silver futures crashed as liquidation hit a market already strained by higher margins and limits on new long positions. Months earlier, in January, the nearby extreme used on this site’s desk had printed near **$49.45** an ounce. The January market was the run. March was the unwind.",
+      "In **1979–80** Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. After exchange and dealer rule changes raised margins and restricted new longs, the price collapsed. Positions, rules, dated prints, and the March break are the spine — not a forecast, not a stock story, and not a brief for repeating the trade. [Information versus advice](/sound-money/information-not-advice) is the standing line. The market quotient that uses **1980** as an arithmetic anchor sits on the [gold–silver ratio](/markets/gold-silver-ratio) fact page — a different article.",
     ],
   },
   {
     heading: "Who held what",
     paragraphs: [
       "The Hunt group and associated interests accumulated physical silver and long futures on a scale that mattered for a market thinner than gold’s. Contemporary estimates put the controlling interest in hundreds of millions of ounces when paper and metal are counted together — exact tallies still vary by source and by how one treats warehouse receipts and forward claims. The documentary fact is concentration: a small circle of names sat on a large share of deliverable and paper silver.",
-      "Motivation in the public record mixed inflation fear after the 1970s, distrust of paper claims, and a bet that silver’s monetary memory still mattered. This page does not psychoanalyse the Hunts. It records that a concentrated long met a physical and futures market that could not absorb unlimited demand at the old tape without a sharp print move.",
+      "Motivation in the public record mixed inflation fear after the **1970s**, distrust of paper claims, and a bet that silver’s monetary memory still mattered. This account does not psychoanalyse the Hunts. It records that a concentrated long met a physical and futures market that could not absorb unlimited demand at the old tape without a sharp print move.",
       "Partners and financing arrangements mattered when the break came. Brokers who had financed the position demanded more capital as margins rose and prices fell. Forced selling is a plumbing fact, not a morality play.",
     ],
   },
@@ -1724,21 +1732,21 @@ const silverThursday: Section[] = [
     heading: "What changed at the exchange",
     paragraphs: [
       "COMEX and related dealers tightened margin requirements and restricted new long positions — famously moving toward rules that made it harder to add longs while shorts and liquidation remained possible. Liquidity that had been assumed on the way up was not there on the way down. The Hunts’ brokers demanded more capital. Forced selling followed.",
-      "Exchange rule changes are not a free-market parable and not a conspiracy slogan. They are the institutional fact of 1980’s silver break: a venue that had listed the contracts altered the terms under which new speculative demand could bid. Whether one judges those changes as prudence or as a rescue of shorts is politics. The documentary sequence is rule change → margin pressure → liquidation → collapse of the print.",
+      "Exchange rule changes are not a free-market parable and not a conspiracy slogan. They are the institutional fact of **1980**’s silver break: a venue that had listed the contracts altered the terms under which new speculative demand could bid. Whether one judges those changes as prudence or as a rescue of shorts is politics. The documentary sequence is rule change → margin pressure → liquidation → collapse of the print.",
       "Dealer and bank counterparties sat in the middle. When variation margin and credit lines moved against the longs, the position could not be held at the old size. Silver Thursday names the day the break became public theater.",
     ],
   },
   {
     heading: "27 March 1980 and the aftermath",
     paragraphs: [
-      "**27 March 1980** — Silver Thursday — saw silver futures crash as liquidation hit a market already strained by higher margins and restricted new longs. The January extreme was gone. Brokers and the Hunt interests negotiated under intense pressure. Lawsuits, congressional attention, and exchange post-mortems followed in the months and years after.",
-      "The break did not erase silver’s industrial or monetary memory. It did show that a concentrated futures-and-bullion position can meet a rule book and a credit constraint faster than a narrative about remonetization can answer. Later silver markets still use 1980 as a dated print memory. This site’s desk treats the January high as a historical print, not a target.",
-      "Silver Thursday is not the [Crime of 1873](/history/america/crime-of-1873) and not [bimetallism](/history/silver/bimetallism). 1873 is a Mint list. Bimetallism is a mint-ratio statute problem. 1980 is a concentrated private position and an exchange response. Three silver stories; three turning points.",
+      "**27 March 1980** saw silver futures crash as liquidation hit. The January extreme was gone. Brokers and the Hunt interests negotiated under intense pressure. Lawsuits, congressional attention, and exchange post-mortems followed in the months and years after.",
+      "The break did not erase silver’s industrial or monetary memory. It did show that a concentrated futures-and-bullion position can meet a rule book and a credit constraint faster than a narrative about remonetization can answer. Later silver markets still use **1980** as a dated print memory. This site’s desk treats the January high as a historical print, not a target.",
+      "Silver Thursday is not the [Crime of 1873](/history/america/crime-of-1873) and not [bimetallism](/history/silver/bimetallism). **1873** is a Mint list. Bimetallism is a mint-ratio statute problem. **1980** is a concentrated private position and an exchange response. Three silver stories; three turning points.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: [],
+    paragraphs: ["Run in January. Rule pressure in March. Break on the 27th."],
     list: [
       "**1970s:** Inflation and dollar weakness; private interest in monetary metals rises.",
       "**1979:** Hunt-group accumulation of silver bullion and futures becomes a market-moving fact.",
@@ -1750,10 +1758,9 @@ const silverThursday: Section[] = [
     ],
   },
   {
-    heading: "What this page is not",
+    heading: "A squeeze, a rule book, a dated break",
     paragraphs: [
-      "This page is not a recommendation to purchase or sell the metal, not a price target, and not a stock tip about any company tied to the Hunts or to COMEX. It is positions, rules, dated prints, and a March break — documentary only.",
-      "Return to [silver in history](/history/silver). Dual role of the metal: [monetary history and industry](/history/silver/monetary-and-industry). Market quotient: [gold–silver ratio](/markets/gold-silver-ratio). Standing line: [information versus advice](/sound-money/information-not-advice).",
+      "Positions, COMEX margin and long limits, the January prints, and the **27 March 1980** break are the claim — not a recommendation to purchase or sell the metal, not a price target, and not a stock tip about any company tied to the Hunts or to COMEX. Dual role of the metal sits under [monetary history and industry](/history/silver/monetary-and-industry). Market quotient arithmetic sits under the [gold–silver ratio](/markets/gold-silver-ratio). The standing line remains [information versus advice](/sound-money/information-not-advice).",
     ],
   },
 ];
