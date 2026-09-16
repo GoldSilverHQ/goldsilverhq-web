@@ -35,17 +35,19 @@ describe("article hero = OG pattern", () => {
     assert.match(hero.credit ?? "", /Library of Congress/i);
   });
 
-  it("ships a true 1200×630 JPEG for every hero OG override", () => {
+  it("ships true 1200×630 JPEGs for hero titlebild and OG (Querformat sync)", () => {
     for (const hero of ARTICLE_HEROES) {
-      const file = join(root, "public", hero.ogSrc.replace(/^\//, ""));
-      const size = statSync(file).size;
-      assert.ok(size > 20_000 && size <= 600 * 1024, `${file} size ${size}`);
-      const probe = execFileSync(
-        "ffprobe",
-        ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", file],
-        { encoding: "utf8" },
-      ).trim();
-      assert.equal(probe, "1200,630", `${file} dims ${probe}`);
+      for (const rel of [hero.src, hero.ogSrc]) {
+        const file = join(root, "public", rel.replace(/^\//, ""));
+        const size = statSync(file).size;
+        assert.ok(size > 20_000 && size <= 600 * 1024, `${file} size ${size}`);
+        const probe = execFileSync(
+          "ffprobe",
+          ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", file],
+          { encoding: "utf8" },
+        ).trim();
+        assert.equal(probe, "1200,630", `${file} dims ${probe}`);
+      }
     }
   });
 

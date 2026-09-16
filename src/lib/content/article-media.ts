@@ -1,12 +1,18 @@
 /**
  * Article titlebild (= on-page hero) that also doubles as the Open Graph / X card.
  *
+ * Titlebild rule: Querformat only — same landscape crop language as X/Twitter
+ * article cards (≈16:9 / 1200×630). Never ship a tall full-bleed of the whole
+ * illustration as the hero bar.
+ *
  * Convention for later articles:
- * 1. Drop the full illustration under `public/images/<pillar>/...`.
- * 2. Write a 1200×630 JPEG crop to the Phase-1 card path under `public/og/cards/`
+ * 1. Keep the master illustration elsewhere if needed; write the **landscape**
+ *    titlebild JPEG under `public/images/<pillar>/...` at OG aspect (1200×630).
+ * 2. Write the **same** 1200×630 crop to the Phase-1 card path under `public/og/cards/`
  *    (same key as `ogImagePathForRoute(path)` — see `phase1-sitemap-paths.mjs`).
  * 3. Register one entry here with matching `src` + `ogSrc`, alt, caption, credit.
- * 4. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.
+ * 4. `ArticleHeroImage` always frames at `aspect-[1200/630]` (object-cover).
+ * 5. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.
  *
  * Only ship real artwork — do not invent placeholders for other articles.
  */
@@ -14,7 +20,7 @@
 export type ArticleHero = {
   /** Route pathname (no trailing slash), e.g. `/history/america/jackson-and-the-bank`. */
   path: string;
-  /** On-page titlebild (public URL path). */
+  /** On-page titlebild (public URL path) — landscape / OG aspect, not a tall full plate. */
   src: string;
   /** 1200×630 share JPEG (public URL path). Usually the Phase-1 `/og/cards/*.jpg` file. */
   ogSrc: string;
@@ -31,11 +37,11 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/america/jackson-and-the-bank",
     src: "/images/history/america/jackson-and-the-bank.jpg",
     ogSrc: "/og/cards/history-america-jackson-and-the-bank.jpg",
-    alt: "1836 political cartoon: Andrew Jackson, cane labeled Veto, facing a many-headed monster representing the Second Bank of the United States and its state branches during the Bank War.",
+    alt: "Colorized 1836 political cartoon: Andrew Jackson, cane raised, facing a many-headed monster representing the Second Bank of the United States and its state branches during the Bank War.",
     caption:
-      "“General Jackson Slaying the Many Headed Monster” (1836) — Bank War / Second Bank veto cartoon.",
+      "“General Jackson Slaying the Many Headed Monster” (1836) — colorized Bank War / Second Bank veto cartoon.",
     credit:
-      "Library of Congress, Prints & Photographs Division, LC-DIG-ds-14740. No known restrictions on publication.",
+      "Colorized reproduction of the 1836 Bank War cartoon (original: Library of Congress LC-DIG-ds-14740).",
   },
 ] as const;
 
