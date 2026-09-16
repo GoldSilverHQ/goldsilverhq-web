@@ -2007,7 +2007,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
+      "Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
     ],
   },
   {
@@ -2092,7 +2092,7 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net central-bank buying in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
       "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (treated at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
-      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household. The largest reported 2026 country additions, month by month, sit in the next section.",
+      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household. The largest reported 2026 country additions, month by month, sit in the next section. Reported net official sales from the same July compilation sit immediately after that table.",
     ],
   },
   {
@@ -2140,15 +2140,47 @@ const centralBankGoldReserves: Section[] = [
     },
   },
   {
+    heading: "Reported net official sellers, YTD through July 2026",
+    paragraphs: [
+      "The same World Gold Council monthly compilation — drawn from IMF International Financial Statistics and national central-bank releases, through **31 July 2026** and published **3 September 2026** — also names the largest reported official reductions. The buyer table above keeps later August prints on a few named accumulators. This seller table stays on that July book. A tonne here is a reported change in official monetary gold on the published books. It is not a private investment flow.",
+      "Two country lines dominate the published year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and the July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan remains a year-to-date buyer on the table above. This page does not invent an August seller total.",
+    ],
+    table: {
+      caption:
+        "Reported net official gold reductions in 2026, through 31 July 2026. Figures are rounded whole tonnes.",
+      headers: ["Country", "Reported tonnes", "Through", "Source"],
+      rows: [
+        [
+          "Türkiye",
+          "**85**",
+          "July 2026",
+          "WGC monthly (IMF IFS and CBRT), through 31 July 2026",
+        ],
+        [
+          "Russia",
+          "**50**",
+          "July 2026",
+          "WGC monthly (IMF IFS and CBR), through 31 July 2026",
+        ],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The table does not rank sellers as an investment case. It records reported official changes, dated to the July compilation. Türkiye’s book has been two-way in recent years; a reported sale is still a dated official-book change, not a private export census.",
+    ],
+  },
+  {
     heading: "",
     callout: {
       label: "Not a central bank",
       paragraphs: [
-        "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it is not a row in the table above. Two published gold figures sit under that name and must stay labeled. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That H1 purchase is a company statement. No official August year-to-date purchase total has been published, and this page does not invent one.",
+        "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it is not a row in the official tables above. Two published gold figures sit under that name and must stay labeled. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That H1 purchase is a company statement. No official August year-to-date purchase total has been published, and this page does not invent one.",
       ],
     },
     paragraphs: [
-      "The table does not rank buyers as an investment case. It records reported official changes, dated to the month each line can support. A private issuer’s reserve book is a different instrument, kept off the official table.",
+      "The official tables do not rank buyers or sellers as an investment case. They record reported official changes, dated to the month each line can support. A private issuer’s reserve book is a different instrument, kept off the official tables.",
     ],
   },
   {
@@ -2201,7 +2233,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "What the figures do not say",
     paragraphs: [
-      "A rising official stock is a change in a reserve composition. It is not a price target. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
+      "A rising official stock is a change in a reserve composition. It is not a price target. A reported official sale is the same kind of fact as a reported official purchase: a dated change in a reserve book, not a private-flow instruction. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
       "These pages stay on current metal-market facts. The [markets hub](/markets) orients the four topics. How $42.22 became the U.S. book rate is the first topic. What the gold–silver ratio measures is the third. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). None of those pages is a stock tip. Neither is this one.",
     ],
   },

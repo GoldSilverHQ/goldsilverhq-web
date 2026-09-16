@@ -290,7 +290,8 @@ describe("markets page thicken (no new URLs)", () => {
     const china = body.find((s) => s.heading.startsWith("China"));
     const poland = body.find((s) => s.heading.startsWith("Poland"));
     const ytd = body.find((s) => s.heading.startsWith("Reported net buyers"));
-    assert.ok(china && poland && ytd, "China, Poland, and YTD clocks must stay");
+    const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
+    assert.ok(china && poland && ytd && sellers, "China, Poland, YTD buyers, and YTD sellers must stay");
 
     const table = gdp.table.rows.flat().join("\n");
     const text = [gdp.heading, ...gdp.paragraphs, gdp.table.caption, ...gdp.table.headers, table]
@@ -367,5 +368,79 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(sitemapSrc, /gold-to-gdp|gold-relative-to-gdp|official-gold-gdp/);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /gold-to-gdp|gold-relative-to-gdp|official-gold-gdp/.test(path)));
+  });
+
+  it("adds a dated July 2026 official seller table beside the buyers and keeps the rest", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
+    assert.ok(sellers, "expected a reported net official sellers section on the same spoke");
+    assert.ok(sellers.table);
+    const buyers = body.find((s) => s.heading.startsWith("Reported net buyers"));
+    const share = body.find((s) => s.heading.startsWith("Gold as a share"));
+    const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
+    const china = body.find((s) => s.heading.startsWith("China"));
+    const poland = body.find((s) => s.heading.startsWith("Poland"));
+    assert.ok(buyers && share && gdp && china && poland, "buyers, FX-share, gold/GDP, China, and Poland must stay");
+
+    const table = sellers.table.rows.flat().join("\n");
+    const sellerText = [sellers.heading, ...sellers.paragraphs, sellers.table.caption, ...sellers.table.headers, table]
+      .filter(Boolean)
+      .join("\n");
+    const page = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+
+    assert.match(sellers.heading, /July 2026/);
+    assert.deepEqual(sellers.table.headers, ["Country", "Reported tonnes", "Through", "Source"]);
+    assert.match(table, /Türkiye|Turkey/);
+    assert.match(table, /\*\*85\*\*/);
+    assert.match(table, /Russia/);
+    assert.match(table, /\*\*50\*\*/);
+    assert.match(table, /July 2026/);
+    assert.match(table, /WGC monthly \(IMF IFS/);
+    assert.match(sellerText, /not a private investment flow/);
+    assert.match(sellerText, /does not invent an August seller total/);
+    assert.match(sellerText, /31 July 2026/);
+    assert.match(sellerText, /3 September 2026/);
+    assert.doesNotMatch(table, /Tether|Poland|China|forecast|Kauf|buy gold/i);
+    assert.doesNotMatch(sellerText, /who to follow|price target|Kauf|buy gold|sell gold/i);
+
+    assert.match(page, /Reported net buyers, YTD through August 2026/);
+    assert.match(page, /\*\*98\*\*/);
+    assert.match(page, /\*\*80\*\*/);
+    assert.match(page, /\*\*19%\*\*/);
+    assert.match(page, /\*\*26%\*\*/);
+    assert.match(page, /\*\*14\.30%\*\*/);
+    assert.match(page, /2,387/);
+    assert.match(page, /648 tonnes/);
+    assert.match(page, /Not a central bank/);
+    assert.match(page, /27\.1 tonnes/);
+    assert.match(page, /22\.01 tonnes/);
+
+    const pageMeta = getMarket("central-bank-gold-reserves");
+    assert.ok(pageMeta);
+    assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
+    assert.deepEqual(
+      pageMeta.related.map((r) => r.href),
+      ["/markets", "/markets/official-gold-book-value"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /official-sellers|cb-gold-sellers|turkey-gold|russia-gold/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /official-sellers|cb-gold-sellers/.test(path)));
   });
 });
