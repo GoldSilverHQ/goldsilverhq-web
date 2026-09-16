@@ -163,16 +163,19 @@ export function RelatedLinks({
   );
 }
 
-/** Titlebild for articles that also use the same artwork as the OG / X card. */
+/**
+ * Titlebild = Querformat bar (same visual language as X / OG cards).
+ * Always frames at 1200×630 aspect — never a tall full-bleed of the illustration.
+ */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
     <figure className="mt-8">
       <img
         src={hero.src}
         alt={hero.alt}
-        width={1024}
-        height={850}
-        className="w-full border border-line object-cover object-center"
+        width={1200}
+        height={630}
+        className="aspect-[1200/630] w-full border border-line object-cover object-center"
         decoding="async"
         fetchPriority="high"
       />
