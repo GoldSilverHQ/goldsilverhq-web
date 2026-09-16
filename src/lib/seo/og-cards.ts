@@ -3,6 +3,7 @@ import {
   getEpisode,
   getIdea,
   getMarket,
+  getPractice,
   historyHub,
   marketsHub,
   pillars,
@@ -89,6 +90,20 @@ export function sharePageForPath(pathname: string): SharePage | null {
       cardTitle: "Gold & Silver in Practice",
       title: seoTitle(practiceHub.titleTag),
       description: pillars.find((p) => p.id === "gold-silver")?.summary ?? "",
+      kicker: pillarKicker("gold-silver"),
+    };
+  }
+
+  const practiceMatch = path.match(/^\/gold-silver\/([^/]+)$/);
+  if (practiceMatch) {
+    const page = getPractice(practiceMatch[1]);
+    if (!page) return null;
+    const tag = page.seo?.titleTag ?? page.title;
+    return {
+      path,
+      cardTitle: tag,
+      title: seoTitle(tag),
+      description: page.summary,
       kicker: pillarKicker("gold-silver"),
     };
   }

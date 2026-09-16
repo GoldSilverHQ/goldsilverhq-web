@@ -51,9 +51,11 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       );
     }
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("information-not-advice")));
-    // Practice hub is on-sitemap; spokes stay off. startsWith("/gold-silver/") avoids TS2367.
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.startsWith("/gold-silver/")));
+    // Practice hub and bars-vs-coins are on-sitemap; other spokes stay off.
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
   });
 
   it("locks backed-money as contract vs slogan (Flavio long-tail first)", () => {

@@ -93,6 +93,10 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
         const body = getBody("markets", parts[1]);
         assert.ok(body, `missing body for ${path}`);
         assertClean(path, bodyText(body));
+      } else if (parts[0] === "gold-silver" && parts.length === 2) {
+        const body = getBody("gold-silver", parts[1]);
+        assert.ok(body, `missing body for ${path}`);
+        assertClean(path, bodyText(body));
       }
     }
   });
