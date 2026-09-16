@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { Breadcrumb, EpisodeBody } from "@/components/Article";
+import { ArticleLead, Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
+import { articleHeroForPath } from "@/lib/content/article-media";
 import { getMarket, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
@@ -8,16 +9,20 @@ export const Route = createFileRoute("/markets/$slug")({
   loader: ({ params }) => {
     const page = getMarket(params.slug);
     if (!page) throw notFound();
-    return page;
+    const path = `/markets/${params.slug}`;
+    return { page, path, hero: articleHeroForPath(path) };
   },
   head: ({ loaderData, params }) => {
-    const title = seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "Markets");
-    const description = loaderData?.summary ?? "";
+    const title = seoTitle(loaderData?.page?.seo?.titleTag ?? loaderData?.page?.title ?? "Markets");
+    const description = loaderData?.page?.summary ?? "";
+    const path = `/markets/${params.slug}`;
+    const hero = loaderData?.hero ?? articleHeroForPath(path);
     return {
       meta: pageShareMeta({
         title,
         description,
-        path: `/markets/${params.slug}`,
+        path,
+        imagePath: hero?.ogSrc,
       }),
     };
   },
@@ -25,7 +30,7 @@ export const Route = createFileRoute("/markets/$slug")({
 });
 
 function MarketPage() {
-  const page = Route.useLoaderData();
+  const { page, hero } = Route.useLoaderData();
   return (
     <SiteShell ui="markets">
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -36,9 +41,13 @@ function MarketPage() {
             { label: page.title },
           ]}
         />
-        <p className="text-xs text-muted">Markets</p>
-        <h1 className="mt-2 font-sans text-4xl">{page.title}</h1>
-        <p className="mt-3 max-w-2xl text-muted">{page.summary}</p>
+        <ArticleLead
+          kicker="Markets"
+          title={page.title}
+          teaser={page.summary}
+          hero={hero}
+          face="sans"
+        />
         <div className="mt-10">
           <EpisodeBody episode={page} clusterSlug="markets" />
         </div>

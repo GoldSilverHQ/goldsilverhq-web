@@ -1,5 +1,5 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { ArticleHeroImage, Breadcrumb, EpisodeBody } from "@/components/Article";
+import { ArticleLead, Breadcrumb, EpisodeBody } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { articleHeroForPath } from "@/lib/content/article-media";
 import { getCluster, getEpisode, seoTitle } from "@/lib/content/map";
@@ -45,10 +45,12 @@ function EpisodePage() {
             { label: episode.title },
           ]}
         />
-        <p className="text-xs text-muted">{cluster.title}</p>
-        <h1 className="mt-2 font-display text-4xl">{episode.title}</h1>
-        <p className="mt-3 max-w-2xl text-muted">{episode.summary}</p>
-        {hero ? <ArticleHeroImage hero={hero} /> : null}
+        <ArticleLead
+          kicker={cluster.title}
+          title={episode.title}
+          teaser={episode.summary}
+          hero={hero}
+        />
         <div className="mt-10">
           <EpisodeBody episode={episode} clusterSlug={cluster.slug} />
         </div>

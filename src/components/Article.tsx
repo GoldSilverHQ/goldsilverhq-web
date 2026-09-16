@@ -164,21 +164,24 @@ export function RelatedLinks({
 }
 
 /**
- * Titlebild = Querformat bar (same visual language as X / OG cards).
- * Always frames at 1200×630 aspect — never a tall full-bleed of the illustration.
+ * Titlebild media bar — X “article” card language (Querformat ≈1200×630).
+ * Minimal chrome: no stroke border; soft clip; object-cover landscape only.
+ * Always under the lead title via `ArticleLead` — never a tall full plate.
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
-    <figure className="mt-8">
-      <img
-        src={hero.src}
-        alt={hero.alt}
-        width={1200}
-        height={630}
-        className="aspect-[1200/630] w-full border border-line object-cover object-center"
-        decoding="async"
-        fetchPriority="high"
-      />
+    <figure className="mt-6 sm:mt-8">
+      <div className="relative -mx-4 overflow-hidden bg-raised sm:mx-0 sm:rounded-xl">
+        <img
+          src={hero.src}
+          alt={hero.alt}
+          width={1200}
+          height={630}
+          className="aspect-[1200/630] w-full object-cover object-center"
+          decoding="async"
+          fetchPriority="high"
+        />
+      </div>
       {hero.caption || hero.credit ? (
         <figcaption className="mt-3 max-w-prose text-sm leading-relaxed text-muted">
           {hero.caption ? <span>{hero.caption}</span> : null}
@@ -187,6 +190,34 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
         </figcaption>
       ) : null}
     </figure>
+  );
+}
+
+/**
+ * Shared article lead: kicker → title → teaser → Querformat titlebild.
+ * Matches X Articles’ reading order on-site (text first, landscape media under),
+ * not the tall full-illustration hero and not image-above-title feed cards.
+ */
+export function ArticleLead({
+  kicker,
+  title,
+  teaser,
+  hero,
+  face = "display",
+}: {
+  kicker?: string;
+  title: string;
+  teaser?: string;
+  hero?: ArticleHeroMeta;
+  face?: ArticleFace;
+}) {
+  return (
+    <header>
+      {kicker ? <p className="text-xs text-muted">{kicker}</p> : null}
+      <h1 className={`mt-2 ${faceClass(face)} text-4xl text-fg`}>{title}</h1>
+      {teaser ? <p className="mt-3 max-w-2xl text-muted">{teaser}</p> : null}
+      {hero ? <ArticleHeroImage hero={hero} /> : null}
+    </header>
   );
 }
 
