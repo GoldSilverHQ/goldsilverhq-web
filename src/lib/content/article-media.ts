@@ -17,7 +17,8 @@
  * 4. Render with `ArticleLead` + `ArticleHeroImage` (`aspect-[1200/630]`, object-cover).
  * 5. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.
  *
- * Only ship real artwork — do not invent placeholders for other articles.
+ * Only ship real artwork — do not invent placeholders. Prefer true PD / CC0 /
+ * U.S. government / expired-copyright sources (no CC BY credit-line requirement).
  */
 
 export type ArticleHero = {
@@ -37,6 +38,102 @@ export type ArticleHero = {
 /** Articles that use a photographic/illustration hero as both titlebild and OG. */
 export const ARTICLE_HEROES: readonly ArticleHero[] = [
   {
+    path: "/history/ancient/why-markets-chose-gold-silver",
+    src: "/images/history/ancient/why-markets-chose-gold-silver.jpg",
+    ogSrc: "/og/cards/history-ancient-why-markets-chose-gold-silver.jpg",
+    alt: "Renaissance painting of a moneylender and his wife weighing coins and examining precious metal at a table.",
+    caption:
+      "Quentin Massys, “The Moneylender and his Wife” (1514) — weighing coined metal in early modern trade.",
+    credit: "Public domain (artist died 1530). Louvre collection reproduction via Wikimedia Commons.",
+  },
+  {
+    path: "/history/ancient/lydia-first-coins",
+    src: "/images/history/ancient/lydia-first-coins.jpg",
+    ogSrc: "/og/cards/history-ancient-lydia-first-coins.jpg",
+    alt: "Line engraving of an early electrum stater: lion on the obverse and animal punch marks on the reverse.",
+    caption:
+      "Early electrum stater (line plate after Barclay V. Head) — lion type from the first-coinage world of Lydia/Ionia.",
+    credit: "Public domain (19th-century numismatic plate; copyright expired).",
+  },
+  {
+    path: "/history/ancient/greece-silver-trade",
+    src: "/images/history/ancient/greece-silver-trade.jpg",
+    ogSrc: "/og/cards/history-ancient-greece-silver-trade.jpg",
+    alt: "Athenian silver tetradrachm: Athena’s head on the left and the owl reverse on the right.",
+    caption:
+      "Athenian owl tetradrachm (5th century BC) — silver coinage that moved with Greek trade.",
+    credit: "CC0 — Cleveland Museum of Art (Open Access).",
+  },
+  {
+    path: "/history/ancient/rome-denarius-aureus",
+    src: "/images/history/ancient/rome-denarius-aureus.jpg",
+    ogSrc: "/og/cards/history-ancient-rome-denarius-aureus.jpg",
+    alt: "Roman gold aureus of Titus beside a silver denarius of Caracalla on a dark background.",
+    caption:
+      "Roman aureus (gold, Titus) and denarius (silver, Caracalla) — the empire’s paired hard-money denominations.",
+    credit: "CC0 — Metropolitan Museum of Art Open Access; CC0 denarius plate via Wikimedia Commons.",
+  },
+  {
+    path: "/history/ancient/solidus-continuity",
+    src: "/images/history/ancient/solidus-continuity.jpg",
+    ogSrc: "/og/cards/history-ancient-solidus-continuity.jpg",
+    alt: "Gold solidus of Byzantine emperor Justinian I, facing portrait with imperial regalia.",
+    caption:
+      "Gold solidus of Justinian I (6th century) — the long-lived successor to late-Roman gold coinage.",
+    credit: "CC0 — Metropolitan Museum of Art Open Access.",
+  },
+  {
+    path: "/history/banks-paper/warehouses-to-public-banks",
+    src: "/images/history/banks-paper/warehouses-to-public-banks.jpg",
+    ogSrc: "/og/cards/history-banks-paper-warehouses-to-public-banks.jpg",
+    alt: "Painting of two money changers at a cluttered table counting and recording coins and notes.",
+    caption:
+      "Marinus van Reymerswaele, “The Moneychangers” — private deposit-and-transfer work before public banks.",
+    credit: "Public domain (artist active 16th century). Hermitage reproduction via Wikimedia Commons.",
+  },
+  {
+    path: "/history/banks-paper/bank-of-amsterdam",
+    src: "/images/history/banks-paper/bank-of-amsterdam.jpg",
+    ogSrc: "/og/cards/history-banks-paper-bank-of-amsterdam.jpg",
+    alt: "Seventeenth-century painting of Amsterdam’s old town hall on Dam Square.",
+    caption:
+      "Pieter Saenredam, old Amsterdam town hall on the Dam — home of the Wisselbank (Bank of Amsterdam).",
+    credit: "Public domain (artist died 1665).",
+  },
+  {
+    path: "/history/banks-paper/bank-of-england",
+    src: "/images/history/banks-paper/bank-of-england.jpg",
+    ogSrc: "/og/cards/history-banks-paper-bank-of-england.jpg",
+    alt: "Historical print showing the Bank of England building in London.",
+    caption: "Historical view of the Bank of England, London (print).",
+    credit: "CC0 — Rijksmuseum (RP-P-2018-2136).",
+  },
+  {
+    path: "/history/banks-paper/john-law",
+    src: "/images/history/banks-paper/john-law.jpg",
+    ogSrc: "/og/cards/history-banks-paper-john-law.jpg",
+    alt: "1720 satirical print of Mississippi Company shareholders fleeing toward Vianen during the bubble collapse.",
+    caption:
+      "“De Malle Actionisten naar Vianen” (1720) from Het Groote Tafereel der Dwaasheid — Mississippi Bubble satire.",
+    credit: "CC0 — Rijksmuseum (RP-P-OB-83.554).",
+  },
+  {
+    path: "/history/banks-paper/assignats",
+    src: "/images/history/banks-paper/assignats.jpg",
+    ogSrc: "/og/cards/history-banks-paper-assignats.jpg",
+    alt: "French Revolutionary assignat note for 100 livres dated 29 September 1790.",
+    caption: "Assignat of 100 livres (29 September 1790) — Revolutionary France’s paper land-backed note.",
+    credit: "CC0 — scanned note plate via Wikimedia Commons.",
+  },
+  {
+    path: "/history/america/early-us-coinage",
+    src: "/images/history/america/early-us-coinage.jpg",
+    ogSrc: "/og/cards/history-america-early-us-coinage.jpg",
+    alt: "Flowing Hair silver dollar coin on a dark background.",
+    caption: "Flowing Hair dollar — early United States silver coinage under the bimetallic Mint Act framework.",
+    credit: "Public domain (U.S. coin design; copyright expired / government work).",
+  },
+  {
     path: "/history/america/jackson-and-the-bank",
     src: "/images/history/america/jackson-and-the-bank.jpg",
     ogSrc: "/og/cards/history-america-jackson-and-the-bank.jpg",
@@ -45,6 +142,112 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
       "“General Jackson Slaying the Many Headed Monster” (1836) — colorized Bank War / Second Bank veto cartoon.",
     credit:
       "Colorized reproduction of the 1836 Bank War cartoon (original: Library of Congress LC-DIG-ds-14740).",
+  },
+  {
+    path: "/history/america/greenbacks-civil-war",
+    src: "/images/history/america/greenbacks-civil-war.jpg",
+    ogSrc: "/og/cards/history-america-greenbacks-civil-war.jpg",
+    alt: "Face of a United States Note (two-dollar greenback) with ornate engraved portrait and green treasury seal.",
+    caption: "United States Note (greenback) — Civil War–era fiat paper circulating beside specie.",
+    credit: "Public domain (U.S. government currency design).",
+  },
+  {
+    path: "/history/america/crime-of-1873",
+    src: "/images/history/america/crime-of-1873.jpg",
+    ogSrc: "/og/cards/history-america-crime-of-1873.jpg",
+    alt: "Nineteenth-century cartoon about the U.S. trade dollar and the silver question after 1873.",
+    caption: "Trade-dollar cartoon — popular memory of the 1873 coinage change and the silver question.",
+    credit: "Public domain (19th-century U.S. print; copyright expired).",
+  },
+  {
+    path: "/history/america/road-back-gold",
+    src: "/images/history/america/road-back-gold.jpg",
+    ogSrc: "/og/cards/history-america-road-back-gold.jpg",
+    alt: "1907 Saint-Gaudens double eagle twenty-dollar gold coin, obverse and reverse.",
+    caption: "Saint-Gaudens double eagle (1907) — high gold coinage of the restored gold-standard era.",
+    credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
+  },
+  {
+    path: "/history/20th-century/panic-1907-fed",
+    src: "/images/history/20th-century/panic-1907-fed.jpg",
+    ogSrc: "/og/cards/history-20th-century-panic-1907-fed.jpg",
+    alt: "1907 Puck magazine cartoon titled “The panic,” showing Wall Street turmoil around the banking crisis.",
+    caption: "“The panic” (Puck, 1907) — Keppler cartoon of the banking scramble that preceded the Fed.",
+    credit: "Public domain — Library of Congress (LCCN 2011647205); no known restrictions.",
+  },
+  {
+    path: "/history/20th-century/classical-gold-standard-end",
+    src: "/images/history/20th-century/classical-gold-standard-end.jpg",
+    ogSrc: "/og/cards/history-20th-century-classical-gold-standard-end.jpg",
+    alt: "Gold sovereign coin minted in India, obverse and reverse side by side.",
+    caption: "British gold sovereign (India mint) — emblem of the classical gold-standard coin network.",
+    credit: "CC0 — open museum plate via Wikimedia Commons.",
+  },
+  {
+    path: "/history/20th-century/weimar-1923",
+    src: "/images/history/20th-century/weimar-1923.jpg",
+    ogSrc: "/og/cards/history-20th-century-weimar-1923.jpg",
+    alt: "Crowded Berlin bank interior during the German hyperinflation period, customers packed at teller windows.",
+    caption: "“In a Berlin Bank” — customers during the German inflation crisis (Library of Congress).",
+    credit: "Public domain — Library of Congress (LCCN 2014716642); no known restrictions.",
+  },
+  {
+    path: "/history/20th-century/1933-gold-recall",
+    src: "/images/history/20th-century/1933-gold-recall.jpg",
+    ogSrc: "/og/cards/history-20th-century-1933-gold-recall.jpg",
+    alt: "First page of Executive Order 6102 ordering the recall of gold coin and bullion in 1933.",
+    caption: "Executive Order 6102 (1933) — U.S. gold coin and bullion recall under FDR.",
+    credit: "Public domain — U.S. government work (National Archives).",
+  },
+  {
+    path: "/history/20th-century/bretton-woods-nixon-1971",
+    src: "/images/history/20th-century/bretton-woods-nixon-1971.jpg",
+    ogSrc: "/og/cards/history-20th-century-bretton-woods-nixon-1971.jpg",
+    alt: "President Richard Nixon seated at a table meeting with economic advisors and Cabinet members.",
+    caption:
+      "President Nixon with economic advisors — the policy circle around the 1971 gold-window decision.",
+    credit: "Public domain — U.S. government photograph (NARA 194579).",
+  },
+  {
+    path: "/history/silver/potosi",
+    src: "/images/history/silver/potosi.jpg",
+    ogSrc: "/og/cards/history-silver-potosi.jpg",
+    alt: "1758 panorama of the Imperial Villa of Potosí with Cerro Rico rising behind the colonial city.",
+    caption: "Villa Imperial de Potosí (1758 panorama) — Cerro Rico and the colonial silver city.",
+    credit: "CC0 — Gaspar Miguel de Berrío panorama reproduction via Wikimedia Commons.",
+  },
+  {
+    path: "/history/silver/piece-of-eight",
+    src: "/images/history/silver/piece-of-eight.jpg",
+    ogSrc: "/og/cards/history-silver-piece-of-eight.jpg",
+    alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse of the Spanish colonial silver coin.",
+    caption: "Carlos III pillar dollar, 8 reales (Mexico, 1771) — the “piece of eight.”",
+    credit: "Public domain (18th-century coin; copyright expired).",
+  },
+  {
+    path: "/history/silver/bimetallism",
+    src: "/images/history/silver/bimetallism.jpg",
+    ogSrc: "/og/cards/history-silver-bimetallism.jpg",
+    alt: "Puck cartoon “The free silver highwayman at it again,” satirizing Free Silver politics.",
+    caption: "“The free silver highwayman at it again” (Puck) — U.S. bimetallism / Free Silver debate.",
+    credit: "Public domain — Library of Congress (LCCN 2012648520); no known restrictions.",
+  },
+  {
+    path: "/history/silver/silver-thursday",
+    src: "/images/history/silver/silver-thursday.jpg",
+    ogSrc: "/og/cards/history-silver-silver-thursday.jpg",
+    alt: "1886 United States one-dollar silver certificate with ornate engraved portrait and silver-certificate seal.",
+    caption:
+      "Series 1886 $1 silver certificate — U.S. paper claim on silver, ancestor of later bullion speculation eras.",
+    credit: "Public domain (U.S. government currency design).",
+  },
+  {
+    path: "/history/silver/monetary-and-industry",
+    src: "/images/history/silver/monetary-and-industry.jpg",
+    ogSrc: "/og/cards/history-silver-monetary-and-industry.jpg",
+    alt: "Bird’s-eye view of Leadville, Colorado, a silver-mining boomtown, circa 1880.",
+    caption: "Leadville, Colorado (c. 1880) — silver mining where monetary metal met industry.",
+    credit: "Public domain — Boston & Ziegler view; copyright expired.",
   },
 ] as const;
 
