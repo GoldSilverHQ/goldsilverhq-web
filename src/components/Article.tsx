@@ -170,7 +170,7 @@ export function RelatedLinks({
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
-    <figure className="mt-6 sm:mt-8">
+    <figure className="mt-5 sm:mt-6">
       <div className="relative -mx-4 overflow-hidden bg-raised sm:mx-0 sm:rounded-xl">
         <img
           src={hero.src}
@@ -183,10 +183,9 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
         />
       </div>
       {hero.caption || hero.credit ? (
-        <figcaption className="mt-3 max-w-prose text-sm leading-relaxed text-muted">
-          {hero.caption ? <span>{hero.caption}</span> : null}
-          {hero.caption && hero.credit ? <span> </span> : null}
-          {hero.credit ? <span>{hero.credit}</span> : null}
+        <figcaption className="mt-2 max-w-prose text-sm leading-snug text-muted">
+          {hero.caption ? <span className="block">{hero.caption}</span> : null}
+          {hero.credit ? <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span> : null}
         </figcaption>
       ) : null}
     </figure>

@@ -18,6 +18,18 @@ const HISTORY_EPISODE_PATHS = historyClusters.flatMap((cluster) =>
   cluster.episodes.map((ep) => `/history/${cluster.slug}/${ep.slug}`),
 );
 
+/** Sitemap Idea + Markets article bodies (not hubs; Practice skipped). */
+const IDEA_MARKETS_ARTICLE_PATHS = [
+  "/sound-money/what-is-sound-money",
+  "/sound-money/hard-money-vs-fiat",
+  "/sound-money/inflation-purchasing-power",
+  "/sound-money/backed-money",
+  "/markets/official-gold-book-value",
+  "/markets/central-bank-gold-reserves",
+  "/markets/gold-silver-ratio",
+  "/markets/physical-silver-demand-by-country",
+] as const;
+
 describe("article hero = OG pattern", () => {
   it("registers Jackson with matching files and share meta", () => {
     const hero = articleHeroForPath("/history/america/jackson-and-the-bank");
@@ -43,6 +55,13 @@ describe("article hero = OG pattern", () => {
   it("covers every History episode with a registered hero", () => {
     assert.equal(HISTORY_EPISODE_PATHS.length, 25);
     for (const path of HISTORY_EPISODE_PATHS) {
+      assert.ok(articleHeroForPath(path), `missing hero for ${path}`);
+    }
+  });
+
+  it("covers every Idea + Markets sitemap article with a registered hero", () => {
+    assert.equal(IDEA_MARKETS_ARTICLE_PATHS.length, 8);
+    for (const path of IDEA_MARKETS_ARTICLE_PATHS) {
       assert.ok(articleHeroForPath(path), `missing hero for ${path}`);
     }
   });
@@ -86,6 +105,7 @@ describe("article hero = OG pattern", () => {
       ARTICLE_HEROES.map((h) => h.path),
     );
     assert.ok(articleHeroOgOverridePaths().includes("/history/america/jackson-and-the-bank"));
-    assert.equal(articleHeroOgOverridePaths().length, 25);
+    assert.ok(articleHeroOgOverridePaths().includes("/sound-money/what-is-sound-money"));
+    assert.equal(articleHeroOgOverridePaths().length, 33);
   });
 });
