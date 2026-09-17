@@ -227,6 +227,77 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/gold-silver-ratio"));
   });
 
+  it("adds 2011 30:1 ratio history on the same page without forecast language", () => {
+    const body = getBody("markets", "gold-silver-ratio");
+    assert.ok(body);
+
+    const history = body.find((s) => s.heading === "What a 30:1 ratio meant in 2011");
+    assert.ok(history, "expected a 2011 30:1 historical block on the existing ratio page");
+    const mining = body.find((s) => s.heading === "Mining ratio vs market ratio");
+    const vault = body.find((s) => s.heading === "London vault holdings — a custody inventory");
+    assert.ok(mining, "mining-vs-market block must stay");
+    assert.ok(vault, "London vault block must stay");
+
+    const text = body
+      .flatMap((s) => [
+        s.heading,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+      ])
+      .join("\n");
+    const historyText = history.paragraphs.join("\n");
+    const historyWords = historyText
+      .replace(/\[[^\]]+\]\([^)]+\)/g, (m) => m.match(/\[([^\]]+)\]/)?.[1] ?? "")
+      .replace(/\*\*/g, "")
+      .trim()
+      .split(/\s+/).length;
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+
+    assert.ok(historyWords >= 250 && historyWords <= 500, `expected 250–500 words in the 2011 block, got ${historyWords}`);
+    assert.match(text, /gold’s dollar price divided by silver/);
+    assert.match(text, /\$1,535\.50/);
+    assert.match(text, /\$48\.70/);
+    assert.match(text, /31\.5/);
+    assert.match(text, /31\.48/);
+    assert.match(text, /28 April 2011/);
+    assert.match(text, /\$41\.85/);
+    assert.match(text, /45\.3/);
+    assert.match(text, /44\.7/);
+    assert.match(text, /http:\/\/www\.321gold\.com\/archives\/fix2011\.html/);
+    assert.match(text, /https:\/\/taxfreegold\.co\.uk\/goldsilverratio2011\.html/);
+    assert.match(text, /\[markets\]\(\/markets\)/);
+    assert.match(text, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
+    assert.match(text, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+    assert.match(hubText, /~30:1 as a named tape, not a target/);
+    assert.match(text, /7\.1/);
+    assert.match(text, /9,632 tonnes/);
+    assert.doesNotMatch(text, /\$150|math catching up|moonshot|old-cycle|Kauf|ebook|buy gold|buy silver/i);
+    assert.doesNotMatch(historyText, /forecast|price target|should buy|hold silver|return to 30/i);
+
+    const page = getMarket("gold-silver-ratio");
+    assert.ok(page);
+    assert.equal(page.title, "What the gold–silver ratio measures (and what it does not)");
+    assert.match(page.summary, /30:1 tape meant in April 2011 is market history, not a price target/);
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      [
+        "/markets",
+        "/markets/physical-silver-demand-by-country",
+        "/history/silver/monetary-and-industry",
+        "/sound-money/hard-money-vs-fiat",
+      ],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/gold-silver-ratio/);
+    assert.doesNotMatch(sitemapSrc, /30-to-1|2011-ratio|gsr-2011/);
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /30-to-1|2011-ratio|gsr-2011/.test(path)));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/gold-silver-ratio"));
+  });
+
   it("refreshes only the Poland block on the reserves page", () => {
     const body = getBody("markets", "central-bank-gold-reserves");
     assert.ok(body);
