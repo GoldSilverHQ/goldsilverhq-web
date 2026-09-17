@@ -51,6 +51,32 @@ describe("article hero = OG pattern", () => {
     }
   });
 
+  it("keeps titlebild and OG card byte-identical (same colorized Querformat asset)", () => {
+    for (const hero of ARTICLE_HEROES) {
+      const srcFile = join(root, "public", hero.src.replace(/^\//, ""));
+      const ogFile = join(root, "public", hero.ogSrc.replace(/^\//, ""));
+      const srcHash = execFileSync("md5sum", [srcFile], { encoding: "utf8" }).split(/\s+/)[0];
+      const ogHash = execFileSync("md5sum", [ogFile], { encoding: "utf8" }).split(/\s+/)[0];
+      assert.equal(srcHash, ogHash, `${hero.path}: hero ${srcHash} != og ${ogHash}`);
+
+      const meta = pageShareMeta({
+        title: "t",
+        description: "d",
+        path: hero.path,
+        imagePath: hero.ogSrc,
+      });
+      const byName = Object.fromEntries(
+        meta.filter((m) => "name" in m).map((m) => [m.name, m.content]),
+      );
+      const byProp = Object.fromEntries(
+        meta.filter((m) => "property" in m).map((m) => [m.property, m.content]),
+      );
+      assert.equal(byProp["og:image"], `${absoluteOgImageUrl(hero.path)}`);
+      assert.equal(byName["twitter:image"], byProp["og:image"]);
+      assert.match(byProp["og:image"], /\/og\/cards\//);
+    }
+  });
+
   it("lists override paths for og:cards skip", () => {
     assert.deepEqual(articleHeroOgOverridePaths(), [
       "/history/america/jackson-and-the-bank",
