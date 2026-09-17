@@ -107,7 +107,10 @@ describe("markets page thicken (no new URLs)", () => {
 
     const page = getMarket("physical-silver-demand-by-country");
     assert.ok(page);
-    assert.equal(page.title, "What physical silver demand by country measures (and what it does not)");
+    assert.equal(
+      page.title,
+      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+    );
     assert.deepEqual(
       page.related.map((r) => r.href),
       ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
@@ -118,6 +121,95 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(sitemapSrc, /industrial-silver|silver-fabrication-by-country/);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/physical-silver-demand-by-country"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /industrial-silver|silver-fabrication/.test(path)));
+  });
+
+  it("adds dated WSS 2026 jewelry fabrication without replacing the other rankings", () => {
+    const body = getBody("markets", "physical-silver-demand-by-country");
+    assert.ok(body);
+
+    const investment = body.find((s) => s.heading === "2024 country snapshots");
+    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
+    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
+    const jewelry = body.find((s) => s.heading === "2025 jewelry fabrication by country — a fourth table");
+    const usgs = body.find((s) => s.heading === "Mine supply on the USGS book — not a new boom");
+    assert.ok(investment, "2024 investment ranking must stay");
+    assert.ok(coins, "coins-and-medals mint table must stay");
+    assert.ok(industrial, "2025 industrial country block must stay");
+    assert.ok(mix, "2025 industrial-mix block must stay");
+    assert.ok(jewelry, "expected a separate 2025 jewelry country block");
+    assert.ok(usgs, "expected a short USGS mine-output context on the same spoke");
+    assert.ok(jewelry.table);
+
+    const text = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const jewelryTable = jewelry.table.rows.flat().join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+    const neighbor = getBody("markets", "gold-silver-ratio");
+    assert.ok(neighbor);
+    const neighborText = neighbor.flatMap((s) => s.paragraphs).join("\n");
+
+    assert.match(text, /United States 64\.9/);
+    assert.match(text, /India 59\.8/);
+    assert.match(text, /Jewelry fabrication ≠ investment offtake/);
+    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /87\.9 million ounces/);
+    assert.match(text, /657\.4 million ounces/);
+    assert.match(text, /189\.3 million ounces/);
+    assert.match(jewelryTable, /India/);
+    assert.match(jewelryTable, /\*\*70\.3\*\*/);
+    assert.match(jewelryTable, /Thailand/);
+    assert.match(jewelryTable, /\*\*28\.5\*\*/);
+    assert.match(jewelryTable, /Italy/);
+    assert.match(jewelryTable, /\*\*18\.0\*\*/);
+    assert.match(jewelryTable, /China/);
+    assert.match(jewelryTable, /\*\*16\.2\*\*/);
+    assert.match(jewelryTable, /United States/);
+    assert.match(jewelryTable, /\*\*10\.3\*\*/);
+    assert.match(jewelryTable, /\*\*189\.3\*\*/);
+    assert.match(jewelryTable, /205\.1/);
+    assert.match(text, /workshop address/i);
+    assert.match(text, /27,300 tonnes/);
+    assert.match(text, /25,300 tonnes/);
+    assert.match(text, /26,000 tonnes/);
+    assert.match(text, /Mineral Commodity Summaries 2016/);
+    assert.match(text, /Mineral Commodity Summaries 2026/);
+    assert.match(text, /\[markets\]\(\/markets\)/);
+    assert.match(text, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
+    assert.match(hubText, /jewelry-fabrication/);
+    assert.match(neighborText, /jewelry fabrication as a workshop table/);
+    assert.doesNotMatch(text, /639\.6|159\.4|forecast|ebook|Kauf|buy silver in India|price target/i);
+
+    const page = getMarket("physical-silver-demand-by-country");
+    assert.ok(page);
+    assert.equal(
+      page.title,
+      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+    );
+    assert.match(page.summary, /Jewelry fabrication by country/);
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/physical-silver-demand-by-country/);
+    assert.doesNotMatch(sitemapSrc, /jewelry-fabrication|jewelry-demand-by-country|silver-jewelry-by-country/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/physical-silver-demand-by-country"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /jewelry-fabrication|jewelry-demand-by-country/.test(path)));
   });
 
   it("adds mining-vs-market on the gold–silver ratio page without new URLs", () => {
