@@ -249,6 +249,72 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     caption: "Leadville, Colorado (c. 1880) — silver mining where monetary metal met industry.",
     credit: "Public domain — Boston & Ziegler view; copyright expired.",
   },
+  // Idea (Sound Money definitions)
+  {
+    path: "/sound-money/what-is-sound-money",
+    src: "/images/sound-money/what-is-sound-money.jpg",
+    ogSrc: "/og/cards/sound-money-what-is-sound-money.jpg",
+    alt: "Renaissance painting of a woman weighing gold coins on a balance scale at a table.",
+    caption: "Jan Sanders van Hemessen, “Woman Weighing Gold” (c. 1530) — testing the metal, not the slogan.",
+    credit: "Public domain (artist died 1556). Gemäldegalerie, Berlin reproduction via Wikimedia Commons.",
+  },
+  {
+    path: "/sound-money/hard-money-vs-fiat",
+    src: "/images/sound-money/hard-money-vs-fiat.jpg",
+    ogSrc: "/og/cards/sound-money-hard-money-vs-fiat.jpg",
+    alt: "Face of a 1928 United States ten-dollar gold certificate with gold treasury seal.",
+    caption: "Series 1928 $10 gold certificate — paper that named a metal claim while convertibility still held.",
+    credit: "Public domain (U.S. government currency design).",
+  },
+  {
+    path: "/sound-money/inflation-purchasing-power",
+    src: "/images/sound-money/inflation-purchasing-power.jpg",
+    ogSrc: "/og/cards/sound-money-inflation-purchasing-power.jpg",
+    alt: "Obverse of a 1923 German railways emergency note for five hundred billion marks.",
+    caption: "German railways Notgeld, 500 billion marks (1923) — a unit that stopped holding purchasing power.",
+    credit: "Public domain (1923 note; copyright expired).",
+  },
+  {
+    path: "/sound-money/backed-money",
+    src: "/images/sound-money/backed-money.jpg",
+    ogSrc: "/og/cards/sound-money-backed-money.jpg",
+    alt: "Stacks of gold bars stored on shelves inside a government vault.",
+    caption: "Gold bars in a U.S. vault — a reserve photograph is not the same as a public redeemability claim.",
+    credit: "Public domain — U.S. government photograph (NARA 296609).",
+  },
+  // Markets fact pages
+  {
+    path: "/markets/official-gold-book-value",
+    src: "/images/markets/official-gold-book-value.jpg",
+    ogSrc: "/og/cards/markets-official-gold-book-value.jpg",
+    alt: "Face of a 1900 United States ten-thousand-dollar gold certificate.",
+    caption: "Series 1900 $10,000 gold certificate — official gold dollars on paper, ancestor of today’s book rate.",
+    credit: "Public domain (U.S. government currency design).",
+  },
+  {
+    path: "/markets/central-bank-gold-reserves",
+    src: "/images/markets/central-bank-gold-reserves.jpg",
+    ogSrc: "/og/cards/markets-central-bank-gold-reserves.jpg",
+    alt: "Exterior of the United States Bullion Depository at Fort Knox.",
+    caption: "U.S. Bullion Depository, Fort Knox — one official stock among many published reserve books.",
+    credit: "Public domain — U.S. government photograph.",
+  },
+  {
+    path: "/markets/gold-silver-ratio",
+    src: "/images/markets/gold-silver-ratio.jpg",
+    ogSrc: "/og/cards/markets-gold-silver-ratio.jpg",
+    alt: "Gold and silver coins laid side by side for comparison.",
+    caption: "Gold and silver coins together — two prices, one quotient on a named date.",
+    credit: "CC0 — open photograph via Wikimedia Commons.",
+  },
+  {
+    path: "/markets/physical-silver-demand-by-country",
+    src: "/images/markets/physical-silver-demand-by-country.jpg",
+    ogSrc: "/og/cards/markets-physical-silver-demand-by-country.jpg",
+    alt: "Historical Chinese silver ingot (sycee) resting on a surface.",
+    caption: "Ming-dynasty silver ingot (sycee) — physical silver as offtake, not a screen quote.",
+    credit: "CC0 — open museum photograph via Wikimedia Commons.",
+  },
 ] as const;
 
 const byPath = new Map(ARTICLE_HEROES.map((h) => [h.path.replace(/\/+$/, "") || "/", h]));
