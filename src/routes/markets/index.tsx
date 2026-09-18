@@ -28,20 +28,21 @@ function MarketsHub() {
           <ArticleSections sections={marketsHubBody} face="sans" />
         </div>
 
-        <h2 className="mt-16 font-sans text-3xl">The four topics</h2>
-        <p className="mt-2 max-w-prose text-muted">Book value, reserves, the ratio, and country offtake — open any one.</p>
+        <h2 className="mt-16 font-sans text-3xl">Where the captions live</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Book value, reserves, the ratio, and country offtake — each page follows one number.
+        </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {marketPages.map((page, i) => (
+          {marketPages.map((page) => (
             <Link
               key={page.slug}
               to="/markets/$slug"
               params={{ slug: page.slug }}
               className="rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
             >
-              <p className="text-xs text-gold">Topic {i + 1}</p>
-              <h3 className="mt-2 font-sans text-2xl">{page.title}</h3>
+              <h3 className="font-sans text-2xl">{page.title}</h3>
               <p className="mt-2 text-sm text-muted">{page.summary}</p>
-              <p className="mt-4 text-sm text-gold">Open page →</p>
+              <p className="mt-4 text-sm text-gold">Continue →</p>
             </Link>
           ))}
         </div>

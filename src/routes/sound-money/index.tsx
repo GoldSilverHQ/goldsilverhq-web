@@ -29,19 +29,18 @@ function IdeaHub() {
           <ArticleSections sections={soundMoneyHubBody} />
         </div>
 
-        <h2 className="mt-16 font-display text-3xl">The definitions</h2>
+        <h2 className="mt-16 font-display text-3xl">Where the words settle</h2>
         <p className="mt-2 max-w-prose text-muted">
-          Four vocabulary pages, plus a short media disclaimer. Open any one; each links its neighbors.
+          Four vocabulary pages, plus a short media line. Open any fog; each page names its neighbors.
         </p>
         <ol className="mt-10 grid gap-3">
-          {ideaPages.map((page, i) => (
+          {ideaPages.map((page) => (
             <li key={page.slug}>
               <Link
                 to="/sound-money/$slug"
                 params={{ slug: page.slug }}
                 className="flex gap-4 rounded-lg bg-surface px-4 py-4 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
               >
-                <span className="w-6 text-sm text-gold">{i + 1}</span>
                 <span>
                   <span className="block font-medium">{page.title}</span>
                   <span className="text-sm text-muted">{page.summary}</span>

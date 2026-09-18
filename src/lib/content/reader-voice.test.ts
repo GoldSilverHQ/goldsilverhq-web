@@ -47,7 +47,7 @@ const FORBIDDEN =
 
 /** Structural blog chrome that hubs must not lead with. */
 const STRUCTURAL_HUB_CHROME =
-  /What you will find here|What this is not|How to read an article|How to read a markets page|Where the other sections sit|A reading order|Where to start|Where to enter the modern story|How the five chapters form a path|Start with a date, or with a definition|Four pages that open the rest of the site|Read by chapter|Read by definition|Read by topic/;
+  /What you will find here|What this is not|How to read an article|How to read a markets page|Where the other sections sit|A reading order|Where to start|Where to enter the modern story|How the five chapters form a path|Start with a date, or with a definition|Four pages that open the rest of the site|Read by chapter|Read by definition|Read by topic|Articles in this chapter|Five chapters$|The five chapters|The four topics|The definitions/;
 
 function assertClean(label: string, text: string) {
   assert.doesNotMatch(text, FORBIDDEN, `${label} still has writer/taxonomy jargon`);
@@ -75,6 +75,27 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const opener = historyHubBody[0]?.paragraphs[0] ?? "";
     assert.match(opener, /1923|1971/);
     assert.doesNotMatch(opener, /This section records|not a glossary|not a sales page/);
+  });
+
+  it("keeps hub episode doors as narrative links, not catalog-only lists", () => {
+    for (const [label, body] of [
+      ["history hub", historyHubBody],
+      ["20th-century hub", twentiethCenturyHubBody],
+      ["america hub", americaHubBody],
+      ["silver hub", silverHubBody],
+      ["banks-paper hub", banksPaperHubBody],
+      ["ancient hub", ancientHubBody],
+      ["sound-money hub", soundMoneyHubBody],
+      ["markets hub", marketsHubBody],
+    ] as const) {
+      const text = bodyText(body);
+      assert.doesNotMatch(text, /^Articles in this chapter$/m, `${label} still has catalog list heading`);
+      assert.match(text, /\]\(\//, `${label} must still door into child pages`);
+    }
+    const history = bodyText(historyHubBody);
+    assert.match(history, /\[Weimar \*\*1923\*\*\]\(\/history\/20th-century\/weimar-1923\)/);
+    assert.match(history, /\[John Law \*\*1720\*\*\]\(\/history\/banks-paper\/john-law\)/);
+    assert.match(history, /\[Potosí\]\(\/history\/silver\/potosi\)/);
   });
 
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
@@ -156,6 +177,11 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       assert.doesNotMatch(src, /Read by chapter/);
       assert.doesNotMatch(src, /Read by definition/);
       assert.doesNotMatch(src, /Read by topic/);
+      assert.doesNotMatch(src, /The five chapters/);
+      assert.doesNotMatch(src, /The four topics/);
+      assert.doesNotMatch(src, />Chapter \{/);
+      assert.doesNotMatch(src, />Topic \{/);
+      assert.doesNotMatch(src, /All history chapters/);
     }
   });
 
