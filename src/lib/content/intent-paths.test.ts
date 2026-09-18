@@ -33,6 +33,9 @@ function bodyText(sections: Section[]) {
 const TIP_PATTERN =
   /buy gold now|buy silver now|best gold stock|price target for|NYSE|TSX|ticker symbol/i;
 
+const ARRIVAL =
+  /If you arrived|start here:|New here\?|what caused Weimar hyperinflation|what was the piece of eight\?|what was the Panic of 1907\?|what was Silver Thursday\?|why 1971 mattered|central-bank gold buying|vocabulary first, not a shop/i;
+
 describe("intent paths (existing URLs only)", () => {
   it("keeps the sitemap freeze — no new mining/intent URLs", () => {
     assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
@@ -42,280 +45,102 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(!PHASE1_SITEMAP_PATHS.some((p) => /\/intent|\/mining|\/miner/.test(p)));
   });
 
-  it("path 1 — sound-money definition journey", () => {
-    const hub = bodyText(soundMoneyHubBody);
-    assert.match(hub, /what is sound money\?/i);
-    assert.match(hub, /vocabulary first/i);
-    assert.doesNotMatch(hub, TIP_PATTERN);
+  it("drops query-shaped arrival openings from reading copy", () => {
+    const bodies = readFileSync(join(root, "lib/content/bodies.ts"), "utf8");
+    assert.doesNotMatch(bodies, ARRIVAL);
 
+    const hubs = [
+      historyHubBody,
+      soundMoneyHubBody,
+      marketsHubBody,
+      twentiethCenturyHubBody,
+      americaHubBody,
+      silverHubBody,
+    ];
+    for (const hub of hubs) assert.doesNotMatch(bodyText(hub), ARRIVAL);
+
+    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.doesNotMatch(home, ARRIVAL);
+    assert.doesNotMatch(home, /weimar-1923|piece-of-eight|panic-1907-fed|silver-thursday/);
+
+    const desk = readFileSync(join(root, "components/FullDesk.tsx"), "utf8");
+    assert.doesNotMatch(desk, /not a reason for a private holder to copy a central bank/);
+    assert.doesNotMatch(desk, /not a forecast or a tip to buy metal/);
+    assert.doesNotMatch(desk, /weimar-1923/);
+  });
+
+  it("keeps documentary openings and related links", () => {
     const def = bodyText(getBody("sound-money", "what-is-sound-money")!);
-    assert.match(def, /what is sound money\?/i);
+    assert.match(def, /A note can clear the till on Monday/);
     assert.match(def, /\[hard money (?:vs|versus) fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(def, /\[Nixon shock\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
     assert.doesNotMatch(def, TIP_PATTERN);
-
-    const inflation = bodyText(getBody("sound-money", "inflation-purchasing-power")!);
-    assert.match(inflation, /inflation \/ purchasing power/i);
-    assert.match(inflation, /\[Money\]\(\/desk\)/);
-    assert.match(inflation, /\[Weimar hyperinflation\]\(\/history\/20th-century\/weimar-1923\)/);
-    assert.doesNotMatch(inflation, TIP_PATTERN);
-
-    const page = getIdea("what-is-sound-money");
-    assert.ok(page);
-    assert.ok(page.related.some((r) => r.href === "/history/20th-century/bretton-woods-nixon-1971"));
-  });
-
-  it("path 2 — 1971 gold-window journey", () => {
-    const history = bodyText(historyHubBody);
-    assert.match(history, /why 1971 mattered/i);
-    assert.match(history, /\[Sound Money\]\(\/sound-money\)/);
-
-    const century = bodyText(twentiethCenturyHubBody);
-    assert.match(century, /why 1971 mattered/i);
-    assert.match(century, /gold window/i);
+    const idea = getIdea("what-is-sound-money");
+    assert.ok(idea?.related?.some((r) => r.href === "/history/20th-century/bretton-woods-nixon-1971"));
 
     const nixon = bodyText(getBody("20th-century", "bretton-woods-nixon-1971")!);
-    assert.match(nixon, /why 1971 mattered/i);
+    assert.match(nixon, /On Sunday evening, \*\*15 August 1971\*\*/);
     assert.match(nixon, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
-    assert.match(nixon, /\[what “backed” means\]\(\/sound-money\/backed-money\)/);
-    assert.match(nixon, /\[what is sound money\?\]\(\/sound-money\/what-is-sound-money\)/);
     assert.doesNotMatch(nixon, TIP_PATTERN);
-
-    const book = bodyText(getBody("markets", "official-gold-book-value")!);
-    assert.match(book, /1971/);
-    assert.match(book, /\[central banks report gold in reserves\]\(\/markets\/central-bank-gold-reserves\)/);
-    assert.match(book, /\[what “backed” means\]\(\/sound-money\/backed-money\)/);
-
-    const cluster = getCluster("20th-century");
-    const episode = cluster?.episodes.find((e) => e.slug === "bretton-woods-nixon-1971");
-    assert.ok(episode);
-    assert.ok(episode.related.some((r) => r.href === "/markets/official-gold-book-value"));
-    assert.ok(episode.related.some((r) => r.href === "/sound-money/backed-money"));
-    assert.ok(episode.related.some((r) => r.href === "/sound-money/what-is-sound-money"));
-  });
-
-  it("path 3 — central-bank gold buying journey", () => {
-    const hub = bodyText(marketsHubBody);
-    assert.match(hub, /central-bank gold buying/i);
-    assert.match(hub, /not a reason to copy a central bank/i);
-    assert.match(hub, /\[Central-bank gold reserves\]\(\/markets\/central-bank-gold-reserves\)/);
-    assert.doesNotMatch(hub, TIP_PATTERN);
+    const century = getCluster("20th-century");
+    const nixonEp = century?.episodes.find((e) => e.slug === "bretton-woods-nixon-1971");
+    assert.ok(nixonEp?.related?.some((r) => r.href === "/markets/official-gold-book-value"));
+    assert.ok(nixonEp?.related?.some((r) => r.href === "/sound-money/backed-money"));
+    assert.ok(nixonEp?.related?.some((r) => r.href === "/sound-money/what-is-sound-money"));
 
     const cb = bodyText(getBody("markets", "central-bank-gold-reserves")!);
-    assert.match(cb, /central-bank gold buying/i);
-    assert.match(cb, /not a tip to copy a central bank/i);
-    assert.match(cb, /\[Official gold\]\(\/desk\)/);
-    assert.match(cb, /\[what “backed” means\]\(\/sound-money\/backed-money\)/);
+    assert.match(cb, /It is not a shopping list/);
     assert.doesNotMatch(cb, /buy gold now|best gold stock|copy the central bank as advice/i);
-
-    const page = getMarket("central-bank-gold-reserves");
-    assert.ok(page);
-    assert.ok(page.related.some((r) => r.href === "/sound-money/backed-money"));
-    assert.ok(page.related.some((r) => r.href === "/history/20th-century/bretton-woods-nixon-1971"));
-  });
-
-  it("home and desk soft bridges for the three new paths", () => {
-    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
-    assert.match(home, /what is sound money\?/);
-    assert.match(home, /1971 gold-window close/);
-    assert.match(home, /weimar-1923/);
-    assert.match(home, /central-bank-gold-reserves/);
-    assert.match(home, /not a tip to copy a central bank/);
-    assert.match(home, /backed-money/);
-
-    const desk = readFileSync(join(root, "components/FullDesk.tsx"), "utf8");
-    assert.match(desk, /not a reason for a private holder to copy a central bank/);
-    assert.match(desk, /central-bank-gold-reserves/);
-    assert.match(desk, /inflation-purchasing-power/);
-    assert.match(desk, /bretton-woods-nixon-1971/);
-    assert.match(desk, /weimar-1923/);
-  });
-
-  it("path 4 — Weimar / hyperinflation journey", () => {
-    const history = bodyText(historyHubBody);
-    assert.match(history, /what caused Weimar hyperinflation/i);
-    assert.match(history, /\[inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
-
-    const century = bodyText(twentiethCenturyHubBody);
-    assert.match(century, /what caused Weimar hyperinflation/i);
-    assert.match(century, /Weimar/i);
+    const cbPage = getMarket("central-bank-gold-reserves");
+    assert.ok(cbPage?.related?.some((r) => r.href === "/sound-money/backed-money"));
+    assert.ok(cbPage?.related?.some((r) => r.href === "/history/20th-century/bretton-woods-nixon-1971"));
 
     const weimar = bodyText(getBody("20th-century", "weimar-1923")!);
-    assert.match(weimar, /what caused Weimar hyperinflation/i);
-    assert.match(weimar, /\[inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
-    assert.match(weimar, /\[Money\]\(\/desk\)/);
-    assert.match(weimar, /\[assignats\]\(\/history\/banks-paper\/assignats\)/);
+    assert.match(weimar, /In the autumn of \*\*1923\*\*/);
     assert.doesNotMatch(weimar, TIP_PATTERN);
-    assert.doesNotMatch(weimar, /buy gold now|forecast next year|every currency will/i);
-
-    const inflation = bodyText(getBody("sound-money", "inflation-purchasing-power")!);
-    assert.match(inflation, /Weimar \/ hyperinflation/i);
-    assert.match(inflation, /\[Weimar 1923\]\(\/history\/20th-century\/weimar-1923\)/);
-
-    const hub = bodyText(soundMoneyHubBody);
-    assert.match(hub, /what caused Weimar hyperinflation/i);
-    assert.match(hub, /\[Weimar 1923\]\(\/history\/20th-century\/weimar-1923\)/);
-
-    const cluster = getCluster("20th-century");
-    const episode = cluster?.episodes.find((e) => e.slug === "weimar-1923");
-    assert.ok(episode);
-    assert.ok(episode.related.length > 0);
-    assert.ok(episode.related.some((r) => r.href === "/sound-money/inflation-purchasing-power"));
-    assert.ok(episode.related.some((r) => r.href === "/history/banks-paper/assignats"));
-    assert.ok(episode.related.some((r) => r.href === "/sound-money/what-is-sound-money"));
-  });
-
-  it("path 5 — piece of eight / Spanish dollar journey", () => {
-    const history = bodyText(historyHubBody);
-    assert.match(history, /what was the piece of eight\?/i);
-    assert.match(history, /\[silver\]\(\/history\/silver\/piece-of-eight\)/);
-
-    const silverHub = bodyText(silverHubBody);
-    assert.match(silverHub, /what was the piece of eight\?/i);
-    assert.match(silverHub, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
-    assert.match(silverHub, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    const weimarEp = century?.episodes.find((e) => e.slug === "weimar-1923");
+    assert.ok((weimarEp?.related?.length ?? 0) > 0);
+    assert.ok(weimarEp?.related?.some((r) => r.href === "/sound-money/inflation-purchasing-power"));
+    assert.ok(weimarEp?.related?.some((r) => r.href === "/history/banks-paper/assignats"));
+    assert.ok(weimarEp?.related?.some((r) => r.href === "/sound-money/what-is-sound-money"));
 
     const piece = bodyText(getBody("silver", "piece-of-eight")!);
-    assert.match(piece, /what was the piece of eight\?/i);
+    assert.match(piece, /For more than two centuries/);
     assert.match(piece, /\[Potosí\]\(\/history\/silver\/potosi\)/);
     assert.match(piece, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
-    assert.match(piece, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
-    assert.match(piece, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
     assert.doesNotMatch(piece, TIP_PATTERN);
-    assert.doesNotMatch(piece, /buy silver now|price target for|should remonetize/i);
-
-    const potosi = bodyText(getBody("silver", "potosi")!);
-    assert.match(potosi, /what was the piece of eight\?/i);
-    assert.match(potosi, /\[Spanish dollar\]\(\/history\/silver\/piece-of-eight\)/);
-
-    const early = bodyText(getBody("america", "early-us-coinage")!);
-    assert.match(early, /piece of eight/i);
-    assert.match(early, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
-
-    const bimet = bodyText(getBody("silver", "bimetallism")!);
-    assert.match(bimet, /piece of eight/);
-    assert.match(bimet, /circulating coin habit/);
-
-    const gsr = bodyText(getBody("markets", "gold-silver-ratio")!);
-    assert.match(gsr, /piece of eight/i);
-    assert.match(gsr, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
-
-    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
-    assert.match(home, /piece-of-eight/);
-    assert.match(home, /piece of eight/);
-
-    const cluster = getCluster("silver");
-    const episode = cluster?.episodes.find((e) => e.slug === "piece-of-eight");
-    assert.ok(episode);
-    assert.ok(episode.related.some((r) => r.href === "/history/silver/potosi"));
-    assert.ok(episode.related.some((r) => r.href === "/history/america/early-us-coinage"));
-    assert.ok(episode.related.some((r) => r.href === "/history/silver/bimetallism"));
-    assert.ok(episode.related.some((r) => r.href === "/markets/gold-silver-ratio"));
-  });
-
-  it("path 6 — Panic of 1907 journey", () => {
-    const history = bodyText(historyHubBody);
-    assert.match(history, /what was the Panic of 1907\?/i);
-    assert.match(history, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
-
-    const century = bodyText(twentiethCenturyHubBody);
-    assert.match(century, /what was the Panic of 1907\?/i);
-    assert.match(century, /Knickerbocker/);
-    assert.doesNotMatch(century, TIP_PATTERN);
-
-    const america = bodyText(americaHubBody);
-    assert.match(america, /what was the Panic of 1907\?/i);
-    assert.match(america, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+    const silver = getCluster("silver");
+    const pieceEp = silver?.episodes.find((e) => e.slug === "piece-of-eight");
+    assert.ok(pieceEp?.related?.some((r) => r.href === "/history/silver/potosi"));
+    assert.ok(pieceEp?.related?.some((r) => r.href === "/history/america/early-us-coinage"));
+    assert.ok(pieceEp?.related?.some((r) => r.href === "/history/silver/bimetallism"));
+    assert.ok(pieceEp?.related?.some((r) => r.href === "/markets/gold-silver-ratio"));
 
     const panic = bodyText(getBody("20th-century", "panic-1907-fed")!);
-    assert.match(panic, /what was the Panic of 1907\?/i);
-    assert.match(panic, /\[road back toward gold\]\(\/history\/america\/road-back-gold\)/);
-    assert.match(panic, /\[Jackson and the Bank\]\(\/history\/america\/jackson-and-the-bank\)/);
+    assert.match(panic, /On \*\*22 October 1907\*\*/);
     assert.match(panic, /\[end of the classical gold standard\]\(\/history\/20th-century\/classical-gold-standard-end\)/);
     assert.doesNotMatch(panic, TIP_PATTERN);
     assert.doesNotMatch(panic, /end the Fed|buy gold now|price target for/i);
-
-    const classical = bodyText(getBody("20th-century", "classical-gold-standard-end")!);
-    assert.match(classical, /what was the Panic of 1907\?/i);
-    assert.match(classical, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
-
-    const jackson = bodyText(getBody("america", "jackson-and-the-bank")!);
-    assert.match(jackson, /what was the Panic of 1907\?/i);
-    assert.match(jackson, /not this veto/);
-
-    const road = bodyText(getBody("america", "road-back-gold")!);
-    assert.match(road, /what was the Panic of 1907\?/i);
-    assert.match(road, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
-    assert.doesNotMatch(road, /15 August 1971/);
-
-    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
-    assert.match(home, /panic-1907-fed/);
-    assert.match(home, /Panic of 1907/);
-
-    const cluster = getCluster("20th-century");
-    const episode = cluster?.episodes.find((e) => e.slug === "panic-1907-fed");
-    assert.ok(episode);
-    assert.ok(episode.related.length >= 4);
-    assert.ok(episode.related.some((r) => r.href === "/history/20th-century/classical-gold-standard-end"));
-    assert.ok(episode.related.some((r) => r.href === "/history/america/jackson-and-the-bank"));
-    assert.ok(episode.related.some((r) => r.href === "/history/america/road-back-gold"));
-
-    const americaCluster = getCluster("america");
-    assert.ok(americaCluster?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
-    assert.ok(cluster?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
-  });
-
-  it("path 7 — Silver Thursday journey", () => {
-    const history = bodyText(historyHubBody);
-    assert.match(history, /what was Silver Thursday\?/i);
-    assert.match(history, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
-
-    const silverHub = bodyText(silverHubBody);
-    assert.match(silverHub, /what was Silver Thursday\?/i);
-    assert.match(silverHub, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
-    assert.doesNotMatch(silverHub, TIP_PATTERN);
+    const panicEp = century?.episodes.find((e) => e.slug === "panic-1907-fed");
+    assert.ok((panicEp?.related?.length ?? 0) >= 4);
+    assert.ok(panicEp?.related?.some((r) => r.href === "/history/20th-century/classical-gold-standard-end"));
+    assert.ok(panicEp?.related?.some((r) => r.href === "/history/america/jackson-and-the-bank"));
+    assert.ok(panicEp?.related?.some((r) => r.href === "/history/america/road-back-gold"));
+    const america = getCluster("america");
+    assert.ok(america?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
+    assert.ok(century?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
 
     const thursday = bodyText(getBody("silver", "silver-thursday")!);
-    assert.match(thursday, /what was Silver Thursday\?/i);
-    assert.match(thursday, /27 March 1980/);
+    assert.match(thursday, /On \*\*27 March 1980\*\*/);
     assert.match(thursday, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
-    assert.match(thursday, /\[Coinage Act of 1873\]\(\/history\/america\/crime-of-1873\)/);
-    assert.match(thursday, /\[mint-ratio\]\(\/history\/silver\/bimetallism\)/);
     assert.match(thursday, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
     assert.doesNotMatch(thursday, TIP_PATTERN);
-    assert.doesNotMatch(thursday, /should buy|price target to|repeat the squeeze|next squeeze/i);
-
-    const crime = bodyText(getBody("america", "crime-of-1873")!);
-    assert.match(crime, /what was Silver Thursday\?/i);
-    assert.match(crime, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
-
-    const bimet = bodyText(getBody("silver", "bimetallism")!);
-    assert.match(bimet, /what was Silver Thursday\?/i);
-    assert.match(bimet, /not this mint-ratio machine/);
-
-    const industry = bodyText(getBody("silver", "monetary-and-industry")!);
-    assert.match(industry, /what was Silver Thursday\?/i);
-    assert.match(industry, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
-
-    const gsr = bodyText(getBody("markets", "gold-silver-ratio")!);
-    assert.match(gsr, /what was Silver Thursday\?/i);
-    assert.match(gsr, /January \*\*17\.2\*\*/);
-    assert.doesNotMatch(gsr, TIP_PATTERN);
-
-    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
-    assert.match(home, /silver-thursday/);
-    assert.match(home, /Silver Thursday/);
-
-    const cluster = getCluster("silver");
-    const episode = cluster?.episodes.find((e) => e.slug === "silver-thursday");
-    assert.ok(episode);
-    assert.ok(episode.related.length >= 4);
-    assert.ok(episode.related.some((r) => r.href === "/markets/gold-silver-ratio"));
-    assert.ok(episode.related.some((r) => r.href === "/history/silver/monetary-and-industry"));
-    assert.ok(episode.related.some((r) => r.href === "/history/america/crime-of-1873"));
-    assert.ok(episode.related.some((r) => r.href === "/history/silver/bimetallism"));
-    assert.ok(cluster?.related?.some((r) => r.href === "/history/silver/silver-thursday"));
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
+    const thursdayEp = silver?.episodes.find((e) => e.slug === "silver-thursday");
+    assert.ok((thursdayEp?.related?.length ?? 0) >= 4);
+    assert.ok(thursdayEp?.related?.some((r) => r.href === "/markets/gold-silver-ratio"));
+    assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/silver/monetary-and-industry"));
+    assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/america/crime-of-1873"));
+    assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/silver/bimetallism"));
+    assert.ok(silver?.related?.some((r) => r.href === "/history/silver/silver-thursday"));
   });
 });

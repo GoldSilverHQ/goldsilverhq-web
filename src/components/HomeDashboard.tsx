@@ -122,57 +122,6 @@ export function HomeDashboard() {
           note={`Identifiable bullion ÷ ${SILVER_2024.asOf} fabrication.`}
         />
       </section>
-      <p className="mt-3 max-w-3xl text-sm text-muted">
-        Official tonnes are a reserve composition — not a tip to copy a central bank. Read{" "}
-        <a href="/markets/central-bank-gold-reserves" className="text-gold hover:text-gold-soft">
-          how central banks report gold
-        </a>
-        , open{" "}
-        <Link to="/desk" className="text-gold hover:text-gold-soft">
-          Official gold on the desk
-        </Link>
-        , or ask{" "}
-        <a href="/sound-money/backed-money" className="text-gold hover:text-gold-soft">
-          what “backed” means
-        </a>
-        .
-      </p>
-
-      <p className="mt-4 max-w-3xl text-sm text-muted">
-        New here? Start with{" "}
-        <a href="/sound-money/what-is-sound-money" className="text-gold hover:text-gold-soft">
-          what is sound money?
-        </a>
-        , the{" "}
-        <a href="/history/20th-century/bretton-woods-nixon-1971" className="text-gold hover:text-gold-soft">
-          1971 gold-window close
-        </a>
-        ,{" "}
-        <a href="/history/20th-century/weimar-1923" className="text-gold hover:text-gold-soft">
-          Weimar 1923
-        </a>
-        , the{" "}
-        <a href="/history/silver/piece-of-eight" className="text-gold hover:text-gold-soft">
-          piece of eight
-        </a>
-        , the{" "}
-        <a href="/history/20th-century/panic-1907-fed" className="text-gold hover:text-gold-soft">
-          Panic of 1907
-        </a>
-        ,{" "}
-        <a href="/history/silver/silver-thursday" className="text-gold hover:text-gold-soft">
-          Silver Thursday
-        </a>
-        , or the{" "}
-        <Link to="/sound-money" className="text-gold hover:text-gold-soft">
-          Sound Money
-        </Link>{" "}
-        and{" "}
-        <Link to="/history" className="text-gold hover:text-gold-soft">
-          History
-        </Link>{" "}
-        hubs.
-      </p>
 
       <p className="mt-6 text-center text-sm">
         <Link to="/desk" className="btn-gold inline-flex min-h-11 items-center rounded-full px-5 text-sm font-medium">

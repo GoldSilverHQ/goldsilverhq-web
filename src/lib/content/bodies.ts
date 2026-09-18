@@ -68,7 +68,7 @@ const panic1907: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was the Panic of 1907?**, start here: a New York trust-company run in October — gold still defined the dollar; cash at the door failed. The Federal Reserve did not yet exist. On **22 October 1907**, depositors lined Fifth Avenue at the Knickerbocker Trust Company and kept lining up until the till could not meet the crowd. The trust suspended payments. Within two days, call money — the overnight credit that clears Wall Street — spiked toward twenty-five percent and higher, and the New York Stock Exchange nearly shut for want of cash to settle trades.",
+      "On **22 October 1907**, depositors lined Fifth Avenue at the Knickerbocker Trust Company and kept lining up until the till could not meet the crowd. The trust suspended payments. Within two days, call money — the overnight credit that clears Wall Street — spiked toward twenty-five percent and higher, and the New York Stock Exchange nearly shut for want of cash to settle trades. Gold still defined the dollar. What failed was cash at the door.",
       "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support because no public central bank existed. The Federal Reserve did not cause that October. Congress created the Fed afterward, in **1913**, in part because the panic showed how thin the country’s crisis plumbing was.",
     ],
   },
@@ -123,7 +123,7 @@ const panic1907: Section[] = [
     heading: "Where the century turns next",
     paragraphs: [
       "After 1913 the next hinge in this chapter is the wartime break with classical gold convertibility. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years therefore sit between a private panic rescue and the wider end of the classical gold order.",
-      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. The gold statute that sat before the run is the [road back toward gold](/history/america/road-back-gold). An earlier American bank fight — pet banks and the Panic of **1837** — is [Jackson and the Bank](/history/america/jackson-and-the-bank), not this October. Then open the [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) for the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
+      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. Then open the [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) for the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
       "This page stays on that dated claim — trusts, Clearing House gaps, private rescue, then a 1913 statute. It does not sell metal, forecast prices, or turn a panic into a brief for or against the Fed. Neighbor articles carry Weimar, the 1933 gold recall, and the [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) on their own dates.",
     ],
   },
@@ -134,7 +134,7 @@ const weimar: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what caused Weimar hyperinflation**, start here: the German paper mark’s death in **1922–23** — a dated extreme, not a forecast for every currency. In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Wages paid at noon were spent before supper. Café prices rose between the first course and the bill. By November a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. Notes did not vanish. People stopped holding them, and stopped pricing in them.",
+      "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Wages paid at noon were spent before supper. Café prices rose between the first course and the bill. By November a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. Notes did not vanish. People stopped holding them, and stopped pricing in them.",
       "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The wheelbarrow cartoons are not invented, and they are not the cause. The sequence is older: war finance without a gold stop, a fiscal gap after Versailles, a Reichsbank that created marks against Treasury bills, then the Ruhr occupation. Printing is the mechanism. The start is the missing constraint.",
     ],
   },
@@ -195,7 +195,7 @@ const weimar: Section[] = [
     heading: "Printing was the channel, not the whole cause",
     paragraphs: [
       "Printing is how the stock expanded. It is not a complete cause. A government that can tax and that faces a hard stop — gold convertibility, a currency board, a public that will not accept more notes — cannot do this for long. Weimar had a fiscal gap it would not close, a central bank that monetised Treasury paper, a lost war, reparations, and then the Ruhr. Remove the stop, keep the spending, and the unit fails.",
-      "It is a documented extreme, not a script every paper currency has to finish. Open [inflation and purchasing power](/sound-money/inflation-purchasing-power) if the vocabulary is next — hyperinflation is a case, not the everyday meaning. Live purchasing-power clocks sit on the desk’s [Money](/desk) tab. Earlier paper collapses with their own dates live under [assignats](/history/banks-paper/assignats) and [John Law](/history/banks-paper/john-law) — rhyme teaches mechanism; merge erases centuries. Open the [1933 gold recall](/history/20th-century/1933-gold-recall) or the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) for later American hinges — different years, different laws, different claims. This page stays with the German mark’s death and the Rentenmark halt. It does not sell metal or turn 1923 into a forecast.",
+      "It is a documented extreme, not a script every paper currency has to finish. Open the [1933 gold recall](/history/20th-century/1933-gold-recall) or the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) for later American hinges — different years, different laws, different claims. This page stays with the German mark’s death and the Rentenmark halt. It does not sell metal or turn 1923 into a forecast.",
     ],
   },
 ];
@@ -204,7 +204,7 @@ const nixon: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **why 1971 mattered**, start here: the closed gold window — not a retail coin counter. On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
+      "On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
       "The act did not invent fiat money overnight. Private Americans had already been barred from monetary gold under the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods did not fail in a single night either. Pressure had built for years. What ended was the official gold window — the channel through which foreign treasuries and central banks could still present dollars and demand US gold at the posted price.",
     ],
   },
@@ -261,7 +261,7 @@ const nixon: Section[] = [
     paragraphs: [
       "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to **$42.22**. Pegs still failed under market pressure.",
       "By **1973** major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
-      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [what “backed” means](/sound-money/backed-money) if the leftover vault is being sold as a public claim. Open [what is sound money?](/sound-money/what-is-sound-money) when the date is clear and the vocabulary is next. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
+      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
     ],
   },
 ];
@@ -272,7 +272,7 @@ const classicalGold: Section[] = [
     heading: "",
     paragraphs: [
       "In the first days of August **1914**, as armies mobilized, the peacetime gold window closed across Europe. Britain’s Currency and Bank Notes Act of **6 August** put Treasury notes of one pound and ten shillings into daily use and made Bank of England notes legal tender more broadly. Gold exports were blocked or licensed. The mark, the franc, and other gold names remained on coins and accounts. The public could no longer test those names at the teller.",
-      "If you arrived asking **what was the Panic of 1907?**, the [Panic of 1907](/history/20th-century/panic-1907-fed) page is the US liquidity crisis and the Fed created afterward. Before that summer, major currencies were convertible into gold at fixed rates in peacetime — the classical gold standard. This page is the peacetime gold order those years still sat inside, and the wartime break that ended it. What came after was not the same system with a pause. It was a different architecture.",
+      "Before that summer, major currencies were convertible into gold at fixed rates in peacetime — the classical gold standard. This article follows the [Panic of 1907](/history/20th-century/panic-1907-fed): that page is a US liquidity crisis and a new central bank; this page is the peacetime gold order those years still sat inside, and the wartime break that ended it. What came after was not the same system with a pause. It was a different architecture.",
     ],
   },
   {
@@ -406,7 +406,7 @@ const whatIsSoundMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what is sound money?**, stay on meaning first. A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
     ],
   },
   {
@@ -456,7 +456,7 @@ const whatIsSoundMoney: Section[] = [
     heading: "Definitions first, then dates",
     paragraphs: [
       "These pages stay on meaning. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans. The overview sits under [Sound Money](/sound-money).",
-      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures answer different questions — meaning here, events there, figures elsewhere. This page does not sell metal or forecast prices.",
+      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures and practice pages answer different questions — meaning here, events there, figures and handling elsewhere.",
     ],
   },
 ];
@@ -523,7 +523,7 @@ const inflation: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking why the unit buys less over years — **inflation / purchasing power** — stay with the idea, not a forecast. If you arrived from **Weimar / hyperinflation** curiosity, keep the labels: this page is the vocabulary; [Weimar 1923](/history/20th-century/weimar-1923) is the dated extreme. If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
     ],
   },
   {
@@ -571,8 +571,8 @@ const inflation: Section[] = [
   {
     heading: "The idea, then the extreme case",
     paragraphs: [
-      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). Live purchasing-power clocks sit on the desk’s [Money](/desk) tab. The overview sits under [Sound Money](/sound-money).",
-      "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history. Nothing here is a tip to buy or sell metal.",
+      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
+      "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history.",
     ],
   },
 ];
@@ -1375,8 +1375,8 @@ const earlyUs: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. If you arrived from the **piece of eight** / Spanish dollar question, this is the American inheritance statute — not a remonetization brief. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
-      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar ([piece of eight](/history/silver/piece-of-eight)), and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
+      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
+      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
     ],
   },
   {
@@ -1435,7 +1435,7 @@ const jackson: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was the Panic of 1907?**, that later New York trust run — and the Federal Reserve of **1913** — is not this veto. In **1832**, Congress sent Andrew Jackson a bill to recharter the Second Bank of the United States years before the charter expired. He vetoed it. The veto message attacked the Bank as unconstitutional privilege and foreign-tinged power. The presidential campaign that autumn made the Bank the issue. Jackson won. The federal center would not be renewed on that bill.",
+      "In **1832**, Congress sent Andrew Jackson a bill to recharter the Second Bank of the United States years before the charter expired. He vetoed it. The veto message attacked the Bank as unconstitutional privilege and foreign-tinged power. The presidential campaign that autumn made the Bank the issue. Jackson won. The federal center would not be renewed on that bill.",
       "What followed was monetary politics in sequence: federal deposits moved to state “pet” banks, the Specie Circular of **1836** required gold and silver for public land, and the Panic of **1837** hit American banks and commerce. This is a documentary account of charter, veto, deposits, specie rule, and panic — not a sermon for or against central banks, and not the [Panic of 1907](/history/20th-century/panic-1907-fed). The Federal Reserve statute is **1913**. Jackson’s fight is an earlier American argument over who holds the government’s money and who issues the country’s paper.",
     ],
   },
@@ -1556,7 +1556,7 @@ const crime1873: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was Silver Thursday?**, that **1980** futures break is [Silver Thursday](/history/silver/silver-thursday) — not this Mint list. On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
+      "On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
       "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. The documentary fact is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
     ],
   },
@@ -1650,7 +1650,7 @@ const roadBack: Section[] = [
     heading: "Where this chapter hands off",
     paragraphs: [
       "America’s chapter ends at the gold statute and the door to 1907. It does not narrate the Federal Reserve Act, the 1933 gold recall, or the 1971 gold-window close. Those are [20th-century](/history/20th-century) articles with their own mechanisms and dates.",
-      "If you arrived asking **what was the Panic of 1907?**, this page is only the **1900** gold statute that sat before the run. Read this page as the bridge: greenbacks back to par, silver politics contained enough for a gold definition, then stop. Open [Panic of 1907](/history/20th-century/panic-1907-fed) for the next liquidity crisis and the public central bank Jackson’s century did not build. That panic is about trust-company plumbing and a missing lender of last resort — not a replay of 1873’s Mint list.",
+      "Read this page as the bridge: greenbacks back to par, silver politics contained enough for a gold definition, then stop. Open [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed) for the next liquidity crisis and the public central bank Jackson’s century did not build. That panic is about trust-company plumbing and a missing lender of last resort — not a replay of 1873’s Mint list.",
       "Cross-links stay short. Silver mechanics live under [bimetallism](/history/silver/bimetallism). War paper detail lives under [greenbacks](/history/america/greenbacks-civil-war). The crime nickname lives under [1873](/history/america/crime-of-1873).",
     ],
   },
@@ -1680,8 +1680,8 @@ const pieceOfEight: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was the piece of eight?**, start here: the Spanish dollar as a circulating global silver unit — not a collector catalogue and not a remonetization pitch. For more than two centuries, merchants across the Atlantic and Pacific priced cargo in one familiar silver piece: the Spanish dollar — the eight-real coin, the **piece of eight**. Sailors cut it into bits for change. Asian markets took it as settlement metal. When the early United States named a dollar in the **1790s**, this coin was already in the room.",
-      "The claim here is narrow and documentary. One typed silver piece of roughly **twenty-seven grams** became a global unit of account long before any modern reserve currency. The hole in the ground that fed so much of that metal is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). Two-metal statute mechanics live under [bimetallism](/history/silver/bimetallism). A market gold–silver quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
+      "For more than two centuries, merchants across the Atlantic and Pacific priced cargo in one familiar silver piece: the Spanish dollar — the eight-real coin, the **piece of eight**. Sailors cut it into bits for change. Asian markets took it as settlement metal. When the early United States named a dollar in the **1790s**, this coin was already in the room.",
+      "The claim here is narrow and documentary. One typed silver piece of roughly **twenty-seven grams** became a global unit of account long before any modern reserve currency. The hole in the ground that fed so much of that metal is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1731,7 +1731,7 @@ const pieceOfEight: Section[] = [
   {
     heading: "One coin, several later fights",
     paragraphs: [
-      "This page is the Spanish dollar as a circulating global silver unit — not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. The mountain that fed so much of the metal is [Potosí](/history/silver/potosi). American inheritance is [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics live under [bimetallism](/history/silver/bimetallism) — keep mint ratio and market ratio labeled. Keep **1980** and industrial silver on their own pages.",
+      "This page is the Spanish dollar as a circulating global silver unit — not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. The mountain that fed so much of the metal is [Potosí](/history/silver/potosi). American inheritance is [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics live under [bimetallism](/history/silver/bimetallism). Keep **1980** and industrial silver on their own pages.",
       "Return to [silver in history](/history/silver) when you want the chapter’s full arc rather than this one coin face.",
     ],
   },
@@ -1741,7 +1741,7 @@ const silverThursday: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was Silver Thursday?**, start here: **27 March 1980** — silver futures crashed as liquidation hit a market already strained by higher margins and limits on new long positions. Not the [Coinage Act of 1873](/history/america/crime-of-1873), and not a [mint-ratio](/history/silver/bimetallism) statute. Months earlier, in January, the nearby extreme used on this site’s desk had printed near **$49.45** an ounce. The January market was the run. March was the unwind.",
+      "On **27 March 1980** — Silver Thursday — silver futures crashed as liquidation hit a market already strained by higher margins and limits on new long positions. Months earlier, in January, the nearby extreme used on this site’s desk had printed near **$49.45** an ounce. The January market was the run. March was the unwind.",
       "In **1979–80** Nelson Bunker Hunt and William Herbert Hunt, with partners, built a very large position in silver bullion and futures. After exchange and dealer rule changes raised margins and restricted new longs, the price collapsed. Positions, rules, dated prints, and the March break are the spine — not a forecast, not a stock story, and not a brief for repeating the trade. [Information versus advice](/sound-money/information-not-advice) is the standing line. The market quotient that uses **1980** as an arithmetic anchor sits on the [gold–silver ratio](/markets/gold-silver-ratio) fact page — a different article.",
     ],
   },
@@ -1803,7 +1803,7 @@ const bimetallism: Section[] = [
     heading: "",
     paragraphs: [
       "A government can write a law that says so many ounces of silver equal one ounce of gold at the Mint — and markets can refuse to freeze that number. **Bimetallism** is the attempt to keep both metals in the same monetary system at a **fixed mint ratio**. The mint stands ready to coin both into full-weight money at that legal number. When the **market ratio** — the gold price of silver in trade — drifts away, Gresham’s pattern appears. The statute does not defeat arbitrage.",
-      "If you arrived from the **piece of eight** path, keep the labels: the Spanish dollar is a circulating coin habit; this page is the two-metal statute machine that later American politics fought over. If you arrived asking **what was Silver Thursday?**, the **1980** Hunt break is a later private position and exchange rule book — [Silver Thursday](/history/silver/silver-thursday) — not this mint-ratio machine. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
+      "This page carries that general machine. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1865,7 +1865,7 @@ const potosi: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "From the **1540s**, Cerro Rico at Potosí — in today’s Bolivia — poured silver into a Spanish imperial machine that reached two oceans. If you arrived asking **what was the piece of eight?**, the coin face is the [Spanish dollar](/history/silver/piece-of-eight); this page is the mountain that fed so much of that metal. Ore left the mountain for the mint, the fleet, Seville, European payments, and — via the **Manila galleon** — China, where silver was the settlement metal of a much larger commercial system.",
+      "From the **1540s**, Cerro Rico at Potosí — in today’s Bolivia — poured silver into a Spanish imperial machine that reached two oceans. Ore left the mountain for the mint, the fleet, Seville, European payments, and — via the **Manila galleon** — China, where silver was the settlement metal of a much larger commercial system.",
       "The lesson is flow, not romance: a mountain can set the silver stock of an age. Today’s country-by-country production and reserves picture sits on the [world map](/maps), not here. The coin face of the flow is the [piece of eight](/history/silver/piece-of-eight). The chapter overview is [silver in history](/history/silver).",
     ],
   },
@@ -1925,8 +1925,8 @@ const silverIndustry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A vault ounce and a paste ounce can print the same chemical symbol and still answer different questions. Silver is still money in memory: coins, bars, a hedge people name in the same breath as gold. It is also an industrial input — photography for a long twentieth century, then electronics, then photovoltaics. Those two jobs pull the metal in different directions. This page names the split. It does not forecast which job wins. If you arrived asking **what was Silver Thursday?**, that dated break is [Silver Thursday](/history/silver/silver-thursday); stay here only for the split between monetary memory and factory use — not a replay of **27 March 1980**.",
-      "If you arrived asking how **silver mining** feeds those jobs, keep supply and demand labeled. Mine supply is ounces leaving the ground — a flow into both monetary stock and fabrication. It is not a list of companies to buy, and it is not this article’s country-by-country demand table. The mining clock lives on the [gold–silver ratio](/markets/gold-silver-ratio) page and the desk’s [Stocks & flows](/desk) tab.",
+      "A vault ounce and a paste ounce can print the same chemical symbol and still answer different questions. Silver is still money in memory: coins, bars, a hedge people name in the same breath as gold. It is also an industrial input — photography for a long twentieth century, then electronics, then photovoltaics. Those two jobs pull the metal in different directions. This page names the split. It does not forecast which job wins.",
+      "Mine supply is ounces leaving the ground — a flow into both monetary stock and fabrication. It is not a list of companies to buy, and it is not this article’s country-by-country demand table. The mining clock lives on the [gold–silver ratio](/markets/gold-silver-ratio) page and the desk’s [Stocks & flows](/desk) tab.",
       "Monetary narrative articles in this chapter are [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight), [bimetallism](/history/silver/bimetallism), and [Silver Thursday](/history/silver/silver-thursday). Country rankings of bar-and-coin offtake live under [physical silver demand by country](/markets/physical-silver-demand-by-country) — a markets fact page, not this history article. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
@@ -1987,7 +1987,7 @@ const officialGoldBookValue: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you came from **1971** wondering why a leftover dollar price still prints, stay with the ledger. After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
+      "After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
     ],
   },
   {
@@ -2039,7 +2039,7 @@ const officialGoldBookValue: Section[] = [
     heading: "Two ledgers, one stock",
     paragraphs: [
       "Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers — not a secret price, a floor, or a target, and not a reason to buy or sell metal. This page does not say the Treasury “should” revalue gold.",
-      "The other fact pages under [gold and silver markets](/markets) cover how [central banks report gold in reserves](/markets/central-bank-gold-reserves), what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971). For the word trap — reserves versus a public claim — open [what “backed” means](/sound-money/backed-money). The narrative stays on History. The leftover book rate stays here.",
+      "The other fact pages under [gold and silver markets](/markets) cover how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
     ],
   },
 ];
@@ -2048,7 +2048,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived on **central-bank gold buying**, keep the address labels straight. A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list, and it is not a tip to copy a central bank.",
+      "A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
     ],
   },
   {
@@ -2275,7 +2275,7 @@ const centralBankGoldReserves: Section[] = [
     heading: "Composition, custody, and clocks",
     paragraphs: [
       "A rising official stock is a change in a reserve composition. It is not a price target. A reported official sale is the same kind of fact as a reported official purchase: a dated change in a reserve book, not a private-flow instruction. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
-      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). Live official tonnes and net buying sit on the desk’s [Official gold](/desk) tab. A vault without a presentment right is still not convertibility — that word trap lives on [what “backed” means](/sound-money/backed-money). What the gold–silver ratio measures is the third markets topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
+      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). What the gold–silver ratio measures is the third topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
     ],
   },
 ];
@@ -2285,7 +2285,7 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "On a named day, two prints share a clock: divide gold’s dollar price by silver’s and you get how many ounces of silver equal one ounce of gold at that pair. The gold–silver ratio is that dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
-      "If you arrived from the **piece of eight** / [bimetallism](/history/silver/bimetallism) path, keep the labels: a circulating Spanish dollar and a legal mint ratio are not this page’s market quotient. If you arrived asking **what was Silver Thursday?**, the **27 March 1980** break is the narrative on [Silver Thursday](/history/silver/silver-thursday); the January **17.2** pair below is only the arithmetic. If you came here from a headline about **silver mining**, start with the mining-ratio block below. Mine supply is how much metal leaves the ground in a survey year. It is not a list of mining companies, not a stock tip, and not a reason the market ratio “should” match the mine book.",
+      "Mine supply is how much metal leaves the ground in a survey year. It is not a list of mining companies, not a stock tip, and not a reason the market ratio “should” match the mine book.",
     ],
   },
   {
@@ -2386,7 +2386,7 @@ const physicalSilverDemandByCountry: Section[] = [
     heading: "",
     paragraphs: [
       "In **2024**, identified U.S. bar-and-coin offtake fell hard while India’s line rose — two national markets, one survey table, no shared path. Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure, a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand, and — labeled separately — a 2025 industrial-fabrication table, a 2025 coins-and-medals mint table, and a 2025 jewelry-fabrication table from World Silver Survey 2026.",
-      "If you arrived from a **silver mining** question, keep the address labels straight. A mine-production ranking is a different list, and this site does not keep one here. Ounces leaving the ground live on the homepage mining-ratio card, the [gold–silver ratio](/markets/gold-silver-ratio) mining block, and the desk’s [Stocks & flows](/desk) tab. This page stays with buyers, mints, factories, and jewelry workshops.",
+      "A mine-production ranking is a different list, and this site does not keep one here. Ounces leaving the ground live on the homepage mining-ratio card, the [gold–silver ratio](/markets/gold-silver-ratio) mining block, and the desk’s [Stocks & flows](/desk) tab. This page stays with buyers, mints, factories, and jewelry workshops.",
     ],
   },
   {
@@ -2613,8 +2613,8 @@ export const historyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **why 1971 mattered**, the closed gold window has its own article — and this shelf holds the century around it. If you arrived asking **what caused Weimar hyperinflation**, the German mark’s death in **1923** is the hinge — not a wheelbarrow meme pasted onto every price rise. If you arrived asking **what was the piece of eight?**, the Spanish dollar as a global silver coin has its own article under [silver](/history/silver/piece-of-eight) — an older unit story, not a modern reserve-currency slogan. If you arrived asking **what was the Panic of 1907?**, the Knickerbocker Trust run — and the Federal Reserve created afterward, in **1913** — is [Panic of 1907](/history/20th-century/panic-1907-fed). That October was cash at the door, not a gold-window close. If you arrived asking **what was Silver Thursday?**, the **27 March 1980** Hunt break — a concentrated private position meeting an exchange rule book — is [Silver Thursday](/history/silver/silver-thursday). That March is not Weimar and not **1971**. In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
-      "This history follows that argument as a documentary record. Coins are clipped or lightened. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. Each article sticks to a dated claim — who acted, what rule changed, what broke, and what followed — so a curious adult can leave able to explain the hinge in plain English. Vocabulary first lives under [Sound Money](/sound-money) if the words are still slipping — especially [inflation and purchasing power](/sound-money/inflation-purchasing-power) when the question is the unit, not the calendar.",
+      "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
+      "This history follows that argument as a documentary record. Coins are clipped or lightened. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. Each article sticks to a dated claim — who acted, what rule changed, what broke, and what followed — so a curious adult can leave able to explain the hinge in plain English.",
     ],
   },
   {
@@ -2627,7 +2627,7 @@ export const historyHubBody: Section[] = [
   {
     heading: "One republic, one white metal, one crowded century",
     paragraphs: [
-      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900** — then hands off before the Fed. Silver needs its own stretch too. The [silver chapter](/history/silver) follows a mountain at [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight) as global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
+      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900** — then hands off before the Fed. Silver needs its own stretch too. The [silver chapter](/history/silver) follows a mountain at [Potosí](/history/silver/potosi), a global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
       "The densest modern door is the [twentieth century](/history/20th-century): private rescue after **1907**, a new central bank, classical gold’s wartime end, [Weimar **1923**](/history/20th-century/weimar-1923), the **1933** US gold recall, Bretton Woods, and the [**1971** gold-window close](/history/20th-century/bretton-woods-nixon-1971). If you live downstream of that close, the century chapter is the natural entry. If you want the slower on-ramp — metal before paper — ancient coinage or banks and paper walk forward into the same argument.",
     ],
   },
@@ -2651,7 +2651,7 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what is sound money?**, start here — vocabulary first, not a shop. People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
+      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
       "Sound money, on this site, means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. These pages define that claim and its neighbors. They do not sell metal, collect emails, or forecast prices.",
     ],
   },
@@ -2667,7 +2667,7 @@ export const soundMoneyHubBody: Section[] = [
     heading: "When the fog clears",
     paragraphs: [
       "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) is the door if that slogan is the fog; [hard money vs fiat](/sound-money/hard-money-vs-fiat) if the split is cost of production versus law and habit; [inflation and purchasing power](/sound-money/inflation-purchasing-power) if the question is what the unit still buys; [what is sound money?](/sound-money/what-is-sound-money) if you want the summary claim after the neighbors. Landing on any one page is fine; each links the rest. The bodies carry the weight of the definitions.",
-      "When the vocabulary is clear, leave for [Sound Money History](/history). If you arrived asking **what caused Weimar hyperinflation**, the dated case is [Weimar 1923](/history/20th-century/weimar-1923) — after [inflation and purchasing power](/sound-money/inflation-purchasing-power) has fixed the words. Weimar and Nixon belong on the history shelf, not on this definitions page. Definition pages may link a dated case once — a greenback premium, a gold recall, a closed window — without pasting the whole timeline onto a glossary entry. Similar crises can teach the same mechanism; they are still different years and different laws.",
+      "When the vocabulary is clear, leave for [Sound Money History](/history). Weimar and Nixon belong there, not on this definitions page. Definition pages may link a dated case once — a greenback premium, a gold recall, a closed window — without pasting the whole timeline onto a glossary entry. Similar crises can teach the same mechanism; they are still different years and different laws.",
       "Current figures live under [Markets](/markets): book values, reserve lines, ratios, and country offtake. Handling bars and coins lives under [gold and silver in practice](/gold-silver). Mixing definition with tips produces a pitch. Keeping the label produces a word you can reuse on every later page. When the next question is “what happened?” rather than “what does this word mean?”, the history shelf is the continuation.",
       "These pages answer what the words mean for adults who want the vocabulary straight before they open a dated article. They are not a remonetization brief, a metal shopping list, or a forecast dressed as a glossary. Weimar, the Fed, greenbacks, and Nixon stay as dated events under History — linked once as cases when a definition needs an example, never retold in full here. Meaning first; events elsewhere; figures and handling on their own pages. That split is the whole job of this overview page.",
     ],
@@ -2729,9 +2729,8 @@ export const marketsHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "The live [desk](/desk) prints prices and ratios like a clock. A few of those numbers still carry a statute, a survey method, or an official bookkeeping leftover. These pages explain those captions — why a Treasury line can show gold at **$42.22**, how central banks report gold in reserves, what the gold–silver ratio measures, and what a country ranking of bar-and-coin silver demand actually counts.",
-      "If you arrived asking about **silver mining**, stay with the metal’s books — not company shares. Mine supply is ounces leaving the ground in a survey year. The [gold–silver ratio](/markets/gold-silver-ratio) page keeps that mining clock apart from the market price quotient. [Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks buyers, factories, and jewelry workshops, not holes in the ground. The desk’s [Stocks & flows](/desk) tab shows above-ground metal and mine output beside those articles. No page here names a miner, a ticker, a target, or a reason to prefer one metal.",
-      "If you arrived on **central-bank gold buying**, stay with reported reserve composition — not a household tip. [Central-bank gold reserves](/markets/central-bank-gold-reserves) labels tonnes, shares, and dated nets. The leftover U.S. [official gold book value](/markets/official-gold-book-value) is a different ledger. The desk’s [Official gold](/desk) tab prints the live stocks beside those articles. A rising official book is not a reason to copy a central bank.",
-      "Narrative from coinage to **1971** lives under [Sound Money History](/history).",
+      "Mine supply is ounces leaving the ground in a survey year. The [gold–silver ratio](/markets/gold-silver-ratio) page keeps that mining clock apart from the market price quotient. [Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks buyers, factories, and jewelry workshops, not holes in the ground. The desk’s [Stocks & flows](/desk) tab shows above-ground metal and mine output beside those articles. No page here names a miner, a ticker, a target, or a reason to prefer one metal.",
+      "Narrative from coinage to **1971** lives under [Sound Money History](/history). Handling bars and coins lives under [gold and silver in practice](/gold-silver).",
     ],
   },
   {
@@ -2756,7 +2755,7 @@ export const twentiethCenturyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **why 1971 mattered**, this chapter is the door: from private rescue after **1907** to the closed gold window. If you arrived asking **what caused Weimar hyperinflation**, the German mark’s collapse has its own article in the same stretch — a dated extreme inside this century, not a synonym for every inflation. If you arrived asking **what was the Panic of 1907?**, start with the Knickerbocker run: private rescue because no Federal Reserve yet existed, then a statute in **1913** — not the **1971** gold-window close, and not a brief for or against the Fed. In October **1907**, New York trust companies faced a liquidity panic and J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price — the **gold window**. Between those dates sit a new central bank, the wartime end of classical gold, a German mark that ceased to work as money, a US recall of private monetary gold, and a postwar dollar system built on official convertibility at **$35** an ounce.",
+      "In October **1907**, New York trust companies faced a liquidity panic and J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price — the **gold window**. Between those dates sit a new central bank, the wartime end of classical gold, a German mark that ceased to work as money, a US recall of private monetary gold, and a postwar dollar system built on official convertibility at **$35** an ounce.",
       "This chapter is that crowded modern door. Earlier chapters stretch across long spans of mint practice and statute fights. Here the regime changes pack into a shorter run of calendar time — and into the world most readers still live inside.",
     ],
   },
@@ -2789,7 +2788,7 @@ export const americaHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. If you arrived asking **what was the piece of eight?**, the Spanish dollar that shaped that silver weight has its own article — then [early U.S. coinage](/history/america/early-us-coinage) is the inheritance statute. If you arrived asking **what was the Panic of 1907?**, this chapter stops at the **1900** gold handoff — the run itself is [Panic of 1907](/history/20th-century/panic-1907-fed). Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
+      "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
       "The [Crime of 1873](/history/america/crime-of-1873) is the silver-politics door; [greenbacks](/history/america/greenbacks-civil-war) is the war-paper door; the [road back toward gold](/history/america/road-back-gold) is the bridge into **1907**. Jackson’s bank war, Civil War greenbacks, and the **1913** Fed are related arguments about credit and paper — not one institution.",
     ],
   },
@@ -2803,7 +2802,7 @@ export const americaHubBody: Section[] = [
   {
     heading: "From 1792 to 1900",
     paragraphs: [
-      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The [Spanish dollar / piece of eight](/history/silver/piece-of-eight) shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
+      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The Spanish dollar shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
       "[Jackson and the Bank](/history/america/jackson-and-the-bank) is the fight over the Second Bank: **1832** veto, pet banks, Specie Circular, Panic of **1837**. The country then lived a long stretch without a federally chartered central bank. That is not **1913**. Keep the centuries labeled.",
       "[Greenbacks](/history/america/greenbacks-civil-war) financed the Union after **1862**. Legal tender paper floated below gold in New York until the Resumption Act’s date — **1 January 1879** — restored par in practice. War paper is a suspension, not a permanent theory of money.",
       "The [Coinage Act of 1873](/history/america/crime-of-1873) omitted free coinage of the standard silver dollar. Agrarian politics called it a crime; officials called it clarification toward gold. Free silver, Bland–Allison, Sherman, and Bryan’s **1896** campaign are that fight’s volume. The mechanics of two metals under one law also sit on [bimetallism](/history/silver/bimetallism).",
@@ -2837,8 +2836,8 @@ export const silverHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **what was the piece of eight?**, this chapter is the door: the Spanish dollar as a typed global silver coin — then the mountain behind it, the mint-ratio fights, and the metal’s later jobs. If you arrived asking **what was Silver Thursday?**, the **27 March 1980** break has its own article — [Silver Thursday](/history/silver/silver-thursday) — a futures-and-bullion concentration, not the piece of eight and not a mint statute. A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
-      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [Potosí](/history/silver/potosi) is the supply behind the type; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
+      "A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
+      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
     ],
   },
   {

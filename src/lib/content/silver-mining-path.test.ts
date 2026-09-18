@@ -24,8 +24,8 @@ function bodyText(sections: Section[]) {
 describe("silver-mining intent path (existing URLs only)", () => {
   it("orients a mining-curious reader on Markets without new sitemap URLs", () => {
     const hub = bodyText(marketsHubBody);
-    assert.match(hub, /silver mining/i);
-    assert.match(hub, /not company shares/i);
+    assert.match(hub, /Mine supply is ounces leaving the ground/);
+    assert.match(hub, /No page here names a miner/);
     assert.match(hub, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
     assert.match(hub, /\[Physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
     assert.match(hub, /\[Stocks & flows\]\(\/desk\)/);
@@ -40,7 +40,6 @@ describe("silver-mining intent path (existing URLs only)", () => {
 
   it("keeps mining vs market as the core relabel on the ratio page", () => {
     const text = bodyText(getBody("markets", "gold-silver-ratio")!);
-    assert.match(text, /silver mining/i);
     assert.match(text, /not a list of mining companies/i);
     assert.match(text, /miner pick|Nothing here is a miner pick/i);
     assert.match(text, /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/);
@@ -56,7 +55,6 @@ describe("silver-mining intent path (existing URLs only)", () => {
 
   it("separates offtake from mines on physical silver demand", () => {
     const text = bodyText(getBody("markets", "physical-silver-demand-by-country")!);
-    assert.match(text, /silver mining/i);
     assert.match(text, /mine-production ranking is a different list/i);
     assert.match(text, /\[Stocks & flows\]\(\/desk\)/);
     assert.doesNotMatch(text, /buy miners|stock pick/i);
@@ -68,7 +66,7 @@ describe("silver-mining intent path (existing URLs only)", () => {
 
   it("bridges dual-role history without equity language", () => {
     const text = bodyText(getBody("silver", "monetary-and-industry")!);
-    assert.match(text, /silver mining/i);
+    assert.match(text, /Mine supply is ounces leaving the ground/);
     assert.match(text, /not a list of companies to buy/i);
     assert.match(text, /\[hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.doesNotMatch(text, /buy miners|equity tip|price target/i);
