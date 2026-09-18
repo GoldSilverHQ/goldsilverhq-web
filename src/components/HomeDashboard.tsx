@@ -155,6 +155,10 @@ export function HomeDashboard() {
         <a href="/history/silver/piece-of-eight" className="text-gold hover:text-gold-soft">
           piece of eight
         </a>
+        , the{" "}
+        <a href="/history/20th-century/panic-1907-fed" className="text-gold hover:text-gold-soft">
+          Panic of 1907
+        </a>
         , or the{" "}
         <Link to="/sound-money" className="text-gold hover:text-gold-soft">
           Sound Money
