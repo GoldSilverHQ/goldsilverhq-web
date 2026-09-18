@@ -265,4 +265,57 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(cluster?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
     assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
   });
+
+  it("path 7 — Silver Thursday journey", () => {
+    const history = bodyText(historyHubBody);
+    assert.match(history, /what was Silver Thursday\?/i);
+    assert.match(history, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+
+    const silverHub = bodyText(silverHubBody);
+    assert.match(silverHub, /what was Silver Thursday\?/i);
+    assert.match(silverHub, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+    assert.doesNotMatch(silverHub, TIP_PATTERN);
+
+    const thursday = bodyText(getBody("silver", "silver-thursday")!);
+    assert.match(thursday, /what was Silver Thursday\?/i);
+    assert.match(thursday, /27 March 1980/);
+    assert.match(thursday, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
+    assert.match(thursday, /\[Coinage Act of 1873\]\(\/history\/america\/crime-of-1873\)/);
+    assert.match(thursday, /\[mint-ratio\]\(\/history\/silver\/bimetallism\)/);
+    assert.match(thursday, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
+    assert.doesNotMatch(thursday, TIP_PATTERN);
+    assert.doesNotMatch(thursday, /should buy|price target to|repeat the squeeze|next squeeze/i);
+
+    const crime = bodyText(getBody("america", "crime-of-1873")!);
+    assert.match(crime, /what was Silver Thursday\?/i);
+    assert.match(crime, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+
+    const bimet = bodyText(getBody("silver", "bimetallism")!);
+    assert.match(bimet, /what was Silver Thursday\?/i);
+    assert.match(bimet, /not this mint-ratio machine/);
+
+    const industry = bodyText(getBody("silver", "monetary-and-industry")!);
+    assert.match(industry, /what was Silver Thursday\?/i);
+    assert.match(industry, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+
+    const gsr = bodyText(getBody("markets", "gold-silver-ratio")!);
+    assert.match(gsr, /what was Silver Thursday\?/i);
+    assert.match(gsr, /January \*\*17\.2\*\*/);
+    assert.doesNotMatch(gsr, TIP_PATTERN);
+
+    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.match(home, /silver-thursday/);
+    assert.match(home, /Silver Thursday/);
+
+    const cluster = getCluster("silver");
+    const episode = cluster?.episodes.find((e) => e.slug === "silver-thursday");
+    assert.ok(episode);
+    assert.ok(episode.related.length >= 4);
+    assert.ok(episode.related.some((r) => r.href === "/markets/gold-silver-ratio"));
+    assert.ok(episode.related.some((r) => r.href === "/history/silver/monetary-and-industry"));
+    assert.ok(episode.related.some((r) => r.href === "/history/america/crime-of-1873"));
+    assert.ok(episode.related.some((r) => r.href === "/history/silver/bimetallism"));
+    assert.ok(cluster?.related?.some((r) => r.href === "/history/silver/silver-thursday"));
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
+  });
 });
