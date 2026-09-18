@@ -791,6 +791,7 @@ export const historyClusters: Cluster[] = [
       { title: "Sound Money History", href: "/history" },
       { title: "America & gold/silver politics", href: "/history/america" },
       { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+      { title: "Silver Thursday", href: "/history/silver/silver-thursday" },
       { title: "Potosí", href: "/history/silver/potosi" },
     ],
     seo: {
@@ -877,9 +878,11 @@ export const historyClusters: Cluster[] = [
           "March 1980 ended a concentrated attempt to dominate the silver market. The page stays factual: positions, rules, and the break. No stock tips.",
         ],
         related: [
-          { title: "Silver hub", href: "/history/silver" },
+          { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
-          { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+          { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
+          { title: "Bimetallism", href: "/history/silver/bimetallism" },
+          { title: "Silver in history", href: "/history/silver" },
         ],
         seo: {
           primary: "silver thursday",
