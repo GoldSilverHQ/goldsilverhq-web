@@ -4,12 +4,25 @@ import { MONEY_PATH } from "./money-path.ts";
 /** Troy ounces in one metric tonne — same factor the CB seed uses to reconstruct IMF tonnes. */
 export const TROY_OZ_PER_TONNE = 32_150.7374;
 
+/** SAFE official reserve assets, published 7 September 2026: 76.73 million fine troy ounces at end-August. */
+export const CHINA_SAFE_AUG_2026 = {
+  ouncesMoz: 76.73,
+  asOf: "2026-08-31",
+  tonnes: (76.73 * 1_000_000) / TROY_OZ_PER_TONNE,
+} as const;
+
+/** Prefer the later dated book. ISO dates compare in chronological order. */
+export function laterOfficial<T extends { asOf: string }>(live: T | null | undefined, next: T): T {
+  if (!live || live.asOf < next.asOf) return next;
+  return live;
+}
+
 /** Seed sum: reported country books + IMF + ECB. World row in the seed is an aggregate with no stock. */
 export const COMPILED_OFFICIAL: OfficialGold = {
   world: { tonnes: 35_908, asOf: "2025-12-31" },
   usa: { tonnes: 8_133.46, asOf: "2025-12-31" },
   ecb: { tonnes: 506.5, asOf: "2025-12-31" },
-  chn: { tonnes: 2_346, asOf: "2026-06-30" },
+  chn: { tonnes: CHINA_SAFE_AUG_2026.tonnes, asOf: CHINA_SAFE_AUG_2026.asOf },
 };
 
 export function officialMtmUsd(tonnes: number, spotPerOz: number) {

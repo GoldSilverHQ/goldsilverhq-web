@@ -8,10 +8,12 @@ import { SpotPriceHistory } from "@/components/SpotPriceHistory";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
 import {
+  CHINA_SAFE_AUG_2026,
   COMPILED_OFFICIAL,
   dollarLostVsGold,
   fmtCompact,
   fmtUsdCompact,
+  laterOfficial,
   latestUsM2,
   officialMtmUsd,
   pctLostDisplay,
@@ -22,13 +24,16 @@ import {
   CB_YTD_2026,
   FX_START,
   IMF_GOV_DEBT,
-  SILVER_2024,
+  LBMA_JUL_2026,
+  SILVER_2025,
+  SILVER_ETP_2025,
   USGS_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
   coverPct,
   investmentGoldGramsPerPerson,
   investmentSilverOzPerPerson,
+  lbmaGoldClearingRatio,
   lostVsStart,
   mineOutputRatio,
   silverIdentifiableMoz,
@@ -177,6 +182,10 @@ export function FullDesk() {
   const cnyLoss = goldCny != null ? lostVsStart(goldCny, FX_START.cny.localGold) : null;
   const jpyLoss = goldJpy != null ? lostVsStart(goldJpy, FX_START.jpy.localGold) : null;
   const silverGap = silverSupplyGapT();
+  const china = laterOfficial(official.chn, {
+    tonnes: CHINA_SAFE_AUG_2026.tonnes,
+    asOf: CHINA_SAFE_AUG_2026.asOf,
+  });
 
   return (
     <div className="data-ui mx-auto max-w-6xl px-4 py-8 sm:py-12">
@@ -323,9 +332,13 @@ export function FullDesk() {
                 label="China reported official gold"
                 unit="t"
                 cadence="monthly"
-                asOf={official.chn ? formatAsOf(official.chn.asOf) : "monthly"}
-                live={official.chn ? fmtTonnes(official.chn.tonnes) : undefined}
-                note="Latest PBoC/SAFE print. Newer than the world year-end stock."
+                asOf={formatAsOf(china.asOf)}
+                live={fmtTonnes(china.tonnes)}
+                note={
+                  china.asOf === CHINA_SAFE_AUG_2026.asOf
+                    ? "SAFE official reserve assets, 7 Sep 2026: 76.73 million oz. Newer than the world year-end stock."
+                    : "Latest reported official print. Newer than the world year-end stock."
+                }
               />
               <DeskMetricTile
                 kicker="World"
@@ -383,9 +396,9 @@ export function FullDesk() {
                 tone="silver"
                 unit="t"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
+                asOf={SILVER_2025.asOf}
                 live={String(Math.round(silverOfficialT()))}
-                note="2024 Silver Institute. Official sector is a rounding error."
+                note="World Silver Survey 2026. 2025 net official-sector sales — still a rounding line, not a gold-style stock."
               />
               <DeskMetricTile
                 kicker="Balance"
@@ -393,9 +406,10 @@ export function FullDesk() {
                 tone="silver"
                 unit="t"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
+                asOf={SILVER_2025.asOf}
                 live={`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
-                note="2024 Silver Institute. Negative = deficit."
+                secondary={`Survey balance ${SILVER_2025.marketBalanceMoz} Moz. That line also counts hedging and official sales.`}
+                note="World Silver Survey 2026, calendar 2025. Mine plus recycle minus total demand. Negative means that pair is short."
               />
               <DeskMetricTile
                 kicker="Cover"
@@ -403,9 +417,9 @@ export function FullDesk() {
                 tone="silver"
                 unit="mo"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
+                asOf={SILVER_2025.asOf}
                 live={silverVisibleMonths().toFixed(1)}
-                note="Identifiable bullion (vaults) ÷ 2024 fabrication. Not jewelry."
+                note="Identifiable bullion (vaults) ÷ 2025 fabrication. Not jewelry."
               />
               <DeskMetricTile
                 kicker="Investment"
@@ -413,9 +427,9 @@ export function FullDesk() {
                 tone="silver"
                 unit="oz"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
+                asOf={SILVER_2025.asOf}
                 live={investmentSilverOzPerPerson().toFixed(2)}
-                note="2024 Silver Institute investment stock over 8.2bn people."
+                note="End-2025 identifiable bullion over 8.2bn people. Not a forecast."
               />
               <DeskMetricTile
                 kicker="Geology"
@@ -640,7 +654,9 @@ export function FullDesk() {
                 label="Clearing vs vaulted gold"
                 unit="×"
                 cadence="monthly"
-                note="Turnover, not the same as COMEX. Stays dashed until we store a dated print."
+                asOf="Jul 2026"
+                live={lbmaGoldClearingRatio().toFixed(3)}
+                note={`LBMA July 2026 daily average clearing (${LBMA_JUL_2026.goldClearingDailyMoz} Moz) ÷ end-July London vault gold (${LBMA_JUL_2026.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not annual turnover, and not COMEX.`}
               />
               <DeskMetricTile
                 kicker="ETFs"
@@ -665,22 +681,25 @@ export function FullDesk() {
                 tone="silver"
                 unit="moz"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
-                live={silverIdentifiableMoz().toLocaleString("en-US", { maximumFractionDigits: 0 })}
-                note="Silver Institute identifiable bullion, 2024. Not a London or COMEX daily vault print."
+                asOf={SILVER_2025.asOf}
+                live={silverIdentifiableMoz().toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+                note="World Silver Survey 2026 identifiable bullion, end-2025. London, CME, SGE, SHFE, and other exchanges. Not a daily vault print."
               />
               <DeskMetricTile
                 kicker="ETFs"
                 label="Silver ETF tonnes"
                 tone="silver"
                 unit="t"
-                cadence="daily"
-                note="No clean daily ETF stock we store. Identifiable silver is the yearly proxy above."
+                cadence="yearly"
+                asOf="2025"
+                live={fmtTonnes(SILVER_ETP_2025.tonnes)}
+                note="World Silver Survey 2026 end-2025 ETP holdings (1,317.6 Moz, printed as 40,982 t). Not a daily series."
               />
             </DeskBoard>
             <p className="mt-6 text-sm text-muted">
-              Four of six tiles are dashes on purpose. COMEX open interest and LBMA clearing stay empty until we store
-              a trusted dated print.
+              COMEX gold and silver open interest versus registered stocks stay empty. No CME warehouse report is stored
+              with the same day’s open interest. LBMA clearing and silver ETP holdings above are dated prints, not live
+              feeds.
             </p>
           </>
         ) : null}
