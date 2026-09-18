@@ -26,7 +26,7 @@ function Col({
       <p className="min-h-10 text-[10px] font-semibold leading-tight tracking-[0.06em] text-faint uppercase">{label}</p>
       <p className="mt-2 font-sans text-3xl tabular-nums leading-none">${money(value)}</p>
       <p className={`mt-2 text-xs tabular-nums ${cleared ? "text-gold" : "text-muted"}`}>
-        {cleared ? "above" : `${(pct * 100).toFixed(0)}% of ATH`}
+        {cleared ? "above" : `${(pct * 100).toFixed(0)}% of that high`}
       </p>
       <div className="mt-auto w-full pt-3">
         <div className="h-1.5 w-full overflow-hidden rounded-full bg-raised">
@@ -62,7 +62,7 @@ function MetalAth({
         className="absolute top-3 right-3"
         payload={{
           kicker: "1980",
-          label: `${name} CPI-adjusted ATH`,
+          label: `${name} CPI-adjusted high`,
           value: `$${money(cpiAdj)}`,
           unit: "USD / oz",
           note: `Printed $${money(print)} · ${when}. Spot $${money(spot)}. M2-adjusted $${money(m2Adj)}.`,
@@ -106,9 +106,9 @@ export function AthNow() {
   return (
     <section className="mt-10">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">1980</p>
-      <h2 className="mt-2 font-sans text-3xl">1980 ATH (CPI / M2)</h2>
+      <h2 className="mt-2 font-sans text-3xl">1980 highs in today’s dollars</h2>
       <p className="mt-2 max-w-xl text-sm text-muted">
-        London gold $850; Hunt-era silver $49.45. CPI = official inflation. M2 = US money supply.
+        London gold $850; silver $49.45. CPI is official inflation. M2 is the US money supply.
       </p>
 
       <div className="mt-6 grid w-full gap-4 sm:grid-cols-2">

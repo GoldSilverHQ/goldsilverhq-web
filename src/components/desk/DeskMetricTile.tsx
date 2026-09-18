@@ -107,19 +107,23 @@ export function DeskMetricTile({
 export function DeskBoard({
   title,
   kicker,
+  cols = 4,
   children,
 }: {
   title: string;
   kicker?: string;
+  cols?: 2 | 3 | 4;
   children: ReactNode;
 }) {
+  const grid =
+    cols === 2 ? "sm:grid-cols-2" : cols === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4";
   return (
     <section className="mt-8">
       <div className="flex flex-wrap items-baseline gap-2">
         <h2 className="font-sans text-2xl sm:text-3xl">{title}</h2>
         {kicker ? <span className="text-xs text-faint">{kicker}</span> : null}
       </div>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{children}</div>
+      <div className={`mt-4 grid gap-3 ${grid}`}>{children}</div>
     </section>
   );
 }
