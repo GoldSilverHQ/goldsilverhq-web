@@ -261,8 +261,8 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(episode.related.some((r) => r.href === "/history/america/road-back-gold"));
 
     const americaCluster = getCluster("america");
-    assert.ok(americaCluster?.related.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
-    assert.ok(cluster?.related.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
+    assert.ok(americaCluster?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
+    assert.ok(cluster?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
     assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
   });
 });
