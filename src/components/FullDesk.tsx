@@ -58,7 +58,8 @@ const DESK_TABS: {
   {
     id: "official",
     label: "Official gold",
-    blurb: "Reported central-bank and IFI holdings and net official demand.",
+    blurb:
+      "Reported central-bank and IFI holdings and net official demand. A rising reserve book is a composition fact — not a reason for a private holder to copy a central bank.",
   },
   {
     id: "stocks",
@@ -69,7 +70,8 @@ const DESK_TABS: {
   {
     id: "money",
     label: "Money",
-    blurb: "Money supply, the dollar’s purchasing power, and sovereign debt against gold.",
+    blurb:
+      "Money supply, the dollar’s purchasing power, and sovereign debt against gold. These clocks measure the unit — they are not a forecast or a tip to buy metal.",
   },
   {
     id: "paper",
@@ -337,6 +339,22 @@ export function FullDesk() {
                 note="Same figure as the face. Compiled seed if GSHQ is offline."
               />
             </DeskBoard>
+            <p className="mt-6 max-w-2xl text-sm text-muted">
+              Official tonnes answer how much metal the state reports — not whether a private note is redeemable.
+              Read{" "}
+              <a href="/markets/central-bank-gold-reserves" className="text-gold hover:text-gold-soft">
+                how central banks report gold
+              </a>
+              , the leftover U.S.{" "}
+              <a href="/markets/official-gold-book-value" className="text-gold hover:text-gold-soft">
+                $42.22 book value
+              </a>
+              , or{" "}
+              <a href="/sound-money/backed-money" className="text-gold hover:text-gold-soft">
+                what “backed” means
+              </a>
+              .
+            </p>
           </>
         ) : null}
 
@@ -622,6 +640,21 @@ export function FullDesk() {
               />
             </DeskBoard>
             <MoneyPath />
+            <p className="mt-6 max-w-2xl text-sm text-muted">
+              Purchasing-power clocks measure the unit — not a forecast. Read{" "}
+              <a href="/sound-money/inflation-purchasing-power" className="text-gold hover:text-gold-soft">
+                inflation and purchasing power
+              </a>
+              , the{" "}
+              <a href="/history/20th-century/bretton-woods-nixon-1971" className="text-gold hover:text-gold-soft">
+                1971 gold-window close
+              </a>
+              , or the extreme case at{" "}
+              <a href="/history/20th-century/weimar-1923" className="text-gold hover:text-gold-soft">
+                Weimar 1923
+              </a>
+              .
+            </p>
           </>
         ) : null}
 

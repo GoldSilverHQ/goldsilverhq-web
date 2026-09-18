@@ -525,7 +525,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(page.title, "How central banks report gold in FX reserves");
     assert.deepEqual(
       page.related.map((r) => r.href),
-      ["/markets", "/markets/official-gold-book-value"],
+      [
+        "/markets",
+        "/markets/official-gold-book-value",
+        "/sound-money/backed-money",
+        "/history/20th-century/bretton-woods-nixon-1971",
+      ],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
@@ -617,7 +622,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
     assert.deepEqual(
       pageMeta.related.map((r) => r.href),
-      ["/markets", "/markets/official-gold-book-value"],
+      [
+        "/markets",
+        "/markets/official-gold-book-value",
+        "/sound-money/backed-money",
+        "/history/20th-century/bretton-woods-nixon-1971",
+      ],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
@@ -691,7 +701,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
     assert.deepEqual(
       pageMeta.related.map((r) => r.href),
-      ["/markets", "/markets/official-gold-book-value"],
+      [
+        "/markets",
+        "/markets/official-gold-book-value",
+        "/sound-money/backed-money",
+        "/history/20th-century/bretton-woods-nixon-1971",
+      ],
     );
 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
