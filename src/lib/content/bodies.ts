@@ -204,7 +204,7 @@ const nixon: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
+      "If you arrived asking **why 1971 mattered**, start here: the closed gold window — not a retail coin counter. On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
       "The act did not invent fiat money overnight. Private Americans had already been barred from monetary gold under the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods did not fail in a single night either. Pressure had built for years. What ended was the official gold window — the channel through which foreign treasuries and central banks could still present dollars and demand US gold at the posted price.",
     ],
   },
@@ -261,7 +261,7 @@ const nixon: Section[] = [
     paragraphs: [
       "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to **$42.22**. Pegs still failed under market pressure.",
       "By **1973** major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
-      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
+      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [what “backed” means](/sound-money/backed-money) if the leftover vault is being sold as a public claim. Open [what is sound money?](/sound-money/what-is-sound-money) when the date is clear and the vocabulary is next. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
     ],
   },
 ];
@@ -406,7 +406,7 @@ const whatIsSoundMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+      "If you arrived asking **what is sound money?**, stay on meaning first. A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
     ],
   },
   {
@@ -456,7 +456,7 @@ const whatIsSoundMoney: Section[] = [
     heading: "Definitions first, then dates",
     paragraphs: [
       "These pages stay on meaning. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans. The overview sits under [Sound Money](/sound-money).",
-      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures and practice pages answer different questions — meaning here, events there, figures and handling elsewhere.",
+      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures answer different questions — meaning here, events there, figures elsewhere. This page does not sell metal or forecast prices.",
     ],
   },
 ];
@@ -523,7 +523,7 @@ const inflation: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+      "If you arrived asking why the unit buys less over years — **inflation / purchasing power** — stay with the idea, not a forecast. If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
     ],
   },
   {
@@ -571,8 +571,8 @@ const inflation: Section[] = [
   {
     heading: "The idea, then the extreme case",
     paragraphs: [
-      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
-      "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history.",
+      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). Live purchasing-power clocks sit on the desk’s [Money](/desk) tab. The overview sits under [Sound Money](/sound-money).",
+      "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history. Nothing here is a tip to buy or sell metal.",
     ],
   },
 ];
@@ -1987,7 +1987,7 @@ const officialGoldBookValue: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
+      "If you came from **1971** wondering why a leftover dollar price still prints, stay with the ledger. After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
     ],
   },
   {
@@ -2039,7 +2039,7 @@ const officialGoldBookValue: Section[] = [
     heading: "Two ledgers, one stock",
     paragraphs: [
       "Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers — not a secret price, a floor, or a target, and not a reason to buy or sell metal. This page does not say the Treasury “should” revalue gold.",
-      "The other fact pages under [gold and silver markets](/markets) cover how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
+      "The other fact pages under [gold and silver markets](/markets) cover how [central banks report gold in reserves](/markets/central-bank-gold-reserves), what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971). For the word trap — reserves versus a public claim — open [what “backed” means](/sound-money/backed-money). The narrative stays on History. The leftover book rate stays here.",
     ],
   },
 ];
@@ -2048,7 +2048,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list.",
+      "If you arrived on **central-bank gold buying**, keep the address labels straight. A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies. It is not a shopping list, and it is not a tip to copy a central bank.",
     ],
   },
   {
@@ -2275,7 +2275,7 @@ const centralBankGoldReserves: Section[] = [
     heading: "Composition, custody, and clocks",
     paragraphs: [
       "A rising official stock is a change in a reserve composition. It is not a price target. A reported official sale is the same kind of fact as a reported official purchase: a dated change in a reserve book, not a private-flow instruction. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
-      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). What the gold–silver ratio measures is the third topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
+      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). Live official tonnes and net buying sit on the desk’s [Official gold](/desk) tab. A vault without a presentment right is still not convertibility — that word trap lives on [what “backed” means](/sound-money/backed-money). What the gold–silver ratio measures is the third markets topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
     ],
   },
 ];
@@ -2613,8 +2613,8 @@ export const historyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
-      "This history follows that argument as a documentary record. Coins are clipped or lightened. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. Each article sticks to a dated claim — who acted, what rule changed, what broke, and what followed — so a curious adult can leave able to explain the hinge in plain English.",
+      "If you arrived asking **why 1971 mattered**, the closed gold window has its own article — and this shelf holds the century around it. In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
+      "This history follows that argument as a documentary record. Coins are clipped or lightened. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. Each article sticks to a dated claim — who acted, what rule changed, what broke, and what followed — so a curious adult can leave able to explain the hinge in plain English. Vocabulary first lives under [Sound Money](/sound-money) if the words are still slipping.",
     ],
   },
   {
@@ -2651,7 +2651,7 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
+      "If you arrived asking **what is sound money?**, start here — vocabulary first, not a shop. People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
       "Sound money, on this site, means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. These pages define that claim and its neighbors. They do not sell metal, collect emails, or forecast prices.",
     ],
   },
@@ -2730,7 +2730,8 @@ export const marketsHubBody: Section[] = [
     paragraphs: [
       "The live [desk](/desk) prints prices and ratios like a clock. A few of those numbers still carry a statute, a survey method, or an official bookkeeping leftover. These pages explain those captions — why a Treasury line can show gold at **$42.22**, how central banks report gold in reserves, what the gold–silver ratio measures, and what a country ranking of bar-and-coin silver demand actually counts.",
       "If you arrived asking about **silver mining**, stay with the metal’s books — not company shares. Mine supply is ounces leaving the ground in a survey year. The [gold–silver ratio](/markets/gold-silver-ratio) page keeps that mining clock apart from the market price quotient. [Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks buyers, factories, and jewelry workshops, not holes in the ground. The desk’s [Stocks & flows](/desk) tab shows above-ground metal and mine output beside those articles. No page here names a miner, a ticker, a target, or a reason to prefer one metal.",
-      "Narrative from coinage to **1971** lives under [Sound Money History](/history). Handling bars and coins lives under [gold and silver in practice](/gold-silver).",
+      "If you arrived on **central-bank gold buying**, stay with reported reserve composition — not a household tip. [Central-bank gold reserves](/markets/central-bank-gold-reserves) labels tonnes, shares, and dated nets. The leftover U.S. [official gold book value](/markets/official-gold-book-value) is a different ledger. The desk’s [Official gold](/desk) tab prints the live stocks beside those articles. A rising official book is not a reason to copy a central bank.",
+      "Narrative from coinage to **1971** lives under [Sound Money History](/history).",
     ],
   },
   {
@@ -2755,7 +2756,7 @@ export const twentiethCenturyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In October **1907**, New York trust companies faced a liquidity panic and J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price — the **gold window**. Between those dates sit a new central bank, the wartime end of classical gold, a German mark that ceased to work as money, a US recall of private monetary gold, and a postwar dollar system built on official convertibility at **$35** an ounce.",
+      "If you arrived asking **why 1971 mattered**, this chapter is the door: from private rescue after **1907** to the closed gold window. In October **1907**, New York trust companies faced a liquidity panic and J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price — the **gold window**. Between those dates sit a new central bank, the wartime end of classical gold, a German mark that ceased to work as money, a US recall of private monetary gold, and a postwar dollar system built on official convertibility at **$35** an ounce.",
       "This chapter is that crowded modern door. Earlier chapters stretch across long spans of mint practice and statute fights. Here the regime changes pack into a shorter run of calendar time — and into the world most readers still live inside.",
     ],
   },

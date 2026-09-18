@@ -145,6 +145,7 @@ export const ideaPages: Episode[] = [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Sound Money History", href: "/history" },
     ],
     seo: {
@@ -192,6 +193,7 @@ export const ideaPages: Episode[] = [
       { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
+      { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
     ],
     seo: {
       primary: "inflation and purchasing power",
@@ -747,6 +749,9 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+          { title: "What “backed” means", href: "/sound-money/backed-money" },
+          { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
         ],
         seo: {
           primary: "nixon shock 1971",
@@ -1049,6 +1054,8 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
+      { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
+      { title: "What “backed” means", href: "/sound-money/backed-money" },
     ],
     seo: {
       primary: "official gold book value 42.22",
@@ -1071,6 +1078,8 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+      { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
     ],
     seo: {
       primary: "central bank gold reserves",
