@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MinePaceTicker } from "@/components/MinePaceTicker";
 import { COMPILED_OFFICIAL } from "@/lib/dashboard/clock-prints";
 import { getSpotLite } from "@/lib/dashboard/spot";
-import { SILVER_2024, silverVisibleMonths } from "@/lib/dashboard/stocks";
+import { SILVER_2025, silverVisibleMonths } from "@/lib/dashboard/stocks";
 
 type Spot = { gold: number; silver: number; ratio: number; asOf?: string };
 
@@ -119,7 +119,7 @@ export function HomeDashboard() {
           tone="silver"
           unit="months"
           value={silverVisibleMonths().toFixed(1)}
-          note={`Identifiable bullion ÷ ${SILVER_2024.asOf} fabrication.`}
+          note={`Identifiable bullion ÷ ${SILVER_2025.asOf} fabrication.`}
         />
       </section>
 

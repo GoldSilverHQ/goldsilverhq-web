@@ -28,7 +28,7 @@ import {
   CB_YTD_2026,
   FX_START,
   IMF_GOV_DEBT,
-  SILVER_2024,
+  SILVER_2025,
   USGS_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
@@ -287,9 +287,9 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
           tone="silver"
           unit="months"
           cadence="yearly"
-          asOf={SILVER_2024.asOf}
+          asOf={SILVER_2025.asOf}
           live={silverVisibleMonths().toFixed(1)}
-          note="Identifiable bullion (vaults) ÷ 2024 fabrication. Gold has no analogue."
+          note="Identifiable bullion (vaults) ÷ 2025 fabrication. Gold has no analogue."
         />
       </section>
 
@@ -358,7 +358,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
               </div>
             </div>
             <p className="mt-3 text-xs text-faint">
-              2024 Silver Institute. Official sector is a rounding error. Visible ounces are vaulted bullion, not jewelry.
+              World Silver Survey 2026, calendar 2025. Official sector is a rounding line. Visible ounces are vaulted bullion, not jewelry.
             </p>
           </article>
         </Board>
@@ -623,9 +623,9 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
                 tone="silver"
                 unit="moz"
                 cadence="yearly"
-                asOf={SILVER_2024.asOf}
-                live={silverIdentifiableMoz().toLocaleString("en-US", { maximumFractionDigits: 0 })}
-                note="Silver Institute identifiable bullion, 2024. Not a London or COMEX daily vault print."
+                asOf={SILVER_2025.asOf}
+                live={silverIdentifiableMoz().toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+                note="World Silver Survey 2026 identifiable bullion, end-2025. Not a London or COMEX daily vault print."
               />
               <Tile
                 kicker="ETFs"
