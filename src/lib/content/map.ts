@@ -194,6 +194,7 @@ export const ideaPages: Episode[] = [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
+      { title: "Assignats", href: "/history/banks-paper/assignats" },
     ],
     seo: {
       primary: "inflation and purchasing power",
@@ -483,6 +484,8 @@ export const historyClusters: Cluster[] = [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
           { title: "John Law and the Mississippi Bubble", href: "/history/banks-paper/john-law" },
           { title: "Bank of England", href: "/history/banks-paper/bank-of-england" },
+          { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
+          { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
         ],
         seo: {
           primary: "assignats",
@@ -694,7 +697,13 @@ export const historyClusters: Cluster[] = [
         paragraphs: [
           "In 1923 the German mark lost all practical value. Prices rose by the hour. People spent cash the day they received it. The cartoon of “printing money” is not wrong, but it is incomplete. The sequence starts with war finance.",
         ],
-        related: [],
+        related: [
+          { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
+          { title: "Assignats", href: "/history/banks-paper/assignats" },
+          { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+        ],
         seo: {
           primary: "weimar hyperinflation",
           secondary: [

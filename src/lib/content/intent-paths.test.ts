@@ -116,6 +116,7 @@ describe("intent paths (existing URLs only)", () => {
     const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
     assert.match(home, /what is sound money\?/);
     assert.match(home, /1971 gold-window close/);
+    assert.match(home, /weimar-1923/);
     assert.match(home, /central-bank-gold-reserves/);
     assert.match(home, /not a tip to copy a central bank/);
     assert.match(home, /backed-money/);
@@ -126,5 +127,39 @@ describe("intent paths (existing URLs only)", () => {
     assert.match(desk, /inflation-purchasing-power/);
     assert.match(desk, /bretton-woods-nixon-1971/);
     assert.match(desk, /weimar-1923/);
+  });
+
+  it("path 4 — Weimar / hyperinflation journey", () => {
+    const history = bodyText(historyHubBody);
+    assert.match(history, /what caused Weimar hyperinflation/i);
+    assert.match(history, /\[inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
+
+    const century = bodyText(twentiethCenturyHubBody);
+    assert.match(century, /what caused Weimar hyperinflation/i);
+    assert.match(century, /Weimar/i);
+
+    const weimar = bodyText(getBody("20th-century", "weimar-1923")!);
+    assert.match(weimar, /what caused Weimar hyperinflation/i);
+    assert.match(weimar, /\[inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
+    assert.match(weimar, /\[Money\]\(\/desk\)/);
+    assert.match(weimar, /\[assignats\]\(\/history\/banks-paper\/assignats\)/);
+    assert.doesNotMatch(weimar, TIP_PATTERN);
+    assert.doesNotMatch(weimar, /buy gold now|forecast next year|every currency will/i);
+
+    const inflation = bodyText(getBody("sound-money", "inflation-purchasing-power")!);
+    assert.match(inflation, /Weimar \/ hyperinflation/i);
+    assert.match(inflation, /\[Weimar 1923\]\(\/history\/20th-century\/weimar-1923\)/);
+
+    const hub = bodyText(soundMoneyHubBody);
+    assert.match(hub, /what caused Weimar hyperinflation/i);
+    assert.match(hub, /\[Weimar 1923\]\(\/history\/20th-century\/weimar-1923\)/);
+
+    const cluster = getCluster("20th-century");
+    const episode = cluster?.episodes.find((e) => e.slug === "weimar-1923");
+    assert.ok(episode);
+    assert.ok(episode.related.length > 0);
+    assert.ok(episode.related.some((r) => r.href === "/sound-money/inflation-purchasing-power"));
+    assert.ok(episode.related.some((r) => r.href === "/history/banks-paper/assignats"));
+    assert.ok(episode.related.some((r) => r.href === "/sound-money/what-is-sound-money"));
   });
 });
