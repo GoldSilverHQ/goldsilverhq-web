@@ -31,20 +31,21 @@ function HistoryHub() {
 
         <HistoryTimeline />
 
-        <h2 className="mt-16 font-display text-3xl">The five chapters</h2>
-        <p className="mt-2 max-w-prose text-muted">From ancient coinage to the modern gold-window close. Enter at any chapter; links keep the sequence.</p>
+        <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          From ancient coinage to the gold-window close — five stretches, each with its own dated articles.
+        </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {historyClusters.map((cluster, i) => (
+          {historyClusters.map((cluster) => (
             <Link
               key={cluster.slug}
               to="/history/$cluster"
               params={{ cluster: cluster.slug }}
               className="rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
             >
-              <p className="text-xs text-gold">Chapter {i + 1}</p>
-              <h3 className="mt-2 font-display text-2xl">{cluster.title}</h3>
+              <h3 className="font-display text-2xl">{cluster.title}</h3>
               <p className="mt-2 text-sm text-muted">{cluster.summary}</p>
-              <p className="mt-4 text-sm text-gold">Open chapter →</p>
+              <p className="mt-4 text-sm text-gold">Continue →</p>
             </Link>
           ))}
         </div>

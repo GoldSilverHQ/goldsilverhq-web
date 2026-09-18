@@ -50,15 +50,15 @@ function ClusterPage() {
             </p>
           ))
         )}
-        <ol className="mt-10 grid gap-3">
-          {cluster.episodes.map((ep, i) => (
+        <h2 className="mt-14 font-display text-2xl">Continue into an episode</h2>
+        <ol className="mt-6 grid gap-3">
+          {cluster.episodes.map((ep) => (
             <li key={ep.slug}>
               <Link
                 to="/history/$cluster/$episode"
                 params={{ cluster: cluster.slug, episode: ep.slug }}
                 className="flex gap-4 rounded-lg bg-surface px-4 py-4 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
               >
-                <span className="w-6 text-sm text-gold">{i + 1}</span>
                 <span>
                   <span className="block font-medium">{ep.title}</span>
                   <span className="text-sm text-muted">{ep.summary}</span>
@@ -70,7 +70,7 @@ function ClusterPage() {
         {cluster.related?.length ? <RelatedLinks links={cluster.related} /> : null}
         <p className="mt-10 text-sm">
           <a href="/history" className="text-gold hover:text-gold-soft">
-            ← All history chapters
+            ← Sound Money History
           </a>
         </p>
       </div>

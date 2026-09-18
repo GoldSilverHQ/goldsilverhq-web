@@ -2621,34 +2621,27 @@ export const historyHubBody: Section[] = [
     heading: "From metal in the hand to paper that floats",
     paragraphs: [
       "The story does not start with a modern central bank. It starts when traders settled in gold and silver by weight, then when a stamp cut the cost of checking that metal, then when a warehouse ticket began to pay a debt while the metal stayed in the vault. Paper is late. Fiat — money that exists by law and habit rather than by redeemability into a known weight — is later still.",
-      "Open [ancient money](/history/ancient) for why markets chose two metals and how Lydia, Greece, and Rome turned stamps into fiscal tools. Open [banks and paper](/history/banks-paper) for the receipt that becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, John Law’s **1720** note-and-share System, and the French assignats. Keep those centuries labeled. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
+      "The [ancient money](/history/ancient) stretch asks why markets chose two metals and how Lydia, Greece, and Rome turned stamps into fiscal tools — begin with [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) if the selection itself is the fog. [Banks and paper](/history/banks-paper) follows the receipt that becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French assignats. Keep those centuries labeled. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
     ],
   },
   {
     heading: "One republic, one white metal, one crowded century",
     paragraphs: [
-      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the silver question after **1873**, and a gold definition in **1900** — then hands off before the Fed. Silver needs its own shelf too. The [silver chapter](/history/silver) follows a mountain at Potosí, a global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
-      "The densest modern door is the [twentieth century](/history/20th-century): private rescue after **1907**, a new central bank, classical gold’s wartime end, Weimar, the **1933** US gold recall, Bretton Woods, and the **1971** gold-window close. If you live downstream of that close, start there. If you want the slower on-ramp — metal before paper — start with ancient coinage or banks and paper and walk forward.",
+      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900** — then hands off before the Fed. Silver needs its own stretch too. The [silver chapter](/history/silver) follows a mountain at [Potosí](/history/silver/potosi), a global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
+      "The densest modern door is the [twentieth century](/history/20th-century): private rescue after **1907**, a new central bank, classical gold’s wartime end, [Weimar **1923**](/history/20th-century/weimar-1923), the **1933** US gold recall, Bretton Woods, and the [**1971** gold-window close](/history/20th-century/bretton-woods-nixon-1971). If you live downstream of that close, the century chapter is the natural entry. If you want the slower on-ramp — metal before paper — ancient coinage or banks and paper walk forward into the same argument.",
     ],
   },
   {
-    heading: "Five chapters",
+    heading: "Four hinges, five stretches",
     paragraphs: [
-      "Five chapters cover the path. Chapter pages introduce a stretch; the articles do the dated work.",
-    ],
-    list: [
-      "[Ancient money](/history/ancient) — Coinage, debasement, and early metallic money as political tools.",
-      "[Banks and paper](/history/banks-paper) — Warehouse receipts, note banks, and pre-modern paper experiments, including Law’s Mississippi System.",
-      "[America](/history/america) — US statutes, banks, greenbacks, and silver politics inside one republic’s monetary fights.",
-      "[Silver](/history/silver) — Silver’s own arc: mountain, coin, mint ratio, 1980, then monetary memory and industry.",
-      "[20th century](/history/20th-century) — Panic and Fed, classical gold’s end, Weimar, 1933, Bretton Woods and 1971.",
+      "You do not need every page on day one. The mark that bought less by the hour has its own article: [Weimar **1923**](/history/20th-century/weimar-1923). The closed gold window has [Bretton Woods and Nixon **1971**](/history/20th-century/bretton-woods-nixon-1971). An earlier paper System that fused notes and shares sits at [John Law **1720**](/history/banks-paper/john-law). The mountain that poured silver into world payments sits at [Potosí](/history/silver/potosi). Each hinge opens a dated claim; the chapter around it shows what sat before and after.",
+      "Five stretches hold the rest of the path — [ancient money](/history/ancient), [banks and paper](/history/banks-paper), [America](/history/america), [silver](/history/silver), and the [twentieth century](/history/20th-century). Chapter pages introduce a stretch; the articles do the dated work. Similar mechanisms can teach; merging **1720** into **1923**, or **1933** into **1971**, blurs what actually changed.",
     ],
   },
   {
     heading: "",
     paragraphs: [
       "These pages state what happened and how the money rule worked. They do not sell metal, forecast prices, or turn a panic into a pitch. Definitions of sound money live under [Sound Money](/sound-money); current figures under [Markets](/markets). History keeps the dated claims.",
-      "You do not need every page on day one. Open one hinge — Weimar, Nixon, Law, Potosí — and use the chapter links to see what sits before and after. Similar mechanisms can teach; merging **1720** into **1923**, or **1933** into **1971**, blurs what actually changed.",
     ],
   },
 ];
@@ -2671,11 +2664,11 @@ export const soundMoneyHubBody: Section[] = [
     ],
   },
   {
-    heading: "Definitions first — then the dated stories",
+    heading: "When the fog clears",
     paragraphs: [
-      "The word most often abused is “backed.” Start with [backed money](/sound-money/backed-money) if that is the fog, then [hard money vs fiat](/sound-money/hard-money-vs-fiat), then [inflation](/sound-money/inflation-purchasing-power), then [what is sound money?](/sound-money/what-is-sound-money) as the summary entry. Landing on any one page is fine; the neighbors are linked. The bodies carry the weight of the definitions.",
+      "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) is the door if that slogan is the fog; [hard money vs fiat](/sound-money/hard-money-vs-fiat) if the split is cost of production versus law and habit; [inflation and purchasing power](/sound-money/inflation-purchasing-power) if the question is what the unit still buys; [what is sound money?](/sound-money/what-is-sound-money) if you want the summary claim after the neighbors. Landing on any one page is fine; each links the rest. The bodies carry the weight of the definitions.",
       "When the vocabulary is clear, leave for [Sound Money History](/history). Weimar and Nixon belong there, not on this definitions page. Definition pages may link a dated case once — a greenback premium, a gold recall, a closed window — without pasting the whole timeline onto a glossary entry. Similar crises can teach the same mechanism; they are still different years and different laws.",
-      "Current figures live under [Markets](/markets): book values, reserve lines, ratios, and country offtake. Handling bars and coins lives under [gold and silver in practice](/gold-silver). Mixing definition with tips produces a pitch. Keeping the label produces a word you can reuse on every later page. Open one definition, then leave when the next question is “what happened?” rather than “what does this word mean?”",
+      "Current figures live under [Markets](/markets): book values, reserve lines, ratios, and country offtake. Handling bars and coins lives under [gold and silver in practice](/gold-silver). Mixing definition with tips produces a pitch. Keeping the label produces a word you can reuse on every later page. When the next question is “what happened?” rather than “what does this word mean?”, the history shelf is the continuation.",
       "These pages answer what the words mean for adults who want the vocabulary straight before they open a dated article. They are not a remonetization brief, a metal shopping list, or a forecast dressed as a glossary. Weimar, the Fed, greenbacks, and Nixon stay as dated events under History — linked once as cases when a definition needs an example, never retold in full here. Meaning first; events elsewhere; figures and handling on their own pages. That split is the whole job of this overview page.",
     ],
   },
@@ -2741,16 +2734,11 @@ export const marketsHubBody: Section[] = [
     ],
   },
   {
-    heading: "Four current facts",
+    heading: "Four captions that need a page",
     paragraphs: [
       "A **book value** is the dollar figure a government still writes into its books for gold — often a leftover legal rate, not the market price. A reserve line is how much gold a central bank reports holding. A ratio is one price divided by another at a named time. A country line is how much bar-and-coin silver buyers in that country took off the shelf in a survey year (**offtake** = that identified purchase volume).",
-      "[Official gold book value](/markets/official-gold-book-value) is the cleanest entry if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) is the entry if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and April **2011** (~**30:1** as a named tape, not a target) — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices or the homepage mining-ratio card. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table, and labels separate **2025** industrial-fabrication and jewelry-fabrication rankings from World Silver Survey 2026.",
-    ],
-    list: [
-      "[Official gold book value](/markets/official-gold-book-value) — Statutory $42.22 versus the market price; arithmetic on named year averages and peak prints.",
-      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) — How gold is reported in foreign-exchange reserves; official gold relative to GDP; vault preferences; dated official purchases.",
-      "[Gold–silver ratio](/markets/gold-silver-ratio) — Definition of the quotient; three clocks — market price, mine output, London vault stocks; 1980 and April 2011 (~30:1 as a named tape, not a target).",
-      "[Physical silver demand by country](/markets/physical-silver-demand-by-country) — Identified bar-and-coin offtake by country; 2025 industrial fabrication and jewelry fabrication as separate tables; what the ranking does not measure.",
+      "[Official gold book value](/markets/official-gold-book-value) continues the story if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) continues if you have just looked at the desk’s country bars — including a short Poland section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and April **2011** (~30:1 as a named tape, not a target) — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices or the homepage mining-ratio card. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table, and labels separate **2025** industrial-fabrication and jewelry-fabrication rankings from World Silver Survey 2026.",
+      "Four doors, four jobs: [official gold book value](/markets/official-gold-book-value) for the statutory **$42.22** versus market arithmetic; [central-bank gold reserves](/markets/central-bank-gold-reserves) for how gold is reported in foreign-exchange reserves and dated official purchases; [gold–silver ratio](/markets/gold-silver-ratio) for the quotient and its three clocks; [physical silver demand by country](/markets/physical-silver-demand-by-country) for identified offtake and fabrication tables — and for what those rankings do not measure.",
     ],
   },
   {
@@ -2779,16 +2767,11 @@ export const twentiethCenturyHubBody: Section[] = [
     ],
   },
   {
-    heading: "Articles in this chapter",
+    heading: "Five dated claims",
     paragraphs: [
-      "Read in calendar order for the century’s sequence, or open the hinge you already need — Weimar, **1933**, or **1971** — and use the neighbors to see what sits before and after.",
-    ],
-    list: [
-      "[Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed) — Trust-banking liquidity crisis and the political road to the Federal Reserve; the Fed did not cause 1907; created after, not before.",
-      "[End of the classical gold standard](/history/20th-century/classical-gold-standard-end) — How peacetime classical convertibility broke under World War I and what “gold standard” meant in the years that followed.",
-      "[Weimar 1923](/history/20th-century/weimar-1923) — The German mark’s collapse into hyperinflation; a paper-money catastrophe with its own causes, dates, and institutional setting.",
-      "[1933 gold recall](/history/20th-century/1933-gold-recall) — US private gold recall and official revaluation; citizens lose monetary gold rights years before 1971.",
-      "[Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971) — Bretton Woods as a gold-exchange dollar system at $35 an ounce, and the 15 August 1971 close of the gold window for foreign official holders.",
+      "The [Panic of **1907** and the Fed](/history/20th-century/panic-1907-fed) opens the century’s plumbing: a trust-banking liquidity crisis and the political road to the Federal Reserve — created after **1907**, not before. The [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) follows: how peacetime convertibility broke under World War I, and what “gold standard” still meant in the years that followed.",
+      "[Weimar **1923**](/history/20th-century/weimar-1923) is the German mark’s collapse into hyperinflation — a paper-money catastrophe with its own causes, dates, and institutional setting. The [**1933** gold recall](/history/20th-century/1933-gold-recall) is the US private gold recall and official revaluation: citizens lose monetary gold rights years before **1971**. [Bretton Woods and Nixon **1971**](/history/20th-century/bretton-woods-nixon-1971) closes the arc — the dollar system at **$35** an ounce, and the **15 August 1971** close of the gold window for foreign official holders.",
+      "Calendar order is the century’s sequence. Any hinge is a valid door — Weimar, **1933**, or **1971** — and the neighbors show what sat before and after.",
     ],
   },
   {
@@ -2806,7 +2789,7 @@ export const americaHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
-      "Open [Crime of 1873](/history/america/crime-of-1873) for silver politics, [greenbacks](/history/america/greenbacks-civil-war) for war paper, or [road back toward gold](/history/america/road-back-gold) for the bridge into **1907**. Jackson’s bank war, Civil War greenbacks, and the **1913** Fed are related arguments about credit and paper — not one institution.",
+      "The [Crime of 1873](/history/america/crime-of-1873) is the silver-politics door; [greenbacks](/history/america/greenbacks-civil-war) is the war-paper door; the [road back toward gold](/history/america/road-back-gold) is the bridge into **1907**. Jackson’s bank war, Civil War greenbacks, and the **1913** Fed are related arguments about credit and paper — not one institution.",
     ],
   },
   {
@@ -2834,16 +2817,10 @@ export const americaHubBody: Section[] = [
     ],
   },
   {
-    heading: "Articles in this chapter",
+    heading: "Five doors into the republic’s unit",
     paragraphs: [
-      "Five full narratives. Calendar order is the on-ramp; any hinge is a valid door.",
-    ],
-    list: [
-      "[Early U.S. coinage / bimetallism](/history/america/early-us-coinage) — 1792 mint ratio, Spanish dollar background, 1834 gold-friendlier correction; Gresham at the Mint.",
-      "[Jackson and the Bank](/history/america/jackson-and-the-bank) — Second Bank, 1832 veto, pet banks, Specie Circular, Panic of 1837; not the Fed.",
-      "[Greenbacks and the Civil War](/history/america/greenbacks-civil-war) — Legal tender war paper, gold premium, Resumption Act, specie payments 1879.",
-      "[The Crime of 1873 and the silver question](/history/america/crime-of-1873) — Coinage Act omits the silver dollar; free silver; Bryan 1896.",
-      "[The road back toward the gold standard](/history/america/road-back-gold) — Resumption, silver-purchase strain, Gold Standard Act 1900; handoff to 1907.",
+      "Five full narratives carry the claim. [Early U.S. coinage](/history/america/early-us-coinage) opens with the **1792** mint ratio, Spanish-dollar inheritance, and the **1834** gold-friendlier correction — Gresham at the Mint. [Jackson and the Bank](/history/america/jackson-and-the-bank) is the Second Bank, **1832** veto, pet banks, Specie Circular, and Panic of **1837** — not the Fed. [Greenbacks and the Civil War](/history/america/greenbacks-civil-war) is legal-tender war paper, the gold premium, the Resumption Act, and specie payments in **1879**.",
+      "[The Crime of **1873** and the silver question](/history/america/crime-of-1873) is the Coinage Act that omitted the silver dollar, free silver, and Bryan **1896**. [The road back toward the gold standard](/history/america/road-back-gold) is resumption, silver-purchase strain, the Gold Standard Act **1900**, and the handoff to **1907**. Calendar order is the on-ramp; any hinge is a valid door.",
     ],
   },
   {
@@ -2860,7 +2837,7 @@ export const silverHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
-      "Open [piece of eight](/history/silver/piece-of-eight) for the global coin, [bimetallism](/history/silver/bimetallism) for mint ratios, or [Silver Thursday](/history/silver/silver-thursday) for **1980**. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
+      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
     ],
   },
   {
@@ -2888,22 +2865,16 @@ export const silverHubBody: Section[] = [
     ],
   },
   {
-    heading: "Articles in this chapter",
+    heading: "Five doors along the white-metal arc",
     paragraphs: [
-      "Five full narratives. Flow → coin → statute mechanics → modern break → dual role — or enter at any hinge.",
-    ],
-    list: [
-      "[Piece of eight](/history/silver/piece-of-eight) — Spanish dollar as a circulating global silver unit; U.S. dollar inheritance.",
-      "[Silver Thursday / Hunt Brothers 1980](/history/silver/silver-thursday) — Concentrated position, rule changes, 27 March 1980 break; facts only.",
-      "[Bimetallism](/history/silver/bimetallism) — Fixed mint ratio, market ratio drift, Gresham; link to Crime of 1873.",
-      "[Potosí](/history/silver/potosi) — Cerro Rico, Manila galleon, silver flow into Eurasian payments.",
-      "[Silver: monetary history and industry](/history/silver/monetary-and-industry) — Monetary memory versus photography, electronics, photovoltaics.",
+      "Five full narratives. [Potosí](/history/silver/potosi) is Cerro Rico, the Manila galleon, and silver flow into Eurasian payments. The [piece of eight](/history/silver/piece-of-eight) is the Spanish dollar as a circulating global silver unit and the U.S. dollar’s inheritance. [Bimetallism](/history/silver/bimetallism) is fixed mint ratio, market-ratio drift, and Gresham — with a link to the [Crime of **1873**](/history/america/crime-of-1873).",
+      "[Silver Thursday / Hunt Brothers **1980**](/history/silver/silver-thursday) is the concentrated position, the rule changes, and the **27 March 1980** break — facts only. [Silver: monetary history and industry](/history/silver/monetary-and-industry) names monetary memory versus photography, electronics, and photovoltaics. Flow → coin → statute mechanics → modern break → dual role — or enter at any hinge.",
     ],
   },
   {
     heading: "",
     paragraphs: [
-      "Return to [Sound Money History](/history) for the other chapters. Links to America stay where statute politics help — especially the [Crime of 1873](/history/america/crime-of-1873) beside [bimetallism](/history/silver/bimetallism). Links to [markets](/markets) stay where current survey and ratio facts live. For bars, coins, and premiums, use [gold and silver in practice](/gold-silver). Open [piece of eight](/history/silver/piece-of-eight) for the global coin, [Potosí](/history/silver/potosi) for the mountain, or [Silver Thursday](/history/silver/silver-thursday) for **1980**, then use the chapter list to see what sits before and after. The ordered silver door is the point — mountain, coin, statute, squeeze, and dual role as five dated claims, not one merged slogan about metal.",
+      "Return to [Sound Money History](/history) for the other chapters. Links to America stay where statute politics help — especially the [Crime of 1873](/history/america/crime-of-1873) beside [bimetallism](/history/silver/bimetallism). Links to [markets](/markets) stay where current survey and ratio facts live. For bars, coins, and premiums, use [gold and silver in practice](/gold-silver). The ordered silver door is the point — mountain, coin, statute, squeeze, and dual role as five dated claims, not one merged slogan about the white metal.",
     ],
   },
 ];
@@ -2942,16 +2913,10 @@ export const banksPaperHubBody: Section[] = [
     ],
   },
   {
-    heading: "Articles in this chapter",
+    heading: "Five doors from receipt to note",
     paragraphs: [
-      "Warehouses, Amsterdam, and Law are the long narratives. The Bank of England and assignats are shorter stops.",
-    ],
-    list: [
-      "[From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) — A receipt for metal starts to circulate; banking begins when the ticket pays a debt.",
-      "[Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) — The 1609 Wisselbank as public deposit money, then concealed lending and a lost reputation.",
-      "[Bank of England](/history/banks-paper/bank-of-england) — The 1694 war-finance charter, notes that became English money, then restriction and resumption.",
-      "[John Law and the Mississippi Bubble](/history/banks-paper/john-law) — The 1720 note-and-share System under the Regency; the full article in this chapter.",
-      "[Assignats](/history/banks-paper/assignats) — Revolutionary paper supposedly tied to land, 1789–1796; not a second Law, and not Weimar.",
+      "[From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) is where a receipt for metal starts to circulate — banking begins when the ticket pays a debt. The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) is the **1609** Wisselbank as public deposit money, then concealed lending and a lost reputation. The [Bank of England](/history/banks-paper/bank-of-england) is the **1694** war-finance charter, notes that became English money, then restriction and resumption.",
+      "[John Law and the Mississippi Bubble](/history/banks-paper/john-law) is the **1720** note-and-share System under the Regency — the long narrative of this chapter. [Assignats](/history/banks-paper/assignats) is revolutionary paper supposedly tied to land, **1789–1796** — not a second Law, and not Weimar. Linear order is the on-ramp; Law first if **1720** is the hinge you need.",
     ],
   },
   {
@@ -3005,22 +2970,10 @@ export const ancientHubBody: Section[] = [
     ],
   },
   {
-    heading: "Articles in this chapter",
+    heading: "Five doors before paper",
     paragraphs: [
-      "Why markets chose gold and silver is the long narrative. Lydia, Greece, Rome, and the solidus follow the same metal-then-stamp path.",
-    ],
-    list: [
-      "[Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — Selection by trade: portability, durability, divisibility, recognizability; metal before the mint.",
-      "[Lydia and the first coins](/history/ancient/lydia-first-coins) — Electrum, a stamp, and a lower cost of verifying metal in western Anatolia.",
-      "[Greece: silver and trade](/history/ancient/greece-silver-trade) — Laurion and the Attic owl; silver as a Mediterranean language.",
-      "[Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) — Two metals, one state; when spending outran metal, the coin was lightened.",
-      "[After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) — Constantine’s gold unit keeps its weight into Byzantium; continuity, not romance.",
-    ],
-  },
-  {
-    heading: "",
-    paragraphs: [
-      "Open [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) first if you want the selection in full, then Lydia → Greece → Rome → solidus. When the story leaves the coin for a ticket, open [banks and paper](/history/banks-paper). Keep **1720**, the **1790s**, **1923**, and **1971** off this chapter except as labeled later cases.",
+      "[Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the long narrative — selection by trade: portability, durability, divisibility, recognizability; metal before the mint. [Lydia and the first coins](/history/ancient/lydia-first-coins) is electrum, a stamp, and a lower cost of verifying metal in western Anatolia. [Greece: silver and trade](/history/ancient/greece-silver-trade) is Laurion and the Attic owl — silver as a Mediterranean language.",
+      "[Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) is two metals under one state — when spending outran metal, the coin was lightened. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) is Constantine’s gold unit keeping its weight into Byzantium — continuity, not romance. When the story leaves the coin for a ticket, open [banks and paper](/history/banks-paper). Keep **1720**, the **1790s**, **1923**, and **1971** off this chapter except as labeled later cases.",
     ],
   },
 ];
