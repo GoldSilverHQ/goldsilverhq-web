@@ -7,6 +7,7 @@ import {
   getBody,
   historyHubBody,
   marketsHubBody,
+  americaHubBody,
   silverHubBody,
   soundMoneyHubBody,
   twentiethCenturyHubBody,
@@ -210,5 +211,58 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(episode.related.some((r) => r.href === "/history/america/early-us-coinage"));
     assert.ok(episode.related.some((r) => r.href === "/history/silver/bimetallism"));
     assert.ok(episode.related.some((r) => r.href === "/markets/gold-silver-ratio"));
+  });
+
+  it("path 6 — Panic of 1907 journey", () => {
+    const history = bodyText(historyHubBody);
+    assert.match(history, /what was the Panic of 1907\?/i);
+    assert.match(history, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+
+    const century = bodyText(twentiethCenturyHubBody);
+    assert.match(century, /what was the Panic of 1907\?/i);
+    assert.match(century, /Knickerbocker/);
+    assert.doesNotMatch(century, TIP_PATTERN);
+
+    const america = bodyText(americaHubBody);
+    assert.match(america, /what was the Panic of 1907\?/i);
+    assert.match(america, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+
+    const panic = bodyText(getBody("20th-century", "panic-1907-fed")!);
+    assert.match(panic, /what was the Panic of 1907\?/i);
+    assert.match(panic, /\[road back toward gold\]\(\/history\/america\/road-back-gold\)/);
+    assert.match(panic, /\[Jackson and the Bank\]\(\/history\/america\/jackson-and-the-bank\)/);
+    assert.match(panic, /\[end of the classical gold standard\]\(\/history\/20th-century\/classical-gold-standard-end\)/);
+    assert.doesNotMatch(panic, TIP_PATTERN);
+    assert.doesNotMatch(panic, /end the Fed|buy gold now|price target for/i);
+
+    const classical = bodyText(getBody("20th-century", "classical-gold-standard-end")!);
+    assert.match(classical, /what was the Panic of 1907\?/i);
+    assert.match(classical, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+
+    const jackson = bodyText(getBody("america", "jackson-and-the-bank")!);
+    assert.match(jackson, /what was the Panic of 1907\?/i);
+    assert.match(jackson, /not this veto/);
+
+    const road = bodyText(getBody("america", "road-back-gold")!);
+    assert.match(road, /what was the Panic of 1907\?/i);
+    assert.match(road, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+    assert.doesNotMatch(road, /15 August 1971/);
+
+    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.match(home, /panic-1907-fed/);
+    assert.match(home, /Panic of 1907/);
+
+    const cluster = getCluster("20th-century");
+    const episode = cluster?.episodes.find((e) => e.slug === "panic-1907-fed");
+    assert.ok(episode);
+    assert.ok(episode.related.length >= 4);
+    assert.ok(episode.related.some((r) => r.href === "/history/20th-century/classical-gold-standard-end"));
+    assert.ok(episode.related.some((r) => r.href === "/history/america/jackson-and-the-bank"));
+    assert.ok(episode.related.some((r) => r.href === "/history/america/road-back-gold"));
+
+    const americaCluster = getCluster("america");
+    assert.ok(americaCluster?.related.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
+    assert.ok(cluster?.related.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
   });
 });

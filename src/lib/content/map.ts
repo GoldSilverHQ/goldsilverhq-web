@@ -506,6 +506,7 @@ export const historyClusters: Cluster[] = [
     sections: americaHubBody,
     related: [
       { title: "Sound Money History", href: "/history" },
+      { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
       { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
       { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
     ],
@@ -628,6 +629,7 @@ export const historyClusters: Cluster[] = [
     sections: twentiethCenturyHubBody,
     related: [
       { title: "Sound Money History", href: "/history" },
+      { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
       { title: "Weimar hyperinflation (1923)", href: "/history/20th-century/weimar-1923" },
     ],
     seo: {
@@ -644,8 +646,10 @@ export const historyClusters: Cluster[] = [
           "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support when no public central bank existed. The Federal Reserve did not cause 1907. Congress created the Fed afterward, in 1913, in part because that panic showed how thin the country’s crisis plumbing was.",
         ],
         related: [
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
+          { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
+          { title: "Road back toward gold", href: "/history/america/road-back-gold" },
+          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
         ],
         seo: {
           primary: "panic of 1907",
