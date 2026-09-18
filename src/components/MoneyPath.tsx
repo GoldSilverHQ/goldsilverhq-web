@@ -86,7 +86,7 @@ export function MoneyPath() {
 
   const copy =
     mode === "indexed"
-      ? "All three start at 100. If gold tracks the printing press, it rides with M2."
+      ? "All three start at 100. The lines show how gold, silver, and US M2 have moved since the chosen year."
       : mode === "m2"
         ? "Gold and silver divided by US M2, then rebased to 100. Flat means the metal only kept up with money."
         : "Gold and silver divided by CPI, then rebased to 100. Official inflation, not the money stock.";

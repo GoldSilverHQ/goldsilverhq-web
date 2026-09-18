@@ -28,6 +28,7 @@ import {
   SILVER_2025,
   SILVER_ETP_2025,
   USGS_MINE_2025,
+  WGC_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
   coverPct,
@@ -37,7 +38,6 @@ import {
   lostVsStart,
   mineOutputRatio,
   silverIdentifiableMoz,
-  silverOfficialT,
   silverSupplyGapT,
   silverVisibleMonths,
   wgcShare,
@@ -58,18 +58,18 @@ const DESK_TABS: {
   {
     id: "prices",
     label: "Prices",
-    blurb: "Spot, five-year COMEX price history, ratios, and the 1980 highs in today’s dollars.",
+    blurb: "Spot, five-year price history, the 1980 highs in today’s dollars, and the old 15:1 mint ratio.",
   },
   {
     id: "official",
     label: "Official gold",
-    blurb: "Reported central-bank and IFI holdings and net official demand.",
+    blurb: "Reported central-bank holdings and net official demand.",
   },
   {
     id: "stocks",
     label: "Stocks & flows",
     blurb:
-      "Above-ground metal, mine output, and who holds what. Mine supply is ounces leaving the ground — a geology and survey clock, not a miner tip or a fair-value claim.",
+      "Above-ground gold, silver supply and use, and who holds what. Mine supply is ounces leaving the ground — a published geology figure, not a miner tip or a fair-value claim.",
   },
   {
     id: "money",
@@ -79,7 +79,8 @@ const DESK_TABS: {
   {
     id: "paper",
     label: "Exchange paper",
-    blurb: "Claims versus vaulted metal and ETF holdings. Some prints are still dashes — missing feeds, not broken widgets.",
+    blurb:
+      "London clearing, ETF holdings, and identifiable silver. COMEX open interest is left off — no same-day pair is stored.",
   },
 ];
 
@@ -194,8 +195,7 @@ export function FullDesk() {
         <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
-        Dated prints by category. Each figure can download as a 4:5 card. Dashes are missing prints, not broken
-        widgets.
+        Dated prints by category. Each figure can download as a 4:5 card.
       </p>
 
       <div className="mt-6">
@@ -208,7 +208,7 @@ export function FullDesk() {
           <>
             <section className="mt-8 grid gap-3 sm:grid-cols-3">
               <DeskMetricTile
-                kicker="Au"
+                kicker="Gold"
                 label="Gold spot"
                 unit="USD / oz"
                 cadence="live"
@@ -217,7 +217,7 @@ export function FullDesk() {
                 note="15-minute print. Weekends stay last close."
               />
               <DeskMetricTile
-                kicker="Ag"
+                kicker="Silver"
                 label="Silver spot"
                 tone="silver"
                 unit="USD / oz"
@@ -227,43 +227,35 @@ export function FullDesk() {
                 note="Same feed as gold. Not a tick-by-tick feed."
               />
               <DeskMetricTile
-                kicker="GSR"
+                kicker="Ratio"
                 label="Gold–silver ratio"
                 unit="oz Ag / oz Au"
                 cadence="live"
                 asOf={spotAsOf}
                 live={spot ? spot.ratio.toFixed(1) : undefined}
-                note="Live ratio. 15:1 is history, not a target."
+                note="Ounces of silver per ounce of gold. The 15:1 line below is history, not a target."
               />
             </section>
             <SpotPriceHistory />
             <AthNow />
-            <DeskBoard title="Ratios" kicker="price history">
-              <DeskMetricTile
-                kicker="Live"
-                label="Gold–silver ratio"
-                unit="×"
-                cadence="live"
-                asOf={spotAsOf}
-                live={spot ? spot.ratio.toFixed(1) : undefined}
-              />
+            <DeskBoard title="Old mint ratio" kicker="coinage, not a target" cols={2}>
               <DeskMetricTile
                 kicker="History"
                 label="Bimetallic mint ratio"
                 unit="Ag : Au"
                 cadence="const"
-                asOf="const"
+                asOf="history"
                 live="15 : 1"
-                note="Rome / 19th-c. US coinage. Not a forecast."
+                note="Rome and 19th-century US coinage. Not a forecast."
               />
               <DeskMetricTile
-                kicker="Spread"
+                kicker="Today"
                 label="Today vs 15 : 1"
                 unit="×"
                 cadence="live"
                 asOf={spotAsOf}
                 live={spread ? spread.toFixed(1) : undefined}
-                note="How many times the old mint ratio the market is paying."
+                note="Live gold–silver ratio divided by 15. A comparison, not a target."
               />
             </DeskBoard>
           </>
@@ -271,7 +263,7 @@ export function FullDesk() {
 
         {tab === "official" ? (
           <>
-            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <DeskMetricTile
                 kicker="Official"
                 label="World official gold"
@@ -288,30 +280,31 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={CB_YTD_2026.asOf ?? "2026"}
                 live={fmtTonnes(CB_YTD_2026.tonnes)}
-                note="WGC GDT H1 2026 YTD. Includes unreported."
+                note="WGC Gold Demand Trends, H1 2026. Includes unreported."
               />
               <DeskMetricTile
-                kicker="Mine"
-                label="CB share of mine supply"
+                kicker="Mines"
+                label="Central-bank share of mine supply"
                 unit="%"
                 cadence="yearly"
+                asOf={WGC_MINE_2025.asOf}
                 live={(cbTakeOfMine() * 100).toFixed(0)}
-                note="2025 official demand / WGC mine supply."
+                note="2025 official demand divided by World Gold Council mine supply."
               />
               <DeskMetricTile
-                kicker="Official"
-                label="Central banks and IFIs"
+                kicker="Share"
+                label="Official share of above-ground gold"
                 unit="%"
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={wgcShare(WGC_STOCK.officialT).toFixed(0)}
-                note="WGC above-ground split. Wider than our official book."
+                note="World Gold Council above-ground split. Wider than the year-end official book above."
               />
             </section>
             <CentralBankGold />
-            <DeskBoard title="Official holdings" kicker="country and IFI prints">
+            <DeskBoard title="Official holdings" kicker="country and institution prints" cols={3}>
               <DeskMetricTile
-                kicker="Fed"
+                kicker="US"
                 label="United States official gold"
                 unit="t"
                 cadence="yearly"
@@ -328,7 +321,7 @@ export function FullDesk() {
                 note="The ECB’s own book. Eurosystem (national banks + ECB) is a larger sum, not this tile."
               />
               <DeskMetricTile
-                kicker="PBoC"
+                kicker="China"
                 label="China reported official gold"
                 unit="t"
                 cadence="monthly"
@@ -340,69 +333,44 @@ export function FullDesk() {
                     : "Latest reported official print. Newer than the world year-end stock."
                 }
               />
-              <DeskMetricTile
-                kicker="World"
-                label="All official gold"
-                unit="t"
-                cadence="yearly"
-                asOf={formatAsOf(official.world.asOf)}
-                live={fmtTonnes(official.world.tonnes)}
-                note="Same figure as the face. Compiled seed if GSHQ is offline."
-              />
             </DeskBoard>
           </>
         ) : null}
 
         {tab === "stocks" ? (
           <>
-            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               <DeskMetricTile
-                kicker="Official"
-                label="Official reserves"
+                kicker="Stock"
+                label="Above-ground gold"
                 unit="t"
                 cadence="yearly"
-                asOf={formatAsOf(official.world.asOf)}
-                live={fmtTonnes(official.world.tonnes)}
-                note="Countries + IMF + ECB, one year-end vintage. Also under Official gold."
+                asOf={formatAsOf(WGC_STOCK.asOf)}
+                live={fmtTonnes(WGC_STOCK.aboveGroundT)}
+                note="World Gold Council stock, end-Q2 2026. Jewelry, official holdings, bars, ETFs, and other. Not the year-end official book."
               />
               <DeskMetricTile
-                kicker="Buying"
-                label="Net official buying"
-                unit="t"
-                cadence="yearly"
-                asOf={CB_YTD_2026.asOf ?? "2026"}
-                live={fmtTonnes(CB_YTD_2026.tonnes)}
-                note="WGC GDT H1 2026 YTD. Also under Official gold."
-              />
-              <DeskMetricTile
-                kicker="Mine"
-                label="CB share of mine supply"
-                unit="%"
-                cadence="yearly"
-                live={(cbTakeOfMine() * 100).toFixed(0)}
-                note="2025 official demand ÷ WGC mine supply."
-              />
-              <DeskMetricTile
-                kicker="Investment"
+                kicker="Per person"
                 label="Investment gold per person"
                 unit="g"
                 cadence="yearly"
+                asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={investmentGoldGramsPerPerson().toFixed(1)}
-                note="Bars, coins, ETFs over 8.2bn people."
+                note="Bars, coins, and ETFs divided by 8.2 billion people. Not a purchase suggestion."
               />
               <DeskMetricTile
-                kicker="Official"
-                label="Official silver"
+                kicker="Mines"
+                label="Mine output ratio"
                 tone="silver"
-                unit="t"
+                unit="Ag : Au"
                 cadence="yearly"
-                asOf={SILVER_2025.asOf}
-                live={String(Math.round(silverOfficialT()))}
-                note="World Silver Survey 2026. 2025 net official-sector sales — still a rounding line, not a gold-style stock."
+                asOf={USGS_MINE_2025.asOf}
+                live={`${mineOutputRatio().toFixed(1)} : 1`}
+                note={`USGS 2025 estimate: ${USGS_MINE_2025.silverT.toLocaleString("en-US")} t silver / ${USGS_MINE_2025.goldT.toLocaleString("en-US")} t gold. Geology, not a price target.`}
               />
               <DeskMetricTile
                 kicker="Balance"
-                label="Mine + recycle vs demand"
+                label="Silver mine + recycle vs demand"
                 tone="silver"
                 unit="t"
                 cadence="yearly"
@@ -413,37 +381,27 @@ export function FullDesk() {
               />
               <DeskMetricTile
                 kicker="Cover"
-                label="Months of visible cover"
+                label="Months of visible silver"
                 tone="silver"
                 unit="mo"
                 cadence="yearly"
                 asOf={SILVER_2025.asOf}
                 live={silverVisibleMonths().toFixed(1)}
-                note="Identifiable bullion (vaults) ÷ 2025 fabrication. Not jewelry."
+                note="Identifiable bullion divided by 2025 fabrication. Not jewelry, and not a daily vault print."
               />
               <DeskMetricTile
-                kicker="Investment"
+                kicker="Per person"
                 label="Investment silver per person"
                 tone="silver"
                 unit="oz"
                 cadence="yearly"
                 asOf={SILVER_2025.asOf}
                 live={investmentSilverOzPerPerson().toFixed(2)}
-                note="End-2025 identifiable bullion over 8.2bn people. Not a forecast."
-              />
-              <DeskMetricTile
-                kicker="Geology"
-                label="Mine output ratio"
-                tone="silver"
-                unit="Ag : Au"
-                cadence="yearly"
-                asOf={USGS_MINE_2025.asOf}
-                live={`${mineOutputRatio().toFixed(1)} : 1`}
-                note={`USGS 2025e: ${USGS_MINE_2025.silverT.toLocaleString("en-US")} t silver / ${USGS_MINE_2025.goldT.toLocaleString("en-US")} t gold. A byproduct fact, not fair value.`}
+                note="End-2025 identifiable bullion divided by 8.2 billion people. Not a forecast."
               />
             </section>
 
-            <DeskBoard title="Gold holdings" kicker="WGC Q2 2026">
+            <DeskBoard title="Who holds the gold" kicker="World Gold Council, Q2 2026" cols={3}>
               <DeskMetricTile
                 kicker="Jewelry"
                 label="Jewelry"
@@ -451,7 +409,7 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={wgcShare(WGC_STOCK.jewelryT).toFixed(0)}
-                note="Mostly India and China. Not a vault float."
+                note="Mostly India and China. Worn gold, not a vault stock."
               />
               <DeskMetricTile
                 kicker="Investment"
@@ -460,18 +418,24 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={wgcShare(WGC_STOCK.barsCoinsT + WGC_STOCK.etfT).toFixed(0)}
+                note="Private bars and coins plus gold ETFs. ETF tonnes alone are on Exchange paper."
               />
               <DeskMetricTile
                 kicker="Other"
-                label="Industry, OTC, unaccounted"
+                label="Industry and other"
                 unit="%"
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={wgcShare(WGC_STOCK.otcT + WGC_STOCK.otherT).toFixed(0)}
+                note="Fabrication, over-the-counter bars, and the World Gold Council residual."
               />
             </DeskBoard>
+            <p className="mt-3 max-w-2xl text-sm text-muted">
+              Official gold is the rest of this split ({wgcShare(WGC_STOCK.officialT).toFixed(0)}%). That share is on
+              the Official gold tab.
+            </p>
             <p className="mt-6 max-w-2xl text-sm text-muted">
-              Mine output and visible cover are survey clocks, not equity tips. Read the{" "}
+              Mine output and months of visible cover are published survey figures, not equity tips. Read the{" "}
               <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
                 mining vs market ratio
               </a>
@@ -494,21 +458,10 @@ export function FullDesk() {
 
         {tab === "money" ? (
           <>
-            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              <DeskMetricTile
-                kicker="Cover"
-                label="World gov debt / official gold"
-                unit="%"
-                cadence="yearly"
-                asOf={IMF_GOV_DEBT.asOf}
-                live={officialCover != null ? (officialCover * 100).toFixed(1) : undefined}
-                note="IMF 2025 gross public debt vs our official book mark-to-market. Not all above-ground gold."
-              />
-            </section>
             <DollarPower />
             <DeskBoard
               title="Money supply"
-              kicker={printers.source === "live" ? "ECB live · Asia compiled" : "compiled prints"}
+              kicker={printers.source === "live" ? "latest month" : "stored July 2026"}
             >
               <DeskMetricTile
                 kicker="USD"
@@ -517,7 +470,7 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={String(m2.year)}
                 live={fmtUsdCompact(m2.bn * 1e9)}
-                note="FRED M2SL, compiled year. Not per-second. 2026 is latest, not a completed year."
+                note="FRED M2SL. 2026 is the latest month, not a completed year."
               />
               <DeskMetricTile
                 kicker="EUR"
@@ -528,8 +481,8 @@ export function FullDesk() {
                 live={fmtCompact(printers.eurM3.value, "€")}
                 note={
                   printers.source === "live"
-                    ? "ECB BSI M3, latest month. China and Japan M2 stay compiled — FRED dropped those series."
-                    : "Compiled ECB print (Jul 2026). Live feed missed; showing the stored seed."
+                    ? "ECB money stock, latest month. China and Japan stay on their July 2026 prints."
+                    : "Stored ECB print (July 2026). The live feed missed; this is the saved figure."
                 }
               />
               <DeskMetricTile
@@ -539,7 +492,7 @@ export function FullDesk() {
                 cadence="monthly"
                 asOf={formatAsOf(printers.cnyM2.asOf)}
                 live={fmtCompact(printers.cnyM2.value, "CN¥")}
-                note="PBOC Jul 2026. Dwarfs the others. Do not hide it in a world sum."
+                note="People’s Bank of China, July 2026. Shown on its own, not folded into the US figure."
               />
               <DeskMetricTile
                 kicker="JPY"
@@ -548,10 +501,10 @@ export function FullDesk() {
                 cadence="monthly"
                 asOf={formatAsOf(printers.jpyM2.asOf)}
                 live={fmtCompact(printers.jpyM2.value, "¥")}
-                note="BOJ Jul 2026. FRED’s Japan M2 series stopped years ago."
+                note="Bank of Japan, July 2026."
               />
             </DeskBoard>
-            <DeskBoard title="FX vs gold" kicker="% of purchasing power lost">
+            <DeskBoard title="Currencies vs gold" kicker="share of purchasing power lost">
               <DeskMetricTile
                 kicker="USD"
                 label="Dollar vs gold since 1971"
@@ -616,7 +569,7 @@ export function FullDesk() {
                 cadence="live"
                 asOf={spotAsOf}
                 live={officialMtm != null ? fmtUsdCompact(officialMtm) : undefined}
-                note="World official tonnes × spot. A mark, not a bid for the whole stack."
+                note="World official tonnes times the gold spot. A mark-to-market, not a bid for the whole stock."
               />
               <DeskMetricTile
                 kicker="Cover"
@@ -624,7 +577,9 @@ export function FullDesk() {
                 unit="%"
                 cadence="live"
                 asOf={spotAsOf}
+                wide
                 live={allCover != null ? (allCover * 100).toFixed(0) : undefined}
+                note="Above-ground gold, marked to spot, as a share of IMF gross public debt."
               />
               <DeskMetricTile
                 kicker="Cover"
@@ -632,7 +587,9 @@ export function FullDesk() {
                 unit="%"
                 cadence="live"
                 asOf={spotAsOf}
+                wide
                 live={officialCover != null ? (officialCover * 100).toFixed(1) : undefined}
+                note="Year-end official book, marked to spot, as a share of the same IMF debt. Not all above-ground gold."
               />
             </DeskBoard>
             <MoneyPath />
@@ -641,22 +598,15 @@ export function FullDesk() {
 
         {tab === "paper" ? (
           <>
-            <DeskBoard title="Claims vs metal" kicker="COMEX · LBMA · ETFs">
+            <DeskBoard title="Claims vs metal" kicker="London · ETFs · vaults">
               <DeskMetricTile
-                kicker="COMEX Au"
-                label="Open interest vs registered"
-                unit="×"
-                cadence="daily"
-                note="No clean daily feed we trust. Futures claims vs registered metal — still a dash."
-              />
-              <DeskMetricTile
-                kicker="LBMA"
+                kicker="London"
                 label="Clearing vs vaulted gold"
                 unit="×"
                 cadence="monthly"
                 asOf="Jul 2026"
                 live={lbmaGoldClearingRatio().toFixed(3)}
-                note={`LBMA July 2026 daily average clearing (${LBMA_JUL_2026.goldClearingDailyMoz} Moz) ÷ end-July London vault gold (${LBMA_JUL_2026.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not annual turnover, and not COMEX.`}
+                note={`LBMA July 2026 daily average clearing (${LBMA_JUL_2026.goldClearingDailyMoz} Moz) divided by end-July London vault gold (${LBMA_JUL_2026.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.`}
               />
               <DeskMetricTile
                 kicker="ETFs"
@@ -665,15 +615,7 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={fmtTonnes(WGC_STOCK.etfT)}
-                note="WGC above-ground split, Q2 2026. Not a daily holdings series."
-              />
-              <DeskMetricTile
-                kicker="COMEX Ag"
-                label="Open interest vs registered"
-                tone="silver"
-                unit="×"
-                cadence="daily"
-                note="Same gap as gold: no daily COMEX registered series in this desk."
+                note="World Gold Council above-ground split, Q2 2026. Not a daily holdings series."
               />
               <DeskMetricTile
                 kicker="Vaults"
@@ -693,13 +635,12 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf="2025"
                 live={fmtTonnes(SILVER_ETP_2025.tonnes)}
-                note="World Silver Survey 2026 end-2025 ETP holdings (1,317.6 Moz, printed as 40,982 t). Not a daily series."
+                note="World Silver Survey 2026 end-2025 exchange-traded holdings (1,317.6 Moz, printed as 40,982 t). Not a daily series."
               />
             </DeskBoard>
-            <p className="mt-6 text-sm text-muted">
-              COMEX gold and silver open interest versus registered stocks stay empty. No CME warehouse report is stored
-              with the same day’s open interest. LBMA clearing and silver ETP holdings above are dated prints, not live
-              feeds.
+            <p className="mt-6 max-w-2xl text-sm text-muted">
+              COMEX gold and silver open interest versus registered stocks are not shown. No same-day warehouse pair is
+              stored, so those tiles stay off the page rather than as empty dashes.
             </p>
           </>
         ) : null}
