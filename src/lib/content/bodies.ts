@@ -1375,8 +1375,8 @@ const earlyUs: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
-      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
+      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. If you arrived from the **piece of eight** / Spanish dollar question, this is the American inheritance statute — not a remonetization brief. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
+      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar ([piece of eight](/history/silver/piece-of-eight)), and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
     ],
   },
   {
@@ -1680,8 +1680,8 @@ const pieceOfEight: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "For more than two centuries, merchants across the Atlantic and Pacific priced cargo in one familiar silver piece: the Spanish dollar — the eight-real coin, the **piece of eight**. Sailors cut it into bits for change. Asian markets took it as settlement metal. When the early United States named a dollar in the **1790s**, this coin was already in the room.",
-      "The claim here is narrow and documentary. One typed silver piece of roughly **twenty-seven grams** became a global unit of account long before any modern reserve currency. The hole in the ground that fed so much of that metal is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). The chapter overview sits under [silver in history](/history/silver).",
+      "If you arrived asking **what was the piece of eight?**, start here: the Spanish dollar as a circulating global silver unit — not a collector catalogue and not a remonetization pitch. For more than two centuries, merchants across the Atlantic and Pacific priced cargo in one familiar silver piece: the Spanish dollar — the eight-real coin, the **piece of eight**. Sailors cut it into bits for change. Asian markets took it as settlement metal. When the early United States named a dollar in the **1790s**, this coin was already in the room.",
+      "The claim here is narrow and documentary. One typed silver piece of roughly **twenty-seven grams** became a global unit of account long before any modern reserve currency. The hole in the ground that fed so much of that metal is [Potosí](/history/silver/potosi). The American mint arithmetic that inherited the dollar habit is [early U.S. coinage](/history/america/early-us-coinage). Two-metal statute mechanics live under [bimetallism](/history/silver/bimetallism). A market gold–silver quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1731,7 +1731,7 @@ const pieceOfEight: Section[] = [
   {
     heading: "One coin, several later fights",
     paragraphs: [
-      "This page is the Spanish dollar as a circulating global silver unit — not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. The mountain that fed so much of the metal is [Potosí](/history/silver/potosi). American inheritance is [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics live under [bimetallism](/history/silver/bimetallism). Keep **1980** and industrial silver on their own pages.",
+      "This page is the Spanish dollar as a circulating global silver unit — not a collector catalogue, not a bullion pitch, and not a claim that one historical coin should be remonetized. The mountain that fed so much of the metal is [Potosí](/history/silver/potosi). American inheritance is [early U.S. coinage](/history/america/early-us-coinage). Two-metal mechanics live under [bimetallism](/history/silver/bimetallism) — keep mint ratio and market ratio labeled. Keep **1980** and industrial silver on their own pages.",
       "Return to [silver in history](/history/silver) when you want the chapter’s full arc rather than this one coin face.",
     ],
   },
@@ -1803,7 +1803,7 @@ const bimetallism: Section[] = [
     heading: "",
     paragraphs: [
       "A government can write a law that says so many ounces of silver equal one ounce of gold at the Mint — and markets can refuse to freeze that number. **Bimetallism** is the attempt to keep both metals in the same monetary system at a **fixed mint ratio**. The mint stands ready to coin both into full-weight money at that legal number. When the **market ratio** — the gold price of silver in trade — drifts away, Gresham’s pattern appears. The statute does not defeat arbitrage.",
-      "This page carries that general machine. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
+      "If you arrived from the **piece of eight** path, keep the labels: the Spanish dollar is a circulating coin habit; this page is the two-metal statute machine that later American politics fought over. The loud American political event is the [Crime of 1873](/history/america/crime-of-1873). The opening American arithmetic is [early U.S. coinage](/history/america/early-us-coinage). The market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page. The chapter overview sits under [silver in history](/history/silver).",
     ],
   },
   {
@@ -1865,7 +1865,7 @@ const potosi: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "From the **1540s**, Cerro Rico at Potosí — in today’s Bolivia — poured silver into a Spanish imperial machine that reached two oceans. Ore left the mountain for the mint, the fleet, Seville, European payments, and — via the **Manila galleon** — China, where silver was the settlement metal of a much larger commercial system.",
+      "From the **1540s**, Cerro Rico at Potosí — in today’s Bolivia — poured silver into a Spanish imperial machine that reached two oceans. If you arrived asking **what was the piece of eight?**, the coin face is the [Spanish dollar](/history/silver/piece-of-eight); this page is the mountain that fed so much of that metal. Ore left the mountain for the mint, the fleet, Seville, European payments, and — via the **Manila galleon** — China, where silver was the settlement metal of a much larger commercial system.",
       "The lesson is flow, not romance: a mountain can set the silver stock of an age. Today’s country-by-country production and reserves picture sits on the [world map](/maps), not here. The coin face of the flow is the [piece of eight](/history/silver/piece-of-eight). The chapter overview is [silver in history](/history/silver).",
     ],
   },
@@ -2285,7 +2285,7 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "On a named day, two prints share a clock: divide gold’s dollar price by silver’s and you get how many ounces of silver equal one ounce of gold at that pair. The gold–silver ratio is that dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
-      "If you came here from a headline about **silver mining**, start with the mining-ratio block below. Mine supply is how much metal leaves the ground in a survey year. It is not a list of mining companies, not a stock tip, and not a reason the market ratio “should” match the mine book.",
+      "If you arrived from the **piece of eight** / [bimetallism](/history/silver/bimetallism) path, keep the labels: a circulating Spanish dollar and a legal mint ratio are not this page’s market quotient. If you came here from a headline about **silver mining**, start with the mining-ratio block below. Mine supply is how much metal leaves the ground in a survey year. It is not a list of mining companies, not a stock tip, and not a reason the market ratio “should” match the mine book.",
     ],
   },
   {
@@ -2613,7 +2613,7 @@ export const historyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If you arrived asking **why 1971 mattered**, the closed gold window has its own article — and this shelf holds the century around it. If you arrived asking **what caused Weimar hyperinflation**, the German mark’s death in **1923** is the hinge — not a wheelbarrow meme pasted onto every price rise. In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
+      "If you arrived asking **why 1971 mattered**, the closed gold window has its own article — and this shelf holds the century around it. If you arrived asking **what caused Weimar hyperinflation**, the German mark’s death in **1923** is the hinge — not a wheelbarrow meme pasted onto every price rise. If you arrived asking **what was the piece of eight?**, the Spanish dollar as a global silver coin has its own article under [silver](/history/silver/piece-of-eight) — an older unit story, not a modern reserve-currency slogan. In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
       "This history follows that argument as a documentary record. Coins are clipped or lightened. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. Each article sticks to a dated claim — who acted, what rule changed, what broke, and what followed — so a curious adult can leave able to explain the hinge in plain English. Vocabulary first lives under [Sound Money](/sound-money) if the words are still slipping — especially [inflation and purchasing power](/sound-money/inflation-purchasing-power) when the question is the unit, not the calendar.",
     ],
   },
@@ -2627,7 +2627,7 @@ export const historyHubBody: Section[] = [
   {
     heading: "One republic, one white metal, one crowded century",
     paragraphs: [
-      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900** — then hands off before the Fed. Silver needs its own stretch too. The [silver chapter](/history/silver) follows a mountain at [Potosí](/history/silver/potosi), a global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
+      "Inside the United States the fight was often a statute fight: what the dollar is. The [America chapter](/history/america) runs from the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900** — then hands off before the Fed. Silver needs its own stretch too. The [silver chapter](/history/silver) follows a mountain at [Potosí](/history/silver/potosi), the [piece of eight](/history/silver/piece-of-eight) as global coin, mint-ratio mechanics, the **1980** squeeze, and the metal’s later industrial job — not as a footnote to gold stories.",
       "The densest modern door is the [twentieth century](/history/20th-century): private rescue after **1907**, a new central bank, classical gold’s wartime end, [Weimar **1923**](/history/20th-century/weimar-1923), the **1933** US gold recall, Bretton Woods, and the [**1971** gold-window close](/history/20th-century/bretton-woods-nixon-1971). If you live downstream of that close, the century chapter is the natural entry. If you want the slower on-ramp — metal before paper — ancient coinage or banks and paper walk forward into the same argument.",
     ],
   },
@@ -2789,7 +2789,7 @@ export const americaHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
+      "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. If you arrived asking **what was the piece of eight?**, the Spanish dollar that shaped that silver weight has its own article — then [early U.S. coinage](/history/america/early-us-coinage) is the inheritance statute. Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
       "The [Crime of 1873](/history/america/crime-of-1873) is the silver-politics door; [greenbacks](/history/america/greenbacks-civil-war) is the war-paper door; the [road back toward gold](/history/america/road-back-gold) is the bridge into **1907**. Jackson’s bank war, Civil War greenbacks, and the **1913** Fed are related arguments about credit and paper — not one institution.",
     ],
   },
@@ -2803,7 +2803,7 @@ export const americaHubBody: Section[] = [
   {
     heading: "From 1792 to 1900",
     paragraphs: [
-      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The Spanish dollar shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
+      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The [Spanish dollar / piece of eight](/history/silver/piece-of-eight) shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
       "[Jackson and the Bank](/history/america/jackson-and-the-bank) is the fight over the Second Bank: **1832** veto, pet banks, Specie Circular, Panic of **1837**. The country then lived a long stretch without a federally chartered central bank. That is not **1913**. Keep the centuries labeled.",
       "[Greenbacks](/history/america/greenbacks-civil-war) financed the Union after **1862**. Legal tender paper floated below gold in New York until the Resumption Act’s date — **1 January 1879** — restored par in practice. War paper is a suspension, not a permanent theory of money.",
       "The [Coinage Act of 1873](/history/america/crime-of-1873) omitted free coinage of the standard silver dollar. Agrarian politics called it a crime; officials called it clarification toward gold. Free silver, Bland–Allison, Sherman, and Bryan’s **1896** campaign are that fight’s volume. The mechanics of two metals under one law also sit on [bimetallism](/history/silver/bimetallism).",
@@ -2837,8 +2837,8 @@ export const silverHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
-      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
+      "If you arrived asking **what was the piece of eight?**, this chapter is the door: the Spanish dollar as a typed global silver coin — then the mountain behind it, the mint-ratio fights, and the metal’s later jobs. A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
+      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [Potosí](/history/silver/potosi) is the supply behind the type; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
     ],
   },
   {
