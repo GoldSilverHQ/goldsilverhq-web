@@ -34,7 +34,7 @@ const PRACTICE_EPISODES = [
   "buying-online",
 ] as const;
 
-const THICK_PRACTICE_EPISODES = ["bars-vs-coins", "premium-over-spot"] as const;
+const THICK_PRACTICE_EPISODES = ["bars-vs-coins", "premium-over-spot", "storage"] as const;
 const THIN_PRACTICE_EPISODES = PRACTICE_EPISODES.filter(
   (slug) => !(THICK_PRACTICE_EPISODES as readonly string[]).includes(slug),
 );
@@ -46,7 +46,7 @@ const SEO_HUB_META =
   /\b(this pillar|Continue the map|Phase-?1|Phase 3|Flavio|sitemap expansion|BaFin-clean|long-tail first|no spaghetti)\b/i;
 
 describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () => {
-  it("thickens the hub to documentary depth and leaves the four unthickened notes thin", () => {
+  it("thickens the hub to documentary depth and leaves the three unthickened notes thin", () => {
     const text = bodyText(practiceHubBody);
     const words = wordCount(text);
     assert.ok(words >= 800 && words <= 1500, `hub: expected 800–1500 words, got ${words}`);
@@ -254,6 +254,77 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
+    assert.deepEqual(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
+  });
+});
+
+describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
+  it("thickens storage to documentary depth", () => {
+    const body = getBody("gold-silver", "storage");
+    assert.ok(body, "missing body for gold-silver/storage");
+    const text = bodyText(body);
+    const words = wordCount(text);
+    assert.ok(words >= 800 && words <= 1200, `storage: expected 800–1200 words, got ${words}`);
+    assert.ok(body.filter((s) => s.heading).length >= 5, "storage: expected ≥5 headed sections");
+
+    const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
+    assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
+    assert.match(routeSrc, /getPractice/);
+    assert.match(routeSrc, /EpisodeBody/);
+    assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
+  });
+
+  it("locks the claim: access, cost, counterparty — not a recommendation", () => {
+    const text = bodyText(getBody("gold-silver", "storage")!);
+    assert.match(text, /access, cost, and counterparty/);
+    assert.match(text, /not a recommendation/);
+    assert.match(text, /identifiable bars and coins/);
+    assert.match(text, /claim, not a stack/);
+    assert.match(text, /practical household risks/);
+    assert.match(text, /Documentation and segregation/);
+    assert.match(text, /not a vendor list/);
+    assert.match(text, /does not rank a vendor/);
+    assert.match(text, /form you hold and the place it sits/);
+    assert.match(text, /Information only/);
+    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
+    assert.doesNotMatch(text, BAFIN_FORBIDDEN);
+    assert.doesNotMatch(text, SEO_HUB_META);
+    assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
+    assert.doesNotMatch(text, /best storage|best vault|best dealer/i);
+  });
+
+  it("keeps a two-link causal ledger and leaves the spoke off the sitemap", () => {
+    const page = getPractice("storage");
+    assert.ok(page, "missing storage in map.ts");
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+    );
+    assert.equal(page.related.length, 2);
+    assert.equal(page.slug, "storage");
+    assert.equal(page.title, "Storing gold and silver");
+
+    const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
+    const storageBlock = mapSrc.match(/slug:\s*"storage"[\s\S]*?slug:\s*"spotting-fakes"/)?.[0];
+    assert.ok(storageBlock, "missing storage episode block in map.ts");
+    const hrefs = [...storageBlock.matchAll(/href:\s*"([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual(hrefs, ["/gold-silver", "/gold-silver/bars-vs-coins"]);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /"\/gold-silver"/);
+    assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
+    assert.doesNotMatch(sitemapSrc, /\/gold-silver\/storage/);
+    assert.doesNotMatch(
+      sitemapSrc,
+      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+    );
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/storage"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
       ["/gold-silver", "/gold-silver/bars-vs-coins"],
