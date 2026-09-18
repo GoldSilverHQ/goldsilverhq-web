@@ -7,6 +7,7 @@ import {
   getBody,
   historyHubBody,
   marketsHubBody,
+  silverHubBody,
   soundMoneyHubBody,
   twentiethCenturyHubBody,
   type Section,
@@ -161,5 +162,53 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(episode.related.some((r) => r.href === "/sound-money/inflation-purchasing-power"));
     assert.ok(episode.related.some((r) => r.href === "/history/banks-paper/assignats"));
     assert.ok(episode.related.some((r) => r.href === "/sound-money/what-is-sound-money"));
+  });
+
+  it("path 5 — piece of eight / Spanish dollar journey", () => {
+    const history = bodyText(historyHubBody);
+    assert.match(history, /what was the piece of eight\?/i);
+    assert.match(history, /\[silver\]\(\/history\/silver\/piece-of-eight\)/);
+
+    const silverHub = bodyText(silverHubBody);
+    assert.match(silverHub, /what was the piece of eight\?/i);
+    assert.match(silverHub, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.match(silverHub, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+
+    const piece = bodyText(getBody("silver", "piece-of-eight")!);
+    assert.match(piece, /what was the piece of eight\?/i);
+    assert.match(piece, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    assert.match(piece, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.match(piece, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.match(piece, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
+    assert.doesNotMatch(piece, TIP_PATTERN);
+    assert.doesNotMatch(piece, /buy silver now|price target for|should remonetize/i);
+
+    const potosi = bodyText(getBody("silver", "potosi")!);
+    assert.match(potosi, /what was the piece of eight\?/i);
+    assert.match(potosi, /\[Spanish dollar\]\(\/history\/silver\/piece-of-eight\)/);
+
+    const early = bodyText(getBody("america", "early-us-coinage")!);
+    assert.match(early, /piece of eight/i);
+    assert.match(early, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+
+    const bimet = bodyText(getBody("silver", "bimetallism")!);
+    assert.match(bimet, /piece of eight/);
+    assert.match(bimet, /circulating coin habit/);
+
+    const gsr = bodyText(getBody("markets", "gold-silver-ratio")!);
+    assert.match(gsr, /piece of eight/i);
+    assert.match(gsr, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+
+    const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.match(home, /piece-of-eight/);
+    assert.match(home, /piece of eight/);
+
+    const cluster = getCluster("silver");
+    const episode = cluster?.episodes.find((e) => e.slug === "piece-of-eight");
+    assert.ok(episode);
+    assert.ok(episode.related.some((r) => r.href === "/history/silver/potosi"));
+    assert.ok(episode.related.some((r) => r.href === "/history/america/early-us-coinage"));
+    assert.ok(episode.related.some((r) => r.href === "/history/silver/bimetallism"));
+    assert.ok(episode.related.some((r) => r.href === "/markets/gold-silver-ratio"));
   });
 });

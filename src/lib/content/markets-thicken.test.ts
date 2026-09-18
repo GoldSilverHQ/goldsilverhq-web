@@ -246,6 +246,8 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets",
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
+        "/history/silver/bimetallism",
+        "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
     );
@@ -308,6 +310,8 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets",
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
+        "/history/silver/bimetallism",
+        "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
     );
@@ -379,6 +383,8 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets",
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
+        "/history/silver/bimetallism",
+        "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
     );

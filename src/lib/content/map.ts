@@ -787,6 +787,7 @@ export const historyClusters: Cluster[] = [
       { title: "Sound Money History", href: "/history" },
       { title: "America & gold/silver politics", href: "/history/america" },
       { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+      { title: "Potosí", href: "/history/silver/potosi" },
     ],
     seo: {
       titleTag: "Silver in History: Potosí to 1980 and Industry",
@@ -803,6 +804,7 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
           { title: "Silver in history", href: "/history/silver" },
+          { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
         ],
         seo: {
@@ -825,11 +827,13 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
+          { title: "Bimetallism", href: "/history/silver/bimetallism" },
+          { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver in history", href: "/history/silver" },
         ],
         seo: {
           primary: "piece of eight",
-          secondary: ["spanish dollar", "eight reales", "first global currency"],
+          secondary: ["spanish dollar", "eight reales", "first global currency", "what was the piece of eight"],
           demand: "mid",
           difficulty: "low",
           intent: "history",
@@ -847,7 +851,9 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
+          { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
           { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
+          { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
         ],
         seo: {
           primary: "bimetallism",
@@ -1112,6 +1118,8 @@ export const marketPages: Episode[] = [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
       { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
+      { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     ],
     seo: {
