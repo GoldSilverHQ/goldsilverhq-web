@@ -281,7 +281,7 @@ describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
     const text = bodyText(getBody("gold-silver", "storage")!);
     assert.match(text, /access, cost, and counterparty/);
     assert.match(text, /not a recommendation/);
-    assert.match(text, /identifiable bars and coins/);
+    assert.match(text, /[Ii]dentifiable bars and coins/);
     assert.match(text, /claim, not a stack/);
     assert.match(text, /practical household risks/);
     assert.match(text, /Documentation and segregation/);
