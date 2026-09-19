@@ -323,15 +323,15 @@ export const historyClusters: Cluster[] = [
       {
         slug: "rome-denarius-aureus",
         title: "Rome: denarius, aureus, slow debasement",
-        summary: "Gold and silver together. When spending outran metal, the coin was lightened.",
+        summary:
+          "By the third century, a coin that still passed as silver could be bronze under a wash. The denarius was thinned over generations. Trust in a large payment moved toward the aureus.",
         status: "ready",
         paragraphs: [
-          "Rome ran a bimetallic coinage. Debasement was gradual, then obvious. The lesson is fiscal, not moral: when spending outruns metal, the coin is lightened.",
+          "By the worst years of the third century, many coins that still passed as silver were bronze under a wash. Rome paid large sums in the gold aureus and everyday sums in the silver denarius. The silver piece was the one the mint lightened.",
         ],
         related: [
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
           { title: "The solidus", href: "/history/ancient/solidus-continuity" },
-          { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
         ],
         seo: {
           primary: "roman denarius debasement",
