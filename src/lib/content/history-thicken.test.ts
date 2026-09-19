@@ -131,10 +131,10 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.match(text, /denarius/i);
     assert.match(text, /aureus/i);
     assert.match(text, /antoninianus/i);
-    assert.match(text, /third-century|3rd century/i);
-    assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
-    assert.match(text, /\[.*solidus.*\]\(\/history\/ancient\/solidus-continuity\)/);
-    assert.match(text, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.match(text, /Nero/);
+    assert.match(text, /third[- ]century|3rd century/i);
+    assert.doesNotMatch(text, /\[[^\]]+\]\([^)]+\)/);
+    assert.doesNotMatch(text, /If you arrived|start here|What this is not/i);
     assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
   });
 
@@ -411,9 +411,10 @@ describe("reader polish: documentary takeaways (no new URLs)", () => {
     assert.match(greece, /\[Potosí\]\(\/history\/silver\/potosi\)/);
 
     const rome = bodyText(getBody("ancient", "rome-denarius-aureus")!);
-    assert.match(rome, /\[ancient money\]\(\/history\/ancient\)/);
-    assert.match(rome, /\[.*solidus.*\]\(\/history\/ancient\/solidus-continuity\)/);
-    assert.match(rome, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.match(rome, /denarius/i);
+    assert.match(rome, /aureus/i);
+    assert.match(rome, /bronze underneath|bronze cores/i);
+    assert.doesNotMatch(rome, /\[[^\]]+\]\([^)]+\)/);
 
     const solidus = bodyText(getBody("ancient", "solidus-continuity")!);
     assert.match(solidus, /\[Rome: denarius and aureus\]\(\/history\/ancient\/rome-denarius-aureus\)/);

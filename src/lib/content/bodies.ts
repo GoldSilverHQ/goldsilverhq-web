@@ -1251,59 +1251,56 @@ const rome: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "By the worst years of the third century, many “silver” coins were bronze cores with a wash that still wore a familiar face. Rome had run gold and silver together — the **aureus** and the **denarius** as the famous pair, with bronze for small change. Debasement of the silver coin was gradual, then obvious. When spending outran metal, the mint lightened the piece. The coinage became a fiscal instrument.",
-      "The lesson is fiscal, not a moral sermon about decadence, and not a pitch to hold bullion. It follows the silver network of [Greece: silver and trade](/history/ancient/greece-silver-trade). It precedes [the solidus](/history/ancient/solidus-continuity), a gold unit later defended by weight. A much later American rhyme for mint-ratio arithmetic sits at [early U.S. coinage](/history/america/early-us-coinage); keep the centuries labeled.",
+      "By the worst years of the third century, many coins that still passed as silver were bronze underneath. A wash kept a familiar face on the metal. A soldier paid in that piece held something that looked like the old money and spent like a token. Rome had not started there.",
+      "For a long time the state ran two metals at once. The gold **aureus** covered large payments and stores. The silver **denarius** covered wages, taxes, and ordinary trade. Bronze, and orichalcum with it, covered the smallest change. Different metals for different sizes of payment.",
     ],
   },
   {
-    heading: "Denarius and aureus in the early empire",
+    heading: "A gold coin, a silver wage",
     paragraphs: [
-      "The silver **denarius** had been Rome’s workhorse silver unit from the Republic onward. Under the early empire it was meant as a stable silver coin for pay, tax, and trade. The gold **aureus** sat above it for large payments and stores. Bronze and orichalcum pieces handled the smallest change. The system was multi-metallic in practice: different metals for different scales of payment.",
-      "Augustus and the Julio-Claudians inherited and adjusted weights and tariffs. The documentary point for these pages is the design: a gold coin, a silver coin, and base metal underneath — a state naming how the metals relate in pay tables even when markets move.",
-      "Soldiers’ pay, grain contracts, and tax demands all touched these units. Coin was public finance in the hand.",
+      "The denarius had been Rome’s workhorse silver unit since the Republic. Under the early empire it was meant to stay a stable silver coin. Augustus and the Julio-Claudians inherited the weights and the tariffs and adjusted them. Pay tables still named how an aureus stood to a denarius. Traders and goldsmiths watched a different number: what the metal itself would bring.",
+      "Soldiers’ pay, grain contracts, and tax demands all moved through these units. The coin in the hand was public finance.",
     ],
   },
   {
-    heading: "Mint relation versus market metal",
+    heading: "The official rate and the metal",
     paragraphs: [
-      "A state can post how many denarii equal an aureus in official accounts. Traders and goldsmiths watch the bullion market. When silver is cheap relative to the official bridge, silver coin is easier to bring to the mint or to spend; gold may be hoarded or exported. When silver is dear, the pattern flips. That is the same Gresham logic later written into modern bimetallism debates — not because Rome passed the Coinage Act of 1792, but because fixed official relations meet moving metal prices.",
-      "Rome’s story on this page is not only that ratio drift. It is what happens when the silver coin itself is watered: the official name stays; the metal inside falls. Then the “silver” unit becomes a fiscal token wearing a familiar face.",
+      "A treasury can post how many denarii equal an aureus. Traders and goldsmiths watch the price of the metal, which does not have to match the figure in the accounts. When silver is cheap against that official rate, silver coin is the easier thing to spend or to carry back to the mint, and gold tends to be hoarded or exported. When silver is dear, the sorting turns. The better metal leaves the street. The worse coin stays in the prices people actually pay. Later writers gave that pattern Gresham’s name.",
+      "Rome went further than a drift between two honest coins. The mint watered the silver piece. The name on the type stayed. The metal inside it fell. A unit still called silver had become a token.",
     ],
   },
   {
-    heading: "Slow, then obvious, debasement",
+    heading: "The silver thinned, then the wash",
     paragraphs: [
-      "Silver fineness in the denarius declined over the first and second centuries as costs — wars, donatives, administration — pressed the treasury. Nero’s reforms are an early famous adjustment of weight and alloy. Later reigns repeated the pattern. Each step could be defended as temporary. The cumulative result was a lighter, baser denarius.",
-      "In the third century the **antoninianus** (often called a double denarius in tariff) spread as a major silver-washed coin. Its silver content fell sharply over decades. By the worst years of the crisis, many pieces were bronze cores with a silver wash — a coin that looked like silver money and behaved like a forced token.",
-      "Prices rose in coin terms. People discounted bad money, demanded better coin or bullion for real settlement, and revised contracts. The mechanism is fiscal: obligations in coin outran honest metal supply, so the mint stretched the metal. It is not a cartoon of one emperor “printing.” It is repeated lightening under political survival pressure.",
-      "Hoards from the period show mixtures of better and worse pieces. Markets sorted what the mint blurred. That sorting is Gresham’s pattern in archaeological dress: good silver disappears into bags; washed tokens stay in the street price.",
+      "Silver fineness in the denarius declined through the first and second centuries. Wars, donatives — cash gifts from the emperor — and the ordinary cost of administration pressed the treasury. Nero’s reforms are the early famous change of weight and alloy. Later reigns took the same step. Each cut could be described as temporary. Together they left a lighter, baser denarius.",
+      "In the third century the **antoninianus** spread as a common coin. On the tariff it was often treated as a double denarius. It was struck with a silver wash, and the silver in it fell sharply across the decades. By the worst years of the crisis many of these pieces were bronze cores under that wash. They looked like silver money. They behaved like tokens a paymaster could force into circulation.",
+      "Prices counted in that coin rose. People discounted the bad pieces. When a bargain had to settle in something real, they asked for better coin or for bullion, and they changed what a contract would accept. What the state owed, reckoned in coin, had outrun the honest metal it could put into coin, so the mint stretched the stock it had. No single emperor emptied the standard in an afternoon. The lightening was repeated, reign after reign, because paying people now was what political survival required.",
+      "Hoards from those years still mix better coins with worse ones. Markets sorted what the mint had blurred. Silver worth keeping went into bags. Washed pieces stayed in the price of the street.",
     ],
   },
   {
-    heading: "The third-century crisis as monetary pressure",
+    heading: "Armies that had to be paid now",
     paragraphs: [
-      "Civil wars, frontier defense, and competing armies meant cash for troops now. Usurpers and legitimate emperors alike bought loyalty with coin. Mines and booty did not automatically match the payroll. Debasement was the available lever inside a metallic system that still used coin as the unit of pay.",
-      "Aurelian and later reformers attempted to restore order to the coinage. Diocletian’s price edict and Constantinian reforms belong to the recovery and transformation that follow. This page’s hinge is the lesson already visible before the solidus: when the silver unit is gutted, trust moves toward gold and toward better-known pieces — or toward payment in kind.",
-      "Do not flatten this into “Rome fell because of inflation” as a single cause. Military, political, and demographic stresses sit beside the mint. Do say that the coinage became an instrument of emergency finance, and that the silver unit paid the price first.",
-      "Soldiers who received baser coin still needed real goods. Official tariffs and market discounts diverged. That gap is how a metallic system can fail as a unit of account without anyone inventing paper notes.",
+      "Civil war, the frontiers, and armies that answered to more than one commander arrived at the same table. Troops wanted coin before the next march. Usurpers and the emperors they challenged bought loyalty the same way. Metal from the mines, and metal taken as booty, did not show up on the payroll’s day. Inside a system that still counted pay in coin, the lever at hand was debasement: less silver in the piece that kept the old name.",
+      "Aurelian, and reformers after him, tried to put the types back in order. Diocletian’s edict on prices, and the changes under Constantine, belong with that later repair. Before the repair, the split was already plain. Once the silver unit no longer meant what its face claimed, anyone who could choose moved toward gold, toward a piece they still recognised, or toward payment in kind. The aureus had sat above the denarius for large sums all along. As the silver coin failed, that gold piece was where trust in a large payment went.",
+      "It is too neat to say the empire fell because prices rose, as if the mint were the only cause. Military strain, political strain, and the size of the population sat beside the treasury. What the coinage had become, in those years, was emergency finance. Silver took the loss.",
+      "A soldier paid in the baser coin still needed real goods. The official tariff said one thing. The discount in the market said another. A metal coinage can fail as a unit of account on that gap alone. Nobody had to issue a paper note for it to happen.",
     ],
   },
   {
     heading: "A short timeline",
     paragraphs: [],
     list: [
-      "**Republic–early empire:** Denarius as silver workhorse; aureus as gold unit; bronze for change.",
-      "**1st–2nd centuries CE:** Gradual reductions in denarius silver; occasional reforms reset expectations briefly.",
-      "**3rd century CE:** Antoninianus proliferates; silver content collapses; military pay pressure peaks.",
-      "**Late 3rd–early 4th:** Attempts to restabilise coinage; gold’s role as the honest large unit grows.",
-      "**Next in this chapter:** [After Rome: the solidus](/history/ancient/solidus-continuity) — a gold coin that keeps its weight.",
+      "**Republic through the early empire.** The denarius is the silver workhorse. The aureus is the gold unit. Bronze is the small change.",
+      "**First and second centuries.** The silver in the denarius is reduced by stages. A reform now and then resets expectations, and only for a while.",
+      "**Third century.** The antoninianus spreads. Its silver content collapses. The pressure of military pay is sharpest here.",
+      "**Late third century into the early fourth.** Attempts to restabilise the coinage. Gold’s place grows, as the large unit people will still trust.",
     ],
   },
   {
-    heading: "When the name outruns the metal",
+    heading: "The face and the metal",
     paragraphs: [
-      "None of this is a forecast for modern currency or a pitch to hold bullion. It is the documentary record of a bimetallic pay system meeting fiscal overload — and of silver lightened until the name outran the metal. [ancient money](/history/ancient) keeps the chapter. [Greece: silver and trade](/history/ancient/greece-silver-trade) is the typed-silver network Rome inherited. [Solidus continuity](/history/ancient/solidus-continuity) is the gold unit that kept its weight after that silver was gutted.",
-      "A later mint-ratio parallel is [early U.S. coinage](/history/america/early-us-coinage). Keep **1971** in the twentieth-century chapter. Rome’s lightened denarius is not a gold-window close.",
+      "What was left was a name that had run ahead of the metal. Gold and silver had shared one state’s pay tables. Spending ran past what the mines and the booty could fill. The coin that was lightened was the silver one, until a wash over bronze stood where a denarius had been. The aureus was still the gold coin for a large payment, once silver no longer matched its face.",
     ],
   },
 ];
