@@ -736,21 +736,61 @@ const premiumOverSpot: Section[] = [
 
 const storage: Section[] = [
   {
-    heading: "The trade-off",
+    heading: "",
     paragraphs: [
-      "Storage is access versus cost versus counterparty. Home is near and on you. A vault is distant and on them. Allocated means specific bars or coins in your name; pooled or unallocated is a claim on a stack. This page describes the menu. It does not pick.",
+      "Metal that has already been poured or struck still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal. This page describes that menu. It is not a recommendation.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names storage as access versus cost versus counterparty. The paragraphs below stay on that trade-off. They do not pick a shelf.",
+    ],
+  },
+  {
+    heading: "Access, cost, counterparty",
+    paragraphs: [
+      "Access is how quickly the object can be reached and moved. Home access is immediate: the metal is in a room the household already occupies. Vault access is scheduled — hours, identification, a release. A claim that is only a line on a statement has no object to reach until a counterparty delivers one.",
+      "Cost is what is paid, or not paid, to keep the arrangement in place. Home storage has no vault invoice. It still has a lock, a place, and the work of keeping both quiet. A vault invoices for space, insurance, and handling. An unallocated or pool account often invoices less because the operator is not setting aside a named bar for each name. A lower fee is a different product, not a verdict.",
+      "Counterparty is whose failure stands between the holder and the metal. At home that counterparty is the household: fire, theft, a forgotten combination, a safe that advertises itself. In a vault it is the operator, the insurer, and the law of the place. On an unallocated book it is the claim itself — a promise to deliver metal, not a named pile. Storage is the trade-off among those three facts. It is not a score that picks a winner.",
     ],
   },
   {
     heading: "Home",
     paragraphs: [
-      "Home storage keeps the metal in your control and the operational risk on you: fire, theft, forgetfulness, and the fact that a safe advertises itself. It has no vault fee. It has no auditor. Whether that is acceptable is a household question.",
+      "Home storage keeps the metal in the household’s control. There is no vault fee and no auditor. The operational risk sits with the object: fire, flood, theft, a move that leaves a drawer behind, and the forgetfulness of a combination or a hiding place. A visible safe is also a sign. A hiding place no one else can find is also a place no one else can recover.",
+      "Insurance, where it exists for household metal, is a contract with limits — not a second vault. Neighbours, visitors, and repair people change who knows the house. None of those facts is an argument against home storage, and none is an argument for a vault. They are the practical household risks that come with control.",
     ],
   },
   {
-    heading: "Allocated and vaults",
+    heading: "Allocated and unallocated",
     paragraphs: [
-      "Allocated storage, done properly, identifies bars or coins as yours. You should be able to name what you own. Unallocated and “pool” accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile.",
+      "Allocated storage, done as the word is used in the bullion trade, identifies specific bars or coins as belonging to a named holder. The metal is segregated. A bar list, a serial, a weight, a fineness, and a vault location should be nameable. Identifiable bars and coins are the test. If the paperwork cannot name the pieces, the word “allocated” is only a label.",
+      "Unallocated storage, and the pool accounts that work the same way, is a claim on a stack. The operator owes metal of a published specification. The operator does not set aside a named bar for that name. The book is easier to run — ounces in, ounces out — and easier to confuse with a bank deposit. It is not a deposit of objects. If you cannot point to a bar list, you have a claim, not a stack.",
+      "The two words are used loosely. A statement that says “allocated” and then lists only a weight is a claim with a flattering adjective. Segregation is the fact, not the adjective. Pooled metal can sit in a real vault and still not be anyone’s identifiable pile.",
+    ],
+  },
+  {
+    heading: "Documentation and segregation",
+    paragraphs: [
+      "The paperwork is where the menu becomes checkable. An allocated arrangement should say whose name is on the metal, where it sits, how it is identified, and what happens if the operator fails. Serials, bar lists, vault confirmations, and a statement of segregation are the ordinary documents. They make the claim inspectable; they do not make the metal safer.",
+      "Segregation means the objects are not mixed into the operator’s inventory and not treated as a loan the operator can re-pledge at will. The contract either says that or it does not. Jurisdiction, the custodian, and the limits of any insurance sit in the same file. They are part of the counterparty, not a romance about security.",
+    ],
+  },
+  {
+    heading: "What storage is not",
+    paragraphs: [
+      "Storage is not a vendor list. No vault, no insurer, and no dealer is ranked here. A name that appears in a contract is a fact about that contract, not a recommendation of the name.",
+      "Storage is not a search for a preferred place to keep metal, and not buy or sell advice. Home, allocated, and unallocated are different products. Calling one of them preferable would be a pick. This page does not pick. It does not say which arrangement is cheap, which is safe, or which a household ought to use. A vault invoice is not a reason to hold gold or silver.",
+    ],
+  },
+  {
+    heading: "Form and the place it sits",
+    paragraphs: [
+      "The object and the place talk to each other. A large wholesale bar is dense and awkward to move; a vault that handles bars by serial is built for that density. A common bullion coin is easier to recognise in a household drawer and easier to carry in ones. Small minted bars sit between those poles. The comparison of those objects — fabrication, premium, and resale friction — lives on [gold bars vs coins](/gold-silver/bars-vs-coins). The custody consequence is simpler: the form you hold and the place it sits are one decision in two sentences.",
+      "Premium is part of that same split. A coin that paid more fabrication per ounce does not become a different metal at home. A bar that printed a smaller gap to spot does not become allocated because someone said the word. Form prices the work in the object. Storage prices the arrangement around it. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "Storage measures access, cost, and counterparty: home control and household risk, identifiable allocated bars or coins, and an unallocated or pool claim that is not a stack. It does not measure which arrangement anyone ought to use. It does not rank a vendor.",
+      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the object rather than the place, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
     ],
   },
 ];
