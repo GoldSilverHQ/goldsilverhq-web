@@ -68,10 +68,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/ancient/rome-denarius-aureus",
     src: "/images/history/ancient/rome-denarius-aureus.jpg",
     ogSrc: "/og/cards/history-ancient-rome-denarius-aureus.jpg",
-    alt: "Roman gold aureus of Titus beside a silver denarius of Caracalla on a dark background.",
-    caption:
-      "Roman aureus (gold, Titus) and denarius (silver, Caracalla) — the empire’s paired hard-money denominations.",
-    credit: "CC0 — Metropolitan Museum of Art Open Access; CC0 denarius plate via Wikimedia Commons.",
+    alt: "Silver denarius and gold aureus standing before Roman ruins.",
+    caption: "Silver denarius and gold aureus.",
   },
   {
     path: "/history/ancient/solidus-continuity",
