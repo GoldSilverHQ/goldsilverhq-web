@@ -964,15 +964,15 @@ export const practicePages: Episode[] = [
   {
     slug: "storage",
     title: "Storing gold and silver",
-    summary: "Home, allocated, unallocated — access, cost, and counterparty. A menu, not a pick.",
+    summary:
+      "Storage is a menu of access, cost, and counterparty — home, allocated vault, or unallocated claim. A description, not a recommendation.",
     status: "ready",
     paragraphs: [
-      "Storage is a trade-off among access, cost, and counterparty. The menu is described, not a pick.",
+      "Storage is access, cost, and counterparty. Home, allocated, and unallocated are different arrangements. The menu is described, not recommended.",
     ],
     related: [
-      { title: "Buying online", href: "/gold-silver/buying-online" },
-      { title: "Beginner checklist", href: "/gold-silver/beginner-checklist" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
+      { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
     ],
     seo: {
       primary: "storing gold",
