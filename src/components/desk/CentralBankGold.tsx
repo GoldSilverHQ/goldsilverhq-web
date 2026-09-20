@@ -5,6 +5,7 @@ import {
   cbGrowth,
   cbWorld,
   flagEmoji,
+  withPublishedYtd,
   type CbDesk,
   type CbTimeframe,
 } from "@/lib/dashboard/central-banks";
@@ -21,13 +22,13 @@ function fmtTonnes(n: number) {
 export function CentralBankGold() {
   const [cbRange, setCbRange] = useState<CbTimeframe>("1Y");
   const [mode, setMode] = useState<"relative" | "absolute">("absolute");
-  const [desk, setDesk] = useState<CbDesk>(COMPILED_DESK);
+  const [desk, setDesk] = useState<CbDesk>(() => withPublishedYtd(COMPILED_DESK));
 
   useEffect(() => {
     let on = true;
     getCbDesk()
       .then((d) => {
-        if (on && d) setDesk(d);
+        if (on && d) setDesk(withPublishedYtd(d));
       })
       .catch(() => undefined);
     return () => {
@@ -173,9 +174,10 @@ export function CentralBankGold() {
         </div>
       </div>
       <p className="mt-3 text-xs text-faint">
-        Official prints only — no estimates. 2026 YTD uses the latest figure per country (PBoC/SAFE for China, WGC
-        monthly for the rest). WGC has not published the July all-country table yet. World total is WGC GDT H1, not the
-        sum of the table. Top 15. {desk.source === "gshq" ? "Live from GSHQ." : "Compiled fallback."}
+        Official prints only — no estimates. An earlier 2026 buyer line is replaced when an August national release is
+        already published: China 80 t (SAFE), Poland 98 t (NBP), Czechia 14 t (CNB), Uzbekistan 48 t (CBU). World total
+        is WGC GDT H1, not the sum of the table. Top 15.{" "}
+        {desk.source === "gshq" ? "Country book from GSHQ, then those August prints." : "Compiled fallback."}
       </p>
     </section>
   );

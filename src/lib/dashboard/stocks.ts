@@ -42,16 +42,39 @@ export const IMF_GOV_DEBT = {
   usd: 111e12,
 } as const;
 
-/** Silver Institute / Metals Focus, World Silver Survey 2025 (calendar 2024). */
-export const SILVER_2024 = {
-  asOf: "2024",
-  mineMoz: 819.7,
-  recycleMoz: 193.9,
-  industrialMoz: 680.5,
-  totalDemandMoz: 1_164.1,
-  coinAndBarMoz: 190.9,
-  identifiableMoz: 1_239.2,
+/**
+ * Silver Institute / Metals Focus, World Silver Survey 2026 (calendar 2025).
+ * Identifiable bullion is the year-end total in that survey (London, CME, SGE, SHFE, other).
+ * officialMoz is net official-sector sales, not a central-bank stock.
+ * marketBalanceMoz is the survey's full balance (supply including hedging and official sales).
+ */
+export const SILVER_2025 = {
+  asOf: "2025",
+  mineMoz: 846.6,
+  recycleMoz: 197.6,
+  industrialMoz: 657.4,
+  totalDemandMoz: 1_130.6,
+  coinAndBarMoz: 217.7,
+  identifiableMoz: 1_394.5,
   officialMoz: 1.5,
+  marketBalanceMoz: -40.3,
+} as const;
+
+/** End-2025 global silver ETP holdings, same survey. 1,317.6 Moz printed as 40,982 t. */
+export const SILVER_ETP_2025 = {
+  asOf: "2025-12-31",
+  moz: 1_317.6,
+  tonnes: 40_982,
+} as const;
+
+/**
+ * LBMA July 2026 daily-average clearing paired with end-July London vault gold.
+ * Clearing page is the latest month; August vaults are a later stock with no August clearing yet.
+ */
+export const LBMA_JUL_2026 = {
+  asOf: "2026-07",
+  goldClearingDailyMoz: 15.8,
+  vaultGoldT: 9_534,
 } as const;
 
 export function wgcShare(tonnes: number) {
@@ -72,28 +95,34 @@ export function investmentGoldGramsPerPerson() {
 }
 
 export function silverFabricationMoz() {
-  return SILVER_2024.totalDemandMoz - SILVER_2024.coinAndBarMoz;
+  return SILVER_2025.totalDemandMoz - SILVER_2025.coinAndBarMoz;
 }
 
 export function silverVisibleMonths() {
-  return SILVER_2024.identifiableMoz / (silverFabricationMoz() / 12);
+  return SILVER_2025.identifiableMoz / (silverFabricationMoz() / 12);
 }
 
 export function silverSupplyGapT() {
-  const supply = SILVER_2024.mineMoz + SILVER_2024.recycleMoz;
-  return (supply - SILVER_2024.totalDemandMoz) * MOZ_TO_T;
+  const supply = SILVER_2025.mineMoz + SILVER_2025.recycleMoz;
+  return (supply - SILVER_2025.totalDemandMoz) * MOZ_TO_T;
 }
 
 export function silverOfficialT() {
-  return SILVER_2024.officialMoz * MOZ_TO_T;
+  return SILVER_2025.officialMoz * MOZ_TO_T;
 }
 
 export function silverIdentifiableMoz() {
-  return SILVER_2024.identifiableMoz;
+  return SILVER_2025.identifiableMoz;
 }
 
 export function investmentSilverOzPerPerson() {
-  return (SILVER_2024.identifiableMoz * 1e6) / WORLD_POP;
+  return (SILVER_2025.identifiableMoz * 1e6) / WORLD_POP;
+}
+
+/** Daily average clearing ounces ÷ end-month vault ounces. Not annualised. */
+export function lbmaGoldClearingRatio() {
+  const vaultOz = LBMA_JUL_2026.vaultGoldT * TROY_OZ_PER_TONNE;
+  return (LBMA_JUL_2026.goldClearingDailyMoz * 1e6) / vaultOz;
 }
 
 export function coverPct(tonnes: number, spotPerOz: number, debtUsd = IMF_GOV_DEBT.usd) {

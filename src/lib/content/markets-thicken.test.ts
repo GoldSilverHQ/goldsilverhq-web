@@ -212,6 +212,119 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /jewelry-fabrication|jewelry-demand-by-country/.test(path)));
   });
 
+  it("adds dated WSS 2026 recycling by source without replacing the other rankings", () => {
+    const body = getBody("markets", "physical-silver-demand-by-country");
+    assert.ok(body);
+
+    const investment = body.find((s) => s.heading === "2024 country snapshots");
+    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
+    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
+    const jewelry = body.find((s) => s.heading === "2025 jewelry fabrication by country — a fourth table");
+    const recycling = body.find((s) => s.heading === "Where recycled silver comes from (2025)");
+    const usgs = body.find((s) => s.heading === "Mine supply on the USGS book — not a new boom");
+    assert.ok(investment, "2024 investment ranking must stay");
+    assert.ok(coins, "coins-and-medals mint table must stay");
+    assert.ok(industrial, "2025 industrial country block must stay");
+    assert.ok(mix, "2025 industrial-mix block must stay");
+    assert.ok(jewelry, "2025 jewelry country block must stay");
+    assert.ok(recycling, "expected a separate 2025 recycling-by-source block");
+    assert.ok(usgs, "USGS mine-output context must stay");
+    assert.ok(recycling.table);
+    assert.ok(recycling.callout);
+
+    const recyclingIndex = body.indexOf(recycling);
+    const follow = body[recyclingIndex + 1];
+    assert.ok(follow && follow.heading === "", "expected a short scrap-vs-supply follow-up after the table");
+
+    const recyclingText = [recycling.heading, recycling.callout.label, ...recycling.callout.paragraphs, ...recycling.paragraphs, ...(follow.paragraphs ?? [])]
+      .join("\n")
+      .replace(/\[[^\]]+\]\([^)]+\)/g, (m) => m.match(/\[([^\]]+)\]/)?.[1] ?? "")
+      .replace(/\*\*/g, "")
+      .trim();
+    const recyclingWords = recyclingText.split(/\s+/).length;
+    assert.ok(
+      recyclingWords >= 300 && recyclingWords <= 500,
+      `expected 300–500 words in the recycling block, got ${recyclingWords}`,
+    );
+
+    const text = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const recyclingTable = recycling.table.rows.flat().join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+    const neighbor = getBody("markets", "gold-silver-ratio");
+    assert.ok(neighbor);
+    const neighborText = neighbor.flatMap((s) => s.paragraphs).join("\n");
+
+    assert.match(text, /United States 64\.9/);
+    assert.match(text, /India 59\.8/);
+    assert.match(text, /Scrap sources ≠ offtake ≠ fabrication/);
+    assert.match(text, /Jewelry fabrication ≠ investment offtake/);
+    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /87\.9 million ounces/);
+    assert.match(text, /657\.4 million ounces/);
+    assert.match(text, /189\.3 million ounces/);
+    assert.match(text, /197\.6 million ounces/);
+    assert.match(recyclingTable, /Industrial/);
+    assert.match(recyclingTable, /\*\*110\.1\*\*/);
+    assert.match(recyclingTable, /Jewelry/);
+    assert.match(recyclingTable, /\*\*38\.2\*\*/);
+    assert.match(recyclingTable, /Silverware/);
+    assert.match(recyclingTable, /\*\*28\.3\*\*/);
+    assert.match(recyclingTable, /Photographic/);
+    assert.match(recyclingTable, /\*\*16\.2\*\*/);
+    assert.match(recyclingTable, /Coin/);
+    assert.match(recyclingTable, /\*\*4\.7\*\*/);
+    assert.match(recyclingTable, /\*\*197\.6\*\*/);
+    assert.match(text, /thirteen-year high/);
+    assert.match(text, /secondary \*\*supply\*\*|secondary supply/i);
+    assert.match(text, /e-scrap yields/);
+    assert.match(text, /Silver Institute/);
+    assert.match(text, /Metals Focus/);
+    assert.match(text, /\[markets\]\(\/markets\)/);
+    assert.match(text, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
+    assert.match(text, /mine clock/);
+    assert.match(text, /scrap clock/);
+    assert.match(hubText, /recycling-by-source/);
+    assert.match(hubText, /scrap returning from use, not the mine clock/);
+    assert.match(neighborText, /scrap clock — secondary supply/);
+    assert.match(neighborText, /industrial fabrication as a factory table/);
+    assert.match(neighborText, /jewelry fabrication as a workshop table/);
+    assert.doesNotMatch(text, /2026F|Top 5|outlook|forecast|ebook|Kauf|buy silver in India|price target/i);
+
+    const page = getMarket("physical-silver-demand-by-country");
+    assert.ok(page);
+    assert.equal(
+      page.title,
+      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+    );
+    assert.match(page.summary, /Jewelry fabrication by country/);
+    assert.match(page.summary, /Recycling by source/);
+    assert.deepEqual(
+      page.related.map((r) => r.href),
+      ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/physical-silver-demand-by-country/);
+    assert.doesNotMatch(sitemapSrc, /recycling-by-source|silver-recycling|scrap-silver/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/physical-silver-demand-by-country"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /recycling-by-source|silver-recycling|scrap-silver/.test(path)));
+  });
+
   it("adds mining-vs-market on the gold–silver ratio page without new URLs", () => {
     const body = getBody("markets", "gold-silver-ratio");
     assert.ok(body);

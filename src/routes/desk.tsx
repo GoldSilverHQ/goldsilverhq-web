@@ -16,27 +16,9 @@ export const Route = createFileRoute("/desk")({
   component: DeskPage,
 });
 
-function DeskConstructionBanner() {
-  return (
-    <aside
-      role="status"
-      aria-label="Under construction"
-      className="border-b border-line-gold bg-raised"
-    >
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
-        <p className="inline-flex items-center rounded-full border border-line-gold bg-surface px-2.5 py-1 text-xs font-semibold tracking-[0.16em] text-gold uppercase">
-          Under construction
-        </p>
-        <p className="text-sm text-muted">This desk is not finished.</p>
-      </div>
-    </aside>
-  );
-}
-
 function DeskPage() {
   return (
     <SiteShell ui="data">
-      <DeskConstructionBanner />
       <FullDesk />
 
       <section className="mx-auto max-w-6xl px-4 pb-12 pt-4">

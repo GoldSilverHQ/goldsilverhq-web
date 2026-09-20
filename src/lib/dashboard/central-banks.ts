@@ -107,6 +107,36 @@ export function cbWorld(id: CbTimeframe, desk: CbDesk = COMPILED_DESK) {
   return cbWindow(id).years.reduce((acc, y) => acc + (desk.worldWgc[y] ?? 0), 0);
 }
 
+/**
+ * August 2026 buyer totals already printed from national releases.
+ * Whole tonnes, as rounded on the reserves page. Not a new estimate.
+ * China: SAFE 76.73 million oz, 7 Sep 2026. Poland: NBP 648 t, 10 Sep 2026.
+ * Czechia: CNB 85.8 t end-August. Uzbekistan: CBU 14.11 million oz as of 1 Sep 2026.
+ */
+export const PUBLISHED_YTD_2026: Record<string, { tonnes: number; asOf: string }> = {
+  chn: { tonnes: 80, asOf: "2026-08-31" },
+  pol: { tonnes: 98, asOf: "2026-08-31" },
+  cze: { tonnes: 14, asOf: "2026-08-31" },
+  uzb: { tonnes: 48, asOf: "2026-08-31" },
+};
+
+/** Replace an earlier 2026 buyer line with the published August total. Leaves a larger stored line alone. */
+export function withPublishedYtd(desk: CbDesk): CbDesk {
+  const countries = desk.countries.map((c) => {
+    const pub = PUBLISHED_YTD_2026[c.id];
+    const cur = c.byYear[2026];
+    if (!pub || cur == null || !(cur < pub.tonnes)) return c;
+    const start = c.holdYear[2025] ?? c.stock - cur;
+    return {
+      ...c,
+      byYear: { ...c.byYear, 2026: pub.tonnes },
+      stock: start + pub.tonnes,
+      stockAsOf: c.stockAsOf && c.stockAsOf >= pub.asOf ? c.stockAsOf : pub.asOf,
+    };
+  });
+  return { ...desk, countries };
+}
+
 const ISO3_TO_2: Record<string, string> = {
   afg: "AF", alb: "AL", dza: "DZ", ago: "AO", arg: "AR", arm: "AM", abw: "AW", aus: "AU", aut: "AT", aze: "AZ",
   bhr: "BH", bgd: "BD", blr: "BY", bel: "BE", bol: "BO", bih: "BA", bra: "BR", brn: "BN", bgr: "BG", khm: "KH",

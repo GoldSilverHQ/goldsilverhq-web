@@ -323,15 +323,15 @@ export const historyClusters: Cluster[] = [
       {
         slug: "rome-denarius-aureus",
         title: "Rome: denarius, aureus, slow debasement",
-        summary: "Gold and silver together. When spending outran metal, the coin was lightened.",
+        summary:
+          "By the third century, a coin that still passed as silver could be bronze under a wash. The denarius was thinned over generations. Trust in a large payment moved toward the aureus.",
         status: "ready",
         paragraphs: [
-          "Rome ran a bimetallic coinage. Debasement was gradual, then obvious. The lesson is fiscal, not moral: when spending outruns metal, the coin is lightened.",
+          "By the worst years of the third century, many coins that still passed as silver were bronze under a wash. Rome paid large sums in the gold aureus and everyday sums in the silver denarius. The silver piece was the one the mint lightened.",
         ],
         related: [
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
           { title: "The solidus", href: "/history/ancient/solidus-continuity" },
-          { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
         ],
         seo: {
           primary: "roman denarius debasement",
@@ -1142,10 +1142,10 @@ export const marketPages: Episode[] = [
     slug: "physical-silver-demand-by-country",
     title: "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
     summary:
-      "Jewelry fabrication by country is a 2025 World Silver Survey table, not the bar-and-coin ranking. USGS world mine output has stayed in the mid-20,000s of tonnes since the mid-2010s. Addresses, not a shopping list.",
+      "Jewelry fabrication by country is a 2025 World Silver Survey table, not the bar-and-coin ranking. Recycling by source is a 2025 scrap-supply table, not offtake. USGS world mine output has stayed in the mid-20,000s of tonnes since the mid-2010s. Addresses, not a shopping list.",
     status: "ready",
     paragraphs: [
-      "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. Jewelry fabrication is a separate workshop table. Neither ranking is a mine book.",
+      "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. Jewelry fabrication is a separate workshop table. Recycling by source is a separate scrap-supply table. None of those is a mine book.",
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },
@@ -1161,6 +1161,7 @@ export const marketPages: Episode[] = [
         "silver coins and medals fabrication",
         "industrial silver demand by country",
         "silver jewelry fabrication by country",
+        "silver recycling by source",
       ],
       demand: "mid",
       difficulty: "mid",
