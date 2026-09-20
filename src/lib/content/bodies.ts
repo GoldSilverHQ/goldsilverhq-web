@@ -797,17 +797,61 @@ const storage: Section[] = [
 
 const spottingFakes: Section[] = [
   {
-    heading: "High level only",
+    heading: "",
     paragraphs: [
-      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defence is not a home laboratory. It is a counterparty you can still find in a year, a product that is common enough to be known, and a check of weight and dimensions against the published spec.",
-      "This is not a testing manual. It will not teach you to run acid, XRF, or ultrasound. A wrong test can damage a good piece. If a holding is large enough that a fake would matter, use a professional.",
+      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. Authenticity starts with a counterparty you can still find in a year, and with specs — weight and dimensions — checked against a published figure. It does not start with a home laboratory, and it is not a guarantee. These paragraphs are a filter for the obvious. They are not a test manual.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names authenticity as a filter, not a laboratory course. The paragraphs below stay on that filter. They do not rank a dealer or name a gadget.",
     ],
   },
   {
-    heading: "What a beginner can actually do",
+    heading: "A filter, not a laboratory",
     paragraphs: [
-      "Weigh it. Measure it. Look at the edge, the reeding, the stamp, and whether the colour is trying too hard. Compare to a known genuine piece of the same product if you have one. None of that is conclusive. It is a filter for the obvious.",
-      "A price far below everyone else is information. Treat it as a warning, not a bargain.",
+      "A filter asks whether this object fails an obvious check against a known spec or a known desk. A laboratory asks whether the metal is what the stamp claims, to a stated tolerance, under a method that can damage a good piece if it is done badly. This page is the first of those two jobs. It is not the second.",
+      "It is also not a shop. It does not name vendors. It does not tell anyone to acquire metal, or to refuse a piece on the strength of a blog paragraph. A piece that matches weight and dimensions can still be plated, filled, or struck from the wrong alloy. A piece that fails them is only a reason to stop treating the stamp as settled. The gap between those two facts is why a filter is not a guarantee.",
+    ],
+  },
+  {
+    heading: "Counterparty before gadgets",
+    paragraphs: [
+      "The first defence is the desk, not the scale. A counterparty you can still find in a year has a name, a place, and a history that can be checked without their own FAQ. They will still answer a question after the parcel arrives. A stranger at a table, a social-media account, or a one-week shopfront has none of that. Gadgets do not replace that fact.",
+      "Common products help the same way. A widely struck government coin or a well-known small bar has a published weight, a published diameter, and a public vocabulary of usual copies. An obscure commemorative or a private pour with no serial has fewer published figures to check against. Popularity also attracts copies. That is not a ranking of products. It is why a common type is easier to filter and easier to fake.",
+      "A later custody arrangement does not repair a weak desk. Metal that has already been accepted still has to sit somewhere — home, an allocated vault, or an unallocated claim. That menu of access, cost, and counterparty lives on [storing gold and silver](/gold-silver/storage). Authenticity is the prior filter: whose books you trusted, and whether the object matches the spec, before the place it sits is even a question.",
+    ],
+  },
+  {
+    heading: "Weight, dimensions, edge, reed, stamp",
+    paragraphs: [
+      "Weight is the cheapest published number. Mints and refiners print a troy weight and a tolerance. A scale that can resolve a tenth of a gram will show a piece that is light or heavy against that figure. A piece that is far off is not yet proven fake. It is no longer a piece you treat as settled on the stamp alone.",
+      "Dimensions are the next published numbers: diameter, thickness, and sometimes a shape. A minted coin is a repeatable object. A poured bar is less so, but a famous small bar still has a length and a width in a public spec. A piece that is the right weight and the wrong size is a different alloy or a different object. The two checks together only remove the crude copies.",
+      "The edge, the reeding, and the stamp are visual filters on the same idea. Reeding that is uneven, a stamp that is soft or crowded, a colour that is trying too hard — those are reasons to compare against a known genuine piece of the same product if one is at hand. Colour is the weakest of the four. Lighting and wear change it. None of these looks is conclusive. They are a filter for the obvious.",
+    ],
+  },
+  {
+    heading: "A price far below the market",
+    paragraphs: [
+      "A quote far below everyone else’s print is information. It is not a bargain, and it is not a reason to acquire metal. Spot is a screen price for a paper ounce. The object on a counter carries fabrication, shipping, and a dealer’s book. An ask that undercuts that whole field by a wide margin has to be explained by something other than generosity.",
+      "The explanation may be a distressed sale, a thin market, or a stamp that is not the metal. This page does not decide which. It only names the reading: treat the outlier as a warning, not a bargain. A high ask is not proof of honesty. A low ask is not proof of a fake. Nothing here is buy or sell advice. The price is one more filter: a reason to stop, not a verdict.",
+    ],
+  },
+  {
+    heading: "When a professional is needed",
+    paragraphs: [
+      "A professional is needed when a fake would matter — when a loss would change a household’s or a firm’s books. Weight and a ruler do not close that case. A desk that will still be there next year also does not close it if the object itself is the question.",
+      "Assay offices, refiners, and some dealers run tests that this page will not describe. Sending a piece out costs time and a fee. Keeping a doubtful piece without that step costs the risk that the stamp is theatre. A blog post is not that step. A scale is not that step. If a plated bar or a filled coin would matter, use a professional. No page on this site replaces that test.",
+    ],
+  },
+  {
+    heading: "What a filter does not teach",
+    paragraphs: [
+      "These paragraphs do not teach acid tests, X-ray fluorescence, ultrasound, specific-gravity baths, or magnet tricks as a home method. A wrong test can damage a good piece. A right test, done without a method, can still be misread. Publishing a how-to would turn a filter into a manual.",
+      "The omission is deliberate. Popular coins and famous small bars attract copies that already know the amateur checks. A list of kitchen procedures would be incomplete the day it was posted. The professional’s job is the test. This page’s job is the prior filter: counterparty, specs, and the obvious fail."
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "Authenticity starts with counterparty and specs — weight and dimensions — not a home laboratory and not a guarantee. The checks above are a filter for the obvious. They are not a test manual, not a vendor list, and not a promise that copies will all be found.",
+      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is where an accepted object sits, open [storing gold and silver](/gold-silver/storage).",
     ],
   },
 ];

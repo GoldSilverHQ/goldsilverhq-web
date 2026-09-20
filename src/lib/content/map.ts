@@ -985,14 +985,15 @@ export const practicePages: Episode[] = [
   {
     slug: "spotting-fakes",
     title: "Spotting fake gold and silver (high level)",
-    summary: "Weight, dimensions, counterparty. Not a laboratory manual. Not a guarantee.",
+    summary:
+      "Authenticity starts with counterparty and specs — weight and dimensions — not a home lab and not a guarantee. A filter for the obvious, not a test manual.",
     status: "ready",
     paragraphs: [
-      "Counterfeits exist. Weight, dimensions, and reputable counterparties are the high-level defense. No page on this site replaces a professional test.",
+      "Authenticity is a filter, not a laboratory course. Counterparty and published specs come first. Weight, dimensions, edge, and stamp catch the obvious. Nothing here is a guarantee.",
     ],
     related: [
-      { title: "Buying online", href: "/gold-silver/buying-online" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
+      { title: "Storing gold and silver", href: "/gold-silver/storage" },
     ],
     seo: {
       primary: "how to spot fake gold",
