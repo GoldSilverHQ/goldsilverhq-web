@@ -24,14 +24,26 @@ describe("phase-1 robots and sitemap", () => {
       "/history/1694",
       "/history/1720",
       "/history/1776",
+      "/history/1790",
       "/history/1792",
+      "/history/1797",
+      "/history/1821",
       "/history/1832",
+      "/history/1862",
       "/history/1873",
+      "/history/1879",
+      "/history/1900",
       "/history/1907",
+      "/history/1913",
       "/history/1914",
       "/history/1923",
+      "/history/1925",
+      "/history/1931",
       "/history/1933",
+      "/history/1934",
+      "/history/1944",
       "/history/1971",
+      "/history/1974",
       "/history/1980",
       "/history/vip",
       "/history/vip/john-law",
@@ -90,7 +102,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 65);
+    assert.equal(locs.length, 77);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
