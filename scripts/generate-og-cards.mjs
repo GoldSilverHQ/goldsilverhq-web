@@ -23,6 +23,7 @@ import {
 } from "../src/lib/seo/phase1-sitemap-paths.mjs";
 import { phase1SharePages, sharePageForPath } from "../src/lib/seo/og-cards.ts";
 import { articleHeroOgOverridePaths } from "../src/lib/content/article-media.ts";
+import { historyYearPaths } from "../src/lib/content/history-years.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -217,6 +218,8 @@ async function main() {
   const only = process.argv.slice(2).filter((arg) => arg.startsWith("/"));
   // Custom article heroes (illustration = OG) must not be overwritten by branded text cards.
   const heroOverrides = new Set(articleHeroOgOverridePaths());
+  // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
+  for (const path of historyYearPaths()) heroOverrides.add(path);
   const forceHero = process.env.OG_FORCE_HERO === "1";
   const pages = phase1SharePages().filter((page) => {
     if (only.length && !only.includes(page.path)) return false;

@@ -15,9 +15,24 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
   });
 
-  it("lists only the forty-three thick www URLs", () => {
+  it("lists the thick www URLs, including one page per sound-money year", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
+      "/history/year",
+      "/history/1545",
+      "/history/1609",
+      "/history/1694",
+      "/history/1720",
+      "/history/1776",
+      "/history/1792",
+      "/history/1832",
+      "/history/1873",
+      "/history/1907",
+      "/history/1914",
+      "/history/1923",
+      "/history/1933",
+      "/history/1971",
+      "/history/1980",
       "/history/ancient",
       "/history/ancient/why-markets-chose-gold-silver",
       "/history/ancient/lydia-first-coins",
@@ -68,7 +83,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 43);
+    assert.equal(locs.length, 58);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

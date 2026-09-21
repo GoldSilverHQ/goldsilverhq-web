@@ -1,3 +1,4 @@
+import { getHistoryYear } from "../content/history-years.ts";
 import {
   getCluster,
   getEpisode,
@@ -71,6 +72,30 @@ export function sharePageForPath(pathname: string): SharePage | null {
       description:
         "What happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
       kicker: pillarKicker("history"),
+    };
+  }
+
+  if (path === "/history/year") {
+    return {
+      path,
+      cardTitle: "Sound money by year",
+      title: seoTitle("Sound money by year"),
+      description:
+        "Sound-money years, one page each: a short note and one picture. 1776, 1792, 1914, 1971, and the other dated breaks already on this site.",
+      kicker: pillarKicker("history"),
+    };
+  }
+
+  const yearMatch = path.match(/^\/history\/(\d{3,4})$/);
+  if (yearMatch) {
+    const year = getHistoryYear(yearMatch[1]);
+    if (!year) return null;
+    return {
+      path,
+      cardTitle: `${year.year}: ${year.title}`,
+      title: seoTitle(`${year.year}: ${year.title}`),
+      description: year.summary,
+      kicker: "History · Year",
     };
   }
 
