@@ -46,7 +46,9 @@ describe("history years", () => {
 
   it("steps to the next dated year, not the next calendar year", () => {
     assert.equal(adjacentHistoryYears(1776).prev?.year, 1720);
-    assert.equal(adjacentHistoryYears(1776).next?.year, 1792);
+    assert.equal(adjacentHistoryYears(1776).next?.year, 1790);
+    assert.equal(adjacentHistoryYears(1790).next?.year, 1792);
+    assert.equal(adjacentHistoryYears(1971).next?.year, 1974);
     assert.equal(adjacentHistoryYears(1545).prev, undefined);
     assert.equal(adjacentHistoryYears(1980).next, undefined);
   });
