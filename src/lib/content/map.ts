@@ -1006,16 +1006,15 @@ export const practicePages: Episode[] = [
   {
     slug: "beginner-checklist",
     title: "Beginner checklist: first ounces",
-    summary: "Form, seller, storage, records. A process — still not advice.",
+    summary:
+      "First ounces are a process of four decisions — form, counterparty, storage location, documentation — a menu of mechanics, not a purchase recommendation.",
     status: "ready",
     paragraphs: [
-      "First ounces are a process: product type, seller, storage, and records. The checklist stays humble and linked to the disclaimer.",
+      "First ounces are four decisions: form, counterparty, storage location, and documentation. A process, not a shop list, and not a recommendation.",
     ],
     related: [
-      { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
-      { title: "Premium over spot", href: "/gold-silver/premium-over-spot" },
-      { title: "Storage", href: "/gold-silver/storage" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
+      { title: "Storing gold and silver", href: "/gold-silver/storage" },
     ],
     seo: {
       primary: "how to buy gold for beginners",

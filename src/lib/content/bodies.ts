@@ -858,16 +858,58 @@ const spottingFakes: Section[] = [
 
 const beginnerChecklist: Section[] = [
   {
-    heading: "First ounces are a process",
+    heading: "",
     paragraphs: [
-      "A first physical holding is four decisions: what form, from whom, where it lives, and what you write down. Skip any one and the others get expensive.",
+      "First ounces are not a shop list. They are a process of four decisions — form, counterparty, storage location, documentation — a menu of mechanics, not a purchase recommendation. Skip any one and the others get expensive: an object with no place to sit, a drawer with no record, a quote from a desk that will not answer next year.",
+      "The [Gold & Silver in Practice](/gold-silver) overview names starting size as that process. The paragraphs below stay on the four decisions. They do not name a quantity, rank a dealer, or treat a first holding as a reason to act.",
     ],
   },
   {
-    heading: "The list",
+    heading: "Process instead of a shop list",
     paragraphs: [
-      "One: decide [bar or coin](/gold-silver/bars-vs-coins), and the size, before you look at a price. Two: know the [premium over spot](/gold-silver/premium-over-spot) and the bid, not only the ask. Three: choose [storage](/gold-silver/storage) before the parcel moves. Four: if you buy remote, read [buying online](/gold-silver/buying-online). Five: keep invoices, serials, and a note of where the metal is — in a place that is not only the same drawer.",
-      "Six: stay off collectibles until you understand bullion. Seven: do not skip the fake filter on [spotting fakes](/gold-silver/spotting-fakes), and do not think a blog post replaces a test.",
+      "A shop list is a set of objects. A process is a sequence. Form, then seller, then storage, then record-keeping — in that order, because each later decision is cheaper if the earlier one has already been named. The temptation is to start with a quote. A quote is the last number, not the first fact. A price without a form is a screen ounce. A parcel without a place is metal in transit toward a question you have not answered.",
+      "Form is the object: bar or coin, and the size. Seller is the counterparty — a name, a place, a history that can be checked without their own FAQ. Storage is the place the object lives once it exists. Record-keeping is what you write down so the other three facts can still be found later: invoices, serials, a note of location that is not only the same drawer as the metal. None of those four steps is a reason to acquire metal.",
+    ],
+  },
+  {
+    heading: "Form and size before the price screen",
+    paragraphs: [
+      "The useful first question is not what the screen prints. It is what object you are even comparing to that print. A poured kilo, a one-ounce minted bar, and a government bullion coin can share a fineness and still not be the same object in commerce. Weight and fineness describe the metal. Form describes the work done to it. Size is part of form: a large bar spreads fabrication; a one-ounce piece carries that cost alone. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison.",
+      "The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This checklist only needs the sequence: name the form and the size before you look at a quote. Otherwise you are comparing a paper ounce to a story about purity. Bullion and collectibles are different markets. A proof or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication gap turns into a narrative price. Nothing here ranks collectibles.",
+    ],
+  },
+  {
+    heading: "Premium and bid/ask as facts, not tips",
+    paragraphs: [
+      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the premium over spot — a price of form and of liquidity, not a tip, and not a forecast of which gaps are cheap.",
+      "The later number is the bid: what a desk will pay for that same object today. Reading only the ask is reading only half the tape. A thin product with a fat ask and a poor bid is expensive twice. Premiums move with mint capacity and how common a stamp is. Those moves describe supply of objects, not a signal that metal has become a bargain. This page does not teach when a premium is cheap. It only names ask and bid as facts beside the form.",
+    ],
+  },
+  {
+    heading: "Choose storage location before shipping",
+    paragraphs: [
+      "Metal that has already been named still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Choose that place before a parcel is in the post. A box on a van is not a storage decision. It is a delay until the object is already moving.",
+      "Home keeps the metal near and the operational risk on the household. A vault is distant and on them. Allocated storage identifies specific bars or coins. Unallocated or pool accounts are a claim on a stack, not a named pile. The full menu lives on [storing gold and silver](/gold-silver/storage). This checklist only needs the sequence: name the place before the object ships. A seller who will “store it for you” and never ship has only moved the custody question into another costume. Documentation belongs here too — invoices, serials, a note of where the metal sits, written somewhere that is not only the same drawer. The paperwork does not make the metal safer. It makes the other three facts checkable.",
+    ],
+  },
+  {
+    heading: "Authenticity filters only as stop-rules",
+    paragraphs: [
+      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. Authenticity on this page is a stop-rule, not a laboratory course. A filter asks whether this object fails an obvious check — a desk you cannot find next year, a weight or diameter that does not match a published spec, a quote far below everyone else’s print. Those are reasons to stop treating the stamp as settled. They are not a verdict, and not a home test manual.",
+      "The first defence is the counterparty, not the scale. Gadgets do not replace a name and a history you can check without their own FAQ. Weight and dimensions catch the crude copies. A price far below the field is a warning, not a bargain. A piece that matches the spec can still be plated; a piece that fails it is only a reason to stop. A blog post does not replace a test. If a fake would matter, a professional is the next step. Spotting fakes is the longer filter for the obvious. Here the filter is only a reason to halt the process.",
+    ],
+  },
+  {
+    heading: "What this checklist is not",
+    paragraphs: [
+      "This checklist is not a dealer ranking. No name, no shop, and no “best” desk appears here. A counterparty is a fact about a process, not a recommended vendor. It is not a shopping list, and it is not buy or sell advice. It does not say anyone ought to acquire gold or silver. It does not name a quantity or a first product. “First ounces” names the process of four decisions. It is not a cue to act.",
+      "It is also not a forecast. Nothing here says metal is cheap or dear, or that a premium is a signal. Treating form, seller, storage, and records as a reason to hold metal would turn a menu into a pitch.",
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "The checklist measures a process: form, counterparty, storage location, and documentation. It does not measure which object anyone ought to hold. It does not rank a dealer. These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop.",
     ],
   },
 ];
