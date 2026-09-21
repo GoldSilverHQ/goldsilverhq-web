@@ -1,5 +1,5 @@
 /**
- * Calendar years from 1776 through 1980 that are not already an episode page.
+ * Calendar years from 1545 through 1980 that are not already an episode page.
  * Quiet years describe the regime already in force. Event years name one statute
  * or break that the longer articles already date. No forecasts, no advice.
  * Pictures are public domain or CC0. A shared picture says so in the caption.
@@ -34,6 +34,11 @@ const MORE = {
   weimar: { href: "/history/20th-century/weimar-1923", title: "Weimar hyperinflation" },
   recall: { href: "/history/20th-century/1933-gold-recall", title: "1933 U.S. gold recall" },
   nixon: { href: "/history/20th-century/bretton-woods-nixon-1971", title: "Nixon shock 1971" },
+  warehouses: { href: "/history/banks-paper/warehouses-to-public-banks", title: "Warehouses to public banks" },
+  amsterdam: { href: "/history/banks-paper/bank-of-amsterdam", title: "Bank of Amsterdam" },
+  law: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
+  potosi: { href: "/history/silver/potosi", title: "Potosí — the silver mountain" },
+  piece: { href: "/history/silver/piece-of-eight", title: "The piece of eight" },
 } as const;
 
 function fill(
@@ -153,7 +158,363 @@ type Band = {
   build: (year: number) => HistoryYearFill;
 };
 
+const POTOSI = {
+  alt: "1758 panorama of Potosí with Cerro Rico behind the city.",
+  caption:
+    "Potosí and Cerro Rico, in a panorama of 1758. Silver working began in the 1540s. This picture is not from the year of the page.",
+  credit: CC0,
+};
+
+const PIECE = {
+  alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse.",
+  caption:
+    "Pillar dollar of eight reales, Mexico, 1771. A later striking of the Spanish dollar. Not a coin of the year of this page.",
+  credit: PD,
+};
+
+const AMSTERDAM = {
+  alt: "The old town hall on the Dam in Amsterdam.",
+  caption: "The old town hall on the Dam, home of the Wisselbank. Not a picture dated to the year of this page.",
+  credit: PD,
+};
+
+const BANK_ENGLAND = {
+  alt: "Print of the Bank of England in London.",
+  caption: "Print of the Bank of England. The charter is 1694. The print is not a picture of the year of this page.",
+  credit: CC0,
+};
+
+const LAW = {
+  alt: "Portrait of John Law.",
+  caption: "Portrait of John Law. The Banque Générale is 1716. The collapse is 1720. This is not a picture of the bust.",
+  credit: PD,
+};
+
+const LAW_PRINT = {
+  alt: "1720 satirical print of Mississippi Company shareholders in flight.",
+  caption: "Satire of 1720, the year the Mississippi notes and shares broke. Not a new collapse in the year of this page.",
+  credit: CC0,
+};
+
 const BANDS: readonly Band[] = [
+  {
+    from: 1546,
+    to: 1586,
+    build: (year) =>
+      fill(
+        "Cerro Rico already open",
+        `In ${year} Potosí’s silver working is already underway. Eight-real pieces are becoming empire coin. Amsterdam’s public bank is not open yet.`,
+        [
+          "Major silver working at Cerro Rico began in the 1540s. Ore moved to a colonial mint, then into the fleet and into Eurasian payments. This year does not open a new mine on these pages.",
+          "The eight-real piece is the coin face of that silver. Venice’s Banco della Piazza di Rialto opens in 1587, after private-bank failures. The Wisselbank is 1609.",
+        ],
+        POTOSI,
+        "potosi",
+        MORE.potosi,
+      ),
+  },
+  {
+    from: 1587,
+    to: 1587,
+    build: () =>
+      fill(
+        "Venice’s public bank",
+        "Venice opens the Banco della Piazza di Rialto after private-bank failures. Potosí silver is already in the trade. Amsterdam’s Wisselbank is 1609.",
+        [
+          "In 1587 Venice opened a public deposit table, the Banco della Piazza di Rialto, after private banks had failed. It is a civic answer to custody, not a national note issue.",
+          "Potosí silver is already moving into coin. The piece of eight is that coin’s English name. The Bank of Amsterdam, the model public ledger on these pages, is still 1609.",
+        ],
+        PIECE,
+        "piece-of-eight",
+        MORE.warehouses,
+      ),
+  },
+  {
+    from: 1588,
+    to: 1608,
+    build: (year) =>
+      fill(
+        "Spanish dollar, no Wisselbank yet",
+        `In ${year} Venice’s public bank is already open. Potosí silver is still moving into the piece of eight. The Wisselbank is 1609.`,
+        [
+          "The Banco della Piazza di Rialto has been open since 1587. These pages do not give it a new statute this year.",
+          "Spanish American mints are still striking the eight-real piece, the Spanish dollar of Atlantic trade. Amsterdam’s public deposit bank opens in 1609. The Bank of England is 1694.",
+        ],
+        PIECE,
+        "piece-of-eight",
+        MORE.piece,
+      ),
+  },
+  {
+    from: 1610,
+    to: 1639,
+    build: (year) =>
+      fill(
+        "Bank money on the Dam",
+        `In ${year} the Wisselbank is already open. Mixed coin goes in. A bank guilder is credited on the books. The receipt split is 1683.`,
+        [
+          "Amsterdam opened the public deposit bank in 1609. Large settlement moved by giro, a debit and a credit, while the vault stayed shut. The advertised model was a claim on metal, not a loan book.",
+          "Receipts that let the balance and the metal claim be sold apart are 1683. London’s seizure of mint deposits is 1640. The Bank of England is 1694. This page is the city ledger, not those later machines.",
+        ],
+        AMSTERDAM,
+        "amsterdam",
+        MORE.amsterdam,
+      ),
+  },
+  {
+    from: 1640,
+    to: 1640,
+    build: () =>
+      fill(
+        "Mint deposits seized",
+        "Charles I seizes merchants’ bullion stored in the Tower mint. A royal warehouse is not a safe warehouse.",
+        [
+          "In 1640 the Crown took merchants’ bullion from the Tower mint. The stated need was cash for war. Depositors who thought the royal warehouse was safe learned that a sovereign can close a window.",
+          "These pages place London’s later shift toward goldsmith running-cash notes after the Restoration, and they do not give that shift its own year. The Stop of the Exchequer is 1672. Amsterdam’s Wisselbank is already open.",
+        ],
+        {
+          ...PIECE,
+          caption:
+            "Pillar dollar of eight reales, Mexico, 1771. The 1640 fact is the seizure of bullion at the Tower mint, not this coin.",
+        },
+        "piece-of-eight",
+        MORE.warehouses,
+      ),
+  },
+  {
+    from: 1641,
+    to: 1671,
+    build: (year) =>
+      fill(
+        "After the Tower seizure",
+        `In ${year} the 1640 seizure is already past. The Stop of the Exchequer is 1672. The Wisselbank is open. The Bank of England is not.`,
+        [
+          "Charles I had already taken merchants’ bullion from the Tower mint. These pages do not date the later goldsmith shift beyond the articles’ phrase: after the Restoration.",
+          "When goldsmith running-cash notes come, they are receipts that can be endorsed while the metal stays put. The Stop of the Exchequer, which suspends payments on much of that royal debt, is 1672. It is not this year.",
+        ],
+        PIECE,
+        "piece-of-eight",
+        MORE.warehouses,
+      ),
+  },
+  {
+    from: 1672,
+    to: 1672,
+    build: () =>
+      fill(
+        "Stop of the Exchequer",
+        "Payments stop on much of the royal debt that goldsmith-bankers had treated as a safe asset.",
+        [
+          "In 1672 the Stop of the Exchequer suspended payments on much of that debt. Goldsmith-bankers who had funded the Crown discovered that a sovereign borrower can close a window too.",
+          "Their notes had been claims on metal left with a private keeper, and also a loan book. Amsterdam’s receipt split is 1683. The Bank of England’s charter is 1694. This page is the Stop.",
+        ],
+        {
+          ...PIECE,
+          caption:
+            "Pillar dollar of eight reales, Mexico, 1771. The 1672 fact is the Stop of the Exchequer, not this coin.",
+        },
+        "piece-of-eight",
+        MORE.warehouses,
+      ),
+  },
+  {
+    from: 1673,
+    to: 1682,
+    build: (year) =>
+      fill(
+        "Sovereign window already shut",
+        `In ${year} the Stop of the Exchequer is already past. Amsterdam has not yet issued the 1683 receipts. The Bank of England is 1694.`,
+        [
+          "The 1672 Stop suspended payments on much of the royal debt sitting in goldsmith books. That closure is not a new statute on this page.",
+          "From 1683 the Wisselbank will issue receipts for coin left on deposit, so the balance and the metal claim can be sold apart. That is not this year. London’s public note-issuing charter is 1694.",
+        ],
+        AMSTERDAM,
+        "amsterdam",
+        MORE.amsterdam,
+      ),
+  },
+  {
+    from: 1683,
+    to: 1683,
+    build: () =>
+      fill(
+        "Wisselbank receipts",
+        "The bank issues receipts for coin on deposit. The balance and the metal claim can be sold apart.",
+        [
+          "In 1683 the Wisselbank issued receipts for coin left on deposit. To take the original metal out, a holder needed the receipt. To pay a bill, the balance was enough.",
+          "That split is still not a Bank of England note. London’s charter is 1694: a war loan with a note issue, not a city giro. The later collapse of the agio is the 1780s, not this year.",
+        ],
+        AMSTERDAM,
+        "amsterdam",
+        MORE.amsterdam,
+      ),
+  },
+  {
+    from: 1684,
+    to: 1693,
+    build: (year) =>
+      fill(
+        "Receipts already in use",
+        `In ${year} a Wisselbank receipt is already a claim on the coins, and the balance is a separate credit. The Bank of England does not exist yet.`,
+        [
+          "Since 1683 the receipt and the bank balance have been two claims. They can be sold apart. Giro settlement does not require the bag of coin to move.",
+          "This is not a London note. The Bank of England is chartered in 1694. The agio’s collapse, when concealed lending becomes public, is the 1780s.",
+        ],
+        AMSTERDAM,
+        "amsterdam",
+        MORE.amsterdam,
+      ),
+  },
+  {
+    from: 1695,
+    to: 1707,
+    build: (year) =>
+      fill(
+        "Bank of England already chartered",
+        `In ${year} the 1694 charter is in force: a war loan and notes. The six-partner limit on other note-issuing banks is 1708.`,
+        [
+          "The Bank of England was chartered in 1694, during the Nine Years’ War, to lend to the Crown and to issue notes. Those notes are already a different machine from Amsterdam’s giro.",
+          "From 1708 no other English bank with more than six partners may issue notes. That rule is not yet in force. John Law’s Banque Générale is 1716. The stop on gold payout is 1797.",
+        ],
+        BANK_ENGLAND,
+        "bank-england",
+        MORE.bank,
+      ),
+  },
+  {
+    from: 1708,
+    to: 1708,
+    build: () =>
+      fill(
+        "Six-partner note rule",
+        "No other English bank with more than six partners may issue notes. Country banks with fewer partners still can. Law’s bank is 1716.",
+        [
+          "From 1708 statute kept a second Bank of England from appearing. Private country issue stood. The joint-stock note field in England belonged to the bank chartered in 1694.",
+          "This is not Amsterdam’s giro, and it is not Paris. Law founds the Banque Générale in 1716. Notes there are payable in coin under stated rules. That bank is not this year.",
+        ],
+        BANK_ENGLAND,
+        "bank-england",
+        MORE.bank,
+      ),
+  },
+  {
+    from: 1709,
+    to: 1715,
+    build: (year) =>
+      fill(
+        "Note monopoly already in force",
+        `In ${year} the six-partner rule is already law. The Bank of England’s charter dates from 1694. Law’s Banque Générale is 1716.`,
+        [
+          "Since 1708 no other English bank with more than six partners has been allowed to issue notes. Country banks below that line still can. There is no new charter this year.",
+          "John Law’s bank in Paris is 1716. The Mississippi break is 1720. England’s stop on gold payout is 1797. Amsterdam is still the giro table, not this note issue.",
+        ],
+        BANK_ENGLAND,
+        "bank-england",
+        MORE.bank,
+      ),
+  },
+  {
+    from: 1716,
+    to: 1716,
+    build: () =>
+      fill(
+        "Banque Générale",
+        "Law founds a bank whose notes are payable in coin under stated rules. The Mississippi collapse is 1720.",
+        [
+          "In 1716 John Law founded the Banque Générale. The notes were a convenient claim on metal, not metal itself. The crown later takes a closer grip, and the bank is reorganized as the Banque Royale.",
+          "The share mania and the break belong to 1719 and 1720, not to this founding year. England’s six-partner rule is already in force. This is not the Bank of England, and it is not the assignats.",
+        ],
+        LAW,
+        "law-portrait",
+        MORE.law,
+      ),
+  },
+  {
+    from: 1717,
+    to: 1717,
+    build: () =>
+      fill(
+        "Mississippi privileges widen",
+        "The company’s privileges and debt conversion widen. The Banque Royale is dated to 1718–19. The bust is 1720.",
+        [
+          "Through 1719 the Mississippi company’s privileges widen, and debt-conversion schemes pull more rentiers into shares. 1717 sits inside that widening. The notes of 1716 are already in circulation.",
+          "These pages date the Banque Royale to 1718–19, when the crown takes a closer grip. Peak mania is late 1719. The break is 1720. This is not England’s Bank, and it is not the assignats of the 1790s.",
+        ],
+        LAW,
+        "law-portrait",
+        MORE.law,
+      ),
+  },
+  {
+    from: 1718,
+    to: 1718,
+    build: () =>
+      fill(
+        "Banque Royale",
+        "The crown takes a closer grip on Law’s bank. Notes and share demand reinforce each other. The break is still 1720.",
+        [
+          "In 1718–19 the Banque Générale is reorganized as the Banque Royale. Note issue and demand for Mississippi shares reinforce each other. The notes had been a claim on coin under stated rules.",
+          "Peak prices sit in late 1719 and early 1720. The collapse is 1720. England is still on the 1694 charter and the 1708 note rule. Do not merge this with the assignats.",
+        ],
+        LAW,
+        "law-portrait",
+        MORE.law,
+      ),
+  },
+  {
+    from: 1719,
+    to: 1719,
+    build: () =>
+      fill(
+        "Shares and notes rise together",
+        "Late this year, Mississippi shares and Banque Royale notes inflate together. The bust is 1720, not this page.",
+        [
+          "In 1719 the company’s privileges are still widening, and debt conversion is pulling rentiers into shares. Peak mania sits in late 1719 and early 1720. Prices that multiplied then had to find new buyers.",
+          "The break — share crash, strained convertibility, flight into metal — is 1720. This page stops at the rise. It is not the assignats, and it is not Germany in 1923.",
+        ],
+        LAW,
+        "law-portrait",
+        MORE.law,
+      ),
+  },
+  {
+    from: 1721,
+    to: 1774,
+    build: (year) =>
+      fill(
+        "After the Mississippi break",
+        `In ${year} Law’s notes and shares have already broken. The Bank of England’s charter still stands. The Spanish dollar is still Atlantic money. England has not stopped gold payout.`,
+        [
+          "The Mississippi System broke in 1720. Share prices fell, notes lost credibility, and holders who could fled into metal. That collapse is not repeated as a new event this year. It is not the assignats of the 1790s.",
+          "The Bank of England, chartered in 1694, is still the English note issuer under the six-partner rule of 1708. Its stop on gold payout is 1797. Amsterdam’s agio does not collapse until the lending becomes public in the 1780s. Spanish dollars remain common money in the Caribbean and British North America.",
+        ],
+        year >= 1758
+          ? { ...PIECE, caption: PIECE.caption }
+          : LAW_PRINT,
+        year >= 1758 ? "piece-of-eight" : "law-print",
+        year >= 1758 ? MORE.piece : MORE.law,
+      ),
+  },
+  {
+    from: 1775,
+    to: 1775,
+    build: () =>
+      fill(
+        "Continental paper authorized",
+        "Continental currency is first authorized this year. The two-dollar note that promises Spanish milled dollars, or gold or silver, is dated 17 February 1776.",
+        [
+          "The war is already being paid in part with Continental paper. Authorization is this year. The printed promise on the two-dollar note — two Spanish milled dollars, or the value in gold or silver — is the emission of 17 February 1776.",
+          "Spanish dollars are still the familiar silver piece of Atlantic trade. The United States coinage statute is 1792. England has not stopped gold payout. That stop is 1797.",
+        ],
+        {
+          ...CONTINENTAL,
+          caption:
+            "Two-dollar Continental note, emission of 17 February 1776. Authorization is 1775. This note is not a 1775 printing.",
+        },
+        "continental",
+        MORE.piece,
+      ),
+  },
   {
     from: 1777,
     to: 1789,

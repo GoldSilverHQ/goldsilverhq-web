@@ -7,14 +7,11 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
  * disclaimers. `/gold-silver` and `/gold-silver/bars-vs-coins` are listed.
  * Plain ESM so OG card scripts and the Grok head injector can share it.
  */
-/** Spot years before the continuous run. Gaps before 1776 stay empty on purpose. */
-export const HISTORY_EARLY_YEARS = [1545, 1609, 1694, 1720];
-
-/** Inclusive. One page every calendar year. Nothing after 1980 until a later pass. */
-export const HISTORY_YEAR_SPAN = [1776, 1980];
+/** Inclusive. One page every calendar year from Potosí through Silver Thursday. */
+export const HISTORY_YEAR_SPAN = [1545, 1980];
 
 export function allHistoryYearNumbers() {
-  const years = [...HISTORY_EARLY_YEARS];
+  const years = [];
   for (let year = HISTORY_YEAR_SPAN[0]; year <= HISTORY_YEAR_SPAN[1]; year += 1) years.push(year);
   return years;
 }
