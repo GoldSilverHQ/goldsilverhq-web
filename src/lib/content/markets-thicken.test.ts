@@ -673,9 +673,10 @@ describe("markets page thicken (no new URLs)", () => {
     const ytd = body.find((s) => s.heading.startsWith("Reported net buyers"));
     const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
     const canada = body.find((s) => s.heading.startsWith("Canada"));
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
     assert.ok(
-      china && poland && ytd && sellers && canada,
-      "China, Poland, YTD buyers, YTD sellers, and Canada must stay",
+      china && poland && ytd && sellers && canada && brown,
+      "China, Poland, YTD buyers, YTD sellers, Canada, and Brown’s Bottom must stay",
     );
 
     const table = gdp.table.rows.flat().join("\n");
@@ -773,9 +774,10 @@ describe("markets page thicken (no new URLs)", () => {
     const china = body.find((s) => s.heading.startsWith("China"));
     const poland = body.find((s) => s.heading.startsWith("Poland"));
     const canada = body.find((s) => s.heading.startsWith("Canada"));
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
     assert.ok(
-      buyers && share && gdp && china && poland && canada,
-      "buyers, FX-share, gold/GDP, China, Poland, and Canada must stay",
+      buyers && share && gdp && china && poland && canada && brown,
+      "buyers, FX-share, gold/GDP, China, Poland, Canada, and Brown’s Bottom must stay",
     );
 
     const table = sellers.table.rows.flat().join("\n");
@@ -855,9 +857,10 @@ describe("markets page thicken (no new URLs)", () => {
     const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
     const china = body.find((s) => s.heading.startsWith("China"));
     const poland = body.find((s) => s.heading.startsWith("Poland"));
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
     assert.ok(
-      sellers && buyers && share && gdp && china && poland,
-      "sellers, buyers, FX-share, gold/GDP, China, and Poland must stay",
+      sellers && buyers && share && gdp && china && poland && brown,
+      "sellers, buyers, FX-share, gold/GDP, China, Poland, and Brown’s Bottom must stay",
     );
 
     const canadaText = [canada.heading, ...canada.paragraphs].join("\n");
@@ -921,6 +924,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /Not a central bank/);
     assert.match(page, /printed \*\*Gold: 0\*\*/);
     assert.match(page, /Poland: a short documentary block/);
+    assert.match(page, /Brown’s Bottom \(1999–2002\)/);
 
     assert.match(hubText, /Canada \*\*Gold: 0\*\* section/);
     assert.match(hubText, /dated official purchases and sales/);
@@ -945,5 +949,105 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(sitemapSrc, /canada-gold|canada-zero|canada-reserves/);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /canada-gold|canada-zero|canada-reserves/.test(path)));
+  });
+
+  it("adds a dated Brown’s Bottom official-sale block without a new URL or hindsight", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
+    assert.ok(brown, "expected a Brown’s Bottom section on the same spoke");
+    const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
+    const buyers = body.find((s) => s.heading.startsWith("Reported net buyers"));
+    const share = body.find((s) => s.heading.startsWith("Gold as a share"));
+    const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
+    const china = body.find((s) => s.heading.startsWith("China"));
+    const poland = body.find((s) => s.heading.startsWith("Poland"));
+    const canada = body.find((s) => s.heading.startsWith("Canada"));
+    assert.ok(
+      sellers && buyers && share && gdp && china && poland && canada,
+      "sellers, buyers, FX-share, gold/GDP, China, Poland, and Canada must stay",
+    );
+
+    const brownText = [brown.heading, ...brown.paragraphs].join("\n");
+    const page = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+
+    assert.match(brown.heading, /1999–2002/);
+    assert.match(brown.heading, /dated official gold sale/);
+    assert.match(brownText, /395 tonnes/);
+    assert.match(brownText, /\*\*17\*\*/);
+    assert.match(brownText, /July 1999/);
+    assert.match(brownText, /March 2002/);
+    assert.match(brownText, /\$275/);
+    assert.match(brownText, /\$3\.5 billion/);
+    assert.match(brownText, /dollar, euro, and yen/);
+    assert.match(brownText, /GOV\.UK/);
+    assert.match(brownText, /Quarterly Bulletin/);
+    assert.match(brownText, /Summer 2003/);
+    assert.match(brownText, /https:\/\/www\.gov\.uk\/government\/publications\/the-sale-of-part-of-the-uk-gold-reserves-1999-2002/);
+    assert.match(
+      brownText,
+      /https:\/\/www\.bankofengland\.co\.uk\/-\/media\/boe\/files\/quarterly-bulletin\/2003\/an-analysis-of-the-uk-gold-auctions-1999-2002\.pdf/,
+    );
+    assert.match(brownText, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
+    assert.match(brownText, /reporting convention|statutory book rate/);
+    assert.match(brownText, /do not say a private reader should follow HM Treasury/i);
+    assert.match(brownText, /not a private-flow tip/);
+    assert.doesNotMatch(
+      brownText,
+      /worst trade|should have held|lost billions|buy gold|Kauf|forecast|price target|who to follow|sold at the bottom/i,
+    );
+
+    assert.match(page, /Reported net official sellers, YTD through July 2026/);
+    assert.match(page, /\*\*85\*\*/);
+    assert.match(page, /\*\*19%\*\*/);
+    assert.match(page, /\*\*26%\*\*/);
+    assert.match(page, /\*\*14\.30%\*\*/);
+    assert.match(page, /2,387/);
+    assert.match(page, /648 tonnes/);
+    assert.match(page, /Not a central bank/);
+    assert.match(page, /\*\*1999–2002\*\* UK auction programme/);
+    assert.match(page, /Canada: Gold: 0 on the official book/);
+
+    assert.match(hubText, /\*\*1999–2002\*\* UK official-sale section/);
+    assert.match(hubText, /dated official purchases and sales/);
+    assert.match(hubText, /\[markets\/official-gold-book-value\]|official gold book value/);
+    assert.match(hubText, /Canada \*\*Gold: 0\*\* section/);
+
+    const pageMeta = getMarket("central-bank-gold-reserves");
+    assert.ok(pageMeta);
+    assert.match(pageMeta.summary, /Brown’s Bottom/);
+    assert.match(pageMeta.summary, /1999–2002/);
+    assert.match(pageMeta.summary, /Gold: 0/);
+    assert.deepEqual(
+      pageMeta.related.map((r) => r.href),
+      [
+        "/markets",
+        "/markets/official-gold-book-value",
+        "/sound-money/backed-money",
+        "/history/20th-century/bretton-woods-nixon-1971",
+      ],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /browns-bottom|brown-s-bottom|uk-gold-sales|hm-treasury-gold/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /browns-bottom|brown-s-bottom|uk-gold-sales/.test(path)));
   });
 });
