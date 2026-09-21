@@ -71,6 +71,15 @@ function photoYear(
 }
 
 const EXPLICIT_YEARS: readonly HistoryYear[] = [
+  fromEpisode(312, "/history/ancient/solidus-continuity", {
+    title: "Solidus",
+    summary: "In the 310s Constantine’s mint settles on a gold solidus of tightly held weight. Silver had already been washed thin.",
+    paragraphs: [
+      "After silver had been washed thin in the third century, pay tables still needed a piece strangers would trust. In the 310s Constantine’s minting settled on a gold solidus of tightly held weight and fineness — roughly one seventy-second of a Roman pound.",
+      "The solidus outlasted the western empire as the Byzantine nomisma. Continuity of weight is the story, not a romance of Rome. The longer page is that gold unit.",
+    ],
+    more: { href: "/history/ancient/solidus-continuity", title: "After Rome: the solidus and early continuity" },
+  }),
   fromEpisode(1545, "/history/silver/potosi", {
     title: "Potosí",
     summary: "Cerro Rico starts feeding silver into Atlantic and Pacific trade.",
@@ -89,6 +98,34 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     ],
     more: { href: "/history/banks-paper/bank-of-amsterdam", title: "Bank of Amsterdam" },
   }),
+  photoYear(1640, {
+    alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse.",
+    caption:
+      "Pillar dollar of eight reales, Mexico, 1771. The 1640 fact is the seizure of bullion at the Tower mint, not this coin.",
+    credit: "Public domain.",
+  }, {
+    title: "Mint deposits seized",
+    summary: "Charles I seizes merchants’ bullion stored in the Tower mint. A royal warehouse is not a safe warehouse.",
+    paragraphs: [
+      "In 1640 the Crown took merchants’ bullion from the Tower mint. The stated need was cash for war. Depositors who thought the royal warehouse was safe learned that a sovereign can close a window.",
+      "These pages place London’s later shift toward goldsmith running-cash notes after the Restoration. The Stop of the Exchequer is 1672. Amsterdam’s Wisselbank is already open.",
+    ],
+    more: { href: "/history/banks-paper/warehouses-to-public-banks", title: "Warehouses to public banks" },
+  }),
+  photoYear(1672, {
+    alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse.",
+    caption:
+      "Pillar dollar of eight reales, Mexico, 1771. The 1672 fact is the Stop of the Exchequer, not this coin.",
+    credit: "Public domain.",
+  }, {
+    title: "Stop of the Exchequer",
+    summary: "Payments stop on much of the royal debt that goldsmith-bankers had treated as a safe asset.",
+    paragraphs: [
+      "In 1672 the Stop of the Exchequer suspended payments on much of that debt. Goldsmith-bankers who had funded the Crown discovered that a sovereign borrower can close a window too.",
+      "Their notes had been claims on metal left with a private keeper, and also a loan book. The Bank of England’s charter is 1694. This page is the Stop.",
+    ],
+    more: { href: "/history/banks-paper/warehouses-to-public-banks", title: "Warehouses to public banks" },
+  }),
   fromEpisode(1694, "/history/banks-paper/bank-of-england", {
     title: "Bank of England",
     summary: "A war loan and a note issue. Not a copy of Amsterdam’s giro.",
@@ -98,6 +135,19 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     ],
     more: { href: "/history/banks-paper/bank-of-england", title: "Bank of England" },
   }),
+  photoYear(1716, {
+    alt: "Portrait of John Law.",
+    caption: "Portrait of John Law. The Banque Générale is 1716. The collapse is 1720. This is not a picture of the bust.",
+    credit: "Public domain.",
+  }, {
+    title: "Banque Générale",
+    summary: "Law founds a bank whose notes are payable in coin under stated rules. The Mississippi collapse is 1720.",
+    paragraphs: [
+      "In 1716 John Law founded the Banque Générale. The notes were a convenient claim on metal, not metal itself. The crown later takes a closer grip, and the bank is reorganized as the Banque Royale.",
+      "The share mania and the break belong to 1719 and 1720, not to this founding year. This is not the Bank of England, and it is not the assignats.",
+    ],
+    more: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
+  }),
   fromEpisode(1720, "/history/banks-paper/john-law", {
     title: "Mississippi Bubble",
     summary: "John Law’s notes and Mississippi shares break in the same year.",
@@ -106,6 +156,20 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
       "This is not the assignats of the 1790s, and it is not Germany in 1923. It is one regency’s paper-and-shares collapse.",
     ],
     more: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
+  }),
+  photoYear(1775, {
+    alt: "Obverse of a two-dollar Continental currency note dated February 17, 1776.",
+    caption:
+      "Two-dollar Continental note, emission of 17 February 1776. Authorization is 1775. This note is not a 1775 printing.",
+    credit: "Public domain.",
+  }, {
+    title: "Continental paper authorized",
+    summary: "Continental currency is first authorized this year. The two-dollar note that promises Spanish milled dollars, or gold or silver, is dated 17 February 1776.",
+    paragraphs: [
+      "The war is already being paid in part with Continental paper. Authorization is this year. The printed promise on the two-dollar note — two Spanish milled dollars, or the value in gold or silver — is the emission of 17 February 1776.",
+      "Spanish dollars are still the familiar silver piece of Atlantic trade. The United States coinage statute is 1792. England has not stopped gold payout. That stop is 1797.",
+    ],
+    more: { href: "/history/silver/piece-of-eight", title: "The piece of eight" },
   }),
   {
     year: 1776,
