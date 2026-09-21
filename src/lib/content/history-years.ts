@@ -1,4 +1,6 @@
 import { articleHeroForPath } from "./article-media.ts";
+import { historyYearFill } from "./history-year-fill.ts";
+import { allHistoryYearNumbers } from "../seo/phase1-sitemap-paths.mjs";
 
 /**
  * One calendar year, one picture, a short sound-money note.
@@ -68,7 +70,7 @@ function photoYear(
   };
 }
 
-export const HISTORY_YEARS: readonly HistoryYear[] = [
+const EXPLICIT_YEARS: readonly HistoryYear[] = [
   fromEpisode(1545, "/history/silver/potosi", {
     title: "Potosí",
     summary: "Cerro Rico starts feeding silver into Atlantic and Pacific trade.",
@@ -360,6 +362,35 @@ export const HISTORY_YEARS: readonly HistoryYear[] = [
     more: { href: "/history/silver/silver-thursday", title: "Silver Thursday" },
   }),
 ];
+
+function buildHistoryYears(): readonly HistoryYear[] {
+  const explicit = new Map(EXPLICIT_YEARS.map((row) => [row.year, row]));
+  const pages: HistoryYear[] = [];
+  for (const year of allHistoryYearNumbers()) {
+    const known = explicit.get(year);
+    if (known) {
+      pages.push(known);
+      explicit.delete(year);
+      continue;
+    }
+    const filled = historyYearFill(year);
+    if (!filled) throw new Error(`history year ${year} has no page`);
+    pages.push(
+      photoYear(year, filled.image, {
+        title: filled.title,
+        summary: filled.summary,
+        paragraphs: filled.paragraphs,
+        ...(filled.more ? { more: filled.more } : {}),
+      }),
+    );
+  }
+  if (explicit.size > 0) {
+    throw new Error(`explicit history years missing from the year list: ${[...explicit.keys()].join(", ")}`);
+  }
+  return pages;
+}
+
+export const HISTORY_YEARS: readonly HistoryYear[] = buildHistoryYears();
 
 const BY_YEAR = new Map(HISTORY_YEARS.map((row) => [row.year, row]));
 

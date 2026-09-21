@@ -82,7 +82,7 @@ export function sharePageForPath(pathname: string): SharePage | null {
       cardTitle: "Sound money by year",
       title: seoTitle("Sound money by year"),
       description:
-        "Sound-money years, one page each: a short note and one picture. 1776, 1792, 1914, 1971, and the other dated breaks already on this site.",
+        "One short page for every year from 1545 through 1980. A note and one picture. No forecast.",
       kicker: pillarKicker("history"),
     };
   }

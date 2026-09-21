@@ -44,12 +44,25 @@ describe("history years", () => {
     }
   });
 
-  it("steps to the next dated year, not the next calendar year", () => {
-    assert.equal(adjacentHistoryYears(1776).prev?.year, 1720);
-    assert.equal(adjacentHistoryYears(1776).next?.year, 1790);
-    assert.equal(adjacentHistoryYears(1790).next?.year, 1792);
-    assert.equal(adjacentHistoryYears(1971).next?.year, 1974);
+  it("steps through every calendar year from 1545 to 1980", () => {
+    assert.equal(HISTORY_YEARS.length, 1980 - 1545 + 1);
+    assert.deepEqual(
+      HISTORY_YEARS.map((row) => row.year),
+      HISTORY_YEARS.map((row) => row.year).slice().sort((a, b) => a - b),
+    );
+    for (let year = 1545; year <= 1980; year += 1) {
+      assert.equal(getHistoryYear(String(year))?.year, year);
+    }
+    assert.equal(getHistoryYear("1544"), undefined);
+    assert.equal(getHistoryYear("1981"), undefined);
     assert.equal(adjacentHistoryYears(1545).prev, undefined);
+    assert.equal(adjacentHistoryYears(1609).next?.year, 1610);
+    assert.equal(adjacentHistoryYears(1720).next?.year, 1721);
+    assert.equal(adjacentHistoryYears(1776).prev?.year, 1775);
+    assert.equal(adjacentHistoryYears(1776).next?.year, 1777);
+    assert.equal(adjacentHistoryYears(1790).next?.year, 1791);
+    assert.equal(adjacentHistoryYears(1971).next?.year, 1972);
+    assert.equal(adjacentHistoryYears(1980).prev?.year, 1979);
     assert.equal(adjacentHistoryYears(1980).next, undefined);
   });
 });

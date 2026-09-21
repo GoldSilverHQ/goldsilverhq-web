@@ -10,6 +10,12 @@ import {
   sitemapXml,
 } from "./robots-sitemap.ts";
 
+function expectedHistoryYearPaths() {
+  const years = [];
+  for (let year = 1545; year <= 1980; year += 1) years.push(year);
+  return years.map((year) => `/history/${year}`);
+}
+
 describe("phase-1 robots and sitemap", () => {
   it("points crawlers at the www sitemap and allows the site", () => {
     assert.match(ROBOTS_TXT, /^User-agent: \*\nAllow: \/\nSitemap: https:\/\/www\.goldsilverhq\.com\/sitemap\.xml\n$/);
@@ -19,32 +25,7 @@ describe("phase-1 robots and sitemap", () => {
     assert.deepEqual([...PHASE1_SITEMAP_PATHS], [
       "/history",
       "/history/year",
-      "/history/1545",
-      "/history/1609",
-      "/history/1694",
-      "/history/1720",
-      "/history/1776",
-      "/history/1790",
-      "/history/1792",
-      "/history/1797",
-      "/history/1821",
-      "/history/1832",
-      "/history/1862",
-      "/history/1873",
-      "/history/1879",
-      "/history/1900",
-      "/history/1907",
-      "/history/1913",
-      "/history/1914",
-      "/history/1923",
-      "/history/1925",
-      "/history/1931",
-      "/history/1933",
-      "/history/1934",
-      "/history/1944",
-      "/history/1971",
-      "/history/1974",
-      "/history/1980",
+      ...expectedHistoryYearPaths(),
       "/history/vip",
       "/history/vip/john-law",
       "/history/vip/adam-smith",
@@ -102,7 +83,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 77);
+    assert.equal(locs.length, 487);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
