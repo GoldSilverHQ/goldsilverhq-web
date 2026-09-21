@@ -38,7 +38,9 @@ const ARRIVAL =
 
 describe("intent paths (existing URLs only)", () => {
   it("keeps the sitemap freeze — no new mining/intent URLs", () => {
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 43);
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 58);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/year"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1776"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/sound-money/what-is-sound-money"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/20th-century/bretton-woods-nixon-1971"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));

@@ -21,6 +21,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
+import { Route as HistoryYearRouteImport } from './routes/history/year'
 import { Route as MarketsIndexRouteImport } from './routes/markets/index'
 import { Route as MarketsSlugRouteImport } from './routes/markets/$slug'
 import { Route as SoundMoneyIndexRouteImport } from './routes/sound-money/index'
@@ -89,6 +90,11 @@ const HistoryIndexRoute = HistoryIndexRouteImport.update({
   path: '/history/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HistoryYearRoute = HistoryYearRouteImport.update({
+  id: '/history/year',
+  path: '/history/year',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MarketsIndexRoute = MarketsIndexRouteImport.update({
   id: '/markets/',
   path: '/markets/',
@@ -135,6 +141,7 @@ export interface FileRoutesByFullPath {
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
@@ -155,6 +162,7 @@ export interface FileRoutesByTo {
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
   '/history': typeof HistoryIndexRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets': typeof MarketsIndexRoute
   '/sound-money': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
@@ -176,6 +184,7 @@ export interface FileRoutesById {
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
@@ -198,6 +207,7 @@ export interface FileRouteTypes {
     | '/sound-money/$slug'
     | '/gold-silver/'
     | '/history/'
+    | '/history/year'
     | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
@@ -218,6 +228,7 @@ export interface FileRouteTypes {
     | '/sound-money/$slug'
     | '/gold-silver'
     | '/history'
+    | '/history/year'
     | '/markets'
     | '/sound-money'
     | '/history/$cluster/$episode'
@@ -238,6 +249,7 @@ export interface FileRouteTypes {
     | '/sound-money/$slug'
     | '/gold-silver/'
     | '/history/'
+    | '/history/year'
     | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
@@ -259,6 +271,7 @@ export interface RootRouteChildren {
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
   HistoryIndexRoute: typeof HistoryIndexRoute
+  HistoryYearRoute: typeof HistoryYearRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
   SoundMoneyIndexRoute: typeof SoundMoneyIndexRoute
   HistoryClusterEpisodeRoute: typeof HistoryClusterEpisodeRoute
@@ -351,6 +364,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoryIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/history/year': {
+      id: '/history/year'
+      path: '/history/year'
+      fullPath: '/history/year'
+      preLoaderRoute: typeof HistoryYearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/markets/': {
       id: '/markets/'
       path: '/markets'
@@ -411,6 +431,7 @@ const rootRouteChildren: RootRouteChildren = {
   SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
   HistoryIndexRoute: HistoryIndexRoute,
+  HistoryYearRoute: HistoryYearRoute,
   MarketsIndexRoute: MarketsIndexRoute,
   SoundMoneyIndexRoute: SoundMoneyIndexRoute,
   HistoryClusterEpisodeRoute: HistoryClusterEpisodeRoute,

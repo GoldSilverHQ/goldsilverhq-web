@@ -1,18 +1,33 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArticleSections, Breadcrumb, RelatedLinks, RichText } from "@/components/Article";
+import { HistoryYearPage } from "@/components/HistoryYearPage";
 import { SiteShell } from "@/components/SiteShell";
+import { getHistoryYear } from "@/lib/content/history-years";
 import { getCluster, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/history/$cluster/")({
   loader: ({ params }) => {
+    const year = getHistoryYear(params.cluster);
+    if (year) return { kind: "year" as const, year };
     const cluster = getCluster(params.cluster);
     if (!cluster) throw notFound();
-    return cluster;
+    return { kind: "cluster" as const, cluster };
   },
   head: ({ loaderData, params }) => {
-    const title = seoTitle(loaderData?.seo?.titleTag ?? loaderData?.title ?? "History");
-    const description = loaderData?.summary ?? "";
+    if (loaderData?.kind === "year") {
+      const year = loaderData.year;
+      return {
+        meta: pageShareMeta({
+          title: seoTitle(`${year.year}: ${year.title}`),
+          description: year.summary,
+          path: `/history/${year.year}`,
+          imagePath: year.image.ogSrc,
+        }),
+      };
+    }
+    const title = seoTitle(loaderData?.cluster?.seo?.titleTag ?? loaderData?.cluster?.title ?? "History");
+    const description = loaderData?.cluster?.summary ?? "";
     return {
       meta: pageShareMeta({
         title,
@@ -21,11 +36,19 @@ export const Route = createFileRoute("/history/$cluster/")({
       }),
     };
   },
-  component: ClusterPage,
+  component: ClusterOrYearPage,
 });
 
-function ClusterPage() {
-  const cluster = Route.useLoaderData();
+function ClusterOrYearPage() {
+  const data = Route.useLoaderData();
+  if (data.kind === "year") {
+    return (
+      <SiteShell>
+        <HistoryYearPage year={data.year} />
+      </SiteShell>
+    );
+  }
+  const cluster = data.cluster;
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">

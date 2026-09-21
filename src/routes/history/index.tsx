@@ -3,6 +3,7 @@ import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article"
 import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { SiteShell } from "@/components/SiteShell";
 import { historyHubBody } from "@/lib/content/bodies";
+import { HISTORY_YEARS } from "@/lib/content/history-years";
 import { historyClusters, historyHub, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
@@ -30,6 +31,26 @@ function HistoryHub() {
         </div>
 
         <HistoryTimeline />
+
+        <h2 className="mt-16 font-display text-3xl">One year</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          A short note and one picture for a single year. The longer articles stay in the stretches below.
+        </p>
+        <p className="mt-4 flex flex-wrap gap-2">
+          {HISTORY_YEARS.map((year) => (
+            <Link
+              key={year.year}
+              to="/history/$cluster"
+              params={{ cluster: String(year.year) }}
+              className="rounded-full bg-surface px-3 py-1.5 font-sans text-sm tabular-nums text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
+            >
+              {year.year}
+            </Link>
+          ))}
+          <Link to="/history/year" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
+            All years →
+          </Link>
+        </p>
 
         <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
         <p className="mt-2 max-w-prose text-muted">
