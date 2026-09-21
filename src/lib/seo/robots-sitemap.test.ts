@@ -33,6 +33,13 @@ describe("phase-1 robots and sitemap", () => {
       "/history/1933",
       "/history/1971",
       "/history/1980",
+      "/history/vip",
+      "/history/vip/john-law",
+      "/history/vip/adam-smith",
+      "/history/vip/alexander-hamilton",
+      "/history/vip/andrew-jackson",
+      "/history/vip/woodrow-wilson",
+      "/history/vip/ludwig-von-mises",
       "/history/ancient",
       "/history/ancient/why-markets-chose-gold-silver",
       "/history/ancient/lydia-first-coins",
@@ -83,7 +90,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 58);
+    assert.equal(locs.length, 65);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

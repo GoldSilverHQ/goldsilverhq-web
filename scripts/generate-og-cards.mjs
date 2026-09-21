@@ -24,6 +24,7 @@ import {
 import { phase1SharePages, sharePageForPath } from "../src/lib/seo/og-cards.ts";
 import { articleHeroOgOverridePaths } from "../src/lib/content/article-media.ts";
 import { historyYearPaths } from "../src/lib/content/history-years.ts";
+import { historyPersonPaths } from "../src/lib/content/history-people.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -220,6 +221,7 @@ async function main() {
   const heroOverrides = new Set(articleHeroOgOverridePaths());
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);
+  for (const path of historyPersonPaths()) heroOverrides.add(path);
   const forceHero = process.env.OG_FORCE_HERO === "1";
   const pages = phase1SharePages().filter((page) => {
     if (only.length && !only.includes(page.path)) return false;

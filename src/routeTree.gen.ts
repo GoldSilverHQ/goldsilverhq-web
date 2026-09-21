@@ -28,6 +28,8 @@ import { Route as SoundMoneyIndexRouteImport } from './routes/sound-money/index'
 import { Route as SoundMoneySlugRouteImport } from './routes/sound-money/$slug'
 import { Route as HistoryClusterIndexRouteImport } from './routes/history/$cluster/index'
 import { Route as HistoryClusterEpisodeRouteImport } from './routes/history/$cluster/$episode'
+import { Route as HistoryVipIndexRouteImport } from './routes/history/vip/index'
+import { Route as HistoryVipPersonRouteImport } from './routes/history/vip/$person'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -125,6 +127,16 @@ const HistoryClusterEpisodeRoute = HistoryClusterEpisodeRouteImport.update({
   path: '/history/$cluster/$episode',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HistoryVipIndexRoute = HistoryVipIndexRouteImport.update({
+  id: '/history/vip/',
+  path: '/history/vip/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryVipPersonRoute = HistoryVipPersonRouteImport.update({
+  id: '/history/vip/$person',
+  path: '/history/vip/$person',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -137,15 +149,17 @@ export interface FileRoutesByFullPath {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
-  '/history/year': typeof HistoryYearRoute
   '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
+  '/history/vip/$person': typeof HistoryVipPersonRoute
   '/history/$cluster/': typeof HistoryClusterIndexRoute
+  '/history/vip/': typeof HistoryVipIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -158,15 +172,17 @@ export interface FileRoutesByTo {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver': typeof GoldSilverIndexRoute
   '/history': typeof HistoryIndexRoute
-  '/history/year': typeof HistoryYearRoute
   '/markets': typeof MarketsIndexRoute
   '/sound-money': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
+  '/history/vip/$person': typeof HistoryVipPersonRoute
   '/history/$cluster': typeof HistoryClusterIndexRoute
+  '/history/vip': typeof HistoryVipIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -180,15 +196,17 @@ export interface FileRoutesById {
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
+  '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
-  '/history/year': typeof HistoryYearRoute
   '/markets/': typeof MarketsIndexRoute
   '/sound-money/': typeof SoundMoneyIndexRoute
   '/history/$cluster/$episode': typeof HistoryClusterEpisodeRoute
+  '/history/vip/$person': typeof HistoryVipPersonRoute
   '/history/$cluster/': typeof HistoryClusterIndexRoute
+  '/history/vip/': typeof HistoryVipIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -203,15 +221,17 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
+    | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
     | '/history/'
-    | '/history/year'
     | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
+    | '/history/vip/$person'
     | '/history/$cluster/'
+    | '/history/vip/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -224,15 +244,17 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
+    | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
     | '/gold-silver'
     | '/history'
-    | '/history/year'
     | '/markets'
     | '/sound-money'
     | '/history/$cluster/$episode'
+    | '/history/vip/$person'
     | '/history/$cluster'
+    | '/history/vip'
   id:
     | '__root__'
     | '/'
@@ -245,15 +267,17 @@ export interface FileRouteTypes {
     | '/robots.txt'
     | '/sitemap.xml'
     | '/gold-silver/$slug'
+    | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
     | '/gold-silver/'
     | '/history/'
-    | '/history/year'
     | '/markets/'
     | '/sound-money/'
     | '/history/$cluster/$episode'
+    | '/history/vip/$person'
     | '/history/$cluster/'
+    | '/history/vip/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -267,15 +291,17 @@ export interface RootRouteChildren {
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
+  HistoryYearRoute: typeof HistoryYearRoute
   MarketsSlugRoute: typeof MarketsSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
   HistoryIndexRoute: typeof HistoryIndexRoute
-  HistoryYearRoute: typeof HistoryYearRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
   SoundMoneyIndexRoute: typeof SoundMoneyIndexRoute
   HistoryClusterEpisodeRoute: typeof HistoryClusterEpisodeRoute
+  HistoryVipPersonRoute: typeof HistoryVipPersonRoute
   HistoryClusterIndexRoute: typeof HistoryClusterIndexRoute
+  HistoryVipIndexRoute: typeof HistoryVipIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -413,6 +439,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoryClusterEpisodeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/history/vip/': {
+      id: '/history/vip/'
+      path: '/history/vip'
+      fullPath: '/history/vip/'
+      preLoaderRoute: typeof HistoryVipIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history/vip/$person': {
+      id: '/history/vip/$person'
+      path: '/history/vip/$person'
+      fullPath: '/history/vip/$person'
+      preLoaderRoute: typeof HistoryVipPersonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -427,15 +467,17 @@ const rootRouteChildren: RootRouteChildren = {
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
+  HistoryYearRoute: HistoryYearRoute,
   MarketsSlugRoute: MarketsSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
   HistoryIndexRoute: HistoryIndexRoute,
-  HistoryYearRoute: HistoryYearRoute,
   MarketsIndexRoute: MarketsIndexRoute,
   SoundMoneyIndexRoute: SoundMoneyIndexRoute,
   HistoryClusterEpisodeRoute: HistoryClusterEpisodeRoute,
+  HistoryVipPersonRoute: HistoryVipPersonRoute,
   HistoryClusterIndexRoute: HistoryClusterIndexRoute,
+  HistoryVipIndexRoute: HistoryVipIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -4,6 +4,7 @@ import { HistoryTimeline } from "@/components/HistoryTimeline";
 import { SiteShell } from "@/components/SiteShell";
 import { historyHubBody } from "@/lib/content/bodies";
 import { HISTORY_YEARS } from "@/lib/content/history-years";
+import { HISTORY_PEOPLE } from "@/lib/content/history-people";
 import { historyClusters, historyHub, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
@@ -49,6 +50,26 @@ function HistoryHub() {
           ))}
           <Link to="/history/year" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
             All years →
+          </Link>
+        </p>
+
+        <h2 className="mt-16 font-display text-3xl">Notable people</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Financiers, economists, and the politicians who signed the statutes. One page each.
+        </p>
+        <p className="mt-4 flex flex-wrap gap-2">
+          {HISTORY_PEOPLE.map((person) => (
+            <Link
+              key={person.slug}
+              to="/history/vip/$person"
+              params={{ person: person.slug }}
+              className="rounded-full bg-surface px-3 py-1.5 text-sm text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
+            >
+              {person.name}
+            </Link>
+          ))}
+          <Link to="/history/vip" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
+            All people →
           </Link>
         </p>
 

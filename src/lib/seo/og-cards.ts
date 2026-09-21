@@ -1,3 +1,4 @@
+import { getHistoryPerson, HISTORY_VIP_DESCRIPTION } from "../content/history-people.ts";
 import { getHistoryYear } from "../content/history-years.ts";
 import {
   getCluster,
@@ -96,6 +97,29 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: seoTitle(`${year.year}: ${year.title}`),
       description: year.summary,
       kicker: "History · Year",
+    };
+  }
+
+  if (path === "/history/vip") {
+    return {
+      path,
+      cardTitle: "Notable people",
+      title: seoTitle("Notable people"),
+      description: HISTORY_VIP_DESCRIPTION,
+      kicker: pillarKicker("history"),
+    };
+  }
+
+  const personMatch = path.match(/^\/history\/vip\/([^/]+)$/);
+  if (personMatch) {
+    const person = getHistoryPerson(personMatch[1]);
+    if (!person) return null;
+    return {
+      path,
+      cardTitle: person.name,
+      title: seoTitle(person.name),
+      description: person.summary,
+      kicker: "History · People",
     };
   }
 
