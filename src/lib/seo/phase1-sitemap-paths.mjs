@@ -7,35 +7,24 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
  * disclaimers. `/gold-silver` and `/gold-silver/bars-vs-coins` are listed.
  * Plain ESM so OG card scripts and the Grok head injector can share it.
  */
+/** Spot years before the continuous run. Gaps before 1776 stay empty on purpose. */
+export const HISTORY_EARLY_YEARS = [1545, 1609, 1694, 1720];
+
+/** Inclusive. One page every calendar year. Nothing after 1980 until a later pass. */
+export const HISTORY_YEAR_SPAN = [1776, 1980];
+
+export function allHistoryYearNumbers() {
+  const years = [...HISTORY_EARLY_YEARS];
+  for (let year = HISTORY_YEAR_SPAN[0]; year <= HISTORY_YEAR_SPAN[1]; year += 1) years.push(year);
+  return years;
+}
+
+const HISTORY_YEAR_PATHS = allHistoryYearNumbers().map((year) => `/history/${year}`);
+
 export const PHASE1_SITEMAP_PATHS = [
   "/history",
   "/history/year",
-  "/history/1545",
-  "/history/1609",
-  "/history/1694",
-  "/history/1720",
-  "/history/1776",
-  "/history/1790",
-  "/history/1792",
-  "/history/1797",
-  "/history/1821",
-  "/history/1832",
-  "/history/1862",
-  "/history/1873",
-  "/history/1879",
-  "/history/1900",
-  "/history/1907",
-  "/history/1913",
-  "/history/1914",
-  "/history/1923",
-  "/history/1925",
-  "/history/1931",
-  "/history/1933",
-  "/history/1934",
-  "/history/1944",
-  "/history/1971",
-  "/history/1974",
-  "/history/1980",
+  ...HISTORY_YEAR_PATHS,
   "/history/vip",
   "/history/vip/john-law",
   "/history/vip/adam-smith",

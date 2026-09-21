@@ -6,7 +6,7 @@ import { seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
 const DESCRIPTION =
-  "Sound-money years, one page each: a short note and one picture. 1776, 1792, 1914, 1971, and the other dated breaks already on this site.";
+  "One short page for every year from 1776 through 1980, plus a few earlier dates. A note and one picture. No forecast.";
 
 export const Route = createFileRoute("/history/year")({
   head: () => ({
