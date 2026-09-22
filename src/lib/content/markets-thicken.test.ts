@@ -672,7 +672,11 @@ describe("markets page thicken (no new URLs)", () => {
     const poland = body.find((s) => s.heading.startsWith("Poland"));
     const ytd = body.find((s) => s.heading.startsWith("Reported net buyers"));
     const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
-    assert.ok(china && poland && ytd && sellers, "China, Poland, YTD buyers, and YTD sellers must stay");
+    const canada = body.find((s) => s.heading.startsWith("Canada"));
+    assert.ok(
+      china && poland && ytd && sellers && canada,
+      "China, Poland, YTD buyers, YTD sellers, and Canada must stay",
+    );
 
     const table = gdp.table.rows.flat().join("\n");
     const text = [gdp.heading, ...gdp.paragraphs, gdp.table.caption, ...gdp.table.headers, table]
@@ -768,7 +772,11 @@ describe("markets page thicken (no new URLs)", () => {
     const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
     const china = body.find((s) => s.heading.startsWith("China"));
     const poland = body.find((s) => s.heading.startsWith("Poland"));
-    assert.ok(buyers && share && gdp && china && poland, "buyers, FX-share, gold/GDP, China, and Poland must stay");
+    const canada = body.find((s) => s.heading.startsWith("Canada"));
+    assert.ok(
+      buyers && share && gdp && china && poland && canada,
+      "buyers, FX-share, gold/GDP, China, Poland, and Canada must stay",
+    );
 
     const table = sellers.table.rows.flat().join("\n");
     const sellerText = [sellers.heading, ...sellers.paragraphs, sellers.table.caption, ...sellers.table.headers, table]
@@ -833,5 +841,109 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(sitemapSrc, /official-sellers|cb-gold-sellers|turkey-gold|russia-gold/);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /official-sellers|cb-gold-sellers/.test(path)));
+  });
+
+  it("adds a dated Canada Gold: 0 documentary block without a new URL or hindsight", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const canada = body.find((s) => s.heading.startsWith("Canada"));
+    assert.ok(canada, "expected a Canada zero-reserves section on the same spoke");
+    const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
+    const buyers = body.find((s) => s.heading.startsWith("Reported net buyers"));
+    const share = body.find((s) => s.heading.startsWith("Gold as a share"));
+    const gdp = body.find((s) => s.heading.startsWith("Official gold relative to GDP"));
+    const china = body.find((s) => s.heading.startsWith("China"));
+    const poland = body.find((s) => s.heading.startsWith("Poland"));
+    assert.ok(
+      sellers && buyers && share && gdp && china && poland,
+      "sellers, buyers, FX-share, gold/GDP, China, and Poland must stay",
+    );
+
+    const canadaText = [canada.heading, ...canada.paragraphs].join("\n");
+    const page = body
+      .flatMap((s) => [
+        s.heading,
+        s.callout?.label,
+        ...(s.callout?.paragraphs ?? []),
+        ...s.paragraphs,
+        ...(s.list ?? []),
+        s.table?.caption,
+        ...(s.table?.headers ?? []),
+        ...(s.table?.rows.flat() ?? []),
+      ])
+      .filter(Boolean)
+      .join("\n");
+    const hubText = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .join("\n");
+
+    assert.match(canada.heading, /Gold: 0/);
+    assert.match(canada.heading, /official book/);
+    assert.match(canadaText, /Finance Canada/);
+    assert.match(canadaText, /\*\*Gold: 0\*\*/);
+    assert.match(canadaText, /31 July 2026/);
+    assert.match(canadaText, /US\$127,038 million/);
+    assert.match(canadaText, /1,000 tonnes/);
+    assert.match(canadaText, /3\.4 tonnes/);
+    assert.match(canadaText, /21,851/);
+    assert.match(canadaText, /\*\*77\*\* ounces/);
+    assert.match(canadaText, /29 February 2016/);
+    assert.match(canadaText, /41,106/);
+    assert.match(canadaText, /32,860/);
+    assert.match(canadaText, /CBC/);
+    assert.match(
+      canadaText,
+      /https:\/\/www\.canada\.ca\/en\/department-finance\/services\/publications\/monthly-official-international-reserves\/2026\/08\.html/,
+    );
+    assert.match(
+      canadaText,
+      /https:\/\/www\.canada\.ca\/en\/department-finance\/news\/2016\/03\/official-international-reserves\.html/,
+    );
+    assert.match(canadaText, /https:\/\/www\.cbc\.ca\/news\/business\/gold-canada-reserves-1\.3475818/);
+    assert.match(canadaText, /8,133\.5 tonnes/);
+    assert.match(canadaText, /3,349\.5 tonnes/);
+    assert.match(canadaText, /do not say a private reader should follow Ottawa/i);
+    assert.match(canadaText, /do not say Canada was wrong/i);
+    assert.match(canadaText, /not a private-flow instruction/);
+    assert.doesNotMatch(
+      canadaText,
+      /worst trade|should have held|lost billions|buy gold|Kauf|forecast|price target|who to follow|sold at the bottom|ebook|Sound Money funnel/i,
+    );
+
+    assert.match(page, /Reported net official sellers, YTD through July 2026/);
+    assert.match(page, /\*\*85\*\*/);
+    assert.match(page, /\*\*19%\*\*/);
+    assert.match(page, /\*\*26%\*\*/);
+    assert.match(page, /\*\*14\.30%\*\*/);
+    assert.match(page, /2,387/);
+    assert.match(page, /648 tonnes/);
+    assert.match(page, /Not a central bank/);
+    assert.match(page, /printed \*\*Gold: 0\*\*/);
+    assert.match(page, /Poland: a short documentary block/);
+
+    assert.match(hubText, /Canada \*\*Gold: 0\*\* section/);
+    assert.match(hubText, /dated official purchases and sales/);
+
+    const pageMeta = getMarket("central-bank-gold-reserves");
+    assert.ok(pageMeta);
+    assert.match(pageMeta.summary, /Gold: 0/);
+    assert.match(pageMeta.summary, /Canada/);
+    assert.ok(pageMeta.seo.secondary.includes("canada gold reserves"));
+    assert.deepEqual(
+      pageMeta.related.map((r) => r.href),
+      [
+        "/markets",
+        "/markets/official-gold-book-value",
+        "/sound-money/backed-money",
+        "/history/20th-century/bretton-woods-nixon-1971",
+      ],
+    );
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /canada-gold|canada-zero|canada-reserves/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /canada-gold|canada-zero|canada-reserves/.test(path)));
   });
 });

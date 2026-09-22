@@ -1092,7 +1092,7 @@ export const marketPages: Episode[] = [
     slug: "central-bank-gold-reserves",
     title: "How central banks report gold in FX reserves",
     summary:
-      "Share of reserves, official gold relative to GDP, vault preferences, and dated official purchases — including China’s published official stock since 2000, a 2026 year-to-date buyer table, and a short July 2026 seller table. Poland’s recent buying is covered in a short section on that same page (not a separate article).",
+      "Share of reserves, official gold relative to GDP, vault preferences, and dated official purchases — including China’s published official stock since 2000, a 2026 year-to-date buyer table, a short July 2026 seller table, and Finance Canada’s printed Gold: 0 line. Poland’s recent buying and Canada’s zero book are covered in short sections on that same page (not separate articles).",
     status: "ready",
     paragraphs: [
       "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
@@ -1105,7 +1105,13 @@ export const marketPages: Episode[] = [
     ],
     seo: {
       primary: "central bank gold reserves",
-      secondary: ["official gold holdings", "imf gold reserves", "china gold reserves", "poland central bank gold"],
+      secondary: [
+        "official gold holdings",
+        "imf gold reserves",
+        "china gold reserves",
+        "poland central bank gold",
+        "canada gold reserves",
+      ],
       demand: "high",
       difficulty: "mid",
       intent: "markets",
