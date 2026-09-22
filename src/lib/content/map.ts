@@ -1027,15 +1027,15 @@ export const practicePages: Episode[] = [
   {
     slug: "buying-online",
     title: "Buying gold and silver online",
-    summary: "Dealer, payment, shipping, empty box. Watch-fors — not a vendor list.",
+    summary:
+      "Buying metal online is a logistics checklist — dealer identity, payment finality, shipping and insurance, invoice facts — not a dealer ranking and not a purchase tip.",
     status: "ready",
     paragraphs: [
       "Online buying is logistics: identity of the dealer, payment, shipping, and what happens if a parcel never arrives. Neutral watch-fors, not a vendor ranking.",
     ],
     related: [
-      { title: "Storage", href: "/gold-silver/storage" },
-      { title: "Spotting fakes", href: "/gold-silver/spotting-fakes" },
-      { title: "Information vs advice", href: "/sound-money/information-not-advice" },
+      { title: "Gold & Silver in Practice", href: "/gold-silver" },
+      { title: "Storing gold and silver", href: "/gold-silver/storage" },
     ],
     seo: {
       primary: "buying gold online",
