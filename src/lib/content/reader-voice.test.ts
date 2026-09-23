@@ -147,6 +147,24 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     }
   });
 
+  it("keeps the Markets hub and articles free of outline and disclaimer voice", () => {
+    const MARKETS_VOICE =
+      /Four captions that need a page|Four doors, four jobs|This page stays with|does not forecast|if you have just (?:read|looked|seen)|continues the story if|This is not a separate URL|Read those sentences as|Read the (?:table|Canada block) as|a private reader should follow|That is the claim|that is the stop|holds the (?:four )?(?:fact pages|topics)|None of those sentences is a path|Nothing here is a (?:reason|mean)|This page (?:only records|keeps the market quotient|does not invent)|Name the clock/i;
+    assert.doesNotMatch(bodyText(marketsHubBody), MARKETS_VOICE, "markets hub");
+    for (const slug of [
+      "official-gold-book-value",
+      "central-bank-gold-reserves",
+      "gold-silver-ratio",
+      "physical-silver-demand-by-country",
+    ]) {
+      const body = getBody("markets", slug);
+      assert.ok(body, `missing body for markets/${slug}`);
+      assert.doesNotMatch(bodyText(body), MARKETS_VOICE, `markets/${slug}`);
+    }
+    const route = readFileSync(join(root, "routes/markets/index.tsx"), "utf8");
+    assert.doesNotMatch(route, /Where the captions live|not tips, and not sound-money history/);
+  });
+
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
     for (const path of PHASE1_SITEMAP_PATHS) {
       if (path === "/history" || path === "/sound-money" || path === "/gold-silver" || path === "/markets") continue;

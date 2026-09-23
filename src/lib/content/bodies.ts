@@ -2442,7 +2442,7 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "Divide the price of an ounce of gold by the price of an ounce of silver and you get the gold–silver ratio: how many ounces of silver buy one ounce of gold on that day. In September **2026** it stood near **68**. In January **1980** it briefly touched about **17**; in late April **2011**, about **31.5**. The ratio moves because both prices move, and it means exactly what the two prices meant on the day they were taken — no more.",
-      "Three contemporaneous clocks — three different counts — use the same phrase, ounces of silver per ounce of gold, for market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
+      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
     ],
   },
   {
@@ -2727,7 +2727,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Industrial scrap, at **110.1**, is the largest source — a little more than half of the world total. The survey records a slight dip in that line and names lower e-scrap yields, meaning less silver recovered from each tonne of discarded electronics, as the reason factory scrap did not rise with the rest. Jewelry scrap came to **38.2** and silverware scrap to **28.3**; both of those old-metal lines rose. Photographic scrap, a legacy of film, was **16.2**; coin scrap was **4.7**.",
+      "Industrial scrap, at **110.1**, is the largest source — a little more than half of the world total. The survey records a slight dip in that line and names lower e-scrap yields, meaning less silver recovered from each tonne of discarded electronics, as the reason factory scrap did not rise with the rest. Jewelry scrap came to **38.2** and silverware scrap to **28.3**; both of those old-metal lines rose. Photographic scrap, a legacy of film processing and X-ray plates, was **16.2**; coin scrap, mostly old coins melted down, was **4.7**.",
       "Scrap is secondary supply. A jewelry-scrap ounce is metal coming back from old pieces; a jewelry-fabrication ounce is metal going into new ones. An industrial-scrap ounce is recovered from spent products; an industrial-fabrication ounce is consumed in new ones. Scrap runs on a different clock from mining: the scrap clock follows products reaching the end of their lives, while the mine clock on the [gold–silver ratio](/markets/gold-silver-ratio) page follows ore coming out of the ground.",
     ],
   },
