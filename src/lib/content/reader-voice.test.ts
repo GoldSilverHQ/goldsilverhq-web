@@ -155,7 +155,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       "routes/desk.tsx",
       "components/Article.tsx",
       "components/HomeEditorial.tsx",
-      "components/HistoryTimeline.tsx",
+      "components/HistoryYearCards.tsx",
       "components/NotFound.tsx",
     ];
     for (const rel of files) {
