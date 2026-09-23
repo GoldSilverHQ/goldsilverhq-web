@@ -189,7 +189,7 @@ describe("america cluster thicken (no new URLs)", () => {
     assert.match(text, /sixteen to one|16:1/);
     assert.match(text, /Bryan/);
     assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
-    assert.match(text, /\[America & gold\/silver politics\]\(\/history\/america\)/);
+    assert.doesNotMatch(text, /This page|these pages|\bspine\b|\bhinge\b|chapter overview/i);
   });
 
   it("locks Jackson as pre-Fed bank war", () => {
@@ -433,7 +433,7 @@ describe("reader polish: documentary takeaways (no new URLs)", () => {
     const assignats = bodyText(getBody("banks-paper", "assignats")!);
     assert.match(assignats, /\[John Law and the Mississippi Bubble\]\(\/history\/banks-paper\/john-law\)/);
     assert.match(assignats, /\[Bank of England\]\(\/history\/banks-paper\/bank-of-england\)/);
-    assert.match(assignats, /\[banks and paper\]\(\/history\/banks-paper\)/);
+    assert.doesNotMatch(assignats, /Do not merge|chapter keeps those dates apart|Keep the instruments/);
 
     const industry = bodyText(getBody("silver", "monetary-and-industry")!);
     assert.match(industry, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);

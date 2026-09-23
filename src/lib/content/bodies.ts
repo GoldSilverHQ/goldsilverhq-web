@@ -23,7 +23,7 @@ const johnLaw: Section[] = [
     heading: "",
     paragraphs: [
       "On the rue Quincampoix in late **1719**, Paris priced a dream: Mississippi Company shares that multiplied while Banque Royale notes poured into the same crowd. Rentiers, servants, and foreign visitors pressed for subscriptions. Coin still mattered in the till. For a season, paper and equity felt like the same fortune.",
-      "John Law’s System fused a note-issuing bank with a rising colonial trading company under the Regency of Philippe d’Orléans. In **1719–1720** notes and shares inflated together. The bust of **1720** was a paper-and-shares collapse under a court seeking relief from war debt — not France’s later [assignats](/history/banks-paper/assignats), and not “France printed [Weimar](/history/20th-century/weimar-1923).”",
+      "John Law’s System fused a note-issuing bank with a rising colonial trading company under the Regency of Philippe d’Orléans. In **1719–1720** notes and shares inflated together. The bust of **1720** was a paper-and-shares collapse under a court seeking relief from war debt.",
     ],
   },
   {
@@ -39,7 +39,7 @@ const johnLaw: Section[] = [
     paragraphs: [
       "In **1716** Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
       "Alongside the bank stood the company later known as the Mississippi Company — first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
-      "Keep the instruments distinct. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
+      "The two instruments were different. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
     ],
   },
   {
@@ -68,14 +68,14 @@ const johnLaw: Section[] = [
       "**1718–19:** Banque Royale; note issue and share demand reinforce each other.",
       "**Late 1719–early 1720:** Share mania peaks on the rue Quincampoix.",
       "**1720:** Collapse — share crash, strained convertibility, flight into metal; Law leaves France.",
-      "**1790s (later chapter):** [Assignats](/history/banks-paper/assignats) — revolutionary land paper, not this System.",
+      "**1729:** Law dies in Venice.",
     ],
   },
   {
-    heading: "Paper and shares, not land and not Weimar",
+    heading: "What the Regency left behind",
     paragraphs: [
-      "Do not merge this episode with the French [assignats](/history/banks-paper/assignats) of the **1790s**. Assignats were revolutionary paper tied to confiscated church and émigré lands, issued decades later under a different regime and war finance. Do not merge it with Germany’s **1923** hyperinflation either. [Weimar](/history/20th-century/weimar-1923) was a twentieth-century collapse of a national paper mark — one cautionary parallel among many, not the same event or the same century.",
-      "John Law’s **1720** leaves a narrower documentary lesson. Fusing a note-issuing bank with a rising equity story can inflate both until metal drains and confidence snaps. The Mississippi Bubble was paper-and-shares under Regency debt politics. It was not Weimar, and it was not the assignats. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
+      "Law’s **1720** leaves a narrow lesson. Fusing a note-issuing bank with a rising equity story can inflate both until metal drains and confidence snaps. The Mississippi Bubble was paper and shares under Regency debt politics, and it broke in a single year.",
+      "France remembered. For most of the century the word *banque* carried the smell of the rue Quincampoix. When the Revolution needed money seventy years later, it issued [assignats](/history/banks-paper/assignats) tied to confiscated church and émigré land rather than to a trading company — a different paper, under a different regime, that failed on its own terms.",
     ],
   },
 ];
@@ -949,7 +949,7 @@ const warehouses: Section[] = [
     heading: "",
     paragraphs: [
       "In **1640**, Charles I seized merchants’ bullion stored in the Tower mint. The Crown needed cash for war. Depositors who thought a royal warehouse was safe learned that a sovereign can close a window. After the Restoration, London’s custom shifted toward goldsmiths — private keepers whose running-cash notes could be endorsed onward while the metal stayed put.",
-      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking, on this site, starts when that paper pays a debt without the metal leaving the vault. Later articles on [banks and paper](/history/banks-paper) — Amsterdam, the Bank of England, [John Law](/history/banks-paper/john-law), [assignats](/history/banks-paper/assignats) — depend on that handoff. They are not this article, and they are not one another.",
+      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking begins when that paper pays a debt without the metal leaving the vault. A city giro, a war bank’s notes, a regency’s shares, a revolution’s land paper — each of those later machines grew from that handoff.",
     ],
   },
   {
@@ -965,25 +965,25 @@ const warehouses: Section[] = [
     heading: "Private vaults, civic tables, goldsmiths",
     paragraphs: [
       "Late-medieval and early-modern Europe already knew the warehouse model in Italian cities. Money-changers and deposit bankers in Venice, Genoa, and Florence took in coin, kept accounts, and transferred balances for merchants who did not want to settle in bags. Private houses failed when loans and the vault got tangled. Cities then reached for a public table — a bank whose books the bill market had to use.",
-      "That civic answer is older than London goldsmith notes. Barcelona’s Taula de Canvi dates from **1401**. Venice opened the Banco della Piazza di Rialto in **1587** after private-bank failures. Amsterdam’s Wisselbank, in **1609**, is this chapter’s model public deposit bank. Public tables and private goldsmiths are parallel answers to the same custody problem, not a single national ladder.",
-      "London’s path ran through the mint and then through goldsmiths. In **1640** Charles I seized merchants’ bullion stored in the Tower mint. The Crown needed cash for war. Depositors learned that a royal warehouse was not a safe warehouse. After the Restoration, goldsmiths took the custom. They issued running-cash notes: receipts that could be endorsed onward.",
+      "That civic answer is older than London goldsmith notes. Barcelona’s Taula de Canvi dates from **1401**. Venice opened the Banco della Piazza di Rialto in **1587** after private-bank failures. Amsterdam’s Wisselbank, in **1609**, became the model public deposit bank. Public tables and private goldsmiths are parallel answers to the same custody problem, not a single national ladder.",
+      "London’s path ran through the mint and then through goldsmiths. After the Tower seizure of **1640**, merchants no longer treated a royal warehouse as a safe one. After the Restoration, goldsmiths took the custom. They issued running-cash notes: receipts that could be endorsed onward.",
       "Those notes were still, in form, claims on metal left with a private keeper. In practice the goldsmiths also lent. The float — the metal that stayed while the paper moved — became a loan book. In **1672** the Stop of the Exchequer suspended payments on much of that royal debt. Goldsmith-bankers who had treated the Exchequer as a safe asset discovered that a sovereign borrower can close a window too.",
     ],
   },
   {
     heading: "When the receipt starts to move",
     paragraphs: [
-      "The documentary hinge is circulation without movement of the metal. Once a third party accepts the ticket in payment, the issuer has issued money in use, even if the law still calls it a deposit receipt. The vault need not empty. The paper does the paying.",
+      "What changes everything is circulation without movement of the metal. Once a third party accepts the ticket in payment, the issuer has issued money in use, even if the law still calls it a deposit receipt. The vault need not empty. The paper does the paying.",
       "As long as redemption is ordinary, the ticket remains a claim. People hold it because it is lighter than coin, not because they have given up on coin. When issue outruns what the window can pay, the same paper becomes a bet on the keeper. That is the quiet shift from warehouse to bank. It does not require a theory of fiat. It requires a queue the till cannot meet.",
-      "Keep the instruments distinct. A **warehouse receipt** is a claim on identified metal. A **bank note** is a promise to pay, often against a mixed reserve and a loan book. A **public-bank balance** is a book entry the city or the state has made hard to refuse for large settlement. The first can become the second without a revolution. The second becomes the third when settlement is pulled onto a public ledger.",
+      "Three instruments sit close together here. A **warehouse receipt** is a claim on identified metal. A **bank note** is a promise to pay, often against a mixed reserve and a loan book. A **public-bank balance** is a book entry the city or the state has made hard to refuse for large settlement. The first can become the second without a revolution. The second becomes the third when settlement is pulled onto a public ledger.",
     ],
   },
   {
     heading: "Why a public bank",
     paragraphs: [
       "Private keepers solved a storage problem and then a payment problem. They did not, by themselves, give a whole market one book everyone had to use. Worn and foreign coin made large bills of exchange a fight over which pile counted. A public deposit bank could take in mixed specie, credit a standard bank money, and force wholesale payments through its books.",
-      "That is the handoff this chapter is built on. The next article is the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), the Wisselbank of **1609**. For a long time its reputation was that it did not lend — a florin banco as a claim on metal, not on a loan. Later concealed lending, made public in the **1780s–1790s**, belongs on that page. It is not 1720, and it is not this hinge.",
-      "England’s later public machine was different again. The Bank of England, chartered in **1694**, was born as war finance with a note issue attached, not as a city giro table. Restriction in **1797** and resumption in the **1820s** wait on their own stop.",
+      "Amsterdam built that table. The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), the Wisselbank of **1609**, long had a reputation for not lending — a florin banco as a claim on metal, not on a loan. Concealed lending, made public in the **1780s–1790s**, eventually broke that reputation.",
+      "England’s later public machine was different again. The Bank of England, chartered in **1694**, was born as war finance with a note issue attached, not as a city giro table. It would stop paying gold for its notes in **1797** and resume only in the **1820s**.",
     ],
   },
   {
@@ -992,7 +992,7 @@ const warehouses: Section[] = [
     list: [
       "**1401.** Barcelona’s Taula de Canvi: an early civic deposit table.",
       "**1587.** Venice’s Banco della Piazza di Rialto, after private-bank failures.",
-      "**1609.** Bank of Amsterdam: public deposit money for the bill market — the next page in this chapter.",
+      "**1609.** Bank of Amsterdam: public deposit money for the bill market.",
       "**1640.** Charles I seizes mint deposits in the Tower; London custom shifts toward goldsmiths.",
       "**Mid-seventeenth century.** Goldsmith running-cash notes circulate by endorsement; the receipt pays.",
       "**1672.** Stop of the Exchequer; private paper that funded the Crown meets a closed sovereign window.",
@@ -1003,8 +1003,8 @@ const warehouses: Section[] = [
     heading: "Why the handoff matters",
     paragraphs: [
       "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. The warehouse ticket made those later machines possible because the public had already learned to pay with paper claims.",
-      "Keep the disasters on their own dates. John Law’s Mississippi System is **1720**: notes and shares under a French regency. Assignats are **1789–1796**: revolutionary paper with a land story. Germany’s mark in **1923** is a twentieth-century collapse after war, reparations, and extreme monetization. Similar mechanisms can teach; merging dates erases what changed. Weimar belongs in the twentieth-century chapter, not here.",
-      "This article’s first step is the [banks and paper](/history/banks-paper) path: from private claim-check to the door of a public bank. Read the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) next. Then the Bank of England, then Law, then the assignats. Law’s **1720**, the assignats of the **1790s**, and Germany’s **1923** mark share a mechanism under different regimes — keep the dates.",
+      "Each of those failures kept its own date. [John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The assignats ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization. The mechanisms rhyme. The regimes, the promises, and the centuries do not.",
+      "All of them rested on the habit the goldsmiths taught London: a slip of paper could settle a debt while the metal stayed where it was. The ticket stayed good exactly as long as the window paid.",
     ],
   },
 ];
@@ -1014,23 +1014,23 @@ const amsterdam: Section[] = [
     heading: "",
     paragraphs: [
       "On the Dam in the early seventeenth century, a bill drawn on Amsterdam could still turn into an argument over metal: foreign dollars, clipped pieces, worn domestic coin — which pile counted as payment? In **1609** the city opened a public answer. Mixed specie went into the Wisselbank. A standard bank guilder came out on the books. Large settlement moved by **giro** — a debit and a credit — while the vault stayed shut.",
-      "That civic ledger sits between a warehouse receipt and later note-issuing banks. It follows [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks). The **agio** — the premium of bank money over street coin — is how the market priced the unit while the reputation held. Concealed lending is how the reputation later broke. It is not yet a note-issuing war bank, and it is not a modern central bank.",
+      "That civic ledger sat between a [warehouse receipt](/history/banks-paper/warehouses-to-public-banks) and the note-issuing banks that came later. The **agio** — the premium of bank money over street coin — is how the market priced the unit while the reputation held. Concealed lending is how the reputation later broke.",
     ],
   },
   {
     heading: "Why a civic ledger",
     paragraphs: [
       "Amsterdam was a bill-of-exchange market. Large debts among merchants were written on the city. Payment still meant assembling a pile of coin and haggling over quality. Private cashiers already kept money and made transfers. Failures and quality fights still reached the wholesale market.",
-      "The city answered with a public deposit bank. An ordinance of **31 January 1609** created the Amsterdamsche Wisselbank. Mixed specie went in. A standard credit came out. Large bills drawn on Amsterdam were to be settled through its books. The point was not to invent a national paper currency. It was to give the bill market one ledger everyone had to use — the public-bank job named on the [warehouses](/history/banks-paper/warehouses-to-public-banks) page.",
+      "The city answered with a public deposit bank. An ordinance of **31 January 1609** created the Amsterdamsche Wisselbank. Mixed specie went in. A standard credit came out. Large bills drawn on Amsterdam were to be settled through its books. The point was not to invent a national paper currency. It was to give the bill market one ledger everyone had to use.",
     ],
   },
   {
     heading: "How giro money settles",
     paragraphs: [
       "Giro is settlement by transfer of a balance. The depositor does not collect coin and cart it across the Dam. He orders the bank to debit his account and credit another. The metal stays. The books move. For a bill falling due, that is payment.",
-      "Keep the instruments distinct. A **warehouse receipt** is a claim on identified metal. A **giro balance** is a book credit at a public table, transferable to another account-holder. A **bank note** is a circulating promise to pay, typically issued by a later corporation with a loan book. Amsterdam’s ordinary machine is the second. It does not need a printed note walking the street. It needs a merchant with an account, or a cashier who has one, and a rule that large bills clear on those books.",
+      "The instruments were different things. A **warehouse receipt** is a claim on identified metal. A **giro balance** is a book credit at a public table, transferable to another account-holder. A **bank note** is a circulating promise to pay, typically issued by a later corporation with a loan book. Amsterdam’s ordinary machine is the second. It does not need a printed note walking the street. It needs a merchant with an account, or a cashier who has one, and a rule that large bills clear on those books.",
       "Convertibility still mattered. Coin could be withdrawn, subject to fees and to the bank’s rules. Fees made leaving the metal in, and paying on the books, the cheaper habit. As long as the window was ordinary, the florin banco was a convenient claim on a civic vault.",
-      "From **1683** the bank issued receipts for coin left on deposit. The receipt was a claim on those coins. The bank balance was a transferable credit in banco. To take the original metal out, a holder needed the receipt. To pay a bill, he needed only the balance. The two claims could be sold apart. That split made bank money a settlement unit even when a given bag of coin stayed put. It is still not a Bank of England note. It is a more complete giro.",
+      "From **1683** the bank issued receipts for coin left on deposit. The receipt was a claim on those coins. The bank balance was a transferable credit in banco. To take the original metal out, a holder needed the receipt. To pay a bill, he needed only the balance. The two claims could be sold apart. That split made bank money a settlement unit even when a given bag of coin stayed put. It was still not a circulating note. It was a more complete giro.",
     ],
   },
   {
@@ -1038,7 +1038,7 @@ const amsterdam: Section[] = [
     paragraphs: [
       "Bank money and current money were not the same pile. Current coin in daily circulation was worn, mixed, and often light. Banco was the credit on the Wisselbank’s books, written as a full-weight guilder. Because banco was better money for large settlement, it usually stood at a premium — the **agio** — over current coin. The premium often sat near **four to five percent** while the reputation held. The agio was quoted. Merchants treated it as information about the unit.",
       "A florin banco, on the advertised model, was a claim on metal in the vault, not on a loan. That is why Adam Smith could still describe the bank, in **1776**, as a place that took in coin and did not lend. The later books would show the reputation running ahead of the vault.",
-      "None of this made Amsterdam a modern central bank. There was no national note issue. There was no statutory duty to backstop a private banking field. The Wisselbank was a municipal giro table for the bill market. It could be leaned on by the city that owned it. That fiscal temptation is the next section. It is not **1694** London.",
+      "None of this made Amsterdam a modern central bank. There was no national note issue. There was no statutory duty to backstop a private banking field. The Wisselbank was a municipal giro table for the bill market. It could be leaned on by the city that owned it, and in time it was.",
     ],
   },
   {
@@ -1047,7 +1047,7 @@ const amsterdam: Section[] = [
       "A public bank can be a warehouse with better accounting. It can also become a lender in secret. Amsterdam did both, in sequence.",
       "From the late seventeenth century, and more clearly in the eighteenth, the bank made advances to the city of Amsterdam and to the Dutch East India Company that were not advertised as the old warehouse model. Overdrafts against the vault are still loans. They were not posted as the florin banco’s public story. For decades the agio and the reputation could live together because the market still treated banco as metal-quality money.",
       "War strained the concealment. In the Fourth Anglo-Dutch War, **1780–1784**, lending to the Company and the city rose. The coin stock no longer matched the deposit book. When that lending became public knowledge in the **1780s–1790s**, the agio collapsed. Bank money went from a premium to a discount. The institution never recovered its old role as the settlement unit of the entrepôt.",
-      "French occupation in **1795** found a bank that had already lost the trust that made giro as good as a full vault. Liquidation was completed in **1819**. That is a Dutch public-bank story: reputation, concealed fiscal use of the metal, then a quoted premium that died when the books were known. It is not **1720**. It is not the assignats.",
+      "French occupation in **1795** found a bank that had already lost the trust that made giro as good as a full vault. Liquidation was completed in **1819**. Reputation, concealed fiscal use of the metal, then a quoted premium that died when the books were known: the Wisselbank’s end was its own.",
     ],
   },
   {
@@ -1067,8 +1067,8 @@ const amsterdam: Section[] = [
     heading: "One book the market had to use",
     paragraphs: [
       "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Later machines in this chapter do not copy Amsterdam. They use the habit it taught: book or paper money as settlement, with metal in the background until it is not.",
-      "The next dated article is the [Bank of England](/history/banks-paper/bank-of-england): a **1694** war-finance charter with a note issue attached, not a city giro table. Law’s Mississippi System is **1720**. Assignats are **1789–1796**. Germany’s mark in **1923** is a later parallel in another chapter. Similar mechanisms can teach; merging dates erases which claim failed.",
-      "This page is Amsterdam’s civic ledger only — after [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks), before London, Law, and the [assignats](/history/banks-paper/assignats). It is not Law’s **1720**, not the **1790s** land paper, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
+      "London built a different machine. The [Bank of England](/history/banks-paper/bank-of-england), chartered in **1694**, was war finance with a note issue attached, not a city giro table. It was built for a crown’s borrowing, not for a city’s bill market.",
+      "For most of two centuries the florin banco was quoted above the coin it claimed. When the city’s loans became known, the premium went to a discount, and the table that had settled the bill market of Europe never recovered its place.",
     ],
   },
 ];
@@ -1077,16 +1077,16 @@ const england: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In **February 1797**, the Bank of England stopped paying gold for its notes. An Order in Council closed the window; the Restriction Act made the suspension statute. The notes stayed in London’s tills. The pound kept its name. Holders could no longer test that name in coin at Threadneedle Street. Gold went to a premium against paper. That wartime stop is England’s own cycle — not Amsterdam’s giro table, not Law’s **1720**, and not the assignats.",
-      "The machine that could close a window had been built for war a century earlier. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend about **£1.2 million** to the Crown and to issue notes. It follows the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) on the banks-and-paper path: mixed coin and giro settlement there; here, a war loan with circulating paper attached.",
+      "In **February 1797**, the Bank of England stopped paying gold for its notes. An Order in Council closed the window; the Restriction Act made the suspension statute. The notes stayed in London’s tills. The pound kept its name. Holders could no longer test that name in coin at Threadneedle Street. Gold went to a premium against paper. It would be more than twenty years before the window opened again.",
+      "The machine that could close a window had been built for war a century earlier. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend about **£1.2 million** to the Crown and to issue notes. Where the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had been a city ledger for mixed coin, London’s bank began as a war loan with circulating paper attached.",
     ],
   },
   {
     heading: "Not a city giro table",
     paragraphs: [
-      "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Concealed lending, and the later collapse of the agio, belong on that page.",
+      "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Its concealed lending, and the collapse of the agio, came much later.",
       "London in the 1690s had a different problem. William III was at war with Louis XIV. The Crown needed a large loan at once. Goldsmith running-cash notes already circulated; the Stop of the Exchequer in **1672** had shown that a sovereign can close a window. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass.",
-      "Keep the instruments distinct. A **giro balance** is a book credit at a public table. A **goldsmith note** is a private claim on metal left with a keeper. A **Bank of England note** is a circulating promise to pay, issued by a chartered corporation that has already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine is war finance with that habit attached.",
+      "The paper came in kinds. A **giro balance** is a book credit at a public table. A **goldsmith note** is a private claim on metal left with a keeper. A **Bank of England note** is a circulating promise to pay, issued by a chartered corporation that has already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine is war finance with that habit attached.",
     ],
   },
   {
@@ -1110,14 +1110,14 @@ const england: Section[] = [
     paragraphs: [
       "War with revolutionary France strained the gold stock. Coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes. The Bank Restriction Act of **1797** made that suspension statute. The notes stayed in circulation. The window did not.",
       "Restriction is a wartime English fact. The pound kept its name. The public could no longer test the name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
-      "Do not merge this statute with John Law’s **1720** System, or with the assignats of the **1790s**. Restriction is an English bank closing the gold window while its notes remain everyday money. The dates sit near each other. The machines do not.",
+      "Restriction was an English bank closing the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
     ],
   },
   {
     heading: "Resumption in the 1820s",
     paragraphs: [
-      "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**. That is the resumption these pages mean when they say the **1820s**.",
-      "The cycle is England’s own: suspend for war, keep the notes in use, resume later at the old metal unit. The shared lesson — a claim treated as money can lose its metal stop — is not identity of the events. This cycle is not **1720**, not the assignats, and not **1923**.",
+      "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**, two years ahead of the Act’s final date.",
+      "The cycle was England’s own: suspend for war, keep the notes in use, resume later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
       "Resumption did not make the Bank a warehouse. The loan book and the note issue remained. What returned was the ordinary test at the window.",
     ],
   },
@@ -1138,8 +1138,7 @@ const england: Section[] = [
     heading: "War finance with a note attached",
     paragraphs: [
       "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. Later machines in this chapter do not copy London. They use the habit it taught: a great state’s daily money can be a bank’s paper.",
-      "Keep the disasters on their own dates. The next dated article is [John Law and the Mississippi Bubble](/history/banks-paper/john-law): a **1720** note-and-share System, not an English restriction. Assignats are **1789–1796**. Germany’s mark in **1923** is a later parallel in another chapter.",
-      "This page is London’s war-finance charter only — after the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), before Law and the [assignats](/history/banks-paper/assignats). It is not Law’s **1720**, not the **1790s** land paper, and not Germany’s **1923** mark. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
+      "France tried two other answers in the same century. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**. The revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
     ],
   },
 ];
@@ -1149,14 +1148,14 @@ const assignats: Section[] = [
     heading: "",
     paragraphs: [
       "By **1795**, shops in revolutionary France quoted two worlds: a paper price that moved by the week, and a coin price people preferred. Assignats — notes first issued in **1789–90**, supposedly retired by sales of seized church and émigré land — still filled drawers. They no longer filled the role of money. The Directory was already returning toward metal.",
-      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. This article follows [John Law and the Mississippi Bubble](/history/banks-paper/john-law): Law is **1720** and a royal bank-plus-company. Assignats are a later fiscal instrument with a land story. They are not the same event. They are not England’s Restriction. They are not Weimar.",
+      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. Seventy years after [John Law and the Mississippi Bubble](/history/banks-paper/john-law), France was again paying its way in paper — this time without a bank, and with land instead of a trading company as the advertised backing.",
     ],
   },
   {
     heading: "What an assignat was",
     paragraphs: [
       "The National Assembly inherited a broken treasury. In **November 1789** it placed church property at the disposal of the nation. That stock — later enlarged by émigré estates — became the biens nationaux. The first assignats, decreed in **December 1789**, were large, interest-bearing paper: more a state claim to be paid from land sales than a daily note.",
-      "Keep the instruments distinct. A **warehouse receipt** is a claim on identified metal at a window. A **Bank of England note** is a circulating promise to pay coin, subject to the Bank’s rules. A **Law note** was a bank promise fused with a rising company share. An **assignat** was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
+      "Set beside the other paper of the century, the difference is plain. A **warehouse receipt** is a claim on identified metal at a window. A **Bank of England note** is a circulating promise to pay coin, subject to the Bank’s rules. A **Law note** was a bank promise fused with a rising company share. An **assignat** was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
       "The land story was the political sale. Metal was scarce in the till. Land was visible. If the paper was a claim on that land, the argument ran, it could not become worthless. Land can be real and still fail as a stop if issue is not retired and no window pays a fixed thing.",
     ],
   },
@@ -1202,9 +1201,9 @@ const assignats: Section[] = [
     heading: "Land on the advertisement, press in the till",
     paragraphs: [
       "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
-      "Do not merge this episode with [John Law](/history/banks-paper/john-law). Law’s System fused a note-issuing bank with a colonial trading company under the Regency. Notes and Mississippi shares inflated together and broke in **1720**. Assignats have no Banque Royale and no rue Quincampoix. They are revolutionary state paper with a land story, issued decades later under a different regime and a different war.",
-      "Do not merge it with the [Bank of England](/history/banks-paper/bank-of-england) Restriction either. In **1797** the Bank stopped paying gold for its notes. The notes stayed everyday English money. Resumption in the **1820s** brought the window back. Restriction is a suspend-and-resume cycle. Assignats are a paper that died. The dates sit near each other because the same wars strained both treasuries. The machines do not.",
-      "Do not merge it with Germany’s **1923** hyperinflation. [Weimar](/history/20th-century/weimar-1923) was a twentieth-century collapse of a national paper mark — a later parallel, not the same event or the same century. The prior French episode is Law. Assignats are revolutionary land paper only. The [banks and paper](/history/banks-paper) chapter keeps those dates apart.",
+      "Law’s System had fused a note-issuing bank with a colonial trading company under the Regency; notes and Mississippi shares inflated together and broke in **1720**. The assignats had no Banque Royale and no rue Quincampoix. They were revolutionary state paper with a land story, issued under a different regime and for a different war.",
+      "Across the Channel, the [Bank of England](/history/banks-paper/bank-of-england) stopped paying gold for its notes in **1797**. Those notes stayed everyday English money, and resumption in the **1820s** brought the window back. The same wars strained both treasuries. England suspended and resumed. France’s paper died.",
+      "When Germany’s mark collapsed in [1923](/history/20th-century/weimar-1923), commentators reached back for the assignats. The parallel holds in mechanism — issue that outruns any real limit — and in little else: the century, the regime, and the promise printed on the paper were all different.",
     ],
   },
 ];
@@ -1507,13 +1506,13 @@ const earlyUs: Section[] = [
     heading: "",
     paragraphs: [
       "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
-      "This page is the opening statute of the America chapter — not a romance of founding fathers, and not a pitch to hold coin. It names the mint ratio, the Spanish silver that shaped the dollar, and the 1834 correction. The later silver fight of [1873](/history/america/crime-of-1873) and the gold statute of [1900](/history/america/road-back-gold) sit downstream.",
+      "The statute did not invent American money. It named a unit for a republic that already paid in Spanish dollars, wrote gold beside that silver at a fixed legal price, and left the world market to decide what actually circulated. Within a dozen years the Mint had stopped striking its two headline coins. Forty-two years later Congress moved the ratio.",
     ],
   },
   {
     heading: "What the Coinage Act of 1792 did",
     paragraphs: [
-      "Congress established a Mint and defined the dollar in both gold and silver. A silver dollar was to contain **371.25 grains** of pure silver. Gold coins were set so that fifteen ounces of pure silver equaled one ounce of pure gold at the Mint. That **15:1** ratio was the legal bridge between the two metals.",
+      "The Coinage Act of **1792** established a Mint, housed in Philadelphia under its first director, David Rittenhouse, and defined the dollar in both gold and silver. A silver dollar was to contain **371.25 grains** of pure silver. Gold coins were set so that fifteen ounces of pure silver equaled one ounce of pure gold at the Mint. That **15:1** ratio was the legal bridge between the two metals.",
       "The Act also named smaller silver coins and gold eagles, half-eagles, and quarter-eagles. Copper cents and half-cents covered small change. The design was bimetallic in law: either metal could settle a dollar debt at the posted weights. The statute did not invent money. It named a unit and a ratio for a republic that already traded in Spanish dollars and foreign coin.",
       "Hamilton’s Report on the Establishment of a Mint (1791) had argued for a bimetallic dollar and for a ratio close to market practice. The 1792 Act is the legislative result. Later politics would treat “bimetallism” as a slogan. In 1792 it was a mint board: two metals, one legal unit, a fixed conversion.",
     ],
@@ -1523,23 +1522,24 @@ const earlyUs: Section[] = [
     paragraphs: [
       "The early United States did not invent its silver weight from blank paper. The Spanish eight-real piece — the [piece of eight](/history/silver/piece-of-eight) — had long been the common dollar of Atlantic trade. American contracts and statutes often meant that coin when they said “dollar.” The 1792 silver weight sat close to that familiar piece.",
       "Foreign coin remained legal tender for years. The Mint was slow to supply enough domestic pieces. Circulation was a mix of Spanish and other foreign silver, scarce gold, and bank notes of uneven quality. The statute named an American unit. Daily payment still used what was in the bag.",
-      "That continuity matters for these pages. Potosí silver and Spanish minting had already made a global silver coin. The United States adopted a dollar that traders already understood, then wrote gold beside it at a fixed ratio. [Bimetallism](/history/silver/bimetallism) carries the mechanics of two metals under one law. This page carries the American opening.",
+      "Potosí silver and Spanish minting had already made a global silver coin. The United States adopted a dollar that traders already understood, then wrote gold beside it at a fixed ratio — the [bimetallism](/history/silver/bimetallism) that American politics would fight over for the rest of the century.",
     ],
   },
   {
     heading: "Mint ratio versus market ratio",
     paragraphs: [
       "A mint ratio is a legal price: how many ounces of silver equal one ounce of gold at the Mint. A market ratio is what traders actually pay in London, Amsterdam, or Paris. When the two drift, arbitrage follows. The metal that is cheaper at the Mint relative to the world is brought in for coinage. The metal that is dearer at the Mint is melted, exported, or hoarded.",
-      "That is Gresham’s pattern in mint dress: the legally overvalued metal stays in circulation; the undervalued metal leaves. The statute does not defeat the scale. [Bimetallism](/history/silver/bimetallism) is the general claim. Early U.S. coinage is the American instance.",
+      "That is Gresham’s pattern in mint dress: the legally overvalued metal stays in circulation; the undervalued metal leaves. A preamble cannot outvote the price of silver in London.",
       "Through the early nineteenth century, silver often looked cheap at 15:1 relative to European gold–silver prices. Gold tended to leave. The republic’s circulating coin leaned silver. The legal bridge still said both metals. The till said otherwise.",
+      "The Mint felt the arbitrage at once. New, full-weight American silver dollars were shipped to the West Indies and swapped for worn Spanish pieces, which came back to be recoined. Gold eagles were worth more as metal abroad than as coin at home, and they were melted or exported. By **1804** the Mint had stopped striking both the silver dollar and the eagle. Coining the headline pieces had become a subsidy to the traders who carried them away.",
     ],
   },
   {
     heading: "The 1834 correction",
     paragraphs: [
-      "In **1834** Congress changed the gold content of the eagle so that the mint ratio moved toward roughly **16:1**. The intent was gold-friendlier: to bring gold back into circulation by making an ounce of gold buy more silver at the Mint than before.",
-      "After 1834, gold coins became more common in domestic use. Silver dollars and smaller silver still mattered, but the legal tilt had shifted. The arithmetic is the same as 1792 — a fixed ratio meeting a moving market — only the numbers changed. The later omission of the standard silver dollar in [1873](/history/america/crime-of-1873) sits on this path: once the system leaned gold, dropping free coinage of the silver dollar was easier to frame as clarification.",
-      "Do not read 1834 as the end of silver politics. Subsidiary silver and later “free silver” campaigns still filled the century. Read it as a ratio change that showed the Mint could rewrite the bridge when circulation failed the preamble.",
+      "In **1834** Congress cut the pure gold in the ten-dollar eagle from **247.5** grains to **232** and left the silver dollar alone. The mint ratio moved to roughly **16:1**. The intent was gold-friendlier: to bring gold back into circulation by making an ounce of gold buy more silver at the Mint than before.",
+      "After 1834, gold coins became more common in domestic use. Silver dollars and smaller silver still mattered, but the legal tilt had shifted. The arithmetic was the same as in 1792 — a fixed ratio meeting a moving market — only the numbers changed. When Congress left the standard silver dollar off the coin list in [1873](/history/america/crime-of-1873), a system that already leaned gold made the omission easy to frame as clarification.",
+      "1834 did not end silver politics. Subsidiary silver and later “free silver” campaigns still filled the century. What it showed was that Congress could rewrite the bridge when circulation failed the preamble.",
     ],
   },
   {
@@ -1549,15 +1549,16 @@ const earlyUs: Section[] = [
       "**1791:** Hamilton’s mint report argues for a bimetallic dollar and a practical gold–silver ratio.",
       "**2 April 1792:** Coinage Act; Mint established; silver dollar at 371.25 grains pure; gold at 15:1.",
       "**1790s–1820s:** Foreign silver (especially Spanish dollars) remains central to circulation; gold often scarce at 15:1.",
-      "**1834:** Gold content of the eagle adjusted; mint ratio moves toward ~16:1; gold returns more readily to the till.",
-      "**Later in this chapter:** Jackson’s bank war, greenbacks, the Coinage Act of 1873, resumption, Gold Standard Act 1900.",
+      "**1804:** Mint stops striking silver dollars and gold eagles as both leave the country.",
+      "**1834:** Pure gold in the eagle cut from 247.5 to 232 grains; mint ratio moves to ~16:1; gold returns more readily to the till.",
+      "**1873:** Coinage Act drops the standard silver dollar from free coinage.",
     ],
   },
   {
-    heading: "The statute, not a pitch",
+    heading: "The bridge and the till",
     paragraphs: [
-      "This page stays with the Coinage Act of **1792**, the Spanish dollar habit behind it, and the **1834** ratio correction — documentary mint arithmetic, not a collector guide and not a price target for either metal. The market decided which metal stayed; the statute only named the bridge.",
-      "Next in this chapter: [Jackson and the Bank](/history/america/jackson-and-the-bank). The silver question’s loud American event is the [Crime of 1873](/history/america/crime-of-1873). For the coin that shaped the dollar: [piece of eight](/history/silver/piece-of-eight). The America overview sits under [America & gold/silver politics](/history/america).",
+      "Congress could name the dollar in two metals and post a ratio between them. It could not make merchants in Havana or London honour that ratio. In 1792 the law said gold and silver. For forty years the till said Spanish silver, and gold went abroad.",
+      "The dollar’s weight came from the Spanish piece that had crossed the Atlantic long before the republic. The ratio came from Hamilton’s arithmetic. What circulated was decided by the gap between the two, and by 1834 Congress had learned to move the ratio rather than argue with the market.",
     ],
   },
 ];
@@ -1567,7 +1568,7 @@ const jackson: Section[] = [
     heading: "",
     paragraphs: [
       "In **1832**, Congress sent Andrew Jackson a bill to recharter the Second Bank of the United States years before the charter expired. He vetoed it. The veto message attacked the Bank as unconstitutional privilege and foreign-tinged power. The presidential campaign that autumn made the Bank the issue. Jackson won. The federal center would not be renewed on that bill.",
-      "What followed was monetary politics in sequence: federal deposits moved to state “pet” banks, the Specie Circular of **1836** required gold and silver for public land, and the Panic of **1837** hit American banks and commerce. This is a documentary account of charter, veto, deposits, specie rule, and panic — not a sermon for or against central banks, and not the [Panic of 1907](/history/20th-century/panic-1907-fed). The Federal Reserve statute is **1913**. Jackson’s fight is an earlier American argument over who holds the government’s money and who issues the country’s paper.",
+      "What followed came in sequence: federal deposits moved to state “pet” banks, the Specie Circular of **1836** required gold and silver for public land, and the Panic of **1837** hit American banks and commerce. The quarrel was over who would hold the government’s money and who would issue the country’s paper. The United States would not have a federal central bank again until **1913**.",
     ],
   },
   {
@@ -1581,25 +1582,26 @@ const jackson: Section[] = [
   {
     heading: "The 1832 veto and the election",
     paragraphs: [
-      "Congress passed a recharter bill in **1832**, well before the **1836** expiry. Jackson’s veto message was politics as much as jurisprudence. It made the Bank the issue of the **1832** presidential campaign.",
+      "Congress passed a recharter bill in **1832**, well before the **1836** expiry. Biddle and his allies in Congress, Henry Clay among them, chose the timing to force the question before the election. Jackson’s veto message of **10 July 1832** was politics as much as jurisprudence. It made the Bank the issue of the **1832** presidential campaign.",
       "Jackson won reelection. The veto stood. Biddle still ran the existing institution until the charter ran out, but the political verdict had landed: the federal center would not be renewed by that Congress and that President.",
-      "Do not confuse the veto with the later removal of deposits. The veto stopped recharter. The deposit removal was a separate executive move that starved the Bank of the government’s cash.",
+      "The veto stopped recharter. Removing the deposits was a separate executive move, and it starved the Bank of the government’s cash. It was not easy even for Jackson. One Treasury secretary was moved to the State Department and his successor was dismissed for refusing the order before Roger Taney, installed at the Treasury, began the removal in **September 1833**.",
     ],
   },
   {
     heading: "Pet banks and the Specie Circular",
     paragraphs: [
       "After the veto fight, Jackson’s Treasury began removing federal deposits from the Second Bank and placing them in selected state banks — the “pet banks” of contemporary abuse. The government’s money no longer sat in one federally chartered vault. It sat in a scattered set of state institutions whose note issue and lending the administration preferred to the Bank’s discipline.",
+      "Biddle answered by contracting the Bank’s loans through **1833–34**, arguing prudence while critics called it a deliberate squeeze to prove the Bank indispensable. Credit tightened in the commercial cities. The contraction won Biddle no recharter. It hardened the view that one private corporation held too much power over the country’s money.",
       "Land sales in the West were booming. Speculators often paid with bank paper. In **1836** the Specie Circular ordered that public lands be paid for in gold and silver. The rule was a hard-money brake on paper land fever. It also drained specie from banks that had been extending credit against land notes.",
-      "The mix — deposit removal, state-bank expansion, then a sudden specie demand for land — belongs in any account of the mid-1830s. Whether one blames Jackson, Biddle, state banks, or the land boom depends on the historian. The documentary sequence does not.",
+      "The mix — deposit removal, state-bank expansion, then a sudden specie demand for land — belongs in any account of the mid-1830s. Whether one blames Jackson, Biddle, state banks, or the land boom depends on the historian. The sequence does not.",
     ],
   },
   {
     heading: "Panic of 1837 and the aftermath",
     paragraphs: [
-      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. This account does not pick a single villain. It notes that the panic followed the deposit and specie sequence by months, not decades.",
+      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. No single villain explains it. The panic followed the deposit and specie sequence by months, not decades.",
       "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early **1840s**. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the **1860s**.",
-      "The next time a national liquidity panic forces a central-bank debate at full volume is [1907](/history/20th-century/panic-1907-fed). That episode creates the Fed. It does not replay Jackson’s veto. Keep the centuries labeled.",
+      "Seventy years later the [Panic of 1907](/history/20th-century/panic-1907-fed) reopened the question of a central bank at full volume, and that time Congress built one. The Federal Reserve was a different institution, answering a trust-company run rather than Jackson’s veto message.",
     ],
   },
   {
@@ -1608,16 +1610,17 @@ const jackson: Section[] = [
     list: [
       "**1816:** Second Bank of the United States chartered for twenty years.",
       "**1832:** Congress passes recharter; Jackson vetoes; Jackson reelected with the Bank as a campaign issue.",
-      "**1833–34:** Federal deposits removed from the Bank to state “pet” banks.",
+      "**1833–34:** Federal deposits removed from the Bank to state “pet” banks; Biddle contracts the Bank’s loans.",
       "**1836:** Specie Circular — gold and silver required for public-land purchases; Bank’s federal charter expires.",
       "**1837:** Panic; widespread suspension of specie payments.",
-      "**1913 (later chapter):** Federal Reserve Act — after the Panic of 1907, not as a sequel to Jackson’s veto message.",
+      "**1913:** Federal Reserve Act — after the Panic of 1907.",
     ],
   },
   {
-    heading: "A bank war, not a Fed brief",
+    heading: "Who holds the government’s money",
     paragraphs: [
-      "Charter, veto, pet banks, Specie Circular, and the Panic of **1837** are the spine — not investment advice, not a brief to “end the Fed,” and not a biography of Jackson. Early unit arithmetic sits under [early U.S. coinage](/history/america/early-us-coinage). War paper sits under [greenbacks and the Civil War](/history/america/greenbacks-civil-war). The later liquidity hinge is the [Panic of 1907](/history/20th-century/panic-1907-fed).",
+      "The Bank war was fought over a charter, but the stake was custody. Whoever held the Treasury’s balances could lend on them, and whoever issued the country’s most trusted notes could discipline everyone else’s. Jackson took both away from Biddle and scattered them among state banks.",
+      "The Specie Circular then asked those banks for metal they had lent out as paper. A year later the country was in panic, and for most of the next generation the federal government kept its money in its own vaults.",
     ],
   },
 ];
@@ -1627,7 +1630,7 @@ const greenbacks: Section[] = [
     heading: "",
     paragraphs: [
       "In **February 1862**, Congress authorized United States Notes — greenbacks — as legal tender for most public and private debts. Banks had already suspended specie payments at the end of **1861**. Gold still priced customs and foreign exchange. In New York a gold market posted the premium of coin over paper. When Union fortunes looked dark, that premium widened.",
-      "Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever. After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. Issue, premium, and the road to that date are the spine here. The [Crime of 1873](/history/america/crime-of-1873) and the [Gold Standard Act of 1900](/history/america/road-back-gold) are neighbors, not the same statute.",
+      "Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever. After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. Between the Legal Tender Act and that morning lay seventeen years of war, argument, and a Treasury slowly building gold.",
     ],
   },
   {
@@ -1635,32 +1638,32 @@ const greenbacks: Section[] = [
     paragraphs: [
       "War spending outran ordinary tax and bond finance. The Treasury needed a currency the public and contractors would accept when gold coin was scarce in daily Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
       "Legal tender meant creditors had to accept the notes for most public and private debts, with exceptions such as customs duties and interest on some bonds, which stayed closer to gold. The notes were obligations of the United States. They were not warehouse receipts for a named pile of coin. Convertibility into gold was suspended for the duration of the emergency.",
-      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. This account stays with the Union greenback — the paper that survived the war and then dominated peacetime politics.",
+      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. The Union greenback is the paper that survived the war and then dominated peacetime politics.",
     ],
   },
   {
     heading: "Gold premium and the New York gold room",
     paragraphs: [
       "Once greenbacks were legal tender and gold was still the international and customs metal, two prices appeared. Goods and contracts quoted in “currency” (paper) diverged from prices in gold. In New York a gold market — informal, then more organized — posted the premium of gold over greenbacks.",
-      "When Union fortunes looked dark, the premium widened: more greenbacks were needed to buy a gold dollar. When military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. Ordinary wage earners felt the premium as higher currency prices for goods tied to gold or imports.",
-      "The premium is the documentary proof that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. [Inflation as purchasing-power erosion](/sound-money/inflation-purchasing-power) is the definition page for that squeeze. This article is the wartime instrument.",
+      "When Union fortunes looked dark, the premium widened: more greenbacks were needed to buy a gold dollar. When military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. The worst of it came in the summer of **1864**, with Grant stalled before Petersburg and Confederate raiders near Washington: it took roughly **$2.85** in greenbacks to buy one gold dollar.",
+      "The premium is the record that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. Wage earners felt it as lost [purchasing power](/sound-money/inflation-purchasing-power): the same paper dollar bought less of anything tied to gold or imports, and wages were slow to catch up.",
     ],
   },
   {
     heading: "Legal tender cases and postwar politics",
     paragraphs: [
-      "After the war, debtors liked paying in cheaper paper. Creditors wanted gold or contraction of the note issue. Courts eventually upheld the constitutionality of legal-tender notes for debts, in a tangled set of Legal Tender Cases that flipped and then settled in favor of the power Congress had used.",
+      "After the war, debtors liked paying in cheaper paper. Creditors wanted gold or contraction of the note issue. The Supreme Court’s Legal Tender Cases flipped and then settled. *Hepburn v. Griswold* (**1870**) held the notes could not be forced on creditors for debts contracted before the Act. A year later, with two new justices on the bench, *Knox v. Lee* reversed that. *Juilliard v. Greenman* (**1884**) extended the power to peacetime.",
       "Politics split along familiar lines. “Hard money” voices wanted a rapid return to specie and a smaller greenback stock. Greenback Party and agrarian voices wanted more paper, or at least no contraction that would raise the real burden of debts. Bondholders who had lent in gold terms watched every Treasury signal.",
-      "National banking acts during and after the war created a federal note framework beside the greenback. The two paper stocks were not the same instrument: bank notes under national charter, United States Notes as direct Treasury obligations. Public argument often mashed them into one “paper money” complaint. The documentary split still matters for how resumption was staged.",
+      "National banking acts during and after the war created a federal note framework beside the greenback. The two paper stocks were not the same instrument: bank notes under national charter, United States Notes as direct Treasury obligations. Public argument often mashed them into one “paper money” complaint. The split mattered when resumption came: it was the Treasury’s own notes that had to be redeemed.",
       "The greenback was no longer only a war tool. It was a peacetime unit whose quantity and convertibility would decide winners and losers on every farm mortgage and railroad bond.",
     ],
   },
   {
     heading: "Resumption Act of 1875",
     paragraphs: [
-      "The Specie Payment Resumption Act committed the Treasury to redeem United States Notes in coin on and after **1 January 1879**. The Act also allowed gradual reduction of the greenback circulation toward a floor, and it authorized gold accumulation to make the promise credible.",
-      "Resumption did not happen overnight in **1865**. It took a decade of politics, surplus fiscal conditions in some years, and a Treasury that actually built a gold reserve. Opponents tried to repeal or soften the commitment; the date held. When the day came, greenbacks traded at par with gold; the wartime premium was gone. The paper note became again a claim on coin at a one-to-one practical rate.",
-      "Full legal definition of the dollar as a gold unit waited until the [Gold Standard Act of 1900](/history/america/road-back-gold). Resumption was the operational hinge. The **1900** statute was the label. Between them sat the silver fight that begins with the [Coinage Act of 1873](/history/america/crime-of-1873).",
+      "The Specie Payment Resumption Act committed the Treasury to redeem United States Notes in coin on and after **1 January 1879**. The Act also allowed gradual reduction of the greenback circulation toward a floor of **$300 million**, and it authorized gold accumulation to make the promise credible.",
+      "Resumption did not happen overnight in **1865**. It took a decade of politics, surplus fiscal conditions in some years, and a Treasury that actually built a gold reserve. John Sherman, Treasury secretary from **1877**, sold bonds for gold to fill it. Opponents tried to repeal or soften the commitment. In **1878** Congress stopped further retirement of greenbacks with about **$347 million** still outstanding — but the date held. When the day came, greenbacks traded at par with gold; the wartime premium was gone. The paper note became again a claim on coin at a one-to-one practical rate.",
+      "Full legal definition of the dollar as a gold unit waited until the [Gold Standard Act of 1900](/history/america/road-back-gold). Resumption restored the practice; the **1900** statute wrote the definition. Between them sat the silver fight that began with the [Coinage Act of 1873](/history/america/crime-of-1873).",
     ],
   },
   {
@@ -1678,7 +1681,8 @@ const greenbacks: Section[] = [
   {
     heading: "War paper, then a dated return",
     paragraphs: [
-      "Greenbacks as inconvertible war paper, a gold premium, and a path back to specie on **1 January 1879** are the claim — not a price target and not a tip to hold paper or metal. Earlier bank politics sit under [Jackson and the Bank](/history/america/jackson-and-the-bank). The next silver statute is the [Crime of 1873](/history/america/crime-of-1873). The related definition is [inflation and purchasing power](/sound-money/inflation-purchasing-power).",
+      "The Union paid for much of its war in a note that promised no metal on any date. The gold room in New York priced that promise every day, and the price moved with the battle news. When peace came, the notes did not disappear. They became the ordinary money of farm mortgages and railroad bonds, and every question about their quantity was a question about who owed whom.",
+      "Congress answered with a date rather than an open-ended promise. It named **1 January 1879**, let the Treasury gather gold, and held to the day while the arguments continued. On that morning a greenback was worth a gold dollar again.",
     ],
   },
 ];
@@ -1688,7 +1692,7 @@ const crime1873: Section[] = [
     heading: "",
     paragraphs: [
       "On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
-      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. The documentary fact is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
+      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. What sits on the statute book is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
     ],
   },
   {
@@ -1696,7 +1700,8 @@ const crime1873: Section[] = [
     paragraphs: [
       "World silver supply rose in the late nineteenth century — Nevada’s Comstock and other Western mines among the sources — while several European states moved toward gold. Germany’s shift after unification dumped silver onto the market. The gold–silver market ratio moved away from older mint habits. Silver’s gold price fell.",
       "The United States had already tilted gold-friendlier in [1834](/history/america/early-us-coinage). Greenback war finance had suspended specie. By the early 1870s, officials drafting a mint revision treated the silver dollar as a coin little used in large payments and awkward beside a gold unit. Dropping free coinage of that dollar looked, to them, like housekeeping.",
-      "Housekeeping in a mint statute can still reprice every farm debt. When silver could no longer be coined freely into full-weight dollars, silver producers lost a floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory. The general mechanism of two metals under one law sits under [bimetallism](/history/silver/bimetallism); this page stays with the American statute and the fight that followed.",
+      "Housekeeping in a mint statute can still reprice every farm debt. Under [bimetallism](/history/silver/bimetallism), a mint that coins either metal freely at a fixed ratio gives the cheaper one a floor. When silver could no longer be coined freely into full-weight dollars, silver producers lost that floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory.",
+      "The timing explains the quiet. In **1873** the silver in a standard dollar was still worth a little more than a dollar in gold, so almost no one brought silver to the Mint to be coined into dollars. Dropping the coin cost nothing that year. Within three years silver had fallen far enough that coining it into dollars would have paid, and the door was already shut.",
     ],
   },
   {
@@ -1704,7 +1709,7 @@ const crime1873: Section[] = [
     paragraphs: [
       "The “crime” charge held that the Act was slipped through without honest debate — that silver’s friends in Congress did not see the demonetization coming. Historians still argue how open the drafting was and how much Western silver interests understood at the time. What is not in dispute: the standard silver dollar left the free-coinage list, and gold’s primacy hardened.",
       "The clarification charge held that the United States was joining a gold-standard world, that bimetallism at a stale ratio invited arbitrage, and that subsidiary silver was enough for small change. Europe’s gold turn is real context. It does not erase the domestic distributional fight that followed.",
-      "These pages do not referee the moral word “crime.” They record the Act, the nickname, and the politics that nickname organized. Readers who want the mint-ratio arithmetic open [bimetallism](/history/silver/bimetallism). Readers who want the American hinge stay here, then walk [America & gold/silver politics](/history/america) for the chapter arc.",
+      "Some of the loudest accusers had voted for the bill. Senator William Stewart of Nevada, a silver-state man, supported it in **1873** and later denounced it as a crime. That is less proof of conspiracy than evidence of how little the omission seemed to matter while silver was dear. The word “crime” arrived after the price fell.",
     ],
   },
   {
@@ -1720,7 +1725,7 @@ const crime1873: Section[] = [
     paragraphs: [
       "William Jennings Bryan’s **1896** Democratic campaign is the loud face of the silver question. His “cross of gold” speech attacked a gold-only standard as crucifixion of the producing classes. The Republican ticket defended the gold dollar. Bryan lost. Gold discoveries and other conditions eased monetary stringency in the years that followed, but the political memory of 1873 did not vanish.",
       "Bryan did not invent the silver question. He inherited a fight that began with the Mint list of 1873 and ran through purchase acts, Treasury gold drains, and the language of crime. The campaign is the peak volume, not the first statute.",
-      "After 1896 the path runs toward the [Gold Standard Act of 1900](/history/america/road-back-gold), which defined the dollar in gold in law. The Crime of 1873 is the silver hinge on the way there.",
+      "After 1896 the path ran toward the [Gold Standard Act of 1900](/history/america/road-back-gold), which defined the dollar in gold in law.",
     ],
   },
   {
@@ -1733,14 +1738,14 @@ const crime1873: Section[] = [
       "**1890:** Sherman Silver Purchase Act — larger silver purchases; later linked to gold-reserve strain.",
       "**1893:** Sherman Act repealed amid crisis; gold standard politics intensify.",
       "**1896:** Bryan’s free-silver campaign; gold side wins the election.",
-      "**1900:** Gold Standard Act — dollar defined in gold (next page in this chapter).",
+      "**1900:** Gold Standard Act — dollar defined in gold.",
     ],
   },
   {
     heading: "After the nickname",
     paragraphs: [
-      "The Act, the “crime” label, free silver, and Bryan are the documentary spine of this page — not a bullion pitch, not a remonetization brief, and not a target for today’s metal ratio. Earlier unit arithmetic sits under [early U.S. coinage](/history/america/early-us-coinage). War paper sits under [greenbacks](/history/america/greenbacks-civil-war). The road after the silver fight is [resumption and the 1900 gold statute](/history/america/road-back-gold).",
-      "Return to [America & gold/silver politics](/history/america) for the chapter overview, or open [bimetallism](/history/silver/bimetallism) when the next question is the mint-ratio machine rather than the American statute fight.",
+      "A revision of the Mint’s coin list, passed with little notice while silver was still dear, became within a few years the founding grievance of a political movement. The statute changed which metal could be brought to the Mint and turned into dollars without limit. The nickname turned that change into a story about who had been robbed.",
+      "Congress spent the next two decades buying silver without restoring free coinage. Bryan carried the grievance to the edge of the White House in **1896** and lost. By **1900** the dollar was gold in law, and the silver dollar that had been dropped from the list in **1873** was a coin, not a standard.",
     ],
   },
 ];
