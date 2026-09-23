@@ -1,3 +1,4 @@
+import { getBlogPost } from "../content/blog.ts";
 import { getHistoryPerson, HISTORY_VIP_DESCRIPTION } from "../content/history-people.ts";
 import { getHistoryYear } from "../content/history-years.ts";
 import {
@@ -219,6 +220,30 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: seoTitle(tag),
       description: page.summary,
       kicker: pillarKicker("markets"),
+    };
+  }
+
+  if (path === "/blog") {
+    return {
+      path,
+      cardTitle: "Notes and follow-ups",
+      title: seoTitle("Notes and follow-ups"),
+      description:
+        "Short notes and follow-ups that sit beside GoldSilverHQ’s History, Sound Money, and Markets pages.",
+      kicker: "Blog",
+    };
+  }
+
+  const blogMatch = path.match(/^\/blog\/([^/]+)$/);
+  if (blogMatch) {
+    const post = getBlogPost(blogMatch[1]);
+    if (!post || post.status !== "ready") return null;
+    return {
+      path,
+      cardTitle: post.title,
+      title: seoTitle(post.title),
+      description: post.summary,
+      kicker: "Blog",
     };
   }
 

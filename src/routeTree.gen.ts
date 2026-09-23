@@ -18,6 +18,8 @@ import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -75,6 +77,16 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoldSilverIndexRoute = GoldSilverIndexRouteImport.update({
@@ -148,10 +160,12 @@ export interface FileRoutesByFullPath {
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
   '/markets/': typeof MarketsIndexRoute
@@ -171,10 +185,12 @@ export interface FileRoutesByTo {
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog': typeof BlogIndexRoute
   '/gold-silver': typeof GoldSilverIndexRoute
   '/history': typeof HistoryIndexRoute
   '/markets': typeof MarketsIndexRoute
@@ -195,10 +211,12 @@ export interface FileRoutesById {
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
   '/markets/': typeof MarketsIndexRoute
@@ -220,10 +238,12 @@ export interface FileRouteTypes {
     | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog/'
     | '/gold-silver/'
     | '/history/'
     | '/markets/'
@@ -243,10 +263,12 @@ export interface FileRouteTypes {
     | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog'
     | '/gold-silver'
     | '/history'
     | '/markets'
@@ -266,10 +288,12 @@ export interface FileRouteTypes {
     | '/maps'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog/'
     | '/gold-silver/'
     | '/history/'
     | '/markets/'
@@ -290,10 +314,12 @@ export interface RootRouteChildren {
   MapsRoute: typeof MapsRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
   HistoryYearRoute: typeof HistoryYearRoute
   MarketsSlugRoute: typeof MarketsSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
   HistoryIndexRoute: typeof HistoryIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -367,6 +393,20 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold-silver/': {
@@ -466,10 +506,12 @@ const rootRouteChildren: RootRouteChildren = {
   MapsRoute: MapsRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogSlugRoute: BlogSlugRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
   HistoryYearRoute: HistoryYearRoute,
   MarketsSlugRoute: MarketsSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
   HistoryIndexRoute: HistoryIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,

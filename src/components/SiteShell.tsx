@@ -9,6 +9,7 @@ const NAV = [
   { href: "/sound-money", label: "Sound Money" },
   { href: "/history", label: "History", hasHistoryMenu: true },
   { href: "/markets", label: "Markets" },
+  { href: "/blog", label: "Blog" },
   { href: "/gold-silver", label: "In Practice" },
 ] as const;
 
