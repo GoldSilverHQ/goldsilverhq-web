@@ -187,28 +187,27 @@ export function RelatedLinks({
 }
 
 /**
- * Titlebild media bar — landscape strip under the lead (same file as OG 1200×630).
- * Display is reader-sized: width 100% of the content column with a max-height so the
- * band stays Querformat but does not consume ~⅔ of a laptop viewport. When the box
- * is shorter than native OG aspect, object-cover crops top/bottom (center).
- * Always under the lead title via `ArticleLead` — never a tall full plate.
+ * Titlebild media bar — X Article–like 5:2 band under the lead.
+ * Width matches the article text column (`max-w-prose`), not the full viewport.
+ * Share files stay 1200×630; on-page uses aspect-ratio 5/2 + object-cover
+ * (center) — no max-height strip crop. Never a tall full plate / full-bleed.
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
-    <figure className="mt-5 sm:mt-6">
-      <div className="relative -mx-4 overflow-hidden bg-raised sm:mx-0 sm:rounded-xl">
+    <figure className="mt-5 max-w-prose sm:mt-6">
+      <div className="relative overflow-hidden rounded-xl bg-raised">
         <img
           src={hero.src}
           alt={hero.alt}
           width={1200}
           height={630}
-          className="aspect-[1200/630] max-h-[min(30vh,18rem)] w-full object-cover object-center"
+          className="aspect-[5/2] w-full object-cover object-center"
           decoding="async"
           fetchPriority="high"
         />
       </div>
       {hero.caption || hero.credit ? (
-        <figcaption className="mt-2 max-w-prose text-sm leading-snug text-muted">
+        <figcaption className="mt-2 text-sm leading-snug text-muted">
           {hero.caption ? <span className="block">{hero.caption}</span> : null}
           {hero.credit ? <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span> : null}
         </figcaption>
@@ -218,9 +217,9 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
 }
 
 /**
- * Shared article lead: kicker → title → teaser → landscape titlebild strip.
- * Reading order matches X Articles (text first, media under); on-page height is
- * capped in `ArticleHeroImage` — OG/share files stay 1200×630.
+ * Shared article lead: kicker → title → teaser → 5:2 titlebild band.
+ * Matches X Articles’ reading order on-site (text first, landscape media under).
+ * On-page display is 5:2 at prose width; OG/share files stay 1200×630.
  */
 export function ArticleLead({
   kicker,
