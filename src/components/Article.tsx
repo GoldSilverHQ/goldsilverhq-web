@@ -164,8 +164,10 @@ export function RelatedLinks({
 }
 
 /**
- * Titlebild media bar — X “article” card language (Querformat ≈1200×630).
- * Minimal chrome: no stroke border; soft clip; object-cover landscape only.
+ * Titlebild media bar — landscape strip under the lead (same file as OG 1200×630).
+ * Display is reader-sized: width 100% of the content column with a max-height so the
+ * band stays Querformat but does not consume ~⅔ of a laptop viewport. When the box
+ * is shorter than native OG aspect, object-cover crops top/bottom (center).
  * Always under the lead title via `ArticleLead` — never a tall full plate.
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
@@ -177,7 +179,7 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
           alt={hero.alt}
           width={1200}
           height={630}
-          className="aspect-[1200/630] w-full object-cover object-center"
+          className="aspect-[1200/630] max-h-[min(30vh,18rem)] w-full object-cover object-center"
           decoding="async"
           fetchPriority="high"
         />
@@ -193,9 +195,9 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
 }
 
 /**
- * Shared article lead: kicker → title → teaser → Querformat titlebild.
- * Matches X Articles’ reading order on-site (text first, landscape media under),
- * not the tall full-illustration hero and not image-above-title feed cards.
+ * Shared article lead: kicker → title → teaser → landscape titlebild strip.
+ * Reading order matches X Articles (text first, media under); on-page height is
+ * capped in `ArticleHeroImage` — OG/share files stay 1200×630.
  */
 export function ArticleLead({
   kicker,

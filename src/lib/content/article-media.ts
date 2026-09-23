@@ -1,12 +1,14 @@
 /**
- * Article titlebild (= on-page hero) that also doubles as the Open Graph / X card.
+ * Article titlebild (= on-page hero file) that also doubles as the Open Graph / X card.
  *
- * On-page layout (via `ArticleLead`): **title (+ teaser) first, then Querformat
+ * On-page layout (via `ArticleLead`): **title (+ teaser) first, then landscape
  * media under** — X Articles reading order. Do not put the image above the title
  * (feed-card style) and never ship a tall full-bleed of the whole illustration.
  *
- * Media rule: Querformat only — same landscape crop as X/Twitter article cards
- * (≈16:9 / **1200×630**), full content-column width, minimal chrome.
+ * Display vs share: files stay **1200×630** for OG/X. On-page, `ArticleHeroImage`
+ * keeps a landscape strip (`aspect-[1200/630]`, width 100%, **max-height** +
+ * object-cover) so the photo does not eat a laptop first viewport. Do not re-export
+ * assets to change reading height — CSS only.
  *
  * Convention for later articles:
  * 1. Keep the master illustration elsewhere if needed; write the **landscape**
@@ -14,7 +16,7 @@
  * 2. Write the **same** 1200×630 crop to the Phase-1 card path under `public/og/cards/`
  *    (same key as `ogImagePathForRoute(path)` — see `phase1-sitemap-paths.mjs`).
  * 3. Register one entry here with matching `src` + `ogSrc`, alt, caption, credit.
- * 4. Render with `ArticleLead` + `ArticleHeroImage` (`aspect-[1200/630]`, object-cover).
+ * 4. Render with `ArticleLead` + `ArticleHeroImage` (landscape strip + max-height).
  * 5. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.
  *
  * Only ship real artwork — do not invent placeholders. Prefer true PD / CC0 /
