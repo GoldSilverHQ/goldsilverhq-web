@@ -2759,6 +2759,83 @@ const physicalSilverDemandByCountry: Section[] = [
   },
 ];
 
+/** Blog: LTCM 1998 — longer site essay than the X Article (anti-cannibalization). */
+const ltcm1998Consortium: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "By late September **1998**, Long-Term Capital Management was no longer a quiet hedge fund with Nobel names on the letterhead. It was a leveraged portfolio markets could not ignore. Russia’s August devaluation and debt moratorium had blown out credit spreads worldwide. Positions meant to diversify moved together. Losses stacked.",
+      "And on **23 September**, after meetings at the Federal Reserve Bank of New York, fourteen banks and brokerage firms agreed to put about **$3.6 billion** of their own capital into the fund — private money, Fed facilitation, no public check.",
+      "That sentence is the whole public claim of the evening. Everything else — bailout or fire drill, prudence or precedent — is argument built on those facts. This note stays with the sequence: how the book was built, how August broke it, who sat in the room, and what the New York Fed did and did not do.",
+    ],
+  },
+  {
+    heading: "A fund built on borrowed certainty",
+    paragraphs: [
+      "Long-Term Capital Management L.P. opened in **1994** under **John Meriwether**, the former Salomon Brothers bond chief. Its strategy hunted temporary price gaps between related securities and financed those bets with borrowed money. Early years looked brilliant. Federal Reserve History notes returns of about **20 percent** in **1994**, **43 percent** in **1995**, **41 percent** in **1996**, and **17 percent** in **1997**.",
+      "By end-**1997** the fund — often shortened to LTCM after the full name is clear — held roughly **thirty dollars of debt for every dollar of capital**, and had returned capital to investors without shrinking the book. Leverage up, cushion down. The model assumed that related prices would keep behaving as they had in the quiet years: spreads mean-revert, correlations stay in their lanes, and a shock in one market does not drag every other market with it.",
+      "Those assumptions are ordinary risk-model language. They are not a guarantee. When the world stops mean-reverting, borrowed certainty becomes a fire-sale schedule.",
+    ],
+  },
+  {
+    heading: "August 1998 breaks the math",
+    paragraphs: [
+      "August **1998** changed the arithmetic. Russia’s shock sent investors into safer paper. Spreads LTCM had bet would narrow instead widened. Positions that were supposed to hedge one another moved the same way. The fund lost about **44 percent** of its value in August alone.",
+      "On **2 September**, partners told investors the year-to-date hole through **31 August** was about **52 percent**. That is not a quiet mark-to-market note. It is a partner letter saying the cushion is gone and the leverage still sits on top of what remains.",
+      "A fund that size does not unwind into empty air. It unwinds into other balance sheets — banks, brokers, and anyone holding the other side of the same relative-value trades. The question for September was no longer whether LTCM had been clever in **1995**. It was whether closing the book all at once would smash prices for people who had never traded with the fund.",
+    ],
+  },
+  {
+    heading: "The New York Fed’s room — introductions, not a check",
+    paragraphs: [
+      "On **18 September**, LTCM contacted New York Fed President **William McDonough**. A New York Fed team visited on **20 September**, joined by a Treasury official. What they saw was a web of counterparties and positions large enough that a simultaneous close could hit markets already strained by August.",
+      "Meetings followed on **22 September**. On the morning of **23 September**, talks paused when a separate investor group — reported as led by **Warren Buffett** — floated an alternative buyout. That offer missed its midday deadline. Talks resumed.",
+      "By about **6:00 p.m.**, fourteen firms had agreed to put up roughly **$3.625 billion** for about **90 percent** ownership. Two firms declined. Partners kept a thin residual claim under creditor oversight. By end-**1999** the consortium’s capital had been returned as positions were wound down.",
+      "McDonough later told Congress the risk was not only losses for LTCM’s counterparties. A rush to close related positions could hit other investors through market moves and seize up credit in a market already spooked by August. He also insisted that **not one penny of public money** was spent or committed.",
+    ],
+  },
+  {
+    heading: "Bailout, fire prevention, or both",
+    paragraphs: [
+      "Critics still call the episode a bailout. Supporters call it fire prevention. The **1998** record keeps both arguments alive because it refuses to pretend the choice was simple.",
+      "The New York Fed made the introductions and stayed for the talks. Fourteen creditors wrote the check. Private capital closed the deal in a public room. That is neither a blank Treasury cheque nor a story in which the central bank stayed home.",
+      "The distinction matters for how institutions are remembered. A public rescue spends public money. A convened private rescue spends private money under official windows and clocks. Both can change incentives. Only one appears on the fiscal ledger. LTCM’s September evening was the second kind — and the argument about soft bailouts begins exactly there.",
+    ],
+  },
+  {
+    heading: "An older American rhyme",
+    paragraphs: [
+      "American financial history already knew a version of the locked room. In the [Panic of 1907](/history/20th-century/panic-1907-fed), J.P. Morgan and other bankers decided who still had a till when trust companies ran and the Clearing House window was not open to everyone. Congress later turned that improvisation into a permanent statute — the Federal Reserve.",
+      "**1998** is not **1907**. LTCM was a hedge fund, not a Fifth Avenue trust company. The New York Fed already existed. Gold was not the settlement backstop it had been in Morgan’s New York. The rhyme is institutional, not identical: when markets seize, someone gathers creditors, ranks who can still be saved, and decides whether the close will be orderly or simultaneous.",
+      "In **1907** the gatherer was a private house acting as a last window. In **1998** the gatherer was a regional Fed bank that refused to write the cheque and still set the table. Readers who want the earlier sequence can open that History page. This note stays with LTCM’s September.",
+    ],
+  },
+  {
+    heading: "What leverage does when correlations fail",
+    paragraphs: [
+      "The mechanical lesson does not need a moral. Relative-value strategies borrow against the claim that related prices will stay related. When a sovereign shock sends every risk asset the same way, diversification on paper becomes concentration in the crash. Thirty-to-one leverage turns a bad month into a capital event.",
+      "Returning capital to investors while keeping the book large made the cushion thinner just before the storm. That choice looked efficient in **1997**. It looked different after August **1998**. Leverage is not a personality trait. It is a schedule of forced sales when marks move against you.",
+      "None of that is a tip about funds, banks, or metals. It is dated plumbing: how a book was financed, how a shock hit, and how a room of creditors answered.",
+    ],
+  },
+  {
+    heading: "Fiat credit and the stop that is not metal",
+    paragraphs: [
+      "LTCM’s crisis sat inside a [fiat](/sound-money/hard-money-vs-fiat) credit system — claims and marks, not a mint ratio. The New York Fed’s role was coordination among private balance sheets, not a redeemability window into a fixed weight of gold. That is a different stop from Newton’s Mint arithmetic or a classical gold convertibility rule.",
+      "When the stop is confidence and clearing rather than metal, the last room can look like facilitation: gather the people who still have capital, keep the fire sale from becoming a general seizure, and leave the cheque to the creditors. Whether that is wise is a standing debate. Whether public money funded LTCM’s September deal is not. On the record McDonough defended, it did not.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1998**, private capital closed the deal in a public room. The New York Fed convened and facilitated. It did not fund the rescue.",
+      "Fourteen firms put about **$3.6 billion** into a wounded hedge fund so the close would not smash everyone else’s marks at once. Partners kept a thin claim. By the end of the next year the consortium’s capital had come back as the book was wound down.",
+      "Everything else — prudence, precedent, or soft bailout — is argument built on that evening’s facts.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2102821638521688064).",
+    ],
+  },
+];
+
 /** Blog: Newton 1717 — longer site essay than the X Article (anti-cannibalization). */
 const newton1717Guinea: Section[] = [
   {
@@ -2867,6 +2944,7 @@ const newton1717Guinea: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/ltcm-1998-consortium": ltcm1998Consortium,
   "blog/newton-1717-guinea": newton1717Guinea,
   "banks-paper/john-law": johnLaw,
   "20th-century/panic-1907-fed": panic1907,

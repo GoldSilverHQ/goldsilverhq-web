@@ -8,9 +8,8 @@ import type { Section } from "./bodies.ts";
  * social piece; the site post is deliberately longer — more context, a clearer
  * arc, and natural interlinks. Do not paste the X text as the page.
  *
- * Daily X→blog automation is TBD (do not scrape the X API here). When that
- * lands, it should append rows to `blogPosts` (or a generated sibling module)
- * with the same shape, then expand into a longer essay before publish.
+ * X→blog mirror: `scripts/x-blog-mirror/` + `data/x-articles-seen.json`.
+ * Append a ready row here (and a body in `bodies.ts`) when mirroring an Article.
  */
 
 /** Small closed tag set — mirrors reader shelves, not SEO directories. */
@@ -39,12 +38,34 @@ export type BlogPost = {
    * automation — do not auto-inject into History hubs from this field alone.
    */
   relatedArticlePaths?: string[];
-  /** Optional source X Article / status permalink (credit once in the body). */
+  /** Optional source X Article permalink (credit once in the body). = source_x_url */
   xArticleUrl?: string;
+  /** X Article id from `/i/article/{id}` (durable seen-list key). = source_x_id */
+  sourceXId?: string;
 };
 
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "ltcm-1998-consortium",
+    title: "The Day Banks Put Up $3.6 Billion to Stop a Hedge Fund Collapse",
+    summary:
+      "On 23 September 1998 fourteen firms put about $3.6 billion into LTCM after New York Fed talks — private capital, Fed facilitation, no public check.",
+    date: "2026-09-23",
+    status: "ready",
+    tags: ["History", "Markets"],
+    paragraphs: [],
+    related: [
+      { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
+      { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
+    ],
+    relatedArticlePaths: [
+      "/history/20th-century/panic-1907-fed",
+      "/sound-money/hard-money-vs-fiat",
+    ],
+    xArticleUrl: "https://x.com/i/article/2102821638521688064",
+    sourceXId: "2102821638521688064",
+  },
   {
     slug: "newton-1717-guinea",
     title: "Newton’s 1717 Mint report: why England’s silver coins left",
@@ -60,6 +81,7 @@ export const blogPosts: BlogPost[] = [
     ],
     relatedArticlePaths: ["/history/silver/bimetallism", "/history/silver/piece-of-eight"],
     xArticleUrl: "https://x.com/i/article/2102003835015155712",
+    sourceXId: "2102003835015155712",
   },
   {
     slug: "gold-silver-ratio-what-it-counts",

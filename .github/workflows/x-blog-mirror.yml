@@ -1,0 +1,88 @@
+name: X Blog Mirror
+# Twice daily Europe/Berlin ≈ 10:00 and 18:00.
+# Cron is UTC: 0 8,16 * * * ≈ 10:00/18:00 CEST (UTC+2); ≈ 09:00/17:00 CET (UTC+1).
+on:
+  schedule:
+    - cron: "0 8,16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Discover new @GoldSilverHQ X Articles
+        id: discover
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          set +e
+          node scripts/x-blog-mirror/discover.mjs
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open draft issue when a new Article is pending
+        if: steps.discover.outputs.exit_code == '78'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f data/x-articles-pending.json ]; then
+            echo "No pending file; skip."
+            exit 0
+          fi
+          title=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.title||'X Article')")
+          id=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.articleId||'')")
+          url=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.articleUrl||'')")
+          body=$(node -e "
+            const p=require('./data/x-articles-pending.json');
+            const lines=[
+              '## X→blog mirror candidate',
+              '',
+              \`- **Title:** \${p.article.title}\`,
+              \`- **X Article:** \${p.article.articleUrl}\`,
+              \`- **Article id:** \${p.article.articleId}\`,
+              \`- **Post id:** \${p.article.postId}\`,
+              \`- **Published:** \${p.article.createdAt}\`,
+              '',
+              'Pending payload: \`data/x-articles-pending.json\` (from the discover job artifact — re-run discover locally or via Cursor).',
+              '',
+              '### Instructions',
+              ...p.instructions.map(i=>' - '+i),
+              '',
+              'Do **not** invent figures. Skip if already on site. Process at most one Article.',
+            ];
+            process.stdout.write(lines.join('\\n'));
+          ")
+          # Avoid duplicate open issues for the same article id
+          existing=$(gh issue list --state open --search "x-blog-mirror $id" --json number --jq 'length')
+          if [ "$existing" != "0" ]; then
+            echo "Open issue already exists for $id"
+            exit 0
+          fi
+          gh issue create \
+            --title "x-blog-mirror: $title" \
+            --body "$body" \
+            --label "x-blog-mirror" || \
+          gh issue create \
+            --title "x-blog-mirror: $title" \
+            --body "$body"
+
+      - name: Notice when X token missing
+        if: steps.discover.outputs.exit_code == '0'
+        run: |
+          if [ -z "${{ secrets.X_BEARER_TOKEN }}" ]; then
+            echo "::notice::Set repo secret X_BEARER_TOKEN (X API app Bearer) to enable scheduled discover. Fallback: Cursor Automation / timer twice daily Berlin — see docs/x-blog-republisher.md in the Project store."
+          else
+            echo "::notice::No new eligible Articles (or already mirrored)."
+          fi

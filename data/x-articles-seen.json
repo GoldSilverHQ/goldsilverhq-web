@@ -1,0 +1,71 @@
+{
+  "updatedAt": "2026-09-23T18:40:00.000Z",
+  "account": "GoldSilverHQ",
+  "accountUserId": "1744721184623890432",
+  "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
+  "articles": [
+    {
+      "articleId": "2102821638521688064",
+      "postId": "2102825847904166156",
+      "title": "The Day Banks Put Up $3.6 Billion to Stop a Hedge Fund Collapse",
+      "status": "mirrored",
+      "slug": "ltcm-1998-consortium",
+      "sitePath": "/blog/ltcm-1998-consortium",
+      "xArticleUrl": "https://x.com/i/article/2102821638521688064",
+      "publishedAt": "2026-09-23T18:22:05.000Z",
+      "mirroredAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2102003835015155712",
+      "postId": "2102089592773939308",
+      "title": "Isaac Newton Fixed Gold’s Price in 1717 — Here’s Why Britain’s Silver Coins Vanished",
+      "status": "mirrored",
+      "slug": "newton-1717-guinea",
+      "sitePath": "/blog/newton-1717-guinea",
+      "xArticleUrl": "https://x.com/i/article/2102003835015155712",
+      "publishedAt": "2026-09-21T17:36:28.000Z",
+      "mirroredAt": "2026-09-21T00:00:00.000Z",
+      "seedNote": "Seeded from existing site post on first pipeline run."
+    },
+    {
+      "articleId": "2101265682671222784",
+      "postId": "2101589593384509653",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2101265682671222784",
+      "publishedAt": "2026-09-20T08:29:39.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2098698807026335759",
+      "postId": "2098704778930876848",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2098698807026335759",
+      "publishedAt": "2026-09-12T09:26:26.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2096495920640585728",
+      "postId": "2096498346802176126",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2096495920640585728",
+      "publishedAt": "2026-09-06T07:18:51.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2093610508523819008",
+      "postId": "2093627664498036945",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2093610508523819008",
+      "publishedAt": "2026-08-29T09:11:47.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    }
+  ]
+}
