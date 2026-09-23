@@ -226,10 +226,9 @@ export function sharePageForPath(pathname: string): SharePage | null {
   if (path === "/blog") {
     return {
       path,
-      cardTitle: "Notes and follow-ups",
-      title: seoTitle("Notes and follow-ups"),
-      description:
-        "Short notes and follow-ups that sit beside GoldSilverHQ’s History, Sound Money, and Markets pages.",
+      cardTitle: "Blog",
+      title: seoTitle("Blog"),
+      description: "Notes from GoldSilverHQ on sound money, metals history, and markets.",
       kicker: "Blog",
     };
   }

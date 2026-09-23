@@ -9,9 +9,8 @@ import { pageShareMeta } from "@/lib/seo/share-meta";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: pageShareMeta({
-      title: seoTitle("Notes and follow-ups"),
-      description:
-        "Short notes and follow-ups that sit beside GoldSilverHQ’s History, Sound Money, and Markets pages.",
+      title: seoTitle("Blog"),
+      description: "Notes from GoldSilverHQ on sound money, metals history, and markets.",
       path: "/blog",
     }),
   }),
@@ -25,11 +24,7 @@ function BlogIndex() {
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Blog" }]} />
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Blog</p>
-        <h1 className="mt-2 font-display text-4xl">Notes and follow-ups</h1>
-        <p className="mt-4 max-w-prose text-muted">
-          Short pieces that sit beside the longer History, Sound Money, and Markets pages.
-        </p>
+        <h1 className="mt-2 font-display text-4xl">Blog</h1>
 
         {hasPosts ? (
           <BlogIndexGrid />

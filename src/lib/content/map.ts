@@ -1147,12 +1147,12 @@ export const marketPages: Episode[] = [
   },
   {
     slug: "physical-silver-demand-by-country",
-    title: "What physical silver demand by country measures (and which table you are reading)",
+    title: "Who buys silver bars — and where factories and workshops use the rest",
     summary:
-      "“Demand by country” is several World Silver Survey lists, not one ranking. Bars and coins bought (2024), coins struck, industrial use, jewelry fabrication, and scrap returned (2025) put different countries on top. USGS world mine output has stayed in the mid-20,000s of tonnes since the mid-2010s. Addresses, not a shopping list.",
+      "In 2024 the United States still led bar-and-coin buying, with India close behind. Factory use, jewelry workshops, coin mints, and scrap tell different country stories. The World Silver Survey prints those lists separately; mixing them is how the ranking gets confused.",
     status: "ready",
     paragraphs: [
-      "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. Jewelry fabrication is a separate workshop table. Recycling by source is a separate scrap-supply table. None of those is a mine book.",
+      "Country rankings of silver demand usually mean bars and coins bought in a calendar year. Jewelry made in workshops, silver used in factories, and old silver returned as scrap are different lists. None of those is a mine book.",
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },
@@ -1173,7 +1173,7 @@ export const marketPages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "markets",
-      titleTag: "Physical Silver Demand by Country: Bars, Factories, Jewelry, Scrap",
+      titleTag: "Who Buys Silver Bars — and Where Factories Use the Rest",
     },
   },
 ];

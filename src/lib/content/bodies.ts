@@ -2539,14 +2539,14 @@ const physicalSilverDemandByCountry: Section[] = [
     heading: "",
     paragraphs: [
       "Americans bought far fewer silver bars and coins in **2024** than the year before — **64.9 million ounces**, down 46 percent — while Indian buyers took **59.8 million**, up 21 percent. Those figures come from the World Silver Survey, the annual book researched by Metals Focus for the Silver Institute, and they are the usual source when someone ranks countries by silver demand.",
-      "But “silver demand by country” can mean several different lists: bars and coins bought, coins struck at a mint, silver used in factories, silver made into jewelry, and old silver coming back as scrap. The countries at the top change completely from one list to the next. This page walks through each, starting with the **2024** bar-and-coin table and then the **2025** tables from World Silver Survey 2026. A mine-production ranking is a different list again and is not kept here; world mine totals appear near the end of this page and on the desk’s [Stocks & flows](/desk) tab.",
+      "But “silver demand by country” can mean several different lists: bars and coins bought, coins struck at a mint, silver used in factories, silver made into jewelry, and old silver coming back as scrap. The countries at the top change completely from one list to the next. The sections below take each list in turn, starting with the **2024** bar-and-coin table and then the **2025** tables from World Silver Survey 2026. Mine production is a different ranking again and is not kept here; world mine totals appear near the end and on the desk’s [Stocks & flows](/desk) tab.",
     ],
   },
   {
-    heading: "What a country ranking measures",
+    heading: "What the bar-and-coin ranking counts",
     paragraphs: [
-      "The usual ranking is **physical investment**: bars and bullion-style coins attributed to a country, net of some dealer-stock swings, and excluding commemorative coins. Metals Focus publishes that table in the World Silver Survey. “United States, 2024, **64.9 million ounces**” means identified U.S. bar-and-coin buying (**offtake**) in that year, after those adjustments.",
-      "The country is where the buyer is, not where the metal came from. Silver coined in Ottawa or Perth can be bought in the United States. Indian bar demand can be metal that arrived as imports. A ranking of physical investment is a map of buyers, not a map of mines.",
+      "The usual ranking is bars and bullion-style coins attributed to a country, net of some dealer-stock swings, and excluding commemorative coins. Metals Focus publishes that table in the World Silver Survey. “United States, 2024, **64.9 million ounces**” means identified U.S. bar-and-coin buying in that year, after those adjustments.",
+      "The country is where the buyer is, not where the metal came from. Silver coined in Ottawa or Perth can be bought in the United States. Indian bar demand can be metal that arrived as imports. A ranking of bar-and-coin buying is a map of buyers, not a map of mines.",
       "Two world totals for the same year sit side by side. This site’s desk uses **190.9 million ounces** of world **coin and net bar demand** for calendar **2024** (World Silver Survey 2025): coin fabrication plus net bar purchases. The country table’s global total for the same year is **183.3 million ounces**. The difference is mechanical — the country series drops commemorative coins and adjusts for dealer inventories — so the two figures are not in conflict.",
     ],
   },
@@ -2588,15 +2588,15 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "Silver coins and medals by country, 2025",
+    heading: "Where the coins were struck (2025)",
     callout: {
-      label: "Fabrication countries ≠ investment offtake",
+      label: "Minted here is not bought here",
       paragraphs: [
         "This table counts where silver was struck, not where it was bought. Metal coined in Ottawa or Llantrisant is often sold in the United States, so Canada and the United Kingdom can rank high here and much lower on the buyer table.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026 prints a separate **coins and medals fabrication** table for calendar **2025**. World fabrication in that series was **87.9 million ounces**, down 7 percent from 2024’s **94.7**. That world total matches the survey’s 2025 **coin fabrication** line in the coin-and-net-bar figures; it is a different number from the 2024 country physical-investment total of **183.3**.",
+      "World Silver Survey 2026 prints a separate **coins and medals** table for calendar **2025**. World fabrication in that series was **87.9 million ounces**, down 7 percent from 2024’s **94.7**. That world total matches the survey’s 2025 **coin fabrication** line in the coin-and-net-bar figures; it is a different number from the 2024 country physical-investment total of **183.3**.",
       "The five largest 2025 country lines, in million troy ounces, with the change from 2024:",
     ],
     list: [
@@ -2608,20 +2608,20 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "Industrial use by country, 2025",
+    heading: "Where factories used silver (2025)",
     callout: {
-      label: "Industrial fabrication ≠ investment offtake",
+      label: "Factory use is not bar buying",
       paragraphs: [
-        "This is a factory address: where silver went into electronics, solar panels, brazing alloys and solders, and other industrial products. China ranks first here and is small on the bar-and-coin table; the United States ranks first there and second here.",
+        "This is where silver went into electronics, solar panels, brazing alloys and solders, and other industrial products. China ranks first here and is small on the bar-and-coin table; the United States ranks first there and second here.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026 prints an **Industrial Demand by Country** table for calendar **2025**. World industrial fabrication was **657.4 million ounces**, down 3 percent from the same book’s **679.0** for 2024 — the first contraction since the pandemic, after four years of growth.",
+      "World Silver Survey 2026 prints an industrial-demand table by country for calendar **2025**. World industrial use was **657.4 million ounces**, down 3 percent from the same book’s **679.0** for 2024 — the first contraction since the pandemic, after four years of growth.",
       "The five largest 2025 country lines, in million troy ounces. These are ounces consumed in products.",
     ],
     table: {
       caption:
-        "World Silver Survey 2026, Metals Focus for the Silver Institute. Industrial demand by country, calendar 2025. Million troy ounces. Factory address — not bar-and-coin offtake, and not coins-and-medals minting.",
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Industrial demand by country, calendar 2025. Million troy ounces — factory use, not bars bought or coins struck.",
       headers: ["Country", "2025", "2024", "Y/Y"],
       rows: [
         ["China", "**282.9**", "275.4", "+3%"],
@@ -2641,14 +2641,14 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "Where 2025 industrial ounces went",
+    heading: "Where those factory ounces went",
     paragraphs: [
       "The same World Silver Survey 2026 book splits the **657.4 million ounce** industrial total by sector. Electrical and electronics came to **449.5 million ounces**, of which photovoltaics were **186.6**. Subtract one from the other and electrical and electronics excluding photovoltaics is **262.9**. Brazing alloys and solders were **50.5**; other industrial uses **157.4**. Photography is a separate demand line — **24.2 million ounces** in 2025 — and is not inside the 657.4 total.",
       "Solar is large, but it is not the whole factory floor. Electronics other than solar remain the single largest industrial use.",
     ],
     table: {
       caption:
-        "World Silver Survey 2026, Metals Focus for the Silver Institute. Breakdown of industrial demand by sector, calendar 2025. Shares are the printed million-ounce cells divided by 657.4, then rounded. Photovoltaics sit inside the electrical-and-electronics total in the survey; the ex-PV row is that total minus the photovoltaics line.",
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Industrial demand by sector, calendar 2025. Shares are the printed million-ounce cells divided by 657.4, then rounded. Photovoltaics sit inside electrical and electronics in the survey; the ex-PV row is that total minus photovoltaics.",
       headers: ["Industrial slice", "Million ounces", "Share of 657.4"],
       rows: [
         ["Electrical & electronics, excluding PV", "**262.9**", "**40%**"],
@@ -2666,20 +2666,20 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "Jewelry by country, 2025",
+    heading: "Where jewelry was made (2025)",
     callout: {
-      label: "Jewelry fabrication ≠ investment offtake",
+      label: "Jewelry made here is not bars bought here",
       paragraphs: [
-        "This is a workshop address: where silver was made into jewelry. India ranks first here and second on the bar-and-coin table; China ranks first on the industrial table and fourth here.",
+        "This is where silver was made into jewelry. India ranks first here and second on the bar-and-coin table; China ranks first on the industrial table and fourth here.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026 prints a **Jewelry Fabrication by Country** table for calendar **2025**. World jewelry fabrication was **189.3 million ounces**, down 8 percent from the same book’s **205.1** for 2024. (The **208.7 million ounce** jewelry figure for 2024 earlier on this page comes from the previous year’s survey; the two editions revised the same year.)",
+      "World Silver Survey 2026 prints a jewelry table by country for calendar **2025**. World jewelry fabrication was **189.3 million ounces**, down 8 percent from the same book’s **205.1** for 2024. (The **208.7 million ounce** jewelry figure for 2024 earlier on this page comes from the previous year’s survey; the two editions revised the same year.)",
       "The five largest 2025 country lines, in million troy ounces:",
     ],
     table: {
       caption:
-        "World Silver Survey 2026, Metals Focus for the Silver Institute. Jewelry fabrication by country, calendar 2025. Million troy ounces. Workshop address — not bar-and-coin offtake, not coins-and-medals minting, and not industrial fabrication.",
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Jewelry fabrication by country, calendar 2025. Million troy ounces — workshops, not bars bought, coins struck, or factory use.",
       headers: ["Country", "2025", "2024", "Y/Y"],
       rows: [
         ["India", "**70.3**", "87.9", "−20%"],
@@ -2701,9 +2701,9 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "Where recycled silver comes from (2025)",
     callout: {
-      label: "Scrap sources ≠ offtake ≠ fabrication",
+      label: "Scrap coming back is not new buying",
       paragraphs: [
-        "Recycling is the supply side of the same book: metal coming back from old products. A country can scrap a lot of industrial silver while buying few bars, and jewelry scrap can rise in a year when new jewelry falls, because the two lines measure opposite directions of travel.",
+        "Recycling is metal returning from old products. A country can scrap a lot of industrial silver while buying few bars, and jewelry scrap can rise in a year when new jewelry falls, because the two lines measure opposite directions of travel.",
       ],
     },
     paragraphs: [
@@ -2712,7 +2712,7 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
     table: {
       caption:
-        "World Silver Survey 2026, Metals Focus for the Silver Institute. Recycling by source, calendar 2025. Million troy ounces. Secondary supply — not bar-and-coin offtake, not coins-and-medals minting, not industrial fabrication, and not jewelry fabrication.",
+        "World Silver Survey 2026, Metals Focus for the Silver Institute. Recycling by source, calendar 2025. Million troy ounces — old silver returning, not bars bought or new fabrication.",
       headers: ["Source", "2025"],
       rows: [
         ["Industrial", "**110.1**"],
@@ -2738,7 +2738,7 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "Which total is which",
+    heading: "The different world totals",
     paragraphs: [
       "Before comparing countries, it helps to know which world total a figure belongs to:",
     ],

@@ -26,7 +26,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /United States 64\.9/);
     assert.match(text, /India 59\.8/);
     assert.match(text, /Germany 9\.9/);
-    assert.match(text, /Fabrication countries ≠ investment offtake/);
+    assert.match(text, /Minted here is not bought here/);
     assert.match(text, /India 18\.4/);
     assert.match(text, /United States 15\.7/);
     assert.match(text, /Canada 11\.4/);
@@ -41,9 +41,9 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
-    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
-    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
+    const coins = body.find((s) => s.heading === "Where the coins were struck (2025)");
+    const industrial = body.find((s) => s.heading === "Where factories used silver (2025)");
+    const mix = body.find((s) => s.heading === "Where those factory ounces went");
     assert.ok(investment, "2024 investment ranking must stay");
     assert.ok(coins, "coins-and-medals mint table must stay");
     assert.ok(industrial, "expected a separate 2025 industrial country block");
@@ -75,8 +75,8 @@ describe("markets page thicken (no new URLs)", () => {
 
     assert.match(text, /United States 64\.9/);
     assert.match(text, /India 59\.8/);
-    assert.match(text, /Fabrication countries ≠ investment offtake/);
-    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /Minted here is not bought here/);
+    assert.match(text, /Factory use is not bar buying/);
     assert.match(text, /India 18\.4/);
     assert.match(text, /87\.9 million ounces/);
     assert.match(text, /657\.4 million ounces/);
@@ -100,7 +100,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(mixTable, /\*\*50\.5\*\*/);
     assert.match(mixTable, /\*\*8%\*\*/);
     assert.match(text, /449\.5 million ounces/);
-    assert.match(text, /factory address/i);
+    assert.match(text, /Factory use is not bar buying/);
     assert.match(hubText, /\*\*2025\*\* tables for industrial use/);
     assert.match(neighborText, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
     assert.doesNotMatch(text, /639\.6|forecast|ebook|Kauf|buy silver in India|price target/i);
@@ -109,7 +109,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "What physical silver demand by country measures (and which table you are reading)",
+      "Who buys silver bars — and where factories and workshops use the rest",
     );
     assert.deepEqual(
       page.related.map((r) => r.href),
@@ -128,10 +128,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
-    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
-    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
-    const jewelry = body.find((s) => s.heading === "Jewelry by country, 2025");
+    const coins = body.find((s) => s.heading === "Where the coins were struck (2025)");
+    const industrial = body.find((s) => s.heading === "Where factories used silver (2025)");
+    const mix = body.find((s) => s.heading === "Where those factory ounces went");
+    const jewelry = body.find((s) => s.heading === "Where jewelry was made (2025)");
     const usgs = body.find((s) => s.heading === "World mine output: flat for a decade");
     assert.ok(investment, "2024 investment ranking must stay");
     assert.ok(coins, "coins-and-medals mint table must stay");
@@ -164,8 +164,8 @@ describe("markets page thicken (no new URLs)", () => {
 
     assert.match(text, /United States 64\.9/);
     assert.match(text, /India 59\.8/);
-    assert.match(text, /Jewelry fabrication ≠ investment offtake/);
-    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /Jewelry made here is not bars bought here/);
+    assert.match(text, /Factory use is not bar buying/);
     assert.match(text, /87\.9 million ounces/);
     assert.match(text, /657\.4 million ounces/);
     assert.match(text, /189\.3 million ounces/);
@@ -181,7 +181,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(jewelryTable, /\*\*10\.3\*\*/);
     assert.match(jewelryTable, /\*\*189\.3\*\*/);
     assert.match(jewelryTable, /205\.1/);
-    assert.match(text, /workshop address/i);
+    assert.match(text, /Jewelry made here is not bars bought here/);
     assert.match(text, /27,300 tonnes/);
     assert.match(text, /25,300 tonnes/);
     assert.match(text, /26,000 tonnes/);
@@ -196,10 +196,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "What physical silver demand by country measures (and which table you are reading)",
+      "Who buys silver bars — and where factories and workshops use the rest",
     );
-    assert.match(page.summary, /several World Silver Survey lists/);
-    assert.match(page.summary, /jewelry fabrication/);
+    assert.match(page.summary, /United States still led bar-and-coin buying/);
+    assert.match(page.summary, /jewelry workshops/);
     assert.deepEqual(
       page.related.map((r) => r.href),
       ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
@@ -217,10 +217,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
-    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
-    const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
-    const jewelry = body.find((s) => s.heading === "Jewelry by country, 2025");
+    const coins = body.find((s) => s.heading === "Where the coins were struck (2025)");
+    const industrial = body.find((s) => s.heading === "Where factories used silver (2025)");
+    const mix = body.find((s) => s.heading === "Where those factory ounces went");
+    const jewelry = body.find((s) => s.heading === "Where jewelry was made (2025)");
     const recycling = body.find((s) => s.heading === "Where recycled silver comes from (2025)");
     const usgs = body.find((s) => s.heading === "World mine output: flat for a decade");
     assert.ok(investment, "2024 investment ranking must stay");
@@ -271,9 +271,9 @@ describe("markets page thicken (no new URLs)", () => {
 
     assert.match(text, /United States 64\.9/);
     assert.match(text, /India 59\.8/);
-    assert.match(text, /Scrap sources ≠ offtake ≠ fabrication/);
-    assert.match(text, /Jewelry fabrication ≠ investment offtake/);
-    assert.match(text, /Industrial fabrication ≠ investment offtake/);
+    assert.match(text, /Scrap coming back is not new buying/);
+    assert.match(text, /Jewelry made here is not bars bought here/);
+    assert.match(text, /Factory use is not bar buying/);
     assert.match(text, /87\.9 million ounces/);
     assert.match(text, /657\.4 million ounces/);
     assert.match(text, /189\.3 million ounces/);
@@ -306,10 +306,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "What physical silver demand by country measures (and which table you are reading)",
+      "Who buys silver bars — and where factories and workshops use the rest",
     );
-    assert.match(page.summary, /several World Silver Survey lists/);
-    assert.match(page.summary, /scrap returned/);
+    assert.match(page.summary, /United States still led bar-and-coin buying/);
+    assert.match(page.summary, /\bscrap\b/);
     assert.deepEqual(
       page.related.map((r) => r.href),
       ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
