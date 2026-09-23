@@ -87,6 +87,29 @@ export function ArticleSections({
               <RichText text={p} />
             </p>
           ))}
+          {block.figure ? (
+            <figure className="my-8 w-full max-w-[42rem]">
+              <div className="overflow-hidden rounded-xl bg-raised">
+                <img
+                  src={block.figure.src}
+                  alt={block.figure.alt}
+                  width={block.figure.width ?? 800}
+                  height={block.figure.height ?? 856}
+                  className="h-auto w-full object-contain"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              {block.figure.caption || block.figure.credit ? (
+                <figcaption className="mt-2 max-w-prose text-sm leading-snug text-muted">
+                  {block.figure.caption ? <span className="block">{block.figure.caption}</span> : null}
+                  {block.figure.credit ? (
+                    <span className="mt-0.5 block text-xs text-faint">{block.figure.credit}</span>
+                  ) : null}
+                </figcaption>
+              ) : null}
+            </figure>
+          ) : null}
           {block.table ? (
             <div className="-mx-1 mb-6 overflow-x-auto">
               <table className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}>

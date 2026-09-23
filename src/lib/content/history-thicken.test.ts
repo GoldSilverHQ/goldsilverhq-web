@@ -224,13 +224,22 @@ describe("america cluster thicken (no new URLs)", () => {
   });
 
   it("locks road-back-gold as handoff to 1907", () => {
-    const text = bodyText(getBody("america", "road-back-gold")!);
+    const body = getBody("america", "road-back-gold")!;
+    const text = bodyText(body);
     assert.match(text, /1 January 1879|1879/);
     assert.match(text, /Gold Standard Act/);
     assert.match(text, /1900/);
     assert.match(text, /25\.8 grains/);
-    assert.match(text, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+    assert.match(text, /Panic of \*\*1907\*\*|Panic of 1907/);
+    assert.doesNotMatch(text, /\[[^\]]+\]\([^)]+\)/);
+    assert.doesNotMatch(text, /If you arrived|start here|What this is not/i);
     assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
+
+    const act = body.find((s) => /Sound Money Law|Gold Standard Act/i.test(s.heading));
+    assert.ok(act?.figure, "expected mid-article 1900 cartoon figure after the Act section");
+    assert.match(act!.figure!.src, /road-back-gold-1900-cartoon\.jpg$/);
+    assert.match(act!.figure!.caption, /Survival of the Fittest/);
+    assert.match(act!.figure!.credit ?? "", /Keppler & Schwarzmann/);
   });
 
   it("wires a thickened America hub without new routes", () => {

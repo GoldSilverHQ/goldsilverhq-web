@@ -601,10 +601,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "road-back-gold",
         title: "The road back toward the gold standard",
-        summary: "Specie payments returned in 1879; the Gold Standard Act of 1900 defined the dollar in gold. 1907 opens the next chapter.",
+        summary:
+          "On 1 January 1879 greenbacks met gold at par again. The Gold Standard Act of 1900 wrote the dollar as 25.8 grains of gold. 1907 opens the next chapter.",
         status: "ready",
         paragraphs: [
-          "After greenbacks, Congress and the Treasury spent a generation restoring gold payments: specie at par in 1879, then the Gold Standard Act of 1900. The next American liquidity crisis — and the Fed — open in the twentieth-century chapter with 1907.",
+          "On the morning of 1 January 1879, a United States Note presented at a Treasury window could again be paid in gold at face. The Gold Standard Act of 1900 later defined the dollar in gold. Between those dates sat silver-purchase strain, Bryan’s campaign, and the reserve arithmetic that made a gold statute pass.",
         ],
         related: [
           { title: "Greenbacks and the Civil War", href: "/history/america/greenbacks-civil-war" },

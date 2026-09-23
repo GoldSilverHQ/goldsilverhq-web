@@ -933,7 +933,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(pageMeta);
     assert.match(pageMeta.summary, /Gold: 0/);
     assert.match(pageMeta.summary, /Canada/);
-    assert.ok(pageMeta.seo.secondary.includes("canada gold reserves"));
+    assert.ok(pageMeta.seo?.secondary.includes("canada gold reserves"));
     assert.deepEqual(
       pageMeta.related.map((r) => r.href),
       [

@@ -1,6 +1,22 @@
 export type Callout = { label: string; paragraphs: string[] };
 export type SectionTable = { caption?: string; headers: string[]; rows: string[][] };
-export type Section = { heading: string; paragraphs: string[]; list?: string[]; callout?: Callout; table?: SectionTable };
+export type SectionFigure = {
+  src: string;
+  alt: string;
+  caption: string;
+  credit?: string;
+  width?: number;
+  height?: number;
+};
+export type Section = {
+  heading: string;
+  paragraphs: string[];
+  list?: string[];
+  callout?: Callout;
+  table?: SectionTable;
+  /** Mid-article figure — not the Querformat titlebild/hero. */
+  figure?: SectionFigure;
+};
 
 const johnLaw: Section[] = [
   {
@@ -1741,60 +1757,66 @@ const roadBack: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **1 January 1879**, the United States resumed specie payments: United States Notes could again be treated as claims on gold at par in practice. The wartime greenback premium had closed. The **Gold Standard Act of 1900** then defined the dollar in gold in statute — **25.8 grains** of gold nine-tenths fine. The country entered the twentieth century as a gold-standard country in law.",
-      "After greenbacks, Congress and the Treasury spent a generation restoring gold payments. The silver fight of [1873](/history/america/crime-of-1873) and the war paper of [1862–79](/history/america/greenbacks-civil-war) sit behind resumption. The next American liquidity crisis — and the Fed — open in the twentieth-century chapter with the [Panic of 1907](/history/20th-century/panic-1907-fed). Keep 1913 and 1971 as labeled forward links only.",
+      "On the morning of **1 January 1879**, a United States Note presented at a Treasury window could again be paid in gold at face. The wartime premium that had marked greenbacks below coin was gone. Paper and metal met at par in the markets that mattered. The country was back on specie payments in practice — twenty-one years after Congress had first flooded the Union with legal-tender paper for the Civil War.",
+      "The full legal sentence came later. The **Gold Standard Act of 1900** defined the dollar as **25.8 grains** of gold nine-tenths fine. Between those two dates sat silver-purchase laws that strained the gold reserve, a panic year that forced repeal, and a presidential campaign that nearly put free silver in the White House. Resumption opened the road. The **1900** statute named where it ended.",
     ],
   },
   {
-    heading: "What resumption meant in 1879",
+    heading: "The date Congress named",
     paragraphs: [
-      "Resumption meant the Treasury would pay coin for greenbacks at face value. The wartime gold premium — paper dollars trading below gold dollars — had to be closed by policy, fiscal conditions, and credibility, not by a speech alone. The Resumption Act of **1875** had named the date. The years between built a gold reserve and tested whether politics would let the date stand.",
-      "When **1879** arrived, greenbacks and gold met at par in the markets that mattered. The paper note was again a convenient claim on the metallic dollar, not a rival depreciated unit. That is an operational gold standard for the government’s notes. It is not yet the full statutory sentence of 1900.",
-      "Resumption also sat beside the silver question. Bland–Allison purchases and later Sherman purchases meant the Treasury dealt in silver while promising gold. The credibility of gold payments depended on the gold reserve, not on the nickname of the standard. A note at par with gold in January can still face a run if silver policy later looks like a second unit fighting the first.",
+      "The Specie Payment Resumption Act of **1875** had set the day. Redemption of United States Notes in coin would begin on and after **1 January 1879**. That commitment alone did not close the premium. The Treasury had to build a gold reserve, and politics had to leave the date standing when opponents tried to soften or repeal it.",
+      "When the day arrived, greenbacks traded at par with gold. The paper note was again a convenient claim on the metallic dollar, not a rival unit trading at a discount. That is an operational gold standard for the government’s notes — coin for paper at face, in the windows that counted. It is not yet the full statutory definition of **1900**. Redemption worked in practice before the law wrote the grain weight into the code.",
+      "Resumption sat beside the silver question from the start. Bland–Allison purchases, and later Sherman purchases, meant the Treasury dealt in silver while promising gold. A note at par with gold in January could still face a run if silver policy later looked like a second unit fighting the first. Credibility rested on the gold reserve, not on the nickname of the standard.",
     ],
   },
   {
-    heading: "Silver purchase acts and gold-reserve strain",
+    heading: "Silver bought, gold drained",
     paragraphs: [
-      "Bland–Allison (**1878**) and Sherman (**1890**) required silver purchases that expanded silver coin or silver-backed notes. Holders who doubted the Treasury’s gold line could present claims and drain gold. In the early **1890s** gold outflows and reserve scares were part of public finance news. The panic year **1893** brought repeal of the Sherman purchase duty.",
-      "The Cleveland administrations’ gold-bond sales and defense of the reserve are part of this road. So is the political cost: defenders of gold looked like Wall Street’s allies; silver advocates looked like inflationists to the gold camp. The documentary point is mechanical. A Treasury that buys silver and pays gold needs enough gold — or enough credibility — to survive presentation of notes.",
-      "Bryan’s **1896** defeat reduced the odds of free silver at 16:1. New gold supplies in the late 1890s — including large finds that expanded the world gold stock — eased monetary stringency. The political path cleared for a statute that said gold without the same fear of an immediate silver flood. The [Crime of 1873](/history/america/crime-of-1873) page carries the nickname and the free-silver demand; this page carries the reserve arithmetic that made a gold statute feel safe enough to pass.",
+      "Bland–Allison (**1878**) and Sherman (**1890**) required silver purchases that expanded silver coin or silver-backed notes. Holders who doubted the Treasury’s gold line could present claims and drain gold. In the early **1890s** gold outflows and reserve scares were ordinary public-finance news. The panic year **1893** brought repeal of the Sherman purchase duty.",
+      "The Cleveland administrations’ gold-bond sales and defense of the reserve belong on this road. So does the political cost. Defenders of gold looked like Wall Street’s allies. Silver advocates looked like inflationists to the gold camp. The mechanism was simpler than the slogans. A Treasury that buys silver and pays gold needs enough gold — or enough credibility — to survive the presentation of notes.",
+      "Bryan’s **1896** defeat reduced the odds of free silver at sixteen to one. New gold supplies in the late 1890s — large finds that expanded the world gold stock — eased monetary stringency. The political path cleared for a statute that said gold without the same fear of an immediate silver flood. The Crime of 1873 carried the nickname and the free-silver demand. The reserve arithmetic that made a gold statute feel safe enough to pass is the rest of this story.",
     ],
   },
   {
-    heading: "The Gold Standard Act of 1900",
+    heading: "The Sound Money Law of 1900",
     paragraphs: [
-      "The Gold Standard Act defined the dollar as **25.8 grains** of gold nine-tenths fine — the familiar gold dollar parity — and put the gold commitment in clear statutory language. Silver remained in subsidiary and limited roles. The Act was the legal full stop after decades of greenback and silver argument.",
-      "“Gold standard” here means a legal definition and a redemption practice for the government’s money, not a promise that banks never fail or that prices never move. It means the unit was gold in law. The America chapter’s arc — [1792 bimetallism](/history/america/early-us-coinage), bank war, greenbacks, 1873, resumption — lands on that sentence.",
-      "International gold-standard practice among major economies was already the late-nineteenth-century norm. The 1900 Act aligned the United States’ legal text with that order. Domestic politics had spent a generation arguing whether silver would share the stage. The Act answered with gold as the definition of the dollar. The classical gold world’s wartime break comes later, on the [20th-century path](/history/20th-century/classical-gold-standard-end).",
+      "The Gold Standard Act of **14 March 1900** defined the dollar as **25.8 grains** of gold nine-tenths fine — the familiar gold-dollar parity — and put the commitment in clear statutory language. Silver remained in subsidiary and limited roles. After decades of greenback argument and silver argument, the unit of the dollar was gold in law.",
+      "A gold standard in that sense is a legal definition and a redemption practice for the government’s money. It is not a promise that banks never fail, or that prices never move. International gold-standard practice among major economies was already the late-nineteenth-century norm. The Act aligned the United States’ legal text with that order. Domestic politics had spent a generation asking whether silver would share the stage. The Act answered with gold as the definition of the dollar.",
     ],
+    figure: {
+      src: "/images/history/america/road-back-gold-1900-cartoon.jpg",
+      alt: "1900 Puck cartoon “The Survival of the Fittest”: a gold-standard gladiator with a “Sound Money Law of 1900” sword stands over a silver-standard fighter whose “16 TO 1” sword is broken.",
+      caption:
+        "“The Survival of the Fittest” (Puck, 1900) — gold standard after the Sound Money Law of 1900; silver’s “16 to 1” broken.",
+      credit: "Public domain — copyright 1900, Keppler & Schwarzmann; term expired.",
+      width: 1280,
+      height: 1369,
+    },
   },
   {
-    heading: "Where this chapter hands off",
+    heading: "The door to 1907",
     paragraphs: [
-      "America’s chapter ends at the gold statute and the door to 1907. It does not narrate the Federal Reserve Act, the 1933 gold recall, or the 1971 gold-window close. Those are [20th-century](/history/20th-century) articles with their own mechanisms and dates.",
-      "Read this page as the bridge: greenbacks back to par, silver politics contained enough for a gold definition, then stop. Open [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed) for the next liquidity crisis and the public central bank Jackson’s century did not build. That panic is about trust-company plumbing and a missing lender of last resort — not a replay of 1873’s Mint list.",
-      "Cross-links stay short. Silver mechanics live under [bimetallism](/history/silver/bimetallism). War paper detail lives under [greenbacks](/history/america/greenbacks-civil-war). The crime nickname lives under [1873](/history/america/crime-of-1873).",
+      "The gold statute closes the nineteenth-century fight over the American unit. The Federal Reserve Act, the 1933 gold recall, and the later close of the gold window belong later, with their own mechanisms and dates.",
+      "Greenbacks were back at par. Silver politics had been contained enough for a gold definition in statute. Then the story stops. The Panic of **1907** is about trust-company plumbing and a missing lender of last resort — not a replay of the Mint list of 1873. The public central bank Jackson’s century did not build arrives afterward, in **1913**.",
     ],
   },
   {
     heading: "A short timeline",
     paragraphs: [],
     list: [
-      "**1875:** Specie Payment Resumption Act; redemption date set for 1879.",
-      "**1878–90:** Bland–Allison and Sherman silver-purchase frameworks.",
-      "**1 January 1879:** Specie payments resume; greenbacks at par with gold.",
-      "**1893:** Panic; Sherman Silver Purchase Act repealed.",
-      "**1896:** Bryan loses; gold-standard politics strengthened.",
-      "**14 March 1900:** Gold Standard Act; dollar defined in gold.",
-      "**Next chapter:** Panic of 1907 → Federal Reserve Act 1913.",
+      "**1875.** Specie Payment Resumption Act; redemption date set for 1879.",
+      "**1878–90.** Bland–Allison and Sherman silver-purchase frameworks.",
+      "**1 January 1879.** Specie payments resume; greenbacks at par with gold.",
+      "**1893.** Panic; Sherman Silver Purchase Act repealed.",
+      "**1896.** Bryan loses; gold-standard politics strengthened.",
+      "**14 March 1900.** Gold Standard Act; dollar defined in gold.",
+      "**1907 into 1913.** Panic of 1907; Federal Reserve Act follows.",
     ],
   },
   {
-    heading: "Gold payments restored, then the handoff",
+    heading: "Gold in the statute, then the handoff",
     paragraphs: [
-      "This page stays with the American road from greenback resumption to the **1900** gold statute — then a clean handoff to 1907. It is not a recommendation to hold gold, not a convertibility target, and not a full history of the classical gold standard worldwide.",
-      "Previous silver article: [Crime of 1873](/history/america/crime-of-1873). War paper: [Greenbacks and the Civil War](/history/america/greenbacks-civil-war). Forward: [Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed). The chapter overview sits under [America & gold/silver politics](/history/america).",
+      "From resumption in **1879** to the grain weight written in **1900**, the American dollar returned to gold payments and then to a gold definition in law. Silver had contested that road for a generation. The statute closed the contest for the unit. What came next was a different crisis — liquidity in **1907**, and a public central bank the nineteenth-century republic had not built.",
     ],
   },
 ];
