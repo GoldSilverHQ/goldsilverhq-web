@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
+import { BlogIndexGrid } from "@/components/BlogIndexGrid";
 import { SiteShell } from "@/components/SiteShell";
 import { listBlogPosts } from "@/lib/content/blog";
 import { seoTitle } from "@/lib/content/map";
@@ -18,7 +19,7 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function BlogIndex() {
-  const posts = listBlogPosts();
+  const hasPosts = listBlogPosts().length > 0;
 
   return (
     <SiteShell>
@@ -30,28 +31,10 @@ function BlogIndex() {
           Short pieces that sit beside the longer History, Sound Money, and Markets pages.
         </p>
 
-        {posts.length === 0 ? (
-          <p className="mt-12 max-w-prose text-fg/90">Nothing published here yet.</p>
+        {hasPosts ? (
+          <BlogIndexGrid />
         ) : (
-          <ol className="mt-12 grid gap-3">
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: post.slug }}
-                  className="flex flex-col gap-1 rounded-lg bg-surface px-4 py-4 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] sm:flex-row sm:items-baseline sm:gap-4"
-                >
-                  <time dateTime={post.date} className="shrink-0 text-xs text-faint tabular-nums">
-                    {post.date}
-                  </time>
-                  <span>
-                    <span className="block font-medium">{post.title}</span>
-                    <span className="text-sm text-muted">{post.summary}</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
+          <p className="mt-12 max-w-prose text-fg/90">Nothing published here yet.</p>
         )}
       </div>
     </SiteShell>

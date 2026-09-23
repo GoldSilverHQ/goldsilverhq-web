@@ -1,13 +1,23 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { blogPostSitemapPaths, blogPosts, getBlogPost, listBlogPosts } from "./blog.ts";
+import { articleHeroForPath } from "./article-media.ts";
+import {
+  BLOG_TAGS,
+  activeBlogTags,
+  blogPostSitemapPaths,
+  blogPosts,
+  getBlogPost,
+  listBlogPosts,
+  listBlogPostsByTag,
+} from "./blog.ts";
 import { getBody } from "./bodies.ts";
-import { PHASE1_SITEMAP_PATHS } from "../seo/phase1-sitemap-paths.mjs";
+import { ogImagePathForRoute, PHASE1_SITEMAP_PATHS } from "../seo/phase1-sitemap-paths.mjs";
 
 const root = dirname(fileURLToPath(import.meta.url));
+const publicRoot = join(root, "../../../public");
 
 function bodyWordCount(slug: string) {
   const body = getBody("blog", slug);
@@ -28,28 +38,47 @@ function bodyWordCount(slug: string) {
 }
 
 describe("blog section", () => {
-  it("ships the Newton 1717 essay as the first ready post", () => {
-    assert.equal(blogPosts.length, 1);
-    const post = getBlogPost("newton-1717-guinea");
-    assert.ok(post);
-    assert.equal(post.status, "ready");
-    assert.equal(post.date, "2026-09-21");
-    assert.equal(listBlogPosts().length, 1);
-    assert.deepEqual(blogPostSitemapPaths(), ["/blog/newton-1717-guinea"]);
-    assert.match(post.xArticleUrl ?? "", /x\.com\/i\/article\/2102003835015155712/);
+  it("ships three ready posts including Newton with tags", () => {
+    assert.equal(blogPosts.length, 3);
+    assert.equal(listBlogPosts().length, 3);
+    const newton = getBlogPost("newton-1717-guinea");
+    assert.ok(newton);
+    assert.deepEqual(newton.tags, ["History", "Metals"]);
+    assert.match(newton.xArticleUrl ?? "", /x\.com\/i\/article\/2102003835015155712/);
+    assert.ok(getBlogPost("gold-silver-ratio-what-it-counts")?.tags.includes("Markets"));
+    assert.ok(getBlogPost("weimar-purchasing-power-note")?.tags.includes("Ideas"));
+    assert.deepEqual(
+      blogPostSitemapPaths(),
+      [
+        "/blog/newton-1717-guinea",
+        "/blog/gold-silver-ratio-what-it-counts",
+        "/blog/weimar-purchasing-power-note",
+      ],
+    );
   });
 
-  it("lists the blog hub and post on the Phase-1 sitemap", () => {
+  it("filters by tag and exposes the closed tag set", () => {
+    assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
+    assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
+    assert.equal(listBlogPostsByTag("History").length, 2);
+    assert.equal(listBlogPostsByTag("Metals").length, 2);
+    assert.equal(listBlogPostsByTag("Markets").length, 1);
+    assert.equal(listBlogPostsByTag("Ideas").length, 1);
+  });
+
+  it("lists the blog hub and posts on the Phase-1 sitemap", () => {
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/blog"));
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/blog/newton-1717-guinea"));
+    for (const path of blogPostSitemapPaths()) {
+      assert.ok(PHASE1_SITEMAP_PATHS.includes(path), path);
+    }
   });
 
-  it("keeps the site essay longer than the ~1.2k-word X Article for anti-cannibalization", () => {
+  it("keeps the Newton site essay longer than the ~1.2k-word X Article", () => {
     const words = bodyWordCount("newton-1717-guinea");
     assert.ok(words > 1400, `expected site essay >1400 words, got ${words}`);
   });
 
-  it("interlinks naturally and credits the X Article once", () => {
+  it("interlinks Newton naturally and credits the X Article once", () => {
     const body = getBody("blog", "newton-1717-guinea")!;
     const text = body
       .flatMap((s) => [...s.paragraphs, ...(s.callout?.paragraphs ?? [])])
@@ -66,17 +95,36 @@ describe("blog section", () => {
     assert.doesNotMatch(text, /if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?/i);
   });
 
-  it("exposes /blog index and /blog/$slug routes", () => {
+  it("exposes /blog index grid + /blog/$slug hero wiring", () => {
     const indexSrc = readFileSync(join(root, "../../routes/blog/index.tsx"), "utf8");
     const slugSrc = readFileSync(join(root, "../../routes/blog/$slug.tsx"), "utf8");
+    const gridSrc = readFileSync(join(root, "../../components/BlogIndexGrid.tsx"), "utf8");
     assert.match(indexSrc, /createFileRoute\("\/blog\/"\)/);
-    assert.match(indexSrc, /Notes and follow-ups/);
-    assert.match(slugSrc, /createFileRoute\("\/blog\/\$slug"\)/);
+    assert.match(indexSrc, /BlogIndexGrid/);
+    assert.match(gridSrc, /lg:grid-cols-3/);
+    assert.match(gridSrc, /Filter notes by topic/);
+    assert.match(slugSrc, /articleHeroForPath/);
+    assert.match(slugSrc, /hero=\{hero\}/);
   });
 
   it("keeps Blog in the site chrome nav", () => {
     const shell = readFileSync(join(root, "../../components/SiteShell.tsx"), "utf8");
     assert.match(shell, /href:\s*"\/blog"/);
     assert.match(shell, /label:\s*"Blog"/);
+  });
+
+  it("registers titlebild heroes for every ready blog post", () => {
+    for (const post of listBlogPosts()) {
+      const path = `/blog/${post.slug}`;
+      const hero = articleHeroForPath(path);
+      assert.ok(hero, `missing hero for ${path}`);
+      assert.equal(hero.ogSrc, ogImagePathForRoute(path));
+      assert.ok(existsSync(join(publicRoot, hero.src.replace(/^\//, ""))));
+      assert.ok(existsSync(join(publicRoot, hero.ogSrc.replace(/^\//, ""))));
+    }
+    assert.match(
+      articleHeroForPath("/blog/newton-1717-guinea")?.credit ?? "",
+      /X Article/i,
+    );
   });
 });
