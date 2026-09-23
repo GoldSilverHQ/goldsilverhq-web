@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article";
+import { HistorySubnav } from "@/components/HistorySubnav";
 import { HistoryYearCards } from "@/components/HistoryYearCards";
 import { SiteShell } from "@/components/SiteShell";
 import { historyHubBody } from "@/lib/content/bodies";
@@ -26,6 +27,7 @@ function HistoryHub() {
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "History" }]} />
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">History</p>
         <h1 className="mt-2 font-display text-4xl sm:text-5xl">A short history of sound money</h1>
+        <HistorySubnav className="mt-6" />
         <div className="mt-8">
           <ArticleSections sections={historyHubBody} />
         </div>
