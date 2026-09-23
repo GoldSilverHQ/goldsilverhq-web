@@ -11,8 +11,9 @@ import {
 } from "./robots-sitemap.ts";
 
 function expectedHistoryYearPaths() {
-  const years = [];
-  for (let year = 1545; year <= 1980; year += 1) years.push(year);
+  const early = [312, 1545, 1609, 1640, 1672, 1694, 1716, 1720, 1775];
+  const years = [...early];
+  for (let year = 1776; year <= 1980; year += 1) years.push(year);
   return years.map((year) => `/history/${year}`);
 }
 
@@ -83,7 +84,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 487);
+    assert.equal(locs.length, 265);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

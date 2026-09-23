@@ -38,18 +38,19 @@ const ARRIVAL =
 
 describe("intent paths (existing URLs only)", () => {
   it("keeps the sitemap freeze — no new mining/intent URLs", () => {
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 487);
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 265);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/year"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/312"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1545"));
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1550"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1640"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1716"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1775"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1776"));
-    assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1777"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1800"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1980"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/history/1544"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/history/311"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/history/1550"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/history/1721"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/history/1981"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1790"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1974"));
