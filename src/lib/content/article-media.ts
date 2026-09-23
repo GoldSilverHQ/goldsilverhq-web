@@ -43,10 +43,10 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/ancient/why-markets-chose-gold-silver",
     src: "/images/history/ancient/why-markets-chose-gold-silver.jpg",
     ogSrc: "/og/cards/history-ancient-why-markets-chose-gold-silver.jpg",
-    alt: "Renaissance painting of a moneylender and his wife weighing coins and examining precious metal at a table.",
+    alt: "Detail of a Renaissance table strewn with gold coins, a balance scale, pearls, and an open illuminated book.",
     caption:
-      "Quentin Massys, “The Moneylender and his Wife” (1514) — weighing coined metal in early modern trade.",
-    credit: "Public domain (artist died 1530). Louvre collection reproduction via Wikimedia Commons.",
+      "Quentin Massys, “The Moneylender and his Wife” (1514) — coined metal weighed on the table.",
+    credit: "Public domain (artist died 1530). Louvre INV 1444 reproduction via Wikimedia Commons.",
   },
   {
     path: "/history/ancient/lydia-first-coins",
@@ -61,10 +61,10 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/ancient/greece-silver-trade",
     src: "/images/history/ancient/greece-silver-trade.jpg",
     ogSrc: "/og/cards/history-ancient-greece-silver-trade.jpg",
-    alt: "Athenian silver tetradrachm: Athena’s head on the left and the owl reverse on the right.",
+    alt: "Athenian silver tetradrachm: Athena’s helmeted head beside the owl reverse.",
     caption:
       "Athenian owl tetradrachm (5th century BC) — silver coinage that moved with Greek trade.",
-    credit: "CC0 — Cleveland Museum of Art (Open Access).",
+    credit: "CC0 — Cleveland Museum of Art (Open Access), 1941.296.",
   },
   {
     path: "/history/ancient/rome-denarius-aureus",
@@ -77,16 +77,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/ancient/solidus-continuity",
     src: "/images/history/ancient/solidus-continuity.jpg",
     ogSrc: "/og/cards/history-ancient-solidus-continuity.jpg",
-    alt: "Gold solidus of Byzantine emperor Justinian I, facing portrait with imperial regalia.",
+    alt: "Two late-antique gold solidi side by side: Justinian I and Constantius II.",
     caption:
-      "Gold solidus of Justinian I (6th century) — the long-lived successor to late-Roman gold coinage.",
+      "Gold solidi of Justinian I and Constantius II — late-Roman gold coinage that the solidus continued.",
     credit: "CC0 — Metropolitan Museum of Art Open Access.",
   },
   {
     path: "/history/banks-paper/warehouses-to-public-banks",
     src: "/images/history/banks-paper/warehouses-to-public-banks.jpg",
     ogSrc: "/og/cards/history-banks-paper-warehouses-to-public-banks.jpg",
-    alt: "Painting of two money changers at a cluttered table counting and recording coins and notes.",
+    alt: "Detail of money changers’ hands, balance scale, coins, and open ledger on a table.",
     caption:
       "Marinus van Reymerswaele, “The Moneychangers” — private deposit-and-transfer work before public banks.",
     credit: "Public domain (artist active 16th century). Hermitage reproduction via Wikimedia Commons.",
@@ -98,7 +98,7 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     alt: "Seventeenth-century painting of Amsterdam’s old town hall on Dam Square.",
     caption:
       "Pieter Saenredam, old Amsterdam town hall on the Dam — home of the Wisselbank (Bank of Amsterdam).",
-    credit: "Public domain (artist died 1665).",
+    credit: "Public domain (artist died 1665). Rijksmuseum SK-C-1409.",
   },
   {
     path: "/history/banks-paper/bank-of-england",
@@ -106,7 +106,7 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     ogSrc: "/og/cards/history-banks-paper-bank-of-england.jpg",
     alt: "Historical print showing the Bank of England building in London.",
     caption: "Historical view of the Bank of England, London (print).",
-    credit: "CC0 — Rijksmuseum (RP-P-2018-2136).",
+    credit: "CC0 — Rijksmuseum (RP-P-2010-229).",
   },
   {
     path: "/history/banks-paper/john-law",
@@ -129,9 +129,9 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/america/early-us-coinage",
     src: "/images/history/america/early-us-coinage.jpg",
     ogSrc: "/og/cards/history-america-early-us-coinage.jpg",
-    alt: "Flowing Hair silver dollar coin on a dark background.",
-    caption: "Flowing Hair dollar — early United States silver coinage under the bimetallic Mint Act framework.",
-    credit: "Public domain (U.S. coin design; copyright expired / government work).",
+    alt: "1795 Flowing Hair silver dollar, obverse and reverse side by side.",
+    caption: "Flowing Hair dollar (1795) — early United States silver coinage under the Mint Act framework.",
+    credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
   },
   {
     path: "/history/america/jackson-and-the-bank",
@@ -195,9 +195,9 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/20th-century/1933-gold-recall",
     src: "/images/history/20th-century/1933-gold-recall.jpg",
     ogSrc: "/og/cards/history-20th-century-1933-gold-recall.jpg",
-    alt: "First page of Executive Order 6102 ordering the recall of gold coin and bullion in 1933.",
-    caption: "Executive Order 6102 (1933) — U.S. gold coin and bullion recall under FDR.",
-    credit: "Public domain — U.S. government work (National Archives).",
+    alt: "San Francisco Mint workmen standing among gold ingots and molds in the basement casting area.",
+    caption: "Gold ingots at the San Francisco Mint — official gold stock in the era of U.S. gold recall.",
+    credit: "Public domain — U.S. government photograph (NARA 296561).",
   },
   {
     path: "/history/20th-century/bretton-woods-nixon-1971",
@@ -254,9 +254,9 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/sound-money/what-is-sound-money",
     src: "/images/sound-money/what-is-sound-money.jpg",
     ogSrc: "/og/cards/sound-money-what-is-sound-money.jpg",
-    alt: "Renaissance painting of a woman weighing gold coins on a balance scale at a table.",
-    caption: "Jan Sanders van Hemessen, “Woman Weighing Gold” (c. 1530) — testing the metal, not the slogan.",
-    credit: "Public domain (artist died 1556). Gemäldegalerie, Berlin reproduction via Wikimedia Commons.",
+    alt: "Dutch Golden Age painting of a woman weighing gold on a small balance at a sunlit table.",
+    caption: "Pieter de Hooch, “Woman Weighing Gold” — testing the metal, not the slogan.",
+    credit: "Public domain (artist died 1684). Gemäldegalerie, Berlin (1401B) via Wikimedia Commons.",
   },
   {
     path: "/sound-money/hard-money-vs-fiat",
@@ -311,9 +311,10 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/markets/physical-silver-demand-by-country",
     src: "/images/markets/physical-silver-demand-by-country.jpg",
     ogSrc: "/og/cards/markets-physical-silver-demand-by-country.jpg",
-    alt: "Historical Chinese silver ingot (sycee) resting on a surface.",
-    caption: "Ming-dynasty silver ingot (sycee) — physical silver as offtake, not a screen quote.",
-    credit: "CC0 — open museum photograph via Wikimedia Commons.",
+    alt: "1890 Chartered Bank of India, Australia & China Shanghai note payable in five Mexican dollars.",
+    caption:
+      "Shanghai note for five Mexican dollars (1890) — physical silver demand moving through a named market.",
+    credit: "Public domain (19th-century banknote; copyright expired).",
   },
 ] as const;
 
