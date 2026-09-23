@@ -313,10 +313,9 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/markets/physical-silver-demand-by-country",
     src: "/images/markets/physical-silver-demand-by-country.jpg",
     ogSrc: "/og/cards/markets-physical-silver-demand-by-country.jpg",
-    alt: "1890 Chartered Bank of India, Australia & China Shanghai note payable in five Mexican dollars.",
-    caption:
-      "Shanghai note for five Mexican dollars (1890) — physical silver demand moving through a named market.",
-    credit: "Public domain (19th-century banknote; copyright expired).",
+    alt: "Stacked silver bullion bars with stamped serial numbers and purity marks.",
+    caption: "Physical silver — bars people buy, before the factory and workshop lists.",
+    credit: "Working titlebild for GoldSilverHQ (temporary).",
   },
   // Blog
   {

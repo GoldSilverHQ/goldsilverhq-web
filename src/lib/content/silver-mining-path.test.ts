@@ -55,7 +55,7 @@ describe("silver-mining intent path (existing URLs only)", () => {
 
   it("separates offtake from mines on physical silver demand", () => {
     const text = bodyText(getBody("markets", "physical-silver-demand-by-country")!);
-    assert.match(text, /mine-production ranking is a different list/i);
+    assert.match(text, /Mine production is a different ranking/i);
     assert.match(text, /\[Stocks & flows\]\(\/desk\)/);
     assert.doesNotMatch(text, /buy miners|stock pick/i);
 
