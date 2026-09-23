@@ -38,18 +38,25 @@ function bodyWordCount(slug: string) {
 }
 
 describe("blog section", () => {
-  it("ships three ready posts including Newton with tags", () => {
-    assert.equal(blogPosts.length, 3);
-    assert.equal(listBlogPosts().length, 3);
+  it("ships ready posts including LTCM + Newton with tags and source ids", () => {
+    assert.equal(blogPosts.length, 4);
+    assert.equal(listBlogPosts().length, 4);
+    const ltcm = getBlogPost("ltcm-1998-consortium");
+    assert.ok(ltcm);
+    assert.deepEqual(ltcm.tags, ["History", "Markets"]);
+    assert.equal(ltcm.sourceXId, "2102821638521688064");
+    assert.match(ltcm.xArticleUrl ?? "", /x\.com\/i\/article\/2102821638521688064/);
     const newton = getBlogPost("newton-1717-guinea");
     assert.ok(newton);
     assert.deepEqual(newton.tags, ["History", "Metals"]);
+    assert.equal(newton.sourceXId, "2102003835015155712");
     assert.match(newton.xArticleUrl ?? "", /x\.com\/i\/article\/2102003835015155712/);
     assert.ok(getBlogPost("gold-silver-ratio-what-it-counts")?.tags.includes("Markets"));
     assert.ok(getBlogPost("weimar-purchasing-power-note")?.tags.includes("Ideas"));
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/ltcm-1998-consortium",
         "/blog/newton-1717-guinea",
         "/blog/gold-silver-ratio-what-it-counts",
         "/blog/weimar-purchasing-power-note",
@@ -60,9 +67,9 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 2);
+    assert.equal(listBlogPostsByTag("History").length, 3);
     assert.equal(listBlogPostsByTag("Metals").length, 2);
-    assert.equal(listBlogPostsByTag("Markets").length, 1);
+    assert.equal(listBlogPostsByTag("Markets").length, 2);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
 
@@ -73,9 +80,11 @@ describe("blog section", () => {
     }
   });
 
-  it("keeps the Newton site essay longer than the ~1.2k-word X Article", () => {
-    const words = bodyWordCount("newton-1717-guinea");
-    assert.ok(words > 1400, `expected site essay >1400 words, got ${words}`);
+  it("keeps mirrored site essays longer than their X Articles", () => {
+    for (const slug of ["newton-1717-guinea", "ltcm-1998-consortium"]) {
+      const words = bodyWordCount(slug);
+      assert.ok(words > 1200, `expected site essay >1200 words for ${slug}, got ${words}`);
+    }
   });
 
   it("interlinks Newton lightly and credits the X Article once", () => {
@@ -93,6 +102,23 @@ describe("blog section", () => {
     );
     assert.equal(
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
+      1,
+    );
+  });
+
+  it("interlinks LTCM lightly and credits the X Article once", () => {
+    const body = getBody("blog", "ltcm-1998-consortium")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
+    assert.match(text, /\[fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2102821638521688064/g) ?? []).length,
       1,
     );
   });
@@ -126,6 +152,10 @@ describe("blog section", () => {
     }
     assert.match(
       articleHeroForPath("/blog/newton-1717-guinea")?.credit ?? "",
+      /X Article/i,
+    );
+    assert.match(
+      articleHeroForPath("/blog/ltcm-1998-consortium")?.credit ?? "",
       /X Article/i,
     );
   });

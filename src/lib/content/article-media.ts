@@ -319,6 +319,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/ltcm-1998-consortium",
+    src: "/images/blog/ltcm-1998-consortium.jpg",
+    ogSrc: "/og/cards/blog-ltcm-1998-consortium.jpg",
+    alt: "Late-1990s trading floor under pressure — title image for the LTCM 1998 consortium note.",
+    caption: "23 September 1998 — private capital, Fed facilitation, no public check.",
+    credit: "Title image from the GoldSilverHQ X Article on the LTCM consortium.",
+  },
+  {
     path: "/blog/newton-1717-guinea",
     src: "/images/blog/newton-1717-guinea.jpg",
     ogSrc: "/og/cards/blog-newton-1717-guinea.jpg",
