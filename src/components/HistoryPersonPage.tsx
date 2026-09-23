@@ -14,12 +14,12 @@ export function HistoryPersonPage({ person }: { person: HistoryPerson }) {
           { label: person.name },
         ]}
       />
-      <header>
+      <header className="max-w-prose">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">
           {person.role} · {person.life}
         </p>
         <h1 className="mt-2 font-display text-4xl text-fg sm:text-5xl">{person.name}</h1>
-        <p className="mt-3 max-w-2xl text-lg text-muted">{person.summary}</p>
+        <p className="mt-3 text-lg text-muted">{person.summary}</p>
         <ArticleHeroImage hero={person.image} />
       </header>
       <div className="mt-8 max-w-prose">
