@@ -76,6 +76,8 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/central-bank-gold-reserves",
       "/markets/gold-silver-ratio",
       "/markets/physical-silver-demand-by-country",
+      "/blog",
+      "/blog/newton-1717-guinea",
     ]);
 
     const xml = sitemapXml();
@@ -84,7 +86,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 265);
+    assert.equal(locs.length, 267);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

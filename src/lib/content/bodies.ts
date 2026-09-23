@@ -2759,7 +2759,115 @@ const physicalSilverDemandByCountry: Section[] = [
   },
 ];
 
+/** Blog: Newton 1717 — longer site essay than the X Article (anti-cannibalization). */
+const newton1717Guinea: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **21 September 1717**, the Master of the Royal Mint answered a problem that sounded almost absurd: gold was pouring into England, and silver coins were disappearing from everyday change.",
+      "The man writing the report was **Isaac Newton** — already famous for gravity, optics, and calculus. In his day job he ran the Mint. The Treasury had asked him, on **12 August**, for a plain statement of England’s gold and silver coins, the ratio between them, and what to do about silver that kept getting melted or shipped abroad. His answer, dated from the Mint Office that September, is one of the cleanest monetary diagnoses ever put on paper.",
+      "England had not formally declared a pure gold standard. On paper it still ran a [bimetallic](/history/silver/bimetallism) system: gold guineas and silver shillings were both money. In practice the legal value of the guinea — then **21 shillings and 6 pence** — made gold too dear relative to silver compared with much of Europe. Merchants noticed. They brought gold in. They took silver out.",
+    ],
+  },
+  {
+    heading: "Two metals, one wrong price",
+    paragraphs: [
+      "Bimetallism is not a slogan. It is a mint board: two metals, one legal unit, a **fixed mint ratio**. When that legal number drifts away from the **market ratio** — the gold price of silver in trade — Gresham’s pattern appears. The metal the Mint overvalues stays in coin; the metal it undervalues leaves as bullion or foreign payment. The [bimetallism](/history/silver/bimetallism) page carries that general machine. **1717** is England’s high-clarity case of the same arithmetic.",
+      "Newton put the numbers in front of the Lords of the Treasury without romance. A troy pound of standard gold was cut into **44½** guineas. A troy pound of standard silver was cut into **62** shillings. At a guinea of **£1 1s 6d**, that mint schedule implied roughly **15.07** units of fine silver per unit of fine gold. Exportable silver bullion, he noted, usually traded a few pence per ounce above coined silver. On that basis, a guinea was worth only about **20s 8d** in silver bullion — not **21s 6d**.",
+      "The gap was small in shillings and large in consequences. A few pence of overvaluation, repeated across every pound of gold imported, was enough to pull metal one way and push coin the other.",
+    ],
+  },
+  {
+    heading: "England against Europe — and against Asia",
+    paragraphs: [
+      "Newton then compared England with its trading partners. In France the usual proportion was about **15 to 1**. In Holland markets, guineas changed hands as if they were worth roughly **20s 7½d**. Across Italy, Germany, and the North, the implied guinea value clustered a little lower still. Spain and Portugal rated gold higher at home, which kept gold there and pushed Spanish silver out into Europe — silver that had long moved as the familiar [piece of eight](/history/silver/piece-of-eight) across Atlantic and Pacific routes.",
+      "Asia made the pressure worse. In China and Japan, Newton wrote, a pound of fine gold was worth only about nine or ten pounds of fine silver; in East India, about twelve. That cheap gold relative to silver pulled European silver eastward whenever ships loaded for the Indies. England’s Mint ratio was not a closed island. It sat inside a world silver current that already ran from American mines through European ports toward Asian settlement.",
+      "His conclusion was blunt:",
+    ],
+    callout: {
+      label: "Newton, Mint report, 21 September 1717",
+      paragraphs: [
+        "“It is the demand for exportation which hath raised the price of exportable Silver about 2d. or 3d. in the ounce above that of Silver in coyn, and have thereby created a temptation to export or melt down the silver coyn rather then give 2d. or 3d. for forreign silver.”",
+      ],
+    },
+  },
+  {
+    heading: "What a guinea was worth on Newton’s map",
+    paragraphs: [
+      "The report’s comparative table is easier to hold as a short list than as prose. Before the December cut, England’s legal guinea sat above what Newton’s bullion math and Europe’s markets implied:",
+    ],
+    table: {
+      caption: "Implied guinea values around the 1717 debate (Newton’s comparisons).",
+      headers: ["Reference", "About"],
+      rows: [
+        ["England’s legal rate (before the cut)", "21s 6d"],
+        ["Newton’s bullion math", "about 20s 8d"],
+        ["France (~15:1)", "about 20s 8½d"],
+        ["Holland market", "about 20s 7½d"],
+        ["Spain / Portugal (after the usual premium)", "about 20s 9d"],
+        ["England after the December 1717 proclamation", "21s"],
+      ],
+    },
+  },
+  {
+    heading: "The question behind the numbers",
+    paragraphs: [
+      "Newton did not stop at ratios. He asked whether the country should keep paying a premium to gold importers while its circulating silver drained away:",
+    ],
+    callout: {
+      label: "Newton, same report, 1717",
+      paragraphs: [
+        "“Must the Nation pay 38 or 40 shillings too much for every Pound Weight of Gold imported? Must all Our Silver be Exported to enrich the Merchants and is there no remedy?”",
+      ],
+    },
+  },
+  {
+    heading: "The December cut — and what it did not finish",
+    paragraphs: [
+      "His proposed remedy was to lower the guinea — take about **10d** or **12d** off its legal price so England’s gold–silver proportion matched Europe’s, or at least take **6d** off immediately and watch the effect. Leave things alone, he warned, and gold would fall anyway once silver grew scarce enough that people demanded a premium to pay in silver.",
+      "On **22 December 1717**, a royal proclamation cut the guinea to **21 shillings**. That was not the full **10–12d** cut Newton had floated as the clean European alignment, but it was the decisive public step. The guinea at **21s**, and the associated gold price of **£3 17s 10½d** per standard ounce, became the long-running English gold reference — interrupted mainly by wartime suspensions — deep into the classical gold-standard era.",
+      "Parliament’s half-step matters for the story. Officials wanted to keep a workable bimetallic face while stopping the silver drain. The first cut eased the overvaluation of gold; a second cut was talked about and then feared — because expecting another drop could itself freeze silver in private hands. England’s path toward gold as the large-value standard was therefore not a single decree. It was Mint arithmetic, a proclamation, and decades of practice leaning the same way.",
+    ],
+  },
+  {
+    heading: "The Mint, the Bank, and the silver already in motion",
+    paragraphs: [
+      "Newton’s Mint Office was not inventing England’s money from a blank page. The [Bank of England](/history/banks-paper/bank-of-england) had held its war-finance charter since **1694**; note issue and public credit already sat beside coin. **1717** is not a bank story. It is a coin-ratio story that still belongs in the same century of English monetary machinery — paper growing beside metal, and metal itself fighting over which ounce the law would favour.",
+      "Nor did Britain invent the silver outflow in **1717**. Spanish American silver — much of it coined as pieces of eight — had been flowing toward Asia for generations. Potosí-class supply and Asian settlement demand were older than Newton’s report. What he did was measure England’s place in that current and tell ministers that **Mint arithmetic**, not merchant greed alone, was feeding the local drain.",
+      "That is why this note sits beside the silver chapter rather than replacing it. [Bimetallism](/history/silver/bimetallism) names the statute machine. The [piece of eight](/history/silver/piece-of-eight) names the coin many counterparties actually held. Newton names the English Mint’s error relative to trade.",
+    ],
+  },
+  {
+    heading: "Official prices against market ratios",
+    paragraphs: [
+      "The **1717** episode is not a quaint coin story. It is an early case of official prices fighting market ratios. When a government names a fixed gold–silver relationship that the outside world does not share, the undervalued metal leaves and the overvalued metal arrives. Newton described the mechanism the way a physicist describes a force: demand for export raises bullion above coin, coin gets melted or shipped, and the circulating medium thins.",
+      "By lowering the guinea, the state reduced the official overvaluation of gold. Silver’s exit pressure eased at the margin. Over the following decades England’s monetary practice leaned harder on gold. Historians still argue how cleanly to date a “gold standard,” but Newton’s report is a landmark on that path: a working scientist diagnosing a monetary peg that did not match the trade of the world.",
+      "Later American statutes would write their own mint ratios — **15:1** in **1792**, then gold-friendlier corrections, then the long silver fight after **1873**. Those are different instruments in different countries. The family resemblance is the same: a legal number is not a market equilibrium. The live market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page; the idea of money that cannot be expanded at will sits under [hard money versus fiat](/sound-money/hard-money-vs-fiat).",
+    ],
+  },
+  {
+    heading: "What the rhyme is — and is not",
+    paragraphs: [
+      "The metals still trade as market prices, not as Newton’s shillings. The rhyme is institutional, not a tip.",
+      "Fixed ratios break. A legal or policy link between two monies that ignores relative demand invites drains, premia, and sudden corrections — whether the link is bimetallic coin, a currency-board peg, or an exchange-rate band.",
+      "Asia still matters for silver’s global bid, though today’s channels run through industry, investment, and East–West flows as well as eighteenth-century Indies fleets. Local official stories do not repeal that bid.",
+      "Gold’s official status can outlast the paperwork that created it. The guinea cut of **1717** helped set a gold reference that outlived Newton by centuries. Modern central-bank gold holdings rhyme with a long habit of treating gold as a hard reference when paper arrangements strain — without pretending history is a trading signal.",
+      "Newton’s report remains useful because it refuses mystique. He did not moralize silver into virtue or gold into vice. He counted. He compared. He asked what England was paying for a ratio that the rest of the trading world did not honor.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "In **1717**, the Master of the Mint told the Treasury that England’s silver was not vanishing by accident. It was leaving because gold’s official price was wrong relative to silver.",
+      "Three months later the guinea was cut to **21 shillings**. The coins in people’s pockets changed. The country’s monetary gravity shifted a little further toward gold.",
+      "Newton’s other laws made him immortal. This one made him useful.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2102003835015155712).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/newton-1717-guinea": newton1717Guinea,
   "banks-paper/john-law": johnLaw,
   "20th-century/panic-1907-fed": panic1907,
   "20th-century/weimar-1923": weimar,
