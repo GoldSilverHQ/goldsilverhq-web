@@ -65,7 +65,6 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.match(text, /\$35/);
     assert.match(text, /\[1933 U\.S\. gold recall\]\(\/history\/20th-century\/1933-gold-recall\)/);
     assert.match(text, /\[Bretton Woods\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
-    assert.match(text, /\[Sound Money\]\(\/sound-money\)/);
   });
 
   it("locks hard-money vs fiat as costly production vs law-and-habit", () => {
@@ -112,11 +111,19 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.match(text, /\[Hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /\[Inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
     assert.match(text, /\[What “backed” means\]\(\/sound-money\/backed-money\)/);
-    assert.match(text, /Weimar and Nixon belong under \[Sound Money History\]\(\/history\), not on this definitions page/);
+    assert.match(text, /\[Sound Money History\]\(\/history\)/);
+    assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of IDEA_EPISODES) {
       assert.match(text, new RegExp(`/sound-money/${slug}`));
+    }
+  });
+
+  it("keeps definition pages off SEO, outline, and disclaimer voice", () => {
+    for (const slug of IDEA_EPISODES) {
+      const text = bodyText(getBody("sound-money", slug)!);
+      assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i, `${slug} still has SEO/outline voice`);
     }
   });
 

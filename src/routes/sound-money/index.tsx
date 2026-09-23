@@ -30,9 +30,6 @@ function IdeaHub() {
         </div>
 
         <h2 className="mt-16 font-display text-3xl">Where the words settle</h2>
-        <p className="mt-2 max-w-prose text-muted">
-          Definitions first — then a short line on what this site is not.
-        </p>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page) => (
             <li key={page.slug}>

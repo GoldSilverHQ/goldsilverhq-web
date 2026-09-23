@@ -140,6 +140,13 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     assert.doesNotMatch(src, /five stretches/);
     assert.doesNotMatch(src, /documentary path through/);
   });
+  it("keeps 20th-century episodes off meta closings and shuttle links", () => {
+    for (const slug of ["panic-1907-fed", "weimar-1923", "bretton-woods-nixon-1971", "1933-gold-recall"]) {
+      const text = bodyText(getBody("20th-century", slug)!);
+      assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i, `${slug} still has SEO/outline voice`);
+    }
+  });
+
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
     for (const path of PHASE1_SITEMAP_PATHS) {
       if (path === "/history" || path === "/sound-money" || path === "/gold-silver" || path === "/markets") continue;
