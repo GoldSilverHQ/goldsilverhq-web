@@ -1147,9 +1147,9 @@ export const marketPages: Episode[] = [
   },
   {
     slug: "physical-silver-demand-by-country",
-    title: "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+    title: "What physical silver demand by country measures (and which table you are reading)",
     summary:
-      "Jewelry fabrication by country is a 2025 World Silver Survey table, not the bar-and-coin ranking. Recycling by source is a 2025 scrap-supply table, not offtake. USGS world mine output has stayed in the mid-20,000s of tonnes since the mid-2010s. Addresses, not a shopping list.",
+      "“Demand by country” is several World Silver Survey lists, not one ranking. Bars and coins bought (2024), coins struck, industrial use, jewelry fabrication, and scrap returned (2025) put different countries on top. USGS world mine output has stayed in the mid-20,000s of tonnes since the mid-2010s. Addresses, not a shopping list.",
     status: "ready",
     paragraphs: [
       "Country rankings of physical silver demand count identified purchases of bars and coins taken off the retail shelf (offtake) in a calendar year. Jewelry fabrication is a separate workshop table. Recycling by source is a separate scrap-supply table. None of those is a mine book.",
@@ -1173,7 +1173,7 @@ export const marketPages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "markets",
-      titleTag: "Physical Silver Demand by Country: Jewelry, Factories, and Bars",
+      titleTag: "Physical Silver Demand by Country: Bars, Factories, Jewelry, Scrap",
     },
   },
 ];
