@@ -109,12 +109,12 @@ const panic1907: Section[] = [
     heading: "A private last resort",
     paragraphs: [
       "In the crisis weeks, Morgan’s library at 219 Madison Avenue became a private command post. Bankers met, books were checked, and pools were pledged. Some firms received support. Knickerbocker stayed closed. Gold imports and Treasury deposits helped at the margins.",
-      "The documentary point is institutional, not hagiographic: a private coalition acted as a temporary last resort because statute had not built one. That fact later shaped the politics of reform. A country that had needed one man’s library to keep the Exchange open was a country ready to argue for a public facility — even if it argued for years about who should control it.",
+      "None of this needs a hero. A private coalition acted as a temporary last resort because statute had not built one. That fact later shaped the politics of reform. A country that had needed one man’s library to keep the Exchange open was a country ready to argue for a public facility — even if it argued for years about who should control it.",
     ],
   },
   {
     heading: "A short timeline, 1907–1913",
-    paragraphs: ["The sequence is created-after, not before. The Fed was built in the wake of 1907. It was not the institution that produced the panic."],
+    paragraphs: ["The Fed came after the panic, not before it."],
     list: [
       "**Early October 1907:** Copper speculation tied to Heinze and Morse breaks; linked banks and trusts look fragile.",
       "**22 October 1907:** Knickerbocker Trust faces a run and suspends payments.",
@@ -132,14 +132,14 @@ const panic1907: Section[] = [
       "Aldrich-Vreeland (**1908**) was the first legislative answer. Groups of national banks could issue emergency currency against assets other than only government bonds. The same law funded a National Monetary Commission to study a permanent system.",
       "The commission toured Europe and studied banks that already had a legal last window. The Aldrich Plan that followed imagined a central reserve association with banker influence and elastic note issue. Public politics rejected a design that looked too much like Wall Street’s private club with a federal seal.",
       "The Federal Reserve Act of **1913** created regional Federal Reserve Banks and a federal board structure. Member banks could discount commercial paper and receive Reserve notes. The public brief was elastic currency and a lender of last resort for banks, so an October run would not depend on one private library.",
-      "Jekyll Island belongs in the record as a drafting episode in the commission era. It is not the law itself. The statute is the December 1913 Act. Morgan’s 1907 rescue belongs as a private substitute for a missing public facility — stated as fact, not as hero worship, and not as proof that one man should own the last window forever.",
+      "Jekyll Island was a drafting meeting in the commission years, not the law. The statute is the December 1913 Act. Morgan’s rescue was a private stand-in for a public facility that did not yet exist, and nobody at the time wanted the next October to depend on one man’s library again.",
     ],
   },
   {
-    heading: "What followed",
+    heading: "A lender built for the wrong year",
     paragraphs: [
-      "After 1913 the wartime break with classical gold convertibility came next. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years sit between a private panic rescue and the wider end of the classical gold order.",
-      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. The [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) is what came next. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
+      "The regional Reserve Banks opened in **November 1914**. By then war had already closed the peacetime gold window across Europe. The Fed was designed for a trust-company run on Fifth Avenue, and it arrived in time for the [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) — a different kind of crisis, on a different scale.",
+      "The order of events runs one way. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make a Fed look necessary to Congress. Six years separate a crowd on the pavement from a signature at the White House, and in between sit a stopgap statute, a commission, a meeting on an island, and hearings on a Money Trust.",
     ],
   },
 ];
@@ -210,7 +210,7 @@ const weimar: Section[] = [
     heading: "Printing was the channel, not the whole cause",
     paragraphs: [
       "Printing is how the stock expanded. It is not a complete cause. A government that can tax and that faces a hard stop — gold convertibility, a currency board, a public that will not accept more notes — cannot do this for long. Weimar had a fiscal gap it would not close, a central bank that monetised Treasury paper, a lost war, reparations, and then the Ruhr. Remove the stop, keep the spending, and the unit fails.",
-      "It is a documented extreme, not a script every paper currency has to finish. The [1933 gold recall](/history/20th-century/1933-gold-recall) and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are later American stories — different years, different laws, different claims.",
+      "It is a documented extreme, not a script every paper currency has to finish. The paper mark died because a stop was missing and a government kept spending through the gap. When the Rentenmark put a stop back, the spiral stopped within weeks.",
     ],
   },
 ];
@@ -246,7 +246,7 @@ const nixon: Section[] = [
       "Economist Robert Triffin stated the contradiction in plain English. The world needed more dollars to trade and hold as reserves. Those dollars came from US deficits and capital outflows. The more dollars foreigners held, the larger the official claims on US gold. If the United States supplied enough dollars for growth, confidence in convertibility weakened. If it tightened enough to protect the gold stock, the world shorted dollars. That trap is the Triffin dilemma.",
       "From **1961 to 1968** the London Gold Pool tried to hold the free-market gold price near thirty-five dollars. Major central banks sold gold into the market when the price rose. The pool collapsed in **March 1968**. A two-tier market followed. The official price remained for central-bank transactions. The free market price could move away from thirty-five.",
       "Pressure did not stop there. In **May 1971** West Germany let the Deutsche Mark float. France converted dollars into gold in earlier years and kept pressing the convertibility rule. By August 1971 US gold stocks were far smaller than outstanding official dollar claims. The window could not pay every claim at thirty-five dollars if many holders presented paper at once.",
-      "Keep **1933** and **1971** labeled. In 1933 the United States ordered private citizens to turn in monetary gold and then raised the official gold price for government accounting. In 1971 private Americans were already outside the official gold channel. What closed was foreign official redemption of dollars for US gold.",
+      "**1933** and **1971** were different acts. In 1933 the United States ordered private citizens to turn in monetary gold and then raised the official gold price for government accounting. In 1971 private Americans were already outside the official gold channel. What closed was foreign official redemption of dollars for US gold.",
     ],
   },
   {
@@ -276,7 +276,7 @@ const nixon: Section[] = [
     paragraphs: [
       "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to **$42.22**. Pegs still failed under market pressure.",
       "By **1973** major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
-      "Why **$42.22** still appears on a Treasury line is on [official gold book value](/markets/official-gold-book-value). [Weimar 1923](/history/20th-century/weimar-1923) is a different extreme — not the same stop.",
+      "The last of those official prices outlived the system it belonged to. The Treasury still carries its gold at **$42.22** an ounce — an [official gold book value](/markets/official-gold-book-value) that no holder, foreign or domestic, can present a dollar against.",
     ],
   },
 ];
@@ -349,7 +349,7 @@ const goldRecall1933: Section[] = [
     heading: "",
     paragraphs: [
       "On **5 April 1933**, Franklin Roosevelt signed Executive Order **6102**. Most gold coin, gold bullion, and gold certificates in private American hands had to be delivered to a Federal Reserve Bank, a member bank, or a Treasury agent — at **$20.67 an ounce**, by a deadline printed as **1 May**. The week before inauguration, gold had already been leaving banks. A national bank holiday had stopped ordinary payments. The order made the call formal.",
-      "The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money. That is a different claim from the [wartime end of classical convertibility in 1914](/history/20th-century/classical-gold-standard-end), and a different claim from the [1971 close of the gold window](/history/20th-century/bretton-woods-nixon-1971) for foreign official holders.",
+      "The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
     ],
   },
   {
@@ -376,7 +376,7 @@ const goldRecall1933: Section[] = [
     ],
   },
   {
-    heading: "A short documentary sequence",
+    heading: "A short timeline",
     paragraphs: ["The holiday, the order, the contracts, the statute, then the new official price. Not a single weekend."],
     list: [
       "**6 March 1933.** National bank holiday. Gold payments and exports already constrained.",
@@ -386,14 +386,14 @@ const goldRecall1933: Section[] = [
       "**12 May 1933.** Thomas Amendment: authority to cut the gold content of the dollar.",
       "**5 June 1933.** Joint Resolution voids gold clauses in contracts.",
       "**30 January 1934.** Gold Reserve Act. Title vests in the United States. Official price $35.",
-      "**1934–1974.** Domestic monetary gold holding remains restricted. The next official-window break is [1971](/history/20th-century/bretton-woods-nixon-1971), a different claim.",
+      "**1934–1974.** Domestic monetary gold holding remains restricted. The official window for foreign governments stays open at $35 until 1971.",
     ],
   },
   {
     heading: "The stated rationale",
     paragraphs: [
       "The contemporaneous justification was Depression emergency: stop hoarding, reopen banks, expand the money stock, and raise the domestic price level. Officials argued that gold in private hoards and in bank vaults as coin blocked recovery, and that a higher official gold price would cheapen the dollar in gold terms.",
-      "Whether that program worked as advertised is a later argument. The documentary sequence stays: holiday, order, delivery, gold-clause resolution, statute, new official price.",
+      "Whether that program worked as advertised is a later argument among economists. The sequence itself is not in dispute: holiday, order, delivery, gold-clause resolution, statute, new official price.",
     ],
   },
   {
@@ -402,15 +402,15 @@ const goldRecall1933: Section[] = [
       "The [classical gold standard](/history/20th-century/classical-gold-standard-end) ended as a working international system in **1914**, when war finance blocked gold shipment and protected notes from internal drains. That break is about convertibility and metal movement among countries. It is not a domestic recall of coin from American households.",
       "The **1933–34** sequence is a United States statute story. Private monetary gold rights are removed. Title to official gold vests in the Treasury. The official price moves from $20.67 to $35. Americans lose a public claim they had still possessed after **1914**.",
       "Bretton Woods, in **1944**, defined the dollar against gold at **$35** for official convertibility. Ordinary people in the United States did not redeem paper at the Treasury window. On **15 August 1971** the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) closed the remaining window: foreign official holders could no longer present dollars and demand US gold at the posted price.",
-      "Keep three different breaks distinct: **1914** ends classical convertibility under war. **1933–34** removes the US public claim and revalues official gold. **1971** ends official dollar–gold convertibility for foreign holders. The shared lesson — gold stops being a right you can test — is not identity of the three events.",
+      "Three different breaks, then. **1914** ends classical convertibility under war. **1933–34** removes the US public claim and revalues official gold. **1971** ends official dollar–gold convertibility for foreign holders. The shared lesson — gold stops being a right you can test — is not identity of the three events.",
     ],
   },
   {
     heading: "After 1933",
     paragraphs: [
       "Americans could not legally hold monetary gold for decades. Licenses covered industry, dentistry, and art. The prohibition lasted until the end of **1974**, when statute again allowed citizens to hold gold bullion. Restoration of private holding did not restore a public convertibility contract. The $35 official price was already a bookkeeping fossil. The metal had a market. The dollar did not have a public gold window.",
-      "Between **1934** and **1971** the official price still mattered for foreign official holders and for Treasury accounts. It did not matter as a price at which an American could walk in with a note and walk out with coin. This episode is a domestic recall and a revaluation for government accounting. [1971](/history/20th-century/bretton-woods-nixon-1971) is the close of an official foreign window built on the $35 price the **1934** Act had set.",
-      "Read this as the middle turning point of the twentieth-century chapter: after classical gold’s wartime end, before Bretton Woods and **1971**. Statute took the public’s monetary gold rights and rewrote the official ounce. It did not invent paper money, sell metal, or forecast prices.",
+      "Between **1934** and **1971** the official price still mattered for foreign official holders and for Treasury accounts. It did not matter as a price at which an American could walk in with a note and walk out with coin. When the window finally closed in **1971**, it was the $35 price the **1934** Act had set that could no longer be honoured.",
+      "Americans kept the paper. The metal went to the Treasury at $20.67 an ounce and reappeared on its books at $35. The notes in their wallets looked the same as before. What those notes could be exchanged for had changed by law.",
     ],
   },
 ];
@@ -419,57 +419,56 @@ const whatIsSoundMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money, on this site, is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
     ],
   },
   {
     heading: "A working definition",
     paragraphs: [
       "If a treasury or a central bank can create more units without a matching real cost, the money is not sound in this sense. It may still circulate. It may still be legal tender. Circulation is not the test. The test is whether the issuer can dilute the stock as a matter of policy.",
-      "Historically the constraint was the cost of mining and minting gold and silver, or a redeemability rule that let holders present paper and take a known weight of metal. When that stop is gone, the unit can still work as a medium of exchange. It no longer passes the sound-money test used on this site.",
+      "Historically the constraint was the cost of mining and minting gold and silver, or a redeemability rule that let holders present paper and take a known weight of metal. When that stop is gone, the unit can still work as a medium of exchange. It no longer passes the test.",
       "Three money jobs sit in the background of the definition: medium of exchange, unit of account, and store of value. Sound money is the claim that the third job is not optional packaging. A unit that clears today’s till but cannot be held across years without political permission to dilute it fails the store-of-value half of the idea.",
-      "Related definitions: [hard money versus fiat](/sound-money/hard-money-vs-fiat), [inflation and purchasing power](/sound-money/inflation-purchasing-power), and [what “backed” means](/sound-money/backed-money). Cases and statutes live on [Sound Money History](/history).",
+      "Money that fails the test has a name of its own. The line between [hard money versus fiat](/sound-money/hard-money-vs-fiat) runs exactly here: one kind is costly to produce, the other exists because law and habit say it does.",
     ],
   },
   {
     heading: "Where the phrase comes from",
     paragraphs: [
       "Older English used “sound” in two related ways: the ring of a good coin (as against a counterfeit or a clipped piece), and sound as in healthy, not debased. Both senses survive. A sound coin rang true. A sound monetary standard did not quietly lighten the unit.",
-      "Nineteenth-century writers used the phrase for metal standards and for convertibility rules that kept paper honest. Debates over free silver, bank notes, and gold clauses all leaned on that vocabulary: was the unit honest, or was it a political instrument dressed as money? This site keeps that older job — a name for a constrained unit — not a brand for every asset someone prefers.",
-      "The vocabulary later migrated into textbooks, hard-money pamphlets, and modern glossaries. Along the way it picked up slogans. This site strips the slogan back to a testable claim about issuer discretion and cost of production.",
-      "The phrase is also used in crypto glossaries. That is a different search. This site uses it for metal-constrained money and for the ideas needed to read the history. A token with a capped schedule may borrow the adjective; it is not the documentary object of these pages.",
+      "Nineteenth-century writers used the phrase for metal standards and for convertibility rules that kept paper honest. Debates over free silver, bank notes, and gold clauses all leaned on that vocabulary: was the unit honest, or was it a political instrument dressed as money?",
+      "The phrase later migrated into textbooks, hard-money pamphlets, and modern glossaries, and picked up slogans along the way. Under the slogans the claim is still a testable one: who may create the unit, and at what cost.",
+      "Crypto writers now borrow the adjective for tokens with capped issuance schedules. That argument is about code rather than metal and statute. It is a different argument, with its own history.",
     ],
   },
   {
     heading: "The test: issuer discretion",
     paragraphs: [
-      "Ask one question of any unit: can the issuer expand the stock as policy, without a matching real cost or an enforceable redeemability contract? If yes, the money fails the sound-money test here — even when it is popular, even when it is legal tender, even when it once had a gold story attached.",
+      "Ask one question of any unit: can the issuer expand the stock as policy, without a matching real cost or an enforceable redeemability contract? If yes, the money fails — even when it is popular, even when it is legal tender, even when it once had a gold story attached.",
       "A gold coin can fail in practice through clipping, through a false mint ratio, or through a statute that ends public convertibility. Those are failures of the stop, not proofs that the definition was wrong. The definition names a constraint. It does not guarantee that every gold standard was well run.",
-      "Paper that is redeemable on demand in a defined weight of metal can qualify while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the vocabulary on these pages.",
+      "Paper that is redeemable on demand in a defined weight of metal can pass while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That happened across Europe in the summer of **1914**, when war shut the gold window, and again on **15 August 1971**, when the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) suspended the last official promise to turn dollars into gold.",
       "The test is institutional, not aesthetic. A beautiful coin with a false weight fails. An ugly note with a working redeemability window can pass while the window is open. Look at the stop, not the branding on the face.",
     ],
   },
   {
     heading: "Metal, paper, and the stop",
     paragraphs: [
-      "Metal entered money because markets needed a costly, recognisable, divisible stock — the story told on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Stamps and statutes came later. Paper entered as a claim on metal or as a warehouse receipt before it became a free-standing unit.",
-      "Sound money, on this site, is not “only coins forever.” It is the presence of a stop that the issuer cannot casually repeal for fiscal convenience. Mining cost is one stop. A public convertibility contract is another. A slogan that gold sits in a vault without a holder’s claim is not a stop — that confusion lives on [what “backed” means](/sound-money/backed-money).",
-      "When history pages show wartime suspensions, gold recalls, or closed windows, they are documenting the stop being removed. The idea page only names what was removed.",
+      "Metal entered money because markets needed a costly, recognisable, divisible stock. Stamps and statutes came later. Paper entered as a claim on metal, or as a warehouse receipt, long before it became a free-standing unit.",
+      "Sound money is not “only coins forever.” It is the presence of a stop that the issuer cannot casually repeal for fiscal convenience. Mining cost is one stop. A public convertibility contract is another. Gold sitting in a vault, with no holder able to claim it, is not a stop at all — which is why the word [“backed”](/sound-money/backed-money) needs such care.",
+      "Wartime suspensions, gold recalls, and closed windows are the same event seen in different years: the stop being removed. Each left the notes in circulation. Each changed what the notes were.",
     ],
   },
   {
     heading: "The stop, not nostalgia",
     paragraphs: [
       "The definition does not claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. Relative prices still move under a hard unit. Sound money constrains one source of a general rise in prices; it does not freeze bread against rent.",
-      "These pages answer what the words mean — not a buying brief, not a campaign to restore metal money, and not a forecast. [Information versus advice](/sound-money/information-not-advice) is the standing line for the whole site.",
-      "Weimar, Nixon, and the Fed belong in history, not pasted onto a definition. Mixing definitions with dated events makes both harder to follow.",
+      "Nor does a metal stop promise a fixed stock. The gold rushes in California and Australia around **1850**, and in South Africa after **1886**, added to the world’s gold and moved prices with it. What the miners could not do was add metal by decree. Every new ounce had to be found, dug, crushed, and refined before it could be coined.",
     ],
   },
   {
-    heading: "Definitions first, then dates",
+    heading: "Where the test was failed",
     paragraphs: [
-      "These pages stay on meaning. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits costly production from law-and-habit claims. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline of what the unit buys. [What “backed” means](/sound-money/backed-money) separates redeemability from reserve slogans. The overview sits under [Sound Money](/sound-money).",
-      "When the definition is clear and you want dates, leave these pages: [Weimar 1923](/history/20th-century/weimar-1923), the [1933 gold recall](/history/20th-century/1933-gold-recall), and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are documentary articles, not glossary entries. [Sound Money History](/history) holds the chapters. Markets figures and practice pages answer different questions — meaning here, events there, figures and handling elsewhere.",
+      "The definition earns its keep in dated cases. In Germany in **1923**, a paper mark created against Treasury bills stopped working as money by November. In **1933** the United States ordered private gold delivered and then revalued the official ounce. In **1971** foreign governments lost the right to present dollars for gold. In each case the notes kept circulating. What the holder could demand for them did not survive.",
+      "Those episodes are told in full, with their statutes and their numbers, in [Sound Money History](/history). What falls on the holder when the unit weakens is the subject of [inflation and purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
 ];
@@ -485,7 +484,7 @@ const hardMoneyVsFiat: Section[] = [
     heading: "Hard money",
     paragraphs: [
       "Hard money is money that is costly to produce. Historically that cost was mining and minting gold or silver. You cannot create a new ounce with a vote or a keystroke. You can steal it, debase the coin, or suspend convertibility — those are different failures — but the metal itself does not appear because a treasury needs it.",
-      "Hard is not a synonym for “never changes price.” An ounce of gold can buy more or less bread. The hardness is on the supply side: expanding the stock takes real resources. That is why [markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) before stamps and statutes finished the story.",
+      "Hard is not a synonym for “never changes price.” An ounce of gold can buy more or less bread. The hardness is on the supply side: expanding the stock takes real resources. That is why markets settled on gold and silver long before stamps and statutes finished the story.",
       "A redeemable note that is a claim on a defined weight of metal can sit in the hard category while the contract holds. The hardness is the metal stop, not the paper in the wallet. Drop the stop and the same paper migrates into the fiat column without changing its ink.",
       "Scarcity alone is not enough. A rare collectible can be scarce and still not be money. Hard money couples costly production with monetary use — settlement, pricing, and holding balances — under rules that make new units expensive to create.",
     ],
@@ -494,40 +493,41 @@ const hardMoneyVsFiat: Section[] = [
     heading: "Fiat money",
     paragraphs: [
       "Fiat money is a claim created by a state or a bank, accepted because of law and habit. The Latin *fiat* is “let it be done.” The unit exists because an authority says it does, and because people need it for taxes, debts, and daily settlement.",
-      "Fiat can be well managed or badly managed. That is not the distinction on this page. The distinction is the stop. If the issuer can expand the stock as policy, the money is fiat in the language used here even when it once had a gold story attached.",
+      "Fiat can be well managed or badly managed. Management is a separate question. The distinction is the stop. If the issuer can expand the stock as policy, the money is fiat even when it once had a gold story attached.",
       "Legal tender rules, tax acceptance, and clearing habit keep fiat useful. Usefulness is not hardness. A convenient unit can still be discretionary paper. Central-bank independence, inflation targets, and fiscal rules are management tools inside fiat; they are not a return to mining-cost constraints.",
     ],
   },
   {
     heading: "Both can circulate",
     paragraphs: [
-      "Circulation does not decide the category. People have used salt, cigarettes, paper notes, bank deposits, and gold coin. A circulating fiat unit can be more convenient than coin. A hard unit can be hoarded and disappear from the till. The question on this page is the constraint, not the popularity.",
-      "When convertibility is suspended, a note that was a claim on metal becomes, for practical purposes, fiat. That is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the names. The paper did not change color overnight. The stop did.",
-      "Wartime greenbacks in the United States floated below gold until **resumption** brought the paper dollar back to **par** with gold in practice (one paper dollar again worth the same as one gold dollar in the market). That episode is war paper and statute, not a proof that “paper always equals metal.” Read it on [greenbacks and the Civil War](/history/america/greenbacks-civil-war).",
+      "Circulation does not decide the category. People have used salt, cigarettes, paper notes, bank deposits, and gold coin. A circulating fiat unit can be more convenient than coin. A hard unit can be hoarded and disappear from the till. The question is the constraint, not the popularity.",
+      "When convertibility is suspended, a note that was a claim on metal becomes, for practical purposes, fiat. That is what happened across Europe in [1914](/history/20th-century/classical-gold-standard-end), and to the dollar’s last official gold link in [1971](/history/20th-century/bretton-woods-nixon-1971). The paper did not change color overnight. The stop did.",
+      "The United States had already lived through the reverse. During the Civil War, paper greenbacks issued to pay for the fighting traded below gold in New York for years — the story of [greenbacks and the Civil War](/history/america/greenbacks-civil-war). **Resumption** in **1879** brought it back to **par** — one paper dollar again worth one gold dollar in the market. That was war paper and statute, not proof that paper always equals metal.",
       "Gresham’s pattern — bad money driving good money out of the till when legal ratios misprice metals — is a circulation fact under hard regimes. It does not turn the undervalued metal into fiat. It shows that statute and market ratio can disagree while both metals remain costly to produce.",
     ],
   },
   {
     heading: "Where the line blurs",
     paragraphs: [
-      "Gold-exchange systems, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. The vocabulary of “gold” survived longer than the public claim.",
-      "Bank deposits that settle in fiat are claims on a banking system, not ounces. Covering a note issue with government bonds is a claim on a tax office, not metal backing. Those confusions belong next to [what “backed” means](/sound-money/backed-money).",
-      "Do not confuse hard money with “assets I like,” or fiat with “money I dislike.” The line used here is production cost and issuer discretion, stated as definitions for reading history — not as a ranking of virtue. A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
+      "Gold-exchange systems, as after Bretton Woods, backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. The vocabulary of “gold” survived longer than the public claim.",
+      "Bank deposits that settle in fiat are claims on a banking system, not ounces. Covering a note issue with government bonds is a claim on a tax office, not metal backing. Most of the confusion gathers around the word [“backed”](/sound-money/backed-money).",
+      "Hard money is not “assets I like,” and fiat is not “money I dislike.” The line is production cost and issuer discretion. It is not a ranking of virtue. A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
     ],
   },
   {
     heading: "Failures on each side",
     paragraphs: [
-      "Hard money fails by debasement, by false mint ratios, by clipping, and by suspending convertibility. The metal can still exist while the unit stops being honest. **[Bimetallism](/history/silver/bimetallism)** — a system that makes both gold and silver legal money at a fixed mint ratio — shows how a legal ratio can push one metal out of circulation without abolishing either metal. The [Crime of 1873](/history/america/crime-of-1873) shows how statute can redefine which metal the unit points at.",
-      "Fiat fails by over-issue relative to the goods and claims it is asked to measure, by broken fiscal stops, and by loss of confidence that collapses demand for balances. [Weimar 1923](/history/20th-century/weimar-1923) is the extreme documentary case on this site — a history page, not a definition rewrite.",
-      "Both categories can finance wars, pay taxes, and clear trade. The category names the stop. The history pages name the episodes. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what holders feel when the unit weakens under either label.",
+      "Hard money fails by debasement, by false mint ratios, by clipping, and by suspending convertibility. The metal can still exist while the unit stops being honest. [Bimetallism](/history/silver/bimetallism) — a system that makes both gold and silver legal money at a fixed mint ratio — shows how a legal ratio can push one metal out of circulation without abolishing either metal. The [Crime of 1873](/history/america/crime-of-1873) shows how statute can redefine which metal the unit points at.",
+      "Fiat fails by over-issue relative to the goods and claims it is asked to measure, by broken fiscal stops, and by loss of confidence that collapses demand for balances. Germany in **1923** is the extreme case: a paper mark issued for the Treasury until nobody would hold it, told in full in [Weimar 1923](/history/20th-century/weimar-1923).",
+      "Both categories can finance wars, pay taxes, and clear trade. The category names the stop. What holders feel when the unit weakens, under either label, is a fall in [purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
   {
     heading: "Costly production versus law and habit",
     paragraphs: [
-      "This page only splits costly production from law-and-habit claims. Related definitions: [what is sound money?](/sound-money/what-is-sound-money), [inflation and purchasing power](/sound-money/inflation-purchasing-power), [what “backed” means](/sound-money/backed-money). The overview sits under [Sound Money](/sound-money).",
-      "For events, leave these definitions. For dated market figures — including the mining-ratio clock that counts ounces leaving the ground — use [Markets](/markets) and the [gold–silver ratio](/markets/gold-silver-ratio). For handling metal, use [gold and silver in practice](/gold-silver). Keep Weimar, Nixon, and greenbacks as linked cases, not as pasted timelines that turn a definition into a history index.",
+      "Put the two side by side and the difference is the path of the next unit. A new ounce of gold starts as ore underground. It has to be found, dug, crushed, refined, and assayed before it can settle anything, and every one of those steps costs labour and capital. A new unit of fiat starts as a decision, and the cost of carrying it out is close to nothing.",
+      "The digging never stops, and its pace can be counted. Ounces of silver leaving the ground for every ounce of gold make a mining-ratio clock, and it runs well below the price ratio traders quote as the [gold–silver ratio](/markets/gold-silver-ratio). The gap between the two numbers is a reminder that even hard money has a supply, only one that no treasury can vote into being.",
+      "Everything else follows from that difference. One kind of money can be lost, stolen, or debased by the people who handle it, but not multiplied by them. The other can be managed well for a generation and then, when a budget or a war demands it, multiplied by the institution that issues it.",
     ],
   },
 ];
@@ -642,7 +642,7 @@ const backedMoney: Section[] = [
     heading: "What the word used to mean",
     paragraphs: [
       "For most of the nineteenth century, “backed” was not a slogan at all. A note was backed if it could be exchanged for coin, and the bank that issued it could be run if it could not pay. Each step of the twentieth century — the wartime suspensions of **1914**, the American recall of **1933**, the closing of the official window in **1971** — kept the word and removed a holder from the contract.",
-      "By the end, the word described a feeling about the issuer rather than a right against it. Pinning it back to its older meaning — who can present what, for how much — is what makes the history of those years readable. [What is sound money?](/sound-money/what-is-sound-money) names the constraint; [hard money vs fiat](/sound-money/hard-money-vs-fiat) names the cost of production behind it. The overview sits under [Sound Money](/sound-money).",
+      "By the end, the word described a feeling about the issuer rather than a right against it. Pinning it back to its older meaning — who can present what, for how much — is what makes the history of those years readable. [What is sound money?](/sound-money/what-is-sound-money) names the constraint; [hard money vs fiat](/sound-money/hard-money-vs-fiat) names the cost of production behind it.",
     ],
   },
 ];
@@ -2442,7 +2442,7 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "Divide the price of an ounce of gold by the price of an ounce of silver and you get the gold–silver ratio: how many ounces of silver buy one ounce of gold on that day. In September **2026** it stood near **68**. In January **1980** it briefly touched about **17**; in late April **2011**, about **31.5**. The ratio moves because both prices move, and it means exactly what the two prices meant on the day they were taken — no more.",
-      "Three contemporaneous clocks — three different counts — use the same phrase, ounces of silver per ounce of gold, for market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
+      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
     ],
   },
   {
@@ -2727,7 +2727,7 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Industrial scrap, at **110.1**, is the largest source — a little more than half of the world total. The survey records a slight dip in that line and names lower e-scrap yields, meaning less silver recovered from each tonne of discarded electronics, as the reason factory scrap did not rise with the rest. Jewelry scrap came to **38.2** and silverware scrap to **28.3**; both of those old-metal lines rose. Photographic scrap, a legacy of film, was **16.2**; coin scrap was **4.7**.",
+      "Industrial scrap, at **110.1**, is the largest source — a little more than half of the world total. The survey records a slight dip in that line and names lower e-scrap yields, meaning less silver recovered from each tonne of discarded electronics, as the reason factory scrap did not rise with the rest. Jewelry scrap came to **38.2** and silverware scrap to **28.3**; both of those old-metal lines rose. Photographic scrap, a legacy of film processing and X-ray plates, was **16.2**; coin scrap, mostly old coins melted down, was **4.7**.",
       "Scrap is secondary supply. A jewelry-scrap ounce is metal coming back from old pieces; a jewelry-fabrication ounce is metal going into new ones. An industrial-scrap ounce is recovered from spent products; an industrial-fabrication ounce is consumed in new ones. Scrap runs on a different clock from mining: the scrap clock follows products reaching the end of their lives, while the mine clock on the [gold–silver ratio](/markets/gold-silver-ratio) page follows ore coming out of the ground.",
     ],
   },
@@ -2835,23 +2835,43 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
-      "Sound money, on this site, means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal.",
+      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. The argument goes nowhere until the words hold still.",
+      "Sound money is the oldest of those words. It means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. Most of the rest follows from that one test.",
     ],
   },
   {
-    heading: "Words that keep slipping",
+    heading: "A unit nobody can simply make more of",
     paragraphs: [
-      "[What is sound money?](/sound-money/what-is-sound-money) states the working definition: a unit whose stock cannot be expanded at will — the test is whether the issuer can create more by decision alone. Circulation is not the test. A unit can clear today’s till and still fail the sound-money claim if the issuer may dilute the stock as policy.",
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** (money that exists by law and habit: Latin *fiat*, “let it be done”). A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
-      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline in what the unit buys; hyperinflation is a case, not the everyday meaning. [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, demand a known weight of metal — from a vault slogan with no public claim. A short fifth page states the media line: [information versus advice](/sound-money/information-not-advice).",
+      "[What is sound money?](/sound-money/what-is-sound-money) starts with a note that clears the till on Monday and asks a harder question of it: can whoever issued it create more by decision alone? Circulation is not the test. A unit can pay for groceries today and still fail, if the issuer may dilute the stock as policy.",
+      "Older English carried the same idea in two senses. A sound coin rang true when it was dropped on a counter; a clipped or plated one did not. A sound standard was healthy, not quietly lightened. Both senses point at the same fear: a unit worth less than its face claims.",
     ],
   },
   {
-    heading: "When the vocabulary is clear",
+    heading: "Dug from the ground, or declared by law",
     paragraphs: [
-      "When a word is the fog — “backed,” hard versus fiat, what the unit still buys — open that definition page. Each links the rest. Weimar and Nixon belong under [Sound Money History](/history), not on this definitions page. A definition may name a dated case once without pasting the whole timeline.",
-      "Current figures live under [Markets](/markets). Handling bars and coins lives under [gold and silver in practice](/gold-silver). When the next question is “what happened?” rather than “what does this word mean?”, the history shelf is the continuation.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** — money that exists by law and habit, from the Latin *fiat*, “let it be done.” Nobody mines a new ounce of gold with a vote. A treasury can create a new note with a signature.",
+      "Circulation does not decide that category either. A well-run fiat regime can be stable for years; a mismanaged gold regime can still debase the coin. And the same engraved note can change sides overnight. When a convertibility window closes, a claim on metal becomes paper that exists because the law says so. The ink does not change. The stop does.",
+    ],
+  },
+  {
+    heading: "What the unit still buys",
+    paragraphs: [
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the damage in plain terms: what an hour of work buys across years. Prices are the surface. The object is the unit itself. Hyperinflation, when prices rise by half or more in a single month, is the extreme case, not the everyday meaning.",
+      "Scarcity, war, and a bad harvest move prices under any money. What sound money constrains is one source of a general rise — a stock the issuer can expand whenever a budget runs short.",
+    ],
+  },
+  {
+    heading: "Backed by what, and for whom",
+    paragraphs: [
+      "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, take a known weight of metal — from a vault total that no holder can claim. A contract can be tested at a window. A slogan cannot.",
+      "Governments hold gold for many reasons. None of them makes a note convertible unless the law gives the holder the right to present it. Across the twentieth century that right narrowed step by step — suspended by war in **1914**, taken from American citizens in **1933**, withdrawn from foreign governments in **1971** — while the word “gold” stayed in the story.",
+    ],
+  },
+  {
+    heading: "The dates behind the words",
+    paragraphs: [
+      "The words matter because of what happened to them. In **1923** the German paper mark stopped working as money. In **1933** Americans were ordered to hand in their gold coin. In **1971** the last official promise to turn dollars into gold was suspended. Weimar, the gold recall, and Nixon are told in full in [Sound Money History](/history), each with its own laws and its own numbers.",
+      "Every one of those stories turns on the same few questions: what the unit was, who could make more of it, and whether anyone could still take it to a window and walk out with metal.",
     ],
   },
 ];
