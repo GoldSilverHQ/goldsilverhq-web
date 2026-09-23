@@ -109,7 +109,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+      "What physical silver demand by country measures (and which table you are reading)",
     );
     assert.deepEqual(
       page.related.map((r) => r.href),
@@ -196,9 +196,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+      "What physical silver demand by country measures (and which table you are reading)",
     );
-    assert.match(page.summary, /Jewelry fabrication by country/);
+    assert.match(page.summary, /several World Silver Survey lists/);
+    assert.match(page.summary, /jewelry fabrication/);
     assert.deepEqual(
       page.related.map((r) => r.href),
       ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
@@ -305,10 +306,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(page);
     assert.equal(
       page.title,
-      "Where fabricated silver goes: jewelry demand by country (and what physical rankings still do not measure)",
+      "What physical silver demand by country measures (and which table you are reading)",
     );
-    assert.match(page.summary, /Jewelry fabrication by country/);
-    assert.match(page.summary, /Recycling by source/);
+    assert.match(page.summary, /several World Silver Survey lists/);
+    assert.match(page.summary, /scrap returned/);
     assert.deepEqual(
       page.related.map((r) => r.href),
       ["/markets", "/markets/gold-silver-ratio", "/history/silver/monetary-and-industry"],
