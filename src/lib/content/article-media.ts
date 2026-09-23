@@ -316,6 +316,31 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
       "Shanghai note for five Mexican dollars (1890) — physical silver demand moving through a named market.",
     credit: "Public domain (19th-century banknote; copyright expired).",
   },
+  // Blog
+  {
+    path: "/blog/newton-1717-guinea",
+    src: "/images/blog/newton-1717-guinea.jpg",
+    ogSrc: "/og/cards/blog-newton-1717-guinea.jpg",
+    alt: "Isaac Newton at a desk with gold and silver coins — title image for the 1717 Mint report note.",
+    caption: "Newton’s Mint arithmetic, 1717 — gold priced wrong, silver leaving.",
+    credit: "Title image from the GoldSilverHQ X Article on the 1717 guinea cut.",
+  },
+  {
+    path: "/blog/gold-silver-ratio-what-it-counts",
+    src: "/images/blog/gold-silver-ratio-what-it-counts.jpg",
+    ogSrc: "/og/cards/blog-gold-silver-ratio-what-it-counts.jpg",
+    alt: "Gold and silver coins laid side by side for comparison.",
+    caption: "Two prices, one quotient — the ratio as a dated print, not a mint law.",
+    credit: "CC0 — open photograph via Wikimedia Commons.",
+  },
+  {
+    path: "/blog/weimar-purchasing-power-note",
+    src: "/images/blog/weimar-purchasing-power-note.jpg",
+    ogSrc: "/og/cards/blog-weimar-purchasing-power-note.jpg",
+    alt: "German children playing with worthless banknotes during the 1923 hyperinflation.",
+    caption: "Weimar 1923 — when the mark’s purchasing power failed by the hour.",
+    credit: "Public domain (period press photograph; copyright expired).",
+  },
 ] as const;
 
 const byPath = new Map(ARTICLE_HEROES.map((h) => [h.path.replace(/\/+$/, "") || "/", h]));

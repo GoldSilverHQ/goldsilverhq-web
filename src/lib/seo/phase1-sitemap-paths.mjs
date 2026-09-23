@@ -76,6 +76,8 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/physical-silver-demand-by-country",
   "/blog",
   "/blog/newton-1717-guinea",
+  "/blog/gold-silver-ratio-what-it-counts",
+  "/blog/weimar-purchasing-power-note",
 ];
 
 export const DEFAULT_OG_IMAGE_PATH = "/og.jpg";

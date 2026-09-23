@@ -78,6 +78,8 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/physical-silver-demand-by-country",
       "/blog",
       "/blog/newton-1717-guinea",
+      "/blog/gold-silver-ratio-what-it-counts",
+      "/blog/weimar-purchasing-power-note",
     ]);
 
     const xml = sitemapXml();
@@ -86,7 +88,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 267);
+    assert.equal(locs.length, 269);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
