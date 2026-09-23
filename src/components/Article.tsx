@@ -219,6 +219,8 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
 /**
  * Shared article lead: kicker → title → teaser → 5:2 titlebild band.
  * Matches X Articles’ reading order on-site (text first, landscape media under).
+ * Whole lead (title included) sits at prose width so it lines up with the
+ * titlebild and body column — not the wider page shell.
  * On-page display is 5:2 at prose width; OG/share files stay 1200×630.
  */
 export function ArticleLead({
@@ -235,10 +237,10 @@ export function ArticleLead({
   face?: ArticleFace;
 }) {
   return (
-    <header>
+    <header className="max-w-prose">
       {kicker ? <p className="text-xs text-muted">{kicker}</p> : null}
       <h1 className={`mt-2 ${faceClass(face)} text-4xl text-fg`}>{title}</h1>
-      {teaser ? <p className="mt-3 max-w-2xl text-muted">{teaser}</p> : null}
+      {teaser ? <p className="mt-3 text-muted">{teaser}</p> : null}
       {hero ? <ArticleHeroImage hero={hero} /> : null}
     </header>
   );

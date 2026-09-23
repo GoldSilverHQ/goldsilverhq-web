@@ -2,11 +2,13 @@
  * Article titlebild (= on-page hero file) that also doubles as the Open Graph / X card.
  *
  * On-page layout (via `ArticleLead`): **title (+ teaser) first, then landscape
- * media under** — X Articles reading order. Do not put the image above the title
+ * media under** — X Articles reading order. The whole lead (title, teaser,
+ * titlebild) shares the article text column (`max-w-prose`) so the title does
+ * not outrun the image or body. Do not put the image above the title
  * (feed-card style) and never ship a tall full-bleed of the whole illustration.
  *
  * Display vs share: files stay **1200×630** for OG/X. On-page, `ArticleHeroImage`
- * shows a **5:2** band (`aspect-[5/2]`, `max-w-prose`, object-cover center) —
+ * shows a **5:2** band (`aspect-[5/2]`, object-cover center) —
  * analog to X Article title-image, shorter than native ~1.9:1 OG. No max-height
  * strip crop (#108). Do not invent a portrait on-page format this pass.
  *
@@ -303,9 +305,9 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/markets/gold-silver-ratio",
     src: "/images/markets/gold-silver-ratio.jpg",
     ogSrc: "/og/cards/markets-gold-silver-ratio.jpg",
-    alt: "Gold and silver coins laid side by side for comparison.",
-    caption: "Gold and silver coins together — two prices, one quotient on a named date.",
-    credit: "CC0 — open photograph via Wikimedia Commons.",
+    alt: "A gold balance scale with gold coins on one pan and silver coins on the other.",
+    caption: "Two metals on one beam — the ratio is still just a dated quotient of printed prices.",
+    credit: "Working titlebild for GoldSilverHQ (temporary).",
   },
   {
     path: "/markets/physical-silver-demand-by-country",

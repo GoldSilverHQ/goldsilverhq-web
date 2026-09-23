@@ -14,10 +14,10 @@ export function HistoryYearPage({ year }: { year: HistoryYear }) {
           { label: String(year.year) },
         ]}
       />
-      <header>
+      <header className="max-w-prose">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">{year.year}</p>
         <h1 className="mt-2 font-display text-4xl text-fg sm:text-5xl">{year.title}</h1>
-        <p className="mt-3 max-w-2xl text-lg text-muted">{year.summary}</p>
+        <p className="mt-3 text-lg text-muted">{year.summary}</p>
         <ArticleHeroImage hero={year.image} />
       </header>
       <div className="mt-8 max-w-prose">
