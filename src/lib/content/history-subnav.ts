@@ -9,15 +9,15 @@ export type HistorySubnavItem = {
   cluster?: string;
 };
 
-/** Chapter order readers expect; Years + Notable people sit after the five chapters. */
+/** Chapter order readers expect; Years + VIPs sit after the five chapters. */
 export const HISTORY_SUBNAV: HistorySubnavItem[] = [
-  { label: "Ancient", href: "/history/ancient", cluster: "ancient" },
+  { label: "Ancient coinage", href: "/history/ancient", cluster: "ancient" },
   { label: "Banks & paper", href: "/history/banks-paper", cluster: "banks-paper" },
-  { label: "America", href: "/history/america", cluster: "america" },
-  { label: "Silver", href: "/history/silver", cluster: "silver" },
-  { label: "20th century", href: "/history/20th-century", cluster: "20th-century" },
-  { label: "Years", href: "/history/year" },
-  { label: "Notable people", href: "/history/vip" },
+  { label: "US gold politics", href: "/history/america", cluster: "america" },
+  { label: "Silver story", href: "/history/silver", cluster: "silver" },
+  { label: "1907 to 1971", href: "/history/20th-century", cluster: "20th-century" },
+  { label: "Year by year", href: "/history/year" },
+  { label: "VIPs", href: "/history/vip" },
 ];
 
 /** Header flyout: hub overview, then the shared subnav list. */

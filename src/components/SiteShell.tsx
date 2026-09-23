@@ -153,51 +153,75 @@ function HistoryDesktopMenu() {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearCloseTimer = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+
+  const openMenu = () => {
+    clearCloseTimer();
+    setOpen(true);
+  };
+
+  const scheduleClose = () => {
+    clearCloseTimer();
+    closeTimer.current = setTimeout(() => setOpen(false), 120);
+  };
+
+  useEffect(() => {
+    return () => clearCloseTimer();
+  }, []);
 
   useEffect(() => {
     if (!open) return;
-    const onPointerDown = (event: MouseEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
-    };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
-    document.addEventListener("mousedown", onPointerDown);
     document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("mousedown", onPointerDown);
-      document.removeEventListener("keydown", onKeyDown);
-    };
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
   return (
-    <div ref={rootRef} className="relative shrink-0">
-      <button
-        type="button"
-        className="inline-flex items-center gap-1 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+    <div
+      ref={rootRef}
+      className="relative shrink-0"
+      onMouseEnter={openMenu}
+      onMouseLeave={scheduleClose}
+      onFocusCapture={openMenu}
+      onBlurCapture={(event) => {
+        if (!rootRef.current?.contains(event.relatedTarget as Node)) setOpen(false);
+      }}
+    >
+      <Link
+        to="/history"
+        className="whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
-        onClick={() => setOpen((value) => !value)}
       >
         History
-        <ChevronDown className={`size-3.5 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
-      </button>
+      </Link>
       {open ? (
         <div
           id={menuId}
           role="menu"
           aria-label="History"
-          className="absolute top-full left-0 z-50 mt-2 min-w-[13.5rem] rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]"
+          className="absolute top-full left-0 z-50 mt-0 min-w-[14rem] pt-2"
         >
-          {HISTORY_NAV_MENU.map((item) => (
-            <HistoryMenuLink
-              key={item.href}
-              item={item}
-              onNavigate={() => setOpen(false)}
-              className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
-            />
-          ))}
+          <div className="rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]">
+            {HISTORY_NAV_MENU.map((item) => (
+              <HistoryMenuLink
+                key={item.href}
+                item={item}
+                onNavigate={() => setOpen(false)}
+                className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
+              />
+            ))}
+          </div>
         </div>
       ) : null}
     </div>
