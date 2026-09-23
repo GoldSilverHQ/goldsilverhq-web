@@ -1,15 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
+import { HISTORY_NAV_MENU } from "@/lib/content/history-subnav";
 
 const NAV = [
   { href: "/desk", label: "Desk" },
   { href: "/sound-money", label: "Sound Money" },
-  { href: "/history", label: "History" },
+  { href: "/history", label: "History", hasHistoryMenu: true },
   { href: "/markets", label: "Markets" },
   { href: "/gold-silver", label: "In Practice" },
-];
+] as const;
 
 const SOCIALS = [
   { href: "https://x.com/GoldSilverHQ", label: "X", name: "GoldSilverHQ on X" },
@@ -119,6 +120,126 @@ function Brand() {
   );
 }
 
+function HistoryMenuLink({
+  item,
+  className,
+  onNavigate,
+}: {
+  item: (typeof HISTORY_NAV_MENU)[number];
+  className: string;
+  onNavigate?: () => void;
+}) {
+  if (item.cluster) {
+    return (
+      <Link
+        to="/history/$cluster"
+        params={{ cluster: item.cluster }}
+        className={className}
+        onClick={onNavigate}
+      >
+        {item.label}
+      </Link>
+    );
+  }
+  return (
+    <Link to={item.href} className={className} onClick={onNavigate}>
+      {item.label}
+    </Link>
+  );
+}
+
+function HistoryDesktopMenu() {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const menuId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  return (
+    <div ref={rootRef} className="relative shrink-0">
+      <button
+        type="button"
+        className="inline-flex items-center gap-1 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+        aria-expanded={open}
+        aria-controls={menuId}
+        aria-haspopup="menu"
+        onClick={() => setOpen((value) => !value)}
+      >
+        History
+        <ChevronDown className={`size-3.5 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+      </button>
+      {open ? (
+        <div
+          id={menuId}
+          role="menu"
+          aria-label="History"
+          className="absolute top-full left-0 z-50 mt-2 min-w-[13.5rem] rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]"
+        >
+          {HISTORY_NAV_MENU.map((item) => (
+            <HistoryMenuLink
+              key={item.href}
+              item={item}
+              onNavigate={() => setOpen(false)}
+              className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
+            />
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function HistoryMobileSection({ onNavigate }: { onNavigate: () => void }) {
+  const [open, setOpen] = useState(false);
+  const panelId = useId();
+
+  return (
+    <div>
+      <div className="flex min-h-11 items-center gap-1">
+        <Link to="/history" onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-fg">
+          History
+        </Link>
+        <button
+          type="button"
+          className="grid size-11 place-items-center text-muted hover:text-gold-soft"
+          aria-expanded={open}
+          aria-controls={panelId}
+          aria-label={open ? "Hide History sections" : "Show History sections"}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <ChevronDown className={`size-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+        </button>
+      </div>
+      {open ? (
+        <div id={panelId} className="mb-1 ml-3 flex flex-col border-l border-line pl-3">
+          {HISTORY_NAV_MENU.filter((item) => item.href !== "/history").map((item) => (
+            <HistoryMenuLink
+              key={item.href}
+              item={item}
+              onNavigate={onNavigate}
+              className="flex min-h-11 items-center text-sm text-muted hover:text-gold-soft"
+            />
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export function SiteShell({
   children,
   ui,
@@ -137,15 +258,19 @@ export function SiteShell({
             <Brand />
           </Link>
           <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-4 whitespace-nowrap xl:flex xl:pl-2">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) =>
+              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
+                <HistoryDesktopMenu key={item.href} />
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
           <div className="ml-auto flex shrink-0 items-center">
             <div className="hidden min-w-0 md:block xl:pr-5">
@@ -169,16 +294,20 @@ export function SiteShell({
         </div>
         {open ? (
           <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 xl:hidden">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                onClick={() => setOpen(false)}
-                className="flex min-h-11 items-center text-fg"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) =>
+              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
+                <HistoryMobileSection key={item.href} onNavigate={() => setOpen(false)} />
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className="flex min-h-11 items-center text-fg"
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
             <div className="mt-3 border-t border-line pt-3">
               <SocialLinks onNavigate={() => setOpen(false)} />
             </div>
