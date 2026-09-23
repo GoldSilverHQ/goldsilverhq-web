@@ -675,8 +675,8 @@ export const historyClusters: Cluster[] = [
           "The classical gold standard was a set of practices: convertibility, gold shipping, and interest rates that responded to reserve drains. The First World War suspended it. What came after was not the same system with a pause. It was a different architecture.",
         ],
         related: [
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
-          { title: "Panic of 1907 and the birth of the Fed", href: "/history/20th-century/panic-1907-fed" },
+          { title: "1933 U.S. gold recall (Executive Order 6102)", href: "/history/20th-century/1933-gold-recall" },
+          { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
         ],
         seo: {
           primary: "classical gold standard",
