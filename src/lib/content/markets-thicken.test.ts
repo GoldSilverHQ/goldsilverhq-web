@@ -931,6 +931,7 @@ describe("markets page thicken (no new URLs)", () => {
 
     const pageMeta = getMarket("central-bank-gold-reserves");
     assert.ok(pageMeta);
+    assert.ok(pageMeta.seo);
     assert.match(pageMeta.summary, /Gold: 0/);
     assert.match(pageMeta.summary, /Canada/);
     assert.ok(pageMeta.seo.secondary.includes("canada gold reserves"));
