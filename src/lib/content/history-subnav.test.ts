@@ -3,10 +3,18 @@ import { describe, it } from "node:test";
 import { HISTORY_NAV_MENU, HISTORY_SUBNAV } from "./history-subnav.ts";
 
 describe("history-subnav", () => {
-  it("lists the five chapter hubs plus Years and Notable people", () => {
+  it("lists punchy chapter labels plus Year by year and VIPs", () => {
     assert.deepEqual(
       HISTORY_SUBNAV.map((item) => item.label),
-      ["Ancient", "Banks & paper", "America", "Silver", "20th century", "Years", "Notable people"],
+      [
+        "Ancient coinage",
+        "Banks & paper",
+        "US gold politics",
+        "Silver story",
+        "1907 to 1971",
+        "Year by year",
+        "VIPs",
+      ],
     );
     assert.deepEqual(
       HISTORY_SUBNAV.map((item) => item.href),
