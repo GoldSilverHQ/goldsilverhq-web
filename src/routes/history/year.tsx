@@ -6,7 +6,7 @@ import { seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
 const DESCRIPTION =
-  "One short page for every year from 1776 through 1980, plus a few earlier hinges. A note and one picture. No forecast.";
+  "One short page for every year from 1776 through 1980, plus a few earlier dated stops. A note and one picture.";
 
 export const Route = createFileRoute("/history/year")({
   head: () => ({
