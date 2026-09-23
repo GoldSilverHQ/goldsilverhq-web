@@ -333,7 +333,7 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     assert.match(text, /Manila galleon/);
     assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
     assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
-    assert.match(text, /\/maps/);
+    assert.doesNotMatch(text, /\]\(\/maps\)/);
   });
 
   it("locks monetary-and-industry as dual-role split", () => {
