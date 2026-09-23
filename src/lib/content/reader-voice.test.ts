@@ -75,6 +75,11 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const opener = historyHubBody[0]?.paragraphs[0] ?? "";
     assert.match(opener, /1923|1971/);
     assert.doesNotMatch(opener, /This section records|not a glossary|not a sales page/);
+    const history = bodyText(historyHubBody);
+    assert.doesNotMatch(history, /Four hinges|five stretches|You do not need every page/i);
+    assert.doesNotMatch(history, /do not sell metal|forecast prices|turn a panic into a pitch/i);
+    assert.doesNotMatch(history, /curious adult can leave able to explain/);
+    assert.doesNotMatch(history, /densest modern door|natural entry|slower on-ramp/);
   });
 
   it("keeps hub episode doors as narrative links, not catalog-only lists", () => {
@@ -94,15 +99,27 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     }
     const history = bodyText(historyHubBody);
     assert.match(history, /\[Weimar \*\*1923\*\*\]\(\/history\/20th-century\/weimar-1923\)/);
-    assert.match(history, /\[John Law \*\*1720\*\*\]\(\/history\/banks-paper\/john-law\)/);
+    assert.match(history, /\[John Law[^\]]*1720[^\]]*\]\(\/history\/banks-paper\/john-law\)/);
     assert.match(history, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    // Quiet episode doors — not a directory of every chapter hub
+    assert.doesNotMatch(history, /\]\(\/history\/ancient\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/banks-paper\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/america\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/silver\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/20th-century\)/);
   });
 
+  it("keeps history hub route chrome free of sitemap positioning", () => {
+    const src = readFileSync(join(root, "routes/history/index.tsx"), "utf8");
+    assert.doesNotMatch(src, /five stretches/);
+    assert.doesNotMatch(src, /documentary path through/);
+  });
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
     for (const path of PHASE1_SITEMAP_PATHS) {
       if (path === "/history" || path === "/sound-money" || path === "/gold-silver" || path === "/markets") continue;
       const parts = path.split("/").filter(Boolean);
-      if (parts[0] === "history" && parts.length === 3) {
+      // Episode articles only — year pages and VIP bios use other content modules
+      if (parts[0] === "history" && parts.length === 3 && parts[1] !== "vip") {
         const body = getBody(parts[1], parts[2]);
         assert.ok(body, `missing body for ${path}`);
         assertClean(path, bodyText(body));

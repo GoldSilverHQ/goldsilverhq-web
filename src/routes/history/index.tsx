@@ -12,7 +12,7 @@ export const Route = createFileRoute("/history/")({
     meta: pageShareMeta({
       title: seoTitle(historyHub.titleTag),
       description:
-        "What happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
+        "What happened when money was metal, paper, or both — from clipped coins and warehouse receipts to Weimar, Bretton Woods, and the 1971 gold-window close.",
       path: "/history",
     }),
   }),
@@ -54,7 +54,7 @@ function HistoryHub() {
 
         <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
         <p className="mt-2 max-w-prose text-muted">
-          From ancient coinage to the gold-window close — five stretches, each with its own dated articles.
+          Coinage before paper, paper before fiat, statutes that redefined the dollar, and the century that closed the gold window.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {historyClusters.map((cluster) => (
