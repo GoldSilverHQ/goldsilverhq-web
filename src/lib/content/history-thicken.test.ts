@@ -189,7 +189,7 @@ describe("america cluster thicken (no new URLs)", () => {
     assert.match(text, /sixteen to one|16:1/);
     assert.match(text, /Bryan/);
     assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
-    assert.match(text, /\[America & gold\/silver politics\]\(\/history\/america\)/);
+    assert.doesNotMatch(text, /This page|these pages|\bspine\b|\bhinge\b|chapter overview/i);
   });
 
   it("locks Jackson as pre-Fed bank war", () => {
@@ -256,7 +256,7 @@ describe("america cluster thicken (no new URLs)", () => {
     assert.match(text, /1900/);
     assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
     assert.match(text, /\[Panic of 1907\]\(\/history\/20th-century\/panic-1907-fed\)/);
-    assert.match(text, /Three fights, three centuries/);
+    assert.match(text, /Jackson’s bank is not the Fed/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of AMERICA_EPISODES) {
@@ -333,7 +333,7 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     assert.match(text, /Manila galleon/);
     assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
     assert.match(text, /\[Greece: silver and trade\]\(\/history\/ancient\/greece-silver-trade\)/);
-    assert.match(text, /\/maps/);
+    assert.doesNotMatch(text, /\]\(\/maps\)/);
   });
 
   it("locks monetary-and-industry as dual-role split", () => {
@@ -363,7 +363,7 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     const words = wordCount(text);
     assert.ok(words >= 750 && words <= 1200, `hub: expected 750–1200 words, got ${words}`);
     assert.match(text, /Potosí|piece of eight|bimetallism|Silver Thursday/i);
-    assert.match(text, /Three silver stories, three hinges/);
+    assert.match(text, /Not one lesson about printing/);
     assert.match(text, /\[Crime of 1873\]\(\/history\/america\/crime-of-1873\)/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
@@ -433,7 +433,7 @@ describe("reader polish: documentary takeaways (no new URLs)", () => {
     const assignats = bodyText(getBody("banks-paper", "assignats")!);
     assert.match(assignats, /\[John Law and the Mississippi Bubble\]\(\/history\/banks-paper\/john-law\)/);
     assert.match(assignats, /\[Bank of England\]\(\/history\/banks-paper\/bank-of-england\)/);
-    assert.match(assignats, /\[banks and paper\]\(\/history\/banks-paper\)/);
+    assert.doesNotMatch(assignats, /Do not merge|chapter keeps those dates apart|Keep the instruments/);
 
     const industry = bodyText(getBody("silver", "monetary-and-industry")!);
     assert.match(industry, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);

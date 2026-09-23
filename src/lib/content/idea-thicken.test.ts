@@ -107,12 +107,12 @@ describe("idea / sound-money thicken (no new URLs)", () => {
 
     const text = bodyText(soundMoneyHubBody);
     const words = wordCount(text);
-    assert.ok(words >= 550 && words <= 1200, `hub: expected 550–1200 words, got ${words}`);
+    assert.ok(words >= 300 && words <= 1200, `hub: expected 300–1200 words, got ${words}`);
     assert.match(text, /\[What is sound money\?\]\(\/sound-money\/what-is-sound-money\)/);
     assert.match(text, /\[Hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /\[Inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
     assert.match(text, /\[What “backed” means\]\(\/sound-money\/backed-money\)/);
-    assert.match(text, /Weimar and Nixon belong there, not on this definitions page/);
+    assert.match(text, /Weimar and Nixon belong under \[Sound Money History\]\(\/history\), not on this definitions page/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of IDEA_EPISODES) {

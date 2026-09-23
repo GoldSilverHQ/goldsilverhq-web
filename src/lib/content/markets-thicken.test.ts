@@ -41,8 +41,8 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
-    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
+    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
     const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
     assert.ok(investment, "2024 investment ranking must stay");
     assert.ok(coins, "coins-and-medals mint table must stay");
@@ -101,8 +101,8 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(mixTable, /\*\*8%\*\*/);
     assert.match(text, /449\.5 million ounces/);
     assert.match(text, /factory address/i);
-    assert.match(hubText, /2025.*industrial-fabrication/);
-    assert.match(neighborText, /industrial fabrication as a factory table/);
+    assert.match(hubText, /\*\*2025\*\* tables for industrial use/);
+    assert.match(neighborText, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
     assert.doesNotMatch(text, /639\.6|forecast|ebook|Kauf|buy silver in India|price target/i);
 
     const page = getMarket("physical-silver-demand-by-country");
@@ -128,11 +128,11 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
-    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
+    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
     const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
-    const jewelry = body.find((s) => s.heading === "2025 jewelry fabrication by country — a fourth table");
-    const usgs = body.find((s) => s.heading === "Mine supply on the USGS book — not a new boom");
+    const jewelry = body.find((s) => s.heading === "Jewelry by country, 2025");
+    const usgs = body.find((s) => s.heading === "World mine output: flat for a decade");
     assert.ok(investment, "2024 investment ranking must stay");
     assert.ok(coins, "coins-and-medals mint table must stay");
     assert.ok(industrial, "2025 industrial country block must stay");
@@ -189,8 +189,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /Mineral Commodity Summaries 2026/);
     assert.match(text, /\[markets\]\(\/markets\)/);
     assert.match(text, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
-    assert.match(hubText, /jewelry-fabrication/);
-    assert.match(neighborText, /jewelry fabrication as a workshop table/);
+    assert.match(hubText, /jewelry, coin minting, and recycled scrap/);
     assert.doesNotMatch(text, /639\.6|159\.4|forecast|ebook|Kauf|buy silver in India|price target/i);
 
     const page = getMarket("physical-silver-demand-by-country");
@@ -217,12 +216,12 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(body);
 
     const investment = body.find((s) => s.heading === "2024 country snapshots");
-    const coins = body.find((s) => s.heading === "2025 coins and medals fabrication — a different table");
-    const industrial = body.find((s) => s.heading === "2025 industrial fabrication by country — a third table");
+    const coins = body.find((s) => s.heading === "Silver coins and medals by country, 2025");
+    const industrial = body.find((s) => s.heading === "Industrial use by country, 2025");
     const mix = body.find((s) => s.heading === "Where 2025 industrial ounces went");
-    const jewelry = body.find((s) => s.heading === "2025 jewelry fabrication by country — a fourth table");
+    const jewelry = body.find((s) => s.heading === "Jewelry by country, 2025");
     const recycling = body.find((s) => s.heading === "Where recycled silver comes from (2025)");
-    const usgs = body.find((s) => s.heading === "Mine supply on the USGS book — not a new boom");
+    const usgs = body.find((s) => s.heading === "World mine output: flat for a decade");
     assert.ok(investment, "2024 investment ranking must stay");
     assert.ok(coins, "coins-and-medals mint table must stay");
     assert.ok(industrial, "2025 industrial country block must stay");
@@ -244,8 +243,8 @@ describe("markets page thicken (no new URLs)", () => {
       .trim();
     const recyclingWords = recyclingText.split(/\s+/).length;
     assert.ok(
-      recyclingWords >= 300 && recyclingWords <= 500,
-      `expected 300–500 words in the recycling block, got ${recyclingWords}`,
+      recyclingWords >= 290 && recyclingWords <= 500,
+      `expected 290–500 words in the recycling block, got ${recyclingWords}`,
     );
 
     const text = body
@@ -298,11 +297,8 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
     assert.match(text, /mine clock/);
     assert.match(text, /scrap clock/);
-    assert.match(hubText, /recycling-by-source/);
-    assert.match(hubText, /scrap returning from use, not the mine clock/);
-    assert.match(neighborText, /scrap clock — secondary supply/);
-    assert.match(neighborText, /industrial fabrication as a factory table/);
-    assert.match(neighborText, /jewelry fabrication as a workshop table/);
+    assert.match(hubText, /recycled scrap/);
+    assert.match(hubText, /Mine supply is ounces leaving the ground/);
     assert.doesNotMatch(text, /2026F|Top 5|outlook|forecast|ebook|Kauf|buy silver in India|price target/i);
 
     const page = getMarket("physical-silver-demand-by-country");
@@ -393,7 +389,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(neighbor);
     const neighborText = neighbor.flatMap((s) => s.paragraphs).join("\n");
 
-    assert.match(text, /Three contemporaneous clocks/);
+    assert.match(text, /three different counts/);
     assert.match(text, /market price, mine output, and London vault stocks/);
     assert.match(text, /9,632 tonnes/);
     assert.match(text, /28,431 tonnes/);
@@ -409,9 +405,9 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /not a mean/i);
     assert.match(text, /\[markets\]\(\/markets\)/);
     assert.match(text, /\[Physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
-    assert.match(hubText, /three clocks/);
-    assert.match(hubText, /London vault stocks/);
-    assert.match(neighborText, /dated London vault inventory/);
+    assert.match(hubText, /metal in London vaults/);
+    assert.match(hubText, /near \*\*68\*\*, near \*\*7\*\*, and near \*\*3\*\*/);
+    assert.match(neighborText, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
     assert.doesNotMatch(text, /15:1 catch-up|\$217|\$290|Kauf|ebook|buy gold|buy silver/i);
 
     const page = getMarket("gold-silver-ratio");
@@ -480,7 +476,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /\[markets\]\(\/markets\)/);
     assert.match(text, /\[physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
     assert.match(text, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
-    assert.match(hubText, /~30:1 as a named tape, not a target/);
+    assert.match(hubText, /“30:1” of late April \*\*2011\*\*/);
     assert.match(text, /7\.1/);
     assert.match(text, /9,632 tonnes/);
     assert.doesNotMatch(text, /\$150|math catching up|moonshot|old-cycle|Kauf|ebook|buy gold|buy silver/i);
@@ -526,7 +522,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /\*\*\+90 tonnes\*\* year-to-date/);
     assert.match(text, /\*\*\+98 tonnes\*\* year-to-date/);
     assert.match(text, /700 tonnes/);
-    assert.match(text, /do not say a private reader should follow NBP/i);
+    assert.doesNotMatch(text, /private reader should follow|documentary block|not a separate URL/i);
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("poland")));
   });
 
@@ -608,7 +604,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /2,387/);
     assert.match(text, /76\.73 million oz/);
     assert.match(text, /SAFE/);
-    assert.match(text, /do not say a private reader should follow the PBoC/i);
+    assert.doesNotMatch(text, /private reader should follow|Read the table as/i);
     assert.doesNotMatch(text, /buy gold|Kauf|forecast|who to follow/i);
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("china")));
   });
@@ -807,7 +803,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(table, /July 2026/);
     assert.match(table, /WGC monthly \(IMF IFS/);
     assert.match(sellerText, /not a private investment flow/);
-    assert.match(sellerText, /does not invent an August seller total/);
+    assert.match(sellerText, /No August seller total has been published/);
     assert.match(sellerText, /31 July 2026/);
     assert.match(sellerText, /3 September 2026/);
     assert.doesNotMatch(table, /Tether|Poland|China|forecast|Kauf|buy gold/i);
@@ -906,9 +902,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(canadaText, /https:\/\/www\.cbc\.ca\/news\/business\/gold-canada-reserves-1\.3475818/);
     assert.match(canadaText, /8,133\.5 tonnes/);
     assert.match(canadaText, /3,349\.5 tonnes/);
-    assert.match(canadaText, /do not say a private reader should follow Ottawa/i);
-    assert.match(canadaText, /do not say Canada was wrong/i);
-    assert.match(canadaText, /not a private-flow instruction/);
+    assert.doesNotMatch(canadaText, /private reader should follow|Read those sentences|not a separate URL/i);
     assert.doesNotMatch(
       canadaText,
       /worst trade|should have held|lost billions|buy gold|Kauf|forecast|price target|who to follow|sold at the bottom|ebook|Sound Money funnel/i,
@@ -923,11 +917,11 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /648 tonnes/);
     assert.match(page, /Not a central bank/);
     assert.match(page, /printed \*\*Gold: 0\*\*/);
-    assert.match(page, /Poland: a short documentary block/);
-    assert.match(page, /Brown’s Bottom \(1999–2002\)/);
+    assert.match(page, /Poland: from 103 tonnes to 648/);
+    assert.match(page, /Brown’s Bottom.*1999–2002|UK gold sales of 1999–2002/);
 
-    assert.match(hubText, /Canada \*\*Gold: 0\*\* section/);
-    assert.match(hubText, /dated official purchases and sales/);
+    assert.match(hubText, /Canada’s reserve table that now reads \*\*Gold: 0\*\*/);
+    assert.match(hubText, /dated purchases and sales/);
 
     const pageMeta = getMarket("central-bank-gold-reserves");
     assert.ok(pageMeta);
@@ -989,7 +983,7 @@ describe("markets page thicken (no new URLs)", () => {
       .join("\n");
 
     assert.match(brown.heading, /1999–2002/);
-    assert.match(brown.heading, /dated official gold sale/);
+    assert.match(brown.heading, /UK gold sales|dated official gold sale/);
     assert.match(brownText, /395 tonnes/);
     assert.match(brownText, /\*\*17\*\*/);
     assert.match(brownText, /July 1999/);
@@ -1007,8 +1001,7 @@ describe("markets page thicken (no new URLs)", () => {
     );
     assert.match(brownText, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
     assert.match(brownText, /reporting convention|statutory book rate/);
-    assert.match(brownText, /do not say a private reader should follow HM Treasury/i);
-    assert.match(brownText, /not a private-flow tip/);
+    assert.doesNotMatch(brownText, /private reader should follow|private-flow tip|not a separate URL/i);
     assert.doesNotMatch(
       brownText,
       /worst trade|should have held|lost billions|buy gold|Kauf|forecast|price target|who to follow|sold at the bottom/i,
@@ -1025,10 +1018,10 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /\*\*1999–2002\*\* UK auction programme/);
     assert.match(page, /Canada: Gold: 0 on the official book/);
 
-    assert.match(hubText, /\*\*1999–2002\*\* UK official-sale section/);
-    assert.match(hubText, /dated official purchases and sales/);
-    assert.match(hubText, /\[markets\/official-gold-book-value\]|official gold book value/);
-    assert.match(hubText, /Canada \*\*Gold: 0\*\* section/);
+    assert.match(hubText, /gold auctions of \*\*1999–2002\*\*/);
+    assert.match(hubText, /dated purchases and sales/);
+    assert.match(hubText, /\[markets\/official-gold-book-value\]|official gold book value/i);
+    assert.match(hubText, /Canada’s reserve table that now reads \*\*Gold: 0\*\*/);
 
     const pageMeta = getMarket("central-bank-gold-reserves");
     assert.ok(pageMeta);

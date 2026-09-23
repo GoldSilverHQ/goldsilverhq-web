@@ -49,6 +49,14 @@ const FORBIDDEN =
 const STRUCTURAL_HUB_CHROME =
   /What you will find here|What this is not|How to read an article|How to read a markets page|Where the other sections sit|A reading order|Where to start|Where to enter the modern story|How the five chapters form a path|Start with a date, or with a definition|Four pages that open the rest of the site|Read by chapter|Read by definition|Read by topic|Articles in this chapter|Five chapters$|The five chapters|The four topics|The definitions/;
 
+/** Outline and SEO-briefing voice that History chapter hubs must not speak in. */
+const CHAPTER_HUB_OUTLINE =
+  /\bhinges?\b|\bstretch(?:es)?\b|\bpillars?\b|on-ramp|\bdoors?\b|how this section works|\bThe claim:|dated claims|Calendar order is|Linear order is|This overview|This chapter (?:is|stays|exists|follows|sits)|this (?:article|page|hub) stays|If you arrived|does not sell metal|forecast prices|not a pitch|pitch to (?:hold|buy)|price target|remonetization brief|Documentary only|Facts only|information versus advice|information-not-advice/i;
+
+/** Headings that count the chapter ("Five doors…", "Three silver stories…") instead of naming it. */
+const COUNTED_HEADING =
+  /^(?:Two|Three|Four|Five|Six|Seven)\s+(?:[\w’-]+\s+)?(?:doors?|hinges?|stretches|pillars?|claims?|stories|fights?|captions?|words?|topics?|chapters?|articles|stops|dated)\b/i;
+
 function assertClean(label: string, text: string) {
   assert.doesNotMatch(text, FORBIDDEN, `${label} still has writer/taxonomy jargon`);
 }
@@ -80,6 +88,22 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     assert.doesNotMatch(history, /You do not need every page|do not sell metal|forecast prices|turn a panic into a pitch/i);
     assert.doesNotMatch(history, /curious adult can leave able to explain|is the place to start|Merging \*\*\d+/);
     assert.doesNotMatch(history, /densest modern door|natural entry|slower on-ramp|articles here stay with those moments/);
+  });
+
+  it("keeps History chapter hubs free of outline and SEO-briefing voice", () => {
+    for (const [label, body] of [
+      ["20th-century hub", twentiethCenturyHubBody],
+      ["america hub", americaHubBody],
+      ["silver hub", silverHubBody],
+      ["banks-paper hub", banksPaperHubBody],
+      ["ancient hub", ancientHubBody],
+    ] as const) {
+      assert.doesNotMatch(bodyText(body), CHAPTER_HUB_OUTLINE, `${label} still has outline/SEO voice`);
+      for (const s of body) {
+        assert.doesNotMatch(s.heading, COUNTED_HEADING, `${label} heading "${s.heading}" counts the chapter`);
+        assert.doesNotMatch(s.paragraphs.join("\n"), /\*\*[^*]*\?\*\*/, `${label} bolds a search query`);
+      }
+    }
   });
 
   it("keeps hub episode doors as narrative links, not catalog-only lists", () => {
