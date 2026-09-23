@@ -2935,30 +2935,35 @@ export const twentiethCenturyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In October **1907**, New York trust companies faced a liquidity panic and J. P. Morgan’s group organized private support because no Federal Reserve yet existed. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price — the **gold window**. Between those dates sit a new central bank, the wartime end of classical gold, a German mark that ceased to work as money, a US recall of private monetary gold, and a postwar dollar system built on official convertibility at **$35** an ounce.",
-      "This chapter is that crowded modern door. Earlier chapters stretch across long spans of mint practice and statute fights. Here the regime changes pack into a shorter run of calendar time — and into the world most readers still live inside.",
+      "In October **1907**, New York trust companies faced a run, and J. P. Morgan’s group organized private support because no Federal Reserve yet existed to do it. Sixty-four years later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at **$35** an ounce — the **gold window**.",
+      "Between those two dates the rules of money changed faster, and more violently, than in the centuries before. A private rescue became a central bank. A peacetime gold standard ended in a war. A German mark stopped working as money. American citizens handed in their gold. A postwar system tied the world to the dollar and the dollar to gold, then let go. Most readers still live inside what that century built.",
     ],
   },
   {
-    heading: "The century in one arc",
+    heading: "From a private rescue to a central bank",
     paragraphs: [
-      "Congress answered **1907** with emergency currency legislation in **1908** and the Federal Reserve Act in **1913**. World War I then broke the classical gold standard’s peacetime convertibility among major powers. Germany’s mark collapsed in **1923** under war, reparations, and extreme paper issue. In **1933** the United States recalled private monetary gold and revalued official gold for government accounting. Bretton Woods in **1944** rebuilt a **gold-exchange** system: other countries held dollars, and those dollars were supposed to be convertible into gold at **$35** an ounce for official holders. On **15 August 1971** that official gold window closed.",
-      "Private crisis management becomes public central banking. Gold convertibility ends for wartime, returns in flawed forms, then ends again for US citizens and later for foreign official dollar holders. Paper money does not merely “inflate a little”; in Weimar it loses daily function. Official prices and windows matter because they are the legal hinges, not metaphors.",
+      "Congress answered **1907** with emergency currency legislation in **1908** and the Federal Reserve Act in **1913**. [The Panic of 1907 and the Fed](/history/20th-century/panic-1907-fed) follows that road: a trust-banking liquidity crisis, bankers improvising a lender of last resort, and the political fight that turned the improvisation into law. The Fed came after **1907**, not before it.",
+      "A year after the new bank opened, war broke the older order around it. Before **1914**, major currencies were convertible into gold at fixed rates in peacetime, and gold moved between London, Paris, Berlin, and New York when the rates slipped. In the summer of **1914** the belligerents blocked gold exports and protected their notes. [The end of the classical gold standard](/history/20th-century/classical-gold-standard-end) tells how that machine stopped, and why the “returns to gold” of the **1920s** reused the name without rebuilding it.",
     ],
   },
   {
-    heading: "Five dated claims",
+    heading: "Paper without a stop",
     paragraphs: [
-      "The [Panic of **1907** and the Fed](/history/20th-century/panic-1907-fed) opens the century’s plumbing: a trust-banking liquidity crisis and the political road to the Federal Reserve — created after **1907**, not before. The [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) follows: how peacetime convertibility broke under World War I, and what “gold standard” still meant in the years that followed.",
-      "[Weimar **1923**](/history/20th-century/weimar-1923) is the German mark’s collapse into hyperinflation — a paper-money catastrophe with its own causes, dates, and institutional setting. The [**1933** gold recall](/history/20th-century/1933-gold-recall) is the US private gold recall and official revaluation: citizens lose monetary gold rights years before **1971**. [Bretton Woods and Nixon **1971**](/history/20th-century/bretton-woods-nixon-1971) closes the arc — the dollar system at **$35** an ounce, and the **15 August 1971** close of the gold window for foreign official holders.",
-      "Calendar order is the century’s sequence. Any hinge is a valid door — Weimar, **1933**, or **1971** — and the neighbors show what sat before and after.",
+      "Germany’s mark collapsed in **1923** under war debts, reparations, and extreme paper issue. By that autumn it no longer did the daily work of money: it bought less by the hour, and wages paid at noon were spent before supper. [Weimar 1923](/history/20th-century/weimar-1923) is that collapse, with its own causes, dates, and institutions. It was not a little inflation that got out of hand.",
+      "Ten years later the United States left gold by a different road. In **1933** it recalled private monetary gold, and it later revalued official gold from **$20.67** to **$35** an ounce for the government’s own accounts. [The 1933 gold recall](/history/20th-century/1933-gold-recall) is the moment American citizens lost their monetary gold rights — nearly four decades before **1971**.",
+    ],
+  },
+  {
+    heading: "Thirty-five dollars an ounce",
+    paragraphs: [
+      "At Bretton Woods in **1944** the Allies rebuilt a **gold-exchange** system. Other countries pegged to the dollar and held dollars as reserves, and those dollars were supposed to be convertible into gold at **$35** an ounce for official holders. The promise held while the United States had gold to spare and the rest of the world wanted dollars more than metal. Through the **1960s** the strain showed.",
+      "[Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971) follows the system from its founding to the Sunday evening of **15 August 1971**, when the window closed for foreign official holders.",
     ],
   },
   {
     heading: "",
     paragraphs: [
-      "When you want an earlier case of paper losing trust, open [John Law and the Mississippi Bubble (1720)](/history/banks-paper/john-law) in Banks & paper — same kind of mechanism, different century. Do not treat **1720** and **1923** as one continuous event, or Weimar and Nixon as one print job. Return to [Sound Money History](/history) for ancient coinage, banks-paper, America, or silver.",
-      "This overview does not retell every article in full. It does not turn **1907** into a personality cult, and it does not treat **1971** as a sudden invention of paper money. The claim stays sharp: from private rescue to central bank to paper collapse to gold recall to the gold-window close.",
+      "Paper had lost trust before. [John Law’s System](/history/banks-paper/john-law) broke in France in **1720**, and the revolutionary assignats in the **1790s** — the same kind of failure under different laws, in a different century. Weimar was not **1720** again, and **1971** did not invent paper money. The older chapters of [Sound Money History](/history) begin with coins and warehouse receipts.",
     ],
   },
 ];
@@ -2968,45 +2973,50 @@ export const americaHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "What is a dollar? In **1792** Congress answered with both gold and silver at a fixed mint ratio. Andrew Jackson answered by fighting a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint list were a crime. In **1900** statute defined the dollar in gold. The Federal Reserve (**1913**) and the later gold breaks of **1933** and **1971** belong in the [20th-century chapter](/history/20th-century). This chapter stops at the handoff.",
-      "The [Crime of 1873](/history/america/crime-of-1873) is the silver-politics door; [greenbacks](/history/america/greenbacks-civil-war) is the war-paper door; the [road back toward gold](/history/america/road-back-gold) is the bridge into **1907**. Jackson’s bank war, Civil War greenbacks, and the **1913** Fed are related arguments about credit and paper — not one institution.",
+      "What is a dollar? Congress kept answering. In **1792** it said gold and silver both, at a fixed ratio. Andrew Jackson answered by killing a national bank. The Civil War answered with **greenbacks** — paper dollars made legal tender for the war — that floated below gold in New York until resumption. After **1873** the country argued over silver as if the Mint’s list of coins were a crime. In **1900** a statute defined the dollar in gold alone.",
+      "In the young republic, the unit was argued out in public law. Congress named a **mint ratio** (the official exchange between gold and silver coins), chartered or killed a bank, made paper legal tender, dropped a silver dollar from free coinage, then defined the dollar in gold. Markets answered with **Gresham’s pattern** — when law prices two monies wrong, the overvalued “bad” money stays in the till and the undervalued “good” money leaves — and with gold premiums and drains on the Treasury’s reserve.",
     ],
   },
   {
-    heading: "The claim: what the dollar is",
+    heading: "Fifteen to one",
     paragraphs: [
-      "America’s monetary fights are statute fights. Congress names a **mint ratio** (the official exchange between gold and silver coins), charters or kills a bank, makes paper legal tender, omits a silver dollar from free coinage, then defines the dollar in gold. Markets answer with **Gresham’s pattern** — when law prices two monies wrong, the “bad” (overvalued) money stays in the till and the “good” (undervalued) money leaves — plus gold premiums and reserve drains. Inside one republic, the unit’s metal and paper rules were contested in public law.",
-      "This overview is not a pitch to hold metal, not a price target, and not a brief for bringing gold or silver back into today’s money. It follows the American argument from **bimetallism** (both metals legal at a fixed mint ratio) to the **1900** gold statute — then a clean stop so the next chapter can open with **1907**.",
+      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote both metals into law at **fifteen to one**: **bimetallism**, gold and silver legal at a fixed ratio. The Spanish dollar, the silver coin Americans already carried, shaped the weight of the new silver dollar. When the mint ratio and the world ratio drifted apart, the undervalued metal left the country or went to the melting pot. Gold was the metal the law undervalued, and gold coin was the one that went missing.",
+      "In **1834** Congress cut the gold in the ten-dollar eagle and moved the ratio to roughly **16:1**. Gold coin came back into domestic use. The general mechanics of two metals under one law are told in the silver chapter’s [bimetallism](/history/silver/bimetallism) article. The American arithmetic starts here.",
     ],
   },
   {
-    heading: "From 1792 to 1900",
+    heading: "A bank war before any central bank",
     paragraphs: [
-      "The [Coinage Act of 1792](/history/america/early-us-coinage) wrote gold and silver into law at **fifteen to one**. The Spanish dollar shaped the silver weight. When the mint ratio and the world ratio drifted, the undervalued metal left. **1834** moved the ratio gold-friendlier. That is the opening arithmetic.",
-      "[Jackson and the Bank](/history/america/jackson-and-the-bank) is the fight over the Second Bank: **1832** veto, pet banks, Specie Circular, Panic of **1837**. The country then lived a long stretch without a federally chartered central bank. That is not **1913**. Keep the centuries labeled.",
-      "[Greenbacks](/history/america/greenbacks-civil-war) financed the Union after **1862**. Legal tender paper floated below gold in New York until the Resumption Act’s date — **1 January 1879** — restored par in practice. War paper is a suspension, not a permanent theory of money.",
-      "The [Coinage Act of 1873](/history/america/crime-of-1873) omitted free coinage of the standard silver dollar. Agrarian politics called it a crime; officials called it clarification toward gold. Free silver, Bland–Allison, Sherman, and Bryan’s **1896** campaign are that fight’s volume. The mechanics of two metals under one law also sit on [bimetallism](/history/silver/bimetallism).",
-      "The [road back toward gold](/history/america/road-back-gold) closes the chapter: resumption in **1879**, Gold Standard Act in **1900**, then handoff to the [Panic of 1907](/history/20th-century/panic-1907-fed). Open the article for the reserve strain and the statute’s grains.",
+      "[Jackson and the Bank](/history/america/jackson-and-the-bank) is the fight over the Second Bank of the United States: the **1832** veto, federal deposits moved to state “pet banks,” the Specie Circular that demanded gold or silver for public land, and the Panic of **1837**. When the Second Bank’s federal charter ran out, the country went on without a federally chartered central bank for the rest of the century.",
+      "Jackson’s war was over a charter and the government’s deposits. It was not an argument about the Federal Reserve, which did not exist until **1913**.",
     ],
   },
   {
-    heading: "Three fights, three centuries",
+    heading: "Paper dollars for a war",
     paragraphs: [
-      "Jackson’s bank war is a charter and deposit fight before any Federal Reserve. Greenbacks are Civil War legal tender. The Fed is a **1913** answer to **1907** trust-company plumbing. Three related arguments about credit and paper are not one institution and not one century.",
-      "Likewise: **1873** is a Mint list; **1900** is a gold definition; **1971** is a foreign official gold-window close in another chapter. Similar mechanisms can teach; merging the dates erases what actually changed.",
+      "Union finance after **1862** needed more than taxes and bonds could raise. [Greenbacks and the Civil War](/history/america/greenbacks-civil-war) follows the legal-tender notes Congress issued to pay for it. They spent at face value in shops but floated below gold in New York, where a gold premium quoted the market’s doubt every trading day.",
+      "The Resumption Act set a date: **1 January 1879**. By then the premium was gone, and the Treasury resumed paying coin for its notes. War paper had been a suspension, not a permanent theory of money.",
     ],
   },
   {
-    heading: "Five doors into the republic’s unit",
+    heading: "The silver question",
     paragraphs: [
-      "Five full narratives carry the claim. [Early U.S. coinage](/history/america/early-us-coinage) opens with the **1792** mint ratio, Spanish-dollar inheritance, and the **1834** gold-friendlier correction — Gresham at the Mint. [Jackson and the Bank](/history/america/jackson-and-the-bank) is the Second Bank, **1832** veto, pet banks, Specie Circular, and Panic of **1837** — not the Fed. [Greenbacks and the Civil War](/history/america/greenbacks-civil-war) is legal-tender war paper, the gold premium, the Resumption Act, and specie payments in **1879**.",
-      "[The Crime of **1873** and the silver question](/history/america/crime-of-1873) is the Coinage Act that omitted the silver dollar, free silver, and Bryan **1896**. [The road back toward the gold standard](/history/america/road-back-gold) is resumption, silver-purchase strain, the Gold Standard Act **1900**, and the handoff to **1907**. Calendar order is the on-ramp; any hinge is a valid door.",
+      "The [Crime of 1873](/history/america/crime-of-1873) was a Coinage Act that left the standard silver dollar off the list of coins the Mint would strike freely for anyone who brought metal. Officials called it a clarification toward gold. When silver prices fell and western mines kept producing, farmers and miners called it a crime against the debtor.",
+      "Free silver became a movement. The Bland–Allison Act and the Sherman Silver Purchase Act required the Treasury to purchase silver without restoring free coinage. William Jennings Bryan carried the cause into the **1896** presidential campaign and lost.",
     ],
   },
   {
-    heading: "",
+    heading: "Back to gold",
     paragraphs: [
-      "Return to [Sound Money History](/history) for the other chapters. For the modern door after **1900**, open the [twentieth-century overview](/history/20th-century). Links to [bimetallism](/history/silver/bimetallism) stay where the general two-metal mechanics help. Calendar order is the on-ramp — early coinage, Jackson, greenbacks, **1873**, road back to gold — but any hinge is a valid door into the republic’s argument over the unit.",
+      "A Treasury that buys silver and pays gold needs enough gold. In the early **1890s** holders who doubted the reserve presented their claims, and gold outflows became ordinary public-finance news. The panic year **1893** brought repeal of the Sherman purchases; the Cleveland administration sold bonds for gold to defend what was left.",
+      "[The road back toward the gold standard](/history/america/road-back-gold) runs from resumption in **1879**, through that strain, to the Gold Standard Act of **1900**, which defined the dollar as **25.8 grains** of gold nine-tenths fine. Seven years later a run on New York trust companies opened the next argument: the [Panic of 1907](/history/20th-century/panic-1907-fed), and the central bank Congress built in answer to it.",
+    ],
+  },
+  {
+    heading: "Jackson’s bank is not the Fed",
+    paragraphs: [
+      "The American arguments over credit and paper are easy to fold into one. They were not one. Jackson’s bank war was a charter-and-deposit fight in the **1830s**. Greenbacks were Civil War legal tender. The Fed was a **1913** answer to the trust-company panic of **1907**. They share a question — who may create money, and on what promise — but not an institution or a century.",
+      "The same goes for the metal. **1873** was a Mint list. **1900** was a gold definition. **1971**, when the gold window closed for foreign governments, belongs to a different world. The [twentieth century](/history/20th-century) picks up where the Gold Standard Act left off.",
     ],
   },
 ];
@@ -3016,45 +3026,50 @@ export const silverHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Law tried to freeze gold and silver in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal fed photography, electronics, and solar cells. Gold histories often treat silver as a supporting actor. This chapter reverses that habit.",
-      "The [piece of eight](/history/silver/piece-of-eight) is the global-coin door; [bimetallism](/history/silver/bimetallism) is the mint-ratio door; [Silver Thursday](/history/silver/silver-thursday) is the **1980** break. American statute politics stay on the [America chapter](/history/america); link across, do not merge the stories. This is not a markets fact table and not a pitch to hold silver.",
+      "A mountain in the Andes poured silver into the world’s payments for centuries. A Spanish coin priced cargo from the Caribbean to East Asia. Governments tried to freeze gold and silver together in one unit at a fixed **mint ratio**. In **1980** a concentrated private position met an exchange rule book and broke. Later the same metal went into photographic film, electronics, and solar cells.",
+      "Gold gets the famous stories. Silver did much of the paying, and its history runs on its own clock: early-modern empire, the mint statutes of the nineteenth century, a futures market in the twentieth, and factories that still buy the metal today.",
     ],
   },
   {
-    heading: "The claim: silver is not a gold footnote",
+    heading: "The silver mountain",
     paragraphs: [
-      "Five articles carry the claim. Potosí set a global silver stock. The piece of eight carried that stock as a **typed coin** (a coin whose stamp named a trusted weight and fineness). **Bimetallism** tried to freeze gold and silver in one legal unit at a fixed mint ratio. Silver Thursday showed a concentrated private position meeting an exchange rule book. Industrial demand then gave the metal a second job beside monetary memory.",
-      "Each article keeps its own century so a mountain, a mint statute, and a **1980** futures break are not read as one shared lesson about “printing.” Documentary only — no remonetization brief, no price target. The chapter exists because silver’s monetary and industrial arc will not fit as a sidebar in gold stories, and because a mint ratio, a market gold–silver quotient, and a fabrication survey measure different things.",
+      "From the **1540s**, Cerro Rico above [Potosí](/history/silver/potosi) fed a chain of mine, mint, fleet, and Seville. Part of the flow went west across the Pacific on the Manila galleon, toward Asian markets that wanted silver more than Europe’s goods. The story is not only a European price rise. It is a two-ocean redistribution of monetary metal, driven by forced labor at the mine and by demand on the far side of the world.",
+      "Mercury amalgamation raised recovery from poorer ores, and output in the later sixteenth and early seventeenth centuries reached a scale contemporaries treated as a wonder. Spain needed the silver to pay armies and service debts. Europe needed a money metal already priced in every port. China, after abandoning earlier experiments with paper, took silver as the unit that actually arrived in trade. The mountain did not choose where its ore went. Ships, taxes, and trade balances did.",
     ],
   },
   {
-    heading: "Mountain, coin, statute, squeeze, dual role",
+    heading: "A coin the world could read",
     paragraphs: [
-      "[Potosí](/history/silver/potosi) is Cerro Rico from the **1540s**: mine, mint, fleet, Seville, and the Manila galleon toward Asian settlement demand. Flow, not romance. Silver history is not only a European inflation story; it is a two-ocean redistribution of monetary metal. For today’s country-by-country production and reserves picture, open the [world map](/maps).",
-      "The [piece of eight](/history/silver/piece-of-eight) is the coin face — roughly **27 grams** of Spanish American silver that priced cargo from the Caribbean to East Asia. The early United States defined a dollar with that habit in mind; open [early U.S. coinage](/history/america/early-us-coinage) for the inheritance arithmetic.",
-      "[Bimetallism](/history/silver/bimetallism) is mint ratio versus market ratio and Gresham under a two-metal statute. America’s loud event is the [Crime of 1873](/history/america/crime-of-1873). Keep mechanics here and statute politics there.",
-      "[Silver Thursday](/history/silver/silver-thursday) is **27 March 1980**: the Hunt brothers’ concentrated position, January prints near **$50**, then margin hikes, limits on **new long** (buy) contracts, and a March break. Facts only — [information versus advice](/sound-money/information-not-advice).",
-      "[Monetary history and industry](/history/silver/monetary-and-industry) names the split: money in memory, industrial input in fabrication surveys. Country investment rankings and ratio arithmetic live under [markets](/markets), not as reprints here.",
+      "That silver reached most of its users as the [piece of eight](/history/silver/piece-of-eight): roughly **27 grams** of Spanish American silver, a **typed coin** whose stamp named a trusted weight and fineness. Merchants who could not read Spanish could read the coin. It settled trade in the Caribbean, in Canton, and in the ports between, and for generations it was the silver many counterparties actually held when the ounces from Potosí arrived.",
+      "The early United States defined its dollar with that coin in mind. [Early U.S. coinage](/history/america/early-us-coinage) follows the inheritance arithmetic from the Spanish dollar to the Coinage Act of **1792**.",
     ],
   },
   {
-    heading: "Three silver stories, three hinges",
+    heading: "Two metals under one law",
     paragraphs: [
-      "Potosí is early-modern supply under empire. **1873** is a U.S. Mint list and a free-silver politics. **1980** is a private futures-and-bullion concentration plus an exchange response. Three silver centuries are not one crisis and not one lesson about “printing.”",
-      "Likewise: a mint ratio is a law; a market gold–silver quotient is a dated pair of prints; industrial fabrication is a flow into products. Similar mechanisms can teach; merging them erases which instrument failed. Keep America’s statute volume on the America chapter and silver’s mechanism volume here, even when both pages talk about the same metal.",
+      "**Bimetallism** made gold and silver both legal money at a fixed mint ratio. The trouble is that the market ratio moves and the statute does not. When the two drift apart, the metal the law undervalues leaves circulation — Gresham’s pattern — and a country that meant to use both ends up using one. [Bimetallism](/history/silver/bimetallism) follows that arithmetic through Europe’s turn to gold, the Latin Monetary Union, and the United States.",
+      "America’s loudest version of the fight came after the [Crime of 1873](/history/america/crime-of-1873), when a coinage law dropped the standard silver dollar and free silver became a political movement. The statute politics sit with the rest of the American story; the mechanism is the same.",
     ],
   },
   {
-    heading: "Five doors along the white-metal arc",
+    heading: "Silver Thursday",
     paragraphs: [
-      "Five full narratives. [Potosí](/history/silver/potosi) is Cerro Rico, the Manila galleon, and silver flow into Eurasian payments. The [piece of eight](/history/silver/piece-of-eight) is the Spanish dollar as a circulating global silver unit and the U.S. dollar’s inheritance. [Bimetallism](/history/silver/bimetallism) is fixed mint ratio, market-ratio drift, and Gresham — with a link to the [Crime of **1873**](/history/america/crime-of-1873).",
-      "[Silver Thursday / Hunt Brothers **1980**](/history/silver/silver-thursday) is the concentrated position, the rule changes, and the **27 March 1980** break — facts only. [Silver: monetary history and industry](/history/silver/monetary-and-industry) names monetary memory versus photography, electronics, and photovoltaics. Flow → coin → statute mechanics → modern break → dual role — or enter at any hinge.",
+      "In **1979–80** Nelson Bunker Hunt and William Herbert Hunt, with partners, built a position in silver bullion and futures large enough to matter in a market much thinner than gold’s. Inflation fear after the **1970s** and distrust of paper claims ran through the public record of their motives. In January **1980** the nearby price printed near **$50** an ounce.",
+      "Then the exchange changed its rules: higher margins and limits on **new long** (buy) contracts. The brokers who had financed the position asked for more capital, and forced selling did the rest. On **27 March 1980** the market broke. [Silver Thursday](/history/silver/silver-thursday) follows the position, the rule book, and the unwind — January was the run, March the collapse.",
     ],
   },
   {
-    heading: "",
+    heading: "Money in memory, metal in factories",
     paragraphs: [
-      "Return to [Sound Money History](/history) for the other chapters. Links to America stay where statute politics help — especially the [Crime of 1873](/history/america/crime-of-1873) beside [bimetallism](/history/silver/bimetallism). Links to [markets](/markets) stay where current survey and ratio facts live. For bars, coins, and premiums, use [gold and silver in practice](/gold-silver). The ordered silver door is the point — mountain, coin, statute, squeeze, and dual role as five dated claims, not one merged slogan about the white metal.",
+      "Over the twentieth century silver left most of the world’s coins, but not its buyers. Photography needed it, then electronics, then photovoltaic cells. [Silver: monetary history and industry](/history/silver/monetary-and-industry) follows the metal’s second life: remembered as money, measured in fabrication surveys as an industrial input.",
+      "Those are different measurements. A mint ratio is a law. A market gold–silver ratio is a pair of prices on a named date. Industrial fabrication is metal flowing into products. Current survey figures and the ratio itself are covered under [Markets](/markets).",
+    ],
+  },
+  {
+    heading: "Not one lesson about printing",
+    paragraphs: [
+      "Potosí is early-modern supply under empire. **1873** is a U.S. Mint list and the free-silver politics that followed. **1980** is a private concentration in futures and bullion, and an exchange changing its rules. Each is a different century and a different failure — not one crisis, and not one lesson about “printing.”",
+      "The American side of the silver fight continues in the [America chapter](/history/america). The rest of the story of money, from Lydia’s first coins to **1971**, starts at [Sound Money History](/history).",
     ],
   },
 ];
@@ -3064,45 +3079,48 @@ export const banksPaperHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Paper money begins as a metal warehouse receipt — a claim check. Someone deposits coin or bullion; a goldsmith, a mint, or a public bank writes a paper that says the metal is there. The holder can return and collect the same weight. This chapter follows that receipt until it is no longer a warehouse claim: until notes circulate because a bank or a state says they will, and the window that once paid metal is optional, delayed, or gone.",
-      "The long articles are [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks), the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam), and [John Law and the Mississippi Bubble](/history/banks-paper/john-law). Walk warehouses → Amsterdam → Bank of England → Law → assignats. Law’s **1720**, the assignats of the **1790s**, and Germany’s **1923** mark all show paper losing trust — under different regimes and dates.",
+      "In seventeenth-century London, a merchant could leave coin with a goldsmith and walk out with a note. He could come back later for the same weight of metal. More often he signed the note over to someone else, and it paid a debt while the coin stayed in the strongroom. Paper money begins there: as a receipt for metal, a claim check.",
+      "Over the next two centuries the receipt turned into something else. Notes circulated because a bank or a state said they would, and the window that once paid metal became optional, delayed, or shut. Along the way, paper lost the public’s trust more than once — in Paris in **1720**, and again in revolutionary France in the **1790s**.",
     ],
   },
   {
-    heading: "The claim: a receipt, then a note",
+    heading: "A receipt, then a note",
     paragraphs: [
-      "A warehouse receipt is not yet a currency. It is a named claim on a named pile of metal. Banking, in the sense these pages use the word, starts when the receipt itself is used to pay. The metal stays in the vault; the paper moves. Counterparties accept the check because they trust the warehouse, not because a statute has declared the paper to be money.",
-      "Convertibility is the test. If the holder can still get coin at the window, the note is a convenient claim. If the window closes, limits payout, or pays in more paper, the note has become a bank or state liability whose value depends on policy and confidence. That sequence — receipt, circulating note, then a window that can fail — is the chapter’s claim. It is not a morality play about “printing,” and not a pitch to buy metal.",
+      "A warehouse receipt is not yet a currency. It is a named claim on a named pile of metal. Banking, in the sense these histories use the word, starts when the receipt itself is used to pay. The metal stays in the vault; the paper moves. Counterparties accept the note because they trust the warehouse, not because a statute has declared the paper to be money.",
+      "Convertibility is the test. If the holder can still get coin at the window, the note is a convenient claim. If the window closes, limits payout, or pays in more paper, the note has become a bank or state liability whose value depends on policy and confidence.",
     ],
   },
   {
-    heading: "Warehouses to assignats",
+    heading: "Goldsmiths and a public bank",
     paragraphs: [
-      "Late-medieval and early-modern Europe stored metal with people whose business was to keep it. Italian deposit banks already knew the warehouse model. London goldsmiths, in the seventeenth century, issued running-cash notes that merchants endorsed onward. As long as redemption was ordinary, the paper was a ticket, not a rival unit. The turning point is circulation without movement of the metal: once the ticket pays a debt, the issuer has a float. [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) names that handoff.",
-      "In **1609** Amsterdam created the **Wisselbank** (exchange bank) to take in mixed coin, credit a standard bank guilder, and let merchants settle by book entry (**giro**). For a long time its reputation was that it did not lend: a **florin banco** was a claim on metal in the vault. Bank money usually traded at a premium — the **agio** — over worn street coin. Later the bank made concealed advances to the city and the Dutch East India Company. When that lending became public in the **1780s–1790s**, the agio collapsed. That is a Dutch public-bank story. It is not **1720**, and it is not the assignats. The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) page is that article.",
-      "The [Bank of England](/history/banks-paper/bank-of-england) was not a copy of Amsterdam. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend to the Crown and to issue notes. Subscribers put up about **£1.2 million** as a war loan. Over the eighteenth century those notes became the ordinary paper of London: national money grown from war finance, not from a city warehouse ticket alone. In **1797** the Bank stopped paying gold for its notes (**Restriction**); gold payout returned in the **1820s** (**resumption**). That English suspend–resume cycle is not the Mississippi Bubble, and it is not Weimar.",
-      "France after Louis XIV faced heavy public debts. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a colonial trading company. In **1716** he founded the Banque Générale, later the Banque Royale, alongside the company that became the Compagnie des Indes. Notes supported share demand; shares supported confidence in notes. Through **1719** privileges widened and prices soared. Coin drained. In **1720** the System broke. Open [John Law and the Mississippi Bubble](/history/banks-paper/john-law) for the instruments and the dates.",
-      "Decades later, revolutionary France issued [assignats](/history/banks-paper/assignats): paper supposedly tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By **1795–96** the paper was not a unit anyone would hold. Law is **1720** and a royal bank-plus-company. Assignats are a revolutionary fiscal instrument with a land story. Keep them apart so **1720** does not swallow **1790**.",
+      "Late-medieval and early-modern Europe stored metal with people whose business was to keep it. Italian deposit banks already knew the warehouse model. London goldsmiths issued running-cash notes that merchants endorsed onward. As long as redemption was ordinary, the paper was a ticket, not a rival unit. Once the ticket paid a debt, the issuer had a float — metal it held but did not have to hand back today. [From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) follows that handoff.",
+      "In **1609** Amsterdam created the **Wisselbank** (exchange bank) to take in mixed coin, credit a standard bank guilder, and let merchants settle by book entry (**giro**). For a long time its reputation was that it did not lend: a **florin banco** was a claim on metal in the vault. Bank money usually traded at a premium — the **agio** — over worn street coin. Later the bank made concealed advances to the city and the Dutch East India Company. When that lending became public in the **1780s–1790s**, the agio collapsed. [The Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) tells how a public bank lost its name.",
     ],
   },
   {
-    heading: "Three paper collapses — keep the dates",
+    heading: "A war loan that became English money",
     paragraphs: [
-      "Three paper disasters share a mechanism. They are not one event. Law’s Mississippi System is a **1720** fusion of bank notes and company shares in Regency France. Assignats are **1789–1796** revolutionary paper on confiscated land. Germany’s mark in **1923** is a twentieth-century collapse after war, reparations, and extreme monetization. Weimar lives on the [20th-century chapter](/history/20th-century), not here.",
-      "Paper can cease to be a trusted claim on metal. Merging the cases erases dates, regimes, and which window actually failed. Weimar is not “France printed again.” The Nixon gold-window close of **1971** is not the invention of paper money. Those turning points have their own articles.",
+      "[The Bank of England](/history/banks-paper/bank-of-england) was not a copy of Amsterdam. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend to the Crown and to issue notes. Subscribers put up about **£1.2 million** as a war loan. Over the eighteenth century those notes became the ordinary paper of London: national money grown from war finance, not from a city warehouse ticket.",
+      "In **1797**, with France at war with Britain, the Bank stopped paying gold for its notes — the **Restriction**. Gold payout returned in the **1820s** with **resumption**. The notes kept circulating through both.",
     ],
   },
   {
-    heading: "Five doors from receipt to note",
+    heading: "Paris, 1720",
     paragraphs: [
-      "[From warehouses to public banks](/history/banks-paper/warehouses-to-public-banks) is where a receipt for metal starts to circulate — banking begins when the ticket pays a debt. The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) is the **1609** Wisselbank as public deposit money, then concealed lending and a lost reputation. The [Bank of England](/history/banks-paper/bank-of-england) is the **1694** war-finance charter, notes that became English money, then restriction and resumption.",
-      "[John Law and the Mississippi Bubble](/history/banks-paper/john-law) is the **1720** note-and-share System under the Regency — the long narrative of this chapter. [Assignats](/history/banks-paper/assignats) is revolutionary paper supposedly tied to land, **1789–1796** — not a second Law, and not Weimar. Linear order is the on-ramp; Law first if **1720** is the hinge you need.",
+      "France after Louis XIV carried heavy public debts. [John Law](/history/banks-paper/john-law), a Scottish financier with the Regent’s ear, fused a note-issuing bank with a colonial trading company. In **1716** he founded the Banque Générale, later the Banque Royale, alongside the company that became the Compagnie des Indes. Notes supported demand for shares; rising shares supported confidence in notes. Through **1719** privileges widened and prices soared while coin drained out of circulation. In **1720** the System broke, and both legs failed together.",
+    ],
+  },
+  {
+    heading: "Paper on confiscated land",
+    paragraphs: [
+      "Seven decades later, revolutionary France issued [assignats](/history/banks-paper/assignats): paper supposedly secured by confiscated church and émigré lands, the biens nationaux. The land was real. The quantity of paper rose far faster than any land was sold to retire it. By **1795–96** the assignat was not a unit anyone wanted to hold.",
+      "Law’s System was a royal bank bolted to a trading company. The assignats were a revolutionary fiscal instrument with a land story. Germany’s mark in **1923**, a twentieth-century collapse after war and reparations, is another case again. The mechanism rhymes — paper that stops being a trusted claim — but the dates, the regimes, and the window that failed are different each time.",
     ],
   },
   {
     heading: "",
     paragraphs: [
-      "Return to [Sound Money History](/history) for the other chapters. Use the twentieth-century chapter for **1907**, Weimar, and **1971**; keep those dates off this chapter except as a labeled later case. Linear order is the on-ramp: warehouses, Amsterdam, Bank of England, Law, assignats — or open Law first if **1720** is the hinge you need.",
+      "The twentieth-century end of the story — Weimar, the **1933** gold recall, and the **1971** gold-window close — is told in the [20th-century chapter](/history/20th-century). The coins that came before any receipt are in [ancient money](/history/ancient).",
     ],
   },
 ];
@@ -3112,48 +3130,42 @@ export const ancientHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Markets chose gold and silver because they were tradeable: portable, durable, divisible, and recognizable. Struck coinage from Lydia through Greece to Rome is a later technology for verifying metal. The metal came first. The stamp came second. Sound-money history does not begin when a gold window closed in **1971**.",
-      "This chapter is the on-ramp: why two metals kept winning, how a stamp lowered the cost of checking them, and what happened when a state lightened the coin. Paper receipts — warehouse tickets that become notes — wait on [banks and paper](/history/banks-paper). Read metal and coin first.",
+      "Before any mint, traders settled in gold and silver by weight. Then, in Lydia in western Anatolia, in the seventh century BCE, someone punched a mark into a lump of **electrum** — a natural gold–silver mix — and the cost of checking metal fell. The metal came first. The stamp came second.",
+      "From Lydia the stamp spread to the Greek cities and to Rome, and it became a tool of states: a way to pay fleets and armies, and, when spending outran the mines, a way to lighten the coin. The history of sound money does not begin with a gold window closing in **1971**. It begins here, with metal in the hand and a mark that said what it was.",
     ],
   },
   {
-    heading: "The claim: metal first, stamp second",
+    heading: "Why two metals kept winning",
     paragraphs: [
-      "A coin is a piece of metal plus a mark. The mark is a claim about weight and fineness. It is not the money itself. Before any mint, traders already settled in gold and silver by weight. The invention of coinage is a cut in verification cost, not the birth of monetary metal.",
-      "That order matters for this history. If you start the story in **1971**, you start at a late official window. If you start it with a warehouse receipt, you start after people already trusted a named pile of coin. This chapter sits earlier. It asks why gold and silver were the pile, and what a stamp did to that pile.",
-      "The stamp does not abolish trust. It relocates it. You no longer weigh every lump in a market of strangers. You decide whether the issuer’s type is honest enough for the trade. When the type is trusted, coin travels farther than anonymous metal. When it is debased, people return to weight or hoard the better pieces.",
+      "Many things have been money in a local range: cattle, grain, shells, copper. For high-value, long-distance settlement, gold and silver kept winning. The selection was a trade result, not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand.",
+      "Portability is value per weight. Durability is survival across a generation: gold does not rot; silver tarnishes but does not disappear. Divisibility is the ability to make change without destroying the good — metal can be cut and recast. Recognizability is how cheaply a stranger can tell the stuff from a look-alike. Scarcity sits under all four. A metal that could be planted like wheat would not stay a unit for long. [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) follows those properties through the record.",
     ],
   },
   {
-    heading: "Why markets chose gold and silver",
+    heading: "What a stamp does",
     paragraphs: [
-      "Many things have been money in a local range: cattle, grain, shells, copper. For high-value, long-distance settlement, two metals kept winning. The selection is a trade result, not a decree that invented money from nothing. A king can name a unit. He cannot force a distant counterparty to accept a unit that fails in the hand.",
-      "Portability is value per weight. Durability is survival across a generation: gold does not rot; silver tarnishes but does not disappear. Divisibility is the ability to make change without destroying the good — metal can be cut and recast. Recognizability is how cheaply a stranger can tell the stuff from a look-alike. Scarcity sits under all four. A metal that can be planted like wheat cannot stay a unit for long.",
-      "None of this is a pitch to hold metal. It is why traders kept returning to the same two. [Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the long article for those properties.",
+      "A coin is a piece of metal plus a mark. The mark is a claim about weight and fineness. It is not the money itself. The invention of coinage was a cut in the cost of verification, not the birth of monetary metal.",
+      "The stamp does not abolish trust. It moves it. You no longer weigh every lump in a market of strangers; you decide whether the issuer’s type is honest enough for the trade. Early Lydian pieces carried a punch and, later, a type, and Croesus is the name attached to separating gold and silver issues. [Lydia and the first coins](/history/ancient/lydia-first-coins) tells that beginning. When a type was trusted, coin travelled farther than anonymous metal. When it was debased, people went back to weighing, or hoarded the better pieces.",
     ],
   },
   {
-    heading: "Lydia to the solidus",
+    heading: "Owls, fleets, and a lighter denarius",
     paragraphs: [
-      "Lydia, in western Anatolia, is the conventional starting point for struck coinage in the seventh and sixth centuries BCE. Early pieces were electrum — a gold–silver mix — with a punch and, later, a type. Croesus is the name attached to separating gold and silver issues. The invention is the stamp that cut the cost of verifying metal. You still needed to trust the issuer. You no longer needed to weigh every lump. [Lydia and the first coins](/history/ancient/lydia-first-coins) is that stop.",
-      "Greek city-states turned mines and mints into a commercial network. Athens’ Laurion silver and the owl tetradrachm are the familiar face: a recognised weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power. Laurion helped fund fleets. [Greece: silver and trade](/history/ancient/greece-silver-trade) places that network.",
-      "Rome ran gold and silver together: the aureus and the denarius as the famous pair, with bronze for small change. When the mint ratio and the market ratio drift, the legally overvalued metal stays and the other leaves. Debasement of the silver coin was gradual, then obvious. The third-century crisis made the coinage a fiscal instrument. The lesson is fiscal, not moral: when spending outruns metal, the coin is lightened. [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) is that stop.",
-      "Constantine’s solidus, in the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire as the Byzantine nomisma. Continuity of weight is the story, not a romance of Rome. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) carries that continuity. It is not a sequel about paper, and it is not **1971**.",
+      "Greek city-states turned mines and mints into a commercial network. Athens’ Laurion silver and the owl tetradrachm are the familiar face: a recognized weight of silver that could move across the Aegean without a letter of introduction. Control of a mine was fiscal power; Laurion silver helped pay for a fleet. [Greece: silver and trade](/history/ancient/greece-silver-trade) follows that network.",
+      "Rome ran gold and silver together — the aureus and the denarius, with bronze for small change. Debasement of the silver coin was gradual, then obvious, and in the third-century crisis the coinage became a fiscal instrument. The lesson is fiscal, not moral: when spending outruns metal, the coin gets lighter. [Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) tells how.",
+    ],
+  },
+  {
+    heading: "A gold coin that held its weight",
+    paragraphs: [
+      "Constantine’s solidus, struck from the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire and carried on for centuries as the Byzantine nomisma. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) is the story of a unit that kept its weight while the state around it changed.",
     ],
   },
   {
     heading: "Paper comes later",
     paragraphs: [
-      "A coin is metal you can hold. A warehouse receipt is a claim on metal you are not holding. Banking, in the sense the next chapter uses the word, starts when that claim-check pays a debt and the metal stays in the vault. That handoff is not ancient coinage. It lives on [banks and paper](/history/banks-paper).",
-      "Keep the stamp and the receipt distinct. Lydia’s punch is a verification mark on **electrum** (a natural gold–silver mix). Amsterdam’s florin banco is a ledger credit against a vault. Much later, John Law’s **1720** notes in France fused bank paper with company shares — a different machine, in [banks and paper](/history/banks-paper). Those later machines share a lesson — a claim can cease to be trusted — but they are not this chapter.",
-      "Do not start this history in **1971** either. The Nixon gold-window close is a late official turning point in another chapter. It is not the invention of money, and it is not the first time a state spent past its metal. Return to [Sound Money History](/history) for that modern door. Use this chapter for the older order: metal, then stamp, then — much later — paper.",
-    ],
-  },
-  {
-    heading: "Five doors before paper",
-    paragraphs: [
-      "[Why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the long narrative — selection by trade: portability, durability, divisibility, recognizability; metal before the mint. [Lydia and the first coins](/history/ancient/lydia-first-coins) is electrum, a stamp, and a lower cost of verifying metal in western Anatolia. [Greece: silver and trade](/history/ancient/greece-silver-trade) is Laurion and the Attic owl — silver as a Mediterranean language.",
-      "[Rome: denarius, aureus, slow debasement](/history/ancient/rome-denarius-aureus) is two metals under one state — when spending outran metal, the coin was lightened. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) is Constantine’s gold unit keeping its weight into Byzantium — continuity, not romance. When the story leaves the coin for a ticket, open [banks and paper](/history/banks-paper). Keep **1720**, the **1790s**, **1923**, and **1971** off this chapter except as labeled later cases.",
+      "A coin is metal you can hold. A warehouse receipt is a claim on metal someone else is holding. Banking begins when that claim check pays a debt and the metal stays in the vault — a handoff that belongs to a later Europe and to [banks and paper](/history/banks-paper). Lydia’s punch is a mark on metal. Amsterdam’s florin banco is a ledger credit against a vault. John Law’s **1720** notes fused bank paper with company shares. Each is a different machine.",
+      "The Nixon gold-window close of **1971** is a late chapter in the same long argument, not its beginning. The whole run of it, from these coins onward, starts at [Sound Money History](/history).",
     ],
   },
 ];
