@@ -136,11 +136,10 @@ const panic1907: Section[] = [
     ],
   },
   {
-    heading: "Where the century turns next",
+    heading: "What followed",
     paragraphs: [
-      "After 1913 the next hinge in this chapter is the wartime break with classical gold convertibility. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years therefore sit between a private panic rescue and the wider end of the classical gold order.",
-      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. Then open the [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) for the next monetary hinge. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
-      "This page stays on that dated claim — trusts, Clearing House gaps, private rescue, then a 1913 statute. It does not sell metal, forecast prices, or turn a panic into a brief for or against the Fed. Neighbor articles carry Weimar, the 1933 gold recall, and the [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) on their own dates.",
+      "After 1913 the wartime break with classical gold convertibility came next. World War I suspended or strained gold-standard rules among major powers. The Fed’s early years sit between a private panic rescue and the wider end of the classical gold order.",
+      "Read 1907 as the trust-banking liquidity crisis that made a US central bank politically possible. The [end of the classical gold standard](/history/20th-century/classical-gold-standard-end) is what came next. The Fed did not cause Knickerbocker’s run. Knickerbocker’s run helped make the Fed’s creation look necessary to Congress.",
     ],
   },
 ];
@@ -211,7 +210,7 @@ const weimar: Section[] = [
     heading: "Printing was the channel, not the whole cause",
     paragraphs: [
       "Printing is how the stock expanded. It is not a complete cause. A government that can tax and that faces a hard stop — gold convertibility, a currency board, a public that will not accept more notes — cannot do this for long. Weimar had a fiscal gap it would not close, a central bank that monetised Treasury paper, a lost war, reparations, and then the Ruhr. Remove the stop, keep the spending, and the unit fails.",
-      "It is a documented extreme, not a script every paper currency has to finish. Open the [1933 gold recall](/history/20th-century/1933-gold-recall) or the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) for later American hinges — different years, different laws, different claims. This page stays with the German mark’s death and the Rentenmark halt. It does not sell metal or turn 1923 into a forecast.",
+      "It is a documented extreme, not a script every paper currency has to finish. The [1933 gold recall](/history/20th-century/1933-gold-recall) and the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) are later American stories — different years, different laws, different claims.",
     ],
   },
 ];
@@ -277,7 +276,7 @@ const nixon: Section[] = [
     paragraphs: [
       "The administration called the suspension temporary. Temporary became permanent. In December 1971 the Smithsonian Agreement tried to rebuild pegs. The official gold price moved from thirty-five to thirty-eight dollars an ounce. Further adjustment took the official price to **$42.22**. Pegs still failed under market pressure.",
       "By **1973** major currencies floated against one another. The post-war gold-exchange system had ended. What remained was a dollar-centered fiat order without official convertibility into US gold. The 1971 decision closed a window that had already been under strain since the 1960s. It did not erase gold from history. It ended Bretton Woods as a working convertibility regime.",
-      "Open the [official gold book value](/markets/official-gold-book-value) page if you wonder why **$42.22** still appears on a Treasury line. Open [Weimar 1923](/history/20th-century/weimar-1923) only as a different documentary extreme — not as the same hinge. This page stays with Bretton Woods and the closed window. It does not sell metal or forecast prices.",
+      "Why **$42.22** still appears on a Treasury line is on [official gold book value](/markets/official-gold-book-value). [Weimar 1923](/history/20th-century/weimar-1923) is a different extreme — not the same stop.",
     ],
   },
 ];
@@ -446,7 +445,7 @@ const whatIsSoundMoney: Section[] = [
     paragraphs: [
       "Ask one question of any unit: can the issuer expand the stock as policy, without a matching real cost or an enforceable redeemability contract? If yes, the money fails the sound-money test here — even when it is popular, even when it is legal tender, even when it once had a gold story attached.",
       "A gold coin can fail in practice through clipping, through a false mint ratio, or through a statute that ends public convertibility. Those are failures of the stop, not proofs that the definition was wrong. The definition names a constraint. It does not guarantee that every gold standard was well run.",
-      "Paper that is redeemable on demand in a defined weight of metal can qualify while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That hinge is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the vocabulary on these pages.",
+      "Paper that is redeemable on demand in a defined weight of metal can qualify while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That is why [1914](/history/20th-century/classical-gold-standard-end) and [1971](/history/20th-century/bretton-woods-nixon-1971) matter to the vocabulary on these pages.",
       "The test is institutional, not aesthetic. A beautiful coin with a false weight fails. An ugly note with a working redeemability window can pass while the window is open. Look at the stop, not the branding on the face.",
     ],
   },
@@ -537,56 +536,55 @@ const inflation: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation, here, is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
     ],
   },
   {
-    heading: "What inflation is on this site",
+    heading: "What inflation measures",
     paragraphs: [
       "The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check. If the same hour buys less across years, the unit has weakened. That can happen with or without a dramatic crisis.",
       "Consumer-price indexes and wholesale indexes are measurement tools. They are not the definition. The definition is purchasing-power erosion of the unit. Indexes help document that erosion; they do not invent it. Basket choice, quality adjustments, and base years matter for reading a series — they do not rewrite the idea.",
-      "This page stays on the idea. [Weimar 1923](/history/20th-century/weimar-1923) is the documentary extreme. Do not paste Weimar into every mild rise in a price index. Ordinary inflation and hyperinflation share a channel when money stock is discretionary; they do not share a severity or a timeline. A two-percent annual rise and a monthly fifty-percent rise are not the same documentary object.",
+      "[Weimar 1923](/history/20th-century/weimar-1923) is the extreme, and it is tempting to paste it onto every mild rise in a price index. Ordinary inflation and hyperinflation share a channel when the money stock is discretionary; they do not share a severity or a timeline. A two-percent annual rise and a fifty-percent monthly rise are different animals.",
     ],
   },
   {
     heading: "Money stock and prices",
     paragraphs: [
-      "Prices can rise because goods are scarce, because demand shifts, or because more units chase the same things. Hard-money writers emphasise the last channel. A complete account of any year needs all three. This site only needs the distinction: a unit that can be issued without cost makes the last channel a policy choice.",
+      "Prices can rise because goods are scarce, because demand shifts, or because more units chase the same things. Hard-money writers emphasise the last channel. A complete account of any year needs all three. What matters for money is the last one: a unit that can be issued without cost turns it into a policy choice.",
       "Sound money does not make relative prices stand still. It constrains one source of a general rise. Harvest failures, war damage, and demand shifts still move particular prices under a hard unit. A gold standard that holds convertibility can still see wartime scarcity lift food prices without rewriting the unit.",
-      "When the issuer can expand the stock as policy, a fiscal gap can be closed with new units. Tax arrives later in weaker money. Real cash balances fall; people spend faster; velocity rises. That feedback is the mechanical core of severe inflation episodes — stated as mechanism, not as a morality play.",
+      "When the issuer can expand the stock as policy, a fiscal gap can be closed with new units. Tax arrives later in weaker money. Real cash balances fall; people spend faster; velocity rises. That feedback is the mechanical core of severe inflation episodes — a mechanism, not a morality play.",
     ],
   },
   {
     heading: "Purchasing power as the check",
     paragraphs: [
       "Ask what a unit buys over time: a basket of goods, an hour of common labor, a weight of metal. If the basket shrinks for the same nominal wage, purchasing power fell. If metal rises sharply in the unit while the metal’s mining cost did not jump overnight, the unit may be the thing that weakened.",
-      "Premiums, taxes, and local scarcity still matter for any single price. The purchasing-power check is about the unit across many goods, not one headline. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names which units make stock expansion a policy lever.",
-      "Greenbacks during the American Civil War traded at a gold premium in New York. That premium was the market’s measure of paper versus metal — a wartime purchasing-power fact, documented on [greenbacks and the Civil War](/history/america/greenbacks-civil-war). Resumption later closed the gap in practice; the idea page only names what the gap measured.",
-      "Interest rates and bond prices can move with inflation expectations — a separate topic. Here the claim stays narrow: purchasing power of the unit is the object; prices are the surface.",
+      "Premiums, taxes, and local scarcity still matter for any single price. The purchasing-power check is about the unit across many goods, not one headline. Whether the issuer can expand the stock as policy is the dividing line between [hard money and fiat](/sound-money/hard-money-vs-fiat).",
+      "Greenbacks during the American Civil War traded at a gold premium in New York. That premium was the market’s measure of paper against metal — a wartime purchasing-power gap, quoted daily, that anyone holding greenbacks could read. Resumption later closed it; the history is in [greenbacks and the Civil War](/history/america/greenbacks-civil-war).",
+      "Interest rates and bond prices move with inflation expectations too. A lender who expects the unit to weaken asks for more of it back. That is a second-order effect. The first-order object is still what the unit buys.",
     ],
   },
   {
     heading: "Hyperinflation is a case",
     paragraphs: [
       "Hyperinflation is usually marked when prices rise on the order of **50% or more in a month**. It is a phase, not a synonym for every inflation. Germany crossed that line in mid-**1922**; the paper mark then ceased to work as a store of value or a unit of account by autumn **1923**.",
-      "The cartoons — wheelbarrows, wallpaper notes — are evidence of velocity and refusal to hold balances. They are not the cause. The cause chain on the Weimar page is war finance, a missing gold stop, fiscal gaps, and monetisation of Treasury paper.",
-      "Assignats in revolutionary France and Law’s **1720** System are other paper collapses with their own dates and instruments. Rhyme teaches mechanism. Merge erases centuries. Keep them on [banks and paper](/history/banks-paper), not as footnotes that rewrite this definition.",
-      "Stabilisation after hyperinflation often needs a new unit, a fiscal stop, and a credible refusal to print for the treasury — the Rentenmark story on the Weimar page. That is history. The idea here is only that hyperinflation is inflation’s extreme phase, not its everyday meaning.",
+      "The cartoons — wheelbarrows, wallpaper notes — are evidence of velocity and refusal to hold balances. They are not the cause. In Germany the chain ran from war finance and a missing gold stop to fiscal gaps and a central bank that turned Treasury paper into marks.",
+      "Assignats in revolutionary France and Law’s **1720** System are other paper collapses with their own dates and instruments. Rhyme teaches mechanism. Merging them erases centuries. Each belongs to its own regime and its own decade.",
+      "Stabilisation after hyperinflation usually needs three things at once: a new unit, a fiscal stop, and a credible refusal to print for the treasury. Germany’s Rentenmark in November **1923** had all three. Without the second and third, a new name on the note only restarts the clock.",
     ],
   },
   {
-    heading: "Purchasing power, not a forecast",
+    heading: "Not every rise is printing",
     paragraphs: [
-      "This page does not forecast next year’s index. It is not a recommendation to buy or sell metal, bonds, or anything else. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
-      "It does not claim that every price rise is “only printing.” Scarcity and demand shifts are real. The job here is to keep the money-stock channel visible when the unit can be issued without a stop.",
-      "Sound money names the constraint on [what is sound money?](/sound-money/what-is-sound-money). Inflation names what happens to purchasing power when the unit weakens — under any regime. Dated metal figures live on [Markets](/markets), not here.",
+      "It would be too neat to call every price rise “only printing.” Scarcity and demand shifts are real, and a war or a failed harvest can lift prices under the hardest money ever minted. What the money-stock channel explains is the rise that keeps going after the scarcity passes, because the unit itself is being multiplied.",
+      "The two can be told apart over time. A shortage lifts some prices and then eases. A weakening unit lifts nearly all of them and does not ease, because the thing being measured has changed.",
     ],
   },
   {
-    heading: "The idea, then the extreme case",
+    heading: "The slow case and the fast one",
     paragraphs: [
-      "Read with [hard money vs fiat](/sound-money/hard-money-vs-fiat) and [backed money](/sound-money/backed-money). For the extreme case, open [Weimar hyperinflation](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
-      "History articles stay documentary. This page only fixes the idea: purchasing power of the unit, prices as surface, hyperinflation as a case. When a reader asks “what does inflation mean?” stay here. When they ask “what happened in 1923?” leave for history.",
+      "Most inflation is slow. A few percent a year is hard to feel in a week and easy to feel across a working life: a saver who holds the unit for thirty years at three percent a year ends up with well under half of the purchasing power he started with. Nobody queues at a bank for that. It shows up in wages that have to be renegotiated and savings that have to be put somewhere else.",
+      "The fast case is rarer and louder. It is the one people remember, and it is the one that ends with a new unit. Both run through the same channel. What separates them is how quickly the holder notices, and how quickly he stops holding.",
     ],
   },
 ];
@@ -603,16 +601,16 @@ const backedMoney: Section[] = [
     paragraphs: [
       "Redeemability is testable. Either a holder can demand the metal at a known price, or they cannot. Reserves on a balance sheet, without that right, do not make the unit hard.",
       "A classical convertibility rule said: present the note, take the weight. The vault mattered because the public claim could empty it. A modern central-bank gold pile without that claim is a portfolio fact. It is not the same contract.",
-      "When writers say a currency is “backed by the full faith and credit” of a government, they name a tax and legal-tender story. That can be a strong fiscal claim. It is not metal backing in the sense this page uses.",
-      "The word “backed” sells confidence. This site asks for the mechanism. Without a presentment right, confidence is a story about the issuer — not a metal contract the holder can enforce at a teller window on a working day.",
+      "When writers say a currency is “backed by the full faith and credit” of a government, they name a tax and legal-tender story. That can be a strong fiscal claim. It is not metal backing.",
+      "The word “backed” sells confidence. The useful question is the mechanism. Without a presentment right, confidence is a story about the issuer — not a metal contract the holder can enforce at a teller window on a working day.",
     ],
   },
   {
     heading: "Three easy confusions",
     paragraphs: [
       "First: covering a note issue with government bonds is not metal backing. It is a claim on a tax office. Second: a gold-exchange standard, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. Third: the [Rentenmark](/history/20th-century/weimar-1923) was “backed” by mortgages. That was an accounting and political device to stop the press, not a pile of gold at the teller window.",
-      "Official book value of U.S. gold — still carried at a statutory dollar price far from the market — is another trap for the word. The figure is an accounting convention. Read it on [official gold book value](/markets/official-gold-book-value), not as proof of public redeemability.",
-      "Central-bank reserve totals answer “how much metal does the state hold?” They do not answer “can a private holder present notes and take metal?” Keep [central-bank gold reserves](/markets/central-bank-gold-reserves) under Markets. A rising reserve tonne chart can sit beside a pure fiat domestic unit without contradiction.",
+      "The official book value of U.S. gold — still carried at a statutory dollar price far from the market — is another trap for the word. The [official gold book value](/markets/official-gold-book-value) is an accounting convention, not a sign that anyone can redeem anything at that price.",
+      "Central-bank reserve totals answer “how much metal does the state hold?” They do not answer “can a private holder present notes and take metal?” A rising chart of [central-bank gold reserves](/markets/central-bank-gold-reserves) can sit beside a purely fiat domestic unit without contradiction.",
     ],
   },
   {
@@ -621,7 +619,7 @@ const backedMoney: Section[] = [
       "Under a working gold or silver standard, banks and treasuries published rules for convertibility: which notes, which weights, which offices. The public test was the window. When the window closed for war or emergency, the note’s legal name might still say “gold.” The contract had changed.",
       "The [1933 U.S. gold recall](/history/20th-century/1933-gold-recall) shows the other side: even a gold dollar can have the public claim removed by statute. Citizens lost monetary gold rights years before the **1971** close of the gold window for foreign official holders.",
       "Bretton Woods then limited the remaining gold link to official holders at **$35** an ounce. Retail Americans were not walking into a Treasury window for coin. Calling that era “gold-backed money” without naming who could redeem is how the slogan swallows the contract.",
-      "Warehouse receipts and early bank notes started as claims on deposited metal — the banks-and-paper opening story. When the receipt stops being payable in metal on demand, the instrument has changed category even if the engraved language lags behind.",
+      "Warehouse receipts and early bank notes started as claims on deposited metal. That is how paper money began. When the receipt stops being payable in metal on demand, the instrument has changed category even if the engraved language lags behind.",
     ],
   },
   {
@@ -634,21 +632,21 @@ const backedMoney: Section[] = [
     ],
   },
   {
-    heading: "Policing the word",
+    heading: "Why the vault still matters",
     paragraphs: [
-      "This page only polices the word “backed.” It is not a brief to restore a gold window, not a forecast of exchange rates, and not investment advice. [Information versus advice](/sound-money/information-not-advice) is the standing line.",
-      "Reserves are useful for states. This site only refuses to rename them as public convertibility when the public has no claim. A vault total without a presentment right is still useful accounting — it is not the older contract.",
-      "[What is sound money?](/sound-money/what-is-sound-money) names the constraint. [Hard money vs fiat](/sound-money/hard-money-vs-fiat) names production cost.",
+      "Reserves are useful to states. They settle debts between governments, defend exchange rates, and reassure creditors in a crisis. None of that is nothing. It is simply a different thing from a public right to present a note and take metal.",
+      "The difference shows up when it is tested. A holder with a contract can walk to the window. A holder with a slogan can only read about the vault. The same tonnes of gold can sit behind both arrangements; only one of them puts the key in the holder’s hand.",
     ],
   },
   {
-    heading: "Meaning first, then the statute cases",
+    heading: "What the word used to mean",
     paragraphs: [
-      "Read next with [what is sound money?](/sound-money/what-is-sound-money) and [hard money vs fiat](/sound-money/hard-money-vs-fiat). Dated cases: [1933 gold recall](/history/20th-century/1933-gold-recall), [Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971), [Weimar / Rentenmark](/history/20th-century/weimar-1923). The overview sits under [Sound Money](/sound-money).",
-      "When a desk figure looks like “backing,” check whether the page is markets accounting or a redeemability story. Markets cover dated facts. Practice covers handling metal. Do not let a vault photo rewrite a contract that does not exist. A clear word for “backed” makes every later history page easier to read.",
+      "For most of the nineteenth century, “backed” was not a slogan at all. A note was backed if it could be exchanged for coin, and the bank that issued it could be run if it could not pay. Each step of the twentieth century — the wartime suspensions of **1914**, the American recall of **1933**, the closing of the official window in **1971** — kept the word and removed a holder from the contract.",
+      "By the end, the word described a feeling about the issuer rather than a right against it. Pinning it back to its older meaning — who can present what, for how much — is what makes the history of those years readable. [What is sound money?](/sound-money/what-is-sound-money) names the constraint; [hard money vs fiat](/sound-money/hard-money-vs-fiat) names the cost of production behind it. The overview sits under [Sound Money](/sound-money).",
     ],
   },
 ];
+
 const barsVsCoins: Section[] = [
   {
     heading: "",
@@ -2130,29 +2128,29 @@ const officialGoldBookValue: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "After **1971**, the gold window for foreign official holders was closed — and the U.S. books still carried the same ounces at a leftover legal price. United States official gold is still carried on the Treasury books at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That **book value** is a leftover **legal par** — the last official dollar price of gold written into statute — not the market price you see quoted in London or on futures markets (**COMEX**). It is not a forecast, and it is not a price anyone can present metal against today.",
+      "The United States Treasury still values its gold at **$42.22** per **fine troy ounce** (a troy ounce is the precious-metal ounce, about 31.1 grams; fine means pure metal content). That is the **book value**: the last official dollar price of gold written into U.S. law, in **1973**, and never changed since. It is not the market price quoted in London or on the U.S. futures market (**COMEX**), and nobody can hand the Treasury $42.22 and take away an ounce.",
     ],
   },
   {
     heading: "Book versus spot",
     paragraphs: [
-      "Two numbers sit on the same pile of metal. **Spot** is the market print: a London PM fix, a COMEX nearby, or another dated quote in dollars per troy ounce. **Book** is the value written into the U.S. fiscal accounts. The Treasury’s Status Report of U.S. Treasury-Owned Gold, and the Federal Reserve’s H.4.1 gold-stock line, still use the statutory rate of **$42.2222** per fine troy ounce — usually shortened to $42.22.",
-      "The stock itself is large and slow-moving. Treasury reports on the order of **261.5 million** fine troy ounces of official gold, held mainly as “deep storage” at Fort Knox, West Point, and Denver, with a smaller working stock at the Mint. At the book rate that stock is about **$11.041 billion**. At a market print of, say, two thousand dollars an ounce, the same ounces are a different arithmetic product. The ounces did not change. The unit of account did.",
-      "Gold certificates issued by the Treasury to Federal Reserve Banks match that book stock. The certificate is an intra-government claim, not a public window. No citizen, and no foreign official holder, can present dollars and demand those ounces at $42.22. The [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) ended official convertibility for foreign holders. The book rate survived as an accounting leftover.",
+      "Two numbers sit on the same pile of metal. **Spot** is the market price: a London afternoon fix, a COMEX nearby future, or another dated quote in dollars per troy ounce. **Book** is the value written into the U.S. government’s accounts. The Treasury’s Status Report of U.S. Treasury-Owned Gold, and the Federal Reserve’s H.4.1 gold-stock line, still use the statutory rate of **$42.2222** per fine troy ounce — usually shortened to $42.22.",
+      "The stock itself is large and slow-moving. Treasury reports on the order of **261.5 million** fine troy ounces of official gold, held mainly as “deep storage” at Fort Knox, West Point, and Denver, with a smaller working stock at the Mint. At the book rate that stock is about **$11.041 billion**. At a market price of two thousand dollars an ounce, the same ounces are worth more than half a trillion. The metal is the same; only the price used to count it differs.",
+      "Gold certificates issued by the Treasury to the Federal Reserve Banks match that book stock. The certificate is a claim inside the government, not a public window. No citizen, and no foreign government, can present dollars and demand those ounces at $42.22. The [1971 gold-window close](/history/20th-century/bretton-woods-nixon-1971) ended that right for foreign official holders. The book rate survived as an accounting leftover.",
     ],
   },
   {
     heading: "How the official price got to $42.22",
     paragraphs: [
-      "The Gold Reserve Act of **1934** reset the official U.S. gold price from $20.67 to **$35** an ounce after the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods then used that $35 par for official dollar–gold convertibility. The market print and the official par were meant to stay near each other. After the mid-1960s they did not.",
+      "The Gold Reserve Act of **1934** reset the official U.S. gold price from $20.67 to **$35** an ounce after the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods then used that $35 par for official dollar–gold convertibility. The market price and the official par were meant to stay near each other. After the mid-1960s they did not.",
       "On **15 August 1971** the United States suspended convertibility for foreign official holders. In **December 1971** the Smithsonian Agreement raised the official par to **$38**. The Par Value Modification Act of **31 March 1972** (Public Law 92-268) wrote that $38 figure into U.S. law. A further devaluation followed. Public Law **93-110** of **21 September 1973** set the par at **$42.2222** per fine troy ounce.",
-      "That 1973 statute is the last official U.S. gold par. Congress did not raise the book rate again when the market floated. Spot left $42.22 behind. The Treasury continued to carry the same ounces at the same statutory dollars. H.4.1’s gold-stock line still prints in that book unit, not in market dollars.",
+      "That 1973 statute is the last official U.S. gold price. When the market floated, Congress did not raise the book rate again. Spot left $42.22 behind, and the Treasury went on carrying the same ounces at the same statutory dollars. H.4.1’s gold-stock line still prints in that book unit, not in market dollars.",
     ],
   },
   {
-    heading: "A short arithmetic table",
+    heading: "Market price as a multiple of the official price",
     paragraphs: [
-      "The divisions below are arithmetic only: a named spot, or this site’s LBMA/COMEX **year average** from this site’s published year-average price series, divided by the two official pars. They do not say gold is cheap or dear. They do not project a path. $35 is the 1934–1971 official par. $42.22 is the 1973–present book rate. For years before September 1973, the $42.22 column is a later yardstick applied backward, not a par that then existed.",
+      "Each row divides a market price — a named day’s London price, or this site’s LBMA/COMEX **year average** — by the two official prices: **$35**, the par from 1934 to 1971, and **$42.22**, the book rate since 1973. For years before September 1973, the $42.22 column is a later yardstick applied backward, not a par that existed at the time.",
     ],
     list: [
       "**1971 year average $40.62** (LBMA/COMEX series used on this site): $40.62 ÷ $35 = **1.16×**; $40.62 ÷ $42.22 = **0.96×**.",
@@ -2167,22 +2165,21 @@ const officialGoldBookValue: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Read any row as a ratio of two published dollars, not as a valuation model. The Treasury still books the stock at the last statutory par. The market prints another number. Both can be true at once because they answer different questions.",
+      "The 1973 statute was already behind the market in the year it was passed, and by 2024 the average price was more than fifty-six times the book rate. Both numbers are correct at once, because they answer different questions: one is an accounting entry, the other is what the metal fetches.",
     ],
   },
   {
     heading: "What the book number is for",
     paragraphs: [
-      "Fiscal accounts need a dollar figure for a government asset. After 1973 the United States chose not to mark official gold to the market on the main Treasury gold line. The book stays at $42.22. Market-value illustrations — ounces times spot — appear in commentary and on this site’s [desk](/desk). They are a different product. They do not rewrite the statute.",
-      "Other official holders treat gold differently. Some central banks revalue gold toward market prices on their own balance sheets. Some keep a historical cost. The IMF’s International Financial Statistics report physical gold and a dollar value used for reserve arithmetic. Those are reporting conventions. They are not a U.S. statutory par, and they are not this page’s $42.22.",
-      "Keep the jobs apart. [Sound Money History](/history) tells how $35 and $42.22 became law. This page only records that the book rate is still $42.22, that spot is a different series, and that dividing one by the other is arithmetic. How people handle bars and coins lives under [gold and silver in practice](/gold-silver), not here.",
+      "Government accounts need a dollar figure for every asset. After 1973 the United States chose not to mark official gold to the market on the main Treasury gold line, so the book stays at $42.22. Market-value figures — ounces times spot — appear in commentary and on this site’s [desk](/desk). They are useful, but they are a calculation, not the statute.",
+      "Other countries handle gold differently. Some central banks revalue gold toward market prices on their own balance sheets; some keep a historical cost. The IMF’s International Financial Statistics report physical gold and a dollar value used for reserve arithmetic. How those conventions shape reserve figures is covered in [central-bank gold reserves](/markets/central-bank-gold-reserves).",
     ],
   },
   {
     heading: "Two ledgers, one stock",
     paragraphs: [
-      "Official gold on the U.S. books is a government asset at a frozen par. Spot is a market print. The gap is a fact of two ledgers — not a secret price, a floor, or a target, and not a reason to buy or sell metal. This page does not say the Treasury “should” revalue gold.",
-      "The other fact pages under [gold and silver markets](/markets) cover how central banks report gold in reserves, what the gold–silver ratio measures, and what country rankings of physical silver demand measure. For the statute story that produced $35 and then $42.22, open the 1971 episode linked above. The narrative stays there. The leftover book rate stays here.",
+      "When a headline says the United States holds about **$11 billion** in gold, it is using the book rate. When another puts the figure above a trillion dollars, it is multiplying the same **261.5 million** ounces by a market price — at the July 2026 London price of **$4,026.60**, about **$1.05 trillion**. Neither headline is wrong. Knowing which price sits behind the number is the whole trick.",
+      "How $35 and then $42.22 became law, and why convertibility ended, is told in [Sound Money History](/history), starting from the 1971 episode linked above.",
     ],
   },
 ];
@@ -2191,27 +2188,28 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A reserve manager’s published book can rise by tens of tonnes in a quarter while a private holder still cannot present a note and take metal. Central banks report gold as part of official reserve assets. The public figures are a stock in tonnes or ounces, sometimes a share of foreign-exchange reserves, sometimes official gold marked at a market price and divided by nominal GDP, and dated purchases or sales. This page records how those reports work, where metal is often stored, and which official buyers and sellers have been named in recent IMF and World Gold Council tallies — including a short Canada section on a printed **Gold: 0** line, plus one dated official sale from **1999–2002**. It is not a shopping list.",
+      "When a headline says a central bank bought ten tonnes of gold last month, the number comes from a reserve report: a stock of gold in tonnes or ounces, filed with the IMF or published by the bank itself. From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how it compares with the size of the economy, and who bought or sold in a given month. It is not a shopping list. Central banks buy and sell under statute, sanctions, and reserve rules that have nothing to do with a household’s savings.",
+      "The sections below explain each kind of figure, then follow a few countries through their own books: China’s published stock, Poland’s buying spree, Canada’s reserve table, which now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
     ],
   },
   {
     heading: "How gold enters the reserve statement",
     paragraphs: [
       "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, **SDRs** (Special Drawing Rights — an IMF reserve asset), and IMF reserve positions in one reserve total.",
-      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) at $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not name a policy.",
-      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table below. Germany, Italy, and France hold large legacy European stocks. China’s published official figure — dated in the holdings section below — sits above **2,300 tonnes** and is widely treated as a floor, not a full geological census. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
+      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) of $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not tell you which.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table below. Germany, Italy, and France hold large legacy European stocks. China’s published official figure — dated in the holdings section below — sits above **2,300 tonnes** and is widely treated as a floor, not a full count. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
     ],
   },
   {
     heading: "Gold as a share of FX and gold reserves",
     paragraphs: [
-      "A tonne stock and a reserve share are different jobs. The share used here is gold marked near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It is not the U.S. statutory **$42.22** book. It is not a claim about the next quarter’s percentage.",
-      "Two published world snapshots sit a year apart and must stay labeled. In the Council’s **2025** reserve-manager survey, the prompt stated that gold accounted for **19 percent** of total reported reserves — foreign exchange plus gold — in **Q3 2024**. The Council’s market primer dated **1 April 2026**, using IMF COFER and IFS, puts gold at **26 percent** of total global allocated reserves by **Q3 2025**. Those are two prints, not one spliced series.",
-      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited in the China section. Narodowy Bank Polski’s first-quarter **2026** statement, dated in the Poland section below, put gold at **29.4 percent** of official reserve assets at the end of **March 2026**. That is a smaller foreign-currency book and a different inheritance — not a larger gold mountain than China’s.",
+      "Tonnes and share answer different questions. The share used here is gold valued near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It is not based on the U.S. statutory **$42.22** book.",
+      "Two published world figures sit a year apart and should not be joined into a trend line. In the Council’s **2025** reserve-manager survey, the prompt stated that gold accounted for **19 percent** of total reported reserves — foreign exchange plus gold — in **Q3 2024**. The Council’s market primer dated **1 April 2026**, using IMF COFER and IFS, puts gold at **26 percent** of total global allocated reserves by **Q3 2025**. Different bases, different dates: two prints, not one spliced series.",
+      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited in the China section. Narodowy Bank Polski’s first-quarter **2026** statement put gold at **29.4 percent** of Poland’s official reserve assets at the end of **March 2026**. Poland’s share is higher because its foreign-currency book is smaller, not because it holds more gold than China.",
     ],
     table: {
       caption:
-        "Gold’s share of foreign-exchange reserves plus gold at a market value. Each row keeps its own clock and label.",
+        "Gold’s share of foreign-exchange reserves plus gold at a market value. Each row keeps its own date and source.",
       headers: ["Dated print", "Share", "Whose reserves", "Source"],
       rows: [
         ["Q3 2024", "**19%**", "World reported FX + gold", "WGC CBGR Survey 2025 prompt"],
@@ -2229,16 +2227,16 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A rising share can be more tonnes, a higher gold price on an unchanged stock, or a smaller foreign-currency book. The mechanism remains the dated report.",
+      "A rising share can mean more tonnes, a higher gold price on an unchanged stock, or a smaller foreign-currency book. The share alone cannot tell them apart; the tonnes figure can.",
     ],
   },
   {
     heading: "Official gold relative to GDP",
     paragraphs: [
-      "A tonne stock and a reserve share still sit inside the reserve book. Official gold relative to GDP is a different division. Take the reported official gold stock, mark it at a named market price, and divide by that country’s nominal GDP. A large published vault can sit beside a large economy and look light on this clock. A smaller published stock can sit beside a smaller economy and look heavy. The job is the quotient, not a league table of vaults.",
-      "The country set below is short and labeled. Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared. That is the same July compilation the year-to-date buyer table uses. It is not the later August SAFE and NBP prints in the China and Poland sections. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026** — the end-month London print that matches that holdings month — and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
-      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP line. Switzerland’s **1,039.9 tonnes** are about **12.90 percent** of **$1,043.544 billion**. Italy’s **2,451.8 tonnes** are about **12.45 percent** of **$2,550.111 billion**. Russia’s **2,276.8 tonnes** are about **11.39 percent** of **$2,587.938 billion**. France (**2,437.0 tonnes**, **9.36 percent** of **$3,368.925 billion**) and Germany (**3,349.5 tonnes**, **8.59 percent** of **$5,048.059 billion**) sit in the same European neighborhood. The United States remains the largest published stock, **8,133.5 tonnes**, and about **3.42 percent** of **$30,767.075 billion**. Japan’s **846.0 tonnes** are about **2.47 percent** of **$4,435.163 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**.",
-      "The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP line — a mid-table print on this clock, kept off the table so it does not become a third Poland narrative. A later August NBP stock of **648 tonnes** belongs in the Poland section below. China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, belongs in the China holdings table. Do not splice those later months into this GDP quotient.",
+      "A third way to size a gold stock is against the whole economy. Take the reported official gold, value it at a named market price, and divide by that country’s nominal GDP. A large vault beside a large economy can look light on this measure; a smaller vault beside a smaller economy can look heavy. It measures weight against output, not the size of the vault.",
+      "The country set below is short and labeled. Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared — the same July compilation the year-to-date buyer table uses. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026**, the end-month London price that matches that holdings month, and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
+      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP. Switzerland’s **1,039.9 tonnes** are about **12.90 percent** of **$1,043.544 billion**. Italy’s **2,451.8 tonnes** are about **12.45 percent** of **$2,550.111 billion**. Russia’s **2,276.8 tonnes** are about **11.39 percent** of **$2,587.938 billion**. France (**2,437.0 tonnes**, **9.36 percent** of **$3,368.925 billion**) and Germany (**3,349.5 tonnes**, **8.59 percent** of **$5,048.059 billion**) sit in the same European neighborhood. The United States has by far the largest stock, **8,133.5 tonnes**, yet it is only about **3.42 percent** of **$30,767.075 billion**. Japan’s **846.0 tonnes** are about **2.47 percent** of **$4,435.163 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**.",
+      "The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP — close to Germany. Later months stay out of this division: Poland’s August stock of **648 tonnes** and China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, appear in their own sections below. Mixing them into a July calculation would produce a percentage no source published.",
     ],
     table: {
       caption:
@@ -2260,30 +2258,30 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The percentage is market value of reported official gold divided by that 2025 GDP line. It is not gold’s share of foreign-exchange reserves. It is not a claim about a later year’s GDP, and it is not a reason to copy a reserve manager. Change the gold print or the GDP vintage and the percentage moves. The mechanism remains the dated division.",
+      "This percentage is not gold’s share of reserves; that is the table above. Change the gold price or the GDP year and every row moves: a higher gold price lifts every country’s figure, and a faster-growing economy pulls its own figure down.",
     ],
   },
   {
     heading: "Vaults and where the bars sit",
     paragraphs: [
-      "Reported gold is not always in the reporting capital. For much of the postwar period, European and other official holders kept bars at the Federal Reserve Bank of New York, the Bank of England, and the Banque de France. Custody was a service. Title stayed with the owner. The location still matters for politics and for logistics: a bar in New York is not a bar in Frankfurt.",
+      "Reported gold is not always in the reporting capital. For much of the postwar period, European and other official holders kept bars at the Federal Reserve Bank of New York, the Bank of England, and the Banque de France. Custody was a service; title stayed with the owner. Location still matters for politics and for logistics: a bar in New York is not a bar in Frankfurt.",
       "The 2010s brought a documented repatriation wave. The Deutsche Bundesbank’s 2013–2017 programme moved gold from New York and Paris to Frankfurt (300 tonnes from the New York Fed and 374 tonnes from the Banque de France under that plan). De Nederlandsche Bank announced in 2014 that it would bring 122 tonnes from New York to Amsterdam. Austria, Hungary, and others published their own transfers. The Bank of England remains a major custodian for official gold that has not been called home.",
-      "Storage preferences are facts about custody, not a ranking of vaults. A central bank can hold gold at home, at a foreign central bank, or split between the two. The report to the IMF is about ownership of monetary gold, not about which door a visitor would knock on.",
+      "A central bank can hold gold at home, at a foreign central bank, or split between the two. What it reports to the IMF is ownership of monetary gold, not the address of the vault.",
     ],
   },
   {
     heading: "Recent official purchases, dated",
     paragraphs: [
-      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net central-bank buying in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
-      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (treated at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
-      "Each line is a reported change in official gold, dated to a calendar year. It is not a recommendation, a miner pick, or a claim that private holders should copy a reserve manager. Central banks buy and sell under statute, sanctions, and reserve-composition rules that do not apply to a household. The largest reported 2026 country additions, month by month, sit in the next section. Reported net official sales from the same July compilation sit immediately after that table.",
+      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
+      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (covered at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
+      "Each line is a reported change in official gold for a calendar year. The monthly picture for 2026, buyers first and then sellers, follows.",
     ],
   },
   {
     heading: "Reported net buyers, YTD through August 2026",
     paragraphs: [
-      "The World Gold Council’s latest monthly compilation of publicly reported official changes — drawn from IMF International Financial Statistics and national central-bank releases — runs through **31 July 2026**. In the weeks after that note, a few named buyers published August stocks. The table keeps those two clocks in separate columns. A tonne here is a reported change in official monetary gold on the published books. It is not a private investment flow.",
-      "Reported world purchases in that July compilation were about **130 tonnes**. That headline is the sum of published country lines. It is not the Council’s broader Gold Demand Trends estimate, which also tries to capture unreported official buying. Kazakhstan’s August stock has not yet appeared in a matching national or WGC monthly line, so that row stays on July.",
+      "The World Gold Council’s latest monthly compilation of publicly reported official changes — drawn from IMF International Financial Statistics and national central-bank releases — runs through **31 July 2026**. In the weeks after that note, a few buyers published August stocks of their own. The table shows both: the latest national figure, and the July figure from the Council beside it.",
+      "Reported world purchases in that July compilation were about **130 tonnes**. That is the sum of published country lines. It is not the Council’s broader Gold Demand Trends estimate, which also tries to capture unreported official buying. Kazakhstan’s August stock has not yet appeared in a matching national or WGC monthly line, so that row stays on July.",
     ],
     table: {
       caption:
@@ -2326,8 +2324,8 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "Reported net official sellers, YTD through July 2026",
     paragraphs: [
-      "The same World Gold Council monthly compilation — drawn from IMF International Financial Statistics and national central-bank releases, through **31 July 2026** and published **3 September 2026** — also names the largest reported official reductions. The buyer table above keeps later August prints on a few named accumulators. This seller table stays on that July book. A tonne here is a reported change in official monetary gold on the published books. It is not a private investment flow.",
-      "Two country lines dominate the published year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and the July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan remains a year-to-date buyer on the table above. This page does not invent an August seller total.",
+      "The same World Gold Council monthly compilation — through **31 July 2026**, published **3 September 2026** — also names the largest reported official reductions. Like the buyer figures, each tonne is a change on a central bank’s published books, not a private investment flow.",
+      "Two countries dominate the year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and its July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan is still a net buyer for the year, as the table above shows. No August seller total has been published yet.",
     ],
     table: {
       caption:
@@ -2352,18 +2350,17 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The table does not rank sellers as an investment case. It records reported official changes, dated to the July compilation. Türkiye’s book has been two-way in recent years; a reported sale is still a dated official-book change, not a private export census.",
+      "Türkiye’s book has moved in both directions in recent years, so a sale there is one entry in a long two-way record. Russia’s reported sales come after the heavy additions of 2016–2019 noted above.",
     ],
   },
   {
-    heading: "Brown’s Bottom (1999–2002): a dated official gold sale",
+    heading: "Brown’s Bottom: the UK gold sales of 1999–2002",
     paragraphs: [
-      "The later market nickname **Brown’s Bottom** names a dated HM Treasury and Bank of England official sale, not a private-flow lesson. This is not a separate URL. It is a subsection of how a reserve book can reduce gold and raise foreign-currency assets — the same composition job the year-to-date seller table records for a different decade.",
+      "The best-documented official gold sale of recent decades is British. Traders later nicknamed it **Brown’s Bottom**, after Gordon Brown, then Chancellor of the Exchequer, and the price level at which the sales took place.",
       "On **7 May 1999**, HM Treasury announced a restructuring of the United Kingdom’s foreign-currency and gold reserves. The Bank of England, acting as the Treasury’s agent, then ran **17** uniform-price auctions from **July 1999** to **March 2002**. Approximately **395 tonnes** of gold were sold. The [Bank of England Quarterly Bulletin for Summer 2003](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2003/an-analysis-of-the-uk-gold-auctions-1999-2002.pdf) records that the stock then stood around **715 tonnes**, with a medium-term aim of around **300 tonnes**. At each of the first eleven auctions, **25 tonnes** were offered; at each of the last six, **20 tonnes** were offered.",
-      "The same Bank article puts the average auction price at around **$275** an ounce — **$274.9** in the footnote that also names the programme’s revenue at approximately **$3.5 billion**. HM Treasury’s later [GOV.UK disclosure](https://www.gov.uk/government/publications/the-sale-of-part-of-the-uk-gold-reserves-1999-2002), published **31 March 2010**, uses the same tonne, auction-count, and dollar-proceeds figures, and adds a contemporaneous sterling print of about **£1.9 billion**. Those proceeds stayed inside the reserves. They were reinvested in dollar, euro, and yen interest-bearing assets.",
-      "The Treasury’s stated aim was to restructure the reserve holdings — gold down, foreign-currency assets up — so the portfolio held a larger share in currencies. That is a reserve-composition sentence from the official book. It is not a private-flow tip, and it is not a later market verdict on the sale.",
-      "The auction clearing price was a market sale print — a dated dollar per ounce paid by successful bidders. It is not a statutory book rate. The U.S. leftover par of **$42.22** on [official gold book value](/markets/official-gold-book-value) is a reporting convention on another ledger. Do not mix the two. One number is what the auctions allotted. The other is what a Treasury line still writes for ounces it did not sell.",
-      "Read those sentences as a dated official-sector record. They do not say a private reader should follow HM Treasury. They do not rank the sale against later prices as an investment case. They show one reserve manager reducing a reported gold stock, raising a foreign-currency book, and stating a composition aim — the same report facts this page tracks for official buyers and sellers as a whole.",
+      "The same Bank article puts the average auction price at around **$275** an ounce — **$274.9** in the footnote that also names the programme’s revenue at approximately **$3.5 billion**. HM Treasury’s later [GOV.UK disclosure](https://www.gov.uk/government/publications/the-sale-of-part-of-the-uk-gold-reserves-1999-2002), published **31 March 2010**, uses the same tonne, auction-count, and dollar-proceeds figures, and adds a contemporaneous sterling figure of about **£1.9 billion**. The proceeds stayed inside the reserves, reinvested in dollar, euro, and yen interest-bearing assets.",
+      "The Treasury’s stated aim was to restructure the reserves — less gold, more foreign currency — so the portfolio held a larger share in interest-bearing currencies. The reserves did not shrink; their mix changed.",
+      "The auction clearing price was a market price: dollars per ounce actually paid by successful bidders. It is not a statutory book rate. The U.S. leftover par of **$42.22**, explained under [official gold book value](/markets/official-gold-book-value), is a reporting convention on another ledger. One number is what the auctions fetched; the other is what a Treasury line still writes for ounces it never sold.",
     ],
   },
   {
@@ -2371,25 +2368,23 @@ const centralBankGoldReserves: Section[] = [
     callout: {
       label: "Not a central bank",
       paragraphs: [
-        "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it is not a row in the official tables above. Two published gold figures sit under that name and must stay labeled. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That H1 purchase is a company statement. No official August year-to-date purchase total has been published, and this page does not invent one.",
+        "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it has no row in the official tables above. Two gold figures appear under its name, and they measure different things. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That half-year purchase is a company statement. No official August year-to-date figure for it has been published.",
       ],
     },
-    paragraphs: [
-      "The official tables do not rank buyers or sellers as an investment case. They record reported official changes, dated to the month each line can support. A private issuer’s reserve book is a different instrument, kept off the official tables.",
-    ],
+    paragraphs: [],
   },
   {
     heading: "China: reported holdings since 2000",
     paragraphs: [
-      "China reports official gold as a stock of monetary gold. The People’s Bank of China and the State Administration of Foreign Exchange publish the figure — in tonnes in some announcements, in fine troy ounces on the monthly official-reserve-assets table. The World Gold Council’s country book then carries that stock through IMF International Financial Statistics. What follows is that published book, dated. It is not a survey of every bar in the country.",
-      "For long stretches the book did not move in public. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** print held, in the WGC/IMF book, through **2010** and on to early **2015**.",
+      "China reports official gold as a stock of monetary gold. The People’s Bank of China and the State Administration of Foreign Exchange (SAFE) publish the figure — in tonnes in some announcements, in fine troy ounces on the monthly official-reserve-assets table. The World Gold Council’s country book then carries that stock through IMF International Financial Statistics. These are the figures China reports, not a count of every bar in the country.",
+      "For long stretches the published number did not move. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** figure held, in the WGC/IMF book, through **2010** and on to early **2015**.",
       "In **July 2015** the PBoC said the stock at the end of **June 2015** was **1,658 tonnes** (**53.31 million ounces**). Monthly SAFE reporting followed. The WGC year-end **2015** line is **1,760 tonnes**. A later pause left the book near **1,948 tonnes** — **62.64 million ounces** at the end of **October 2019**, per PBoC data carried by Xinhua — and the WGC **2020** year-end line is **1,950 tonnes**.",
-      "Buying that was visible again in the IMF book then produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
-      "The 2026 monthly book is the same series the year-to-date table above uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the table above rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
+      "Reported buying resumed and produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
+      "The 2026 monthly figures are the same series the year-to-date table above uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the table above rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
     ],
     table: {
       caption:
-        "Published official Chinese gold stock. Tonnes are the print named in the source, not a private estimate.",
+        "Published official Chinese gold stock. Tonnes are the figure named in the source, not a private estimate.",
       headers: ["Dated print", "Reported tonnes", "Source"],
       rows: [
         ["End-2000", "**395**", "WGC / IMF IFS (PBoC later cited **394 t** before the 2001 step)"],
@@ -2410,37 +2405,34 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Read the table as a sequence of published official prints. The gaps are part of the record: years with no public change, then a step. A later month can revise a rounded tonne. These sentences do not say a private reader should follow the PBoC.",
+      "The long flat stretches are part of the record: years with no reported change, then a jump announced all at once, as in **2009** and **2015**. A later month can still revise a rounded tonne.",
     ],
   },
   {
-    heading: "Poland: a short documentary block",
+    heading: "Poland: from 103 tonnes to 648",
     paragraphs: [
-      "Narodowy Bank Polski is the named European buyer of the early 2020s. This is not a separate URL. It is a subsection of how official gold is reported and accumulated.",
+      "Narodowy Bank Polski (NBP) has been Europe’s most visible gold buyer of the 2020s, and its public statements make the build-up easy to follow.",
       "At the end of **2017** NBP’s reported gold stock was about **103 tonnes**. In **2018–2019** the bank bought on the order of **126 tonnes**, taking the stock to about **229 tonnes** by end-2019. In **July 2019** NBP announced that it would transfer **100 tonnes** from the Bank of England to vaults in Poland — a custody move, not a purchase. Title was already Polish; the bars changed address.",
-      "Buying resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, and **+90 tonnes** in 2024, with further additions in **2025**. The desk’s latest Poland stock line of **550 tonnes** is the year-end-2025 starting point implied by later official additions: it is not the 2026 stock.",
+      "Buying then resumed in size. IMF-based annual changes in the compiled desk put Poland at about **+34 tonnes** in 2022, **+130 tonnes** in 2023, and **+90 tonnes** in 2024, with further additions in **2025**. The desk’s latest Poland stock line of **550 tonnes** is the year-end-2025 starting point implied by later official additions, not the 2026 stock.",
       "NBP’s first-quarter 2026 balance-of-payments note put the gold stock at **581.6 tonnes** at the end of **March 2026**, then **29.4 percent** of official reserve assets (valued at **PLN 319.5 billion** on that statement). The World Gold Council’s Gold Demand Trends for the second quarter, compiled from IMF and central-bank reports through **30 June 2026**, puts the stock at **632 tonnes** after about **+51 tonnes** in the quarter and about **+82 tonnes** in the first half. The Council’s 3 September 2026 monthly compilation, through **31 July 2026**, puts the stock at **640 tonnes**, after about **+8 tonnes** in July and about **+90 tonnes** year-to-date.",
       "On **10 September 2026**, NBP’s president stated that the stock at the end of **August 2026** was **648 tonnes**, valued at **PLN 344.8 billion** at then-current prices. That is about **+8 tonnes** in August and about **+98 tonnes** year-to-date against the desk’s **550-tonne** end-2025 starting point: **550 + 90** reaches the end-July **640**; **550 + 98** reaches the end-August **648**.",
-      "The same WGC notes record NBP’s public stock aim of **700 tonnes**, with gold then about **28 percent** of total reserves. An earlier NBP communications line had named a reserve-share aim in the region of **20 percent**; the March 2026 NBP statement already sat above that share. Governor Adam Glapiński’s remarks in this period treated gold as a reserve asset, not as a trading book.",
-      "Read those sentences as a dated official-sector record. They do not say a private reader should follow NBP. They do not rank Poland against other buyers as an investment case. They show one central bank raising a reported gold stock, moving metal home, and stating a reserve-share and then a **700-tonne** stock aim — the same custody and report facts this page tracks for the official sector as a whole.",
+      "The same WGC notes record NBP’s public stock aim of **700 tonnes**, with gold then about **28 percent** of total reserves. An earlier NBP communications line had named a reserve-share aim in the region of **20 percent**; the March 2026 statement already sat above that share. Governor Adam Glapiński’s remarks in this period treated gold as a long-term reserve asset, not as a trading book.",
     ],
   },
   {
     heading: "Canada: Gold: 0 on the official book",
     paragraphs: [
-      "Canada’s official gold line is a dated wind-down that ends at a printed zero. This is not a separate URL. It is a subsection of how official gold is reported — including a reserve book that no longer carries a gold stock.",
-      "Finance Canada’s monthly Official International Reserves tables still print **Gold: 0**. The [release dated 6 August 2026](https://www.canada.ca/en/department-finance/services/publications/monthly-official-international-reserves/2026/08.html), covering **31 July 2026**, puts total official international reserves at **US$127,038 million** and lists the gold cell as **0**. Earlier 2026 monthly prints in the same series — including the June and May tables — carry the same gold cell. The Bank of Canada’s weekly international-reserves snapshot uses the same **Gold: 0** line. That is the current official book.",
-      "The zero is the end of a multi-decade rundown. Contemporary reporting of the close-out — including [CBC’s March 2016 coverage](https://www.cbc.ca/news/business/gold-canada-reserves-1.3475818) of Finance Canada’s monthly print — put the peak stock in the **1960s** at more than **1,000 tonnes**. By **2003** the published stock was about **3.4 tonnes**. The last large disposals were coin sales: Finance Canada’s [February 2016 Official International Reserves](https://www.canada.ca/en/department-finance/news/2016/03/official-international-reserves.html) footnote records **21,851** ounces of gold coins sold for settlement in February, with holdings at **77** ounces on **29 February 2016**. Contemporaneous CBC reporting of the same Finance prints names earlier coin sales of **41,106** ounces in December and **32,860** ounces in January. The February table already printed the gold valuation line as **0** in millions of U.S. dollars — the residual ounces rounded under that million-dollar clock.",
-      "Read those sentences as a dated official-sector record. The printed zero is a quantity and valuation line on Canada’s reserve statement. It is not a later market verdict, and it is not a private-flow instruction.",
-      "The contrast with other G7 books on this page is light and labeled. The same July **2026** World Gold Council / IMF compilation used in the GDP table above still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**). Canada’s Finance Canada table sits beside those books with a gold cell of **0**. That is a difference of published official stocks, not a ranking of policy outcomes.",
-      "Read the Canada block the same way as the China and Poland sections: a dated official book. These sentences do not say a private reader should follow Ottawa. They do not say Canada was wrong. They show one reserve statement that once carried a large gold stock and now prints **Gold: 0** — the same report facts this page tracks for the official sector as a whole.",
+      "Canada’s reserve table is unusual among large economies: its gold line reads zero, the end of a sell-down that ran for decades.",
+      "Finance Canada’s monthly Official International Reserves tables still print **Gold: 0**. The [release dated 6 August 2026](https://www.canada.ca/en/department-finance/services/publications/monthly-official-international-reserves/2026/08.html), covering **31 July 2026**, puts total official international reserves at **US$127,038 million** and lists the gold cell as **0**. Earlier 2026 monthly tables in the same series, including June and May, show the same. The Bank of Canada’s weekly international-reserves snapshot uses the same **Gold: 0** line.",
+      "Contemporary reporting of the close-out — including [CBC’s March 2016 coverage](https://www.cbc.ca/news/business/gold-canada-reserves-1.3475818) of Finance Canada’s monthly figures — put the peak stock in the **1960s** at more than **1,000 tonnes**. By **2003** the published stock was about **3.4 tonnes**. The last disposals were coin sales: Finance Canada’s [February 2016 Official International Reserves](https://www.canada.ca/en/department-finance/news/2016/03/official-international-reserves.html) footnote records **21,851** ounces of gold coins sold for settlement in February, with holdings at **77** ounces on **29 February 2016**. CBC’s reporting of the same Finance releases names earlier coin sales of **41,106** ounces in December and **32,860** ounces in January. The February table already showed the gold value as **0** in millions of U.S. dollars — the remaining ounces were too few to register at that scale.",
+      "The other G7 books tell a different story. The same July **2026** World Gold Council / IMF compilation used in the GDP table above still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**), while Canada’s reserves are held almost entirely in foreign currencies and other non-gold assets.",
     ],
   },
   {
-    heading: "Composition, custody, and clocks",
+    heading: "Reading a reserve headline",
     paragraphs: [
-      "A rising official stock is a change in a reserve composition. It is not a price target. A reported official sale is the same kind of fact as a reported official purchase: a dated change in a reserve book, not a private-flow instruction. The **1999–2002** UK auction programme above is one such dated official-sale clock. A repatriation is a change in custody. It is not proof that a foreign vault failed. A high gold share of reserves can be an old European inheritance, a smaller foreign-currency book, a mark-to-market revaluation, or a new emerging-market programme. China’s published tonnes, gold’s world reserve share, and official gold relative to GDP are three jobs: a quantity on one book, a market-value fraction of reserve assets, and a market-value fraction of a year’s output. Canada’s printed **Gold: 0** is a fourth dated fact on the same report clock: a country book that no longer carries a gold stock. The mechanism is the report: quantity, sometimes value, sometimes location, and — on the GDP clock — a named price over a named GDP vintage.",
-      "These pages stay on current metal-market facts. How $42.22 became the U.S. book rate sits on [official gold book value](/markets/official-gold-book-value). What the gold–silver ratio measures is the third topic. Identified bar-and-coin offtake by country is the fourth. Narrative — 1907, 1933, 1971 — lives under [Sound Money History](/history). How a person stores a coin lives under [gold and silver in practice](/gold-silver). The [markets hub](/markets) holds the four topics together. None of those pages is a stock tip. Neither is this one.",
+      "Most reserve headlines come down to one of four figures: a stock in tonnes, a share of reserves, a ratio to GDP, or a change over a month or a year. A rising share can be new buying or simply a higher gold price. A repatriation moves bars without changing who owns them. A sale like the **1999–2002** UK auction programme swaps gold for currency inside the same reserves. Canada’s printed **Gold: 0** is what a long sell-down looks like once it is finished. Asking which of these a number is usually settles what it means.",
+      "The U.S. figure of **$42.22** is a separate accounting convention, explained under [official gold book value](/markets/official-gold-book-value). The **1971** end of dollar–gold convertibility, which set the stage for all of this, is told in [Sound Money History](/history).",
     ],
   },
 ];
@@ -2449,76 +2441,74 @@ const goldSilverRatio: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On a named day, two prints share a clock: divide gold’s dollar price by silver’s and you get how many ounces of silver equal one ounce of gold at that pair. The gold–silver ratio is that dated snapshot. It is not a fair-value claim. Three contemporaneous clocks can be written as ounces of silver per ounce of gold: the market price, mine output, and London vault stocks. They are three different divisions. This page keeps the market quotient, then labels the other two so they are not mistaken for it.",
-      "Mine supply is how much metal leaves the ground in a survey year. It is not a list of mining companies, not a stock tip, and not a reason the market ratio “should” match the mine book.",
+      "Divide the price of an ounce of gold by the price of an ounce of silver and you get the gold–silver ratio: how many ounces of silver buy one ounce of gold on that day. In September **2026** it stood near **68**. In January **1980** it briefly touched about **17**; in late April **2011**, about **31.5**. The ratio moves because both prices move, and it means exactly what the two prices meant on the day they were taken — no more.",
+      "Three contemporaneous clocks — three different counts — use the same phrase, ounces of silver per ounce of gold, for market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
     ],
   },
   {
     heading: "What the ratio measures",
     paragraphs: [
-      "Call gold G and silver S, both in the same currency per troy ounce. The ratio is G ÷ S. If gold is $2,000 and silver is $25, the ratio is 80. Eighty ounces of silver then have the same dollar value as one ounce of gold at that pair of prints. Change either print and the ratio changes. There is no third hidden input.",
-      "The two prices must share a clock. A London gold PM fix against a COMEX silver nearby from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from the same live prices. This page uses **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s print.",
-      "Historically, states also wrote a **mint ratio**: a legal number of silver units per gold unit. The Coinage Act of 1792 used 15 to 1. Later statutes used 16 to 1. That legal ratio is a mint rule. It is not the market ratio. When the two diverge, the legally overvalued metal tends to stay in coin and the other tends to leave — the ordinary bimetallic problem, told as narrative under [bimetallism](/history/silver/bimetallism). This page keeps the market quotient.",
+      "Call gold G and silver S, both in the same currency per troy ounce. The ratio is G ÷ S. If gold is $2,000 and silver is $25, the ratio is 80: eighty ounces of silver have the same dollar value as one ounce of gold at that pair of prices. Change either price and the ratio changes. There is no hidden third input.",
+      "The two prices must be taken at the same time. A London gold afternoon fix set against a COMEX silver future from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from matching live prices. This page uses **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s figure.",
+      "Governments once wrote a ratio into law as well: the **mint ratio**, a legal number of silver units per gold unit. The Coinage Act of 1792 used 15 to 1; later statutes used 16 to 1. When the legal ratio and the market ratio drifted apart, the metal the law overvalued stayed in coin and the other tended to disappear from circulation — the old bimetallic problem, told under [bimetallism](/history/silver/bimetallism).",
     ],
   },
   {
     heading: "Mining ratio vs market ratio",
     paragraphs: [
-      "The market ratio is one price divided by another. A mining ratio is one mine-supply total divided by another. Both can be spoken as “ounces of silver per ounce of gold.” They are still two different quotients. The first uses two dated dollar prints. The second uses two mine-production books for a stated year. The hole in the ground does not set the tape, and the tape does not rewrite the mine book.",
-      "This site’s homepage mining-ratio card prints about **7.1**. That figure is Silver Institute / Metals Focus World Silver Survey 2026 mine supply of **844.1 million ounces** (2026F) divided by this site’s World Gold Council–based 2026e gold mine pace of **3,708 tonnes**. USGS Mineral Commodity Summaries 2026 prints a same-book 2025e pair — **3,300 tonnes** of gold and **26,000 tonnes** of silver — about **7.9** ounces of silver per ounce of gold by mass. The USGS gold total sits below the World Gold Council mine book this site uses for the card, so the two official mine-supply quotients land near seven and near eight. Neither figure is a price. The desk’s Stocks & flows mine-output tile prints the same USGS pair as a geology fact — a byproduct relationship in the mine book, not fair value and not a company screen.",
-      "A dated market print sits far from that mine-supply neighborhood. On **10 September 2026**, COMEX December gold closed at **$4,364.50** and COMEX December silver at **$64.28**. Those two nearby futures share a session and a venue. Divide them and the market ratio is **67.9** — near **68**, with silver in the mid-sixties. Name the clock: COMEX December nearby closes, 10 September 2026. The next session’s pair can move a point without changing the definition.",
-      "Keep three labels on the table. A **mint ratio** is a legal number of silver units per gold unit — fifteen to one in the Coinage Act of 1792, later sixteen to one. A **mining ratio** is ounces mined per ounce mined in a survey year. A **market ratio** is gold’s dollar print divided by silver’s dollar print at a named pair of prices. The mint number is a statute story, told under [bimetallism](/history/silver/bimetallism). Mine supply is how much metal leaves the ground. The market number is the job of this page, under the [markets](/markets) hub. [Physical silver demand by country](/markets/physical-silver-demand-by-country) is the neighbor that counts identified bars and coins taken off the shelf — offtake, not holes in the ground, and not a price quotient. The same page also labels **2025** industrial fabrication as a factory table, so a solar-paste ounce is not mistaken for a bar, and **2025** jewelry fabrication as a workshop table. Recycling on that page is a scrap clock — secondary supply from old products — not this page’s mine clock.",
-      "The gap between a mine-supply ratio near **7** and a market ratio near **68** is a fact about two different divisions. It is not a fair-value gap. It is not a mean that later tapes owe a return to. It does not say silver is behind, gold is ahead, or that either metal should catch up. Mine supply, industrial use, and monetary demand all affect the two prices. None of them is entitled to set the other quotient. The market ratio remains one dated pair of prints.",
+      "The market ratio is one price divided by another. A mining ratio is one year’s mine output of silver divided by the same year’s mine output of gold. Both can be spoken as “ounces of silver per ounce of gold,” but they are different quotients: the first uses two dollar prices, the second two production totals.",
+      "This site’s homepage mining-ratio card shows about **7.1**. That figure is Silver Institute / Metals Focus World Silver Survey 2026 mine supply of **844.1 million ounces** (2026F) divided by this site’s World Gold Council–based 2026e gold mine pace of **3,708 tonnes**. USGS Mineral Commodity Summaries 2026 prints a matching 2025e pair — **3,300 tonnes** of gold and **26,000 tonnes** of silver — about **7.9** ounces of silver per ounce of gold by mass. The USGS gold total sits below the World Gold Council mine figure this site uses for the card, so the two official mine ratios land near seven and near eight. The desk’s Stocks & flows mine-output tile shows the same USGS pair. Much of the world’s silver is mined as a byproduct of other metals, which is part of why the mining ratio stays in this range.",
+      "The market is somewhere else entirely. On **10 September 2026**, COMEX December gold closed at **$4,364.50** and COMEX December silver at **$64.28** — two futures from the same session on the same exchange. Divide them and the market ratio is **67.9**, near **68**. The next session’s pair can move a point either way.",
+      "People sometimes read the distance between a mine ratio near **7** and a market ratio near **68** as a sign that silver is cheap. That reading mixes two different divisions. Gold’s price answers mostly to demand for a large stock that is rarely used up; silver’s also answers to factories that consume it. Nothing ties the price ratio to the mine ratio, so the gap is not a fair-value gap, and the mine ratio is not a mean the market ratio is bound to drift toward. Who actually buys and uses silver, country by country, is covered in [physical silver demand by country](/markets/physical-silver-demand-by-country).",
     ],
   },
   {
     heading: "London vault holdings — a custody inventory",
     paragraphs: [
-      "A third contemporaneous clock is the metal sitting in London custody. The London Bullion Market Association’s [London vault holdings](https://www.lbma.org.uk/prices-and-data/london-vault-data) series counts gold and silver in London commercial vaults, plus the Bank of England’s gold (the Bank does not hold silver). The print is month-end, published one month in arrears, and covers metal inside the M25: wholesale bars, coins, kilo bars, and small bars. It does not count jewellery, household metal, or smaller vaults outside the London clearing system. It is not a world aboveground census.",
-      "The dated [August 2026 print](https://www.lbma.org.uk/articles/london-gold-and-silver-vault-data-for-august-2026), published 7 September 2026, names **9,632 tonnes** of gold and **28,431 tonnes** of silver. Using the LBMA’s stated conversion — 1 gram = 0.0321507465 troy ounces — those tonnes become about **310 million ounces** of gold and about **914 million ounces** of silver. Divide the silver stock by the gold stock and the vault ratio is about **3.0** ounces of silver per ounce of gold. Name the clock: LBMA London Vault Holdings Data, August 2026.",
+      "The third count is metal sitting in London vaults. The London Bullion Market Association’s [London vault holdings](https://www.lbma.org.uk/prices-and-data/london-vault-data) series counts gold and silver in London commercial vaults, plus the Bank of England’s gold (the Bank does not hold silver). The figure is month-end, published one month in arrears, and covers metal inside the M25: wholesale bars, coins, kilo bars, and small bars. It does not count jewellery, household metal, or smaller vaults outside the London clearing system, so it is not a world aboveground census.",
+      "The [August 2026 print](https://www.lbma.org.uk/articles/london-gold-and-silver-vault-data-for-august-2026), published 7 September 2026, names **9,632 tonnes** of gold and **28,431 tonnes** of silver. Using the LBMA’s stated conversion — 1 gram = 0.0321507465 troy ounces — those tonnes become about **310 million ounces** of gold and about **914 million ounces** of silver. Divide the silver by the gold and the vault ratio is about **3.0** ounces of silver per ounce of gold.",
     ],
     list: [
       "**Gold 9,632 tonnes** — about **310 million ounces**.",
       "**Silver 28,431 tonnes** — about **914 million ounces**.",
-      "**Vault ratio ~3.0** — ounces of silver per ounce of gold in that same book.",
+      "**Vault ratio ~3.0** — ounces of silver per ounce of gold in the same custody inventory.",
     ],
   },
   {
     heading: "",
     paragraphs: [
-      "That **3.0** is a custody inventory ratio. It is not the mining ratio near **7** on the homepage card. It is not the market ratio near **68** on the 10 September 2026 COMEX nearby pair. London is one settlement hub. Metal in New York, Shanghai, Zurich, or a household safe is outside this book. The next month’s print can move without rewriting the definition.",
-      "The gap between a vault ratio near **3**, a mine-supply ratio near **7**, and a market ratio near **68** is a fact about three clocks. It is not a fair-value gap. It is not a mean. It does not say silver is scarce in London, gold is plentiful, or that either metal should catch up. A custody book records what those vaults held on a named day. The market ratio remains one dated pair of prints.",
+      "London is one settlement hub. Metal in New York, Shanghai, Zurich, or a household safe is outside this count, and the next month’s figure can move. Three counts, three answers — about **3** in London vaults, about **7** in mine output, about **68** in the market — and each is correct for what it measures.",
     ],
   },
   {
-    heading: "A dated pair, not a mean",
+    heading: "What the ratio does not tell you",
     paragraphs: [
-      "The ratio does not measure a natural law. Geology, mine supply, industrial use, and monetary demand all affect the two prices. None of them is “the” ratio. A number near 15 in a mint statute, or near 17 on a January 1980 tape, does not bind a later tape.",
-      "The ratio does not measure whether silver is behind or gold is ahead. It does not contain a mean that prices owe a return to. It does not forecast a catch-up. Those sentences are the ones this page will not make. A high ratio means gold’s dollar print is large relative to silver’s dollar print at that date. A low ratio means the opposite. That is the whole claim.",
-      "The ratio also does not measure industrial tightness by itself. Silver has a large fabrication use; gold’s fabrication use is smaller relative to its monetary stock. A squeeze in one metal can move the quotient without saying anything about the other metal’s “true” value. Keep the definition narrow so the snapshot stays honest.",
+      "The ratio is not a natural law. Geology, mine supply, industrial use, and monetary demand all push on the two prices, and none of them fixes “the” ratio. A 15 in a mint statute, or a 17 on a January 1980 trading day, does not bind any later market.",
+      "A high ratio means gold’s dollar price is large relative to silver’s on that date; a low one means the opposite. It does not, by itself, say that silver is behind or due to catch up. The year averages below run from under 30 to above 80 since 1971, with no fixed level the ratio keeps returning to.",
+      "Nor does the ratio measure industrial tightness on its own. Silver has a large fabrication use; gold’s fabrication use is small relative to its monetary stock. A squeeze in one metal can move the ratio without saying anything about the other metal’s value.",
     ],
   },
   {
     heading: "1980 and 2011 as anchors",
     paragraphs: [
-      "Two well-documented peaks are the anchors on this page. They are dates, not destinies.",
-      "In **January 1980** the London gold PM fix printed **$850** on 21 January. Silver’s nearby extreme in that same month, used on this site’s 1980 desk print, is **$49.45** on 18 January. Those two named prints give $850 ÷ $49.45 = **17.2**. That is a peak-week snapshot during the Hunt-era silver run, whose break is told as [Silver Thursday](/history/silver/silver-thursday). The **1980 year averages** on this site are $612.56 gold and $20.98 silver → **29.2**. The January tape and the year average are different snapshots. Both are arithmetic.",
-      "In **2011** the London gold PM fix printed **$1,895** on 6 September. Silver’s 2011 year average on this site is $35.12; gold’s is $1,571.52 → a year-average ratio of **44.7**. Late April is a different clock: the London silver fix printed **$48.70** on 28 April while gold’s PM fix was **$1,535.50**, and that pair compressed to **31.5** — the tape public commentary rounds to **30:1**. The next section names those prints and the September pair. “The 2011 ratio” without a clock is a blur.",
+      "Two well-documented peaks are the usual reference points.",
+      "In **January 1980** the London gold PM fix reached **$850** on 21 January. Silver’s nearby extreme in that same month, used on this site’s 1980 desk print, is **$49.45** on 18 January. Those two prices give $850 ÷ $49.45 = **17.2** — a peak-week snapshot during the Hunt brothers’ silver run, whose collapse is told as [Silver Thursday](/history/silver/silver-thursday). The **1980 year averages** on this site are $612.56 gold and $20.98 silver → **29.2**. The January spike and the year average are different snapshots of the same year.",
+      "In **2011** the London gold PM fix reached **$1,895** on 6 September. Silver’s 2011 year average on this site is $35.12; gold’s is $1,571.52 → a year-average ratio of **44.7**. Late April is a different moment again: the London silver fix reached **$48.70** on 28 April while gold’s PM fix was **$1,535.50**, and that pair compressed the ratio to **31.5** — the figure commentary rounds to **30:1**. Which “2011 ratio” someone means depends on the date they picked.",
     ],
   },
   {
     heading: "What a 30:1 ratio meant in 2011",
     paragraphs: [
-      "On a named day the ratio is still gold’s dollar price divided by silver’s. On **28 April 2011** the London gold PM fix printed **$1,535.50** and the London silver fix printed **$48.70**. Those two London prints give $1,535.50 ÷ $48.70 = **31.5**. The day’s two gold fixes averaged **$1,533.25**; that mean divided by the same silver fix is **31.48**, the year’s low on public London-fix ratio tables. “Thirty to one” is the rounded shorthand for that April tape. It is not a year average, and it is not a level a later tape owes. Check the prints on a [2011 London-fix archive](http://www.321gold.com/archives/fix2011.html) and on a [daily London-fix ratio table](https://taxfreegold.co.uk/goldsilverratio2011.html) compiled from LBMA gold and silver fixes. A contemporaneous [April 2011 report](https://www.coinnews.net/2011/04/29/gold-jumps-8-1-in-april-with-record-close-silver-prices-soar-28-3/) named the same pair.",
-      "This site’s **2011 year averages** remain $1,571.52 gold and $35.12 silver → **44.7** — a twelve-month mean, not the April low. On **6 September 2011** the London gold PM fix printed **$1,895** against a London silver fix of **$41.85**. $1,895 ÷ $41.85 = **45.3**. Silver had already left the April high, so gold’s September peak sat beside a higher ratio, not a second 30:1. Three 2011 snapshots share one definition and three clocks: April’s **31.5**, September’s **45.3**, and the year-average **44.7**.",
-      "What 30:1 meant then is market history. For a few London sessions in late April, silver’s dollar print was large relative to gold’s. Physical offtake and industrial use were both live that year; they do not rewrite the quotient. Identified bars and coins by country live on [physical silver demand by country](/markets/physical-silver-demand-by-country) — a later survey table, not this April pair. The four current-fact pages sit under [markets](/markets). A mint ratio of fifteen or sixteen to one is a statute story under [bimetallism](/history/silver/bimetallism). A January 1980 tape near **17.2** is a different peak-week pair, told as [Silver Thursday](/history/silver/silver-thursday).",
-      "A ratio near 30 in April 2011 does not name a destined return. It does not say silver is behind, gold is ahead, or that either metal should catch up. It records how many ounces of silver equalled one ounce of gold at those two prints. Name the prices, name the date, divide. That is the claim.",
+      "On any given day the ratio is still gold’s dollar price divided by silver’s. On **28 April 2011** the London gold PM fix was **$1,535.50** and the London silver fix was **$48.70**. Those two London prices give $1,535.50 ÷ $48.70 = **31.5**. The day’s two gold fixes averaged **$1,533.25**; that mean divided by the same silver fix is **31.48**, the year’s low on public London-fix ratio tables. “Thirty to one” is the rounded shorthand for that April moment, not a year average. The prices can be checked on a [2011 London-fix archive](http://www.321gold.com/archives/fix2011.html) and on a [daily London-fix ratio table](https://taxfreegold.co.uk/goldsilverratio2011.html) compiled from LBMA gold and silver fixes. A contemporaneous [April 2011 report](https://www.coinnews.net/2011/04/29/gold-jumps-8-1-in-april-with-record-close-silver-prices-soar-28-3/) named the same pair.",
+      "This site’s **2011 year averages** remain $1,571.52 gold and $35.12 silver → **44.7**, a twelve-month mean rather than the April low. On **6 September 2011** the London gold PM fix was **$1,895** against a London silver fix of **$41.85**: $1,895 ÷ $41.85 = **45.3**. Silver had already fallen from its April high, so gold’s September peak came with a higher ratio, not a second 30:1. One year, one definition, three figures: April’s **31.5**, September’s **45.3**, and the year-average **44.7**.",
+      "What 30:1 meant in 2011 is that, for a few London sessions in late April, silver’s price was unusually high next to gold’s. The run did not last: by September the ratio was back above **45**. Buying of bars and coins and industrial use were both strong that year, but neither changes the arithmetic of the ratio itself; country-by-country demand, from later survey years, is in [physical silver demand by country](/markets/physical-silver-demand-by-country).",
+      "The April 2011 low is a date in the record, like the January 1980 figure near **17.2**. Neither is a level that later prices are bound to revisit.",
     ],
   },
   {
     heading: "Year-average snapshots from the same series",
     paragraphs: [
-      "Using only this site’s published year-average prices — so both metals share a method — a few more dated quotients sit in one table. Again: arithmetic, not a path.",
+      "Using only this site’s published year-average prices, so both metals share a method, here are a few more dated ratios.",
     ],
     list: [
       "**1971:** $40.62 ÷ $1.39 = **29.2**.",
@@ -2532,16 +2522,14 @@ const goldSilverRatio: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Those six rows show that a year-average ratio can sit near 29 in two different decades and near 84–86 in two later years without that fact implying a return trip. The 1980 January print near 17 is a third kind of snapshot: a peak-week pair, not a year. April 2011 near **31.5** is a fourth kind: an intra-year London pair, not the 2011 year average of **44.7**. Keep the labels on the numbers.",
+      "The year-average ratio sat near 29 in two different decades and near 84–86 in two recent years. The January 1980 figure near 17 is a peak-week pair, not a year; April 2011 near **31.5** is a single London session, not the 2011 year average of **44.7**. The labels matter as much as the numbers.",
     ],
   },
   {
-    heading: "Name the prints, keep the clocks apart",
+    heading: "Reading a ratio you see quoted",
     paragraphs: [
-      "Name the two prices, the venue or series, and the date. Say whether you used a fix, a nearby future, or a year average. Then divide. If you compare 1980 to 2011, say which 1980 and which 2011. Official gold’s leftover U.S. book rate is a different fact, on [official gold book value](/markets/official-gold-book-value). Central-bank tonnes are a third fact. Identified bar-and-coin offtake by country is a fourth, on [physical silver demand by country](/markets/physical-silver-demand-by-country) — industrial fabrication as a factory table, and jewelry fabrication as a workshop table, sit on that same page. A **2025** recycling-by-source table there is scrap returning from use, not ounces leaving the ground. The [markets](/markets) hub holds the four topics. Live mine-output and above-ground prints sit on the desk’s [Stocks & flows](/desk) tab.",
-      "History’s job is the older legal ratio and the 1980 squeeze narrative. This page’s job is the market quotient — what the ratio measures when both prices share a clock. The homepage mining-ratio card’s job is ounces mined per ounce mined. London vault stocks are a third contemporaneous clock — custody inventory, not a price and not a mine book. Practice’s job is bars, coins, and premiums. Mixing those jobs produces slogans. Keeping them apart produces a number you can check.",
-      "Nothing here is a reason to prefer one metal. Nothing here is a mean, a band, or a catch-up clock. Nothing here is a miner pick or a price target. The gold–silver ratio measures a dated pair of prints. That is the claim, and that is the stop.",
-      "If you want the older legal ratio — **bimetallism**, both metals legal at a fixed mint ratio — as a statute fight, open [bimetallism](/history/silver/bimetallism). If you want the 1980 squeeze as a narrative, open [Silver Thursday](/history/silver/silver-thursday). If you want silver’s monetary memory beside its industrial job, open [monetary history and industry](/history/silver/monetary-and-industry). If mining cost as a constraint on the unit is the idea you meant, open [hard money vs fiat](/sound-money/hard-money-vs-fiat). Those pages explain their own claims. They do not rewrite the definition on this page. A mint ratio is a law. A mining ratio is ounces mined. A market ratio is a price quotient. A vault ratio is ounces held in a named custody book. Keep the four labeled when you move between History, the homepage card, Markets, and the London print.",
+      "The useful questions are always the same: which two prices, from which market, on which date — a fix, a futures close, or a year average? A comparison of 1980 with 2011 means little until someone says which 1980 and which 2011. A mint ratio is a law, a mining ratio is ounces mined, a market ratio is a price quotient, and a vault ratio is ounces held in one custody count; most confusion about “the ratio” comes from swapping one for another.",
+      "Silver’s older legal ratio is the story of [bimetallism](/history/silver/bimetallism), and the **1980** squeeze is told in [Silver Thursday](/history/silver/silver-thursday). Silver’s double life as money and industrial metal is traced in [monetary history and industry](/history/silver/monetary-and-industry), and the argument over whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat). [Physical silver demand by country](/markets/physical-silver-demand-by-country) covers who buys and uses the metal; the desk’s [Stocks & flows](/desk) tab shows live mine output and above-ground stocks. Other market figures, including the U.S. [official gold book value](/markets/official-gold-book-value), are collected under [markets](/markets).",
     ],
   },
 ];
@@ -2550,31 +2538,30 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In **2024**, identified U.S. bar-and-coin offtake fell hard while India’s line rose — two national markets, one survey table, no shared path. Country rankings of physical silver demand count identified retail and investment purchases of bars and coins in a calendar year. They answer which national markets took metal off the retail shelf. They do not rank mines, factories, or paper claims. This page records what those rankings measure, a dated 2024 country table from the same World Silver Survey vintage this site already uses for world coin-and-bar demand, and — labeled separately — a 2025 industrial-fabrication table, a 2025 coins-and-medals mint table, a 2025 jewelry-fabrication table, and a 2025 recycling-by-source table from World Silver Survey 2026.",
-      "A mine-production ranking is a different list, and this site does not keep one here. Ounces leaving the ground live on the homepage mining-ratio card, the [gold–silver ratio](/markets/gold-silver-ratio) mining block, and the desk’s [Stocks & flows](/desk) tab. This page stays with buyers, mints, factories, jewelry workshops, and — labeled separately — scrap sources.",
+      "Americans bought far fewer silver bars and coins in **2024** than the year before — **64.9 million ounces**, down 46 percent — while Indian buyers took **59.8 million**, up 21 percent. Those figures come from the World Silver Survey, the annual book researched by Metals Focus for the Silver Institute, and they are the usual source when someone ranks countries by silver demand.",
+      "But “silver demand by country” can mean several different lists: bars and coins bought, coins struck at a mint, silver used in factories, silver made into jewelry, and old silver coming back as scrap. The countries at the top change completely from one list to the next. This page walks through each, starting with the **2024** bar-and-coin table and then the **2025** tables from World Silver Survey 2026. A mine-production ranking is a different list again and is not kept here; world mine totals appear near the end of this page and on the desk’s [Stocks & flows](/desk) tab.",
     ],
   },
   {
     heading: "What a country ranking measures",
     paragraphs: [
-      "The useful series is **physical investment**: bars and bullion-style coins attributed to a country, net of some dealer-stock swings, and excluding commemorative coins. Metals Focus publishes that table in the Silver Institute’s World Silver Survey. “United States, 2024, **64.9 million ounces**” means identified U.S. bar-and-coin offtake in that year, after those adjustments.",
-      "The country is the demand address, not the mine. Silver coined in Ottawa or Perth can be bought in the United States. Indian bar demand can be metal that arrived as imports. A ranking of physical investment is a map of buyers, not a map of holes in the ground.",
-      "Two published world totals sit next to each other and must stay labeled. This site’s desk already uses **190.9 million ounces** of world **coin and net bar demand** for calendar **2024** (World Silver Survey 2025). That series is coin fabrication plus net bar purchases. The country table’s global total for the same year is **183.3 million ounces**. The footnote is mechanical: the country series drops commemorative coins and adjusts dealer inventories. Do not treat 190.9 and 183.3 as a disagreement. They are two jobs.",
+      "The usual ranking is **physical investment**: bars and bullion-style coins attributed to a country, net of some dealer-stock swings, and excluding commemorative coins. Metals Focus publishes that table in the World Silver Survey. “United States, 2024, **64.9 million ounces**” means identified U.S. bar-and-coin buying (**offtake**) in that year, after those adjustments.",
+      "The country is where the buyer is, not where the metal came from. Silver coined in Ottawa or Perth can be bought in the United States. Indian bar demand can be metal that arrived as imports. A ranking of physical investment is a map of buyers, not a map of mines.",
+      "Two world totals for the same year sit side by side. This site’s desk uses **190.9 million ounces** of world **coin and net bar demand** for calendar **2024** (World Silver Survey 2025): coin fabrication plus net bar purchases. The country table’s global total for the same year is **183.3 million ounces**. The difference is mechanical — the country series drops commemorative coins and adjusts for dealer inventories — so the two figures are not in conflict.",
     ],
   },
   {
-    heading: "Buyer, mint, and factory addresses",
+    heading: "What the bar-and-coin ranking leaves out",
     paragraphs: [
-      "It does not measure industrial fabrication. In the same 2024 survey vintage this page uses for the investment ranking, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products. It is not a bar in a household drawer. A country that fabricates a lot of solar paste can be small on the investment table. World Silver Survey 2026’s **2025** industrial book — world **657.4 million ounces**, with its own country ranking — sits in a separate block below. It is a factory address, not a substitute for the investment ranking.",
-      "It does not treat jewelry or silverware as the investment ranking. In the same 2024 survey vintage this page uses for bar-and-coin offtake, those two world lines were about **208.7** and **54.2** million ounces. Jewelry has its own **2025** country table below — World Silver Survey 2026’s workshop book, world **189.3 million ounces**. Silverware remains a different line in that later book (**42.1 million ounces** in 2025). Neither is a bar in a household drawer. It does not measure official-sector silver, a rounding line of **1.5 million ounces** in the 2024 world book, not a central-bank gold story.",
-      "It does not measure exchange-traded products, futures, or options. Indian silver ETP holdings rose by about **25 million ounces** in 2024, to **38.6 million ounces** at year-end. That inflow is a vault-backed fund holding. It is not India’s **59.8 million ounces** of bar-and-coin investment. A futures position is a different instrument again. Paper and funds sit outside the country ranking.",
-      "The ranking also does not measure whether silver is cheap, dear, behind gold, or due a return to an older ratio. A high U.S. line means U.S. buyers took more identified bars and coins that year. A falling German line means identified German offtake fell. That is the whole claim.",
+      "Industrial use is much bigger. In the same 2024 survey, industrial demand was **680.5 million ounces** — photovoltaics, electronics, brazing, and the rest. That metal is consumed in products; it never becomes a bar in a drawer. A country that makes a lot of solar paste can be small on the investment table. World Silver Survey 2026’s **2025** industrial figures — world **657.4 million ounces**, with its own country ranking — appear further down.",
+      "Jewelry and silverware are separate too. In the same 2024 survey those two world lines were about **208.7** and **54.2** million ounces. Jewelry has its own **2025** country table below — world **189.3 million ounces** in World Silver Survey 2026 — and silverware was **42.1 million ounces** in 2025. Official-sector silver is tiny by comparison: **1.5 million ounces** in the 2024 world book.",
+      "Funds and futures are outside the ranking as well. Indian silver exchange-traded product holdings rose by about **25 million ounces** in 2024, to **38.6 million ounces** at year-end. That inflow is metal held by vault-backed funds, not India’s **59.8 million ounces** of bar-and-coin investment. A futures position is a different instrument again.",
     ],
   },
   {
     heading: "2024 country snapshots",
     paragraphs: [
-      "Using the World Silver Survey 2025 physical-investment table — so the country lines share a method — the 2024 snapshot and the one-year change sit below. Figures are million troy ounces. The 2022 world peak in the same series was **337.6**. The 2023 world total was **238.2**. 2024’s **183.3** is a further drop, not a path.",
+      "From the World Silver Survey 2025 physical-investment table, in million troy ounces, with the change from 2023. The world total peaked at **337.6** in 2022, fell to **238.2** in 2023, and dropped again to **183.3** in 2024.",
     ],
     list: [
       "**United States 64.9** (2023: 120.8; **−46%**). Still the largest single country line. Lowest since 2019 in that series.",
@@ -2589,28 +2576,28 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Four named countries — the United States, India, Germany, and Australia — still account for most of the identified world total, on the order of four-fifths in recent Metals Focus commentary on the same physical-investment series. Concentration is a fact about the table. It is not a reason to treat those four as a shopping list.",
+      "Four countries — the United States, India, Germany, and Australia — account for most of the identified world total, on the order of four-fifths in recent Metals Focus commentary on the same series.",
     ],
   },
   {
     heading: "How the named countries differ",
     paragraphs: [
-      "The United States has been the largest physical-investment market in most years of the 2010–2024 series. The exceptions in that book are **2018** and **2019**, when India printed the larger line. Cumulative U.S. net purchases over 2010–2024 are on the order of **1.5 billion ounces**. Coins take a larger share of U.S. offtake than in the rest of the world — sovereign bullion coins, then bars. 2024’s **64.9** is a drop from the 2021–2023 plateau near **120–138**.",
-      "India’s line is mostly bars. Cumulative 2010–2024 bar-and-coin demand in that series is about **840 million ounces**. 2024’s rebound followed a late-July cut in the Indian import duty on bullion, from **15 percent** to **6 percent**, which lowered the rupee offer after the local price had already printed near **Rs. 100,000** per kilogram. 2020’s **8.7** shows the same table can collapse when the rupee price spikes and metal comes back to the counter. ETPs, as already labeled, sit beside that physical line. They do not replace it.",
-      "Germany is the largest European silver-investment market in the same book, and the sharpest recent swing. Identified German offtake averaged about **48.5 million ounces** a year in 2020–2022, then fell to **13.3** in 2023 and **9.9** in 2024 after an end-2022 margin-tax change on some non-EU bullion coins, a 2023 VAT change on some silver products, and selling-back as euro prices crossed **€800** per kilogram. Australia’s 2024 **9.3** is another second-year decline with higher buybacks. Those are tax, price, and inventory facts — not a ranking of national character.",
+      "The United States has been the largest physical-investment market in most years of the 2010–2024 series. The exceptions are **2018** and **2019**, when India was larger. Cumulative U.S. net purchases over 2010–2024 are on the order of **1.5 billion ounces**. Coins take a larger share of U.S. buying than elsewhere — sovereign bullion coins first, then bars. 2024’s **64.9** is a drop from the 2021–2023 plateau near **120–138**.",
+      "India’s line is mostly bars. Cumulative 2010–2024 bar-and-coin demand in that series is about **840 million ounces**. 2024’s rebound followed a late-July cut in the Indian import duty on bullion, from **15 percent** to **6 percent**, which lowered the rupee price after it had already reached nearly **Rs. 100,000** per kilogram. 2020’s **8.7** shows how quickly the line can collapse when the rupee price spikes and people sell metal back instead. Exchange-traded funds sit beside that physical line; they do not replace it.",
+      "Germany is the largest European silver-investment market in the same book, and the sharpest recent swing. Identified German buying averaged about **48.5 million ounces** a year in 2020–2022, then fell to **13.3** in 2023 and **9.9** in 2024 after an end-2022 margin-tax change on some non-EU bullion coins, a 2023 VAT change on some silver products, and selling back as euro prices crossed **€800** per kilogram. Australia’s 2024 **9.3** is another second-year decline with higher buybacks. Those are tax, price, and inventory facts — not a ranking of national character.",
     ],
   },
   {
-    heading: "2025 coins and medals fabrication — a different table",
+    heading: "Silver coins and medals by country, 2025",
     callout: {
       label: "Fabrication countries ≠ investment offtake",
       paragraphs: [
-        "Mint and medal fabrication is a different World Silver Survey job from the bar-and-coin buyer table. The ranking above is a demand address: which national markets took identified bars and coins. Coins-and-medals fabrication is a mint address: where silver was struck. Metal coined in Ottawa or Llantrisant can be bought in the United States. Canada and the United Kingdom can sit high on the mint table while remaining smaller on the buyer table. That is the point of keeping the two jobs labeled. Do not read a fabrication line as a substitute ranking, and do not treat either table as a country shopping list.",
+        "This table counts where silver was struck, not where it was bought. Metal coined in Ottawa or Llantrisant is often sold in the United States, so Canada and the United Kingdom can rank high here and much lower on the buyer table.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints a separate **coins and medals fabrication** table for calendar **2025**. World fabrication in that series was **87.9 million ounces**, down 7 percent from 2024’s **94.7**. That world total matches the survey’s 2025 **coin fabrication** line in the coin-and-net-bar book. It is not this page’s 2024 country physical-investment total of **183.3**.",
-      "The five largest 2025 country lines in that mint table sit below. They are fabrication ounces. They do not replace the 2024 investment ranking above.",
+      "World Silver Survey 2026 prints a separate **coins and medals fabrication** table for calendar **2025**. World fabrication in that series was **87.9 million ounces**, down 7 percent from 2024’s **94.7**. That world total matches the survey’s 2025 **coin fabrication** line in the coin-and-net-bar figures; it is a different number from the 2024 country physical-investment total of **183.3**.",
+      "The five largest 2025 country lines, in million troy ounces, with the change from 2024:",
     ],
     list: [
       "**India 18.4** (2024: 14.8; **+25%**).",
@@ -2621,16 +2608,16 @@ const physicalSilverDemandByCountry: Section[] = [
     ],
   },
   {
-    heading: "2025 industrial fabrication by country — a third table",
+    heading: "Industrial use by country, 2025",
     callout: {
       label: "Industrial fabrication ≠ investment offtake",
       paragraphs: [
-        "Industrial fabrication is a third World Silver Survey job. The 2024 ranking above is a buyer address: which national markets took identified bars and coins. The coins-and-medals block is a mint address: where silver was struck. Industrial demand is a factory address: where silver went into electrical and electronics, photovoltaics, brazing alloys and solders, and other industrial uses. Jewelry fabrication, below, is a fourth job — a workshop address. China can sit first on the industrial table and remain small on the investment table. The United States can sit first on the investment table and second on the industrial table. Those are two jobs, not a disagreement. Do not read an industrial line as a substitute ranking, and do not treat any of the four tables as a country shopping list.",
+        "This is a factory address: where silver went into electronics, solar panels, brazing alloys and solders, and other industrial products. China ranks first here and is small on the bar-and-coin table; the United States ranks first there and second here.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints an **Industrial Demand by Country** table for calendar **2025**. World industrial fabrication in that series was **657.4 million ounces**, down 3 percent from the same book’s **679.0** for 2024. That is the first post-pandemic contraction in the industrial line after four years of growth. It is not this page’s 2024 country physical-investment total of **183.3**, and it is not the 2025 coins-and-medals fabrication total of **87.9**.",
-      "The five largest 2025 country lines in that industrial table sit below. Figures are million troy ounces. They are fabrication ounces consumed in products. They do not replace the 2024 investment ranking or the 2025 mint ranking.",
+      "World Silver Survey 2026 prints an **Industrial Demand by Country** table for calendar **2025**. World industrial fabrication was **657.4 million ounces**, down 3 percent from the same book’s **679.0** for 2024 — the first contraction since the pandemic, after four years of growth.",
+      "The five largest 2025 country lines, in million troy ounces. These are ounces consumed in products.",
     ],
     table: {
       caption:
@@ -2649,15 +2636,15 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "China’s **282.9** is about **43 percent** of the 2025 world industrial total — 282.9 ÷ 657.4. The same survey vintage this page uses for physical investment still prints China at **5.5** in 2024. That is the labeling point. East Asia as a whole printed **384.6** in 2025, down 4 percent; the survey attributes most of that regional loss to photovoltaic silver, where East Asian powder makers dominate. China’s own industrial line still rose 3 percent. Electrical and electronics inside China rose 5 percent, to **221.8 million ounces**.",
-      "Japanese industrial fabrication fell **27 percent**, to **68.8**. The survey names fierce competition from Chinese silver-powder manufacturers as the main driver of that Japanese drop. Japan’s electrical-and-electronics line in the same book fell **32 percent**, to **53.7**. The United States printed **125.5**, down 1 percent from **126.9**. Germany printed **31.0**, down 2 percent. The United Kingdom printed **21.6**, up 5 percent. Those are factory facts. They do not rewrite the U.S. or Indian investment lines above.",
+      "China’s **282.9** is about **43 percent** of the 2025 world industrial total (282.9 ÷ 657.4), yet the bar-and-coin table has China at just **5.5** in 2024. That gap is the reason to keep the tables apart. East Asia as a whole was **384.6** in 2025, down 4 percent; the survey attributes most of that regional loss to photovoltaic silver, where East Asian powder makers dominate. China’s own industrial line still rose 3 percent, and electrical and electronics inside China rose 5 percent, to **221.8 million ounces**.",
+      "Japanese industrial fabrication fell **27 percent**, to **68.8**. The survey names fierce competition from Chinese silver-powder manufacturers as the main reason. Japan’s electrical-and-electronics line fell **32 percent**, to **53.7**. The United States was **125.5**, down 1 percent from **126.9**; Germany **31.0**, down 2 percent; the United Kingdom **21.6**, up 5 percent.",
     ],
   },
   {
     heading: "Where 2025 industrial ounces went",
     paragraphs: [
-      "The same World Silver Survey 2026 book splits the **657.4 million ounce** industrial total by sector. Electrical and electronics printed **449.5 million ounces**, of which photovoltaics were **186.6**. Subtract those two printed cells and electrical and electronics excluding photovoltaics is **262.9**. Brazing alloys and solders printed **50.5**. Other industrial printed **157.4**. Photography is a separate demand line in that book — **24.2 million ounces** in 2025 — and is not inside the 657.4 industrial total.",
-      "Rounded shares of 657.4 sit in the table below. Photovoltaics are large. They are not the whole factory floor. Electrical and electronics excluding solar remain the single largest industrial slice.",
+      "The same World Silver Survey 2026 book splits the **657.4 million ounce** industrial total by sector. Electrical and electronics came to **449.5 million ounces**, of which photovoltaics were **186.6**. Subtract one from the other and electrical and electronics excluding photovoltaics is **262.9**. Brazing alloys and solders were **50.5**; other industrial uses **157.4**. Photography is a separate demand line — **24.2 million ounces** in 2025 — and is not inside the 657.4 total.",
+      "Solar is large, but it is not the whole factory floor. Electronics other than solar remain the single largest industrial use.",
     ],
     table: {
       caption:
@@ -2675,20 +2662,20 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Against the same book’s 2024 cells, electrical and electronics fell 2 percent, photovoltaics fell 6 percent, other industrial fell 7 percent, and brazing alloys and solders rose 1 percent. The survey names photovoltaic thrifting and substitution, and a slower pace of ethylene-oxide catalyst additions, as the main industrial losses. Automotive and aerospace strength supported the small brazing gain. None of those sentences is a path for 2026.",
+      "Against the same book’s 2024 figures, electrical and electronics fell 2 percent, photovoltaics fell 6 percent, other industrial fell 7 percent, and brazing alloys and solders rose 1 percent. The survey names photovoltaic thrifting and substitution — manufacturers using less silver per panel, or other metals — and a slower pace of ethylene-oxide catalyst additions as the main losses. Automotive and aerospace strength supported the small brazing gain.",
     ],
   },
   {
-    heading: "2025 jewelry fabrication by country — a fourth table",
+    heading: "Jewelry by country, 2025",
     callout: {
       label: "Jewelry fabrication ≠ investment offtake",
       paragraphs: [
-        "Jewelry fabrication is a fourth World Silver Survey job. The 2024 ranking above is a buyer address. Coins-and-medals is a mint address. Industrial demand is a factory address. Jewelry is a workshop address: where silver was fabricated into jewelry in a calendar year. India can sit first on the jewelry table and second on the investment table. China can sit first on the industrial table and fourth on the jewelry table. Those are different jobs, not a disagreement. Do not treat any of the four tables as a country shopping list.",
+        "This is a workshop address: where silver was made into jewelry. India ranks first here and second on the bar-and-coin table; China ranks first on the industrial table and fourth here.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints a **Jewelry Fabrication by Country** table for calendar **2025**. World jewelry fabrication in that series was **189.3 million ounces**, down 8 percent from the same book’s **205.1** for 2024. The **208.7 million ounce** jewelry line cited earlier on this page is the older World Silver Survey 2025 vintage for 2024. The two 2024 cells are two vintages, not a disagreement. The **189.3** is not this page’s 2024 country physical-investment total of **183.3**, not the 2025 coins-and-medals total of **87.9**, and not the 2025 industrial total of **657.4**.",
-      "The five largest 2025 country lines in that jewelry table sit below. Figures are million troy ounces. They are fabrication ounces into jewelry. They do not replace the buyer, mint, or factory rankings.",
+      "World Silver Survey 2026 prints a **Jewelry Fabrication by Country** table for calendar **2025**. World jewelry fabrication was **189.3 million ounces**, down 8 percent from the same book’s **205.1** for 2024. (The **208.7 million ounce** jewelry figure for 2024 earlier on this page comes from the previous year’s survey; the two editions revised the same year.)",
+      "The five largest 2025 country lines, in million troy ounces:",
     ],
     table: {
       caption:
@@ -2707,8 +2694,8 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "India’s **70.3** is about **37 percent** of the 2025 world jewelry total — 70.3 ÷ 189.3. The same 2024 investment vintage this page uses still prints India at **59.8**. That is the labeling point. Fabrication fell 20 percent, to the lowest level in that jewelry book since 2021, as rupee prices and intra-year volatility cut rural offtake and pushed fabricators toward lighter pieces. The survey names gold-plated silver and organized retail as supports that limited a steeper drop. Those are workshop facts. They do not rewrite India’s bar line.",
-      "Thailand printed **28.5**, up 24 percent, the highest in that book since 2011. The survey attributes the rise to exports to India, which doubled in volume and overtook the United States as Thailand’s largest jewelry buyer. Italy printed **18.0**, down 12 percent; Europe as a whole printed **27.6**, down 10 percent, with the survey naming tariff-driven Italian export losses and weaker end-market sales. China printed **16.2**, up 5 percent after three down years, with the survey naming gold substitution and product innovation. The United States printed **10.3**, down 9 percent; the same book puts U.S. jewelry consumption down just over 20 percent in fine-ounce terms. Silverware remains a different line — **42.1 million ounces** in that 2026 book for 2025, down 21 percent. None of those sentences is a path for 2026.",
+      "India’s **70.3** is about **37 percent** of the 2025 world jewelry total (70.3 ÷ 189.3), against **59.8** on India’s 2024 bar-and-coin line. Indian fabrication fell 20 percent, to its lowest level in that book since 2021, as high rupee prices and sharp swings during the year cut rural buying and pushed makers toward lighter pieces. The survey credits gold-plated silver and organized retail with limiting a steeper drop.",
+      "Thailand made **28.5**, up 24 percent, its highest since 2011; the survey attributes the rise to exports to India, which doubled in volume and overtook the United States as Thailand’s largest jewelry buyer. Italy made **18.0**, down 12 percent; Europe as a whole was **27.6**, down 10 percent, with the survey naming tariff-driven Italian export losses and weaker end-market sales. China made **16.2**, up 5 percent after three down years, helped by shoppers switching from gold and by new product lines. The United States made **10.3**, down 9 percent; the same book puts U.S. jewelry consumption down just over 20 percent in fine-ounce terms. Silverware remains a separate line — **42.1 million ounces** in 2025, down 21 percent.",
     ],
   },
   {
@@ -2716,12 +2703,12 @@ const physicalSilverDemandByCountry: Section[] = [
     callout: {
       label: "Scrap sources ≠ offtake ≠ fabrication",
       paragraphs: [
-        "Recycling is a fifth World Silver Survey job, and it is a supply book. The 2024 ranking above is a buyer address. Coins-and-medals is a mint address. Industrial demand is a factory address. Jewelry is a workshop address. Scrap names where metal came back from old products in a calendar year. Industrial scrap can be large while a country sits small on the investment table. Jewelry scrap can rise in a year jewelry fabrication falls. Those are different jobs, not a disagreement. Do not read a scrap line as a buyer ranking, and do not treat the source table as a shopping list.",
+        "Recycling is the supply side of the same book: metal coming back from old products. A country can scrap a lot of industrial silver while buying few bars, and jewelry scrap can rise in a year when new jewelry falls, because the two lines measure opposite directions of travel.",
       ],
     },
     paragraphs: [
-      "World Silver Survey 2026, researched by Metals Focus for the Silver Institute, prints a recycling-by-source table for calendar **2025**. World recycling in that series was **197.6 million ounces**, up 2 percent from the same book’s prior year and a thirteen-year high in that series. The **197.6** is not this page’s 2024 country physical-investment total of **183.3**, not the 2025 coins-and-medals total of **87.9**, not the 2025 industrial total of **657.4**, and not the 2025 jewelry total of **189.3**. It is metal returning to the market. It is not ounces leaving a mine.",
-      "The five source lines in that recycling table sit below. Figures are million troy ounces. They are secondary-supply ounces. They do not replace the buyer, mint, factory, or workshop rankings.",
+      "World Silver Survey 2026 prints a recycling-by-source table for calendar **2025**. World recycling was **197.6 million ounces**, up 2 percent on the year and a thirteen-year high in that series. That total happens to sit close to the 2024 bar-and-coin figure of **183.3** and the 2025 jewelry figure of **189.3**, but it counts something else entirely: silver returning to the market, not ounces leaving a mine and not ounces bought or fabricated.",
+      "The five source lines, in million troy ounces:",
     ],
     table: {
       caption:
@@ -2740,22 +2727,34 @@ const physicalSilverDemandByCountry: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Industrial scrap printed **110.1** — the largest source line, a little more than half of the 2025 world recycling total. The survey records a slight dip in that industrial line, and names lower e-scrap yields as the reason the factory scrap book did not rise with the rest. Jewelry scrap printed **38.2** and silverware scrap **28.3**; both of those old-metal lines rose in the same book. Photographic scrap printed **16.2**. Coin scrap printed **4.7**. Those five printed cells sit under the world **197.6**. They are source facts from World Silver Survey 2026. They do not rewrite India’s bar line, China’s factory line, or the USGS mine book.",
-      "Scrap is secondary **supply**. It is not a buyer ranking and not a fabrication ranking. A jewelry-scrap ounce is metal coming back from old pieces; a jewelry-fabrication ounce is metal going into new pieces. An industrial-scrap ounce is metal recovered from spent products; an industrial-fabrication ounce is metal consumed in new products. The mine clock on the [gold–silver ratio](/markets/gold-silver-ratio) page counts ounces leaving the ground. This scrap table counts ounces returning from use. Keep the two clocks labeled. The [markets](/markets) hub holds the four fact pages together. None of those sentences is a path for a later year.",
+      "Industrial scrap, at **110.1**, is the largest source — a little more than half of the world total. The survey records a slight dip in that line and names lower e-scrap yields, meaning less silver recovered from each tonne of discarded electronics, as the reason factory scrap did not rise with the rest. Jewelry scrap came to **38.2** and silverware scrap to **28.3**; both of those old-metal lines rose. Photographic scrap, a legacy of film, was **16.2**; coin scrap was **4.7**.",
+      "Scrap is secondary supply. A jewelry-scrap ounce is metal coming back from old pieces; a jewelry-fabrication ounce is metal going into new ones. An industrial-scrap ounce is recovered from spent products; an industrial-fabrication ounce is consumed in new ones. Scrap runs on a different clock from mining: the scrap clock follows products reaching the end of their lives, while the mine clock on the [gold–silver ratio](/markets/gold-silver-ratio) page follows ore coming out of the ground.",
     ],
   },
   {
-    heading: "Mine supply on the USGS book — not a new boom",
+    heading: "World mine output: flat for a decade",
     paragraphs: [
-      "Jewelry ounces leave the mine book and enter a workshop. The mine book itself has not been racing ahead. The U.S. Geological Survey’s [Mineral Commodity Summaries 2016](https://apps.usgs.gov/minerals-information-archives/mcs/mcs2016.pdf) printed world silver mine production of **27,300 tonnes** for 2015. [Mineral Commodity Summaries 2026](https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silver.pdf) prints **25,300 tonnes** for 2024 and **26,000 tonnes** (estimated) for 2025. A decade later the USGS world total is still in the mid-20,000s of tonnes — a byproduct fact, not a dedicated jewelry pipeline, and not a COMEX story. The mining clock lives on the [gold–silver ratio](/markets/gold-silver-ratio) page and the desk’s [Stocks & flows](/desk) tab. The scrap clock — metal returning from use — sits in the recycling table above. Those are two supply books. This page’s demand addresses remain a different job. The [markets](/markets) hub holds the four fact pages together.",
+      "Behind all these tables, world mine output has barely moved. The U.S. Geological Survey’s [Mineral Commodity Summaries 2016](https://apps.usgs.gov/minerals-information-archives/mcs/mcs2016.pdf) put world silver mine production at **27,300 tonnes** for 2015. [Mineral Commodity Summaries 2026](https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silver.pdf) prints **25,300 tonnes** for 2024 and **26,000 tonnes** (estimated) for 2025. A decade on, the world total is still in the mid-20,000s of tonnes, largely because so much silver is mined as a byproduct of other metals rather than for its own sake. The [gold–silver ratio](/markets/gold-silver-ratio) page sets that output beside gold’s, and the desk’s [Stocks & flows](/desk) tab shows it live.",
     ],
   },
   {
-    heading: "Label the series before the country",
+    heading: "Which total is which",
     paragraphs: [
-      "Name the series, the year, and whether you are looking at coin-and-net-bar demand (world **190.9** in 2024), the country physical-investment table (world **183.3**), coins-and-medals fabrication (world **87.9** in 2025), industrial fabrication (world **657.4** in 2025), jewelry fabrication (world **189.3** in 2025), or recycling by source (world **197.6** in 2025). Then read the country as a demand address, a mint address, a factory address, or a workshop address — and read a scrap line as a supply source, not a buyer. Do not swap those jobs. A mine-production ranking is a different list, and this site does not keep one here — the mining clock lives on the [gold–silver ratio](/markets/gold-silver-ratio) page and the desk’s [Stocks & flows](/desk) tab. Official gold stocks live on [central-bank gold reserves](/markets/central-bank-gold-reserves). A pair of metal prices, and a dated London vault inventory, live on the [gold–silver ratio](/markets/gold-silver-ratio).",
-      "When silver’s two roles need a narrative home, open [silver: monetary history and industry](/history/silver/monetary-and-industry). Practice’s job is bars, coins, and premiums. The [markets](/markets) hub holds the fact pages. Mixing a country ranking with a how-to produces a pitch. Keeping the label produces a figure you can check.",
-      "Nothing here is a reason to buy silver in a named country. Nothing here is a miner pick. Nothing here is a mean, a band, or a clock that says one country’s line must return to 2022. The investment ranking measures identified bar-and-coin offtake by country in a dated survey year. The industrial table measures fabrication into products. The jewelry table measures fabrication into jewelry. The recycling table measures metal returning from old products — secondary supply, not offtake. Those are the claims, and that is the stop.",
+      "Before comparing countries, it helps to know which world total a figure belongs to:",
+    ],
+    list: [
+      "**190.9 million ounces** (2024): coin and net bar demand — coins struck plus net bar purchases.",
+      "**183.3** (2024): country physical investment — bars and bullion coins, by the buyer’s country.",
+      "**87.9** (2025): coins and medals fabrication — silver struck at mints.",
+      "**657.4** (2025): industrial fabrication — silver consumed in products.",
+      "**189.3** (2025): jewelry fabrication — silver made into jewelry.",
+      "**197.6** (2025): recycling — old silver returning to market.",
+    ],
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Official gold stocks are covered in [central-bank gold reserves](/markets/central-bank-gold-reserves). Silver’s history as money beside its industrial use is told in [silver: monetary history and industry](/history/silver/monetary-and-industry). Other market figures on this site are collected under [markets](/markets).",
     ],
   },
 ];
@@ -2837,29 +2836,26 @@ export const soundMoneyHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. Before the history articles can do their work, the vocabulary has to hold still.",
-      "Sound money, on this site, means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. These pages define that claim and its neighbors. They do not sell metal, collect emails, or forecast prices.",
+      "Sound money, on this site, means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal.",
     ],
   },
   {
-    heading: "Four words that keep slipping",
+    heading: "Words that keep slipping",
     paragraphs: [
       "[What is sound money?](/sound-money/what-is-sound-money) states the working definition: a unit whose stock cannot be expanded at will — the test is whether the issuer can create more by decision alone. Circulation is not the test. A unit can clear today’s till and still fail the sound-money claim if the issuer may dilute the stock as policy.",
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** (money that exists by law and habit: Latin *fiat*, “let it be done”). Circulation does not decide that category either. A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
-      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline in what the unit buys; hyperinflation is a case, not the everyday meaning. Prices are the surface; purchasing power of the unit is the object. [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, demand a known weight of metal — from a vault slogan with no public claim. A short fifth page states the media line: [information versus advice](/sound-money/information-not-advice).",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** (money that exists by law and habit: Latin *fiat*, “let it be done”). A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) names the decline in what the unit buys; hyperinflation is a case, not the everyday meaning. [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, demand a known weight of metal — from a vault slogan with no public claim. A short fifth page states the media line: [information versus advice](/sound-money/information-not-advice).",
     ],
   },
   {
-    heading: "When the fog clears",
+    heading: "When the vocabulary is clear",
     paragraphs: [
-      "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) is the door if that slogan is the fog; [hard money vs fiat](/sound-money/hard-money-vs-fiat) if the split is cost of production versus law and habit; [inflation and purchasing power](/sound-money/inflation-purchasing-power) if the question is what the unit still buys; [what is sound money?](/sound-money/what-is-sound-money) if you want the summary claim after the neighbors. Landing on any one page is fine; each links the rest. The bodies carry the weight of the definitions.",
-      "When the vocabulary is clear, leave for [Sound Money History](/history). Weimar and Nixon belong there, not on this definitions page. Definition pages may link a dated case once — a greenback premium, a gold recall, a closed window — without pasting the whole timeline onto a glossary entry. Similar crises can teach the same mechanism; they are still different years and different laws.",
-      "Current figures live under [Markets](/markets): book values, reserve lines, ratios, and country offtake. Handling bars and coins lives under [gold and silver in practice](/gold-silver). Mixing definition with tips produces a pitch. Keeping the label produces a word you can reuse on every later page. When the next question is “what happened?” rather than “what does this word mean?”, the history shelf is the continuation.",
-      "These pages answer what the words mean for adults who want the vocabulary straight before they open a dated article. They are not a remonetization brief, a metal shopping list, or a forecast dressed as a glossary. Weimar, the Fed, greenbacks, and Nixon stay as dated events under History — linked once as cases when a definition needs an example, never retold in full here. Meaning first; events elsewhere; figures and handling on their own pages. That split is the whole job of this overview page.",
+      "When a word is the fog — “backed,” hard versus fiat, what the unit still buys — open that definition page. Each links the rest. Weimar and Nixon belong under [Sound Money History](/history), not on this definitions page. A definition may name a dated case once without pasting the whole timeline.",
+      "Current figures live under [Markets](/markets). Handling bars and coins lives under [gold and silver in practice](/gold-silver). When the next question is “what happened?” rather than “what does this word mean?”, the history shelf is the continuation.",
     ],
   },
 ];
 
-/** Pillar hub /gold-silver — rendered by the gold-silver index route. */
 export const practiceHubBody: Section[] = [
   {
     heading: "",
@@ -2913,24 +2909,25 @@ export const marketsHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The live [desk](/desk) prints prices and ratios like a clock. A few of those numbers still carry a statute, a survey method, or an official bookkeeping leftover. These pages explain those captions — why a Treasury line can show gold at **$42.22**, how central banks report gold in reserves, what the gold–silver ratio measures, and what a country ranking of bar-and-coin silver demand actually counts.",
-      "Mine supply is ounces leaving the ground in a survey year. The [gold–silver ratio](/markets/gold-silver-ratio) page keeps that mining clock apart from the market price quotient. [Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks buyers, factories, and jewelry workshops, not holes in the ground. The same page labels a **2025** recycling-by-source table — scrap returning from use, not the mine clock. The desk’s [Stocks & flows](/desk) tab shows above-ground metal and mine output beside those articles. No page here names a miner, a ticker, a target, or a reason to prefer one metal.",
-      "Narrative from coinage to **1971** lives under [Sound Money History](/history). Handling bars and coins lives under [gold and silver in practice](/gold-silver).",
+      "The U.S. Treasury still values its gold at **$42.22** an ounce, a price written into law in **1973** and never updated. On **31 July 2026** the London market price was **$4,026.60**. Both numbers are correct, and they answer different questions. Many of the figures quoted about gold and silver work that way: a price, a ratio, or a country ranking that means something precise and gets repeated as if it meant something else.",
+      "The live [desk](/desk) shows prices and ratios as they move. The articles here take a few of those numbers apart — where each comes from, who publishes it, and what it counts.",
     ],
   },
   {
-    heading: "Four captions that need a page",
+    heading: "The numbers behind the headlines",
     paragraphs: [
-      "A **book value** is the dollar figure a government still writes into its books for gold — often a leftover legal rate, not the market price. A reserve line is how much gold a central bank reports holding. A ratio is one price divided by another at a named time. A country line is how much bar-and-coin silver buyers in that country took off the shelf in a survey year (**offtake** = that identified purchase volume).",
-      "[Official gold book value](/markets/official-gold-book-value) continues the story if you have just read **1971** and wonder why **$42.22** still appears on a U.S. Treasury line. [Central-bank gold reserves](/markets/central-bank-gold-reserves) continues if you have just looked at the desk’s country bars — including a short Poland section, a short Canada **Gold: 0** section, and a short **1999–2002** UK official-sale section on that same page. [The gold–silver ratio](/markets/gold-silver-ratio) defines the quotient, labels three contemporaneous clocks — market price, mine output, and London vault stocks — and pins the market number to **1980** and April **2011** (~30:1 as a named tape, not a target) — useful if you have just seen the **gold–silver ratio (GSR)** on the live prices or the homepage mining-ratio card. [Physical silver demand by country](/markets/physical-silver-demand-by-country) defines the bar-and-coin ranking against a **2024** World Silver Survey table, and labels separate **2025** industrial-fabrication, jewelry-fabrication, and recycling-by-source tables from World Silver Survey 2026.",
-      "Four doors, four jobs: [official gold book value](/markets/official-gold-book-value) for the statutory **$42.22** versus market arithmetic; [central-bank gold reserves](/markets/central-bank-gold-reserves) for how gold is reported in foreign-exchange reserves and dated official purchases and sales; [gold–silver ratio](/markets/gold-silver-ratio) for the quotient and its three clocks; [physical silver demand by country](/markets/physical-silver-demand-by-country) for identified offtake, fabrication, and scrap-source tables — and for what those rankings do not measure.",
+      "[Official gold book value](/markets/official-gold-book-value) explains the **$42.22**: how the official price climbed from $35 to its last statutory level after the **1971** gold-window close, why the Treasury still counts its roughly **261.5 million** ounces at that rate, and what you get when you divide a market price by it.",
+      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how central banks report gold — tonnes held, gold’s share of reserves, gold measured against GDP, and dated purchases and sales. It follows China’s published stock, Poland’s buying, Canada’s reserve table that now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
+      "The [gold–silver ratio](/markets/gold-silver-ratio) is gold’s price divided by silver’s. The same phrase, ounces of silver per ounce of gold, is also used for mine output and for metal in London vaults, and those three counts give very different answers: near **68**, near **7**, and near **3** in 2026. The article also dates the famous lows, about **17** in January **1980** and the “30:1” of late April **2011**.",
+      "[Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks countries by bars and coins bought in **2024** — the United States first at **64.9 million ounces**, India close behind at **59.8** — and sets beside it the **2025** tables for industrial use, jewelry, coin minting, and recycled scrap. China tops the factory table and barely registers on the bar-and-coin one.",
     ],
   },
   {
     heading: "Where the numbers come from",
     paragraphs: [
-      "Figures come from public official series and from the same London (**LBMA**) and U.S. futures (**COMEX**) averages shown on the desk. When a page divides the market price by **$35** or by **$42.22**, that is arithmetic on named prints. When it cites a World Gold Council or IMF-based annual net, that is a dated official-sector line. When it cites a World Silver Survey country line, that is identified retail offtake, not a mine ranking. None of those operations is a forecast.",
-      "Two facts can look alike and still answer different questions. The U.S. **$42.22** line is a frozen legal rate. A central bank’s reserve share may use a market-related dollar value. Mixing them produces a slogan. Keeping them labeled produces a figure you can check. For definitions of sound money, hard money, and “backed,” use [Sound Money](/sound-money) — [hard money vs fiat](/sound-money/hard-money-vs-fiat) is the clean door if mining cost as a constraint on the unit is the question you meant. For Weimar, the Fed, or the Nixon shock as stories, use History. Silver’s dual monetary and industrial job sits under [monetary history and industry](/history/silver/monetary-and-industry).",
+      "Prices are the London (**LBMA**) and U.S. futures (**COMEX**) figures shown on the desk. Reserve figures come from IMF statistics, national central banks, and World Gold Council compilations. Silver demand comes from the World Silver Survey, researched by Metals Focus for the Silver Institute; mine output from the U.S. Geological Survey and the same survey. Every figure carries its date and source, because a July number and an August number from different books do not mix.",
+      "Mine supply is ounces leaving the ground in a year, and it is a separate count again. The desk’s [Stocks & flows](/desk) tab shows mine output and above-ground metal beside these articles. No page here names a miner or a stock; the mine figures are geology, not picks.",
+      "How $35 became $42.22, and what closed in **1971**, is told in [Sound Money History](/history). Whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat), and silver’s double life as money and industrial metal in [monetary history and industry](/history/silver/monetary-and-industry). Buying, storing, and checking bars and coins is covered under [gold and silver in practice](/gold-silver).",
     ],
   },
 ];
