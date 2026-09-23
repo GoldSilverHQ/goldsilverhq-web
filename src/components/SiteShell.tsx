@@ -3,14 +3,17 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
 import { HISTORY_NAV_MENU } from "@/lib/content/history-subnav";
+import { IDEAS_MARKETS_NAV } from "@/lib/content/ideas-markets-nav";
 
-const NAV = [
+type NavLink = { href: string; label: string; quiet?: boolean };
+type NavMenu = { label: string; menu: "history" | "ideas" };
+
+const NAV: Array<NavLink | NavMenu> = [
   { href: "/desk", label: "Desk" },
-  { href: "/sound-money", label: "Sound Money" },
-  { href: "/history", label: "History", hasHistoryMenu: true },
-  { href: "/markets", label: "Markets" },
-  { href: "/gold-silver", label: "In Practice" },
-] as const;
+  { label: "History", menu: "history" },
+  { label: "Ideas & markets", menu: "ideas" },
+  { href: "/gold-silver", label: "Practice", quiet: true },
+];
 
 const SOCIALS = [
   { href: "https://x.com/GoldSilverHQ", label: "X", name: "GoldSilverHQ on X" },
@@ -148,10 +151,17 @@ function HistoryMenuLink({
   );
 }
 
-function HistoryDesktopMenu() {
+function DesktopFlyout({
+  label,
+  menuId,
+  children,
+}: {
+  label: string;
+  menuId: string;
+  children: (close: () => void) => ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-  const menuId = useId();
 
   useEffect(() => {
     if (!open) return;
@@ -179,27 +189,58 @@ function HistoryDesktopMenu() {
         aria-haspopup="menu"
         onClick={() => setOpen((value) => !value)}
       >
-        History
+        {label}
         <ChevronDown className={`size-3.5 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
       </button>
       {open ? (
         <div
           id={menuId}
           role="menu"
-          aria-label="History"
+          aria-label={label}
           className="absolute top-full left-0 z-50 mt-2 min-w-[13.5rem] rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]"
         >
-          {HISTORY_NAV_MENU.map((item) => (
-            <HistoryMenuLink
-              key={item.href}
-              item={item}
-              onNavigate={() => setOpen(false)}
-              className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
-            />
-          ))}
+          {children(() => setOpen(false))}
         </div>
       ) : null}
     </div>
+  );
+}
+
+function HistoryDesktopMenu() {
+  const menuId = useId();
+  return (
+    <DesktopFlyout label="History" menuId={menuId}>
+      {(close) =>
+        HISTORY_NAV_MENU.map((item) => (
+          <HistoryMenuLink
+            key={item.href}
+            item={item}
+            onNavigate={close}
+            className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
+          />
+        ))
+      }
+    </DesktopFlyout>
+  );
+}
+
+function IdeasMarketsDesktopMenu() {
+  const menuId = useId();
+  return (
+    <DesktopFlyout label="Ideas & markets" menuId={menuId}>
+      {(close) =>
+        IDEAS_MARKETS_NAV.map((item) => (
+          <Link
+            key={item.href}
+            to={item.href}
+            onClick={close}
+            className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
+          >
+            {item.label}
+          </Link>
+        ))
+      }
+    </DesktopFlyout>
   );
 }
 
@@ -240,6 +281,44 @@ function HistoryMobileSection({ onNavigate }: { onNavigate: () => void }) {
   );
 }
 
+function IdeasMarketsMobileSection({ onNavigate }: { onNavigate: () => void }) {
+  const [open, setOpen] = useState(false);
+  const panelId = useId();
+
+  return (
+    <div>
+      <button
+        type="button"
+        className="flex min-h-11 w-full items-center justify-between gap-1 text-fg"
+        aria-expanded={open}
+        aria-controls={panelId}
+        onClick={() => setOpen((value) => !value)}
+      >
+        Ideas & markets
+        <ChevronDown className={`size-4 text-muted transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+      </button>
+      {open ? (
+        <div id={panelId} className="mb-1 ml-3 flex flex-col border-l border-line pl-3">
+          {IDEAS_MARKETS_NAV.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              onClick={onNavigate}
+              className="flex min-h-11 items-center text-sm text-muted hover:text-gold-soft"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function isNavMenu(item: NavLink | NavMenu): item is NavMenu {
+  return "menu" in item;
+}
+
 export function SiteShell({
   children,
   ui,
@@ -258,19 +337,27 @@ export function SiteShell({
             <Brand />
           </Link>
           <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-4 whitespace-nowrap xl:flex xl:pl-2">
-            {NAV.map((item) =>
-              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
-                <HistoryDesktopMenu key={item.href} />
-              ) : (
+            {NAV.map((item) => {
+              if (isNavMenu(item)) {
+                if (item.menu === "history") {
+                  return <HistoryDesktopMenu key={item.menu} />;
+                }
+                return <IdeasMarketsDesktopMenu key={item.menu} />;
+              }
+              return (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+                  className={
+                    item.quiet
+                      ? "shrink-0 whitespace-nowrap text-[0.875rem] text-faint hover:text-gold-soft"
+                      : "shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+                  }
                 >
                   {item.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
           </nav>
           <div className="ml-auto flex shrink-0 items-center">
             <div className="hidden min-w-0 md:block xl:pr-5">
@@ -294,20 +381,28 @@ export function SiteShell({
         </div>
         {open ? (
           <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 xl:hidden">
-            {NAV.map((item) =>
-              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
-                <HistoryMobileSection key={item.href} onNavigate={() => setOpen(false)} />
-              ) : (
+            {NAV.map((item) => {
+              if (isNavMenu(item)) {
+                if (item.menu === "history") {
+                  return <HistoryMobileSection key={item.menu} onNavigate={() => setOpen(false)} />;
+                }
+                return <IdeasMarketsMobileSection key={item.menu} onNavigate={() => setOpen(false)} />;
+              }
+              return (
                 <Link
                   key={item.href}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-11 items-center text-fg"
+                  className={
+                    item.quiet
+                      ? "flex min-h-11 items-center text-muted"
+                      : "flex min-h-11 items-center text-fg"
+                  }
                 >
                   {item.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
             <div className="mt-3 border-t border-line pt-3">
               <SocialLinks onNavigate={() => setOpen(false)} />
             </div>
