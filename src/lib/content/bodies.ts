@@ -2812,21 +2812,21 @@ export const historyHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Half a century later, on **15 August 1971**, the United States closed the last official promise that foreign governments could still turn dollars into gold at a fixed price. Those two dates are not the beginning of money. They are late chapters in a much older argument: what a unit is, who may create it, and what happens when the stop fails.",
-      "Coins get clipped. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay. The articles here stay with those moments — who acted, what rule changed, what broke, and what followed.",
+      "Coins get clipped. Banks write receipts that begin as claims on metal and end as notes people are told to trust. Legislatures rename mint ratios, suspend convertibility, or recall gold from private hands. Crowds form at doors that cannot pay.",
     ],
   },
   {
     heading: "From metal in the hand to paper that floats",
     paragraphs: [
       "The story does not start with a modern central bank. Traders settled in gold and silver by weight; a stamp cut the cost of checking that metal; a warehouse ticket began to pay a debt while the bullion stayed in the vault. Paper is late. Fiat — money that exists by law and habit rather than by redeemability into a known weight — is later still.",
-      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. When the selection of the two metals itself is the fog, [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) is the place to start. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French assignats. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
+      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French assignats. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
     ],
   },
   {
     heading: "One republic, one white metal, one crowded century",
     paragraphs: [
-      "Inside the United States the fight was often a statute fight: what the dollar is. From the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the [silver question after **1873**](/history/america/crime-of-1873), and a gold definition in **1900**, Congress kept rewriting the unit — then handed off before the Fed. Silver has its own gravity. A mountain at [Potosí](/history/silver/potosi) poured the metal into Atlantic and Pacific trade; a global coin, mint-ratio fights, and the **1980** squeeze followed. None of that is a footnote to gold.",
-      "The crowded modern century opens with a private rescue after **1907**, a new central bank, and classical gold’s wartime end. [Weimar **1923**](/history/20th-century/weimar-1923) shows what happens when the printing press outruns the stop. The **1933** US gold recall, Bretton Woods, and the [**1971** gold-window close](/history/20th-century/bretton-woods-nixon-1971) close the official promise. Merging **1720** into **1923**, or **1933** into **1971**, blurs what actually changed — similar mechanisms, different years, different laws.",
+      "Inside the United States the fight was often a statute fight: what the dollar is. From the **1792** coinage law through Jackson’s bank war, Civil War greenbacks, the silver question after **1873**, and a gold definition in **1900**, Congress kept rewriting the unit — then handed off before the Fed. Silver has its own gravity. A mountain at [Potosí](/history/silver/potosi) poured the metal into Atlantic and Pacific trade; a global coin, mint-ratio fights, and the **1980** squeeze followed. None of that is a footnote to gold.",
+      "The crowded modern century opens with a private rescue after **1907**, a new central bank, and classical gold’s wartime end. [Weimar **1923**](/history/20th-century/weimar-1923) shows what happens when the printing press outruns the stop. The **1933** US gold recall, Bretton Woods, and the [**1971** gold-window close](/history/20th-century/bretton-woods-nixon-1971) close the official promise — similar mechanisms in different years, under different laws.",
     ],
   },
 ];

@@ -76,10 +76,10 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     assert.match(opener, /1923|1971/);
     assert.doesNotMatch(opener, /This section records|not a glossary|not a sales page/);
     const history = bodyText(historyHubBody);
-    assert.doesNotMatch(history, /Four hinges|five stretches|You do not need every page/i);
-    assert.doesNotMatch(history, /do not sell metal|forecast prices|turn a panic into a pitch/i);
-    assert.doesNotMatch(history, /curious adult can leave able to explain/);
-    assert.doesNotMatch(history, /densest modern door|natural entry|slower on-ramp/);
+    assert.doesNotMatch(history, /\bhinges?\b|\bstretches?\b|Four hinges|five stretches/i);
+    assert.doesNotMatch(history, /You do not need every page|do not sell metal|forecast prices|turn a panic into a pitch/i);
+    assert.doesNotMatch(history, /curious adult can leave able to explain|is the place to start|Merging \*\*\d+/);
+    assert.doesNotMatch(history, /densest modern door|natural entry|slower on-ramp|articles here stay with those moments/);
   });
 
   it("keeps hub episode doors as narrative links, not catalog-only lists", () => {
@@ -98,15 +98,17 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       assert.match(text, /\]\(\//, `${label} must still door into child pages`);
     }
     const history = bodyText(historyHubBody);
+    // Quiet, useful episode doors only — not a forced glossary of every chapter
     assert.match(history, /\[Weimar \*\*1923\*\*\]\(\/history\/20th-century\/weimar-1923\)/);
     assert.match(history, /\[John Law[^\]]*1720[^\]]*\]\(\/history\/banks-paper\/john-law\)/);
     assert.match(history, /\[Potosí\]\(\/history\/silver\/potosi\)/);
-    // Quiet episode doors — not a directory of every chapter hub
     assert.doesNotMatch(history, /\]\(\/history\/ancient\)/);
     assert.doesNotMatch(history, /\]\(\/history\/banks-paper\)/);
     assert.doesNotMatch(history, /\]\(\/history\/america\)/);
     assert.doesNotMatch(history, /\]\(\/history\/silver\)/);
     assert.doesNotMatch(history, /\]\(\/history\/20th-century\)/);
+    assert.doesNotMatch(history, /why-markets-chose-gold-silver/);
+    assert.doesNotMatch(history, /crime-of-1873/);
   });
 
   it("keeps history hub route chrome free of sitemap positioning", () => {
