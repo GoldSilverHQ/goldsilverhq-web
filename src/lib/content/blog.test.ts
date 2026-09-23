@@ -78,21 +78,23 @@ describe("blog section", () => {
     assert.ok(words > 1400, `expected site essay >1400 words, got ${words}`);
   });
 
-  it("interlinks Newton naturally and credits the X Article once", () => {
+  it("interlinks Newton lightly and credits the X Article once", () => {
     const body = getBody("blog", "newton-1717-guinea")!;
     const text = body
       .flatMap((s) => [...s.paragraphs, ...(s.callout?.paragraphs ?? [])])
       .join("\n");
-    assert.match(text, /\/history\/silver\/bimetallism/);
-    assert.match(text, /\/history\/silver\/piece-of-eight/);
-    assert.match(text, /\/history\/banks-paper\/bank-of-england/);
-    assert.match(text, /\/markets\/gold-silver-ratio/);
-    assert.match(text, /\/sound-money\/hard-money-vs-fiat/);
+    assert.match(text, /\[bimetallic\]\(\/history\/silver\/bimetallism\)/);
+    assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 2);
+    assert.doesNotMatch(text, /\/markets\/gold-silver-ratio|\/sound-money\/hard-money-vs-fiat|\/history\/banks-paper\/bank-of-england/);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|names the statute|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?/i,
+    );
     assert.equal(
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
-    assert.doesNotMatch(text, /if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?/i);
   });
 
   it("exposes /blog index grid + /blog/$slug hero wiring", () => {

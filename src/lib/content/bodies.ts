@@ -2772,7 +2772,7 @@ const newton1717Guinea: Section[] = [
   {
     heading: "Two metals, one wrong price",
     paragraphs: [
-      "Bimetallism is not a slogan. It is a mint board: two metals, one legal unit, a **fixed mint ratio**. When that legal number drifts away from the **market ratio** — the gold price of silver in trade — Gresham’s pattern appears. The metal the Mint overvalues stays in coin; the metal it undervalues leaves as bullion or foreign payment. The [bimetallism](/history/silver/bimetallism) page carries that general machine. **1717** is England’s high-clarity case of the same arithmetic.",
+      "Bimetallism is not a slogan. It is a mint board: two metals, one legal unit, a **fixed mint ratio**. When that legal number drifts away from the **market ratio** — the gold price of silver in trade — Gresham’s pattern appears. The metal the Mint overvalues stays in coin; the metal it undervalues leaves as bullion or foreign payment. **1717** is England’s high-clarity case of that arithmetic.",
       "Newton put the numbers in front of the Lords of the Treasury without romance. A troy pound of standard gold was cut into **44½** guineas. A troy pound of standard silver was cut into **62** shillings. At a guinea of **£1 1s 6d**, that mint schedule implied roughly **15.07** units of fine silver per unit of fine gold. Exportable silver bullion, he noted, usually traded a few pence per ounce above coined silver. On that basis, a guinea was worth only about **20s 8d** in silver bullion — not **21s 6d**.",
       "The gap was small in shillings and large in consequences. A few pence of overvaluation, repeated across every pound of gold imported, was enough to pull metal one way and push coin the other.",
     ],
@@ -2832,9 +2832,9 @@ const newton1717Guinea: Section[] = [
   {
     heading: "The Mint, the Bank, and the silver already in motion",
     paragraphs: [
-      "Newton’s Mint Office was not inventing England’s money from a blank page. The [Bank of England](/history/banks-paper/bank-of-england) had held its war-finance charter since **1694**; note issue and public credit already sat beside coin. **1717** is not a bank story. It is a coin-ratio story that still belongs in the same century of English monetary machinery — paper growing beside metal, and metal itself fighting over which ounce the law would favour.",
+      "Newton’s Mint Office was not inventing England’s money from a blank page. Public credit and note issue had already sat beside coin since the Bank of England’s war-finance charter of **1694**. **1717** is still a coin-ratio story — paper growing beside metal, and metal itself fighting over which ounce the law would favour.",
       "Nor did Britain invent the silver outflow in **1717**. Spanish American silver — much of it coined as pieces of eight — had been flowing toward Asia for generations. Potosí-class supply and Asian settlement demand were older than Newton’s report. What he did was measure England’s place in that current and tell ministers that **Mint arithmetic**, not merchant greed alone, was feeding the local drain.",
-      "That is why this note sits beside the silver chapter rather than replacing it. [Bimetallism](/history/silver/bimetallism) names the statute machine. The [piece of eight](/history/silver/piece-of-eight) names the coin many counterparties actually held. Newton names the English Mint’s error relative to trade.",
+      "The wider statute machine and the Spanish dollar that counterparties often held are older than this report. Newton’s job here is narrower: the English Mint’s error relative to trade.",
     ],
   },
   {
@@ -2842,7 +2842,7 @@ const newton1717Guinea: Section[] = [
     paragraphs: [
       "The **1717** episode is not a quaint coin story. It is an early case of official prices fighting market ratios. When a government names a fixed gold–silver relationship that the outside world does not share, the undervalued metal leaves and the overvalued metal arrives. Newton described the mechanism the way a physicist describes a force: demand for export raises bullion above coin, coin gets melted or shipped, and the circulating medium thins.",
       "By lowering the guinea, the state reduced the official overvaluation of gold. Silver’s exit pressure eased at the margin. Over the following decades England’s monetary practice leaned harder on gold. Historians still argue how cleanly to date a “gold standard,” but Newton’s report is a landmark on that path: a working scientist diagnosing a monetary peg that did not match the trade of the world.",
-      "Later American statutes would write their own mint ratios — **15:1** in **1792**, then gold-friendlier corrections, then the long silver fight after **1873**. Those are different instruments in different countries. The family resemblance is the same: a legal number is not a market equilibrium. The live market quotient without a mint claim lives on the [gold–silver ratio](/markets/gold-silver-ratio) fact page; the idea of money that cannot be expanded at will sits under [hard money versus fiat](/sound-money/hard-money-vs-fiat).",
+      "Later American statutes would write their own mint ratios — **15:1** in **1792**, then gold-friendlier corrections, then the long silver fight after **1873**. Those are different instruments in different countries. The family resemblance is the same: a legal number is not a market equilibrium. A market print of gold over silver, without a mint claim, is just a dated quotient — useful as arithmetic, useless as a tip.",
     ],
   },
   {

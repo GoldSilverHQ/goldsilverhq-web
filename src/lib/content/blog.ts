@@ -57,16 +57,8 @@ export const blogPosts: BlogPost[] = [
     related: [
       { title: "Bimetallism", href: "/history/silver/bimetallism" },
       { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
-      { title: "Bank of England", href: "/history/banks-paper/bank-of-england" },
-      { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
     ],
-    relatedArticlePaths: [
-      "/history/silver/bimetallism",
-      "/history/silver/piece-of-eight",
-      "/history/banks-paper/bank-of-england",
-      "/markets/gold-silver-ratio",
-      "/sound-money/hard-money-vs-fiat",
-    ],
+    relatedArticlePaths: ["/history/silver/bimetallism", "/history/silver/piece-of-eight"],
     xArticleUrl: "https://x.com/i/article/2102003835015155712",
   },
   {
