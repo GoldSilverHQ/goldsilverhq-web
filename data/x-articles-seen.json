@@ -1,9 +1,20 @@
 {
-  "updatedAt": "2026-09-23T18:40:00.000Z",
+  "updatedAt": "2026-09-24T18:30:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2103033593492537345",
+      "postId": "2103171852608962740",
+      "title": "When Exchanges Change the Silver Rules",
+      "status": "mirrored",
+      "slug": "when-exchanges-change-the-silver-rules",
+      "sitePath": "/blog/when-exchanges-change-the-silver-rules",
+      "xArticleUrl": "https://x.com/i/article/2103033593492537345",
+      "publishedAt": "2026-09-24T17:16:59.000Z",
+      "mirroredAt": "2026-09-24T18:30:00.000Z"
+    },
     {
       "articleId": "2102821638521688064",
       "postId": "2102825847904166156",

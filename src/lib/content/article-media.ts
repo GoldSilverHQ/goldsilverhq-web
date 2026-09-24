@@ -319,6 +319,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/when-exchanges-change-the-silver-rules",
+    src: "/images/blog/when-exchanges-change-the-silver-rules.jpg",
+    ogSrc: "/og/cards/blog-when-exchanges-change-the-silver-rules.jpg",
+    alt: "Silver bars and a trading screen — title image for the 1980 exchange-rules note.",
+    caption: "January 1980 — COMEX silver futures moved to liquidation-only trading.",
+    credit: "Title image from the GoldSilverHQ X Article on the 1980 silver rule change.",
+  },
+  {
     path: "/blog/ltcm-1998-consortium",
     src: "/images/blog/ltcm-1998-consortium.jpg",
     ogSrc: "/og/cards/blog-ltcm-1998-consortium.jpg",

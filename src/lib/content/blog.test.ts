@@ -38,9 +38,20 @@ function bodyWordCount(slug: string) {
 }
 
 describe("blog section", () => {
-  it("ships ready posts including LTCM + Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 4);
-    assert.equal(listBlogPosts().length, 4);
+  it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
+    assert.equal(blogPosts.length, 5);
+    assert.equal(listBlogPosts().length, 5);
+    const rules = getBlogPost("when-exchanges-change-the-silver-rules");
+    assert.ok(rules);
+    assert.equal(rules.title, "When Exchanges Change the Silver Rules");
+    assert.deepEqual(rules.tags, ["History", "Markets"]);
+    assert.equal(rules.date, "2026-09-24");
+    assert.equal(rules.sourceXId, "2103033593492537345");
+    assert.match(rules.xArticleUrl ?? "", /x\.com\/i\/article\/2103033593492537345/);
+    assert.ok(
+      rules.summary.length >= 140 && rules.summary.length <= 160,
+      `summary length ${rules.summary.length}`,
+    );
     const ltcm = getBlogPost("ltcm-1998-consortium");
     assert.ok(ltcm);
     assert.deepEqual(ltcm.tags, ["History", "Markets"]);
@@ -56,6 +67,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/when-exchanges-change-the-silver-rules",
         "/blog/ltcm-1998-consortium",
         "/blog/newton-1717-guinea",
         "/blog/gold-silver-ratio-what-it-counts",
@@ -67,9 +79,9 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 3);
+    assert.equal(listBlogPostsByTag("History").length, 4);
     assert.equal(listBlogPostsByTag("Metals").length, 2);
-    assert.equal(listBlogPostsByTag("Markets").length, 2);
+    assert.equal(listBlogPostsByTag("Markets").length, 3);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
 
@@ -81,7 +93,11 @@ describe("blog section", () => {
   });
 
   it("keeps mirrored site essays longer than their X Articles", () => {
-    for (const slug of ["newton-1717-guinea", "ltcm-1998-consortium"]) {
+    for (const slug of [
+      "when-exchanges-change-the-silver-rules",
+      "newton-1717-guinea",
+      "ltcm-1998-consortium",
+    ]) {
       const words = bodyWordCount(slug);
       assert.ok(words > 1200, `expected site essay >1200 words for ${slug}, got ${words}`);
     }
@@ -104,6 +120,26 @@ describe("blog section", () => {
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
+  });
+
+  it("interlinks the 1980 rules note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "when-exchanges-change-the-silver-rules")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[Silver Thursday\]\(\/history\/silver\/silver-thursday\)/);
+    assert.match(text, /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 2);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2103033593492537345/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("when-exchanges-change-the-silver-rules");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks LTCM lightly and credits the X Article once", () => {
