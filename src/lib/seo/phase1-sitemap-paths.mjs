@@ -75,6 +75,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/gold-silver-ratio",
   "/markets/physical-silver-demand-by-country",
   "/blog",
+  "/blog/when-exchanges-change-the-silver-rules",
   "/blog/ltcm-1998-consortium",
   "/blog/newton-1717-guinea",
   "/blog/gold-silver-ratio-what-it-counts",

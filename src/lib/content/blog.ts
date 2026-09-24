@@ -47,6 +47,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "when-exchanges-change-the-silver-rules",
+    title: "When Exchanges Change the Silver Rules",
+    summary:
+      "In January 1980 COMEX switched silver futures to liquidation-only trading. The screen still printed a price. The paper claim behind it had already changed.",
+    date: "2026-09-24",
+    status: "ready",
+    tags: ["History", "Markets"],
+    paragraphs: [],
+    related: [
+      { title: "Silver Thursday", href: "/history/silver/silver-thursday" },
+      {
+        title: "Silver: monetary history and industry",
+        href: "/history/silver/monetary-and-industry",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/silver-thursday",
+      "/history/silver/monetary-and-industry",
+    ],
+    xArticleUrl: "https://x.com/i/article/2103033593492537345",
+    sourceXId: "2103033593492537345",
+  },
+  {
     slug: "ltcm-1998-consortium",
     title: "The Day Banks Put Up $3.6 Billion to Stop a Hedge Fund Collapse",
     summary:

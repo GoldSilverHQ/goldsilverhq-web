@@ -2759,6 +2759,76 @@ const physicalSilverDemandByCountry: Section[] = [
   },
 ];
 
+/** Blog: COMEX 1980 silver rules — longer site essay than the X Article. */
+const exchangesChangeSilverRules: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Most people treat “the silver price” as a fact of nature — one number, one market, one meaning. A futures screen is less polite. It can keep printing a price after the exchange has already changed the claim that price is allowed to represent.",
+      "In January **1980**, the New York Commodity Exchange — COMEX — switched silver futures to liquidation-only trading. Traders could close positions they already held. They could not freely open or expand new long bets the way they had during the prior run-up. The Chicago Board of Trade adopted a similar restriction. Those rule changes did not invent silver, and they did not erase it. They changed which paper claims the venues would still allow to form.",
+      "Exchange mechanics on one side, metal that gets used up on the other, and a plain reminder that paper is a promise. The March break that followed is [Silver Thursday](/history/silver/silver-thursday). What follows here is the January rule book: what liquidation-only closed, what had already been tightened, and why a printed price and a deliverable ounce are not the same sentence.",
+    ],
+  },
+  {
+    heading: "What liquidation-only closed",
+    paragraphs: [
+      "A silver futures contract is a dated claim. Someone is long, someone is short, and the exchange stands between them with margin and a rule book. In an ordinary month a trader who wants more exposure opens a new long. Open interest — the stock of contracts still open — can grow. When the contract nears expiry, the holder takes metal, settles in cash, or rolls the position into a later month. None of those choices is a mine. They are ways of dealing with a promise that has a date on it.",
+      "Liquidation-only shut the door that lets new speculative longs in. Existing longs could sell out. Shorts could buy back. What the venue would not freely permit was a fresh long that made the pile of open claims larger. The ticker symbol did not change. The permission behind the next trade did.",
+      "The Chicago Board of Trade’s similar restriction mattered because silver futures were not a one-building market. A curb on one exchange that left the other wide open would have invited the same bets to change address. A similar curb on both kept the paper from simply walking across town. The metal in warehouses and in the ground was not relocated by that decision. The right to write a new long was.",
+      "Call the step risk management, call it emergency market structure, or call it the moment the game board changed. Those are arguments about motive. The mechanical fact is narrower: one direction stayed open, the direction that closes what was already written. The direction that adds a new long did not.",
+    ],
+  },
+  {
+    heading: "What January had already tightened",
+    paragraphs: [
+      "Liquidation-only was not the first screw turned that month. Earlier in January **1980**, COMEX had already tightened position limits and raised margin requirements. A position limit caps how large one interest is allowed to stand. Margin is the cash the clearing house requires against an open contract. Raise the margin, and a position that was financeable on Monday can demand more cash on Tuesday. Those tools slow a market. They do not, by themselves, forbid a new long from being opened inside the cap, if the trader can post the cash.",
+      "Liquidation-only was the harder step. It aimed at the growth of open interest through new speculative longs. It pushed the book toward unwind rather than toward a larger set of claims. The worry attached to that step was March delivery: more paper arriving at the delivery window than metal the system could comfortably handle. Deliverable supply, margins, and position concentration were what exchanges and regulators were watching. A committee vote does not move ore. It does change how many new promises can be written against whatever metal the contract still points at.",
+      "The backdrop was the Hunt-era silver episode. Large concentrated long positions had pushed prices far above prior norms. Nelson Bunker Hunt and William Herbert Hunt, with partners, had built a position in bullion and futures on a scale the market could not treat as one more speculator among many. Exact ounce counts still vary by source, and by whether warehouse receipts and forward claims are folded in. What does not vary is the concentration: a small circle of names sat on a large share of the paper and the metal the paper could demand. When margins rise against a position that large, the brokers who financed it ask for more capital. That pressure is credit. The January curb was the rule book answering before March’s delivery window arrived.",
+    ],
+  },
+  {
+    heading: "A high-forties print, then a reversal",
+    paragraphs: [
+      "Silver’s printed price had spiked into the high forties. The nearby extreme recorded for that January run is **$49.45** on **18 January 1980**. That figure is a print, not a statute. It sits in the same month as the position limits, the higher margins, and the liquidation-only curb. A screen full of forties can look like a fact about silver itself. It was also a fact about which claims the exchange was still willing to let grow.",
+      "In the days after the curb, the printed price reversed sharply. The exchange had not repealed the ounce. It had changed who could still bid for more paper exposure. A price that falls after new longs are restricted is not, by itself, proof that the metal became more abundant overnight. It is evidence that the demand the rule book would still accept had been cut. Shorts covering and longs closing are both trades. A new speculative long was no longer an ordinary one.",
+      "March **1980** is a different day from that January curb. The broader unwind climaxed in what markets still call Silver Thursday. On **27 March 1980** silver futures broke under forced selling, in a market already living with higher margins and limits on new longs. January was the run and the rule change. March was the close. Folding both into a single afternoon makes the sequence harder to read: first the permission changed, then the book was unwound.",
+    ],
+  },
+  {
+    heading: "Motives, boards, and what courts left standing",
+    paragraphs: [
+      "Lawsuits and commentary argued for years about motives and conflicts on exchange boards. People with positions, people with seats, and people who cleared trades do not become neutral because a market is under stress. Some accounts treat the curb as prudence. Others treat it as a rescue of the shorts. The **1980** record keeps both arguments alive because it refuses a single motive that explains every vote.",
+      "Courts that examined those fights did not turn “conflicted motives” into a simple cartoon of a rigged tape. A board can contain interested parties. That fact does not, by itself, convert every print after the curb into a fiction, and it does not erase the rule change. What remains usable for a reader of metals is narrower and harder. When the venue rewrites the rules, the meaning of the quote changes even if the ticker symbol stays the same.",
+      "That is the sentence worth keeping. It does not require a villain, and it does not require a defence of the board. It requires only the order of events: limits and margins, then liquidation-only, then a sharp reversal in the printed price, then a March unwind the market still dates as Silver Thursday.",
+    ],
+  },
+  {
+    heading: "Metal that gets used up",
+    paragraphs: [
+      "Industrial silver leaves a futures conversation in a way a roll does not. It gets soldered into electronics, plated onto contacts, burned into panels. Once it is consumed at product scale, that ounce is not waiting patiently for next month’s delivery window. It is in a device. Getting it back is a recycling problem with its own clock, not a click that moves a position from March to May. Silver’s double life as money and as an industrial metal is the longer story under [monetary history and industry](/history/silver/monetary-and-industry).",
+      "Paper silver does the opposite move. A contract is opened, marked to a price, cash-settled, or rolled into the next expiry. Rolling is a calendar trick. It keeps leverage alive across months. It is not a mine, and it does not refine an ounce. It does not put metal back into a vault that factories have already drawn down. The paper book can look continuous on a screen while the metal side of the market is disappearing into products.",
+      "The two clocks are easy to mash together because both get discussed under the word silver. One clock follows contracts and margin calls. The other follows ore, energy, refining, and the products that lock silver into forms that are slow to return. A liquidation-only rule speaks only to the first clock. It does not smelt anything, and it does not unsolder a circuit board.",
+    ],
+  },
+  {
+    heading: "Two claims under one headline",
+    paragraphs: [
+      "So “the silver price” is at least two claims sharing a headline. Physical silver answers to rock, energy, refining, and industrial chemistry. Paper silver answers to margin, expiry, position limits, and — on rare historical days — whether the exchange will still let a trader add a long.",
+      "A quote can look abundant because contracts are easy to write. An abundance of contracts is not an abundance of metal that can be delivered, or reclaimed from products, on the day the promise comes due. The **1980** liquidation-only episode is the case where that split stopped being a classroom distinction. The exchange did not need to deny that silver existed. It only needed to change which paper claims could still be written.",
+      "Paper silver is a promise. The promise can be honoured in metal, closed out for cash, or shut off for new longs when the rule book moves. Physical silver is the ounce that a vault or a factory actually has to find. Treating the two as one fact of nature is how a screen price gets mistaken for a stock of metal. The January curb is useful because it separates them in public: the screen kept its symbol, and the permission behind the next long did not.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "When exchanges change the silver rules, they are not editing geology. They are editing the claim. The metal still answers to chemistry. The screen answers to the rule book — and in January **1980** the rule book moved first.",
+      "COMEX switched silver futures to liquidation-only trading. The Chicago Board of Trade adopted a similar restriction. Earlier that month, position limits and higher margins had already tightened the same market. The printed price, which had reached the high forties, reversed after the curb. In March the unwind climaxed on Silver Thursday, **27 March 1980**.",
+      "None of that tells a reader what to hold. It is a dated description of how a quote can outlive the permission that gave it its meaning.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103033593492537345).",
+    ],
+  },
+];
+
 /** Blog: LTCM 1998 — longer site essay than the X Article (anti-cannibalization). */
 const ltcm1998Consortium: Section[] = [
   {
@@ -2944,6 +3014,7 @@ const newton1717Guinea: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/when-exchanges-change-the-silver-rules": exchangesChangeSilverRules,
   "blog/ltcm-1998-consortium": ltcm1998Consortium,
   "blog/newton-1717-guinea": newton1717Guinea,
   "banks-paper/john-law": johnLaw,
