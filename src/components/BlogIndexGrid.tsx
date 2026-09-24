@@ -39,7 +39,7 @@ function BlogCard({ post }: { post: BlogPost }) {
           <span aria-hidden="true">·</span>
           <span className="text-muted">{post.tags.join(" · ")}</span>
         </div>
-        <h2 className="font-display text-xl leading-snug text-fg group-hover:text-gold-soft">{post.title}</h2>
+        <h2 className="font-sans text-xl leading-snug text-fg group-hover:text-gold-soft">{post.title}</h2>
         <p className="text-sm leading-relaxed text-muted">{post.summary}</p>
       </div>
     </Link>

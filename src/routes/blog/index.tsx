@@ -24,7 +24,7 @@ function BlogIndex() {
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Blog" }]} />
-        <h1 className="mt-2 font-display text-4xl">Blog</h1>
+        <h1 className="mt-2 font-sans text-4xl">Blog</h1>
 
         {hasPosts ? (
           <BlogIndexGrid />
