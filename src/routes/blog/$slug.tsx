@@ -55,11 +55,12 @@ function BlogPostPage() {
           title={post.title}
           teaser={post.summary}
           hero={hero}
+          face="sans"
         />
         <div className="mt-10">
-          <article className="max-w-prose">
-            <ArticleSections sections={sections} />
-            <RelatedLinks links={post.related} />
+          <article className="max-w-prose font-sans">
+            <ArticleSections sections={sections} face="sans" />
+            <RelatedLinks links={post.related} face="sans" />
           </article>
         </div>
       </div>
