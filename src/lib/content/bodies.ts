@@ -2760,6 +2760,92 @@ const physicalSilverDemandByCountry: Section[] = [
 ];
 
 /** Blog: COMEX 1980 silver rules — longer site essay than the X Article. */
+/** Blog: China 1934 silver appeal — longer site essay than the X Article. */
+const china1934SilverAppeal: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **24 September 1934**, China’s Minister in Washington, Sao-ke Alfred Sze, handed Secretary of State Cordell Hull a cable from Finance Minister H. H. Kung in Nanking. The message was not ceremonial. China, still on a silver standard, told the United States that American silver buying was draining Chinese silver, punishing trade, and raising the risk of panic — and it asked Washington to help stop the rise.",
+      "The statute behind that bid was only a few months old. On **19 June 1934**, President Franklin D. Roosevelt signed the Silver Purchase Act. Congress declared it U.S. policy to raise silver’s share of the nation’s monetary metal stocks toward one-fourth of their monetary value, and directed the Treasury to acquire silver at home or abroad until that objective was met — so long as purchases did not exceed silver’s statutory “monetary value.” For China, which still used silver as money, a rising world silver price was not a windfall. It was a squeeze.",
+    ],
+  },
+  {
+    heading: "When silver is the money",
+    paragraphs: [
+      "On a silver standard the metal is the money. Raise its price in foreign currencies and, if the exchange rate follows, you have raised the foreign-currency value of the money supply. If the exchange has not fully followed, the gap invites export: an ounce is worth more in the foreign bid than left in circulation. The metal leaves, goods prices fall, and ordinary exports have a harder time.",
+      "That is the mechanism in Kung’s cable, preserved in the State Department’s *Foreign Relations of the United States*. Since **1931**, he wrote, the rise of silver in terms of foreign currencies had brought severe deflation and economic losses to China and had disrupted the balance of payments, in part by hampering exports. A higher world silver price is not a gain for a country whose cash is silver. It is a bid for the circulating medium.",
+      "This is not the two-metal mint arithmetic of [bimetallism](/history/silver/bimetallism), where a legal ratio decides which metal stays in the till. China in **1934** was on silver alone. It was watching a foreign statute lift the price of the one metal its money was made of.",
+    ],
+  },
+  {
+    heading: "What the Act ordered",
+    paragraphs: [
+      "The one-fourth target and the monetary-value ceiling belong together. The Act told the Treasury to enlarge silver’s share of official monetary metal. It also told the Treasury not to pay above the value the statute itself assigned. It was not an open order to chase any price.",
+      "Domestic silver already inside the country sat under a tighter ceiling. Silver held in the continental United States on **1 May 1934** was not to be taken above fifty cents a fine ounce. That date draws a line through holdings already in the United States. It is not a world-market quote for every ounce offered later, including metal from abroad.",
+      "The program was meant to expand America’s silver reserves and to please domestic silver interests. China met that buyer as a drain: a reserve policy in Washington, a money supply at home.",
+    ],
+  },
+  {
+    heading: "What the cable measured",
+    paragraphs: [
+      "The rise since **1931** was the background. The recent clause was sharper. Stimulation of silver prices abroad — to which Chinese exchange had not fully responded — had caused a “serious drain of silver,” creating “great alarm.” Until the exchange caught the metal, holders who could ship silver had a reason to ship it.",
+      "Silver exports that year to date were already more than three times greater than in any previous full year. By **24 September**, with months of the year still ahead, China had already moved more silver out than in any completed year on its own record. Then the line that still lands: “Further material silver price increase would cause very serious injury to China, possibly severe panics.” Kung was naming a threshold, not a panic already finished that morning. Another material rise, on top of that drain, could turn alarm into panic.",
+    ],
+  },
+  {
+    heading: "Two asks",
+    paragraphs: [
+      "China’s request was twofold. First, an assurance: the United States should refrain from action that would continue the drain, cooperate to prevent a further rise, and keep silver stable in the spirit of the London silver agreement — preferably, from China’s view, at a level somewhat lower than the price then prevailing. The cable did not ask Washington to abandon silver as a monetary metal. It asked Washington to stop feeding a rise that was pulling China’s money out.",
+      "Second, a question about the standard itself. China felt it should not alone maintain the silver standard. It was considering a gradual move toward a gold-basis currency, and it wanted to know whether Washington would, in principle, exchange gold for Chinese silver. That is a request for a counterparty, not a forecast. If the price keeps rising, the drain continues. If China wants to leave silver and cannot exchange the stock, it leaves alone into a market the American statute is still bidding.",
+      "Silver’s other life, as reserve metal and as an industrial input as well as money, is the longer split under [monetary history and industry](/history/silver/monetary-and-industry). In September **1934** the cable was about the monetary side: silver in circulation, and silver that could be exported.",
+    ],
+  },
+  {
+    heading: "Hull’s answer on 2 October",
+    paragraphs: [
+      "Eight days later, on **2 October**, Hull called Sze in and answered orally. A government-to-government swap of fixed amounts of gold and silver, he said, was not normal procedure. Gold could be acquired in the usual way on world markets such as London. The second ask was declined as a way of doing business. China was pointed at the market where gold already traded, not at a closed exchange with the Treasury.",
+      "The United States would talk informally about coordinated use of gold and silver as a monetary standard — talks of the casual kind already held with countries such as Canada and Mexico. Conversation was on offer. A commitment to take China’s silver and hand over gold was not.",
+      "Hull also refused to confine U.S. silver purchases to metal inside the United States. That, he said, would violate the mandate Congress had given the Executive. The Act directed purchases at home or abroad, inside the monetary-value ceiling, until the one-fourth objective was met. China’s preference — stop the foreign bid — ran into that instruction.",
+      "He thought not more than about five hundred thousand ounces had so far been purchased direct from China. That count is the direct channel, not the export total Kung had put at more than three times any previous full year. A modest direct figure does not cancel a wider drain. Washington, he added, wanted to avoid undue interference with silver prices and monetary conditions elsewhere. The wish is in the answer. The policy that remained was the Act.",
+    ],
+  },
+  {
+    heading: "What those weeks did not finish",
+    paragraphs: [
+      "The cable did not end the story on **24 September**, and the oral answer did not end it on **2 October**. China’s silver drain and credit squeeze deepened through late **1934** and **1935**. A finance minister can name the mechanism, a secretary of state can decline to rewrite the statute, and the metal can keep leaving while both statements stand.",
+      "The September appeal is still the primary language for how the Chinese government read the American program in real time: as an external price shock hitting a silver-standard money supply. That reading does not make the purchase program the only cause of what followed. It keeps Kung’s facts attached to Kung’s verbs — deflation since **1931**, a drain, exports already past three times any previous full year, and injury if the price rose further.",
+    ],
+  },
+  {
+    heading: "November 1935",
+    paragraphs: [
+      "On **3–4 November 1935**, the National Government abandoned the exclusive silver standard. Notes of the Central Bank of China, the Bank of China, and the Bank of Communications became full legal tender. Silver was nationalized for currency purposes. The same three banks were charged with keeping the external value of the Chinese dollar stable by buying and selling foreign exchange.",
+      "Read in that order, the note replaced silver as full money. Silver was pulled into a state purpose instead of remaining the object people held and shipped. The external value of the unit was assigned to foreign-exchange dealings, not left to the world silver price each morning. A silver standard lets the metal’s foreign price write the exchange rate, with the lag Kung had described. An instruction to three banks — hold that external value in the foreign-exchange market — is a different job.",
+      "Many forces pressed on the reform: fiscal strain, the world depression, politics, and war risk among them. The U.S. purchase program was not the only cause. November **1935** is not the automatic result of one September cable. The cable shows the reading, in advance. The reform shows the exit, the following year, under more pressures than a single statute.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Statute, cable, answer, exit."],
+    list: [
+      "**1 May 1934.** Domestic silver already held in the continental United States faces a later purchase ceiling of fifty cents a fine ounce.",
+      "**19 June 1934.** Roosevelt signs the Silver Purchase Act. Silver is to move toward one-fourth of the monetary value of U.S. monetary metal stocks. The Treasury acquires it at home or abroad, without going above the statutory monetary value.",
+      "**24 September 1934.** Sze delivers Kung’s cable. Drain, alarm, exports already more than three times any previous full year, and a warning of injury and possible panic if the price rises further.",
+      "**2 October 1934.** Hull answers orally. No fixed government swap of gold and silver; gold can be acquired on markets such as London. Informal talks, of the kind already held with Canada and Mexico, are acceptable. Purchases will not be confined to metal inside the United States. Direct purchases from China, in his estimate, not more than about five hundred thousand ounces.",
+      "**Late 1934 through 1935.** The silver drain and the credit squeeze deepen.",
+      "**3–4 November 1935.** The National Government leaves the exclusive silver standard. Three banks’ notes become full legal tender, silver is nationalized for currency purposes, and those banks are to hold the Chinese dollar’s external value in foreign exchange.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1934**, a silver country asked a gold-and-silver buyer to stop pulling the metal out from under its currency — and floated gold in return. Washington kept buying under statute. China, within a year, left the exclusive silver standard behind.",
+      "None of that tells a reader what to hold. It is a dated account of what China asked, what Hull declined, and what the National Government changed the following year.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103038843947466754).",
+    ],
+  },
+];
+
 const exchangesChangeSilverRules: Section[] = [
   {
     heading: "",
@@ -3014,6 +3100,7 @@ const newton1717Guinea: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/china-1934-silver-appeal": china1934SilverAppeal,
   "blog/when-exchanges-change-the-silver-rules": exchangesChangeSilverRules,
   "blog/ltcm-1998-consortium": ltcm1998Consortium,
   "blog/newton-1717-guinea": newton1717Guinea,

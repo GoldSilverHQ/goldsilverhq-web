@@ -47,6 +47,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "china-1934-silver-appeal",
+    title: "The Day China Asked America to Stop Buying Silver",
+    summary:
+      "On 24 September 1934 H. H. Kung cabled Hull: U.S. silver buying was draining China and risking panic. Hull answered on 2 October. China left silver in 1935.",
+    date: "2026-09-24",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      {
+        title: "Silver: monetary history and industry",
+        href: "/history/silver/monetary-and-industry",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/bimetallism",
+      "/history/silver/monetary-and-industry",
+    ],
+    xArticleUrl: "https://x.com/i/article/2103038843947466754",
+    sourceXId: "2103038843947466754",
+  },
+  {
     slug: "when-exchanges-change-the-silver-rules",
     title: "When Exchanges Change the Silver Rules",
     summary:

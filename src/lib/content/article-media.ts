@@ -319,6 +319,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/china-1934-silver-appeal",
+    src: "/images/blog/china-1934-silver-appeal.jpg",
+    ogSrc: "/og/cards/blog-china-1934-silver-appeal.jpg",
+    alt: "1934 montage of Chinese silver coinage and the American silver-purchase years.",
+    caption: "24 September 1934 — China asked Washington to stop lifting the silver price.",
+    credit: "Title image from the GoldSilverHQ X Article on China’s 1934 silver appeal.",
+  },
+  {
     path: "/blog/when-exchanges-change-the-silver-rules",
     src: "/images/blog/when-exchanges-change-the-silver-rules.jpg",
     ogSrc: "/og/cards/blog-when-exchanges-change-the-silver-rules.jpg",
