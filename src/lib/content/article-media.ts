@@ -1,5 +1,5 @@
 /**
- * Article titlebild (= on-page hero file) that also doubles as the Open Graph / X card.
+ * Article titlebild (on-page hero) paired with a separate Open Graph / X card.
  *
  * On-page layout (via `ArticleLead`): **title (+ teaser) first, then landscape
  * media under** — X Articles reading order. The whole lead (title, teaser,
@@ -7,19 +7,21 @@
  * not outrun the image or body. Do not put the image above the title
  * (feed-card style) and never ship a tall full-bleed of the whole illustration.
  *
- * Display vs share: files stay **1200×630** for OG/X. On-page, `ArticleHeroImage`
- * shows a **5:2** band (aspect on the clipped wrapper; img `object-cover`
- * fills the frame edge-to-edge) — analog to X Article title-image, shorter
- * than native ~1.9:1 OG. No max-height strip crop (#108). No letterbox /
- * pillarbox matte inside the rounded box — subject must fill the 5:2 crop
- * (crop assets; do not pad into a smaller center plate). Do not invent a
- * portrait on-page format this pass.
+ * Display vs share: **on-page hero and OG are separate files** (same motif OK,
+ * different crops OK). OG/X cards are **1200×630**. On-page, `ArticleHeroImage`
+ * shows a **~5:2** band by default (aspect on the clipped wrapper; img
+ * `object-cover` fills the frame edge-to-edge) — shorter than native ~1.9:1 OG.
+ * No max-height strip crop (#108). No letterbox / pillarbox matte inside the
+ * rounded box — subject must fill the crop (do not pad into a smaller center
+ * plate). Do not invent a portrait on-page format this pass.
  *
  * Convention for later articles:
  * 1. Keep the master illustration elsewhere if needed; write the **landscape**
- *    titlebild JPEG under `public/images/<pillar>/...` at OG aspect (1200×630).
- * 2. Write the **same** 1200×630 crop to the Phase-1 card path under `public/og/cards/`
- *    (same key as `ogImagePathForRoute(path)` — see `phase1-sitemap-paths.mjs`).
+ *    titlebild JPEG under `public/images/<pillar>/...` (often ~1200×630; 5:2
+ *    native also fine).
+ * 2. Write a **separate** 1200×630 crop to the Phase-1 card path under
+ *    `public/og/cards/` (same key as `ogImagePathForRoute(path)` — see
+ *    `phase1-sitemap-paths.mjs`). Same motif; crop may differ from on-page.
  * 3. Register one entry here with matching `src` + `ogSrc`, alt, caption, credit.
  * 4. Render with `ArticleLead` + `ArticleHeroImage` (5:2 inset band at prose width).
  * 5. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.

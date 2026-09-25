@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { existsSync, readFileSync, statSync } from "node:fs";
+import { existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import {
@@ -66,7 +66,9 @@ describe("article hero = OG pattern", () => {
     }
   });
 
-  it("ships true 1200×630 JPEGs for hero titlebild and OG (Querformat sync)", () => {
+  it("ships landscape titlebild + 1200×630 OG (same motif OK; crops may differ)", () => {
+    // On-page hero and OG are separate assets (locked preference). Sibling may
+    // relax on-page dims further; keep both files present and OG at social size.
     for (const hero of ARTICLE_HEROES) {
       assert.equal(hero.ogSrc, ogImagePathForRoute(hero.path), hero.path);
       const srcFile = join(root, "public", hero.src.replace(/^\//, ""));
@@ -74,28 +76,41 @@ describe("article hero = OG pattern", () => {
       for (const file of [srcFile, ogFile]) {
         const size = statSync(file).size;
         assert.ok(size > 20_000 && size <= 600 * 1024, `${file} size ${size}`);
-        const probe = execFileSync(
-          "ffprobe",
-          [
-            "-v",
-            "error",
-            "-select_streams",
-            "v:0",
-            "-show_entries",
-            "stream=width,height",
-            "-of",
-            "csv=p=0",
-            file,
-          ],
-          { encoding: "utf8" },
-        ).trim();
-        assert.equal(probe, "1200,630", `${file} dims ${probe}`);
       }
-      assert.deepEqual(
-        readFileSync(srcFile),
-        readFileSync(ogFile),
-        `${hero.path} titlebild/OG bytes differ`,
-      );
+      const ogProbe = execFileSync(
+        "ffprobe",
+        [
+          "-v",
+          "error",
+          "-select_streams",
+          "v:0",
+          "-show_entries",
+          "stream=width,height",
+          "-of",
+          "csv=p=0",
+          ogFile,
+        ],
+        { encoding: "utf8" },
+      ).trim();
+      assert.equal(ogProbe, "1200,630", `${ogFile} dims ${ogProbe}`);
+      const srcProbe = execFileSync(
+        "ffprobe",
+        [
+          "-v",
+          "error",
+          "-select_streams",
+          "v:0",
+          "-show_entries",
+          "stream=width,height",
+          "-of",
+          "csv=p=0",
+          srcFile,
+        ],
+        { encoding: "utf8" },
+      ).trim();
+      const [sw, sh] = srcProbe.split(",").map(Number);
+      assert.ok(sw >= 800 && sh >= 400, `${srcFile} dims ${srcProbe}`);
+      assert.ok(sw / sh >= 1.4, `${srcFile} should be landscape (${srcProbe})`);
     }
   });
 
