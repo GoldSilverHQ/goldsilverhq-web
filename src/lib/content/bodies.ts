@@ -1451,34 +1451,34 @@ const solidus: Section[] = [
     paragraphs: [
       "In the 310s Constantine’s mints settled on the gold solidus. The tetrarchs before him had experimented with gold; Constantine’s coin is the one that stuck as the empire’s premier gold unit.",
       "Gold had already been the metal of large payments while silver turned into tokens. The solidus made that order explicit and durable. Accounts, taxes, and payments to the elite could refer to a coin whose metal content people trusted. Bronze and reformed base coins still handled small change under other names.",
-      "The setting was imperial consolidation after civil war. A stable gold unit supported a state that collected and spent across an enormous territory.",
-      "Pay tables that could name a reliable gold piece cut through the confusion left by silver coins that no longer meant what their designs claimed. That practical usefulness is why the solidus outlived the slogans of restoration and became the empire’s reference gold coin for centuries.",
+      "The setting was imperial consolidation after civil war. A stable gold unit supported a state that collected and spent across an enormous territory. Pay tables that could name a reliable gold piece cut through the confusion left by silver coins that no longer meant what their designs claimed.",
+      "That practical usefulness is why the solidus outlived slogans of restoration. It became the empire’s reference gold coin for centuries — not because a decree said so forever, but because the metal in the hand stayed close to what the type promised.",
     ],
   },
   {
-    heading: "Weight and fineness as the product",
+    heading: "A known weight of gold",
     paragraphs: [
-      "What set the solidus apart from the late antoninianus was not a handsome type. It was discipline about mass and purity. A merchant or a tax official could treat the coin as a known quantity of gold. That is Lydia’s logic again — only now the promise was a gold weight held for generations.",
-      "The pressure to debase never disappears in a state that needs money. The solidus is famous because, for long periods, Byzantine authorities treated its standard as something to defend. When later debasements and reforms came, they were measured against the memory of that hard gold coin.",
-      "Silver and base coins could still be adjusted for local pay. The solidus had a different job: the large, trusted settlement piece, the metal people reached for after silver’s reputation had burned in the third century.",
-      "Fractions — the semissis, the tremissis, and later related issues — let the gold standard work at more than one size of payment without abandoning the fixed weight. The full solidus stayed the reference.",
+      "What set the solidus apart from the late antoninianus was not a handsome type. It was discipline about mass and purity. A merchant or a tax official could treat the coin as a known quantity of gold — the same logic as an early mint stamp, only now the promise was a gold weight held for generations.",
+      "The pressure to debase never disappears in a state that needs money. The solidus is remembered because, for long periods, Byzantine authorities treated its standard as something to defend. When later debasements and reforms came, they were measured against the memory of that hard gold piece.",
+      "Silver and base coins could still be adjusted for local pay. The solidus had a different job: the large, trusted settlement piece people reached for after silver’s reputation had burned in the third century. Everyday markets still needed small change; large contracts and fiscal accounts needed something that did not require a fresh assay every time a bag crossed a desk.",
+      "Fractions — the semissis, the tremissis, and later related issues — let gold work at more than one size of payment without abandoning the fixed weight. The full solidus stayed the reference. A half or a third was still a slice of the same standard, not a new promise invented for convenience.",
     ],
   },
   {
     heading: "From Rome to Byzantium: the nomisma",
     paragraphs: [
       "As imperial power centered on Constantinople, the solidus continued in Greek as the nomisma, with related denominations. Western kingdoms minted their own gold at times, often imitating familiar types. The eastern empire kept the solidus alive as a working standard for Mediterranean and Near Eastern trade.",
-      "Foreigners gave good Byzantine gold names that signaled trust. The medieval “bezant” of western sources is that reputation traveling. Across changing dynasties, the coin’s weight stayed credible enough to price contracts and tribute.",
-      "Byzantine finances were not frozen; they had their own crises. But the ancient story of money ends on a coin that kept its metal, not on a bank or a note.",
+      "Foreigners gave good Byzantine gold names that signaled trust. The medieval “bezant” of western sources is that reputation traveling. Across changing dynasties, the coin’s weight stayed credible enough to price contracts and tribute. A merchant who had never seen the emperor still knew what a solidus-weight of gold looked like in the balance.",
+      "Byzantine finances were not frozen. The empire had its own crises, reforms, and later lightenings. Even so, for a long stretch the ancient monetary story ends on a coin that kept its metal — a unit that could outlast a capital because the scales, not the slogans, were what people trusted.",
       "Trade routes still needed a settlement metal strangers would accept overnight. For centuries the nomisma filled that role, because the mint’s promise stayed close to the metal in the hand — the opposite of the washed silver of the third century.",
     ],
   },
   {
-    heading: "Coin, not a receipt",
+    heading: "How long a gold standard can last",
     paragraphs: [
       "A lasting gold weight does not mean Rome never fell. The collapse of the west and the survival of the east are separate facts from the mint’s scales. A gold standard can outlast a capital, and this one outlasted Rome itself by the better part of a thousand years.",
-      "The two fail in different ways. A coin can be clipped or debased, and the cheat shows up on the scale; Rome’s washed silver had taught everyone to look. A receipt can be issued beyond the metal behind it, and nobody sees that until enough holders ask for the metal on the same day. The late empire had cheated in the first way. Later centuries would learn the second.",
-      "A solidus is a coin you hold. A receipt is a claim on a coin you are not holding. Receipts, public banks, and banknotes arrive with the merchants and deposit banks of later centuries — the story picks up in [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks).",
+      "Clipping and debasement fail on the scale; Rome’s washed silver had taught everyone to look. The solidus’s reputation rested on how often that check still matched the type. When later centuries learned to trade claims on metal kept elsewhere — warehouse receipts, deposit banks, banknotes — they were inventing a different instrument. That story belongs with the merchants and public banks of a later Europe, beginning in [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks).",
+      "A solidus is a coin you hold. Its honesty is metal and mass. That is enough for this chapter of [ancient money](/history/ancient).",
     ],
   },
   {
@@ -1487,14 +1487,14 @@ const solidus: Section[] = [
     list: [
       "**Early 4th century:** Constantine establishes the solidus as the premier gold unit, about 1/72 of a pound.",
       "**4th–5th centuries:** The gold solidus frames elite and fiscal payments while the memory of third-century silver lingers.",
-      "**Byzantine centuries:** The nomisma carries the weight tradition forward; western traders call it the bezant.",
+      "**Byzantine centuries:** The nomisma carries the weight forward; western traders call good eastern gold the bezant.",
     ],
   },
   {
-    heading: "Weight held, then the ticket",
+    heading: "Where the weight held",
     paragraphs: [
-      "Rome thinned its silver until a wash over bronze stood where a denarius had been. Constantine answered with gold, and the weight held — for longer than the western empire itself. That is where [ancient money](/history/ancient) ends: on a coin whose metal still matched its face.",
-      "What comes next in [Sound Money History](/history) is a different instrument. Merchants started trusting a piece of paper that said the gold was somewhere else — the long story of [banks and paper](/history/banks-paper).",
+      "Rome thinned its silver until a wash over bronze stood where a denarius had been. Constantine answered with gold, and the weight held — for longer than the western empire itself. That is where [ancient money](/history/ancient) leaves off: on a coin whose metal still matched its face.",
+      "Later pages of [Sound Money History](/history) follow a different instrument. Merchants began trusting paper that said the gold was somewhere else — the long arc of [banks and paper](/history/banks-paper).",
     ],
   },
 ];
@@ -3524,7 +3524,7 @@ export const ancientHubBody: Section[] = [
   {
     heading: "A gold coin that held its weight",
     paragraphs: [
-      "Constantine’s solidus, struck from the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire and carried on for centuries as the Byzantine nomisma. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) is the story of a unit that kept its weight while the state around it changed.",
+      "Constantine’s solidus, struck from the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire and carried on for centuries as the Byzantine nomisma. [Constantine’s solidus: gold that kept its weight](/history/ancient/solidus-continuity) follows that unit while the state around it changed.",
     ],
   },
   {

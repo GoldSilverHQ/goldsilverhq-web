@@ -138,7 +138,7 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
   });
 
-  it("locks solidus as weight continuity, not paper or 1971", () => {
+  it("locks solidus as a lasting gold weight, without SEO continuity framing", () => {
     const text = bodyText(getBody("ancient", "solidus-continuity")!);
     assert.match(text, /Constantine/);
     assert.match(text, /solidus/i);
@@ -148,6 +148,8 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.match(text, /\[warehouses to public banks\]\(\/history\/banks-paper\/warehouses-to-public-banks\)/);
     assert.match(text, /\[ancient money\]\(\/history\/ancient\)/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|should buy/i);
+    assert.doesNotMatch(text, /continuity, not|not paper and not 1971|Gold Weight Continuity|as the product|Coin, not a receipt|Weight held, then the ticket/i);
+    assert.doesNotMatch(text, /this article|If you arrived|does not sell metal/i);
   });
 
   it("wires SEO titleTags for the four rest episodes without new routes", () => {
@@ -155,7 +157,8 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.match(mapSrc, /titleTag:\s*"Lydia and the First Coins/);
     assert.match(mapSrc, /titleTag:\s*"Greece: Laurion Silver/);
     assert.match(mapSrc, /titleTag:\s*"Rome: Denarius, Aureus/);
-    assert.match(mapSrc, /titleTag:\s*"The Solidus: Gold Weight Continuity/);
+    assert.match(mapSrc, /titleTag:\s*"Constantine’s Solidus: Gold that Kept Its Weight"/);
+    assert.doesNotMatch(mapSrc, /Gold Weight Continuity|continuity, not paper and not 1971/);
     assert.doesNotMatch(mapSrc, /slug:\s*"ancient-[\w-]+"/);
   });
 });

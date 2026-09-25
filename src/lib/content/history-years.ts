@@ -76,9 +76,9 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "In the 310s Constantine’s mint settles on a gold solidus of tightly held weight. Silver had already been washed thin.",
     paragraphs: [
       "After silver had been washed thin in the third century, pay tables still needed a piece strangers would trust. In the 310s Constantine’s minting settled on a gold solidus of tightly held weight and fineness — roughly one seventy-second of a Roman pound.",
-      "The solidus outlasted the western empire as the Byzantine nomisma. Continuity of weight is the story, not a romance of Rome. The longer page is that gold unit.",
+      "The solidus outlasted the western empire as the Byzantine nomisma. The weight held; the romance of empire is beside the point. The longer page is that gold unit.",
     ],
-    more: { href: "/history/ancient/solidus-continuity", title: "After Rome: the solidus and early continuity" },
+    more: { href: "/history/ancient/solidus-continuity", title: "Constantine’s solidus: gold that kept its weight" },
   }),
   fromEpisode(1545, "/history/silver/potosi", {
     title: "Potosí",
