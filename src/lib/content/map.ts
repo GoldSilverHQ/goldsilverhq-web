@@ -344,11 +344,12 @@ export const historyClusters: Cluster[] = [
       },
       {
         slug: "solidus-continuity",
-        title: "After Rome: the solidus and early continuity",
-        summary: "Constantine’s gold unit kept its weight into Byzantium — continuity, not paper and not 1971.",
+        title: "Constantine’s solidus: gold that kept its weight",
+        summary:
+          "After silver had been washed thin, Constantine’s mint settled on a gold coin of fixed weight. It outlasted the western empire as Byzantium’s nomisma.",
         status: "ready",
         paragraphs: [
-          "The solidus carried gold coinage through late antiquity. Continuity of weight and fineness is the story, not a romance of empire.",
+          "In the early fourth century Constantine settled on a gold coin of tightly held weight and fineness. That solidus outlasted the western empire and lived on in Constantinople as the nomisma.",
         ],
         related: [
           { title: "Rome: denarius and aureus", href: "/history/ancient/rome-denarius-aureus" },
@@ -361,7 +362,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
-          titleTag: "The Solidus: Gold Weight Continuity after Rome",
+          titleTag: "Constantine’s Solidus: Gold that Kept Its Weight",
         },
       },
     ],
