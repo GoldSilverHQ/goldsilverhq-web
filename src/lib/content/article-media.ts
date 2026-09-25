@@ -8,9 +8,12 @@
  * (feed-card style) and never ship a tall full-bleed of the whole illustration.
  *
  * Display vs share: files stay **1200×630** for OG/X. On-page, `ArticleHeroImage`
- * shows a **5:2** band (`aspect-[5/2]`, object-cover center) —
- * analog to X Article title-image, shorter than native ~1.9:1 OG. No max-height
- * strip crop (#108). Do not invent a portrait on-page format this pass.
+ * shows a **5:2** band (aspect on the clipped wrapper; img `object-cover`
+ * fills the frame edge-to-edge) — analog to X Article title-image, shorter
+ * than native ~1.9:1 OG. No max-height strip crop (#108). No letterbox /
+ * pillarbox matte inside the rounded box — subject must fill the 5:2 crop
+ * (crop assets; do not pad into a smaller center plate). Do not invent a
+ * portrait on-page format this pass.
  *
  * Convention for later articles:
  * 1. Keep the master illustration elsewhere if needed; write the **landscape**

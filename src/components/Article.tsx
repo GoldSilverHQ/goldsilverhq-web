@@ -189,19 +189,25 @@ export function RelatedLinks({
 /**
  * Titlebild media bar — X Article–like 5:2 band under the lead.
  * Width matches the article text column (`max-w-prose`), not the full viewport.
- * Share files stay 1200×630; on-page uses aspect-ratio 5/2 + object-cover
- * (center) — no max-height strip crop. Never a tall full plate / full-bleed.
+ * Share files stay 1200×630; on-page uses a 5:2 clipped wrapper with the img
+ * absolutely covering (`object-cover`, full width/height) so no letterbox matte
+ * shows inside the rounded box. Never a tall full plate / full-bleed.
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
     <figure className="mt-5 max-w-prose sm:mt-6">
-      <div className="relative overflow-hidden rounded-xl bg-raised">
+      {/*
+        5:2 frame on the clipped wrapper (not the img alone) so the rounded box
+        is always filled. Img is absolute cover — no letterbox/pillarbox matte
+        from bg-raised showing inside the radius when the asset has edge padding.
+      */}
+      <div className="relative aspect-[5/2] w-full overflow-hidden rounded-xl bg-raised">
         <img
           src={hero.src}
           alt={hero.alt}
           width={1200}
           height={630}
-          className="aspect-[5/2] w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
           decoding="async"
           fetchPriority="high"
         />

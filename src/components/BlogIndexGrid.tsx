@@ -19,13 +19,13 @@ function BlogCard({ post }: { post: BlogPost }) {
       className="group flex h-full flex-col overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)] transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]"
     >
       {hero ? (
-        <div className="overflow-hidden bg-raised">
+        <div className="relative aspect-[5/2] w-full overflow-hidden bg-raised">
           <img
             src={hero.src}
             alt={hero.alt}
             width={1200}
             height={630}
-            className="aspect-[5/2] w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
+            className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
             loading="lazy"
             decoding="async"
           />
