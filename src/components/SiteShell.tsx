@@ -219,7 +219,7 @@ function DesktopNavFlyout({
     >
       <Link
         to={hubHref}
-        className="whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+        className="whitespace-nowrap text-nav text-muted hover:text-gold-soft"
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
@@ -266,7 +266,7 @@ function MobileNavSection({
   return (
     <div>
       <div className="flex min-h-11 items-center gap-1">
-        <Link to={hubHref} onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-fg">
+        <Link to={hubHref} onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-nav text-fg">
           {label}
         </Link>
         <button
@@ -323,7 +323,7 @@ export function SiteShell({
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="shrink-0 whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
+                  className="shrink-0 whitespace-nowrap text-nav text-muted hover:text-gold-soft"
                 >
                   {item.label}
                 </Link>
@@ -366,7 +366,7 @@ export function SiteShell({
                   key={item.href}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-11 items-center text-fg"
+                  className="flex min-h-11 items-center text-nav text-fg"
                 >
                   {item.label}
                 </Link>
