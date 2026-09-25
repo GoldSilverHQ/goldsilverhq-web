@@ -122,6 +122,14 @@ describe("article hero + separate OG", () => {
     assert.equal(probeDims(nixonOg), "1200,630");
     assert.notDeepEqual(readFileSync(nixonSrc), readFileSync(nixonOg));
     assert.match(nixon.caption ?? "", /colorized/i);
+
+    const weimar = articleHeroForPath("/history/20th-century/weimar-1923");
+    assert.ok(weimar);
+    const weimarSrc = join(root, "public", weimar.src.replace(/^\//, ""));
+    const weimarOg = join(root, "public", weimar.ogSrc.replace(/^\//, ""));
+    assert.equal(probeDims(weimarOg), "1200,630");
+    assert.notDeepEqual(readFileSync(weimarSrc), readFileSync(weimarOg));
+    assert.match(weimar.caption ?? "", /colorized/i);
   });
 
   it("lists override paths for og:cards skip", () => {
