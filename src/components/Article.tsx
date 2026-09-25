@@ -189,9 +189,9 @@ export function RelatedLinks({
 /**
  * Titlebild media bar — X Article–like 5:2 band under the lead.
  * Width matches the article text column (`max-w-prose`), not the full viewport.
- * Share files stay 1200×630; on-page uses a 5:2 clipped wrapper with the img
- * absolutely covering (`object-cover`, full width/height) so no letterbox matte
- * shows inside the rounded box. Never a tall full plate / full-bleed.
+ * Uses `hero.src` only (on-page). Share cards use `hero.ogSrc` (1200×630) via
+ * `pageShareMeta` — paths may differ; do not assume one file for both.
+ * On-page: 5:2 clipped wrapper + absolute `object-cover` fill (no letterbox matte).
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
   return (
@@ -206,7 +206,7 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
           src={hero.src}
           alt={hero.alt}
           width={1200}
-          height={630}
+          height={480}
           className="absolute inset-0 h-full w-full object-cover object-center"
           decoding="async"
           fetchPriority="high"
@@ -227,7 +227,7 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
  * Matches X Articles’ reading order on-site (text first, landscape media under).
  * Whole lead (title included) sits at prose width so it lines up with the
  * titlebild and body column — not the wider page shell.
- * On-page display is 5:2 at prose width; OG/share files stay 1200×630.
+ * On-page hero (`src`) is flexible landscape; OG/share (`ogSrc`) is separate 1200×630.
  */
 export function ArticleLead({
   kicker,

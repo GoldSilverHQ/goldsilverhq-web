@@ -1,5 +1,5 @@
 /**
- * Article titlebild (on-page hero) paired with a separate Open Graph / X card.
+ * Article titlebild (on-page hero) and Open Graph / X share image — **separate paths**.
  *
  * On-page layout (via `ArticleLead`): **title (+ teaser) first, then landscape
  * media under** — X Articles reading order. The whole lead (title, teaser,
@@ -7,22 +7,23 @@
  * not outrun the image or body. Do not put the image above the title
  * (feed-card style) and never ship a tall full-bleed of the whole illustration.
  *
- * Display vs share: **on-page hero and OG are separate files** (same motif OK,
- * different crops OK). OG/X cards are **1200×630**. On-page, `ArticleHeroImage`
- * shows a **~5:2** band by default (aspect on the clipped wrapper; img
- * `object-cover` fills the frame edge-to-edge) — shorter than native ~1.9:1 OG.
- * No max-height strip crop (#108). No letterbox / pillarbox matte inside the
- * rounded box — subject must fill the crop (do not pad into a smaller center
- * plate). Do not invent a portrait on-page format this pass.
+ * Display vs share (locked split):
+ * - **Hero (`src`)**: flexible landscape — usually ~5:2 or natural Querformat.
+ *   `ArticleHeroImage` frames at **5:2** with `object-cover` fill. Not required
+ *   to be byte-identical to OG, and not forced to 1.91:1.
+ * - **OG (`ogSrc`)**: always **~1200×630** for social/X. Separate crop/export
+ *   from the same motif when needed. Wire `pageShareMeta({ imagePath: hero.ogSrc })`.
+ * - **Default**: when only one asset exists, letterbox (or cover-crop) OG from
+ *   the hero via `npm run og:from-hero` — keep the on-page file as-is. Do not
+ *   AI-regen good photos just to split paths.
  *
  * Convention for later articles:
- * 1. Keep the master illustration elsewhere if needed; write the **landscape**
- *    titlebild JPEG under `public/images/<pillar>/...` (often ~1200×630; 5:2
- *    native also fine).
- * 2. Write a **separate** 1200×630 crop to the Phase-1 card path under
- *    `public/og/cards/` (same key as `ogImagePathForRoute(path)` — see
- *    `phase1-sitemap-paths.mjs`). Same motif; crop may differ from on-page.
- * 3. Register one entry here with matching `src` + `ogSrc`, alt, caption, credit.
+ * 1. Write the on-page landscape titlebild under `public/images/<pillar>/...`
+ *    (~5:2 or natural landscape is fine).
+ * 2. Write a **separate** 1200×630 share JPEG to `public/og/cards/<key>.jpg`
+ *    (same key as `ogImagePathForRoute(path)`). Same motif, own crop when useful.
+ *    If you only have the hero: `npm run og:from-hero -- --hero <hero> --og <card>`.
+ * 3. Register one entry here with `src` + `ogSrc` (may differ), alt, caption, credit.
  * 4. Render with `ArticleLead` + `ArticleHeroImage` (5:2 inset band at prose width).
  * 5. `npm run og:cards` skips paths listed here so branded text cards do not overwrite.
  *
@@ -33,9 +34,9 @@
 export type ArticleHero = {
   /** Route pathname (no trailing slash), e.g. `/history/america/jackson-and-the-bank`. */
   path: string;
-  /** On-page titlebild (public URL path) — landscape / OG aspect, not a tall full plate. */
+  /** On-page titlebild (public URL path) — flexible landscape (~5:2 / natural), not OG-locked. */
   src: string;
-  /** 1200×630 share JPEG (public URL path). Usually the Phase-1 `/og/cards/*.jpg` file. */
+  /** Separate 1200×630 share JPEG (public URL path). Phase-1 `/og/cards/*.jpg` key. */
   ogSrc: string;
   alt: string;
   /** Short caption under the hero (historical context). */
@@ -44,7 +45,7 @@ export type ArticleHero = {
   credit?: string;
 };
 
-/** Articles that use a photographic/illustration hero as both titlebild and OG. */
+/** Articles with a photographic/illustration titlebild; OG may be the same motif at 1200×630. */
 export const ARTICLE_HEROES: readonly ArticleHero[] = [
   {
     path: "/history/ancient/why-markets-chose-gold-silver",

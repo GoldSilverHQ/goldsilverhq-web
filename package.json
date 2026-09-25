@@ -19,7 +19,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "x-blog:observe": "node scripts/x-blog-mirror/observe.mjs",
-    "x-blog:discover": "node scripts/x-blog-mirror/discover.mjs"
+    "x-blog:discover": "node scripts/x-blog-mirror/discover.mjs",
+    "og:from-hero": "node scripts/og-from-hero.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",
