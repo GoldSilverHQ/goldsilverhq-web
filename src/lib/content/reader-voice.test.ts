@@ -147,6 +147,27 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     }
   });
 
+  it("keeps banks-paper episodes off chapter-outline and glossary-briefing voice", () => {
+    const BANKS_OUTLINE =
+      /Later machines in this chapter|not a mash of later paper disasters|The order is (?:England|Amsterdam|European)|That is why it is not an Amsterdam clone|Restriction is a wartime English fact|Three instruments sit close together|The instruments were different things|Set beside the other paper|A \*\*(?:giro balance|goldsmith note|Bank of England note|warehouse receipt|bank note|public-bank balance|Law note|assignat)\*\* is\b/i;
+    for (const slug of [
+      "warehouses-to-public-banks",
+      "bank-of-amsterdam",
+      "bank-of-england",
+      "john-law",
+      "assignats",
+    ]) {
+      const text = bodyText(getBody("banks-paper", slug)!);
+      assert.doesNotMatch(text, BANKS_OUTLINE, `banks-paper/${slug} still has outline/SEO voice`);
+      assert.doesNotMatch(text, CHAPTER_HUB_OUTLINE, `banks-paper/${slug} still has hub outline voice`);
+    }
+  });
+
+  it("keeps Silver Thursday off the information-vs-advice shuttle", () => {
+    const text = bodyText(getBody("silver", "silver-thursday")!);
+    assert.doesNotMatch(text, /information versus advice|information-not-advice/i);
+  });
+
   it("keeps the Markets hub and articles free of outline and disclaimer voice", () => {
     const MARKETS_VOICE =
       /Four captions that need a page|Four doors, four jobs|This page stays with|does not forecast|if you have just (?:read|looked|seen)|continues the story if|This is not a separate URL|Read those sentences as|Read the (?:table|Canada block) as|a private reader should follow|That is the claim|that is the stop|holds the (?:four )?(?:fact pages|topics)|None of those sentences is a path|Nothing here is a (?:reason|mean)|This page (?:only records|keeps the market quotient|does not invent)|Name the clock/i;

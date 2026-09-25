@@ -39,7 +39,7 @@ const johnLaw: Section[] = [
     paragraphs: [
       "In **1716** Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
       "Alongside the bank stood the company later known as the Mississippi Company — first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
-      "The two instruments were different. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
+      "The two instruments were different. A bank note promised to pay in coin, subject to the bank’s rules and reserves. A share was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
     ],
   },
   {
@@ -947,7 +947,7 @@ const warehouses: Section[] = [
     heading: "",
     paragraphs: [
       "In **1640**, Charles I seized merchants’ bullion stored in the Tower mint. The Crown needed cash for war. Depositors who thought a royal warehouse was safe learned that a sovereign can close a window. After the Restoration, London’s custom shifted toward goldsmiths — private keepers whose running-cash notes could be endorsed onward while the metal stayed put.",
-      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking begins when that paper pays a debt without the metal leaving the vault. A city giro, a war bank’s notes, a regency’s shares, a revolution’s land paper — each of those later machines grew from that handoff.",
+      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking begins when that paper pays a debt without the metal leaving the vault. City giro balances, war-bank notes, regency shares, and revolutionary land paper all grew from that handoff — each on its own date.",
     ],
   },
   {
@@ -973,7 +973,7 @@ const warehouses: Section[] = [
     paragraphs: [
       "What changes everything is circulation without movement of the metal. Once a third party accepts the ticket in payment, the issuer has issued money in use, even if the law still calls it a deposit receipt. The vault need not empty. The paper does the paying.",
       "As long as redemption is ordinary, the ticket remains a claim. People hold it because it is lighter than coin, not because they have given up on coin. When issue outruns what the window can pay, the same paper becomes a bet on the keeper. That is the quiet shift from warehouse to bank. It does not require a theory of fiat. It requires a queue the till cannot meet.",
-      "Three instruments sit close together here. A **warehouse receipt** is a claim on identified metal. A **bank note** is a promise to pay, often against a mixed reserve and a loan book. A **public-bank balance** is a book entry the city or the state has made hard to refuse for large settlement. The first can become the second without a revolution. The second becomes the third when settlement is pulled onto a public ledger.",
+      "The warehouse receipt still named metal in a pile. A bank note promised to pay, often against a mixed reserve and a loan book. A public-bank balance was a book entry the city or the state had made hard to refuse for large settlement. The first could become the second without a revolution. The second became the third when settlement was pulled onto a public ledger.",
     ],
   },
   {
@@ -986,7 +986,7 @@ const warehouses: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is European, not a single national ladder."],
+    paragraphs: ["Civic tables, goldsmith notes, and a war bank — on separate dates."],
     list: [
       "**1401.** Barcelona’s Taula de Canvi: an early civic deposit table.",
       "**1587.** Venice’s Banco della Piazza di Rialto, after private-bank failures.",
@@ -1000,8 +1000,8 @@ const warehouses: Section[] = [
   {
     heading: "Why the handoff matters",
     paragraphs: [
-      "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. The warehouse ticket made those later machines possible because the public had already learned to pay with paper claims.",
-      "Each of those failures kept its own date. [John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The assignats ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization. The mechanisms rhyme. The regimes, the promises, and the centuries do not.",
+      "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. Those steps were possible because the public had already learned to pay with paper claims.",
+      "[John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The assignats ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization. The mechanisms rhyme. The regimes, the promises, and the centuries do not.",
       "All of them rested on the habit the goldsmiths taught London: a slip of paper could settle a debt while the metal stayed where it was. The ticket stayed good exactly as long as the window paid.",
     ],
   },
@@ -1026,7 +1026,7 @@ const amsterdam: Section[] = [
     heading: "How giro money settles",
     paragraphs: [
       "Giro is settlement by transfer of a balance. The depositor does not collect coin and cart it across the Dam. He orders the bank to debit his account and credit another. The metal stays. The books move. For a bill falling due, that is payment.",
-      "The instruments were different things. A **warehouse receipt** is a claim on identified metal. A **giro balance** is a book credit at a public table, transferable to another account-holder. A **bank note** is a circulating promise to pay, typically issued by a later corporation with a loan book. Amsterdam’s ordinary machine is the second. It does not need a printed note walking the street. It needs a merchant with an account, or a cashier who has one, and a rule that large bills clear on those books.",
+      "A warehouse receipt still named metal in a pile. A giro balance was a book credit at a public table, transferable to another account-holder. A circulating bank note — a promise to pay against a loan book — belonged to later corporations. Amsterdam’s ordinary machine was the giro. It did not need a printed note walking the street. It needed a merchant with an account, or a cashier who had one, and a rule that large bills clear on those books.",
       "Convertibility still mattered. Coin could be withdrawn, subject to fees and to the bank’s rules. Fees made leaving the metal in, and paying on the books, the cheaper habit. As long as the window was ordinary, the florin banco was a convenient claim on a civic vault.",
       "From **1683** the bank issued receipts for coin left on deposit. The receipt was a claim on those coins. The bank balance was a transferable credit in banco. To take the original metal out, a holder needed the receipt. To pay a bill, he needed only the balance. The two claims could be sold apart. That split made bank money a settlement unit even when a given bag of coin stayed put. It was still not a circulating note. It was a more complete giro.",
     ],
@@ -1050,7 +1050,7 @@ const amsterdam: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is Amsterdam’s, not a mash of later paper disasters."],
+    paragraphs: ["From the 1609 ordinance to liquidation."],
     list: [
       "**31 January 1609.** City ordinance: the Wisselbank takes in coin and credits bank money.",
       "**Seventeenth century.** Large bills on Amsterdam settle by giro; banco stands at an agio over worn current coin.",
@@ -1064,7 +1064,7 @@ const amsterdam: Section[] = [
   {
     heading: "One book the market had to use",
     paragraphs: [
-      "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Later machines in this chapter do not copy Amsterdam. They use the habit it taught: book or paper money as settlement, with metal in the background until it is not.",
+      "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Amsterdam taught the habit: book or paper money as settlement, with metal in the background until it is not.",
       "London built a different machine. The [Bank of England](/history/banks-paper/bank-of-england), chartered in **1694**, was war finance with a note issue attached, not a city giro table. It was built for a crown’s borrowing, not for a city’s bill market.",
       "For most of two centuries the florin banco was quoted above the coin it claimed. When the city’s loans became known, the premium went to a discount, and the table that had settled the bill market of Europe never recovered its place.",
     ],
@@ -1084,7 +1084,7 @@ const england: Section[] = [
     paragraphs: [
       "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Its concealed lending, and the collapse of the agio, came much later.",
       "London in the 1690s had a different problem. William III was at war with Louis XIV. The Crown needed a large loan at once. Goldsmith running-cash notes already circulated; the Stop of the Exchequer in **1672** had shown that a sovereign can close a window. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass.",
-      "The paper came in kinds. A **giro balance** is a book credit at a public table. A **goldsmith note** is a private claim on metal left with a keeper. A **Bank of England note** is a circulating promise to pay, issued by a chartered corporation that has already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine is war finance with that habit attached.",
+      "Amsterdam settled by giro — a book credit at a public table. London already had goldsmith notes: private claims on metal left with a keeper. The Bank’s note was something else again: a circulating promise to pay, issued by a chartered corporation that had already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine put that habit on a war loan.",
     ],
   },
   {
@@ -1092,7 +1092,7 @@ const england: Section[] = [
     paragraphs: [
       "Parliament needed money for the Nine Years’ War. The scheme that became the Bank offered a subscription: about **£1.2 million** lent to the government, at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England. The corporation could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
       "William Paterson and others had argued for such a bank. The political fact is the charter: a private company received a public privilege because the fiscal need was urgent. The notes were the Bank’s own paper, accepted because the window paid and because London learned to treat that paper as cash.",
-      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start. That is why it is not an Amsterdam clone.",
+      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start — a war lender with a note issue, not a city table for mixed coin.",
     ],
   },
   {
@@ -1107,21 +1107,21 @@ const england: Section[] = [
     heading: "Restriction, 1797",
     paragraphs: [
       "War with revolutionary France strained the gold stock. Coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes. The Bank Restriction Act of **1797** made that suspension statute. The notes stayed in circulation. The window did not.",
-      "Restriction is a wartime English fact. The pound kept its name. The public could no longer test the name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
-      "Restriction was an English bank closing the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
+      "The pound kept its name. The public could no longer test that name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
+      "The Bank had closed the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
     ],
   },
   {
     heading: "Resumption in the 1820s",
     paragraphs: [
       "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**, two years ahead of the Act’s final date.",
-      "The cycle was England’s own: suspend for war, keep the notes in use, resume later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
+      "England suspended for war, kept the notes in use, and resumed later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
       "Resumption did not make the Bank a warehouse. The loan book and the note issue remained. What returned was the ordinary test at the window.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is England’s, not a mash of later paper disasters."],
+    paragraphs: ["From the Exchequer stop to cash payments again."],
     list: [
       "**1672.** Stop of the Exchequer; private paper that funded the Crown meets a closed sovereign window.",
       "**1694.** Bank of England charter: about £1.2 million as a war loan, with a note issue attached.",
@@ -1135,7 +1135,7 @@ const england: Section[] = [
   {
     heading: "War finance with a note attached",
     paragraphs: [
-      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. Later machines in this chapter do not copy London. They use the habit it taught: a great state’s daily money can be a bank’s paper.",
+      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. England showed that a great state’s daily money can be a bank’s paper — and that the paper can lose its metal window, then get it back.",
       "France tried two other answers in the same century. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**. The revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
     ],
   },
@@ -1153,7 +1153,7 @@ const assignats: Section[] = [
     heading: "What an assignat was",
     paragraphs: [
       "The National Assembly inherited a broken treasury. In **November 1789** it placed church property at the disposal of the nation. That stock — later enlarged by émigré estates — became the biens nationaux. The first assignats, decreed in **December 1789**, were large, interest-bearing paper: more a state claim to be paid from land sales than a daily note.",
-      "Set beside the other paper of the century, the difference is plain. A **warehouse receipt** is a claim on identified metal at a window. A **Bank of England note** is a circulating promise to pay coin, subject to the Bank’s rules. A **Law note** was a bank promise fused with a rising company share. An **assignat** was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
+      "A warehouse receipt still named metal at a window. A [Bank of England](/history/banks-paper/bank-of-england) note was a circulating promise to pay coin, subject to the Bank’s rules. A [Law](/history/banks-paper/john-law) note had been a bank promise fused with a rising company share. An assignat was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
       "The land story was the political sale. Metal was scarce in the till. Land was visible. If the paper was a claim on that land, the argument ran, it could not become worthless. Land can be real and still fail as a stop if issue is not retired and no window pays a fixed thing.",
     ],
   },
@@ -1934,7 +1934,7 @@ const silverThursday: Section[] = [
     heading: "A squeeze, a rule book, a dated break",
     paragraphs: [
       "What the record holds is a concentrated long, a set of new margin and position rules at COMEX, a January peak, and a break on **27 March 1980**. Silver was already an industrial metal by then; that side of its story is [monetary history and industry](/history/silver/monetary-and-industry).",
-      "Silver Thursday gets retold as a trading lesson. The record itself is information: who held what, which rules changed, and on which day the price broke. What anyone should do with silver today is a different question — the one [information versus advice](/sound-money/information-not-advice) is about.",
+      "Silver Thursday gets retold as a trading lesson. The record itself is quieter: who held what, which rules changed, and on which day the price broke. January’s peak and March’s unwind are still the dated pair that later markets remember.",
     ],
   },
 ];
@@ -2442,14 +2442,14 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "Divide the price of an ounce of gold by the price of an ounce of silver and you get the gold–silver ratio: how many ounces of silver buy one ounce of gold on that day. In September **2026** it stood near **68**. In January **1980** it briefly touched about **17**; in late April **2011**, about **31.5**. The ratio moves because both prices move, and it means exactly what the two prices meant on the day they were taken — no more.",
-      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
+      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. All three are below, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
     ],
   },
   {
     heading: "What the ratio measures",
     paragraphs: [
       "Call gold G and silver S, both in the same currency per troy ounce. The ratio is G ÷ S. If gold is $2,000 and silver is $25, the ratio is 80: eighty ounces of silver have the same dollar value as one ounce of gold at that pair of prices. Change either price and the ratio changes. There is no hidden third input.",
-      "The two prices must be taken at the same time. A London gold afternoon fix set against a COMEX silver future from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from matching live prices. This page uses **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s figure.",
+      "The two prices must be taken at the same time. A London gold afternoon fix set against a COMEX silver future from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from matching live prices. The figures below use **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s figure.",
       "Governments once wrote a ratio into law as well: the **mint ratio**, a legal number of silver units per gold unit. The Coinage Act of 1792 used 15 to 1; later statutes used 16 to 1. When the legal ratio and the market ratio drifted apart, the metal the law overvalued stayed in coin and the other tended to disappear from circulation — the old bimetallic problem, told under [bimetallism](/history/silver/bimetallism).",
     ],
   },
@@ -2840,7 +2840,7 @@ const china1934SilverAppeal: Section[] = [
     heading: "Close",
     paragraphs: [
       "On this day in **1934**, a silver country asked a gold-and-silver buyer to stop pulling the metal out from under its currency — and floated gold in return. Washington kept buying under statute. China, within a year, left the exclusive silver standard behind.",
-      "None of that tells a reader what to hold. It is a dated account of what China asked, what Hull declined, and what the National Government changed the following year.",
+      "It is a dated account of what China asked, what Hull declined, and what the National Government changed the following year.",
       "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103038843947466754).",
     ],
   },
@@ -2909,7 +2909,7 @@ const exchangesChangeSilverRules: Section[] = [
     paragraphs: [
       "When exchanges change the silver rules, they are not editing geology. They are editing the claim. The metal still answers to chemistry. The screen answers to the rule book — and in January **1980** the rule book moved first.",
       "COMEX switched silver futures to liquidation-only trading. The Chicago Board of Trade adopted a similar restriction. Earlier that month, position limits and higher margins had already tightened the same market. The printed price, which had reached the high forties, reversed after the curb. In March the unwind climaxed on Silver Thursday, **27 March 1980**.",
-      "None of that tells a reader what to hold. It is a dated description of how a quote can outlive the permission that gave it its meaning.",
+      "It is a dated description of how a quote can outlive the permission that gave it its meaning.",
       "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103033593492537345).",
     ],
   },
@@ -2922,7 +2922,7 @@ const ltcm1998Consortium: Section[] = [
     paragraphs: [
       "By late September **1998**, Long-Term Capital Management was no longer a quiet hedge fund with Nobel names on the letterhead. It was a leveraged portfolio markets could not ignore. Russia’s August devaluation and debt moratorium had blown out credit spreads worldwide. Positions meant to diversify moved together. Losses stacked.",
       "And on **23 September**, after meetings at the Federal Reserve Bank of New York, fourteen banks and brokerage firms agreed to put about **$3.6 billion** of their own capital into the fund — private money, Fed facilitation, no public check.",
-      "That sentence is the whole public claim of the evening. Everything else — bailout or fire drill, prudence or precedent — is argument built on those facts. This note stays with the sequence: how the book was built, how August broke it, who sat in the room, and what the New York Fed did and did not do.",
+      "That sentence is the whole public claim of the evening. Everything else — bailout or fire drill, prudence or precedent — is argument built on those facts. What follows is the sequence: how the book was built, how August broke it, who sat in the room, and what the New York Fed did and did not do.",
     ],
   },
   {
@@ -2963,7 +2963,7 @@ const ltcm1998Consortium: Section[] = [
     paragraphs: [
       "American financial history already knew a version of the locked room. In the [Panic of 1907](/history/20th-century/panic-1907-fed), J.P. Morgan and other bankers decided who still had a till when trust companies ran and the Clearing House window was not open to everyone. Congress later turned that improvisation into a permanent statute — the Federal Reserve.",
       "**1998** is not **1907**. LTCM was a hedge fund, not a Fifth Avenue trust company. The New York Fed already existed. Gold was not the settlement backstop it had been in Morgan’s New York. The rhyme is institutional, not identical: when markets seize, someone gathers creditors, ranks who can still be saved, and decides whether the close will be orderly or simultaneous.",
-      "In **1907** the gatherer was a private house acting as a last window. In **1998** the gatherer was a regional Fed bank that refused to write the cheque and still set the table. Readers who want the earlier sequence can open that History page. This note stays with LTCM’s September.",
+      "In **1907** the gatherer was a private house acting as a last window. In **1998** the gatherer was a regional Fed bank that refused to write the cheque and still set the table.",
     ],
   },
   {

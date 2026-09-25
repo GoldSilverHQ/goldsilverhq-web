@@ -310,8 +310,8 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     assert.match(text, /Hunt/);
     assert.match(text, /\$49\.45|\$50/);
     assert.match(text, /COMEX|margin/i);
-    assert.match(text, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
     assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.doesNotMatch(text, /information versus advice|information-not-advice/i);
     assert.doesNotMatch(text, /should buy|price target to/i);
   });
 

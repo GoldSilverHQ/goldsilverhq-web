@@ -132,7 +132,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.equal(body, null);
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     assert.match(mapSrc, /slug:\s*"information-not-advice"/);
-    assert.match(mapSrc, /BaFin/);
-    assert.match(mapSrc, /German\/EU rules \(BaFin\)/);
+    assert.match(mapSrc, /Nothing here is investment advice/);
+    assert.doesNotMatch(mapSrc, /BaFin/);
   });
 });
