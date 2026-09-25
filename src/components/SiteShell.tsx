@@ -3,15 +3,28 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
 import { HISTORY_NAV_MENU } from "@/lib/content/history-subnav";
+import { MARKETS_NAV_MENU } from "@/lib/content/markets-subnav";
+import { SOUND_MONEY_NAV_MENU } from "@/lib/content/sound-money-subnav";
 
-const NAV = [
+type NavMenuItem = {
+  label: string;
+  href: string;
+  cluster?: string;
+};
+
+const NAV: {
+  href: string;
+  label: string;
+  menu?: readonly NavMenuItem[];
+}[] = [
   { href: "/desk", label: "Desk" },
-  { href: "/sound-money", label: "Sound Money" },
-  { href: "/history", label: "History", hasHistoryMenu: true },
-  { href: "/markets", label: "Markets" },
+  { href: "/sound-money", label: "Sound Money", menu: SOUND_MONEY_NAV_MENU },
+  { href: "/history", label: "History", menu: HISTORY_NAV_MENU },
+  { href: "/markets", label: "Markets", menu: MARKETS_NAV_MENU },
   { href: "/blog", label: "Blog" },
   { href: "/gold-silver", label: "In Practice" },
-] as const;
+];
+
 
 const SOCIALS = [
   { href: "https://x.com/GoldSilverHQ", label: "X", name: "GoldSilverHQ on X" },
@@ -121,12 +134,12 @@ function Brand() {
   );
 }
 
-function HistoryMenuLink({
+function NavMenuLink({
   item,
   className,
   onNavigate,
 }: {
-  item: (typeof HISTORY_NAV_MENU)[number];
+  item: NavMenuItem;
   className: string;
   onNavigate?: () => void;
 }) {
@@ -149,7 +162,15 @@ function HistoryMenuLink({
   );
 }
 
-function HistoryDesktopMenu() {
+function DesktopNavFlyout({
+  label,
+  hubHref,
+  items,
+}: {
+  label: string;
+  hubHref: string;
+  items: readonly NavMenuItem[];
+}) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
@@ -197,24 +218,24 @@ function HistoryDesktopMenu() {
       }}
     >
       <Link
-        to="/history"
+        to={hubHref}
         className="whitespace-nowrap text-[0.875rem] text-muted hover:text-gold-soft"
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
       >
-        History
+        {label}
       </Link>
       {open ? (
         <div
           id={menuId}
           role="menu"
-          aria-label="History"
+          aria-label={label}
           className="absolute top-full left-0 z-50 mt-0 min-w-[14rem] pt-2"
         >
           <div className="rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]">
-            {HISTORY_NAV_MENU.map((item) => (
-              <HistoryMenuLink
+            {items.map((item) => (
+              <NavMenuLink
                 key={item.href}
                 item={item}
                 onNavigate={() => setOpen(false)}
@@ -228,22 +249,32 @@ function HistoryDesktopMenu() {
   );
 }
 
-function HistoryMobileSection({ onNavigate }: { onNavigate: () => void }) {
+function MobileNavSection({
+  label,
+  hubHref,
+  items,
+  onNavigate,
+}: {
+  label: string;
+  hubHref: string;
+  items: readonly NavMenuItem[];
+  onNavigate: () => void;
+}) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
 
   return (
     <div>
       <div className="flex min-h-11 items-center gap-1">
-        <Link to="/history" onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-fg">
-          History
+        <Link to={hubHref} onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-fg">
+          {label}
         </Link>
         <button
           type="button"
           className="grid size-11 place-items-center text-muted hover:text-gold-soft"
           aria-expanded={open}
           aria-controls={panelId}
-          aria-label={open ? "Hide History sections" : "Show History sections"}
+          aria-label={open ? `Hide ${label} sections` : `Show ${label} sections`}
           onClick={() => setOpen((value) => !value)}
         >
           <ChevronDown className={`size-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
@@ -251,14 +282,16 @@ function HistoryMobileSection({ onNavigate }: { onNavigate: () => void }) {
       </div>
       {open ? (
         <div id={panelId} className="mb-1 ml-3 flex flex-col border-l border-line pl-3">
-          {HISTORY_NAV_MENU.filter((item) => item.href !== "/history").map((item) => (
-            <HistoryMenuLink
-              key={item.href}
-              item={item}
-              onNavigate={onNavigate}
-              className="flex min-h-11 items-center text-sm text-muted hover:text-gold-soft"
-            />
-          ))}
+          {items
+            .filter((item) => item.href !== hubHref)
+            .map((item) => (
+              <NavMenuLink
+                key={item.href}
+                item={item}
+                onNavigate={onNavigate}
+                className="flex min-h-11 items-center text-sm text-muted hover:text-gold-soft"
+              />
+            ))}
         </div>
       ) : null}
     </div>
@@ -284,8 +317,8 @@ export function SiteShell({
           </Link>
           <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-4 whitespace-nowrap xl:flex xl:pl-2">
             {NAV.map((item) =>
-              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
-                <HistoryDesktopMenu key={item.href} />
+              item.menu ? (
+                <DesktopNavFlyout key={item.href} label={item.label} hubHref={item.href} items={item.menu} />
               ) : (
                 <Link
                   key={item.href}
@@ -320,8 +353,14 @@ export function SiteShell({
         {open ? (
           <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 xl:hidden">
             {NAV.map((item) =>
-              "hasHistoryMenu" in item && item.hasHistoryMenu ? (
-                <HistoryMobileSection key={item.href} onNavigate={() => setOpen(false)} />
+              item.menu ? (
+                <MobileNavSection
+                  key={item.href}
+                  label={item.label}
+                  hubHref={item.href}
+                  items={item.menu}
+                  onNavigate={() => setOpen(false)}
+                />
               ) : (
                 <Link
                   key={item.href}
