@@ -19,6 +19,8 @@
   --color-line-gold: color-mix(in oklab, #c9a227 38%, transparent);
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  /* Primary header nav links / flyout triggers / mobile panel labels (~5% over prior 0.875rem). */
+  --text-nav: calc(0.875rem * 1.05);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
