@@ -202,9 +202,11 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/20th-century/1933-gold-recall",
     src: "/images/history/20th-century/1933-gold-recall.jpg",
     ogSrc: "/og/cards/history-20th-century-1933-gold-recall.jpg",
-    alt: "San Francisco Mint workmen standing among gold ingots and molds in the basement casting area.",
-    caption: "Gold ingots at the San Francisco Mint — official gold stock in the era of U.S. gold recall.",
-    credit: "Public domain — U.S. government photograph (NARA 296561).",
+    alt: "Colorized 1935 photograph of a San Francisco Mint vault stacked high with gold bars; wooden sawhorses and a plank in the foreground.",
+    caption:
+      "Gold bars in a San Francisco Mint vault (1935) — official stock after the U.S. gold recall; colorized.",
+    credit:
+      "Colorized from public-domain original — U.S. government photograph (NARA 296609).",
   },
   {
     path: "/history/20th-century/bretton-woods-nixon-1971",
