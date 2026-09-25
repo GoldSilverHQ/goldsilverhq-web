@@ -109,9 +109,11 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/banks-paper/bank-of-england",
     src: "/images/history/banks-paper/bank-of-england.jpg",
     ogSrc: "/og/cards/history-banks-paper-bank-of-england.jpg",
-    alt: "Historical print showing the Bank of England building in London.",
-    caption: "Historical view of the Bank of England, London (print).",
-    credit: "CC0 — Rijksmuseum (RP-P-2010-229).",
+    alt: "Colorized historical print showing the Bank of England building in London.",
+    caption:
+      "A view of the Bank of England, London — colorized from a public-domain print.",
+    credit:
+      "Colorized from public-domain original. CC0 — Rijksmuseum (RP-P-2010-229).",
   },
   {
     path: "/history/banks-paper/john-law",
