@@ -1934,7 +1934,7 @@ const silverThursday: Section[] = [
     heading: "A squeeze, a rule book, a dated break",
     paragraphs: [
       "What the record holds is a concentrated long, a set of new margin and position rules at COMEX, a January peak, and a break on **27 March 1980**. Silver was already an industrial metal by then; that side of its story is [monetary history and industry](/history/silver/monetary-and-industry).",
-      "Silver Thursday gets retold as a trading lesson. The record itself is quieter: who held what, which rules changed, and on which day the price broke.",
+      "Silver Thursday gets retold as a trading lesson. The record itself is quieter: who held what, which rules changed, and on which day the price broke. January’s peak and March’s unwind are still the dated pair that later markets remember.",
     ],
   },
 ];
