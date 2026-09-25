@@ -39,8 +39,19 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 5);
-    assert.equal(listBlogPosts().length, 5);
+    assert.equal(blogPosts.length, 6);
+    assert.equal(listBlogPosts().length, 6);
+    const china = getBlogPost("china-1934-silver-appeal");
+    assert.ok(china);
+    assert.equal(china.title, "The Day China Asked America to Stop Buying Silver");
+    assert.deepEqual(china.tags, ["History", "Metals"]);
+    assert.equal(china.date, "2026-09-24");
+    assert.equal(china.sourceXId, "2103038843947466754");
+    assert.match(china.xArticleUrl ?? "", /x\.com\/i\/article\/2103038843947466754/);
+    assert.ok(
+      china.summary.length >= 140 && china.summary.length <= 160,
+      `summary length ${china.summary.length}`,
+    );
     const rules = getBlogPost("when-exchanges-change-the-silver-rules");
     assert.ok(rules);
     assert.equal(rules.title, "When Exchanges Change the Silver Rules");
@@ -67,6 +78,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/china-1934-silver-appeal",
         "/blog/when-exchanges-change-the-silver-rules",
         "/blog/ltcm-1998-consortium",
         "/blog/newton-1717-guinea",
@@ -79,8 +91,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 4);
-    assert.equal(listBlogPostsByTag("Metals").length, 2);
+    assert.equal(listBlogPostsByTag("History").length, 5);
+    assert.equal(listBlogPostsByTag("Metals").length, 3);
     assert.equal(listBlogPostsByTag("Markets").length, 3);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
@@ -94,6 +106,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "china-1934-silver-appeal",
       "when-exchanges-change-the-silver-rules",
       "newton-1717-guinea",
       "ltcm-1998-consortium",
@@ -120,6 +133,26 @@ describe("blog section", () => {
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
+  });
+
+  it("interlinks the 1934 China note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "china-1934-silver-appeal")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.match(text, /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 2);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2103038843947466754/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("china-1934-silver-appeal");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks the 1980 rules note lightly and credits the X Article once", () => {

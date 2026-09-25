@@ -1,9 +1,20 @@
 {
-  "updatedAt": "2026-09-24T18:30:00.000Z",
+  "updatedAt": "2026-09-25T10:24:38.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2103038843947466754",
+      "postId": "2103229128572801122",
+      "title": "The Day China Asked America to Stop Buying Silver",
+      "status": "mirrored",
+      "slug": "china-1934-silver-appeal",
+      "sitePath": "/blog/china-1934-silver-appeal",
+      "xArticleUrl": "https://x.com/i/article/2103038843947466754",
+      "publishedAt": "2026-09-24T21:04:35.000Z",
+      "mirroredAt": "2026-09-25T10:24:38.000Z"
+    },
     {
       "articleId": "2103033593492537345",
       "postId": "2103171852608962740",
