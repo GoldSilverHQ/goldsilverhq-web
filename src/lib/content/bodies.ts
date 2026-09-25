@@ -2182,6 +2182,32 @@ const officialGoldBookValue: Section[] = [
       "How $35 and then $42.22 became law, and why convertibility ended, is told in [Sound Money History](/history), starting from the 1971 episode linked above.",
     ],
   },
+  {
+    heading: "What the official gold stock is worth next to the federal debt",
+    paragraphs: [
+      "The latest Status Report of U.S. Government Gold Reserve is the FiscalData table of U.S. Treasury-owned gold dated **31 August 2026**. Its facility lines add to **261,498,926.241** fine troy ounces, the stock described above as about **261.5 million** ounces. The report books that gold at **$11,041,059,957.90**, about **$11.041 billion** — the statutory **$42.2222** per fine troy ounce, carried on the same metal. The LBMA Gold Price PM on **24 September 2026** was **$4,266.40**. Those ounces times that afternoon London price come to **$1,115,659,018,914.60**, about **$1.116 trillion**.",
+      "On **23 September 2026**, FiscalData’s Debt to the Penny put total public debt outstanding at **$40,073,558,531,201.68**. The market value is **2.784 percent** of that debt. The book value, set beside it, is **0.028 percent**. The ounces do not change between the two shares; the price used to count them does. In tonnes, that U.S. stock is the largest official holding ranked on [central-bank gold reserves](/markets/central-bank-gold-reserves). The other current metal figures are collected under [markets](/markets).",
+      "The same debt and the same ounces can be turned around into a gold price. Debt multiplied by a share, then divided by **261,498,926.241**, is the price per fine troy ounce at which this stock equals that share of the **23 September 2026** debt. The table is that arithmetic. Each row holds the debt and the ounces fixed and changes only the share.",
+    ],
+    table: {
+      caption:
+        "Gold price at which the 31 August 2026 official stock equals a share of total public debt outstanding on 23 September 2026. Price = debt × share ÷ 261,498,926.241 fine troy ounces, rounded to the cent.",
+      headers: ["Share of the debt", "Gold price per ounce"],
+      rows: [
+        ["**10%**", "**$15,324.56**"],
+        ["**20%**", "**$30,649.12**"],
+        ["**50%**", "**$76,622.80**"],
+        ["**100%**", "**$153,245.59**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Total public debt outstanding changes on business days, and the government’s gold is not earmarked to repay it. The rows compare the size of the stock with the size of the debt on the dates above.",
+      "Sources: [Debt to the Penny](https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny), **23 September 2026**; [U.S. Treasury-owned gold](https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold) (Status Report of U.S. Government Gold Reserve), **August 2026**; LBMA Gold Price PM, **24 September 2026**.",
+    ],
+  },
 ];
 
 const centralBankGoldReserves: Section[] = [
