@@ -300,8 +300,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/markets/official-gold-book-value",
     src: "/images/markets/official-gold-book-value.jpg",
     ogSrc: "/og/cards/markets-official-gold-book-value.jpg",
-    alt: "Face of a 1900 United States ten-thousand-dollar gold certificate.",
-    caption: "Series 1900 $10,000 gold certificate — official gold dollars on paper, ancestor of today’s book rate.",
+    alt: "Detail of a 1917 Federal Reserve Board gold certificate: Payable in GOLD, Washington issue.",
+    caption: "Federal Reserve Board gold certificate (Jan. 4, 1917) — official gold dollars named on paper, ancestor of today’s book rate.",
     credit: "Public domain (U.S. government currency design).",
   },
   {
