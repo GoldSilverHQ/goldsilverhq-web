@@ -24,7 +24,7 @@ function BlogCard({ post }: { post: BlogPost }) {
             src={hero.src}
             alt={hero.alt}
             width={1200}
-            height={630}
+            height={480}
             className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
             loading="lazy"
             decoding="async"

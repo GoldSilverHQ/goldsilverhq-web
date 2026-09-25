@@ -8,8 +8,10 @@
  *     --slug ltcm-1998-consortium
  *
  * Writes:
- *   public/images/blog/<slug>.jpg
- *   public/og/cards/blog-<slug>.jpg  (letterboxed 1200×630 via ffmpeg when available)
+ *   public/images/blog/<slug>.jpg          — on-page hero (natural download; flexible landscape)
+ *   public/og/cards/blog-<slug>.jpg        — separate 1200×630 OG/X card (letterboxed from hero)
+ *
+ * Hero and OG are intentionally separate. Do not overwrite the hero with the OG crop.
  */
 
 import { mkdirSync, copyFileSync, existsSync } from "node:fs";
@@ -80,9 +82,8 @@ const ff = spawnSync(
 if (ff.status !== 0 || !existsSync(ogPath)) {
   console.warn("ffmpeg letterbox failed; copying raw download as OG.");
   copyFileSync(heroPath, ogPath);
-} else {
-  // Site convention: titlebild bytes === OG bytes (both 1200×630). On-page CSS crops 5:2.
-  copyFileSync(ogPath, heroPath);
 }
+// Keep on-page hero as the natural download (flexible landscape / ~5:2).
+// OG is a separate 1200×630 letterbox — do not force the hero to 1.91:1.
 
-console.log(JSON.stringify({ heroPath, ogPath, url, slug }, null, 2));
+console.log(JSON.stringify({ heroPath, ogPath, url, slug, split: true }, null, 2));

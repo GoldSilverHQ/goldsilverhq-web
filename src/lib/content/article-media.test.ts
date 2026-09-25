@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { existsSync, statSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import {
@@ -30,8 +30,26 @@ const IDEA_MARKETS_ARTICLE_PATHS = [
   "/markets/physical-silver-demand-by-country",
 ] as const;
 
-describe("article hero = OG pattern", () => {
-  it("registers Jackson with matching files and share meta", () => {
+function probeDims(file: string): string {
+  return execFileSync(
+    "ffprobe",
+    [
+      "-v",
+      "error",
+      "-select_streams",
+      "v:0",
+      "-show_entries",
+      "stream=width,height",
+      "-of",
+      "csv=p=0",
+      file,
+    ],
+    { encoding: "utf8" },
+  ).trim();
+}
+
+describe("article hero + separate OG", () => {
+  it("registers Jackson with share meta from ogSrc (not hero src)", () => {
     const hero = articleHeroForPath("/history/america/jackson-and-the-bank");
     assert.ok(hero);
     assert.equal(hero.ogSrc, ogImagePathForRoute(hero.path));
@@ -66,52 +84,44 @@ describe("article hero = OG pattern", () => {
     }
   });
 
-  it("ships landscape titlebild + 1200×630 OG (same motif OK; crops may differ)", () => {
-    // On-page hero and OG are separate assets (locked preference). Sibling may
-    // relax on-page dims further; keep both files present and OG at social size.
+  it("ships OG at 1200×630; hero may be flexible landscape (not byte-locked to OG)", () => {
     for (const hero of ARTICLE_HEROES) {
       assert.equal(hero.ogSrc, ogImagePathForRoute(hero.path), hero.path);
       const srcFile = join(root, "public", hero.src.replace(/^\//, ""));
       const ogFile = join(root, "public", hero.ogSrc.replace(/^\//, ""));
+      assert.ok(existsSync(srcFile), srcFile);
+      assert.ok(existsSync(ogFile), ogFile);
+
       for (const file of [srcFile, ogFile]) {
         const size = statSync(file).size;
         assert.ok(size > 20_000 && size <= 600 * 1024, `${file} size ${size}`);
       }
-      const ogProbe = execFileSync(
-        "ffprobe",
-        [
-          "-v",
-          "error",
-          "-select_streams",
-          "v:0",
-          "-show_entries",
-          "stream=width,height",
-          "-of",
-          "csv=p=0",
-          ogFile,
-        ],
-        { encoding: "utf8" },
-      ).trim();
-      assert.equal(ogProbe, "1200,630", `${ogFile} dims ${ogProbe}`);
-      const srcProbe = execFileSync(
-        "ffprobe",
-        [
-          "-v",
-          "error",
-          "-select_streams",
-          "v:0",
-          "-show_entries",
-          "stream=width,height",
-          "-of",
-          "csv=p=0",
-          srcFile,
-        ],
-        { encoding: "utf8" },
-      ).trim();
-      const [sw, sh] = srcProbe.split(",").map(Number);
-      assert.ok(sw >= 800 && sh >= 400, `${srcFile} dims ${srcProbe}`);
-      assert.ok(sw / sh >= 1.4, `${srcFile} should be landscape (${srcProbe})`);
+
+      assert.equal(probeDims(ogFile), "1200,630", `${ogFile} must be 1200×630`);
+
+      const [hw, hh] = probeDims(srcFile).split(",").map(Number);
+      assert.ok(hw >= 800 && hh >= 320, `${srcFile} dims ${hw}×${hh} too small`);
+      // Landscape / Querformat — not portrait; on-page CSS crops to 5:2.
+      assert.ok(hw / hh >= 1.4, `${srcFile} must be landscape (got ${hw}×${hh})`);
     }
+  });
+
+  it("allows hero and OG to differ (Potosi: native 5:2; Nixon: separate OG crop)", () => {
+    const potosi = articleHeroForPath("/history/silver/potosi");
+    assert.ok(potosi);
+    const potosiSrc = join(root, "public", potosi.src.replace(/^\//, ""));
+    const potosiOg = join(root, "public", potosi.ogSrc.replace(/^\//, ""));
+    assert.equal(probeDims(potosiSrc), "1200,480");
+    assert.equal(probeDims(potosiOg), "1200,630");
+    assert.notDeepEqual(readFileSync(potosiSrc), readFileSync(potosiOg));
+
+    const nixon = articleHeroForPath("/history/20th-century/bretton-woods-nixon-1971");
+    assert.ok(nixon);
+    const nixonSrc = join(root, "public", nixon.src.replace(/^\//, ""));
+    const nixonOg = join(root, "public", nixon.ogSrc.replace(/^\//, ""));
+    assert.equal(probeDims(nixonOg), "1200,630");
+    assert.notDeepEqual(readFileSync(nixonSrc), readFileSync(nixonOg));
+    assert.match(nixon.caption ?? "", /colorized/i);
   });
 
   it("lists override paths for og:cards skip", () => {

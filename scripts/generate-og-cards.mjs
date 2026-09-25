@@ -217,7 +217,7 @@ async function main() {
   const logoHref = pathToFileURL(logoTmp).href;
 
   const only = process.argv.slice(2).filter((arg) => arg.startsWith("/"));
-  // Custom article heroes (illustration = OG) must not be overwritten by branded text cards.
+  // Custom article OG overrides (registered heroes) must not be overwritten by branded text cards.
   const heroOverrides = new Set(articleHeroOgOverridePaths());
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);
