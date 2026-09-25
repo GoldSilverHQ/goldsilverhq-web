@@ -2270,6 +2270,35 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
+    heading: "Where the U.S. official gold sits",
+    paragraphs: [
+      "The bars described above can sit in New York, London, or Paris and still belong to the country that reports them. The United States also publishes an address list for the gold on its own books. That list is the Treasury’s Status Report of U.S. Government Gold Reserve, carried on FiscalData as the [U.S. Treasury-Owned Gold](https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold) dataset. The report month is **August 2026**, record date **31 August 2026**. The dataset page was last updated **10 September 2026**.",
+      "Fine troy ounces in the table are the printed lines. Tonnes divide those ounces by **32,150.7466**. Each share divides the line by the sum of the report, **261,498,926.241** fine troy ounces. Fort Knox, West Point, and Denver are Mint deep storage, held as gold bullion bars. Mint working stock is coins, blanks, and miscellaneous gold at all Mint locations, set aside for coinage. The New York line is Treasury-owned bullion at the Federal Reserve Bank of New York. Foreign official bars stored in that building stay on the foreign owner’s reserve book. Display bullion and Reserve Bank coin lines are grouped as other.",
+    ],
+    table: {
+      caption:
+        "U.S. Treasury-Owned Gold, record date 31 August 2026. Tonnes equal fine troy ounces divided by 32,150.7466, rounded to 0.01 tonne; the total tonne is that conversion of the total ounces. Shares use the unrounded ounces and are rounded to 0.01 percentage point, so the rounded rows add to 100.01. Other adds display bullion (1,993.321 oz), coins in the New York vault (73,452.066 oz), and display coins (377.434 oz).",
+      headers: ["Facility", "Fine troy ounces", "Tonnes", "Share of total"],
+      rows: [
+        ["Fort Knox (Mint deep storage)", "**147,341,858.382**", "**4,582.84**", "**56.35%**"],
+        ["West Point (Mint deep storage)", "**54,067,331.379**", "**1,681.68**", "**20.68%**"],
+        ["Denver (Mint deep storage)", "**43,853,707.279**", "**1,364.00**", "**16.77%**"],
+        ["Mint working stock", "**2,783,218.656**", "**86.57**", "**1.06%**"],
+        ["Federal Reserve Bank of New York", "**13,376,987.724**", "**416.07**", "**5.12%**"],
+        ["Other (display and coin lines)", "**75,822.821**", "**2.36**", "**0.03%**"],
+        ["Total", "**261,498,926.241**", "**8,133.53**", "**100%**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The United States Bullion Depository at Fort Knox took its first gold in January **1937**, and the [U.S. Mint](https://www.usmint.gov/news/inside-the-mint/fort-knox-history) records that the depository was fully operational that June, once the opening shipments were finished.",
+      "These are the same ounces carried at the statutory **$42.2222** per fine troy ounce on [official gold book value](/markets/official-gold-book-value): about **261.5 million** fine troy ounces, **8,133.53 tonnes** at the conversion above. The **8,133.5 tonnes** in the GDP table is that stock rounded to a tenth of a tonne.",
+      "Source: U.S. Treasury, Status Report of U.S. Government Gold Reserve (U.S. Treasury-Owned Gold), August 2026, [https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold](https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold).",
+    ],
+  },
+  {
     heading: "Recent official purchases, dated",
     paragraphs: [
       "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
