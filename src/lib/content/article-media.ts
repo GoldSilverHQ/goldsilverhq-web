@@ -212,10 +212,11 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/20th-century/bretton-woods-nixon-1971",
     src: "/images/history/20th-century/bretton-woods-nixon-1971.jpg",
     ogSrc: "/og/cards/history-20th-century-bretton-woods-nixon-1971.jpg",
-    alt: "President Richard Nixon seated at a table meeting with economic advisors and Cabinet members.",
+    alt: "Colorized photograph of President Richard Nixon seated at a table meeting with economic advisors and Cabinet members.",
     caption:
-      "President Nixon with economic advisors — the policy circle around the 1971 gold-window decision.",
-    credit: "Public domain — U.S. government photograph (NARA 194579).",
+      "President Nixon with economic advisors — the policy circle around the 1971 gold-window decision; colorized.",
+    credit:
+      "Colorized from public-domain original — U.S. government photograph (NARA 194579).",
   },
   {
     path: "/history/silver/potosi",
