@@ -51,7 +51,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
   <meta charset="utf-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Figtree:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -135,7 +135,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
     }
     .title {
       margin-top: 16px;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 600;
       font-size: ${titleSize};
       line-height: 1.1;
