@@ -197,9 +197,11 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/20th-century/weimar-1923",
     src: "/images/history/20th-century/weimar-1923.jpg",
     ogSrc: "/og/cards/history-20th-century-weimar-1923.jpg",
-    alt: "Crowded Berlin bank interior during the German hyperinflation period, customers packed at teller windows.",
-    caption: "“In a Berlin Bank” — customers during the German inflation crisis (Library of Congress).",
-    credit: "Public domain — Library of Congress (LCCN 2014716642); no known restrictions.",
+    alt: "Colorized 1923 photograph of a man among floor-to-ceiling stacks of paper marks in a Berlin bank.",
+    caption:
+      "“In a Berlin Bank” — floor-to-ceiling paper marks during the German inflation crisis; colorized.",
+    credit:
+      "Colorized from public-domain original — Library of Congress (LCCN 2014716642); no known restrictions.",
   },
   {
     path: "/history/20th-century/1933-gold-recall",
