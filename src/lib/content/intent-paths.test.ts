@@ -151,7 +151,7 @@ describe("intent paths (existing URLs only)", () => {
     const thursday = bodyText(getBody("silver", "silver-thursday")!);
     assert.match(thursday, /On \*\*27 March 1980\*\*/);
     assert.match(thursday, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
-    assert.match(thursday, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
+    assert.doesNotMatch(thursday, /information versus advice|information-not-advice/i);
     assert.doesNotMatch(thursday, TIP_PATTERN);
     const thursdayEp = silver?.episodes.find((e) => e.slug === "silver-thursday");
     assert.ok((thursdayEp?.related?.length ?? 0) >= 4);

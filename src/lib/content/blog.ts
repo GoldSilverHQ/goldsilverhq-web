@@ -139,8 +139,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Markets", "Metals"],
     paragraphs: [
       "The [gold–silver ratio](/markets/gold-silver-ratio) is ordinary arithmetic: gold’s price divided by silver’s price on a dated print. It does not invent a mint statute. It does not freeze a [bimetallic](/history/silver/bimetallism) legal number. It only reports how many ounces of silver one ounce of gold buys at that quote.",
-      "Readers sometimes treat the ratio as a forecast machine. These pages do not. A quotient can sit still while both metals move, or jump when one print shifts. The claim on the Markets page is the dated figure and its sources — not a band that “must” return.",
-      "When the question is law rather than quote — two metals under one mint ratio — open [bimetallism](/history/silver/bimetallism). When the question is England’s 1717 Mint arithmetic, open the [Newton note](/blog/newton-1717-guinea). Keep the jobs separate: market print here, statute story there.",
+      "A quotient can sit still while both metals move, or jump when one print shifts. The Markets page holds the dated figure and its sources — not a band that “must” return.",
+      "When two metals sit under one mint ratio, that is [bimetallism](/history/silver/bimetallism). When the question is England’s 1717 Mint arithmetic, that is the [Newton note](/blog/newton-1717-guinea).",
     ],
     related: [
       { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
@@ -153,14 +153,13 @@ export const blogPosts: BlogPost[] = [
     slug: "weimar-purchasing-power-note",
     title: "Weimar’s mark and what purchasing power means",
     summary:
-      "A short door from the 1923 collapse into the Sound Money definition of purchasing power — dated history on one side, vocabulary on the other.",
+      "A short note linking the 1923 collapse to the Sound Money vocabulary of purchasing power — dated history on one side, definitions on the other.",
     date: "2026-09-15",
     status: "ready",
     tags: ["History", "Ideas"],
     paragraphs: [
-      "In autumn **1923**, a German mark could buy less by the hour than it had bought that morning. The documentary path through that collapse sits under [Weimar 1923](/history/20th-century/weimar-1923) — dates, notes, and what failed.",
-      "The vocabulary page is separate. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what the unit still buys over time, without retelling Weimar hour by hour. Mixing the definition with the dated event makes both harder to follow.",
-      "This note only holds the door: history for what happened; Sound Money for the words. Neither page is a tip, a forecast, or a call to buy metal.",
+      "In autumn **1923**, a German mark could buy less by the hour than it had bought that morning. The dates, notes, and failure of that collapse are on [Weimar 1923](/history/20th-century/weimar-1923).",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what a unit still buys over time, without retelling Weimar hour by hour. The dated event and the vocabulary answer different questions.",
     ],
     related: [
       { title: "Weimar 1923", href: "/history/20th-century/weimar-1923" },

@@ -234,7 +234,7 @@ export const ideaPages: Episode[] = [
     summary: "A short media line: this site informs; it does not recommend buying or selling.",
     status: "ready",
     paragraphs: [
-      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation. The copy is written to stay clear of investment advice under German/EU rules (BaFin).",
+      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation.",
       "Markets move. Laws differ by country. If you act, you do so on your own judgment and, where needed, with a licensed adviser in your jurisdiction.",
     ],
     related: [{ title: "Gold & silver in practice", href: "/gold-silver" }],
@@ -387,7 +387,7 @@ export const historyClusters: Cluster[] = [
           "Before public banks, paper money is a warehouse or goldsmith receipt — a claim check on deposited metal. Banking begins when that ticket pays.",
         status: "ready",
         paragraphs: [
-          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault. Later crises in this chapter depend on that handoff; they are not this article, and they are not one another.",
+          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
