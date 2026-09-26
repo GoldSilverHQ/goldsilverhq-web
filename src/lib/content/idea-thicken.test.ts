@@ -97,7 +97,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
   it("wires a thickened Sound Money hub without new routes", () => {
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     assert.match(mapSrc, /soundMoneyHub/);
-    assert.match(mapSrc, /titleTag:\s*"Sound Money: Definitions, Not History"/);
+    assert.match(mapSrc, /titleTag:\s*"Sound Money: Hard, Fiat, Backed"/);
     assert.doesNotMatch(mapSrc, /slug:\s*"sound-money-[\w-]+"/);
 
     const routeSrc = readFileSync(new URL("../../routes/sound-money/index.tsx", import.meta.url), "utf8");

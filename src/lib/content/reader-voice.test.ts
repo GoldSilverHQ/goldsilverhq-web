@@ -281,4 +281,26 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     assert.match(featuredSrc, /Rentenmark\) that restored/);
     assert.match(featuredSrc, /fiat = money by law/);
   });
+
+  it("keeps home and desk chrome free of door / outline voice", () => {
+    const home = readFileSync(join(root, "components/HomeEditorial.tsx"), "utf8");
+    assert.doesNotMatch(home, /Four doors|doors into/i);
+    const desk = readFileSync(join(root, "routes/desk.tsx"), "utf8");
+    assert.doesNotMatch(desk, /Four doors|If you arrived|does not sell metal/i);
+  });
+
+  it("keeps Practice hub off overview-shelf and disclaimer chrome", () => {
+    const text = bodyText(practiceHubBody);
+    assert.doesNotMatch(
+      text,
+      /This overview stays|leave for History|standing line|These pages inform|Mixing the jobs|educational menu|not a shop|Information only/i,
+    );
+  });
+
+  it("keeps Sound Money map fallback off section-stays outline voice", () => {
+    const page = ideaPages.find((p) => p.slug === "what-is-sound-money");
+    assert.ok(page);
+    const text = page.paragraphs.join("\n");
+    assert.doesNotMatch(text, /This section stays|Mixing definitions with dated events|From here, read/i);
+  });
 });

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/gold-silver/")({
     meta: pageShareMeta({
       title: seoTitle(practiceHub.titleTag),
       description:
-        "How people handle physical gold and silver: bars versus coins, premiums, storage, fakes, and first ounces. An educational menu — not a shop, and not advice.",
+        "How people handle physical gold and silver: bars versus coins, premiums, storage, fakes, and first ounces.",
       path: "/gold-silver",
     }),
   }),
