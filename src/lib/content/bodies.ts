@@ -997,7 +997,7 @@ const warehouses: Section[] = [
     heading: "Why the handoff matters",
     paragraphs: [
       "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. Those steps were possible because the public had already learned to pay with paper claims.",
-      "[John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The assignats ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization. The mechanisms rhyme. The regimes, the promises, and the centuries do not.",
+      "[John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The [assignats](/history/banks-paper/assignats) ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization.",
       "All of them rested on the habit the goldsmiths taught London: a slip of paper could settle a debt while the metal stayed where it was. The ticket stayed good exactly as long as the window paid.",
     ],
   },
@@ -1142,14 +1142,14 @@ const assignats: Section[] = [
     heading: "",
     paragraphs: [
       "By **1795**, shops in revolutionary France quoted two worlds: a paper price that moved by the week, and a coin price people preferred. Assignats — notes first issued in **1789–90**, supposedly retired by sales of seized church and émigré land — still filled drawers. They no longer filled the role of money. The Directory was already returning toward metal.",
-      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. Seventy years after [John Law and the Mississippi Bubble](/history/banks-paper/john-law), France was again paying its way in paper — this time without a bank, and with land instead of a trading company as the advertised backing.",
+      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. France paid its way in that paper for about six years, then abandoned it.",
     ],
   },
   {
     heading: "What an assignat was",
     paragraphs: [
       "The National Assembly inherited a broken treasury. In **November 1789** it placed church property at the disposal of the nation. That stock — later enlarged by émigré estates — became the biens nationaux. The first assignats, decreed in **December 1789**, were large, interest-bearing paper: more a state claim to be paid from land sales than a daily note.",
-      "A warehouse receipt still named metal at a window. A [Bank of England](/history/banks-paper/bank-of-england) note was a circulating promise to pay coin, subject to the Bank’s rules. A [Law](/history/banks-paper/john-law) note had been a bank promise fused with a rising company share. An assignat was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
+      "A warehouse receipt still named metal at a window. A [Bank of England](/history/banks-paper/bank-of-england) note was a circulating promise to pay coin, subject to the Bank’s rules. An assignat was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
       "The land story was the political sale. Metal was scarce in the till. Land was visible. If the paper was a claim on that land, the argument ran, it could not become worthless. Land can be real and still fail as a stop if issue is not retired and no window pays a fixed thing.",
     ],
   },
@@ -1195,9 +1195,8 @@ const assignats: Section[] = [
     heading: "Land on the advertisement, press in the till",
     paragraphs: [
       "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
-      "Law’s System had fused a note-issuing bank with a colonial trading company under the Regency; notes and Mississippi shares inflated together and broke in **1720**. The assignats had no Banque Royale and no rue Quincampoix. They were revolutionary state paper with a land story, issued under a different regime and for a different war.",
-      "Across the Channel, the [Bank of England](/history/banks-paper/bank-of-england) stopped paying gold for its notes in **1797**. Those notes stayed everyday English money, and resumption in the **1820s** brought the window back. The same wars strained both treasuries. England suspended and resumed. France’s paper died.",
-      "When Germany’s mark collapsed in [1923](/history/20th-century/weimar-1923), commentators reached back for the assignats. The parallel holds in mechanism — issue that outruns any real limit — and in little else: the century, the regime, and the promise printed on the paper were all different.",
+      "France had already lived through one paper disaster: [John Law and the Mississippi Bubble](/history/banks-paper/john-law) in **1720**. The Revolution did not revive that bank-and-company machine. It issued state paper with a land story — and still printed faster than sales could retire it.",
+      "Across the Channel, the same wars strained the [Bank of England](/history/banks-paper/bank-of-england). In **1797** London stopped gold payout on Bank notes; those notes stayed everyday English money, and resumption in the **1820s** brought the window back. England suspended and resumed. France’s paper died.",
     ],
   },
 ];
@@ -3319,7 +3318,7 @@ export const historyHubBody: Section[] = [
     heading: "From metal in the hand to paper that floats",
     paragraphs: [
       "The story does not start with a modern central bank. Traders settled in gold and silver by weight; a stamp cut the cost of checking that metal; a warehouse ticket began to pay a debt while the bullion stayed in the vault. Paper is late. Fiat — money that exists by law and habit rather than by redeemability into a known weight — is later still.",
-      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French assignats. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
+      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French [assignats](/history/banks-paper/assignats). Each broke under its own laws, in its own century.",
     ],
   },
   {
@@ -3479,7 +3478,7 @@ export const twentiethCenturyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Paper had lost trust before. [John Law’s System](/history/banks-paper/john-law) broke in France in **1720**, and the revolutionary assignats in the **1790s** — the same kind of failure under different laws, in a different century. Weimar was not **1720** again, and **1971** did not invent paper money. The older chapters of [Sound Money History](/history) begin with coins and warehouse receipts.",
+      "Paper had lost trust before. [John Law’s System](/history/banks-paper/john-law) broke in France in **1720**, and the revolutionary [assignats](/history/banks-paper/assignats) died in the **1790s**. **1971** did not invent paper money. The older chapters of [Sound Money History](/history) begin with coins and warehouse receipts.",
     ],
   },
 ];
@@ -3630,7 +3629,7 @@ export const banksPaperHubBody: Section[] = [
     heading: "Paper on confiscated land",
     paragraphs: [
       "Seven decades later, revolutionary France issued [assignats](/history/banks-paper/assignats): paper supposedly secured by confiscated church and émigré lands, the biens nationaux. The land was real. The quantity of paper rose far faster than any land was sold to retire it. By **1795–96** the assignat was not a unit anyone wanted to hold.",
-      "Law’s System was a royal bank bolted to a trading company. The assignats were a revolutionary fiscal instrument with a land story. Germany’s mark in **1923**, a twentieth-century collapse after war and reparations, is another case again. The mechanism rhymes — paper that stops being a trusted claim — but the dates, the regimes, and the window that failed are different each time.",
+      "The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
     ],
   },
   {

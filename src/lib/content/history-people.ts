@@ -64,7 +64,7 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
       summary: "Regency France fused his note-issuing bank with Mississippi Company shares. Both broke in 1720.",
       paragraphs: [
         "John Law persuaded the Regency of Philippe d’Orléans to charter a bank whose notes and a colonial share company rose together. In 1720 the paper and the shares came down together.",
-        "On this site that is one regency’s paper-and-shares collapse. It is not the assignats of the 1790s, and it is not Germany in 1923.",
+        "That is one regency’s paper-and-shares collapse — notes and Mississippi equity breaking in the same year.",
       ],
       more: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
     },
@@ -141,7 +141,7 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
       summary: "On 23 December 1913 he signed the Federal Reserve Act.",
       paragraphs: [
         "The Act created regional Federal Reserve Banks and a federal board. Member banks could discount commercial paper and receive Reserve notes. The public brief was elastic currency and a lender of last resort, so a scramble like 1907 would not depend on one private rescue.",
-        "The signature is the statute. It is not the 1914 suspension of gold convertibility, and it is not the 1971 gold-window close.",
+        "The signature is the statute of **23 December 1913**. Gold convertibility would fail in war the next year; that is a separate break.",
       ],
       more: { href: "/history/20th-century/panic-1907-fed", title: "Panic of 1907 and the Fed" },
     },
