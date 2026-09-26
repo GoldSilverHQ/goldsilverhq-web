@@ -51,34 +51,34 @@ export const historyHub = {
 
 /** Pillar hub /sound-money — search title and related; body lives in soundMoneyHubBody. */
 export const soundMoneyHub = {
-  titleTag: "Sound Money: Definitions, Not History",
+  titleTag: "Sound Money: Hard, Fiat, Backed",
   related: [
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
     { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
     { title: "What “backed” means", href: "/sound-money/backed-money" },
-    { title: "Sound Money History — what happened", href: "/history" },
+    { title: "Sound Money History", href: "/history" },
   ],
 };
 
 /** Pillar hub /gold-silver — search title and related; body lives in practiceHubBody. */
 export const practiceHub = {
-  titleTag: "Gold & Silver in Practice: Handling, Not a Shop",
+  titleTag: "Gold & Silver in Practice: Form, Premium, Custody",
   related: [
-    { title: "Sound Money — vocabulary and disclaimer", href: "/sound-money" },
+    { title: "Sound Money", href: "/sound-money" },
     { title: "Why markets chose gold and silver", href: "/history/ancient/why-markets-chose-gold-silver" },
   ],
 };
 
 /** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
 export const marketsHub = {
-  titleTag: "Gold & Silver Markets: Facts, Not Tips",
+  titleTag: "Gold & Silver Markets: Book Value, Reserves, Ratio",
   related: [
     { title: "Official gold book value", href: "/markets/official-gold-book-value" },
     { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
     { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
     { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
-    { title: "Sound Money History — what happened", href: "/history" },
+    { title: "Sound Money History", href: "/history" },
   ],
 };
 
@@ -99,7 +99,7 @@ export const pillars: Pillar[] = [
     kicker: "The idea",
     question: "What does sound money mean?",
     summary:
-      "Definitions only: hard money versus fiat, purchasing power, and what “backed” does and does not mean. Dated events live under History.",
+      "Hard money versus fiat, purchasing power, and what “backed” does and does not mean.",
   },
   {
     id: "history",
@@ -108,7 +108,7 @@ export const pillars: Pillar[] = [
     kicker: "What happened",
     question: "What happened?",
     summary:
-      "Five chapters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not under the definitions.",
+      "From ancient coinage to 1971: Weimar, the Fed, and the Nixon shock among the dated cases.",
   },
   {
     id: "gold-silver",
@@ -117,7 +117,7 @@ export const pillars: Pillar[] = [
     kicker: "How to handle metal",
     question: "How do I handle metal?",
     summary:
-      "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist. Neutral and educational.",
+      "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist.",
   },
   {
     id: "markets",
@@ -126,7 +126,7 @@ export const pillars: Pillar[] = [
     kicker: "Current figures",
     question: "What do the current figures say?",
     summary:
-      "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country — dated market facts. Not sound-money history, and not how to buy a bar.",
+      "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country.",
   },
 ];
 
@@ -138,8 +138,7 @@ export const ideaPages: Episode[] = [
     status: "ready",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. Historically that constraint came from the cost of mining gold and silver. The point of the idea is not nostalgia. It is about whether the unit of account stays honest over long periods.",
-      "This section stays on meaning. Weimar, Nixon, and the Fed belong in history. Mixing definitions with dated events makes both harder to follow.",
-      "From here, read hard money versus fiat, inflation, and what “backed” actually means.",
+      "Hard money versus fiat, inflation and purchasing power, and what “backed” actually means follow from that one test.",
     ],
     related: [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
@@ -925,10 +924,10 @@ export const practicePages: Episode[] = [
   {
     slug: "bars-vs-coins",
     title: "Gold bars vs coins",
-    summary: "Bars usually cost less per ounce. Coins cost more and are easier to recognise. Comparison only — not a recommendation.",
+    summary: "Bars usually cost less per ounce. Coins cost more and are easier to recognise.",
     status: "ready",
     paragraphs: [
-      "Bars minimise fabrication cost per ounce. Coins maximise recognisability. The tone stays practical and neutral.",
+      "Bars minimise fabrication cost per ounce. Coins maximise recognisability.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -946,10 +945,10 @@ export const practicePages: Episode[] = [
     slug: "premium-over-spot",
     title: "Premium over spot",
     summary:
-      "Spot is a reference price. The premium is the price of form, brand, mint, and liquidity — not a tip and not a forecast of what is cheap.",
+      "Spot is a reference price. The premium is the price of form, brand, mint, and liquidity.",
     status: "ready",
     paragraphs: [
-      "Premium over spot is the markup of an object above a screen or LBMA reference. It prices form, brand, mint, and liquidity. It is not a shopping tip and not a forecast of which premiums are cheap.",
+      "Premium over spot is the markup of an object above a screen or LBMA reference. It prices form, brand, mint, and liquidity.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -967,10 +966,10 @@ export const practicePages: Episode[] = [
     slug: "storage",
     title: "Storing gold and silver",
     summary:
-      "Storage is a menu of access, cost, and counterparty — home, allocated vault, or unallocated claim. A description, not a recommendation.",
+      "Home, an allocated vault, or an unallocated claim — different facts about access, cost, and counterparty.",
     status: "ready",
     paragraphs: [
-      "Storage is access, cost, and counterparty. Home, allocated, and unallocated are different arrangements. The menu is described, not recommended.",
+      "Storage is access, cost, and counterparty. Home, allocated, and unallocated are different arrangements.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -1009,10 +1008,10 @@ export const practicePages: Episode[] = [
     slug: "beginner-checklist",
     title: "Beginner checklist: first ounces",
     summary:
-      "First ounces are a process of four decisions — form, counterparty, storage location, documentation — a menu of mechanics, not a purchase recommendation.",
+      "First ounces are four decisions: form, counterparty, storage location, and documentation.",
     status: "ready",
     paragraphs: [
-      "First ounces are four decisions: form, counterparty, storage location, and documentation. A process, not a shop list, and not a recommendation.",
+      "First ounces are four decisions: form, counterparty, storage location, and documentation.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },

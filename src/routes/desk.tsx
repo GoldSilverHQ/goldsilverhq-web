@@ -25,7 +25,7 @@ function DeskPage() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read next</p>
         <h2 className="mt-2 font-sans text-3xl">History and the ideas</h2>
         <p className="mt-2 max-w-xl text-muted">
-          The desk is the numbers. The articles explain why they matter.
+          Numbers on the desk; articles for the stories behind them.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {pillars.map((p) => (

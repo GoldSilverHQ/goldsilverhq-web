@@ -164,7 +164,7 @@ const BANDS: readonly Band[] = [
         `In ${year} there is no new American coinage statute. The Continental note of 17 February 1776 still promised Spanish milled dollars, or gold or silver.`,
         [
           "The two-dollar note of 17 February 1776 promises the bearer two Spanish milled dollars, or the value in gold or silver. The promise is already printed. This year does not add a coinage law.",
-          "The bimetallic dollar in statute is the Coinage Act of 1792. This page does not date the end of the war, and it does not price the note.",
+          "The bimetallic dollar in statute is the Coinage Act of 1792. The war’s end and the note’s market price are other dates.",
         ],
         CONTINENTAL,
         "continental",
@@ -267,7 +267,7 @@ const BANDS: readonly Band[] = [
         "Restriction still in force",
         `In ${year} the Bank of England is still not paying gold. The Second Bank of the United States has not been chartered. That charter is 1816.`,
         [
-          "England’s gold window has been shut since February 1797. It is still shut. This page does not narrate the war.",
+          "England’s gold window has been shut since February 1797. It is still shut. The war that closed it is told elsewhere.",
           "The United States has no federally chartered bank this year. The First Bank’s charter ended in 1811. The Second Bank is 1816. Peel’s Act is 1819. Full payout is 1821.",
         ],
         GUINEA,
@@ -431,7 +431,7 @@ const BANDS: readonly Band[] = [
         "Public land must be paid in gold or silver. The Second Bank’s federal charter expires the same year.",
         [
           "The Specie Circular of 1836 required gold and silver for purchases of public land. Paper from state banks was not enough for that payment.",
-          "The same year, the federal charter of the Second Bank expired. It had been granted for twenty years in 1816. This page does not pick a villain for what followed.",
+          "The same year, the federal charter of the Second Bank expired. It had been granted for twenty years in 1816. What followed had more than one author.",
         ],
         {
           alt: "Gobrecht silver dollar of 1836.",
@@ -451,12 +451,12 @@ const BANDS: readonly Band[] = [
         "A panic year. Specie payments were suspended in many places. The causes were several, not one slogan.",
         [
           "In 1837 specie payments were suspended in many places. The scramble followed, by months, the removal of federal deposits and the Specie Circular. It did not follow by decades, and it was not a single cause.",
-          "International credit, cotton, land sales, and the bank scramble all sit in the record. This page does not choose one of them. It is not the Panic of 1907.",
+          "International credit, cotton, land sales, and the bank scramble all sit in the record. No single cause owns the year. It is not the Panic of 1907.",
         ],
         {
           alt: "1837 print titled The Times, showing a bank that has stopped specie payments.",
           caption:
-            "Print of 1837 titled The Times. A bank in the picture has stopped specie payments. This page does not adopt the print’s politics.",
+            "Print of 1837 titled The Times. A bank in the picture has stopped specie payments. The print has a politics of its own.",
           credit: PD,
         },
         "panic-1837",
@@ -472,7 +472,7 @@ const BANDS: readonly Band[] = [
         `In ${year} there is no federally chartered central bank. United States Notes have not been authorized. That statute is February 1862.`,
         [
           "The Second Bank’s federal charter ended in 1836. In 1837 specie payments were suspended in many places. No successor federal bank is chartered this year. The Federal Reserve is 1913.",
-          "United States Notes are not yet legal tender. That authorization is the Legal Tender Act of February 1862. This page does not date an Independent Treasury law.",
+          "United States Notes are not yet legal tender. That authorization is the Legal Tender Act of February 1862. Independent Treasury law is a separate statute.",
         ],
         {
           ...CLASSIC,
@@ -526,7 +526,7 @@ const BANDS: readonly Band[] = [
         "Silver dollar already off the list",
         "The standard silver dollar is already off the coinage list. The statute that names a resumption date has not been passed. That Act is 1875.",
         [
-          "The Coinage Act of 1873 left the standard silver dollar off the list of coins the Mint would strike. That change is already law. This page does not rename it.",
+          "The Coinage Act of 1873 left the standard silver dollar off the list of coins the Mint would strike. That change is already law. The later nickname is the argument, not the statute.",
           "The Specie Payment Resumption Act is the next year. It will name 1 January 1879. Payments have not resumed, and the date is not yet statute.",
         ],
         {
@@ -658,15 +658,15 @@ const BANDS: readonly Band[] = [
     build: () =>
       fill(
         "Sherman duty repealed",
-        "A panic year. The Sherman silver-purchase duty is repealed. This page does not pick a side.",
+        "A panic year. The Sherman silver-purchase duty is repealed.",
         [
           "1893 is the panic year in which the Sherman Silver Purchase Act’s duty to purchase silver was repealed. The notes of 1890 had been a way to draw gold from the Treasury.",
-          "Repeal ended that purchase obligation. It did not define the dollar as a gold unit. That statute is 1900. This page does not choose a cause or a faction.",
+          "Repeal ended that purchase obligation. It did not define the dollar as a gold unit. That statute is 1900. Causes and factions are still argued.",
         ],
         {
           alt: "Puck cover of 13 September 1893, titled Out of the silver flood.",
           caption:
-            "Puck, 13 September 1893. The cartoon treats repeal of the Sherman purchase duty as a rescue. This page does not.",
+            "Puck, 13 September 1893. The cartoon treats repeal of the Sherman purchase duty as a rescue.",
           credit: PD,
         },
         "silver-flood",
@@ -721,7 +721,7 @@ const BANDS: readonly Band[] = [
         `In ${year} Bryan has lost. The dollar is not yet defined as gold in the 1900 Act. The Sherman purchase duty stays repealed.`,
         [
           "The 1896 election kept the gold dollar as the political line. It did not write the definition into the Gold Standard Act. That Act is 1900: 25.8 grains, nine-tenths fine.",
-          "The Sherman purchase duty was repealed in 1893 and has not returned. Specie payments have been in force since 1879. New gold supplies in these years expanded the world gold stock. This page does not turn that into a forecast.",
+          "The Sherman purchase duty was repealed in 1893 and has not returned. Specie payments have been in force since 1879. New gold supplies in these years expanded the world gold stock.",
         ],
         {
           ...EAGLE_1875,

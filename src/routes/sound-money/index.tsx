@@ -10,7 +10,7 @@ export const Route = createFileRoute("/sound-money/")({
     meta: pageShareMeta({
       title: seoTitle(soundMoneyHub.titleTag),
       description:
-        "What sound money means: a unit that cannot be expanded at will. Hard money vs fiat, inflation, and backed money — definitions only. History lives elsewhere.",
+        "What sound money means: a unit that cannot be expanded at will. Hard money vs fiat, inflation, and backed money.",
       path: "/sound-money",
     }),
   }),

@@ -263,7 +263,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "The standard silver dollar is dropped from the coinage list.",
     paragraphs: [
       "The Coinage Act of 1873 left the standard silver dollar off the list of coins the Mint would strike. Silver advocates later called that the Crime of 1873. Others called it a clarification toward gold.",
-      "The argument is still the argument. This page does not pick a side or a trade.",
+      "Both readings of the Act still circulate. The statute is the fact; the name is the argument.",
     ],
     more: { href: "/history/america/crime-of-1873", title: "The Crime of 1873" },
   }),
@@ -276,7 +276,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "On 1 January, United States Notes are again treated as gold at par in practice.",
     paragraphs: [
       "The Specie Payment Resumption Act of 1875 set the date: 1 January 1879. On that day the United States resumed specie payments. The wartime greenback premium had closed in practice.",
-      "Defining the dollar as a gold unit in statute waited until the Gold Standard Act of 1900. Resumption was the operational hinge. The 1900 Act was the label.",
+      "Defining the dollar as a gold unit in statute waited until the Gold Standard Act of 1900. Resumption was the operational fact. The 1900 Act was the label.",
     ],
     more: { href: "/history/america/road-back-gold", title: "The road back to gold" },
   }),

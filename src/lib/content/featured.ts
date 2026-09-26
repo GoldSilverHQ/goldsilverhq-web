@@ -26,7 +26,7 @@ export const FEATURED = [
   {
     kicker: "The idea",
     title: "What is sound money?",
-    summary: "A unit whose supply cannot be expanded at will. The dated stories live under History.",
+    summary: "A unit whose supply cannot be expanded at will — costly metal, or a redeemability contract that still holds.",
     href: "/sound-money/what-is-sound-money",
     cluster: "sound-money",
     episode: "what-is-sound-money",

@@ -7,7 +7,7 @@ export function HomeEditorial() {
       <section className="border-t border-line pt-10">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Open with</p>
         <h2 className="mt-2 font-display text-3xl">A crisis, a definition, a turning point</h2>
-        <p className="mt-2 max-w-xl text-muted">Four doors into the rest of the site.</p>
+        <p className="mt-2 max-w-xl text-muted">Weimar, Nixon, Law, and what sound money means.</p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {FEATURED.map((item) => (
             <a
