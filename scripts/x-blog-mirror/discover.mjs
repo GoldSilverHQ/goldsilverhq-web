@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
  * Dry-run / CI entry: observe only. Never invents essay text.
- * If a new Article exists and X_BEARER_TOKEN is set, writes
+ * If new Article(s) exist and X_BEARER_TOKEN is set, writes
  * data/x-articles-pending.json for an agent/PR to expand + publish.
+ * Processes every eligible unseen Article in the schedule window (no 1/run cap).
  * If nothing new: exits 0, no commit needed.
  */
 
@@ -12,11 +13,25 @@ import {
   bearerToken,
   listRecentArticles,
   loadSeen,
+  unseenEligibleArticles,
   siteAlreadyHasArticle,
   REPO_ROOT,
 } from "./lib.mjs";
 
 const pendingPath = join(REPO_ROOT, "data/x-articles-pending.json");
+
+function summarizeArticle(a) {
+  return {
+    articleId: a.articleId,
+    postId: a.postId,
+    title: a.title,
+    articleUrl: a.articleUrl,
+    createdAt: a.createdAt,
+    coverUrl: a.coverUrl,
+    plainText: a.plainText,
+    previewText: a.previewText,
+  };
+}
 
 async function main() {
   if (!bearerToken()) {
@@ -32,14 +47,10 @@ async function main() {
 
   const skippedTitle = articles.filter((a) => a.skip);
   const alreadySeen = articles.filter((a) => !a.skip && known.has(String(a.articleId)));
-  const onSite = articles.filter(
-    (a) => !a.skip && !known.has(String(a.articleId)) && siteAlreadyHasArticle(a),
-  );
-  const eligible = articles.filter(
-    (a) => !a.skip && !known.has(String(a.articleId)) && !siteAlreadyHasArticle(a),
-  );
+  const candidates = unseenEligibleArticles(articles, seen);
+  const onSite = candidates.filter((a) => siteAlreadyHasArticle(a));
+  const eligible = candidates.filter((a) => !siteAlreadyHasArticle(a));
 
-  // Near-miss log: why candidates did not become the pending pick.
   for (const a of skippedTitle) {
     console.log(
       `::notice::near-miss skip-title: ${a.articleId} — ${a.title || "(no title)"}`,
@@ -50,57 +61,42 @@ async function main() {
       `::notice::near-miss already-on-site: ${a.articleId} — ${a.title || "(no title)"}`,
     );
   }
-  if (eligible.length > 1) {
-    for (const a of eligible.slice(1)) {
-      console.log(
-        `::notice::near-miss queued-behind-newer: ${a.articleId} — ${a.title || "(no title)"} (at most one per run)`,
-      );
-    }
-  }
   if (alreadySeen.length) {
     console.log(
       `::notice::near-miss already-seen: ${alreadySeen.length} Article(s) already in seen-list.`,
     );
   }
 
-  let next = eligible[0] ?? null;
-
-  if (!next) {
+  if (!eligible.length) {
     console.log("::notice::x-blog-mirror: no new eligible Articles.");
     process.exit(0);
   }
 
   mkdirSync(dirname(pendingPath), { recursive: true });
+  const pendingArticles = eligible.map(summarizeArticle);
   const pending = {
     detectedAt: new Date().toISOString(),
-    article: {
-      articleId: next.articleId,
-      postId: next.postId,
-      title: next.title,
-      articleUrl: next.articleUrl,
-      createdAt: next.createdAt,
-      coverUrl: next.coverUrl,
-      plainText: next.plainText,
-      previewText: next.previewText,
-    },
-    queuedBehind: eligible.slice(1).map((a) => ({
-      articleId: a.articleId,
-      title: a.title,
-      articleUrl: a.articleUrl,
-    })),
+    /** All eligible Articles in this schedule window (newest first). */
+    articles: pendingArticles,
+    /** @deprecated Prefer `articles`; kept as first entry for older issue templates. */
+    article: pendingArticles[0],
     instructions: [
+      "Process EVERY Article in `articles` this run — no 1/run cap. One PR with multiple posts or sequential PRs are both OK.",
+      "After each successful mirror, append that id to data/x-articles-seen.json before starting the next (do not fail halfway without recording what landed).",
       "Write a LONGER site essay (≈1,200–1,800 words) from plainText — same facts, expand context, no invented numbers.",
       "Reuse title spine; BaFin-clean; no stock tips; credit X Article once.",
       "Download cover with scripts/x-blog-mirror/download-cover.mjs; register blog.ts + bodies.ts + article-media.ts + sitemap.",
-      "Append data/x-articles-seen.json; commit: blog: mirror X Article <id> — <short title>",
+      "Commit: blog: mirror X Article <id> — <short title> (or one commit covering the batch).",
       "Open PR; merge when CI green (same auto-merge policy as desk drafts).",
       "Note: compose/articles/edit/{id} is the author editor URL — public form is /i/article/{id}. Drafts are invisible to this discover path.",
     ],
   };
   writeFileSync(pendingPath, `${JSON.stringify(pending, null, 2)}\n`);
-  console.log(`::warning::New X Article pending mirror: ${next.title}`);
+  console.log(
+    `::warning::New X Article(s) pending mirror (${eligible.length}): ${eligible.map((a) => a.title).join(" | ")}`,
+  );
   console.log(`Wrote ${pendingPath}`);
-  // Non-zero so a workflow step can open a draft PR / notify — do not loop-spam publishes.
+  // Non-zero so a workflow step can open a draft issue / notify — do not loop-spam publishes.
   process.exit(78);
 }
 

@@ -157,16 +157,23 @@ export async function listRecentArticles({ maxResults = 50 } = {}) {
 }
 
 /**
- * Diff against seen-list. Returns at most one eligible next Article (newest).
+ * Diff against seen-list. Returns every eligible unseen Article (newest first).
+ * Skips seen-list ids and SKIP_TITLE_RE / tip roundups. Callers still filter
+ * siteAlreadyHasArticle before writing pending / publishing.
+ */
+export function unseenEligibleArticles(articles, seen) {
+  const known = seenIds(seen);
+  return (articles ?? []).filter(
+    (a) => !known.has(String(a.articleId)) && !a.skip,
+  );
+}
+
+/**
+ * Newest eligible unseen Article, or null. Prefer unseenEligibleArticles when
+ * processing a full schedule window (all eligible in one run).
  */
 export function nextUnseenArticle(articles, seen) {
-  const known = seenIds(seen);
-  for (const a of articles) {
-    if (known.has(String(a.articleId))) continue;
-    if (a.skip) continue;
-    return a;
-  }
-  return null;
+  return unseenEligibleArticles(articles, seen)[0] ?? null;
 }
 
 export function siteAlreadyHasArticle({ articleId, title, articleUrl }) {

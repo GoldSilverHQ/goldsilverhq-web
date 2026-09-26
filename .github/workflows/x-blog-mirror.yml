@@ -32,7 +32,7 @@ jobs:
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Open draft issue when a new Article is pending
+      - name: Open draft issue when new Article(s) are pending
         if: steps.discover.outputs.exit_code == '78'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -41,33 +41,49 @@ jobs:
             echo "No pending file; skip."
             exit 0
           fi
-          title=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.title||'X Article')")
-          id=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.articleId||'')")
-          url=$(node -e "const p=require('./data/x-articles-pending.json'); process.stdout.write(p.article.articleUrl||'')")
+          count=$(node -e "const p=require('./data/x-articles-pending.json'); const n=(p.articles||[p.article]).filter(Boolean).length; process.stdout.write(String(n))")
+          title=$(node -e "
+            const p=require('./data/x-articles-pending.json');
+            const list=(p.articles&&p.articles.length)?p.articles:[p.article].filter(Boolean);
+            if(list.length===1) process.stdout.write(list[0].title||'X Article');
+            else process.stdout.write(list.length+' new X Articles');
+          ")
+          ids=$(node -e "
+            const p=require('./data/x-articles-pending.json');
+            const list=(p.articles&&p.articles.length)?p.articles:[p.article].filter(Boolean);
+            process.stdout.write(list.map(a=>a.articleId).join(' '));
+          ")
           body=$(node -e "
             const p=require('./data/x-articles-pending.json');
+            const list=(p.articles&&p.articles.length)?p.articles:[p.article].filter(Boolean);
             const lines=[
-              '## X→blog mirror candidate',
+              '## X→blog mirror candidates (' + list.length + ')',
               '',
-              \`- **Title:** \${p.article.title}\`,
-              \`- **X Article:** \${p.article.articleUrl}\`,
-              \`- **Article id:** \${p.article.articleId}\`,
-              \`- **Post id:** \${p.article.postId}\`,
-              \`- **Published:** \${p.article.createdAt}\`,
+              'Process **every** Article below in this window (no 1/run cap). One PR with multiple posts or sequential PRs are both OK — append each id to \`data/x-articles-seen.json\` as soon as it lands.',
               '',
-              'Pending payload: \`data/x-articles-pending.json\` (from the discover job artifact — re-run discover locally or via Cursor).',
-              '',
-              '### Instructions',
-              ...p.instructions.map(i=>' - '+i),
-              '',
-              'Do **not** invent figures. Skip if already on site. Process at most one Article.',
             ];
+            for (const a of list) {
+              lines.push('### ' + (a.title || 'X Article'));
+              lines.push('');
+              lines.push('- **X Article:** ' + a.articleUrl);
+              lines.push('- **Article id:** ' + a.articleId);
+              lines.push('- **Post id:** ' + a.postId);
+              lines.push('- **Published:** ' + a.createdAt);
+              lines.push('');
+            }
+            lines.push('Pending payload: \`data/x-articles-pending.json\` (from the discover job — re-run discover locally or via Cursor).');
+            lines.push('');
+            lines.push('### Instructions');
+            for (const i of (p.instructions||[])) lines.push(' - ' + i);
+            lines.push('');
+            lines.push('Do **not** invent figures. Skip if already on site. Process **all** eligible Articles in this pending file.');
             process.stdout.write(lines.join('\\n'));
           ")
-          # Avoid duplicate open issues for the same article id
-          existing=$(gh issue list --state open --search "x-blog-mirror $id" --json number --jq 'length')
+          # Avoid duplicate open issues for the same set of article ids
+          first_id=$(echo "$ids" | awk '{print $1}')
+          existing=$(gh issue list --state open --search "x-blog-mirror $first_id" --json number --jq 'length')
           if [ "$existing" != "0" ]; then
-            echo "Open issue already exists for $id"
+            echo "Open issue already exists for $first_id (batch of $count)"
             exit 0
           fi
           gh issue create \
