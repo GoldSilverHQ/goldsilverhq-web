@@ -924,16 +924,72 @@ const beginnerChecklist: Section[] = [
 
 const buyingOnline: Section[] = [
   {
-    heading: "Logistics, not a ranking",
+    heading: "",
     paragraphs: [
-      "Buying metal through a screen is identity of the dealer, payment, shipping, and what happens if a parcel never arrives. This page is a watch-for list. It does not rank vendors.",
+      "Buying gold or silver through a screen is a logistics checklist: who the dealer is, how payment settles, how a parcel moves, and what the invoice names. Identity, payment finality, shipping and insurance, and the facts on the paper. It is not a dealer ranking, and it is not a purchase tip. These paragraphs are watch-fors. They do not name a shop.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already treats remote buying as logistics rather than a vendor list. The paragraphs below stay on that checklist. They do not say anyone ought to acquire metal, and they do not forecast a price.",
     ],
   },
   {
-    heading: "What to watch",
+    heading: "Logistics, not a ranking",
     paragraphs: [
-      "Who they are: a name, a place, a history you can check without their own FAQ. How you pay: some methods are cheap and reverse; some are final. How they ship: insured, signature, discreet, and to an address you control. What the invoice says: product, weight, fineness, serials if any, and the [premium](/gold-silver/premium-over-spot) you actually paid.",
-      "If they will only “store it for you” and never ship, you have the [storage](/gold-silver/storage) problem in another costume. If the price is an outlier, you have the [fakes](/gold-silver/spotting-fakes) problem in another costume.",
+      "A screen quote is not a pile on a counter. Between the quote and an object in hand sit a desk, a payment, a carrier, and a piece of paper. Each can fail on its own. Ranking desks would turn the checklist into a shop list. This page does not rank.",
+      "Online buying starts with whether the counterparty is a checkable firm, whether payment can still be clawed back after it leaves, whether the parcel is insured and signed for at an address you control, and whether the invoice matches the object you thought you were comparing to the screen. Watch-fors only. No preferred vendor.",
+    ],
+  },
+  {
+    heading: "Dealer identity",
+    paragraphs: [
+      "A dealer is a name, a place, and a history you can check without relying only on their own FAQ. A registered company, a physical address that is not only a post-office box story, years of the same trade under the same name — those are ordinary facts. A social-media handle, a one-week shopfront, or a page that answers every question with its own marketing is a thinner counterparty.",
+      "Checkable history means records outside the seller’s own site: company registers, long-standing contact details, a trail of the same desk answering after a parcel arrives. It does not mean a five-star collage the desk wrote for itself, and it is not a ranking. A name that can be found next year is a logistics fact. A name that cannot is a reason to stop before any metal moves. Online, identity is sharper because the object is not yet in the room. The first defence is still the desk, not the scale.",
+    ],
+  },
+  {
+    heading: "Payment as a fact about finality",
+    paragraphs: [
+      "Payment methods differ in how easily money can be reversed after it leaves. Some channels leave a window to dispute a charge. Others settle as a final transfer: once the funds are gone, clawing them back is slow, expensive, or closed. Those are facts about the rail. They are not a tip about which rail to use.",
+      "A cheap method that reverses is a different product from a final method that does not. This page does not recommend a method. It only names the reading: know whether the payment is still reversible after the desk says the metal has shipped, and know what the desk’s terms say about that moment.",
+    ],
+  },
+  {
+    heading: "Shipping, insurance, and the empty box",
+    paragraphs: [
+      "Shipping is where the object leaves the desk and has not yet arrived. Insured carriage, a signature on delivery, and an address under your control are the ordinary watch-fors. “Discreet” packaging is a habit of the trade: a box that advertises bullion is also a sign.",
+      "Empty-box and non-delivery failures are the named risks of that motion. A carton arrives light, or resealed. A tracking number ends at a depot, a neighbour, or a signature that is not yours. Insurance is a contract with limits and notice windows — not a second vault. A waived signature is a different delivery from the one the invoice described. The parcel should be checkable at an address you control, under terms you can still find after the van leaves.",
+    ],
+  },
+  {
+    heading: "Invoice facts",
+    paragraphs: [
+      "The invoice is the record of what was supposed to move. Product name, weight, fineness, and serials when the object carries them are the ordinary fields. The premium paid — the gap between the screen ounce and the line on the invoice — belongs on the same paper. Without those facts, a later dispute is an argument about a story.",
+      "A weight and a fineness without a product name is a paper ounce with adjectives. A product name without a weight is a stamp without a measure. The invoice does not make the metal safer. It makes the claim checkable when the box is light, when the stamp looks wrong, or when the desk and the carrier disagree about what left the building.",
+    ],
+  },
+  {
+    heading: "“We store it for you”",
+    paragraphs: [
+      "A seller who will only “store it for you” and never ship has not finished an online purchase. They have moved the custody question into another costume. The metal, if it exists as a named pile at all, still sits somewhere — a vault claim or an unallocated line on someone else’s books.",
+      "That menu of access, cost, and counterparty lives on [storing gold and silver](/gold-silver/storage). Online logistics ends when an object can be signed for at an address you control. A pitch that skips shipping is a storage pitch — not a shortcut around the checklist, and not a ranking of vaults.",
+    ],
+  },
+  {
+    heading: "Outlier price",
+    paragraphs: [
+      "A quote far below everyone else’s print is information. It is not a bargain, and it is not a reason to send payment. Spot is a screen price for a paper ounce. The object on a desk carries fabrication, shipping, insurance, and a dealer’s book. An ask that undercuts that field by a wide margin has to be explained by something other than generosity.",
+      "Treat the outlier as a warning — the fakes-and-premium problem in another costume — not as a deal. The longer filter for obvious copies lives on [spotting fakes](/gold-silver/spotting-fakes). A high ask is not proof of honesty. A low ask is not proof of a fake.",
+    ],
+  },
+  {
+    heading: "What this page is not",
+    paragraphs: [
+      "This page is not a dealer ranking. No name, no shop, and no “best” online desk appears here. A counterparty is a logistics fact, not a recommended vendor. It is not a purchase tip, and it is not buy or sell advice. It does not say anyone ought to acquire gold or silver through a screen. It does not name a product, a quantity, or a payment rail to prefer.",
+      "It is also not a forecast. Nothing here says metal is cheap or dear, or that an online premium is a signal. Treating identity, payment, shipping, and invoices as a reason to hold metal would turn a checklist into a pitch.",
+    ],
+  },
+  {
+    heading: "Information only",
+    paragraphs: [
+      "Online buying measures a logistics checklist: dealer identity, payment finality, shipping and insurance, and invoice facts. It does not measure which desk anyone ought to use. It does not rank a vendor. These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the pitch skips the parcel, open [storing gold and silver](/gold-silver/storage). If the quote is an outlier, open [spotting fakes](/gold-silver/spotting-fakes).",
     ],
   },
 ];
