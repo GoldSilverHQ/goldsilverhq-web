@@ -3,7 +3,7 @@
  * Observe pass: list @GoldSilverHQ X Articles vs data/x-articles-seen.json.
  *
  * Exit 0 always on "nothing to do" / missing token (prints reason).
- * Exit 0 with JSON summary when a candidate exists (does not publish).
+ * Exit 0 with JSON summary when candidate(s) exist (does not publish).
  *
  * Usage:
  *   node scripts/x-blog-mirror/observe.mjs
@@ -14,7 +14,7 @@ import {
   bearerToken,
   listRecentArticles,
   loadSeen,
-  nextUnseenArticle,
+  unseenEligibleArticles,
   siteAlreadyHasArticle,
   shouldSkipTitle,
 } from "./lib.mjs";
@@ -35,7 +35,25 @@ function print(obj) {
     if (obj.next) {
       console.log(`\nNext candidate: ${obj.next.title}\n  ${obj.next.articleUrl}`);
     }
+    if (obj.pending?.length > 1) {
+      console.log(`\nAll pending (${obj.pending.length}):`);
+      for (const a of obj.pending) {
+        console.log(`  - ${a.title}\n    ${a.articleUrl}`);
+      }
+    }
   }
+}
+
+function summarizePending(a) {
+  return {
+    articleId: a.articleId,
+    postId: a.postId,
+    title: a.title,
+    articleUrl: a.articleUrl,
+    createdAt: a.createdAt,
+    coverUrl: a.coverUrl,
+    plainTextChars: (a.plainText || "").length,
+  };
 }
 
 async function main() {
@@ -74,30 +92,21 @@ async function main() {
     onSite: siteAlreadyHasArticle(a),
   }));
 
-  let next = nextUnseenArticle(articles, seen);
-  if (next && siteAlreadyHasArticle(next)) {
-    next = null;
-  }
+  const pending = unseenEligibleArticles(articles, seen).filter(
+    (a) => !siteAlreadyHasArticle(a),
+  );
+  const next = pending[0] ?? null;
 
   print({
     ok: true,
     count: summarized.length,
-    unseenEligible: next ? 1 : 0,
-    message: next
-      ? `1 new eligible Article: ${next.title}`
+    unseenEligible: pending.length,
+    message: pending.length
+      ? `${pending.length} new eligible Article(s): ${pending.map((a) => a.title).join(" | ")}`
       : "No new eligible Articles (exit quietly).",
     articles: summarized,
-    next: next
-      ? {
-          articleId: next.articleId,
-          postId: next.postId,
-          title: next.title,
-          articleUrl: next.articleUrl,
-          createdAt: next.createdAt,
-          coverUrl: next.coverUrl,
-          plainTextChars: (next.plainText || "").length,
-        }
-      : null,
+    pending: pending.map(summarizePending),
+    next: next ? summarizePending(next) : null,
   });
   process.exit(0);
 }

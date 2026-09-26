@@ -1,6 +1,11 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { shouldSkipTitle, articleIdFromUrl, nextUnseenArticle } from "./lib.mjs";
+import {
+  shouldSkipTitle,
+  articleIdFromUrl,
+  nextUnseenArticle,
+  unseenEligibleArticles,
+} from "./lib.mjs";
 
 describe("x-blog-mirror helpers", () => {
   it("skips weekly stock roundup titles", () => {
@@ -20,14 +25,29 @@ describe("x-blog-mirror helpers", () => {
     assert.equal(articleIdFromUrl("https://x.com/GoldSilverHQ/status/1"), null);
   });
 
-  it("picks the newest unseen non-skip article", () => {
+  it("returns every unseen non-skip article (newest first)", () => {
     const seen = { articles: [{ articleId: "1" }] };
     const articles = [
       { articleId: "9", title: "Silver Stocks - Weekly Roundup", skip: true, createdAt: "2026-09-23" },
       { articleId: "8", title: "LTCM", skip: false, createdAt: "2026-09-22" },
+      { articleId: "7", title: "Interest", skip: false, createdAt: "2026-09-22" },
       { articleId: "1", title: "Newton", skip: false, createdAt: "2026-09-21" },
     ];
-    const next = nextUnseenArticle(articles, seen);
-    assert.equal(next.articleId, "8");
+    const all = unseenEligibleArticles(articles, seen);
+    assert.deepEqual(
+      all.map((a) => a.articleId),
+      ["8", "7"],
+    );
+    assert.equal(nextUnseenArticle(articles, seen).articleId, "8");
+  });
+
+  it("returns empty when nothing is eligible", () => {
+    const seen = { articles: [{ articleId: "8" }] };
+    const articles = [
+      { articleId: "9", title: "Silver Stocks - Weekly Roundup", skip: true, createdAt: "2026-09-23" },
+      { articleId: "8", title: "LTCM", skip: false, createdAt: "2026-09-22" },
+    ];
+    assert.deepEqual(unseenEligibleArticles(articles, seen), []);
+    assert.equal(nextUnseenArticle(articles, seen), null);
   });
 });
