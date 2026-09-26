@@ -219,7 +219,7 @@ function DesktopNavFlyout({
     >
       <Link
         to={hubHref}
-        className="whitespace-nowrap text-nav text-muted hover:text-gold-soft"
+        className={`site-nav-link inline-flex items-center whitespace-nowrap px-2 py-1 text-nav ${open ? "is-open" : ""}`}
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
@@ -233,13 +233,13 @@ function DesktopNavFlyout({
           aria-label={label}
           className="absolute top-full left-0 z-50 mt-0 min-w-[14rem] pt-2"
         >
-          <div className="rounded-xl bg-surface py-2 shadow-[var(--shadow-border)]">
+          <div className="site-nav-flyout">
             {items.map((item) => (
               <NavMenuLink
                 key={item.href}
                 item={item}
                 onNavigate={() => setOpen(false)}
-                className="flex min-h-10 items-center px-3 text-sm text-fg hover:bg-raised hover:text-gold-soft"
+                className="site-nav-menu-item"
               />
             ))}
           </div>
@@ -266,12 +266,12 @@ function MobileNavSection({
   return (
     <div>
       <div className="flex min-h-11 items-center gap-1">
-        <Link to={hubHref} onClick={onNavigate} className="flex min-h-11 flex-1 items-center text-nav text-fg">
+        <Link to={hubHref} onClick={onNavigate} className={`site-nav-mobile-link ${open ? "is-open" : ""}`}>
           {label}
         </Link>
         <button
           type="button"
-          className="grid size-11 place-items-center text-muted hover:text-gold-soft"
+          className={`grid size-11 place-items-center rounded-md text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold)_10%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={open ? `Hide ${label} sections` : `Show ${label} sections`}
@@ -281,7 +281,7 @@ function MobileNavSection({
         </button>
       </div>
       {open ? (
-        <div id={panelId} className="mb-1 ml-3 flex flex-col border-l border-line pl-3">
+        <div id={panelId} className="site-nav-mobile-panel">
           {items
             .filter((item) => item.href !== hubHref)
             .map((item) => (
@@ -289,7 +289,7 @@ function MobileNavSection({
                 key={item.href}
                 item={item}
                 onNavigate={onNavigate}
-                className="flex min-h-11 items-center text-sm text-muted hover:text-gold-soft"
+                className="site-nav-menu-item min-h-11 text-muted"
               />
             ))}
         </div>
@@ -323,7 +323,7 @@ export function SiteShell({
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="shrink-0 whitespace-nowrap text-nav text-muted hover:text-gold-soft"
+                  className="site-nav-link shrink-0 whitespace-nowrap px-2 py-1 text-nav"
                 >
                   {item.label}
                 </Link>
@@ -366,7 +366,7 @@ export function SiteShell({
                   key={item.href}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-11 items-center text-nav text-fg"
+                  className="site-nav-mobile-link"
                 >
                   {item.label}
                 </Link>

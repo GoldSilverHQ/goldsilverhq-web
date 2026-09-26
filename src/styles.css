@@ -88,6 +88,97 @@ html {
       0 0 0 1px color-mix(in oklab, var(--color-gold-deep) 55%, transparent);
   }
 
+  /* Header nav: one radius language + gold hover/selected (desktop flyouts + mobile accordion). */
+  .site-nav-link {
+    border-radius: var(--radius-md);
+    color: var(--color-muted);
+    transition:
+      color 120ms ease,
+      background-color 120ms ease;
+  }
+
+  .site-nav-link:hover {
+    color: var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold) 10%, transparent);
+  }
+
+  .site-nav-link[data-status="active"],
+  .site-nav-link[aria-current="page"],
+  .site-nav-link.is-open {
+    color: var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold) 14%, transparent);
+  }
+
+  .site-nav-flyout {
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    padding: 0.375rem;
+    box-shadow:
+      var(--shadow-border),
+      0 0 0 1px var(--color-line-gold);
+  }
+
+  .site-nav-menu-item {
+    display: flex;
+    min-height: 2.5rem;
+    align-items: center;
+    border-radius: var(--radius-md);
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-fg);
+    transition:
+      color 120ms ease,
+      background-color 120ms ease;
+  }
+
+  .site-nav-menu-item:hover {
+    color: var(--color-gold-soft);
+    background: color-mix(in oklab, var(--color-gold) 14%, transparent);
+  }
+
+  .site-nav-menu-item[data-status="active"],
+  .site-nav-menu-item[aria-current="page"] {
+    color: var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold) 18%, transparent);
+  }
+
+  .site-nav-mobile-link {
+    display: flex;
+    min-height: 2.75rem;
+    flex: 1;
+    align-items: center;
+    border-radius: var(--radius-md);
+    padding-inline: 0.5rem;
+    font-size: var(--text-nav);
+    color: var(--color-fg);
+    transition:
+      color 120ms ease,
+      background-color 120ms ease;
+  }
+
+  .site-nav-mobile-link:hover {
+    color: var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold) 10%, transparent);
+  }
+
+  .site-nav-mobile-link[data-status="active"],
+  .site-nav-mobile-link[aria-current="page"],
+  .site-nav-mobile-link.is-open {
+    color: var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold) 14%, transparent);
+  }
+
+  .site-nav-mobile-panel {
+    margin-bottom: 0.25rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    border-left: 1px solid var(--color-line-gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  }
+
   .cb-bar-row {
     display: grid;
     grid-template-columns: minmax(6.5rem, 8rem) 1fr minmax(4.5rem, auto);
