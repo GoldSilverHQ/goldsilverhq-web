@@ -272,7 +272,7 @@ function MobileNavSection({
         </Link>
         <button
           type="button"
-          className={`grid size-11 place-items-center rounded-sm text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold)_12%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
+          className={`grid size-11 place-items-center rounded-sm text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold-soft)_14%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={open ? `Hide ${label} sections` : `Show ${label} sections`}

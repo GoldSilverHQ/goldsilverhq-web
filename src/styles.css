@@ -99,14 +99,14 @@ html {
 
   .site-nav-link:hover {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 12%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 14%, transparent);
   }
 
   .site-nav-link[data-status="active"],
   .site-nav-link[aria-current="page"],
   .site-nav-link.is-open {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 16%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 18%, transparent);
   }
 
   .site-nav-flyout {
@@ -133,13 +133,13 @@ html {
 
   .site-nav-menu-item:hover {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 16%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 16%, transparent);
   }
 
   .site-nav-menu-item[data-status="active"],
   .site-nav-menu-item[aria-current="page"] {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 20%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 20%, transparent);
   }
 
   .site-nav-mobile-link {
@@ -158,14 +158,14 @@ html {
 
   .site-nav-mobile-link:hover {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 12%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 14%, transparent);
   }
 
   .site-nav-mobile-link[data-status="active"],
   .site-nav-mobile-link[aria-current="page"],
   .site-nav-mobile-link.is-open {
     color: var(--color-gold);
-    background: color-mix(in oklab, var(--color-gold) 16%, transparent);
+    background: color-mix(in oklab, var(--color-gold-soft) 18%, transparent);
   }
 
   .site-nav-mobile-panel {
