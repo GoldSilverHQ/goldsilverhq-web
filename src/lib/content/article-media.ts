@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/september-1971-official-gold-price",
+    src: "/images/blog/september-1971-official-gold-price.jpg",
+    ogSrc: "/og/cards/blog-september-1971-official-gold-price.jpg",
+    alt: "Gold bar stamped $35, struck through, beside a larger $38 — title image for the September 1971 official gold-price note.",
+    caption: "26 September 1971 — Group of Ten talks on the road from $35 to $38.",
+    credit: "Title image from the GoldSilverHQ X Article on the September 1971 gold-price meeting.",
+  },
+  {
     path: "/blog/china-1934-silver-appeal",
     src: "/images/blog/china-1934-silver-appeal.jpg",
     ogSrc: "/og/cards/blog-china-1934-silver-appeal.jpg",

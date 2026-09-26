@@ -3094,7 +3094,95 @@ const newton1717Guinea: Section[] = [
   },
 ];
 
+/** Blog: 26 September 1971 G-10 — longer site essay than the X Article. */
+const september1971OfficialGoldPrice: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **26 September 1971**, Treasury Secretary John B. Connally sat as chairman of a Group of Ten ministerial meeting in Washington. Six weeks earlier, President Richard Nixon had suspended the convertibility of dollars into U.S. Treasury gold for foreign official holders. That suspension is the closing of the [gold window](/history/20th-century/bretton-woods-nixon-1971). It ended the practical heart of Bretton Woods.",
+      "Major currencies were already floating. The United States had placed a temporary **10 percent** surcharge on dutiable imports. Allies wanted new exchange-rate parities, an end to the surcharge, and — France above all — a higher dollar price of gold. No package was signed that Sunday. The meeting still belongs in the story. It was one of the hard bargaining stops on the road that ended, in December, with a new official gold price for the dollar.",
+    ],
+  },
+  {
+    heading: "What the room was asked to settle",
+    paragraphs: [
+      "Finance ministers and central-bank governors were there to see whether a package could be signed. On **26 September** the pieces did not move together.",
+      "A parity is the official rate a currency is supposed to hold. After the window closed, those rates were no longer being defended in the old way. Currencies were floating: the market printed a rate each day instead of a government holding one. Allies wanted new parities, a set of official rates they could live with, and they wanted the American surcharge gone. A **10 percent** extra charge on dutiable imports is leverage in a negotiation and a cost in trade at the same time.",
+      "France's demand sat in a different column. A higher dollar price of gold means more dollars per ounce at the official rate. Bretton Woods had named **$35**. Raising that figure is a devaluation of the dollar in terms of gold, and it was the American concession that would make a new set of rates politically possible. The Sunday meeting did not write that concession down. It recorded that the concession was still being refused.",
+    ],
+  },
+  {
+    heading: "The promise the meeting inherited",
+    paragraphs: [
+      "Bretton Woods had rested on a promise. Other countries pegged to the dollar, and the United States pledged to redeem official dollar balances in gold at **$35** an ounce. Official keeps the promise narrow. It was not a counter for the public. It was a channel for foreign official holders — treasuries and central banks — who could present dollars and ask for U.S. Treasury gold at the posted price.",
+      "By the late **1960s**, dollar claims abroad had grown faster than the U.S. gold stock. Inflation and a widening U.S. payments gap made the pledge look fragile. Foreign central banks converted dollars into gold. Speculators pushed funds out of the dollar. The September meeting did not discover that mismatch. It sat down six weeks after Washington had already stopped paying it.",
+    ],
+  },
+  {
+    heading: "What 15 August had already changed",
+    paragraphs: [
+      "On **15 August 1971**, Nixon cut the convertibility link, announced the surcharge, and pressed partners to revalue their currencies against the dollar without, at first, offering a U.S. gold-price change. End the metal promise. Tax imports. Ask other countries to make their currencies worth more dollars — and do not, yet, change the **$35** gold definition of the dollar.",
+      "A revaluation against the dollar, without an American gold-price move, puts the adjustment on everyone else. The dollar's gold definition stays put. France, above all, did not accept that split. The gold price was the American half of any realignment. Six weeks later, that argument was still open when the ministers took their seats.",
+    ],
+  },
+  {
+    heading: "Connally in the chair",
+    paragraphs: [
+      "Into that crisis stepped Connally. He was a former Texas governor, newly at Treasury, and by late September the rotating chair of the Group of Ten. The deputies had met in Washington on **25 September**. The ministers met on the **26th**, the day before the IMF Annual Meetings opened.",
+      "Deputies do the technical work the day before. Ministers arrive to decide. The Fund's annual meetings, opening the next day, meant the same officials would walk from a closed bargaining room into a larger public gathering with the package either signed or not. It was not signed.",
+      "European officials pressed for new parities. French authorities insisted on a change in the dollar price of gold. Trade talks, the surcharge, and whether fixed rates should return quickly were all still open. The Sunday session left them open.",
+    ],
+  },
+  {
+    heading: "A political problem, and a clean float",
+    paragraphs: [
+      "Connally's press line after the meeting made the U.S. stance plain. In the IMF's official history of those months, he characterized \"the gold question\" as primarily \"a political problem, not an economic one.\"",
+      "The line is a bargaining position. If the gold question is economic, the mismatch of claims and the gold stock forces a new price, and the meeting should name it. If it is political, Washington can refuse to name it until partners move on trade and on their own rates. Connally was telling the room which description the United States would use.",
+      "Rather than a premature decision on parities, he proposed a \"general clean float\" of major exchange rates. Clean, in that phrase, means without official intervention: governments do not step into the market to hold a rate. The proposal was a way to avoid locking parities before the gold argument was settled.",
+      "The United States was using the surcharge and the float as leverage. Partners wanted the surcharge gone and a realignment that included an American gold-price move. **26 September** recorded the deadlock, not the deal. A meeting that refuses a number can still fix the terms on which a later meeting will accept one.",
+    ],
+  },
+  {
+    heading: "What December signed",
+    paragraphs: [
+      "The deal came less than three months later. On **17–18 December 1971**, the same Group of Ten met at the Smithsonian Institution in Washington, again under Connally's chairmanship. The items on the table were the ones September had left unsigned.",
+      "In the Smithsonian Agreement, the United States agreed to propose to Congress a devaluation of the dollar in terms of gold to **$38** an ounce — roughly an **8.5 percent** rise in the official gold price. The agreement did not rewrite the statute that week. It was a promise to propose the change to Congress, once a related set of short-term trade measures was ready for scrutiny.",
+      "Other countries offered to revalue against the dollar. The net effect was about a **10.7 percent** average devaluation of the dollar against the other key currencies. The two percentages measure different things. **8.5 percent** is the gold price alone, from **$35** to **$38**. **10.7 percent** is the dollar against other currencies after those currencies also moved. A higher gold price devalues the dollar in metal. Partner revaluations devalue it further against their units.",
+      "The United States would suppress the import surcharge. Wider bands around the new rates were allowed, so a market rate could wander further before it counted as a break in the peg. Longer-term reform talks were promised. September had been the refusal. December was the bargain: a gold price for Congress, revaluations from partners, the surcharge withdrawn, wider bands, and talks still to come.",
+    ],
+  },
+  {
+    heading: "What the new price did not restore",
+    paragraphs: [
+      "Smithsonian did not save Bretton Woods. A new official gold price is a new definition of the dollar in metal. December named the price that would be proposed to Congress, together with partner revaluations and wider bands around the new rates.",
+      "Within about fifteen months, another dollar devaluation and a wave of floats ended the adjustable-peg system. An adjustable peg is a rate that stays fixed until governments agree to move it. Smithsonian was one such move: a new official gold price, partner revaluations, and wider bands. The system those numbers belonged to did not last. September is the earlier stop, when the gold-price change was still being refused.",
+      "**26 September** was the first Group of Ten ministerial Connally chaired after the gold window closed. It was the day gold was framed as politics as much as economics, and a waypoint on the path from **$35** to **$38**.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Window, meeting, refusal, bargain."],
+    list: [
+      "**15 August 1971.** Nixon suspends convertibility of dollars into U.S. Treasury gold for foreign official holders, announces a temporary **10 percent** surcharge on dutiable imports, and presses partners to revalue without, at first, a U.S. gold-price change.",
+      "**25 September 1971.** Group of Ten deputies meet in Washington.",
+      "**26 September 1971.** Ministers meet under Connally, the day before the IMF Annual Meetings open. No package is signed. In the IMF's official history of those months, he calls the gold question primarily a political problem, not an economic one, and proposes a general clean float.",
+      "**17–18 December 1971.** At the Smithsonian, again under Connally, the United States agrees to propose an official gold price of **$38** an ounce to Congress. Partners offer revaluations. The dollar's average move against the other key currencies is about **10.7 percent**. The surcharge is to be suppressed. Wider bands are allowed.",
+      "**Within about fifteen months.** Another dollar devaluation and a wave of floats end the adjustable-peg system.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1971**, America and its allies sat in Washington with currencies floating and gold off the convertibility table. They did not settle the price of gold that Sunday. By December, they had agreed to ask Congress to raise it.",
+      "The official price was to move from **$35** to **$38**. The surcharge that had pressed the negotiation was to come off. The pegs built around that bargain did not last.",
+      "It is a dated account of one Sunday's deadlock, and of the December bargain that followed it.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103888968727060480).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,
   "blog/china-1934-silver-appeal": china1934SilverAppeal,
   "blog/when-exchanges-change-the-silver-rules": exchangesChangeSilverRules,
   "blog/ltcm-1998-consortium": ltcm1998Consortium,

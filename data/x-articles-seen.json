@@ -1,9 +1,20 @@
 {
-  "updatedAt": "2026-09-25T10:24:38.000Z",
+  "updatedAt": "2026-09-26T18:30:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2103888968727060480",
+      "postId": "2103890890401948059",
+      "title": "How a September Meeting in 1971 Led to Raising the Official Gold Price",
+      "status": "mirrored",
+      "slug": "september-1971-official-gold-price",
+      "sitePath": "/blog/september-1971-official-gold-price",
+      "xArticleUrl": "https://x.com/i/article/2103888968727060480",
+      "publishedAt": "2026-09-26T16:54:11.000Z",
+      "mirroredAt": "2026-09-26T18:30:00.000Z"
+    },
     {
       "articleId": "2103038843947466754",
       "postId": "2103229128572801122",

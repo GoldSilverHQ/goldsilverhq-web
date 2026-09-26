@@ -39,8 +39,22 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 6);
-    assert.equal(listBlogPosts().length, 6);
+    assert.equal(blogPosts.length, 7);
+    assert.equal(listBlogPosts().length, 7);
+    const g10 = getBlogPost("september-1971-official-gold-price");
+    assert.ok(g10);
+    assert.equal(
+      g10.title,
+      "How a September Meeting in 1971 Led to Raising the Official Gold Price",
+    );
+    assert.deepEqual(g10.tags, ["History", "Metals"]);
+    assert.equal(g10.date, "2026-09-26");
+    assert.equal(g10.sourceXId, "2103888968727060480");
+    assert.match(g10.xArticleUrl ?? "", /x\.com\/i\/article\/2103888968727060480/);
+    assert.ok(
+      g10.summary.length >= 140 && g10.summary.length <= 160,
+      `summary length ${g10.summary.length}`,
+    );
     const china = getBlogPost("china-1934-silver-appeal");
     assert.ok(china);
     assert.equal(china.title, "The Day China Asked America to Stop Buying Silver");
@@ -78,6 +92,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/september-1971-official-gold-price",
         "/blog/china-1934-silver-appeal",
         "/blog/when-exchanges-change-the-silver-rules",
         "/blog/ltcm-1998-consortium",
@@ -91,8 +106,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 5);
-    assert.equal(listBlogPostsByTag("Metals").length, 3);
+    assert.equal(listBlogPostsByTag("History").length, 6);
+    assert.equal(listBlogPostsByTag("Metals").length, 4);
     assert.equal(listBlogPostsByTag("Markets").length, 3);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
@@ -106,6 +121,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "september-1971-official-gold-price",
       "china-1934-silver-appeal",
       "when-exchanges-change-the-silver-rules",
       "newton-1717-guinea",
@@ -133,6 +149,25 @@ describe("blog section", () => {
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
+  });
+
+  it("interlinks the September 1971 note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "september-1971-official-gold-price")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[gold window\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2103888968727060480/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("september-1971-official-gold-price");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks the 1934 China note lightly and credits the X Article once", () => {

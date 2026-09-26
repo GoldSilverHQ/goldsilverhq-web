@@ -47,6 +47,25 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "september-1971-official-gold-price",
+    title: "How a September Meeting in 1971 Led to Raising the Official Gold Price",
+    summary:
+      "On 26 September 1971 the Group of Ten met under Connally and signed no gold deal. December’s Smithsonian accord later raised the official price from $35 to $38.",
+    date: "2026-09-26",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Nixon shock 1971",
+        href: "/history/20th-century/bretton-woods-nixon-1971",
+      },
+    ],
+    relatedArticlePaths: ["/history/20th-century/bretton-woods-nixon-1971"],
+    xArticleUrl: "https://x.com/i/article/2103888968727060480",
+    sourceXId: "2103888968727060480",
+  },
+  {
     slug: "china-1934-silver-appeal",
     title: "The Day China Asked America to Stop Buying Silver",
     summary:
