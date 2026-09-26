@@ -3,15 +3,15 @@ import { describe, it } from "node:test";
 import { HISTORY_NAV_MENU, HISTORY_SUBNAV } from "./history-subnav.ts";
 
 describe("history-subnav", () => {
-  it("lists punchy chapter labels plus Year by year and VIPs", () => {
+  it("lists clear chapter labels plus Year by year and VIPs", () => {
     assert.deepEqual(
       HISTORY_SUBNAV.map((item) => item.label),
       [
-        "First coins",
-        "Banks & paper",
-        "US gold politics",
+        "Ancient money",
+        "Banks & paper money",
+        "US gold & silver politics",
         "Silver as money",
-        "Fed to Nixon",
+        "Fed, gold & 1971",
         "Year by year",
         "VIPs",
       ],
