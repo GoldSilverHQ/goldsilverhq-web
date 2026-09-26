@@ -20,6 +20,8 @@
   /* Display = same readable face as body (Figtree). Hierarchy stays size/weight. */
   --font-display: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  /* Header/footer wordmark only — pre-#141 brand serif; not used for article titles. */
+  --font-brand: "Cormorant Garamond", "Times New Roman", serif;
   /* Primary header nav links / flyout triggers / mobile panel labels (~5% over prior 0.875rem). */
   --text-nav: calc(0.875rem * 1.05);
   --radius-sm: 8px;
