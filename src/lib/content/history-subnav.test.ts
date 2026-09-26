@@ -7,11 +7,11 @@ describe("history-subnav", () => {
     assert.deepEqual(
       HISTORY_SUBNAV.map((item) => item.label),
       [
-        "Ancient coinage",
+        "First coins",
         "Banks & paper",
         "US gold politics",
-        "Silver story",
-        "1907 to 1971",
+        "Silver as money",
+        "Fed to Nixon",
         "Year by year",
         "VIPs",
       ],
