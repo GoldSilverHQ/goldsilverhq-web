@@ -39,8 +39,22 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 7);
-    assert.equal(listBlogPosts().length, 7);
+    assert.equal(blogPosts.length, 8);
+    assert.equal(listBlogPosts().length, 8);
+    const interest = getBlogPost("interest-costs-vs-us-gold");
+    assert.ok(interest);
+    assert.equal(
+      interest.title,
+      "When One Year of Interest Costs More Than All of America's Gold",
+    );
+    assert.deepEqual(interest.tags, ["Markets", "Metals"]);
+    assert.equal(interest.date, "2026-09-26");
+    assert.equal(interest.sourceXId, "2103742623928156160");
+    assert.match(interest.xArticleUrl ?? "", /x\.com\/i\/article\/2103742623928156160/);
+    assert.ok(
+      interest.summary.length >= 140 && interest.summary.length <= 160,
+      `summary length ${interest.summary.length}`,
+    );
     const g10 = getBlogPost("september-1971-official-gold-price");
     assert.ok(g10);
     assert.equal(
@@ -92,6 +106,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/interest-costs-vs-us-gold",
         "/blog/september-1971-official-gold-price",
         "/blog/china-1934-silver-appeal",
         "/blog/when-exchanges-change-the-silver-rules",
@@ -107,8 +122,8 @@ describe("blog section", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
     assert.equal(listBlogPostsByTag("History").length, 6);
-    assert.equal(listBlogPostsByTag("Metals").length, 4);
-    assert.equal(listBlogPostsByTag("Markets").length, 3);
+    assert.equal(listBlogPostsByTag("Metals").length, 5);
+    assert.equal(listBlogPostsByTag("Markets").length, 4);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
 
@@ -121,6 +136,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "interest-costs-vs-us-gold",
       "september-1971-official-gold-price",
       "china-1934-silver-appeal",
       "when-exchanges-change-the-silver-rules",
@@ -149,6 +165,26 @@ describe("blog section", () => {
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
+  });
+
+  it("interlinks the interest-vs-gold note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "interest-costs-vs-us-gold")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
+    assert.match(text, /\[central-bank gold reserves\]\(\/markets\/central-bank-gold-reserves\)/);
+    assert.equal((text.match(/\]\(\/markets\//g) ?? []).length, 2);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2103742623928156160/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("interest-costs-vs-us-gold");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks the September 1971 note lightly and credits the X Article once", () => {

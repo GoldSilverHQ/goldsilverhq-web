@@ -75,6 +75,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/gold-silver-ratio",
   "/markets/physical-silver-demand-by-country",
   "/blog",
+  "/blog/interest-costs-vs-us-gold",
   "/blog/september-1971-official-gold-price",
   "/blog/china-1934-silver-appeal",
   "/blog/when-exchanges-change-the-silver-rules",

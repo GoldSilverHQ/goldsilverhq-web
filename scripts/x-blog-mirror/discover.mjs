@@ -12,7 +12,6 @@ import {
   bearerToken,
   listRecentArticles,
   loadSeen,
-  nextUnseenArticle,
   siteAlreadyHasArticle,
   REPO_ROOT,
 } from "./lib.mjs";
@@ -28,12 +27,43 @@ async function main() {
   }
 
   const seen = loadSeen();
+  const known = new Set((seen.articles ?? []).map((a) => String(a.articleId)));
   const articles = await listRecentArticles({ maxResults: 50 });
-  let next = nextUnseenArticle(articles, seen);
-  if (next && siteAlreadyHasArticle(next)) {
-    console.log(`::notice::Candidate ${next.articleId} already on site; treat as seen.`);
-    next = null;
+
+  const skippedTitle = articles.filter((a) => a.skip);
+  const alreadySeen = articles.filter((a) => !a.skip && known.has(String(a.articleId)));
+  const onSite = articles.filter(
+    (a) => !a.skip && !known.has(String(a.articleId)) && siteAlreadyHasArticle(a),
+  );
+  const eligible = articles.filter(
+    (a) => !a.skip && !known.has(String(a.articleId)) && !siteAlreadyHasArticle(a),
+  );
+
+  // Near-miss log: why candidates did not become the pending pick.
+  for (const a of skippedTitle) {
+    console.log(
+      `::notice::near-miss skip-title: ${a.articleId} — ${a.title || "(no title)"}`,
+    );
   }
+  for (const a of onSite) {
+    console.log(
+      `::notice::near-miss already-on-site: ${a.articleId} — ${a.title || "(no title)"}`,
+    );
+  }
+  if (eligible.length > 1) {
+    for (const a of eligible.slice(1)) {
+      console.log(
+        `::notice::near-miss queued-behind-newer: ${a.articleId} — ${a.title || "(no title)"} (at most one per run)`,
+      );
+    }
+  }
+  if (alreadySeen.length) {
+    console.log(
+      `::notice::near-miss already-seen: ${alreadySeen.length} Article(s) already in seen-list.`,
+    );
+  }
+
+  let next = eligible[0] ?? null;
 
   if (!next) {
     console.log("::notice::x-blog-mirror: no new eligible Articles.");
@@ -53,12 +83,18 @@ async function main() {
       plainText: next.plainText,
       previewText: next.previewText,
     },
+    queuedBehind: eligible.slice(1).map((a) => ({
+      articleId: a.articleId,
+      title: a.title,
+      articleUrl: a.articleUrl,
+    })),
     instructions: [
       "Write a LONGER site essay (≈1,200–1,800 words) from plainText — same facts, expand context, no invented numbers.",
       "Reuse title spine; BaFin-clean; no stock tips; credit X Article once.",
       "Download cover with scripts/x-blog-mirror/download-cover.mjs; register blog.ts + bodies.ts + article-media.ts + sitemap.",
       "Append data/x-articles-seen.json; commit: blog: mirror X Article <id> — <short title>",
       "Open PR; merge when CI green (same auto-merge policy as desk drafts).",
+      "Note: compose/articles/edit/{id} is the author editor URL — public form is /i/article/{id}. Drafts are invisible to this discover path.",
     ],
   };
   writeFileSync(pendingPath, `${JSON.stringify(pending, null, 2)}\n`);

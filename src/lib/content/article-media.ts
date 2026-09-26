@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/interest-costs-vs-us-gold",
+    src: "/images/blog/interest-costs-vs-us-gold.jpg",
+    ogSrc: "/og/cards/blog-interest-costs-vs-us-gold.jpg",
+    alt: "Gold bars beside rising yield charts — title image for the interest-costs versus U.S. gold note.",
+    caption: "One year’s interest set beside the Treasury’s reported gold stock.",
+    credit: "Title image from the GoldSilverHQ X Article on interest costs versus America’s gold.",
+  },
+  {
     path: "/blog/september-1971-official-gold-price",
     src: "/images/blog/september-1971-official-gold-price.jpg",
     ogSrc: "/og/cards/blog-september-1971-official-gold-price.jpg",
