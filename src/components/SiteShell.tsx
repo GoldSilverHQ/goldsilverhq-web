@@ -150,13 +150,14 @@ function NavMenuLink({
         params={{ cluster: item.cluster }}
         className={className}
         onClick={onNavigate}
+        activeOptions={{ exact: true }}
       >
         {item.label}
       </Link>
     );
   }
   return (
-    <Link to={item.href} className={className} onClick={onNavigate}>
+    <Link to={item.href} className={className} onClick={onNavigate} activeOptions={{ exact: true }}>
       {item.label}
     </Link>
   );
@@ -271,7 +272,7 @@ function MobileNavSection({
         </Link>
         <button
           type="button"
-          className={`grid size-11 place-items-center rounded-md text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold)_10%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
+          className={`grid size-11 place-items-center rounded-sm text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold)_12%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={open ? `Hide ${label} sections` : `Show ${label} sections`}
