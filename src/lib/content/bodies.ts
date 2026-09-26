@@ -3220,14 +3220,14 @@ export const practiceHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between those two facts sit fabrication, a premium, a place the object lives, and a later buyer who must believe the stamp. People who handle physical gold and silver already live in that gap — form, premium, storage, authenticity, and starting size as ordinary mechanics of the object.",
-      "Why two metals kept winning in trade is an older question: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — portability, durability, divisibility, recognizability — metal before the mint. The words hard, fiat, and backed settle under [Sound Money](/sound-money). Dated collapses and statute fights live in [Sound Money History](/history). Current figures sit under [Markets](/markets).",
+      "Why two metals kept winning in trade is an older question: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — portability, durability, divisibility, recognizability — metal before the mint. Hard, fiat, and backed are the words that have to hold still when a stamp, a premium, or a vault invoice is in front of you; those definitions live under [Sound Money](/sound-money). Weimar, the Fed, and **1971** are told in [Sound Money History](/history). Official book rates and country offtake sit under [Markets](/markets).",
     ],
   },
   {
-    heading: "The object, not the statute",
+    heading: "The object in front of you",
     paragraphs: [
-      "A mint that lightens a coin, a bank that writes a receipt, or a statute that closes a gold window belongs to history. A leftover book rate, a reserve line, or a gold–silver quotient on a named date belongs to Markets. Handling is the object in front of you: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
-      "A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Weimar, the Fed, and **1971** are dated cases. Country offtake tables and official reserve lines are market captions. If a word is slipping — “backed,” “hard,” “advice” — the [Sound Money](/sound-money) pages hold it still.",
+      "A mint that lightens a coin, a bank that writes a receipt, or a statute that closes a gold window is a dated case. A leftover book rate, a reserve line, or a gold–silver quotient on a named date is a caption on the tape. Handling is the object: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
+      "A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Country offtake tables and official reserve lines are market captions. When “backed” or “hard” slips, the [Sound Money](/sound-money) pages hold the word still.",
     ],
   },
   {

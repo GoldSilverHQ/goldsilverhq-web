@@ -435,23 +435,23 @@ export function FullDesk() {
               the Official gold tab.
             </p>
             <p className="mt-6 max-w-2xl text-sm text-muted">
-              Mine output and months of visible cover are published survey figures, not equity tips. Read the{" "}
+              Mine output and months of visible cover are published survey figures. The{" "}
               <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
                 mining vs market ratio
-              </a>
-              ,{" "}
+              </a>{" "}
+              and{" "}
               <a href="/markets/physical-silver-demand-by-country" className="text-gold hover:text-gold-soft">
                 physical silver demand by country
-              </a>
-              ,{" "}
+              </a>{" "}
+              date those counts;{" "}
               <a href="/history/silver/monetary-and-industry" className="text-gold hover:text-gold-soft">
                 silver’s monetary and industrial roles
-              </a>
-              , or{" "}
+              </a>{" "}
+              and{" "}
               <a href="/sound-money/hard-money-vs-fiat" className="text-gold hover:text-gold-soft">
                 hard money vs fiat
-              </a>
-              .
+              </a>{" "}
+              are the older questions beside them.
             </p>
           </>
         ) : null}

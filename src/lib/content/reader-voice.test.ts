@@ -285,6 +285,8 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
   it("keeps home and desk chrome free of door / outline voice", () => {
     const home = readFileSync(join(root, "components/HomeEditorial.tsx"), "utf8");
     assert.doesNotMatch(home, /Four doors|doors into/i);
+    const dash = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.doesNotMatch(dash, /not a stock tip|Start with the/i);
     const desk = readFileSync(join(root, "routes/desk.tsx"), "utf8");
     assert.doesNotMatch(desk, /Four doors|If you arrived|does not sell metal/i);
   });
@@ -293,7 +295,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const text = bodyText(practiceHubBody);
     assert.doesNotMatch(
       text,
-      /This overview stays|leave for History|standing line|These pages inform|Mixing the jobs|educational menu|not a shop|Information only/i,
+      /This overview stays|leave for History|standing line|These pages inform|Mixing the jobs|educational menu|not a shop|Information only|Current figures sit under|Dated collapses and statute fights live in|belongs to history|belongs to Markets/i,
     );
   });
 
