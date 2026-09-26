@@ -78,7 +78,7 @@ export const marketsHub = {
     { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
     { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
     { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
-    { title: "Sound Money History — what happened", href: "/history" },
+    { title: "Sound Money History", href: "/history" },
   ],
 };
 
