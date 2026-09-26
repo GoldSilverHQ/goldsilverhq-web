@@ -3094,6 +3094,79 @@ const newton1717Guinea: Section[] = [
   },
 ];
 
+/** Blog: interest vs U.S. gold stock — longer site essay than the X Article. */
+const interestCostsVsUsGold: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Two numbers usually live in different worlds. One is the value of all the gold the United States government reports it owns. The other is what the government pays each year to borrow money. This week they ended up side by side.",
+      "A bond yield is simply the interest rate a government has to offer when it borrows for a fixed number of years. When yields rise, new borrowing costs more. Right now they are rising in several large markets at once. By that count, **10-year** yields are at their highest since **1996** in Japan, since **2007** in the United States, and since **2008** in Britain and France. The U.S. number matches the Treasury’s own daily data: the **10-year** note closed at **5.17%** on **25 September**.",
+    ],
+  },
+  {
+    heading: "How higher yields become a bigger bill",
+    paragraphs: [
+      "Here is the part most headlines skip. The government does not borrow once. It borrows all the time, because old debt keeps coming due. When a bond matures, the Treasury usually pays it off by selling a new one. That is what rolling over debt means. The old loan may have cost **1.5%**. The new one costs whatever lenders ask for today.",
+      "That swap happens trillions of dollars at a time. Treasury data show the average interest rate on all U.S. marketable debt was **1.42%** in January **2022**. By August **2026** it was **3.48%**. Spread that change across a debt of more than **$40 trillion** and the bill grows even if no new spending is ever approved.",
+      "And it has grown. In fiscal year **2020** the government’s net interest cost was **$345 billion**. In fiscal **2025** it was **$970 billion**. In just the first eleven months of fiscal **2026** (October **2025** to August **2026**) it reached **$1.017 trillion**, according to the Monthly Treasury Statement. The broader “gross” figure, which also counts interest the government pays into its own trust funds such as Social Security, came to **$1.267 trillion** over the same eleven months.",
+      "Net and gross are not rival stories. Net is what the public accounts treat as the government’s interest cost to others. Gross adds the interest that stays inside the government’s own books — payments into trust funds. Both lines rose. The larger one is the one that sits closest to the gold stock’s market value.",
+    ],
+  },
+  {
+    heading: "Put the gold next to it",
+    paragraphs: [
+      "The Treasury reports holding **261.5 million** troy ounces of gold, most of it at Fort Knox, West Point, and Denver. To value it at a market price, you multiply ounces by price. At about **$4,300** an ounce, roughly where gold traded on **25 September**, that comes to about **$1.12 trillion**, in line with the short post’s **$1.13 trillion**.",
+      "Now compare. **$1.267 trillion** of gross interest in eleven months works out to about **$3.8 billion** a day. At that pace, interest matches the value of the entire gold stock in roughly ten months. Even on the narrower net measure, one year of interest is now about as large as all the gold.",
+      "The government’s own books make the gold look smaller still. It is recorded at **$42.22** an ounce, a legal book value set in **1973** and never updated — the leftover rate explained under [official gold book value](/markets/official-gold-book-value). At that price the whole stock is worth **$11.04 billion**. That is less than three days of interest at the gross eleven-month pace.",
+      "Book value and market value are not competing truths about the metal. Book is the statute still written on the Treasury line. Market is ounces times a dated quote. The interest bill does not care which column a reader prefers. It grows with every rollover either way.",
+    ],
+  },
+  {
+    heading: "What gold price would cover the debt?",
+    paragraphs: [
+      "Flip the question around: what would gold have to cost for those ounces to equal the debt? Divide the debt by the ounces. **$40.1 trillion** ÷ **261.5 million** ounces ≈ **$153,300** an ounce. That is the short post’s “100% cover” price, and the Treasury’s own stock and debt figures back it up. The **10%** and **20%** versions — **$15,300** and **$30,700** — are just a tenth and a fifth of that.",
+      "At today’s price, the gold covers less than **3%** of the debt. Cover here is arithmetic, not a policy proposal. It is ounces into dollars on one side, and the stock of marketable claims on the other. The same ounces appear in the [central-bank gold reserves](/markets/central-bank-gold-reserves) story as a national stock. The share of debt they would extinguish at any chosen price is a different sentence.",
+    ],
+  },
+  {
+    heading: "The last time Washington repriced its gold",
+    paragraphs: [
+      "This is not the first time the official gold price and the government’s money problems have met. In January **1934** the Gold Reserve Act raised the official price from **$20.67** to **$35** an ounce. Overnight, the Treasury’s gold went from about **$4.2 billion** to **$7.0 billion** on paper, and **$2 billion** of that gain was used to set up the Exchange Stabilization Fund.",
+      "The official price was raised twice more in the early **1970s**, finally to **$42.22** in **1973**. It has stayed there ever since, while the market price kept moving. Repricing changed the books. It did not create new ounces. The stock that sits beside today’s interest bill is still counted in the same **261.5 million** ounces, month after month.",
+      "The interest burden has a history too. Measured against the size of the economy, net interest peaked at **3.2%** in **1991**, the highest since World War II. The Congressional Budget Office projected **3.3%** for **2026**, which would be a new record on that measure.",
+    ],
+  },
+  {
+    heading: "What moves, and what does not",
+    paragraphs: [
+      "The gold stock has barely changed in decades: **261.5 million** ounces, printed again and again. The interest bill changes with every bond that rolls over, and right now each rollover resets it a little higher when the new rate is above the old one.",
+      "A yield is a price for new money. An average interest rate on the whole book is a lagging average of past deals still outstanding. Raise the new-money price, and the average climbs only as paper matures and is replaced. That is why the jump from **1.42%** in January **2022** to **3.48%** in August **2026** is a story about time as much as about one print on the **10-year**.",
+      "Put the two clocks together and the comparison this week is almost mechanical. The metal stock is nearly fixed. The interest line is not. When gross interest over eleven months reaches **$1.267 trillion**, and the same ounces at about **$4,300** are worth about **$1.12 trillion**, the two worlds share a page whether or not anyone meant them to.",
+    ],
+  },
+  {
+    heading: "The figures in order",
+    paragraphs: ["Yields, the average coupon, the interest bill, the ounces."],
+    list: [
+      "**25 September.** U.S. **10-year** yield closes at **5.17%**. Contemporaneous counts put **10-year** yields at multi-decade highs in Japan (since **1996**), the United States (since **2007**), and Britain and France (since **2008**).",
+      "**January 2022 → August 2026.** Average interest rate on all U.S. marketable debt rises from **1.42%** to **3.48%**.",
+      "**Fiscal 2020 / 2025.** Net interest **$345 billion**, then **$970 billion**.",
+      "**October 2025 – August 2026.** Net interest **$1.017 trillion**; gross interest **$1.267 trillion** (Monthly Treasury Statement).",
+      "**Stock.** Treasury gold **261.5 million** troy ounces. At about **$4,300**, roughly **$1.12 trillion**. At book **$42.22**, **$11.04 billion**.",
+      "**Cover arithmetic.** **$40.1 trillion** ÷ **261.5 million** ounces ≈ **$153,300** an ounce for a full match; **$15,300** and **$30,700** for **10%** and **20%**.",
+      "**1934 / 1973.** Official price raised to **$35**, later to **$42.22**; book rate unchanged since.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Two ledgers, one week. The borrowing line is measured in interest. The gold line is measured in ounces that barely move. Set them next to each other and the interest bill, on the gross eleven-month count, is already in the same neighborhood as the market value of the stock.",
+      "It is a dated comparison of Treasury figures, not a forecast. The ounces are the ones the Treasury reports. The interest is the bill the Monthly Treasury Statement already printed.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103742623928156160).",
+    ],
+  },
+];
+
 /** Blog: 26 September 1971 G-10 — longer site essay than the X Article. */
 const september1971OfficialGoldPrice: Section[] = [
   {
@@ -3182,6 +3255,7 @@ const september1971OfficialGoldPrice: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
   "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,
   "blog/china-1934-silver-appeal": china1934SilverAppeal,
   "blog/when-exchanges-change-the-silver-rules": exchangesChangeSilverRules,

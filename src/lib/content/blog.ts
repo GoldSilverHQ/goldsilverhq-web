@@ -47,6 +47,32 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "interest-costs-vs-us-gold",
+    title: "When One Year of Interest Costs More Than All of America's Gold",
+    summary:
+      "U.S. gross interest reached $1.267T in eleven months of FY2026 — roughly the market value of the Treasury’s reported 261.5 million ounces of gold.",
+    date: "2026-09-26",
+    status: "ready",
+    tags: ["Markets", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Official gold book value",
+        href: "/markets/official-gold-book-value",
+      },
+      {
+        title: "Central-bank gold reserves",
+        href: "/markets/central-bank-gold-reserves",
+      },
+    ],
+    relatedArticlePaths: [
+      "/markets/official-gold-book-value",
+      "/markets/central-bank-gold-reserves",
+    ],
+    xArticleUrl: "https://x.com/i/article/2103742623928156160",
+    sourceXId: "2103742623928156160",
+  },
+  {
     slug: "september-1971-official-gold-price",
     title: "How a September Meeting in 1971 Led to Raising the Official Gold Price",
     summary:
