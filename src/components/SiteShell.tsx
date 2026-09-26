@@ -289,7 +289,7 @@ function MobileNavSection({
                 key={item.href}
                 item={item}
                 onNavigate={onNavigate}
-                className="site-nav-menu-item min-h-11 text-muted"
+                className="site-nav-menu-item min-h-11"
               />
             ))}
         </div>
