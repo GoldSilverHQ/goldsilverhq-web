@@ -89,19 +89,19 @@ export function HomeDashboard() {
         <MinePaceTicker />
       </div>
       <p className="mt-3 max-w-3xl text-sm text-muted">
-        Mine supply is ounces leaving the ground — not a stock tip. Start with the{" "}
+        Mine supply is ounces leaving the ground this year. The{" "}
         <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
           mining vs market ratio
-        </a>
-        , open{" "}
+        </a>{" "}
+        puts that beside the price quotient;{" "}
         <Link to="/desk" className="text-gold hover:text-gold-soft">
-          Stocks &amp; flows on the desk
-        </Link>
-        , or the{" "}
+          Stocks &amp; flows
+        </Link>{" "}
+        and the{" "}
         <Link to="/markets" className="text-gold hover:text-gold-soft">
           markets
         </Link>{" "}
-        hub.
+        pages carry the dated tables.
       </p>
 
       <section className="mt-3 grid gap-3 sm:grid-cols-2">

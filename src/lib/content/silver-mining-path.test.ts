@@ -87,12 +87,14 @@ describe("silver-mining intent path (existing URLs only)", () => {
     assert.match(home, /Mine supply is ounces leaving the ground/);
     assert.match(home, /markets\/gold-silver-ratio/);
     assert.match(home, /to="\/desk"/);
+    assert.doesNotMatch(home, /not a stock tip|Start with the/i);
 
     const desk = readFileSync(join(root, "components/FullDesk.tsx"), "utf8");
     assert.match(desk, /not a miner tip or a fair-value claim/);
     assert.match(desk, /mining vs market ratio/);
     assert.match(desk, /monetary-and-industry/);
     assert.match(desk, /hard-money-vs-fiat/);
+    assert.doesNotMatch(desk, /not equity tips\. Read the/i);
   });
 });
 
