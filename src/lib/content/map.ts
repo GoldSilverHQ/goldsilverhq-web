@@ -433,7 +433,7 @@ export const historyClusters: Cluster[] = [
           "The 1694 charter is war finance with a note issue attached — not a city giro table. In 1797 the Bank stopped paying gold for notes (Restriction); gold payout returned in the 1820s (resumption).",
         status: "ready",
         paragraphs: [
-          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam. Its notes became the ordinary paper of London. When gold payout stopped in 1797 (Restriction) and returned in the 1820s (resumption), that was England’s own suspend–resume cycle — not 1720 and not Weimar.",
+          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam’s civic giro. Its notes became the ordinary paper of London. In 1797 the Bank stopped paying gold for those notes; full gold payout returned in the 1820s. England suspended and resumed the same window.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -456,7 +456,7 @@ export const historyClusters: Cluster[] = [
           "How John Law’s bank and Mississippi Company turned paper credit into a 1720 collapse — an early case of notes without a trusted stop.",
         status: "ready",
         paragraphs: [
-          "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt. It is not the same episode as France’s later assignats, and it is not “France printed Weimar.”",
+          "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -473,12 +473,12 @@ export const historyClusters: Cluster[] = [
       },
       {
         slug: "assignats",
-        title: "Assignats and early paper collapses",
+        title: "Assignats",
         summary:
-          "Revolutionary France issued land-tied paper — the assignats — then over-issued it until the unit died. Not John Law’s 1720, not England’s Restriction, not Weimar.",
+          "Revolutionary France paid with assignats — paper tied to seized church and émigré land — then issued more than land sales could retire. By 1795–96 the unit was dead.",
         status: "ready",
         paragraphs: [
-          "Assignats began as paper tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By 1795–96 the paper was not a unit anyone would hold. That is a revolutionary fiscal instrument with a land story. It is not John Law’s 1720 bank-and-company System, not England’s Restriction and resumption, and not Germany’s 1923 mark.",
+          "Assignats began as paper tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By 1795–96 shops still held the slips, but coin had taken the unit’s job. France returned toward metal by abandoning the paper, not by redeeming it later at an old metal definition.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -727,7 +727,7 @@ export const historyClusters: Cluster[] = [
         slug: "1933-gold-recall",
         title: "1933 U.S. gold recall (Executive Order 6102)",
         summary:
-          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Not the 1914 convertibility break, and not the 1971 gold-window close.",
+          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Official gold became a Treasury asset.",
         status: "ready",
         paragraphs: [
           "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of 1934 then vested title to monetary gold in the United States and reset the official price from $20.67 to $35 an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",

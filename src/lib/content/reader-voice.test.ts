@@ -163,6 +163,25 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     }
   });
 
+  it("keeps episode summaries and leads off contrast-list SEO positioning", () => {
+    // Forced “Not A, not B, not C” / “This is not X, and it is not Y” shuttles that
+    // name-check other episodes to position the page — not ordinary “not metal itself.”
+    const CONTRAST_LIST =
+      /Not John Law|not England[’']s Restriction|not Weimar|France printed Weimar|not 1720 and not Weimar|This is not John Law|This is not the assignats|It is not the same episode as France[’']s later|Not the 1914 convertibility|This is not 1914, and it is not the 1971|This is not 1797, and it is not the American|It is not the assignats of the 1790s, and it is not Germany|Weimar was not \*\*1720\*\* again|A paper collapse in Regency France is not Weimar/i;
+
+    for (const cluster of historyClusters) {
+      for (const ep of cluster.episodes) {
+        const blurb = [ep.title, ep.summary, ...(ep.paragraphs ?? [])].join("\n");
+        assert.doesNotMatch(blurb, CONTRAST_LIST, `${cluster.slug}/${ep.slug} map blurb`);
+      }
+    }
+
+    const assignats = bodyText(getBody("banks-paper", "assignats")!);
+    assert.doesNotMatch(assignats, CONTRAST_LIST, "assignats body");
+    assert.match(assignats, /biens nationaux/);
+    assert.doesNotMatch(assignats, /Not John Law[’']s 1720, not England/i);
+  });
+
   it("keeps Silver Thursday off the information-vs-advice shuttle", () => {
     const text = bodyText(getBody("silver", "silver-thursday")!);
     assert.doesNotMatch(text, /information versus advice|information-not-advice/i);

@@ -144,7 +144,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "Law founds a bank whose notes are payable in coin under stated rules. The Mississippi collapse is 1720.",
     paragraphs: [
       "In 1716 John Law founded the Banque Générale. The notes were a convenient claim on metal, not metal itself. The crown later takes a closer grip, and the bank is reorganized as the Banque Royale.",
-      "The share mania and the break belong to 1719 and 1720, not to this founding year. This is not the Bank of England, and it is not the assignats.",
+      "The share mania and the break belong to 1719 and 1720, not to this founding year.",
     ],
     more: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
   }),
@@ -153,7 +153,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "John Law’s notes and Mississippi shares break in the same year.",
     paragraphs: [
       "John Law’s System tied a note-issuing bank to the Mississippi Company. In 1720 the paper and the shares came down together. Paris had treated the notes as money until it did not.",
-      "This is not the assignats of the 1790s, and it is not Germany in 1923. It is one regency’s paper-and-shares collapse.",
+      "That is one regency’s paper-and-shares collapse — notes and Mississippi equity breaking in the same year.",
     ],
     more: { href: "/history/banks-paper/john-law", title: "John Law and the Mississippi Bubble" },
   }),
@@ -197,7 +197,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "Revolutionary France recasts land-tied paper as everyday money. A September issue is called a ceiling. It does not hold.",
     paragraphs: [
       "In April 1790 the assignats were recast as circulating money. Interest was cut, then removed. Smaller notes followed, until the paper could pay wages and buy bread. What had been a fiscal instrument became the everyday unit.",
-      "In September 1790 the Assembly added a large new issue and called the total a ceiling. The ceiling did not hold. This is not John Law’s 1720, and it is not England’s 1797 stop on gold payout.",
+      "In September 1790 the Assembly added a large new issue and called the total a ceiling. The ceiling did not hold. Later years added more paper against the same land story, then against war.",
     ],
     more: { href: "/history/banks-paper/assignats", title: "Assignats" },
   }),
@@ -219,7 +219,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "The Bank of England stops paying gold for its notes. The pound keeps its name.",
     paragraphs: [
       "In February 1797 an Order in Council told the Bank of England to stop paying gold for its notes. The Bank Restriction Act made that suspension statute. Notes stayed in London’s tills. Holders could no longer test the pound in coin at Threadneedle Street.",
-      "Gold went to a premium against paper. Full gold payout resumed in 1821, after Peel’s Act of 1819. This is not the assignats, and it is not 1914.",
+      "Gold went to a premium against paper. Full gold payout resumed in 1821, after Peel’s Act of 1819. England suspended the window and later brought it back.",
     ],
     more: { href: "/history/banks-paper/bank-of-england", title: "Bank of England" },
   }),
@@ -329,7 +329,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "The paper mark stops working. The Rentenmark is the stop that follows.",
     paragraphs: [
       "In 1923 the German mark lost practical use as a unit. The sequence starts with war finance and the Ruhr, not with a slogan about printers.",
-      "The Rentenmark is how that particular collapse was stopped. It is not a model for a later trade, and it is not John Law’s 1720.",
+      "The Rentenmark is how that particular collapse was stopped. It is not a model for a later trade.",
     ],
     more: { href: "/history/20th-century/weimar-1923", title: "Weimar hyperinflation" },
   }),
@@ -355,7 +355,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "Six years after the 1925 return, sterling leaves the gold parity.",
     paragraphs: [
       "In 1931 Britain left gold. The 1925 restoration had reused the pre-war parity. It had not rebuilt the pre-1914 order. The exit is the other half of that interwar pair.",
-      "Other interwar “gold standards” were pegs, exchange controls, and official gold — a familiar name on a different architecture. This is not 1797, and it is not the American gold recall of 1933.",
+      "Other interwar “gold standards” were pegs, exchange controls, and official gold — a familiar name on a different architecture.",
     ],
     more: { href: "/history/20th-century/classical-gold-standard-end", title: "Classical gold standard’s wartime end" },
   }),
@@ -364,7 +364,7 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
     summary: "Order 6102 calls in most private monetary gold. The official price is reset the next year.",
     paragraphs: [
       "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be turned in. Executive Order 6102 is that order. The public claim on gold at the old mint price was removed.",
-      "The Gold Reserve Act of 1934 then set the official price at $35, up from $20.67. Official gold became a Treasury asset. This is not 1914, and it is not the 1971 gold-window close.",
+      "The Gold Reserve Act of 1934 then set the official price at $35, up from $20.67. Official gold became a Treasury asset, not circulating money the public could claim at a mint window.",
     ],
     more: { href: "/history/20th-century/1933-gold-recall", title: "1933 U.S. gold recall" },
   }),
