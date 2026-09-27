@@ -1,0 +1,55 @@
+{
+  "refreshedAt": "2026-09-27T18:49:55.562Z",
+  "metrics": {
+    "usM2": {
+      "bn": 23342.8,
+      "asOf": "2026-08",
+      "source": "FRED M2SL"
+    },
+    "cpi": {
+      "value": 334.131,
+      "asOf": "2026-08",
+      "source": "FRED CPIAUCSL"
+    },
+    "eurM3": {
+      "value": 17628992353019.54,
+      "asOf": "2026-08",
+      "source": "ECB BSI M3"
+    },
+    "fx": {
+      "eurUsd": 1.1464,
+      "cnyUsd": 6.6975,
+      "jpyUsd": 156.87,
+      "asOf": "2026-09-18",
+      "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS"
+    },
+    "lbma": {
+      "clearing": {
+        "asOf": "2026-07",
+        "goldClearingDailyMoz": 15.8,
+        "source": "lbma-clearing-data.json"
+      },
+      "vaultLatest": {
+        "asOf": "2026-08",
+        "goldT": 9632,
+        "silverT": 28431,
+        "source": "lbma-vault-holdings-data.json"
+      },
+      "paired": {
+        "asOf": "2026-07",
+        "goldClearingDailyMoz": 15.8,
+        "vaultGoldT": 9534,
+        "vaultSilverT": 28213,
+        "note": "Daily-average clearing ÷ same-month end vault. Not annualised. Not COMEX."
+      }
+    }
+  },
+  "manual": [
+    "Spot Au/Ag — live in-app (Yahoo 15m → gold-api), not this cron",
+    "WGC above-ground stock / GDT / mine — survey releases",
+    "World Silver Survey / USGS MCS / IMF WEO debt",
+    "China SAFE / NBP / CNB / CBU country books — national releases",
+    "China M2 / Japan M2 — no free FRED series; keep compiled prints",
+    "COMEX OI vs registered — no same-day pair stored"
+  ]
+}

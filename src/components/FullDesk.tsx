@@ -24,7 +24,7 @@ import {
   CB_YTD_2026,
   FX_START,
   IMF_GOV_DEBT,
-  LBMA_JUL_2026,
+  LBMA_PAIR,
   SILVER_2025,
   SILVER_ETP_2025,
   USGS_MINE_2025,
@@ -171,7 +171,9 @@ export function FullDesk() {
     : "live";
   const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
   const goldLoss = spot ? dollarLostVsGold(spot.gold) : null;
-  const m2 = latestUsM2();
+  const m2Compiled = latestUsM2();
+  const usM2Bn = printers.usM2.value / 1e9;
+  const usM2AsOf = printers.usM2.asOf;
   const officialMtm = spot ? officialMtmUsd(official.world.tonnes, spot.gold) : null;
   const allGoldMtm = spot ? officialMtmUsd(WGC_STOCK.aboveGroundT, spot.gold) : null;
   const officialCover = spot ? coverPct(official.world.tonnes, spot.gold) : null;
@@ -461,16 +463,20 @@ export function FullDesk() {
             <DollarPower />
             <DeskBoard
               title="Money supply"
-              kicker={printers.source === "live" ? "latest month" : "stored July 2026"}
+              kicker={printers.source === "live" ? "latest month" : `stored ${usM2AsOf}`}
             >
               <DeskMetricTile
                 kicker="USD"
                 label="US M2"
                 unit="USD"
-                cadence="yearly"
-                asOf={String(m2.year)}
-                live={fmtUsdCompact(m2.bn * 1e9)}
-                note="FRED M2SL. 2026 is the latest month, not a completed year."
+                cadence="monthly"
+                asOf={formatAsOf(usM2AsOf)}
+                live={fmtUsdCompact(usM2Bn * 1e9)}
+                note={
+                  printers.source === "live"
+                    ? "FRED M2SL, latest month. Not a completed calendar year."
+                    : `Stored FRED M2SL (${usM2AsOf}; tip ${m2Compiled.asOf}). Live feed missed.`
+                }
               />
               <DeskMetricTile
                 kicker="EUR"
@@ -482,7 +488,7 @@ export function FullDesk() {
                 note={
                   printers.source === "live"
                     ? "ECB money stock, latest month. China and Japan stay on their July 2026 prints."
-                    : "Stored ECB print (July 2026). The live feed missed; this is the saved figure."
+                    : `Stored ECB print (${printers.eurM3.asOf}). The live feed missed; this is the saved figure.`
                 }
               />
               <DeskMetricTile
@@ -604,9 +610,9 @@ export function FullDesk() {
                 label="Clearing vs vaulted gold"
                 unit="×"
                 cadence="monthly"
-                asOf="Jul 2026"
+                asOf={formatAsOf(`${LBMA_PAIR.asOf}-01`)}
                 live={lbmaGoldClearingRatio().toFixed(3)}
-                note={`LBMA July 2026 daily average clearing (${LBMA_JUL_2026.goldClearingDailyMoz} Moz) divided by end-July London vault gold (${LBMA_JUL_2026.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.`}
+                note={`LBMA ${formatAsOf(`${LBMA_PAIR.asOf}-01`)} daily average clearing (${LBMA_PAIR.goldClearingDailyMoz} Moz) divided by same-month London vault gold (${LBMA_PAIR.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.`}
               />
               <DeskMetricTile
                 kicker="ETFs"
