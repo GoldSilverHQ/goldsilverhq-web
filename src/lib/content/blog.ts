@@ -47,6 +47,25 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "sweden-1931-left-gold",
+    title: "The Night Sweden Left Gold and Aimed at Prices Instead",
+    summary:
+      "Late on 27 September 1931 Sweden ended the krona’s gold convertibility. Hamrin named domestic purchasing power, not a new gold parity, as the guide.",
+    date: "2026-09-27",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: ["/sound-money/inflation-purchasing-power"],
+    xArticleUrl: "https://x.com/i/article/2104261329636712450",
+    sourceXId: "2104261329636712450",
+  },
+  {
     slug: "interest-costs-vs-us-gold",
     title: "When One Year of Interest Costs More Than All of America's Gold",
     summary:

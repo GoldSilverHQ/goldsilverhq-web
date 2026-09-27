@@ -139,6 +139,6 @@ describe("article hero + separate OG", () => {
     );
     assert.ok(articleHeroOgOverridePaths().includes("/history/america/jackson-and-the-bank"));
     assert.ok(articleHeroOgOverridePaths().includes("/sound-money/what-is-sound-money"));
-    assert.equal(articleHeroOgOverridePaths().length, 41);
+    assert.equal(articleHeroOgOverridePaths().length, 42);
   });
 });

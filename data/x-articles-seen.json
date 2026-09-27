@@ -1,9 +1,30 @@
 {
-  "updatedAt": "2026-09-26T18:45:00.000Z",
+  "updatedAt": "2026-09-27T18:20:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2104261329636712450",
+      "postId": "2104262739665576407",
+      "title": "The Night Sweden Left Gold and Aimed at Prices Instead",
+      "status": "mirrored",
+      "slug": "sweden-1931-left-gold",
+      "sitePath": "/blog/sweden-1931-left-gold",
+      "xArticleUrl": "https://x.com/i/article/2104261329636712450",
+      "publishedAt": "2026-09-27T17:31:47.000Z",
+      "mirroredAt": "2026-09-27T18:20:00.000Z"
+    },
+    {
+      "articleId": "2103752801566261248",
+      "postId": "2104131498844565923",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2103752801566261248",
+      "publishedAt": "2026-09-27T08:50:16.000Z",
+      "skippedAt": "2026-09-27T18:20:00.000Z"
+    },
     {
       "articleId": "2103742623928156160",
       "postId": "2103819945104572919",

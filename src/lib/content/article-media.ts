@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/sweden-1931-left-gold",
+    src: "/images/blog/sweden-1931-left-gold.jpg",
+    ogSrc: "/og/cards/blog-sweden-1931-left-gold.jpg",
+    alt: "Swedish flag, gold coins, a 1930s banknote, and a rising price chart — title image for the night Sweden left gold in 1931.",
+    caption: "27 September 1931 — Sweden left gold and named the krona’s purchasing power.",
+    credit: "Title image from the GoldSilverHQ X Article on Sweden leaving gold in 1931.",
+  },
+  {
     path: "/blog/interest-costs-vs-us-gold",
     src: "/images/blog/interest-costs-vs-us-gold.jpg",
     ogSrc: "/og/cards/blog-interest-costs-vs-us-gold.jpg",
