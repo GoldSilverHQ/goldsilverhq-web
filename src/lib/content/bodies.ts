@@ -150,7 +150,7 @@ const weimar: Section[] = [
     heading: "",
     paragraphs: [
       "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Wages paid at noon were spent before supper. Café prices rose between the first course and the bill. By November a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. Notes did not vanish. People stopped holding them, and stopped pricing in them.",
-      "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The wheelbarrow cartoons are not invented, and they are not the cause. The sequence is older: war finance without a gold stop, a fiscal gap after Versailles, a Reichsbank that created marks against Treasury bills, then the Ruhr occupation. Printing is the mechanism. The start is the missing constraint.",
+      "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The sequence runs from war finance without a gold stop, through a fiscal gap after Versailles and a Reichsbank that created marks against Treasury bills, to the Ruhr occupation of **January 1923**. Printing was the channel. The spiral ended in mid-**November 1923**, when the **Rentenmark** was issued at **one trillion** paper marks to one and the press stopped financing the Treasury as before.",
     ],
   },
   {
@@ -220,19 +220,19 @@ const nixon: Section[] = [
     heading: "",
     paragraphs: [
       "On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
-      "The act did not invent fiat money overnight. Private Americans had already been barred from monetary gold under the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods did not fail in a single night either. Pressure had built for years. What ended was the official gold window — the channel through which foreign treasuries and central banks could still present dollars and demand US gold at the posted price.",
+      "That announcement is the **Nixon shock** — the closing of the **gold window**. Foreign treasuries and central banks could no longer present dollars and demand U.S. gold at the posted price. By August 1971, official dollar claims far exceeded the gold that could pay them at thirty-five dollars an ounce; years of pressure made the mismatch impossible to ignore. Private Americans had already been outside monetary gold since the [1933 recall](/history/20th-century/1933-gold-recall). What ended that Sunday was the remaining official link — and with it the working heart of Bretton Woods.",
     ],
   },
   {
-    heading: "The gold window, not a retail counter",
+    heading: "The gold window",
     paragraphs: [
       "Nixon’s New Economic Policy mixed a ninety-day wage and price freeze with a temporary import surcharge. The line that mattered for money was simpler: suspend convertibility of the dollar into gold for foreign official holders.",
-      "That suspension is often called the closing of the gold window. The window was not a teller for citizens. It was the official redemption channel under Bretton Woods rules. Closing it meant the dollar was no longer redeemable in metal for the partners who had treated dollars as claims on US gold.",
-      "The shock was a policy choice under stress, not a sudden discovery that gold had vanished from history. The administration framed the move as temporary. It was not reversed.",
+      "The gold window was the official redemption channel under Bretton Woods rules — not a teller for citizens. Closing it meant the dollar was no longer redeemable in metal for the partners who had treated dollars as claims on U.S. gold.",
+      "The administration framed the move as temporary. It was not reversed. Pegs were rebuilt briefly, then failed; by **1973** major currencies floated without an official gold anchor.",
     ],
   },
   {
-    heading: "How Bretton Woods actually worked",
+    heading: "How Bretton Woods worked",
     paragraphs: [
       "Bretton Woods was negotiated in **1944** at Bretton Woods, New Hampshire. Member currencies were pegged to the US dollar within narrow bands. The dollar itself was defined against gold at thirty-five dollars per troy ounce.",
       "That design made the system a **gold-exchange** standard, not a classical gold standard. Most countries held dollars as reserves. They treated those dollars as claims that could, in theory, be turned into US gold. Ordinary people in the United States did not redeem paper for coin at the Treasury window. Their private gold rights had already been removed in 1933.",

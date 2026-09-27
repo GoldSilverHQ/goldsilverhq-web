@@ -297,8 +297,8 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const featuredSrc = readFileSync(join(root, "lib/content/featured.ts"), "utf8");
     assert.doesNotMatch(featuredSrc, /Then the Rentenmark\./);
     assert.doesNotMatch(featuredSrc, /floating fiat\./);
-    assert.match(featuredSrc, /Rentenmark\) that restored/);
-    assert.match(featuredSrc, /fiat = money by law/);
+    assert.match(featuredSrc, /Rentenmark of November restored/);
+    assert.match(featuredSrc, /Nixon shock closed the last official promise/);
   });
 
   it("keeps home and desk chrome free of door / outline voice", () => {
