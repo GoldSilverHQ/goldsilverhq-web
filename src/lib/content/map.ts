@@ -697,10 +697,10 @@ export const historyClusters: Cluster[] = [
         slug: "weimar-1923",
         title: "Weimar hyperinflation (1923)",
         summary:
-          "What caused German hyperinflation in 1923: war finance, the Ruhr occupation, the collapse of the paper mark, and how the Rentenmark stopped it.",
+          "In 1923 the German paper mark died as money — prices rose by the hour — until the Rentenmark of mid-November restored a usable unit.",
         status: "ready",
         paragraphs: [
-          "In 1923 the German mark lost all practical value. Prices rose by the hour. People spent cash the day they received it. The cartoon of “printing money” is not wrong, but it is incomplete. The sequence starts with war finance.",
+          "In autumn 1923 a German mark bought less by the hour than it had that morning. War finance, reparations, a Reichsbank that created marks against Treasury bills, and the Ruhr occupation drove the spiral. Mid-November the Rentenmark stopped it: one trillion paper marks equaled one Rentenmark.",
         ],
         related: [
           { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
@@ -720,7 +720,7 @@ export const historyClusters: Cluster[] = [
           demand: "high",
           difficulty: "high",
           intent: "history",
-          titleTag: "Weimar Hyperinflation 1923: Causes, Timeline, Rentenmark",
+          titleTag: "Weimar Hyperinflation 1923 and the Rentenmark",
         },
       },
       {
@@ -755,10 +755,10 @@ export const historyClusters: Cluster[] = [
         slug: "bretton-woods-nixon-1971",
         title: "Nixon shock 1971: the gold window closes",
         summary:
-          "August 15, 1971: the United States suspended dollar–gold convertibility. How Bretton Woods worked, and why it ended.",
+          "On 15 August 1971 — the Nixon shock — the United States suspended dollar-to-gold convertibility for foreign official holders and closed the Bretton Woods gold window.",
         status: "ready",
         paragraphs: [
-          "On 15 August 1971 the United States suspended the dollar’s convertibility into gold for foreign official holders. That act did not invent fiat money overnight. It ended the last official gold link in the post-war dollar system. Private Americans had already been barred from monetary gold under the 1933 recall. Bretton Woods did not fail in a single night. Pressure had built for years.",
+          "On Sunday 15 August 1971 President Nixon suspended the dollar’s convertibility into gold for foreign treasuries and central banks. That closed the last official gold window in the postwar system. Official dollar claims had outgrown the U.S. gold stock at $35 an ounce for years; the Camp David weekend made the break public.",
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },

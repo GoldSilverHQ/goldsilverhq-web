@@ -326,10 +326,10 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
   }),
   fromEpisode(1923, "/history/20th-century/weimar-1923", {
     title: "Weimar",
-    summary: "The paper mark stops working. The Rentenmark is the stop that follows.",
+    summary: "The paper mark stops working. The Rentenmark of November restores a usable unit.",
     paragraphs: [
-      "In 1923 the German mark lost practical use as a unit. The sequence starts with war finance and the Ruhr, not with a slogan about printers.",
-      "The Rentenmark is how that particular collapse was stopped. It is not a model for a later trade.",
+      "In 1923 the German mark lost practical use as a unit. War finance, the Ruhr, and a Reichsbank that created marks against Treasury bills drove the spiral.",
+      "Mid-November the Rentenmark stopped it: one trillion paper marks equaled one Rentenmark, and the press stopped financing the Treasury as before.",
     ],
     more: { href: "/history/20th-century/weimar-1923", title: "Weimar hyperinflation" },
   }),
@@ -396,10 +396,10 @@ const EXPLICIT_YEARS: readonly HistoryYear[] = [
   }),
   fromEpisode(1971, "/history/20th-century/bretton-woods-nixon-1971", {
     title: "Gold window closes",
-    summary: "15 August: the United States suspends dollar–gold convertibility for foreign officials.",
+    summary: "15 August: the Nixon shock suspends dollar–gold convertibility for foreign officials.",
     paragraphs: [
-      "On 15 August 1971 the United States stopped converting dollars into gold for foreign official holders. That was the last official gold contract on the post-war dollar.",
-      "Private Americans had already been barred from monetary gold since the 1933 recall. 1971 did not invent fiat in one night. It ended that remaining official link.",
+      "On 15 August 1971 — the Nixon shock — the United States stopped converting dollars into gold for foreign official holders. That closed the last official gold window on the postwar dollar.",
+      "Private Americans had already been barred from monetary gold since the 1933 recall. Official dollar claims had outgrown the U.S. gold stock at $35 an ounce; that Sunday ended the remaining convertibility link.",
     ],
     more: { href: "/history/20th-century/bretton-woods-nixon-1971", title: "Nixon shock 1971" },
   }),
