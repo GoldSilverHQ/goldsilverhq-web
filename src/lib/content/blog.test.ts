@@ -281,6 +281,27 @@ describe("blog section", () => {
     assert.match(shell, /label:\s*"Blog"/);
   });
 
+  it("surfaces recent notes on the home editorial and reverse-links from related pages", () => {
+    const home = readFileSync(join(root, "../../components/HomeEditorial.tsx"), "utf8");
+    assert.match(home, /listBlogPosts/);
+    assert.match(home, /From the blog/);
+    assert.match(home, /href=\{`\/blog\/\$\{post\.slug\}`\}/);
+
+    const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
+    for (const path of [
+      "/blog/newton-1717-guinea",
+      "/blog/september-1971-official-gold-price",
+      "/blog/ltcm-1998-consortium",
+      "/blog/interest-costs-vs-us-gold",
+      "/blog/when-exchanges-change-the-silver-rules",
+      "/blog/china-1934-silver-appeal",
+      "/blog/gold-silver-ratio-what-it-counts",
+      "/blog/weimar-purchasing-power-note",
+    ]) {
+      assert.ok(mapSrc.includes(`href: "${path}"`), `missing reverse related link ${path}`);
+    }
+  });
+
   it("registers titlebild heroes for every ready blog post", () => {
     for (const post of listBlogPosts()) {
       const path = `/blog/${post.slug}`;

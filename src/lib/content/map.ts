@@ -169,6 +169,7 @@ export const ideaPages: Episode[] = [
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
       { title: "Gold–silver ratio (mining vs market)", href: "/markets/gold-silver-ratio" },
+      { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
       { title: "Sound Money History", href: "/history" },
     ],
     seo: {
@@ -192,6 +193,7 @@ export const ideaPages: Episode[] = [
       { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
+      { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Assignats", href: "/history/banks-paper/assignats" },
     ],
@@ -650,6 +652,7 @@ export const historyClusters: Cluster[] = [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
           { title: "Road back toward gold", href: "/history/america/road-back-gold" },
+          { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
           { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
         ],
         seo: {
@@ -704,6 +707,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
+          { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
           { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Assignats", href: "/history/banks-paper/assignats" },
@@ -764,6 +768,10 @@ export const historyClusters: Cluster[] = [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
           { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+          {
+            title: "September 1971 and the official gold price",
+            href: "/blog/september-1971-official-gold-price",
+          },
           { title: "What “backed” means", href: "/sound-money/backed-money" },
           { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
         ],
@@ -834,6 +842,7 @@ export const historyClusters: Cluster[] = [
           { title: "Potosí", href: "/history/silver/potosi" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
+          { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver in history", href: "/history/silver" },
         ],
@@ -858,6 +867,7 @@ export const historyClusters: Cluster[] = [
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+          { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
           { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
         ],
@@ -881,6 +891,10 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
+          {
+            title: "When exchanges change the silver rules",
+            href: "/blog/when-exchanges-change-the-silver-rules",
+          },
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Silver in history", href: "/history/silver" },
@@ -904,6 +918,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
+          { title: "China’s 1934 silver appeal", href: "/blog/china-1934-silver-appeal" },
           { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
           { title: "Silver hub", href: "/history/silver" },
         ],
@@ -1078,6 +1093,10 @@ export const marketPages: Episode[] = [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
+      {
+        title: "Interest costs vs U.S. gold",
+        href: "/blog/interest-costs-vs-us-gold",
+      },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
     ],
     seo: {
@@ -1101,6 +1120,10 @@ export const marketPages: Episode[] = [
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+      {
+        title: "Interest costs vs U.S. gold",
+        href: "/blog/interest-costs-vs-us-gold",
+      },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
     ],
@@ -1133,6 +1156,10 @@ export const marketPages: Episode[] = [
       { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
       { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
       { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      {
+        title: "What the gold–silver ratio is counting",
+        href: "/blog/gold-silver-ratio-what-it-counts",
+      },
       { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     ],

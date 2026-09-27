@@ -38,7 +38,7 @@ const ARRIVAL =
 
 describe("intent paths (existing URLs only)", () => {
   it("keeps the sitemap freeze — no new mining/intent URLs", () => {
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 265);
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 274);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/year"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/312"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/history/1545"));
@@ -103,6 +103,7 @@ describe("intent paths (existing URLs only)", () => {
     const century = getCluster("20th-century");
     const nixonEp = century?.episodes.find((e) => e.slug === "bretton-woods-nixon-1971");
     assert.ok(nixonEp?.related?.some((r) => r.href === "/markets/official-gold-book-value"));
+    assert.ok(nixonEp?.related?.some((r) => r.href === "/blog/september-1971-official-gold-price"));
     assert.ok(nixonEp?.related?.some((r) => r.href === "/sound-money/backed-money"));
     assert.ok(nixonEp?.related?.some((r) => r.href === "/sound-money/what-is-sound-money"));
 
@@ -119,6 +120,7 @@ describe("intent paths (existing URLs only)", () => {
     const weimarEp = century?.episodes.find((e) => e.slug === "weimar-1923");
     assert.ok((weimarEp?.related?.length ?? 0) > 0);
     assert.ok(weimarEp?.related?.some((r) => r.href === "/sound-money/inflation-purchasing-power"));
+    assert.ok(weimarEp?.related?.some((r) => r.href === "/blog/weimar-purchasing-power-note"));
     assert.ok(weimarEp?.related?.some((r) => r.href === "/history/banks-paper/assignats"));
     assert.ok(weimarEp?.related?.some((r) => r.href === "/sound-money/what-is-sound-money"));
 
@@ -144,6 +146,7 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(panicEp?.related?.some((r) => r.href === "/history/20th-century/classical-gold-standard-end"));
     assert.ok(panicEp?.related?.some((r) => r.href === "/history/america/jackson-and-the-bank"));
     assert.ok(panicEp?.related?.some((r) => r.href === "/history/america/road-back-gold"));
+    assert.ok(panicEp?.related?.some((r) => r.href === "/blog/ltcm-1998-consortium"));
     const america = getCluster("america");
     assert.ok(america?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
     assert.ok(century?.related?.some((r) => r.href === "/history/20th-century/panic-1907-fed"));
@@ -157,8 +160,16 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok((thursdayEp?.related?.length ?? 0) >= 4);
     assert.ok(thursdayEp?.related?.some((r) => r.href === "/markets/gold-silver-ratio"));
     assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/silver/monetary-and-industry"));
+    assert.ok(thursdayEp?.related?.some((r) => r.href === "/blog/when-exchanges-change-the-silver-rules"));
     assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/america/crime-of-1873"));
     assert.ok(thursdayEp?.related?.some((r) => r.href === "/history/silver/bimetallism"));
     assert.ok(silver?.related?.some((r) => r.href === "/history/silver/silver-thursday"));
+
+    const bimetallismEp = silver?.episodes.find((e) => e.slug === "bimetallism");
+    assert.ok(bimetallismEp?.related?.some((r) => r.href === "/blog/newton-1717-guinea"));
+    const ratioPage = getMarket("gold-silver-ratio");
+    assert.ok(ratioPage?.related?.some((r) => r.href === "/blog/gold-silver-ratio-what-it-counts"));
+    const bookValue = getMarket("official-gold-book-value");
+    assert.ok(bookValue?.related?.some((r) => r.href === "/blog/interest-costs-vs-us-gold"));
   });
 });
