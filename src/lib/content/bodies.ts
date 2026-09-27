@@ -2182,24 +2182,24 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "When a headline says a central bank bought ten tonnes of gold last month, the number comes from a reserve report: a stock of gold in tonnes or ounces, filed with the IMF or published by the bank itself. From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how it compares with the size of the economy, and who bought or sold in a given month. It is not a shopping list. Central banks buy and sell under statute, sanctions, and reserve rules that have nothing to do with a household’s savings.",
-      "The sections below explain each kind of figure, then follow a few countries through their own books: China’s published stock, Poland’s buying spree, Canada’s reserve table, which now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
+      "Poland’s central bank closed **August 2026** with **648 tonnes** of gold on its books — up from about **103 tonnes** at the end of **2017**. China’s published stock sat near **2,387 tonnes**. Canada’s monthly reserve table still prints **Gold: 0**. Those three lines come from the same kind of document: an official reserve report filed with the IMF or published by the bank itself.",
+      "From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how the stock compares with the size of the economy, and who bought or sold in a given month. Central banks move metal under statute, sanctions, and reserve rules. The arithmetic is a state ledger, not a household savings plan.",
     ],
   },
   {
-    heading: "How gold enters the reserve statement",
+    heading: "How gold gets onto the reserve books",
     paragraphs: [
       "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, **SDRs** (Special Drawing Rights — an IMF reserve asset), and IMF reserve positions in one reserve total.",
-      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) of $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not tell you which.",
-      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table below. Germany, Italy, and France hold large legacy European stocks. China’s published official figure — dated in the holdings section below — sits above **2,300 tonnes** and is widely treated as a floor, not a full count. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
+      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) of $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not say which.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table further down. Germany, Italy, and France hold large legacy European stocks. China’s published official figure sits above **2,300 tonnes** and is widely treated as a floor, not a full count. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
     ],
   },
   {
     heading: "Gold as a share of FX and gold reserves",
     paragraphs: [
-      "Tonnes and share answer different questions. The share used here is gold valued near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It is not based on the U.S. statutory **$42.22** book.",
+      "Tonnes and share answer different questions. The share used here is gold valued near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It does not use the U.S. statutory **$42.22** book.",
       "Two published world figures sit a year apart and should not be joined into a trend line. In the Council’s **2025** reserve-manager survey, the prompt stated that gold accounted for **19 percent** of total reported reserves — foreign exchange plus gold — in **Q3 2024**. The Council’s market primer dated **1 April 2026**, using IMF COFER and IFS, puts gold at **26 percent** of total global allocated reserves by **Q3 2025**. Different bases, different dates: two prints, not one spliced series.",
-      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited in the China section. Narodowy Bank Polski’s first-quarter **2026** statement put gold at **29.4 percent** of Poland’s official reserve assets at the end of **March 2026**. Poland’s share is higher because its foreign-currency book is smaller, not because it holds more gold than China.",
+      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited with China’s holdings below. Narodowy Bank Polski’s first-quarter **2026** statement put gold at **29.4 percent** of Poland’s official reserve assets at the end of **March 2026**. Poland’s share is higher because its foreign-currency book is smaller, not because it holds more gold than China.",
     ],
     table: {
       caption:
@@ -2227,10 +2227,10 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "Official gold relative to GDP",
     paragraphs: [
-      "A third way to size a gold stock is against the whole economy. Take the reported official gold, value it at a named market price, and divide by that country’s nominal GDP. A large vault beside a large economy can look light on this measure; a smaller vault beside a smaller economy can look heavy. It measures weight against output, not the size of the vault.",
-      "The country set below is short and labeled. Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared — the same July compilation the year-to-date buyer table uses. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026**, the end-month London price that matches that holdings month, and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
-      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP. Switzerland’s **1,039.9 tonnes** are about **12.90 percent** of **$1,043.544 billion**. Italy’s **2,451.8 tonnes** are about **12.45 percent** of **$2,550.111 billion**. Russia’s **2,276.8 tonnes** are about **11.39 percent** of **$2,587.938 billion**. France (**2,437.0 tonnes**, **9.36 percent** of **$3,368.925 billion**) and Germany (**3,349.5 tonnes**, **8.59 percent** of **$5,048.059 billion**) sit in the same European neighborhood. The United States has by far the largest stock, **8,133.5 tonnes**, yet it is only about **3.42 percent** of **$30,767.075 billion**. Japan’s **846.0 tonnes** are about **2.47 percent** of **$4,435.163 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**.",
-      "The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP — close to Germany. Later months stay out of this division: Poland’s August stock of **648 tonnes** and China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, appear in their own sections below. Mixing them into a July calculation would produce a percentage no source published.",
+      "Another way to size a gold stock is against the whole economy: take the reported official gold, value it at a named market price, and divide by that country’s nominal GDP. A large vault beside a large economy can look light on this measure; a smaller vault beside a smaller economy can look heavy. It measures weight against output, not the size of the vault.",
+      "Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared — the same July compilation the year-to-date buyer table uses. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026**, the end-month London price that matches that holdings month, and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
+      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP — the heaviest row in the table. Switzerland, Italy, and Russia follow in the low teens. The United States has by far the largest stock, **8,133.5 tonnes**, yet only about **3.42 percent** of **$30,767.075 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**. The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP — close to Germany’s **8.59 percent**.",
+      "Later months stay out of this division: Poland’s August stock of **648 tonnes** and China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, appear with their own dated books below. Mixing them into a July calculation would produce a percentage no source published.",
     ],
     table: {
       caption:
@@ -2252,11 +2252,11 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "This percentage is not gold’s share of reserves; that is the table above. Change the gold price or the GDP year and every row moves: a higher gold price lifts every country’s figure, and a faster-growing economy pulls its own figure down.",
+      "Gold-to-GDP is a different clock from gold’s share of reserves — the table above. Change the gold price or the GDP year and every row moves: a higher gold price lifts every country’s figure, and a faster-growing economy pulls its own figure down.",
     ],
   },
   {
-    heading: "Vaults and where the bars sit",
+    heading: "Where the bars sit",
     paragraphs: [
       "Reported gold is not always in the reporting capital. For much of the postwar period, European and other official holders kept bars at the Federal Reserve Bank of New York, the Bank of England, and the Banque de France. Custody was a service; title stayed with the owner. Location still matters for politics and for logistics: a bar in New York is not a bar in Frankfurt.",
       "The 2010s brought a documented repatriation wave. The Deutsche Bundesbank’s 2013–2017 programme moved gold from New York and Paris to Frankfurt (300 tonnes from the New York Fed and 374 tonnes from the Banque de France under that plan). De Nederlandsche Bank announced in 2014 that it would bring 122 tonnes from New York to Amsterdam. Austria, Hungary, and others published their own transfers. The Bank of England remains a major custodian for official gold that has not been called home.",
@@ -2264,11 +2264,37 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
-    heading: "Recent official purchases, dated",
+    heading: "Where the U.S. official gold sits",
     paragraphs: [
-      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
-      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (covered at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
-      "Each line is a reported change in official gold for a calendar year. The monthly picture for 2026, buyers first and then sellers, follows.",
+      "The United States also publishes an address list for the gold on its own books: the Treasury’s Status Report of U.S. Government Gold Reserve, carried on FiscalData as the [U.S. Treasury-Owned Gold](https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold) dataset. The report month is **August 2026**, record date **31 August 2026**. The dataset page was last updated **10 September 2026**.",
+      "Fine troy ounces in the table are the printed lines. Tonnes divide those ounces by **32,150.7466**. Each share divides the line by the sum of the report, **261,498,926.241** fine troy ounces. Fort Knox, West Point, and Denver are Mint deep storage — gold bullion bars. Mint working stock is coins, blanks, and miscellaneous gold at Mint locations set aside for coinage. The New York line is Treasury-owned bullion at the Federal Reserve Bank of New York; foreign official bars stored in that building stay on the foreign owner’s reserve book. Display bullion and Reserve Bank coin lines are grouped as other.",
+    ],
+    table: {
+      caption:
+        "U.S. Treasury-Owned Gold, record date 31 August 2026. Tonnes equal fine troy ounces divided by 32,150.7466, rounded to 0.01 tonne; the total tonne is that conversion of the total ounces. Shares use the unrounded ounces and are rounded to 0.01 percentage point, so the rounded rows add to 100.01. Other adds display bullion (1,993.321 oz), coins in the New York vault (73,452.066 oz), and display coins (377.434 oz).",
+      headers: ["Facility", "Fine troy ounces", "Tonnes", "Share of total"],
+      rows: [
+        ["Fort Knox (Mint deep storage)", "**147,341,858.382**", "**4,582.84**", "**56.35%**"],
+        ["West Point (Mint deep storage)", "**54,067,331.379**", "**1,681.68**", "**20.68%**"],
+        ["Denver (Mint deep storage)", "**43,853,707.279**", "**1,364.00**", "**16.77%**"],
+        ["Mint working stock", "**2,783,218.656**", "**86.57**", "**1.06%**"],
+        ["Federal Reserve Bank of New York", "**13,376,987.724**", "**416.07**", "**5.12%**"],
+        ["Other (display and coin lines)", "**75,822.821**", "**2.36**", "**0.03%**"],
+        ["Total", "**261,498,926.241**", "**8,133.53**", "**100%**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The United States Bullion Depository at Fort Knox took its first gold in January **1937**, and the [U.S. Mint](https://www.usmint.gov/news/inside-the-mint/fort-knox-history) records that the depository was fully operational that June. These are the same ounces carried at the statutory **$42.2222** per fine troy ounce on [official gold book value](/markets/official-gold-book-value): about **261.5 million** fine troy ounces, **8,133.53 tonnes** at the conversion above. The **8,133.5 tonnes** in the GDP table is that stock rounded to a tenth of a tonne.",
+    ],
+  },
+  {
+    heading: "Recent official purchases",
+    paragraphs: [
+      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on the [desk](/desk) are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
+      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland**. Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
     ],
   },
   {
@@ -2319,7 +2345,7 @@ const centralBankGoldReserves: Section[] = [
     heading: "Reported net official sellers, YTD through July 2026",
     paragraphs: [
       "The same World Gold Council monthly compilation — through **31 July 2026**, published **3 September 2026** — also names the largest reported official reductions. Like the buyer figures, each tonne is a change on a central bank’s published books, not a private investment flow.",
-      "Two countries dominate the year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and its July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan is still a net buyer for the year, as the table above shows. No August seller total has been published yet.",
+      "Two countries dominate the year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and its July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan is still a net buyer for the year, as the buyer table shows. No August seller total has been published yet.",
     ],
     table: {
       caption:
@@ -2354,13 +2380,13 @@ const centralBankGoldReserves: Section[] = [
       "On **7 May 1999**, HM Treasury announced a restructuring of the United Kingdom’s foreign-currency and gold reserves. The Bank of England, acting as the Treasury’s agent, then ran **17** uniform-price auctions from **July 1999** to **March 2002**. Approximately **395 tonnes** of gold were sold. The [Bank of England Quarterly Bulletin for Summer 2003](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2003/an-analysis-of-the-uk-gold-auctions-1999-2002.pdf) records that the stock then stood around **715 tonnes**, with a medium-term aim of around **300 tonnes**. At each of the first eleven auctions, **25 tonnes** were offered; at each of the last six, **20 tonnes** were offered.",
       "The same Bank article puts the average auction price at around **$275** an ounce — **$274.9** in the footnote that also names the programme’s revenue at approximately **$3.5 billion**. HM Treasury’s later [GOV.UK disclosure](https://www.gov.uk/government/publications/the-sale-of-part-of-the-uk-gold-reserves-1999-2002), published **31 March 2010**, uses the same tonne, auction-count, and dollar-proceeds figures, and adds a contemporaneous sterling figure of about **£1.9 billion**. The proceeds stayed inside the reserves, reinvested in dollar, euro, and yen interest-bearing assets.",
       "The Treasury’s stated aim was to restructure the reserves — less gold, more foreign currency — so the portfolio held a larger share in interest-bearing currencies. The reserves did not shrink; their mix changed.",
-      "The auction clearing price was a market price: dollars per ounce actually paid by successful bidders. It is not a statutory book rate. The U.S. leftover par of **$42.22**, explained under [official gold book value](/markets/official-gold-book-value), is a reporting convention on another ledger. One number is what the auctions fetched; the other is what a Treasury line still writes for ounces it never sold.",
+      "The auction clearing price was a market price: dollars per ounce actually paid by successful bidders. The U.S. leftover par of **$42.22**, explained under [official gold book value](/markets/official-gold-book-value), is a reporting convention on another ledger. One number is what the auctions fetched; the other is what a Treasury line still writes for ounces it never sold.",
     ],
   },
   {
     heading: "",
     callout: {
-      label: "Not a central bank",
+      label: "Tether’s gold",
       paragraphs: [
         "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it has no row in the official tables above. Two gold figures appear under its name, and they measure different things. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That half-year purchase is a company statement. No official August year-to-date figure for it has been published.",
       ],
@@ -2374,7 +2400,7 @@ const centralBankGoldReserves: Section[] = [
       "For long stretches the published number did not move. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** figure held, in the WGC/IMF book, through **2010** and on to early **2015**.",
       "In **July 2015** the PBoC said the stock at the end of **June 2015** was **1,658 tonnes** (**53.31 million ounces**). Monthly SAFE reporting followed. The WGC year-end **2015** line is **1,760 tonnes**. A later pause left the book near **1,948 tonnes** — **62.64 million ounces** at the end of **October 2019**, per PBoC data carried by Xinhua — and the WGC **2020** year-end line is **1,950 tonnes**.",
       "Reported buying resumed and produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
-      "The 2026 monthly figures are the same series the year-to-date table above uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the table above rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
+      "The 2026 monthly figures are the same series the year-to-date table uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the buyer table rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
     ],
     table: {
       caption:
@@ -2419,14 +2445,14 @@ const centralBankGoldReserves: Section[] = [
       "Canada’s reserve table is unusual among large economies: its gold line reads zero, the end of a sell-down that ran for decades.",
       "Finance Canada’s monthly Official International Reserves tables still print **Gold: 0**. The [release dated 6 August 2026](https://www.canada.ca/en/department-finance/services/publications/monthly-official-international-reserves/2026/08.html), covering **31 July 2026**, puts total official international reserves at **US$127,038 million** and lists the gold cell as **0**. Earlier 2026 monthly tables in the same series, including June and May, show the same. The Bank of Canada’s weekly international-reserves snapshot uses the same **Gold: 0** line.",
       "Contemporary reporting of the close-out — including [CBC’s March 2016 coverage](https://www.cbc.ca/news/business/gold-canada-reserves-1.3475818) of Finance Canada’s monthly figures — put the peak stock in the **1960s** at more than **1,000 tonnes**. By **2003** the published stock was about **3.4 tonnes**. The last disposals were coin sales: Finance Canada’s [February 2016 Official International Reserves](https://www.canada.ca/en/department-finance/news/2016/03/official-international-reserves.html) footnote records **21,851** ounces of gold coins sold for settlement in February, with holdings at **77** ounces on **29 February 2016**. CBC’s reporting of the same Finance releases names earlier coin sales of **41,106** ounces in December and **32,860** ounces in January. The February table already showed the gold value as **0** in millions of U.S. dollars — the remaining ounces were too few to register at that scale.",
-      "The other G7 books tell a different story. The same July **2026** World Gold Council / IMF compilation used in the GDP table above still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**), while Canada’s reserves are held almost entirely in foreign currencies and other non-gold assets.",
+      "The other G7 books tell a different story. The same July **2026** World Gold Council / IMF compilation used in the GDP table still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**), while Canada’s reserves are held almost entirely in foreign currencies and other non-gold assets.",
     ],
   },
   {
-    heading: "Reading a reserve headline",
+    heading: "",
     paragraphs: [
-      "Most reserve headlines come down to one of four figures: a stock in tonnes, a share of reserves, a ratio to GDP, or a change over a month or a year. A rising share can be new buying or simply a higher gold price. A repatriation moves bars without changing who owns them. A sale like the **1999–2002** UK auction programme swaps gold for currency inside the same reserves. Canada’s printed **Gold: 0** is what a long sell-down looks like once it is finished. Asking which of these a number is usually settles what it means.",
-      "The U.S. figure of **$42.22** is a separate accounting convention, explained under [official gold book value](/markets/official-gold-book-value). The **1971** end of dollar–gold convertibility, which set the stage for all of this, is told in [Sound Money History](/history).",
+      "A rising share can be new buying or simply a higher gold price. A repatriation moves bars without changing who owns them. A sale like the **1999–2002** UK auction programme swaps gold for currency inside the same reserves. Canada’s printed **Gold: 0** is what a long sell-down looks like once it is finished.",
+      "The U.S. figure of **$42.22** is a separate accounting convention, explained under [official gold book value](/markets/official-gold-book-value). The **1971** end of dollar–gold convertibility is told in [Sound Money History](/history).",
     ],
   },
 ];
@@ -3518,7 +3544,7 @@ export const marketsHubBody: Section[] = [
     heading: "The numbers behind the headlines",
     paragraphs: [
       "[Official gold book value](/markets/official-gold-book-value) explains the **$42.22**: how the official price climbed from $35 to its last statutory level after the **1971** gold-window close, why the Treasury still counts its roughly **261.5 million** ounces at that rate, and what you get when you divide a market price by it.",
-      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how central banks report gold — tonnes held, gold’s share of reserves, gold measured against GDP, and dated purchases and sales. It follows China’s published stock, Poland’s buying, Canada’s reserve table that now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
+      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) covers the tonnes held, gold’s share of reserves, gold measured against GDP, and dated purchases and sales — China’s published stock, Poland’s buying, Canada’s reserve table that now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
       "The [gold–silver ratio](/markets/gold-silver-ratio) is gold’s price divided by silver’s. The same phrase, ounces of silver per ounce of gold, is also used for mine output and for metal in London vaults, and those three counts give very different answers: near **68**, near **7**, and near **3** in 2026. The article also dates the famous lows, about **17** in January **1980** and the “30:1” of late April **2011**.",
       "[Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks countries by bars and coins bought in **2024** — the United States first at **64.9 million ounces**, India close behind at **59.8** — and sets beside it the **2025** tables for industrial use, jewelry, coin minting, and recycled scrap. China tops the factory table and barely registers on the bar-and-coin one.",
     ],
