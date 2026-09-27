@@ -39,8 +39,19 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 8);
-    assert.equal(listBlogPosts().length, 8);
+    assert.equal(blogPosts.length, 9);
+    assert.equal(listBlogPosts().length, 9);
+    const sweden = getBlogPost("sweden-1931-left-gold");
+    assert.ok(sweden);
+    assert.equal(sweden.title, "The Night Sweden Left Gold and Aimed at Prices Instead");
+    assert.deepEqual(sweden.tags, ["History", "Metals"]);
+    assert.equal(sweden.date, "2026-09-27");
+    assert.equal(sweden.sourceXId, "2104261329636712450");
+    assert.match(sweden.xArticleUrl ?? "", /x\.com\/i\/article\/2104261329636712450/);
+    assert.ok(
+      sweden.summary.length >= 140 && sweden.summary.length <= 160,
+      `summary length ${sweden.summary.length}`,
+    );
     const interest = getBlogPost("interest-costs-vs-us-gold");
     assert.ok(interest);
     assert.equal(
@@ -106,6 +117,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/sweden-1931-left-gold",
         "/blog/interest-costs-vs-us-gold",
         "/blog/september-1971-official-gold-price",
         "/blog/china-1934-silver-appeal",
@@ -121,8 +133,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 6);
-    assert.equal(listBlogPostsByTag("Metals").length, 5);
+    assert.equal(listBlogPostsByTag("History").length, 7);
+    assert.equal(listBlogPostsByTag("Metals").length, 6);
     assert.equal(listBlogPostsByTag("Markets").length, 4);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
@@ -136,6 +148,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "sweden-1931-left-gold",
       "interest-costs-vs-us-gold",
       "september-1971-official-gold-price",
       "china-1934-silver-appeal",
@@ -165,6 +178,26 @@ describe("blog section", () => {
       (text.match(/x\.com\/i\/article\/2102003835015155712/g) ?? []).length,
       1,
     );
+  });
+
+  it("interlinks the 1931 Sweden note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "sweden-1931-left-gold")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
+    assert.equal((text.match(/\]\(\/sound-money\//g) ?? []).length, 1);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 0);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2104261329636712450/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("sweden-1931-left-gold");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks the interest-vs-gold note lightly and credits the X Article once", () => {
@@ -289,6 +322,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/sweden-1931-left-gold",
       "/blog/newton-1717-guinea",
       "/blog/september-1971-official-gold-price",
       "/blog/ltcm-1998-consortium",

@@ -3253,7 +3253,95 @@ const september1971OfficialGoldPrice: Section[] = [
   },
 ];
 
+const sweden1931LeftGold: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Late in the evening of Sunday, **27 September 1931**, Sweden's finance minister, Felix Hamrin, spoke for the government. The Riksbank, he said, was relieved of its legal duty to convert banknotes into gold on demand. He explained how the country had reached that point. Then he added the sentence that would make the night famous. The bank's policy should now be aimed, using all means available, at preserving the domestic [purchasing power](/sound-money/inflation-purchasing-power) of the Swedish krona.",
+      "While that duty stood, a Riksbank note was a claim the bank was legally bound to meet in gold when the note was presented. Ending the duty meant the bank no longer had to pay gold for its notes on demand. The krona could still circulate. It was no longer a ticket the law required the Riksbank to redeem in metal. The sentence Hamrin added named what would stand in place of that ticket: what the krona still bought inside Sweden.",
+    ],
+  },
+  {
+    heading: "What the gold duty had been",
+    paragraphs: [
+      "A gold parity is the official rate the currency is supposed to hold against gold. While convertibility is in force, that rate is a rule the bank is expected to honor when notes are presented. Foreign reserves — gold and foreign claims the bank can use — are the stock that makes the rule believable. If holders think the stock is too thin, they present claims sooner. The drain is the test of the rule.",
+      "Sweden had an emergency exit written into the constitution, the same kind of exit it had used in wartime. The Board of the Riksbank asked the government for permission to suspend convertibility under that clause. By Sunday the government had little real choice about that first half. The reserves meant to defend gold parity were nearly gone. What was not inevitable was the second half: floating the krona, and naming domestic purchasing power as the new guide.",
+    ],
+  },
+  {
+    heading: "Eight days after Britain",
+    paragraphs: [
+      "Eight days earlier, Britain had left the gold standard. Speculators turned on the krona. Foreign reserves drained. A large gold-standard currency had stepped off, and a smaller one was still promising metal. Holders of the krona asked whether the Swedish parity would be next. They sold it, or they presented claims, while the bank was still paying. The reserve fell because the rule was still being honored, and because that honor looked temporary.",
+      "By Sunday evening the reserves argument was no longer a forecast. Leaving gold, in that narrow sense, recognized a payment the bank could not keep making. A float answers whether gold will still be paid at the old rate. The market prints a krona price each day, and the bank no longer holds one against gold. Hamrin's second sentence answered the question a float leaves open: what the bank would aim at instead.",
+    ],
+  },
+  {
+    heading: "The draft from the night before",
+    paragraphs: [
+      "That language did not appear from nowhere. On Saturday, **26 September**, Hamrin asked the economist Gustav Cassel to draft a statement on Sweden's monetary position. Cassel worked into the night and sent his proposal by messenger. Eli Heckscher also shaped the thinking around the government line. Berg and Jonung later traced the famous purchasing-power sentence to that weekend of advice.",
+      "The full story of who wrote which words remains debated. A messenger draft, a second economist's influence, and a minister's speech do not leave one manuscript with a single hand on every clause. The public result does not wait on that debate. In the finance minister's voice, gold payment had stopped, and domestic purchasing power was the aim that replaced it.",
+      "Sweden became the first country to make stabilization of the domestic price level the official goal of monetary policy, and in the interwar years the only country that did so. A price level is a picture of what money buys, taken as a height rather than a speed of change from year to year. Stabilizing it means resisting a fall as well as a rise. On that Sunday the domestic price level took the place the gold parity had occupied: the stated purpose of the bank's policy.",
+    ],
+  },
+  {
+    heading: "From one sentence to guidelines",
+    paragraphs: [
+      "The one-sentence goal of **27 September** was not yet a finished program. Through the winter and spring, the Riksbank's board, three leading economists, and the Banking Committee of the Riksdag turned it into guidelines. Parliament confirmed them in **May 1932**.",
+      "Deflation was to be resisted as strongly as inflation. A falling price level was not a harmless correction beside a rising one treated as the only danger. The September sentence had said policy should preserve purchasing power. The May guidelines read that preservation in both directions. The krona was not to buy steadily less, and a shrinking price level was not, by itself, to count as success.",
+      "Some recovery in wholesale prices could be accepted if the cost of living was not lifted much. Wholesale prices are what merchants and factories see. The cost of living is what households see. The guideline allowed a repair in the first when it did not become a large rise in the second. It separated a wholesale recovery from a jump in the household bill.",
+      "Policy was not to be chained to a single index figure. An index is a constructed number — a basket, weights, a base period — and the guidelines refused to make one print the whole result. The aim stayed the domestic price level, watched with judgment. Interest rates should stay as low as the purchasing-power aim allowed. A low rate was a preference inside the aim. Where preserving purchasing power required something higher, the price aim won. The guideline names that constraint. It does not name a percent.",
+    ],
+  },
+  {
+    heading: "Who holds the instruments",
+    paragraphs: [
+      "In **June 1933** the Riksdag added another piece: the choice of instruments for reaching the goal should rest with the Riksbank. Parliament had confirmed the aim. The June addition put the tools with the bank, so the goal was an operating rule rather than a sentence reopened in every session.",
+      "After the announcement, the bank began compiling a weekly consumer price index, so it could watch the domestic price level at short intervals. The weekly index sits beside the refusal to chain policy to a single figure. It is a short-interval picture of household prices. The guidelines still ask for judgment. The September night had named the aim. The index was how the bank proposed to see, often enough, whether domestic buying power was holding.",
+    ],
+  },
+  {
+    heading: "What happened to the krona",
+    paragraphs: [
+      "The krona was written down sharply after the break with gold — on the order of **thirty percent** in the Riksbank's later account. The krona bought less foreign money, and less gold, than under the old parity. The September aim was still the domestic side. The write-down is what the foreign price of the krona did once the parity was no longer defended.",
+      "Foreign reserves that had stood near **SEK 300 million** fell toward **SEK 30 million** within three months. The stock meant to make gold payment credible was already nearly gone on the Sunday of the announcement. The later fall is the reserve account of the months that followed. Near and toward are the caution in that later account. They are not a claim that either stock was exact to the krona.",
+      "In **July 1933** Sweden pegged the krona to sterling and joined the sterling area. Britain had already left gold, so the pound Sweden pegged to was itself off the metal standard. The krona's foreign rate would be managed with sterling rather than restored to a gold parity. That peg was not then treated as a contradiction of the purchasing-power aim. It was a practical exchange-rate choice inside a program that still started from domestic prices.",
+      "Sweden, by many contemporary and later measures, weathered the **1930s** strains better than most. People at the time, and people looking back, often placed it among the countries that came through with less damage than the worst cases.",
+    ],
+  },
+  {
+    heading: "A later target, a different design",
+    paragraphs: [
+      "The price-stability idea faded in the postwar decades when other goals took the lead. Fading means a change in what the bank was asked to put first. It leaves the Sunday-night sentence in the record.",
+      "The idea returned as orthodoxy in the **1990s**. In **1993** the Riksbank defined its modern target as **two percent** annual inflation — a rate of change, with prices rising two percent a year on the definition the bank adopted. That is a different design from the **1930s** price-level experiment. A price-level goal looks at the height of prices and treats a fall as something to resist. An inflation target looks at the speed of change, and in the 1993 design a steady low rise is the aim. The same bank that had been told, on a Sunday night in 1931, to preserve domestic purchasing power later named a modern inflation number. The number is a later design, and it still belongs to the institution that lived through the night convertibility ended.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Sunday night, then a program, then a peg, then a later target."],
+    list: [
+      "**Eight days before 27 September 1931.** Britain leaves the gold standard. Speculators turn on the krona. Foreign reserves drain.",
+      "**26 September 1931.** Hamrin asks Gustav Cassel for a draft. Cassel works into the night and sends it by messenger. Eli Heckscher also shapes the thinking around the government line.",
+      "**27 September 1931.** Hamrin relieves the Riksbank of the duty to convert banknotes into gold on demand, and aims policy at the domestic purchasing power of the krona. The reserves meant to defend gold parity are nearly gone.",
+      "**May 1932.** Parliament confirms the guidelines: resist deflation as strongly as inflation; allow some wholesale-price recovery if the cost of living is not lifted much; refuse a single index figure; keep interest rates as low as the purchasing-power aim allows.",
+      "**Within three months.** The Riksbank's later account puts the krona's write-down on the order of thirty percent, and reserves near SEK 300 million falling toward SEK 30 million.",
+      "**June 1933.** The Riksdag leaves the choice of instruments with the Riksbank.",
+      "**July 1933.** Sweden pegs the krona to sterling and joins the sterling area.",
+      "**1993.** The Riksbank defines a target of two percent annual inflation, a different design from the 1930s price-level experiment.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1931**, Sweden left gold on a Sunday night and told the public what would replace it: the domestic value of the krona in people's hands.",
+      "The reserves had already forced the suspension. Sweden chose the sentence about purchasing power. Guidelines, instruments, the sterling peg, and the 1993 target of two percent inflation came later. That 1993 target was a different design from the price-level aim of the Sunday night.",
+      "It is a dated account of one Sunday's announcement, and of the program built on the sentence.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104261329636712450).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/sweden-1931-left-gold": sweden1931LeftGold,
   "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
   "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,
   "blog/china-1934-silver-appeal": china1934SilverAppeal,
