@@ -62,6 +62,7 @@ describe("branded OG share cards", () => {
     assert.equal(byProp["og:title"], page.title);
     assert.equal(byProp["og:description"], page.description);
     assert.equal(byProp["og:image"], absoluteOgImageUrl(page.path));
+    assert.equal(byProp["og:url"], `https://www.goldsilverhq.com${page.path}`);
     assert.equal(byName["twitter:card"], "summary_large_image");
     assert.equal(byName["twitter:image"], absoluteOgImageUrl(page.path));
   });

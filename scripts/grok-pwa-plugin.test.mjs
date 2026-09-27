@@ -115,6 +115,27 @@ test("platform chrome overwrites share-card metas and always sets og:title", () 
   assert.doesNotMatch(out, /property="og:image"/);
 });
 
+test("emits og:url and canonical for document paths on a public host", () => {
+  const html =
+    '<html><head><title>Newton’s 1717 Mint report — GoldSilverHQ</title><meta property="og:url" content="https://stale.example/old"></head></html>';
+  const out = injectGrokPwaHead(html, {
+    host: "www.goldsilverhq.com",
+    pathname: "/blog/newton-1717-guinea",
+    appName: "GoldSilverHQ",
+  });
+  assert.match(
+    out,
+    /property="og:url" content="https:\/\/www\.goldsilverhq\.com\/blog\/newton-1717-guinea"/,
+  );
+  assert.match(
+    out,
+    /rel="canonical" href="https:\/\/www\.goldsilverhq\.com\/blog\/newton-1717-guinea"/,
+  );
+  assert.equal(out.split('property="og:url"').length - 1, 1);
+  assert.equal(out.split('rel="canonical"').length - 1, 1);
+  assert.doesNotMatch(out, /stale\.example/);
+});
+
 test("does not duplicate twitter:card or og:title", () => {
   const once = injectGrokPwaHead("<html><head><title>Hello World</title></head></html>");
   const twice = injectGrokPwaHead(once);

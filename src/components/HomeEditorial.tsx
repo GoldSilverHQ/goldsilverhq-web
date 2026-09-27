@@ -1,7 +1,10 @@
 import { FEATURED } from "@/lib/content/featured";
+import { listBlogPosts } from "@/lib/content/blog";
 import { pillars } from "@/lib/content/map";
 
 export function HomeEditorial() {
+  const recentNotes = listBlogPosts().slice(0, 3);
+
   return (
     <div className="mx-auto max-w-6xl px-4 pb-8">
       <section className="border-t border-line pt-10">
@@ -22,6 +25,34 @@ export function HomeEditorial() {
           ))}
         </div>
       </section>
+
+      {recentNotes.length > 0 ? (
+        <section className="mt-12">
+          <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Notes</p>
+          <h2 className="mt-2 font-display text-3xl">From the blog</h2>
+          <p className="mt-2 max-w-xl text-muted">
+            Short essays beside History and Markets —{" "}
+            <a href="/blog" className="text-gold-soft underline-offset-2 hover:underline">
+              all posts
+            </a>
+            .
+          </p>
+          <ul className="mt-6 space-y-3">
+            {recentNotes.map((post) => (
+              <li key={post.slug}>
+                <a
+                  href={`/blog/${post.slug}`}
+                  className="block rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
+                >
+                  <p className="text-xs text-muted">{post.date}</p>
+                  <p className="mt-1 font-medium">{post.title}</p>
+                  <p className="mt-1 text-sm text-muted">{post.summary}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       <section className="mt-12">
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Explore</p>
