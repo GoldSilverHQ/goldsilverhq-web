@@ -1,4 +1,5 @@
 import type { OfficialGold } from "./cb-desk.ts";
+import { refreshedUsM2 } from "./desk-refreshed.ts";
 import { MONEY_PATH } from "./money-path.ts";
 
 /** Troy ounces in one metric tonne — same factor the CB seed uses to reconstruct IMF tonnes. */
@@ -43,9 +44,12 @@ export function pctLostDisplay(p: number) {
   return String(Math.round(n));
 }
 
+/** Prefer cron/live FRED tip; fall back to the annual money-path tip year. */
 export function latestUsM2() {
+  const live = refreshedUsM2();
+  if (live.bn > 0) return { bn: live.bn, year: live.year, asOf: live.asOf };
   const row = MONEY_PATH[MONEY_PATH.length - 1];
-  return { bn: row.m2, year: row.year };
+  return { bn: row.m2, year: row.year, asOf: String(row.year) };
 }
 
 export function fmtCompact(n: number, symbol = "$") {

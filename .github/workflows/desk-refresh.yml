@@ -1,0 +1,42 @@
+name: Desk metrics refresh
+# Non-spot /desk prints (money stock, FX, CPI, LBMA clearing÷vault).
+# Spot stays live in-app (Yahoo → gold-api) — not written here.
+# Cron UTC: 06:15 daily ≈ after US/Europe overnight prints settle.
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: desk-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch free public desk metrics
+        run: node scripts/desk-refresh/refresh.mjs
+
+      - name: Commit refreshed snapshot when numbers move
+        run: |
+          if git diff --quiet -- src/lib/dashboard/desk-refreshed.json; then
+            echo "No desk metric changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/dashboard/desk-refreshed.json
+          git commit -m "chore(desk): refresh non-spot metrics from public feeds"
+          git push

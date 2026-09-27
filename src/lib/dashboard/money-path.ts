@@ -64,7 +64,8 @@ export const MONEY_PATH: MoneyYear[] = [
   { year: 2023, gold: 1940.54, silver: 23.35, m2: 20779.9, cpi: 308.7 },
   { year: 2024, gold: 2386, silver: 28.27, m2: 21487.6, cpi: 317.6 },
   { year: 2025, gold: 3380, silver: 36.5, m2: 22355.3, cpi: 326.0 },
-  { year: 2026, gold: 4609, silver: 69.41, m2: 23218, cpi: 332.8 },
+  // Tip year: m2/cpi overwritten when desk-refresh cron runs (see desk-refreshed.json).
+  { year: 2026, gold: 4609, silver: 69.41, m2: 23342.8, cpi: 334.1 },
 ];
 
 export type PathWindow = "1971" | "2000" | "2008" | "2020";
