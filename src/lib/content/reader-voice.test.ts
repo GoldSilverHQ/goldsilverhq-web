@@ -189,7 +189,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
 
   it("keeps the Markets hub and articles free of outline and disclaimer voice", () => {
     const MARKETS_VOICE =
-      /Four captions that need a page|Four doors, four jobs|This page stays with|does not forecast|if you have just (?:read|looked|seen)|continues the story if|This is not a separate URL|Read those sentences as|Read the (?:table|Canada block) as|a private reader should follow|That is the claim|that is the stop|holds the (?:four )?(?:fact pages|topics)|None of those sentences is a path|Nothing here is a (?:reason|mean)|This page (?:only records|keeps the market quotient|does not invent)|Name the clock/i;
+      /Four captions that need a page|Four doors, four jobs|This page stays with|does not forecast|if you have just (?:read|looked|seen)|continues the story if|This is not a separate URL|Read those sentences as|Read the (?:table|Canada block) as|a private reader should follow|That is the claim|that is the stop|holds the (?:four )?(?:fact pages|topics)|None of those sentences is a path|Nothing here is a (?:reason|mean)|This page (?:only records|keeps the market quotient|does not invent)|Name the clock|The sections below explain|Reading a reserve headline|It is not a shopping list|Not a central bank|not separate articles/i;
     assert.doesNotMatch(bodyText(marketsHubBody), MARKETS_VOICE, "markets hub");
     for (const slug of [
       "official-gold-book-value",

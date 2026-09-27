@@ -1111,12 +1111,12 @@ export const marketPages: Episode[] = [
   },
   {
     slug: "central-bank-gold-reserves",
-    title: "How central banks report gold in FX reserves",
+    title: "Central-bank gold reserves",
     summary:
-      "Share of reserves, official gold relative to GDP, vault preferences, and dated official purchases and sales — including China’s published official stock since 2000, a 2026 year-to-date buyer table, a short July 2026 seller table, Finance Canada’s printed Gold: 0 line, and the 1999–2002 UK auction programme known as Brown’s Bottom. Poland’s recent buying and Canada’s zero book are covered in short sections on that same page (not separate articles).",
+      "How much gold central banks hold, what share of reserves that metal makes up, how the stock compares with GDP, where the bars sit, and who has bought or sold — including China’s published stock since 2000, Poland’s climb to 648 tonnes, Finance Canada’s printed Gold: 0, and the 1999–2002 UK auctions known as Brown’s Bottom.",
     status: "ready",
     paragraphs: [
-      "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
+      "Central banks report gold as part of official reserve assets: stocks in tonnes, shares of reserves, and dated purchases and sales.",
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },
@@ -1140,7 +1140,7 @@ export const marketPages: Episode[] = [
       demand: "high",
       difficulty: "mid",
       intent: "markets",
-      titleTag: "Central-Bank Gold Reserves: Share, Vaults, Official Buys",
+      titleTag: "Central-Bank Gold Reserves — Holdings, Shares, and Buys",
     },
   },
   {

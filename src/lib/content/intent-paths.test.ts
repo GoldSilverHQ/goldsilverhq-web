@@ -108,7 +108,8 @@ describe("intent paths (existing URLs only)", () => {
     assert.ok(nixonEp?.related?.some((r) => r.href === "/sound-money/what-is-sound-money"));
 
     const cb = bodyText(getBody("markets", "central-bank-gold-reserves")!);
-    assert.match(cb, /It is not a shopping list/);
+    assert.match(cb, /state ledger|official reserve report/i);
+    assert.doesNotMatch(cb, /The sections below|Reading a reserve headline|It is not a shopping list/i);
     assert.doesNotMatch(cb, /buy gold now|best gold stock|copy the central bank as advice/i);
     const cbPage = getMarket("central-bank-gold-reserves");
     assert.ok(cbPage?.related?.some((r) => r.href === "/sound-money/backed-money"));
