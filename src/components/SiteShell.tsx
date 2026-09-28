@@ -1,10 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { PriceTicker } from "@/components/PriceTicker";
 import { HISTORY_NAV_MENU } from "@/lib/content/history-subnav";
-import { MARKETS_NAV_MENU } from "@/lib/content/markets-subnav";
-import { SOUND_MONEY_NAV_MENU } from "@/lib/content/sound-money-subnav";
+import { LIBRARY_MATCH_HREFS, LIBRARY_NAV_MENU } from "@/lib/content/library-nav";
+import { SHOP_MATCH_HREFS, SHOP_NAV_MENU } from "@/lib/content/shop-nav";
 
 type NavMenuItem = {
   label: string;
@@ -12,20 +12,31 @@ type NavMenuItem = {
   cluster?: string;
 };
 
-const NAV: {
-  href: string;
+type NavItem = {
   label: string;
+  /** Hub link for the top-level trigger. Omit for grouping labels with no pillar page. */
+  href?: string;
   menu?: readonly NavMenuItem[];
-}[] = [
+  /** Extra path prefixes that light the trigger (e.g. Partners under Shop). */
+  matchHrefs?: readonly string[];
+};
+
+const NAV: NavItem[] = [
   { href: "/desk", label: "Desk" },
-  { href: "/sound-money", label: "Sound Money", menu: SOUND_MONEY_NAV_MENU },
   { href: "/history", label: "History", menu: HISTORY_NAV_MENU },
-  { href: "/markets", label: "Markets", menu: MARKETS_NAV_MENU },
+  { label: "Library", menu: LIBRARY_NAV_MENU, matchHrefs: LIBRARY_MATCH_HREFS },
   { href: "/blog", label: "Blog" },
-  { href: "/gold-silver", label: "In Practice" },
-  { href: "/shop", label: "Shop" },
-  { href: "/partners", label: "Partners" },
+  { href: "/shop", label: "Shop", menu: SHOP_NAV_MENU, matchHrefs: SHOP_MATCH_HREFS },
 ];
+
+function pathMatches(pathname: string, href: string): boolean {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function navItemIsActive(pathname: string, item: NavItem): boolean {
+  const prefixes = item.matchHrefs ?? (item.href ? [item.href] : item.menu?.map((entry) => entry.href) ?? []);
+  return prefixes.some((href) => pathMatches(pathname, href));
+}
 
 
 const SOCIALS = [
@@ -169,15 +180,19 @@ function DesktopNavFlyout({
   label,
   hubHref,
   items,
+  matchHrefs,
 }: {
   label: string;
-  hubHref: string;
+  hubHref?: string;
   items: readonly NavMenuItem[];
+  matchHrefs?: readonly string[];
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const isActive = navItemIsActive(pathname, { label, href: hubHref, menu: items, matchHrefs });
 
   const clearCloseTimer = () => {
     if (closeTimer.current) {
@@ -209,6 +224,10 @@ function DesktopNavFlyout({
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
+  const triggerClass = `site-nav-link inline-flex items-center whitespace-nowrap px-2 py-1 text-nav ${
+    open || isActive ? "is-open" : ""
+  }`;
+
   return (
     <div
       ref={rootRef}
@@ -220,15 +239,28 @@ function DesktopNavFlyout({
         if (!rootRef.current?.contains(event.relatedTarget as Node)) setOpen(false);
       }}
     >
-      <Link
-        to={hubHref}
-        className={`site-nav-link inline-flex items-center whitespace-nowrap px-2 py-1 text-nav ${open ? "is-open" : ""}`}
-        aria-expanded={open}
-        aria-controls={menuId}
-        aria-haspopup="menu"
-      >
-        {label}
-      </Link>
+      {hubHref ? (
+        <Link
+          to={hubHref}
+          className={triggerClass}
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-haspopup="menu"
+        >
+          {label}
+        </Link>
+      ) : (
+        <button
+          type="button"
+          className={triggerClass}
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-haspopup="menu"
+          onClick={() => setOpen((value) => !value)}
+        >
+          {label}
+        </button>
+      )}
       {open ? (
         <div
           id={menuId}
@@ -259,19 +291,32 @@ function MobileNavSection({
   onNavigate,
 }: {
   label: string;
-  hubHref: string;
+  hubHref?: string;
   items: readonly NavMenuItem[];
   onNavigate: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const childItems = hubHref ? items.filter((item) => item.href !== hubHref) : items;
 
   return (
     <div>
       <div className="flex min-h-11 items-center gap-1">
-        <Link to={hubHref} onClick={onNavigate} className={`site-nav-mobile-link ${open ? "is-open" : ""}`}>
-          {label}
-        </Link>
+        {hubHref ? (
+          <Link to={hubHref} onClick={onNavigate} className={`site-nav-mobile-link ${open ? "is-open" : ""}`}>
+            {label}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            className={`site-nav-mobile-link ${open ? "is-open" : ""}`}
+            aria-expanded={open}
+            aria-controls={panelId}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {label}
+          </button>
+        )}
         <button
           type="button"
           className={`grid size-11 place-items-center rounded-sm text-muted transition-colors hover:bg-[color-mix(in_oklab,var(--color-gold-soft)_14%,transparent)] hover:text-gold ${open ? "text-gold" : ""}`}
@@ -285,16 +330,14 @@ function MobileNavSection({
       </div>
       {open ? (
         <div id={panelId} className="site-nav-mobile-panel">
-          {items
-            .filter((item) => item.href !== hubHref)
-            .map((item) => (
-              <NavMenuLink
-                key={item.href}
-                item={item}
-                onNavigate={onNavigate}
-                className="site-nav-menu-item min-h-11"
-              />
-            ))}
+          {childItems.map((item) => (
+            <NavMenuLink
+              key={item.href}
+              item={item}
+              onNavigate={onNavigate}
+              className="site-nav-menu-item min-h-11"
+            />
+          ))}
         </div>
       ) : null}
     </div>
@@ -319,10 +362,20 @@ export function SiteShell({
             <Brand />
           </Link>
           <nav className="hidden min-w-0 flex-1 flex-nowrap items-center gap-4 whitespace-nowrap xl:flex xl:pl-2">
-            {NAV.map((item) =>
-              item.menu ? (
-                <DesktopNavFlyout key={item.href} label={item.label} hubHref={item.href} items={item.menu} />
-              ) : (
+            {NAV.map((item) => {
+              if (item.menu) {
+                return (
+                  <DesktopNavFlyout
+                    key={item.label}
+                    label={item.label}
+                    hubHref={item.href}
+                    items={item.menu}
+                    matchHrefs={item.matchHrefs}
+                  />
+                );
+              }
+              if (!item.href) return null;
+              return (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -330,8 +383,8 @@ export function SiteShell({
                 >
                   {item.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
           </nav>
           <div className="ml-auto flex shrink-0 items-center">
             <div className="hidden min-w-0 md:block xl:pr-5">
@@ -355,16 +408,20 @@ export function SiteShell({
         </div>
         {open ? (
           <nav className="flex flex-col gap-1 border-t border-line px-4 py-3 xl:hidden">
-            {NAV.map((item) =>
-              item.menu ? (
-                <MobileNavSection
-                  key={item.href}
-                  label={item.label}
-                  hubHref={item.href}
-                  items={item.menu}
-                  onNavigate={() => setOpen(false)}
-                />
-              ) : (
+            {NAV.map((item) => {
+              if (item.menu) {
+                return (
+                  <MobileNavSection
+                    key={item.label}
+                    label={item.label}
+                    hubHref={item.href}
+                    items={item.menu}
+                    onNavigate={() => setOpen(false)}
+                  />
+                );
+              }
+              if (!item.href) return null;
+              return (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -373,8 +430,8 @@ export function SiteShell({
                 >
                   {item.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
             <div className="mt-3 border-t border-line pt-3">
               <SocialLinks onNavigate={() => setOpen(false)} />
             </div>
