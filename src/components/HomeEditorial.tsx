@@ -8,8 +8,8 @@ export function HomeEditorial() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-8">
       <section className="border-t border-line pt-10">
-        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Open with</p>
-        <h2 className="mt-2 font-display text-3xl">A crisis, a definition, a turning point</h2>
+        <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Featured</p>
+        <h2 className="mt-2 font-display text-3xl">When paper money broke</h2>
         <p className="mt-2 max-w-xl text-muted">Weimar, Nixon, Law, and what sound money means.</p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {FEATURED.map((item) => (

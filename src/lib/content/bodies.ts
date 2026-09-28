@@ -1866,7 +1866,7 @@ const pieceOfEight: Section[] = [
     heading: "One coin, several later fights",
     paragraphs: [
       "The Spanish dollar faded as national mints and gold standards took over. The fights it left behind did not. The mountain that fed so much of its metal is [Potosí](/history/silver/potosi). The American dollar that copied its weight is [early U.S. coinage](/history/america/early-us-coinage). The problem of keeping two metals in one money is [bimetallism](/history/silver/bimetallism).",
-      "Those threads run through the rest of [silver in history](/history/silver): a mountain, a coin, a law, a market break, and an industry.",
+      "Those threads run through the rest of [silver in history](/history/silver) — from Potosí and the Spanish dollar through the mint-ratio fights, Silver Thursday, and silver’s industrial half.",
     ],
   },
 ];
@@ -1925,7 +1925,7 @@ const silverThursday: Section[] = [
     ],
   },
   {
-    heading: "A squeeze, a rule book, a dated break",
+    heading: "What the record holds",
     paragraphs: [
       "What the record holds is a concentrated long, a set of new margin and position rules at COMEX, a January peak, and a break on **27 March 1980**. Silver was already an industrial metal by then; that side of its story is [monetary history and industry](/history/silver/monetary-and-industry).",
       "Silver Thursday gets retold as a trading lesson. The record itself is quieter: who held what, which rules changed, and on which day the price broke. January’s peak and March’s unwind are still the dated pair that later markets remember.",
