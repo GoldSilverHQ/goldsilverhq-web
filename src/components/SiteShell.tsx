@@ -24,6 +24,7 @@ const NAV: {
   { href: "/blog", label: "Blog" },
   { href: "/gold-silver", label: "In Practice" },
   { href: "/shop", label: "Shop" },
+  { href: "/partners", label: "Partners" },
 ];
 
 
@@ -389,6 +390,9 @@ export function SiteShell({
           <nav className="flex flex-wrap items-center gap-x-4 text-xs text-muted">
             <a href="/shop" className="hover:text-gold-soft">
               Shop
+            </a>
+            <a href="/partners" className="hover:text-gold-soft">
+              Partners
             </a>
             <Link to="/about" className="hover:text-gold-soft">
               About

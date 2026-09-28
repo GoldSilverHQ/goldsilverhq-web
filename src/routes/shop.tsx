@@ -199,7 +199,11 @@ function ShopPage() {
             <Link to="/markets" className="text-gold hover:text-gold-soft">
               Markets
             </Link>
-            . Shop does not rank dealers or recommend metal as an investment.
+            . External metal dealers belong on{" "}
+            <a href="/partners" className="text-gold hover:text-gold-soft">
+              Partners
+            </a>
+            , not here. Shop does not rank dealers or recommend metal as an investment.
           </p>
         </div>
       </div>

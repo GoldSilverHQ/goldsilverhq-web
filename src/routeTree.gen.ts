@@ -16,6 +16,7 @@ import { Route as FlowsRouteImport } from './routes/flows'
 import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/googleb53ee24d705afe09[.]html'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as MapsRouteImport } from './routes/maps'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -68,6 +69,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
 const MapsRoute = MapsRouteImport.update({
   id: '/maps',
   path: '/maps',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -164,6 +170,7 @@ export interface FileRoutesByFullPath {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -190,6 +197,7 @@ export interface FileRoutesByTo {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -217,6 +225,7 @@ export interface FileRoutesById {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -245,6 +254,7 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
     | '/shop'
     | '/sitemap.xml'
@@ -271,6 +281,7 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
     | '/shop'
     | '/sitemap.xml'
@@ -297,6 +308,7 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
     | '/shop'
     | '/sitemap.xml'
@@ -324,6 +336,7 @@ export interface RootRouteChildren {
   Googleb53ee24d705afe09DothtmlRoute: typeof Googleb53ee24d705afe09DothtmlRoute
   ImpressumRoute: typeof ImpressumRoute
   MapsRoute: typeof MapsRoute
+  PartnersRoute: typeof PartnersRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   ShopRoute: typeof ShopRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -392,6 +405,13 @@ declare module '@tanstack/react-router' {
       path: '/maps'
       fullPath: '/maps'
       preLoaderRoute: typeof MapsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -524,6 +544,7 @@ const rootRouteChildren: RootRouteChildren = {
   Googleb53ee24d705afe09DothtmlRoute: Googleb53ee24d705afe09DothtmlRoute,
   ImpressumRoute: ImpressumRoute,
   MapsRoute: MapsRoute,
+  PartnersRoute: PartnersRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   ShopRoute: ShopRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

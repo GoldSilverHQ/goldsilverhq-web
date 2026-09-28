@@ -226,6 +226,18 @@ html {
   .shop-product-plate {
     box-shadow: var(--shadow-border);
   }
+
+  .partners-hero {
+    animation: shop-rise 700ms ease-out both;
+  }
+
+  .partners-disclosure {
+    animation: shop-rise 700ms ease-out 80ms both;
+  }
+
+  .partners-section {
+    animation: shop-rise 700ms ease-out 140ms both;
+  }
 }
 
 @keyframes clock-pulse {
