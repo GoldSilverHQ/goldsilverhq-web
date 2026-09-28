@@ -17,6 +17,7 @@ import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/goog
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as ShopRouteImport } from './routes/shop'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
@@ -72,6 +73,11 @@ const MapsRoute = MapsRouteImport.update({
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
   id: '/robots.txt',
   path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -159,6 +165,7 @@ export interface FileRoutesByFullPath {
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -184,6 +191,7 @@ export interface FileRoutesByTo {
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -210,6 +218,7 @@ export interface FileRoutesById {
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -237,6 +246,7 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/maps'
     | '/robots.txt'
+    | '/shop'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -262,6 +272,7 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/maps'
     | '/robots.txt'
+    | '/shop'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -287,6 +298,7 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/maps'
     | '/robots.txt'
+    | '/shop'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -313,6 +325,7 @@ export interface RootRouteChildren {
   ImpressumRoute: typeof ImpressumRoute
   MapsRoute: typeof MapsRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
+  ShopRoute: typeof ShopRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
@@ -386,6 +399,13 @@ declare module '@tanstack/react-router' {
       path: '/robots.txt'
       fullPath: '/robots.txt'
       preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -505,6 +525,7 @@ const rootRouteChildren: RootRouteChildren = {
   ImpressumRoute: ImpressumRoute,
   MapsRoute: MapsRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
+  ShopRoute: ShopRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,

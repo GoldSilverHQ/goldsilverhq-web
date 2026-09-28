@@ -23,6 +23,7 @@ const NAV: {
   { href: "/markets", label: "Markets", menu: MARKETS_NAV_MENU },
   { href: "/blog", label: "Blog" },
   { href: "/gold-silver", label: "In Practice" },
+  { href: "/shop", label: "Shop" },
 ];
 
 
@@ -386,6 +387,9 @@ export function SiteShell({
             <Wordmark />
           </Link>
           <nav className="flex flex-wrap items-center gap-x-4 text-xs text-muted">
+            <a href="/shop" className="hover:text-gold-soft">
+              Shop
+            </a>
             <Link to="/about" className="hover:text-gold-soft">
               About
             </Link>
