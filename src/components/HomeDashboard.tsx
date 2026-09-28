@@ -125,7 +125,7 @@ export function HomeDashboard() {
 
       <p className="mt-6 text-center text-sm">
         <Link to="/desk" className="btn-gold inline-flex min-h-11 items-center rounded-full px-5 text-sm font-medium">
-          Open the full desk →
+          Open Live →
         </Link>
       </p>
     </div>

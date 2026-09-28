@@ -22,9 +22,9 @@ type NavItem = {
 };
 
 const NAV: NavItem[] = [
-  { href: "/desk", label: "Desk" },
+  { href: "/desk", label: "Live" },
   { href: "/history", label: "History", menu: HISTORY_NAV_MENU },
-  { label: "Library", menu: LIBRARY_NAV_MENU, matchHrefs: LIBRARY_MATCH_HREFS },
+  { label: "Academy", menu: LIBRARY_NAV_MENU, matchHrefs: LIBRARY_MATCH_HREFS },
   { href: "/blog", label: "Blog" },
   { href: "/shop", label: "Shop", menu: SHOP_NAV_MENU, matchHrefs: SHOP_MATCH_HREFS },
 ];

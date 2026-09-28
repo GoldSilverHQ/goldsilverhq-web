@@ -7,9 +7,9 @@ import { pageShareMeta } from "@/lib/seo/share-meta";
 export const Route = createFileRoute("/desk")({
   head: () => ({
     meta: pageShareMeta({
-      title: "Metals desk — prices, official gold, money — GoldSilverHQ",
+      title: "Live — prices, official gold, money — GoldSilverHQ",
       description:
-        "Gold and silver desk by category: prices and five-year COMEX history, official gold holdings, stocks and flows, money supply, and exchange paper.",
+        "Gold and silver live by category: prices and five-year COMEX history, official gold holdings, stocks and flows, money supply, and exchange paper.",
       imagePath: "/og.jpg",
     }),
   }),
@@ -25,7 +25,7 @@ function DeskPage() {
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Read next</p>
         <h2 className="mt-2 font-sans text-3xl">History and the ideas</h2>
         <p className="mt-2 max-w-xl text-muted">
-          Numbers on the desk; articles for the stories behind them.
+          Numbers on Live; articles for the stories behind them.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {pillars.map((p) => (

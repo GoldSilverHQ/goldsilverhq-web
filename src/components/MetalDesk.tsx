@@ -53,9 +53,9 @@ export function MetalDesk() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Metals desk</p>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Live</p>
       <h1 className="mt-2 font-sans text-4xl leading-tight sm:text-5xl">
-        <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
+        <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> live
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
         Prices live in the bar above. Below: five-year COMEX price history, then the 1980 highs in today’s money.

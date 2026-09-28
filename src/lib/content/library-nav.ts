@@ -1,6 +1,6 @@
 /**
- * Library header flyout — reading shelves grouped under one top-level label.
- * Existing hub routes only (no new pillar URLs).
+ * Academy header flyout — Sound Money · Markets · Guides under one top-level label.
+ * Existing hub routes only (no new pillar URLs; no /academy or /library hub).
  */
 export type LibraryNavItem = {
   label: string;
@@ -14,5 +14,5 @@ export const LIBRARY_NAV_MENU: LibraryNavItem[] = [
   { label: "Guides", href: "/gold-silver" },
 ];
 
-/** Path prefixes that light the Library trigger (no /library hub page). */
+/** Path prefixes that light the Academy trigger (no Academy hub page). */
 export const LIBRARY_MATCH_HREFS = LIBRARY_NAV_MENU.map((item) => item.href);
