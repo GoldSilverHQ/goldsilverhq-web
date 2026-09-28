@@ -62,7 +62,7 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: "Gold, silver, and sound money — GoldSilverHQ",
       description:
         "A short gold and silver dashboard: live prices, estimated ounces mined this year, and the map of sound money and history. Media only.",
-      kicker: "Desk · Media",
+      kicker: "Live · Media",
     };
   }
 

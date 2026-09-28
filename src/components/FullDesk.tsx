@@ -106,7 +106,7 @@ function DeskTabBar({
       <div
         className="inline-flex min-w-full gap-1 rounded-full bg-surface p-1 shadow-[var(--shadow-border)] sm:min-w-0"
         role="tablist"
-        aria-label="Desk category"
+        aria-label="Live category"
       >
         {DESK_TABS.map((tab) => {
           const on = tab.id === value;
@@ -192,9 +192,9 @@ export function FullDesk() {
 
   return (
     <div className="data-ui mx-auto max-w-6xl px-4 py-8 sm:py-12">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Metals desk</p>
+      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Live</p>
       <h1 className="mt-2 font-sans text-4xl leading-tight sm:text-5xl">
-        <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> desk
+        <span className="text-gold">Gold</span> & <span className="text-silver">silver</span> live
       </h1>
       <p className="mt-3 max-w-2xl text-muted">
         Dated prints by category. Each figure can download as a 4:5 card.

@@ -689,7 +689,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
       <p className="mt-8 text-center text-sm text-muted">
         Dashes are missing prints, not broken widgets. COMEX open interest and LBMA clearing stay empty on purpose.{" "}
         <Link to="/desk" className="text-gold hover:text-gold-soft">
-          Desk with the figures we already store →
+          Live with the figures we already store →
         </Link>
       </p>
     </div>
