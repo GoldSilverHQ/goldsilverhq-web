@@ -304,10 +304,19 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
   it("keeps home and desk chrome free of door / outline voice", () => {
     const home = readFileSync(join(root, "components/HomeEditorial.tsx"), "utf8");
     assert.doesNotMatch(home, /Four doors|doors into/i);
+    assert.doesNotMatch(home, /Open with/i);
+    assert.doesNotMatch(home, /A crisis, a definition, a turning point/i);
+    assert.doesNotMatch(home, /a [a-z]+, a [a-z]+, a [a-z]+/i);
     const dash = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
     assert.doesNotMatch(dash, /not a stock tip|Start with the/i);
     const desk = readFileSync(join(root, "routes/desk.tsx"), "utf8");
     assert.doesNotMatch(desk, /Four doors|If you arrived|does not sell metal/i);
+  });
+
+  it("keeps silver episode closers free of curriculum triad openers", () => {
+    const bodies = readFileSync(join(root, "lib/content/bodies.ts"), "utf8");
+    assert.doesNotMatch(bodies, /A squeeze, a rule book, a dated break/);
+    assert.doesNotMatch(bodies, /a mountain, a coin, a law, a market break/);
   });
 
   it("keeps Practice hub off overview-shelf and disclaimer chrome", () => {
