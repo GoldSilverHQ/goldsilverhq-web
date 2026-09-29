@@ -10,6 +10,8 @@ import type { Section } from "./bodies.ts";
  *
  * X→blog mirror: `scripts/x-blog-mirror/` + `data/x-articles-seen.json`.
  * Append a ready row here (and a body in `bodies.ts`) when mirroring an Article.
+ * Images: cover → ARTICLE_HEROES; every inline X MEDIA figure → section.figure
+ * (cover alone is incomplete — see download-inline.mjs / x-blog-automation-setup).
  */
 
 /** Small closed tag set — mirrors reader shelves, not SEO directories. */

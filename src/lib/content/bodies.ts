@@ -3286,6 +3286,14 @@ const misesInflationAsPolicy: Section[] = [
       "On **29 September 1881**, [Ludwig von Mises](/history/vip/ludwig-von-mises) was born in Lemberg, then part of Austria-Hungary. The city is Lviv, in Ukraine, today. He died in **1973**. The note published on his birthday is not a full life. It returns to one hard idea he made plain: rising prices are not a weather event. When money loses [purchasing power](/sound-money/inflation-purchasing-power) because more of it is created, that is a choice.",
       "A weather event has no desk that decided it. A loss of purchasing power that comes from a larger stock of money does. Someone enlarged the stock. The prices people then meet are the surface of that enlargement, not a storm that arrived from outside the decision. If inflation is named as weather, the thinner unit looks like bad luck. If it is named as a choice, the question is who expanded the money, and what the expansion was meant to carry.",
     ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-portrait.jpg",
+      alt: "Portrait of Ludwig von Mises in a dark suit, white shirt, and patterned tie.",
+      caption: "Ludwig von Mises — the birthday note returns to inflation as a choice, not weather.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 874,
+      height: 874,
+    },
   },
   {
     heading: "Two books at the center",
@@ -3308,6 +3316,19 @@ const misesInflationAsPolicy: Section[] = [
     heading: "Inflation as a policy",
     paragraphs: [
       "That is why a line commonly attributed to him still lands. The article prints it under his name. It says the most important thing to remember is that inflation is not an act of God, that inflation is not a catastrophe of the elements or a disease that comes like the plague. Inflation is a policy — a deliberate policy of people who resort to inflation because they consider it to be a lesser evil than unemployment. In the not very long run, the passage says, such a policy defeats its own purpose and brings about the very consequences it is supposed to avoid.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-inflation.jpg",
+      alt: "Quote card: Ludwig von Mises saying inflation is a policy, not an act of God, a catastrophe of the elements, or a plague.",
+      caption: "Inflation as policy — the line the X Article prints under his name.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
       "The note then says the same thing in plainer words. Inflation is not a plague and not a storm. Someone decides to expand the stock of money. Someone decides that today’s deficit, war bill, or stimulus will be paid with tomorrow’s thinner purchasing power. A deficit is spending beyond what taxes bring in. A war bill is the cost of fighting, presented for payment. A stimulus is spending or credit meant to lift activity now. The shared move is the method of payment: not an extra stock of goods, but a larger stock of money, so that each unit buys less later.",
       "Sound money — money that is hard to create at will — was, for Mises, a way to limit that temptation. The issuer cannot meet a deficit, a war bill, or a stimulus simply by adding units. That is a constraint on the method, not a promise that no deficit, war, or slump will appear. Calling inflation a policy also changes what a later rise in prices is evidence of. If prices are weather, a higher level is a misfortune. If prices are the surface of a larger stock of money, the higher level is a record of the earlier decision. Someone decided.",
     ],
@@ -3316,10 +3337,31 @@ const misesInflationAsPolicy: Section[] = [
     heading: "When control becomes compulsion",
     paragraphs: [
       "He was just as blunt about the state. Power without competence or restraint is not a neutral helper. Expanding government control over prices, production, and credit does not stay “technical.” It becomes compulsion.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-state.jpg",
+      alt: "Quote card: Ludwig von Mises on worship of the state as worship of force, and the danger of incompetent or corrupt government.",
+      caption: "The state as force — the second graphic the X Article places under his name.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
       "A ceiling, a quota, or a directed loan can be written as if it only measured. The article’s point is that it does not stay a measurement. A price that may not rise has to be enforced against the seller who would have charged more. A production mandate has to be enforced against the plan that would have made something else. Directed credit has to be enforced against the lender who would have lent elsewhere. Enforcement is the compulsion.",
       "The article prints a second passage under his name. The state, it says, is essentially an apparatus of compulsion and coercion. The characteristic feature of its nature is the enforcement of its commands by beating, killing, and imprisonment. Those who ask for more government interference are asking ultimately for more compulsion and less freedom.",
       "The same logic applies to creeping controls. Price caps, production mandates, and credit allocation rarely stay temporary. Each fix invites the next. More interference means more force and less room for voluntary exchange. Temporary is the promise that makes the first control easier to accept. The first rule changes the prices, the output, or the loans people would have chosen. The gap that remains is then treated as a reason for a second rule. Voluntary exchange is the trade both sides accept. The note’s claim is that this sequence moves the arrangement toward compulsion, not that every statute is a beating.",
     ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-interference.jpg",
+      alt: "Quote card: Ludwig von Mises saying that asking for more government interference is asking for more compulsion and less freedom.",
+      caption: "More interference, more compulsion — the third graphic from the X Article.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+    },
   },
   {
     heading: "Prices as the method of calculation",
