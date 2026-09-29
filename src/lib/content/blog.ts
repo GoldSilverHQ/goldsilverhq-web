@@ -47,6 +47,26 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "spanish-silver-first-global-money",
+    title: "How Spanish Silver Became the World's First Global Money",
+    summary:
+      "In 1545 Cerro Rico filled Potosí with silver. The piece of eight carried it worldwide — and the U.S. dollar took its name and weight from that Spanish coin.",
+    date: "2026-09-28",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Potosí", href: "/history/silver/potosi" },
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/potosi",
+      "/history/silver/piece-of-eight",
+    ],
+    xArticleUrl: "https://x.com/i/article/2104667282366402560",
+    sourceXId: "2104667282366402560",
+  },
+  {
     slug: "sweden-1931-left-gold",
     title: "The Night Sweden Left Gold and Aimed at Prices Instead",
     summary:

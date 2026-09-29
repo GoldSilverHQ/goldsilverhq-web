@@ -39,8 +39,22 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 9);
-    assert.equal(listBlogPosts().length, 9);
+    assert.equal(blogPosts.length, 10);
+    assert.equal(listBlogPosts().length, 10);
+    const spanish = getBlogPost("spanish-silver-first-global-money");
+    assert.ok(spanish);
+    assert.equal(
+      spanish.title,
+      "How Spanish Silver Became the World's First Global Money",
+    );
+    assert.deepEqual(spanish.tags, ["History", "Metals"]);
+    assert.equal(spanish.date, "2026-09-28");
+    assert.equal(spanish.sourceXId, "2104667282366402560");
+    assert.match(spanish.xArticleUrl ?? "", /x\.com\/i\/article\/2104667282366402560/);
+    assert.ok(
+      spanish.summary.length >= 140 && spanish.summary.length <= 160,
+      `summary length ${spanish.summary.length}`,
+    );
     const sweden = getBlogPost("sweden-1931-left-gold");
     assert.ok(sweden);
     assert.equal(sweden.title, "The Night Sweden Left Gold and Aimed at Prices Instead");
@@ -117,6 +131,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/spanish-silver-first-global-money",
         "/blog/sweden-1931-left-gold",
         "/blog/interest-costs-vs-us-gold",
         "/blog/september-1971-official-gold-price",
@@ -133,8 +148,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 7);
-    assert.equal(listBlogPostsByTag("Metals").length, 6);
+    assert.equal(listBlogPostsByTag("History").length, 8);
+    assert.equal(listBlogPostsByTag("Metals").length, 7);
     assert.equal(listBlogPostsByTag("Markets").length, 4);
     assert.equal(listBlogPostsByTag("Ideas").length, 1);
   });
@@ -148,6 +163,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "spanish-silver-first-global-money",
       "sweden-1931-left-gold",
       "interest-costs-vs-us-gold",
       "september-1971-official-gold-price",
@@ -159,6 +175,26 @@ describe("blog section", () => {
       const words = bodyWordCount(slug);
       assert.ok(words > 1200, `expected site essay >1200 words for ${slug}, got ${words}`);
     }
+  });
+
+  it("interlinks the Spanish silver note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "spanish-silver-first-global-money")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 2);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2104667282366402560/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("spanish-silver-first-global-money");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
   it("interlinks Newton lightly and credits the X Article once", () => {
@@ -322,6 +358,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/spanish-silver-first-global-money",
       "/blog/sweden-1931-left-gold",
       "/blog/newton-1717-guinea",
       "/blog/september-1971-official-gold-price",
