@@ -47,16 +47,16 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
-    slug: "spanish-silver-global-money",
+    slug: "spanish-silver-first-global-money",
     title: "How Spanish Silver Became the World's First Global Money",
     summary:
-      "In 1545 silver from Cerro Rico built Potosí. The piece of eight then reached Seville, Manila, and China, and still set the U.S. dollar’s silver weight in 1792.",
+      "In 1545 Cerro Rico filled Potosí with silver. The piece of eight carried it worldwide — and the U.S. dollar took its name and weight from that Spanish coin.",
     date: "2026-09-28",
     status: "ready",
     tags: ["History", "Metals"],
     paragraphs: [],
     related: [
-      { title: "Potosí — the silver mountain", href: "/history/silver/potosi" },
+      { title: "Potosí", href: "/history/silver/potosi" },
       { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
     ],
     relatedArticlePaths: [

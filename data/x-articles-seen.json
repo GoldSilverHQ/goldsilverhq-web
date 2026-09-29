@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T08:55:00.000Z",
+  "updatedAt": "2026-09-29T08:50:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
@@ -9,11 +9,12 @@
       "postId": "2104668115326107650",
       "title": "How Spanish Silver Became the World's First Global Money",
       "status": "mirrored",
-      "slug": "spanish-silver-global-money",
-      "sitePath": "/blog/spanish-silver-global-money",
+      "slug": "spanish-silver-first-global-money",
+      "sitePath": "/blog/spanish-silver-first-global-money",
       "xArticleUrl": "https://x.com/i/article/2104667282366402560",
       "publishedAt": "2026-09-28T20:22:36.000Z",
-      "mirroredAt": "2026-09-29T08:55:00.000Z"
+      "mirroredAt": "2026-09-29T08:50:00.000Z",
+      "missNote": "Manual catch-up: status 2104668115326107650 published after the 2026-09-28 evening Berlin slot; mirrored outside schedule window."
     },
     {
       "articleId": "2104261329636712450",

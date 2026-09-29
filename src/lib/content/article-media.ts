@@ -332,12 +332,12 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
-    path: "/blog/spanish-silver-global-money",
-    src: "/images/blog/spanish-silver-global-money.jpg",
-    ogSrc: "/og/cards/blog-spanish-silver-global-money.jpg",
-    alt: "Cerro Rico above Potosí, a Spanish eight-real coin, and a galleon — title image for Spanish silver as global money.",
-    caption: "1545 — silver from Cerro Rico, coined as the piece of eight and carried across two oceans.",
-    credit: "Title image from the GoldSilverHQ X Article on Spanish silver and the piece of eight.",
+    path: "/blog/spanish-silver-first-global-money",
+    src: "/images/blog/spanish-silver-first-global-money.jpg",
+    ogSrc: "/og/cards/blog-spanish-silver-first-global-money.jpg",
+    alt: "Spanish colonial silver coins and Andean mountain motif — title image for how Spanish silver became global money.",
+    caption: "1545 onward — Cerro Rico, the piece of eight, and the dollar’s silver inheritance.",
+    credit: "Title image from the GoldSilverHQ X Article on Spanish silver as global money.",
   },
   {
     path: "/blog/sweden-1931-left-gold",
