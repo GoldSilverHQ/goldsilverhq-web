@@ -47,6 +47,26 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "spanish-silver-global-money",
+    title: "How Spanish Silver Became the World's First Global Money",
+    summary:
+      "In 1545 silver from Cerro Rico built Potosí. The piece of eight then reached Seville, Manila, and China, and still set the U.S. dollar’s silver weight in 1792.",
+    date: "2026-09-28",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Potosí — the silver mountain", href: "/history/silver/potosi" },
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/potosi",
+      "/history/silver/piece-of-eight",
+    ],
+    xArticleUrl: "https://x.com/i/article/2104667282366402560",
+    sourceXId: "2104667282366402560",
+  },
+  {
     slug: "sweden-1931-left-gold",
     title: "The Night Sweden Left Gold and Aimed at Prices Instead",
     summary:

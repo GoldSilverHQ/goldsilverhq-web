@@ -3279,6 +3279,102 @@ const september1971OfficialGoldPrice: Section[] = [
   },
 ];
 
+const spanishSilverGlobalMoney: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In **1545**, silver was found in a red, cone-shaped mountain high in the Andes. Spanish miners rushed to claim it. They called it Cerro Rico, the “Rich Mountain,” and the mining town that grew at its foot became Potosí, in what is now Bolivia.",
+      "Ore in a hillside is not yet a coin in a pocket. What followed was a city, a forced draft, a mint, and a silver piece that crossed two oceans. English speakers called that piece the piece of eight. The mountain’s longer history is [Potosí](/history/silver/potosi). The coin, taken as a coin, is the [piece of eight](/history/silver/piece-of-eight).",
+    ],
+  },
+  {
+    heading: "A city where almost nothing grows",
+    paragraphs: [
+      "Potosí sits more than **4,000 meters** above sea level. Almost nothing grows there. A town at that height cannot feed itself from fields at the door. Grain, timber, cloth, and tools have to come up from lower country, and something has to pay for the climb. At Potosí that something was the silver coming out of the mountain.",
+      "Within three decades the town had more than **150,000** people, the largest city in the Americas at the time. Thin air, little food of its own, and still the largest American city of the moment: the people were there because the mountain was there.",
+      "Spaniards began to say “vale un Potosí” — it’s worth a Potosí — about anything priceless. A place name had become a way of speaking. The phrase quotes a reputation, not a mint ledger.",
+    ],
+  },
+  {
+    heading: "One mountain and the world’s new silver",
+    paragraphs: [
+      "The reason was the silver. Historians estimate that in the second half of the **1500s**, at its peak, Cerro Rico may have produced around **60 percent** of all the silver mined in the world. Estimates vary, but even careful ones put this one mountain at the center of the world’s silver supply.",
+      "Those hedges mark a peak in that half-century. They are not a promise that every year hit the same share, and not a denial that other mines existed. A careful reading still leaves this one mountain at the center of what was being dug. A town where almost nothing grew could still draw more than 150,000 people because, on that estimate, so much of the silver then leaving the ground was coming off the hill above them.",
+    ],
+  },
+  {
+    heading: "The mita",
+    paragraphs: [
+      "That wealth came at a terrible human cost. From **1573**, Spain ran a forced labor draft called the mita. More than **200** Indigenous communities had to send one in seven adult men to work in the mines of Potosí and the mercury mines of Huancavelica.",
+      "A draft is not a wage offer. The communities had to send the men. One in seven adult men is the rate — a fraction inside those communities, not a count of everyone who ever entered a tunnel. More than 200 communities is how widely the order reached.",
+      "The tunnels were dangerous, and the mercury used to refine the ore poisoned workers and the land. Mercury here is a refining agent, which is why Huancavelica sits beside Potosí: the same draft sent men to the mercury mines as well as to the silver mountain. The mita lasted until **1812**. No one knows how many people it killed. From 1573 to 1812 the draft ran, and the dead were not given a number.",
+    ],
+  },
+  {
+    heading: "Eight reales, one coin",
+    paragraphs: [
+      "The silver was turned into coins. By the **1570s** Potosí had its own mint, and its most famous product was the real de a ocho, a coin worth eight reales. English speakers called it the piece of eight. A real was a Spanish silver unit. Eight of them in one piece is the whole of the name. A mint at the mountain meant the metal could be stamped where it was dug, instead of traveling only as an unmarked bar until a European press touched it.",
+      "It weighed about **27 grams** and was more than **90 percent** pure silver. “About” and “more than” are the caution on weight and fineness. They explain a reputation: the silver inside was heavy and high-grade, in a range a merchant could learn. They are not a slip for every piece the mint ever struck.",
+      "Early pieces were rough “cobs,” cut from silver bars and struck by hand. A cob is an irregular slice — shears and a hammer before a round blank. Later coins were round and machine-made, stamped with the Pillars of Hercules and the motto PLUS ULTRA, “further beyond.” The change is in the finish. Both were the eight-real piece. The later stamp made the claim easier to see: a known device, a Latin motto, a round edge.",
+    ],
+  },
+  {
+    heading: "Seville, then the Pacific",
+    paragraphs: [
+      "Then the coin went around the world. Treasure fleets carried silver across the Atlantic to Seville, and from there it spread through Europe. Seville is the port named on that Atlantic leg. The metal did not stop in the imperial city. It entered payments beyond the court that had claimed the mountain. No fleet count is given. The route is the fact. A coin that never left its mint would have kept a local name. Once the fleets moved it, a merchant who had never seen the Andes could still know the piece.",
+      "From **1565**, the Manila galleons crossed the Pacific between Acapulco in Mexico and Manila in the Philippines. They sailed west full of silver and came back with Chinese silk and porcelain. 1565 is earlier than Potosí’s mint in the 1570s. The account does not treat every ounce on those ships as a coin from that later mint. It says the galleons went west full of silver, and that the mountain’s silver became the famous coin. The Pacific leg carried Spanish American silver the other way from Seville.",
+      "Westbound, the cargo is silver. Homebound, the cargo named here is Chinese silk and porcelain. Goods one way, metal the other: Chinese goods settled with Spanish American silver, on a crossing that began in 1565 between those two ports.",
+    ],
+  },
+  {
+    heading: "China, and a second stamp",
+    paragraphs: [
+      "China was the biggest buyer. It needed silver for trade and for taxes, and it paid well, which is why so much of the metal kept moving east instead of resting in Seville.",
+      "Chinese merchants tested the coins and stamped them with small “chop marks” to show they were good. A chop mark is a punch added after a test. It is not the mint’s own device. It is a second opinion, struck into the silver, saying this piece passed in that market. A coin that carries those marks has been handled by people who cared what was inside it, far from the mountain.",
+      "By some estimates, as much as a third of the silver mined in Spanish America ended up in Asia. “By some estimates” and “as much as” keep the third from hardening into an exact share. The direction is the part the sentence will bear: Asia, and China above all, took a very large part of that silver. Traders in Canton, Amsterdam, London, and Boston all knew what a piece of eight was worth, because the silver inside it was steady and well known. Canton is the Chinese port in that list. Amsterdam, London, and Boston are Atlantic cities. They could price the same coin because the metal was steady, not because a single treaty is quoted here.",
+    ],
+  },
+  {
+    heading: "From the piece of eight to the dollar",
+    paragraphs: [
+      "It was also the everyday money of the American colonies, the coin people paid with. When the new United States picked a money unit in **1785**, it chose the dollar. In **1786**, Congress set the dollar’s silver content to match the Spanish coins people were already using. One year took the name. The next fitted the silver to coins already in circulation.",
+      "The Coinage Act of **1792** made it law. A US dollar would have “the value of a Spanish milled dollar as the same is now current,” with about **24 grams** of pure silver. “Milled” means the later round coin, not the rough cob. “As the same is now current” ties the legal dollar to the piece people were already passing. The piece of eight itself was about 27 grams and more than 90 percent pure. The dollar’s pure silver is given as about 24 grams. Both figures stand as stated.",
+      "Even the **$** sign most likely grew out of a merchants’ shorthand for pesos. Americans still call a quarter “two bits,” because a bit was one real, an eighth of a Spanish dollar — two bits to the quarter.",
+    ],
+  },
+  {
+    heading: "Legal tender until 1857",
+    paragraphs: [
+      "The Spanish coins did not disappear once the United States began minting its own. They stayed legal tender in the United States until **1857**. Legal tender means a payment a creditor is bound to accept for a debt. The 1792 act defined an American dollar. On this account it did not clear the Spanish pieces out of use. For decades a debt could still be settled with the older coin. The year given for the end of that status is 1857. The dollar’s name, the slang of bits, and the silver weight chosen to match the milled piece were already written down.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["A mountain, a draft, a coin, two oceans, and a dollar defined to match that coin."],
+    list: [
+      "**1545.** Silver is found in Cerro Rico, the red cone above the town that becomes Potosí, in what is now Bolivia.",
+      "**Within three decades.** More than 150,000 people, the largest city in the Americas at the time, at more than 4,000 meters, where almost nothing grows.",
+      "**Second half of the 1500s, at the peak.** Historians estimate Cerro Rico may have produced around 60 percent of all the silver mined in the world. Estimates vary.",
+      "**1565.** Manila galleons begin crossing between Acapulco and Manila, west with silver, returning with Chinese silk and porcelain.",
+      "**1570s.** Potosí has its own mint. The famous coin is the real de a ocho, the piece of eight: about 27 grams, more than 90 percent pure silver.",
+      "**1573.** The mita begins. More than 200 Indigenous communities must send one in seven adult men to Potosí and to the mercury mines of Huancavelica.",
+      "**1785.** The United States picks the dollar as its money unit.",
+      "**1786.** Congress sets the dollar’s silver content to match the Spanish coins already in use.",
+      "**1792.** The Coinage Act gives a dollar “the value of a Spanish milled dollar as the same is now current,” with about 24 grams of pure silver.",
+      "**1812.** The mita ends. No one knows how many people it killed.",
+      "**1857.** Spanish coins cease to be legal tender in the United States.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "A mountain in the Andes had given the world its first global coin, and the world’s best-known currency still carries the name English speakers gave to it: the dollar. Cerro Rico is the mountain. The piece of eight is the coin. The dollar is the name that followed.",
+      "It is a dated account of that coin, and of the statute that later borrowed its silver.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104667282366402560).",
+    ],
+  },
+];
+
 const sweden1931LeftGold: Section[] = [
   {
     heading: "",
@@ -3367,6 +3463,7 @@ const sweden1931LeftGold: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/spanish-silver-global-money": spanishSilverGlobalMoney,
   "blog/sweden-1931-left-gold": sweden1931LeftGold,
   "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
   "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,

@@ -844,6 +844,10 @@ export const historyClusters: Cluster[] = [
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
+          {
+            title: "How Spanish silver became global money",
+            href: "/blog/spanish-silver-global-money",
+          },
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver in history", href: "/history/silver" },
         ],
