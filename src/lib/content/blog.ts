@@ -47,6 +47,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mises-inflation-as-policy",
+    title: "Ludwig von Mises and the Policy Behind Inflation",
+    summary:
+      "Born 29 September 1881, Mises treated inflation as policy: more money and thinner purchasing power, not a storm, a plague, or an act of God.",
+    date: "2026-09-29",
+    status: "ready",
+    tags: ["History", "Ideas"],
+    paragraphs: [],
+    related: [
+      { title: "Ludwig von Mises", href: "/history/vip/ludwig-von-mises" },
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/vip/ludwig-von-mises",
+      "/sound-money/inflation-purchasing-power",
+    ],
+    xArticleUrl: "https://x.com/i/article/2104952749670481920",
+    sourceXId: "2104952749670481920",
+  },
+  {
     slug: "spanish-silver-first-global-money",
     title: "How Spanish Silver Became the World's First Global Money",
     summary:

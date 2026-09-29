@@ -195,6 +195,7 @@ export const ideaPages: Episode[] = [
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
       { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
       { title: "Sweden leaves gold, 1931", href: "/blog/sweden-1931-left-gold" },
+      { title: "Mises and inflation as policy", href: "/blog/mises-inflation-as-policy" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Assignats", href: "/history/banks-paper/assignats" },
     ],

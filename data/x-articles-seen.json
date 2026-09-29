@@ -1,9 +1,20 @@
 {
-  "updatedAt": "2026-09-29T08:50:00.000Z",
+  "updatedAt": "2026-09-29T18:30:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2104952749670481920",
+      "postId": "2104955541415973247",
+      "title": "Ludwig von Mises and the Policy Behind Inflation",
+      "status": "mirrored",
+      "slug": "mises-inflation-as-policy",
+      "sitePath": "/blog/mises-inflation-as-policy",
+      "xArticleUrl": "https://x.com/i/article/2104952749670481920",
+      "publishedAt": "2026-09-29T15:24:43.000Z",
+      "mirroredAt": "2026-09-29T18:30:00.000Z"
+    },
     {
       "articleId": "2104667282366402560",
       "postId": "2104668115326107650",
