@@ -21,6 +21,7 @@
     "format": "prettier --write .",
     "x-blog:observe": "node scripts/x-blog-mirror/observe.mjs",
     "x-blog:discover": "node scripts/x-blog-mirror/discover.mjs",
+    "x-blog:download-inline": "node scripts/x-blog-mirror/download-inline.mjs",
     "og:from-hero": "node scripts/og-from-hero.mjs"
   },
   "dependencies": {

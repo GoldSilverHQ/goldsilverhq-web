@@ -2,6 +2,11 @@
 /**
  * Download the cover image for one X Article (reuse as-is; no AI regen).
  *
+ * Cover alone is NOT enough for a mirror. Also download every inline MEDIA
+ * figure from the X Article body via download-inline.mjs and place each as a
+ * `figure` on the matching section in bodies.ts — see Automation prompt /
+ * discover.mjs instructions.
+ *
  * Usage:
  *   node scripts/x-blog-mirror/download-cover.mjs \
  *     --url https://pbs.twimg.com/media/....jpg \

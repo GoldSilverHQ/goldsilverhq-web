@@ -212,6 +212,24 @@ describe("blog section", () => {
     assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
   });
 
+  it("embeds every inline X Article figure for the Mises note (not cover-only)", () => {
+    const body = getBody("blog", "mises-inflation-as-policy")!;
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 4, `expected 4 inline figures, got ${figures.length}`);
+    const srcs = figures.map((f) => f!.src).sort();
+    assert.deepEqual(srcs, [
+      "/images/blog/mises-inflation-as-policy-portrait.jpg",
+      "/images/blog/mises-inflation-as-policy-quote-inflation.jpg",
+      "/images/blog/mises-inflation-as-policy-quote-interference.jpg",
+      "/images/blog/mises-inflation-as-policy-quote-state.jpg",
+    ]);
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+    }
+  });
+
   it("interlinks the Spanish silver note lightly and credits the X Article once", () => {
     const body = getBody("blog", "spanish-silver-first-global-money")!;
     const text = body
