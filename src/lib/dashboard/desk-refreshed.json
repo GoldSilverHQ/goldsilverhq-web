@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-09-27T18:49:55.562Z",
+  "refreshedAt": "2026-09-29T12:52:00.782Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
@@ -17,10 +17,10 @@
       "source": "ECB BSI M3"
     },
     "fx": {
-      "eurUsd": 1.1464,
-      "cnyUsd": 6.6975,
-      "jpyUsd": 156.87,
-      "asOf": "2026-09-18",
+      "eurUsd": 1.14,
+      "cnyUsd": 6.711,
+      "jpyUsd": 157.18,
+      "asOf": "2026-09-25",
       "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS"
     },
     "lbma": {
