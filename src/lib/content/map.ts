@@ -818,6 +818,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+          { title: "Spanish silver as global money", href: "/blog/spanish-silver-first-global-money" },
           { title: "Silver in history", href: "/history/silver" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
@@ -841,6 +842,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
+          { title: "Spanish silver as global money", href: "/blog/spanish-silver-first-global-money" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },

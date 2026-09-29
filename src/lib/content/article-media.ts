@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/spanish-silver-first-global-money",
+    src: "/images/blog/spanish-silver-first-global-money.jpg",
+    ogSrc: "/og/cards/blog-spanish-silver-first-global-money.jpg",
+    alt: "Spanish colonial silver coins and Andean mountain motif — title image for how Spanish silver became global money.",
+    caption: "1545 onward — Cerro Rico, the piece of eight, and the dollar’s silver inheritance.",
+    credit: "Title image from the GoldSilverHQ X Article on Spanish silver as global money.",
+  },
+  {
     path: "/blog/sweden-1931-left-gold",
     src: "/images/blog/sweden-1931-left-gold.jpg",
     ogSrc: "/og/cards/blog-sweden-1931-left-gold.jpg",

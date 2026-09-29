@@ -3279,6 +3279,93 @@ const september1971OfficialGoldPrice: Section[] = [
   },
 ];
 
+const spanishSilverFirstGlobalMoney: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In **1545**, silver was found in a red, cone-shaped mountain high in the Andes. Spanish miners rushed to claim it. They called it Cerro Rico, the \"Rich Mountain,\" and the mining town that grew at its foot became [Potosí](/history/silver/potosi), in what is now Bolivia.",
+      "That mountain did more than enrich a crown. It filled a city where almost nothing grew, stamped a coin that merchants on four continents could recognize by weight and feel, and left a name English speakers still use for their unit of account. The story is about silver leaving a high Andean ridge and becoming money people trusted far from Spain.",
+    ],
+  },
+  {
+    heading: "A city above the tree line",
+    paragraphs: [
+      "Potosí sits more than **4,000 meters** above sea level. Almost nothing grows there. Yet within three decades it had more than **150,000** people — the largest city in the Americas at the time. Spaniards began to say *vale un Potosí*, \"it's worth a Potosí,\" about anything priceless.",
+      "The reason was the silver. Historians estimate that in the second half of the **1500s**, at its peak, Cerro Rico may have produced around **60 percent** of all the silver mined in the world. Estimates vary. Even careful ones put this one mountain at the center of the world's silver supply for decades after the strike.",
+      "A mining camp that large, that high, and that dependent on a single ore body was not a quiet village with a lucky seam. Food, timber, tools, and labor had to climb. The ore had to leave. The crown and the merchants who financed the work measured success in bars and coins that could travel. The mountain's fame was a claim about how much metal it yielded relative to everywhere else — not a claim that life there was easy.",
+    ],
+  },
+  {
+    heading: "The mita and the mercury",
+    paragraphs: [
+      "That wealth came at a terrible human cost. From **1573**, Spain ran a forced labor draft called the *mita*. More than **200** Indigenous communities had to send **one in seven** adult men to work in the mines of Potosí and the mercury mines of Huancavelica. The tunnels were dangerous, and the mercury used to refine the ore poisoned workers and the land. The *mita* lasted until **1812**. No one knows how many people it killed.",
+      "Mercury mattered because refining silver at that scale was not only pick and shovel. Amalgamation bound fine silver to mercury so the metal could be recovered from ore that simple smelting handled poorly. Huancavelica supplied the mercury; Potosí supplied the silver. The draft tied highland communities to both places. The record of how many died is incomplete. The statute that required the rotations is not. The *mita* is part of how Spanish American silver reached the world's tills — not a side note beside the coin story.",
+    ],
+  },
+  {
+    heading: "From bars to the piece of eight",
+    paragraphs: [
+      "The silver was turned into coins. By the **1570s** Potosí had its own mint, and its most famous product was the *real de a ocho*, a coin worth eight reales. English speakers called it the [piece of eight](/history/silver/piece-of-eight). It weighed about **27 grams** and was more than **90 percent** pure silver. Early pieces were rough \"cobs,\" cut from silver bars and struck by hand. Later ones were round and machine-made, stamped with the Columns of Hercules and the motto *PLUS ULTRA*, \"further beyond.\"",
+      "A cob is a minting method before a machine-made round. Silver is cut from a bar, hammered, and struck with dies that do not always fill the irregular planchet. Merchants still weighed and tested. The later milled dollar was easier to recognize at a glance: round, lettered or milled edge, columns and waves that advertised Spanish America. *PLUS ULTRA* named an empire that had passed the old Columns of Hercules into the Atlantic and Pacific. The coin carried that motto into markets that did not speak Spanish.",
+      "What made the piece of eight travel was not a slogan. It was a fairly steady silver content that traders learned to trust, plus a minting system that poured enough coins into Atlantic and Pacific trade that the type became familiar. When a coin is familiar, less bargaining goes into whether the metal is what it claims to be.",
+    ],
+  },
+  {
+    heading: "Atlantic fleets and Pacific galleons",
+    paragraphs: [
+      "Then the coin went around the world. Treasure fleets carried silver across the Atlantic to Seville, and from there it spread through Europe. From **1565**, the Manila galleons crossed the Pacific between Acapulco in Mexico and Manila in the Philippines. They sailed west full of silver and came back with Chinese silk and porcelain.",
+      "The Atlantic route answered Europe's demand for coin and for silver as a means of settling balances. The Pacific route answered China's. Spanish America sat between two oceans of demand. Mexican and Peruvian silver did not have to choose one theater. Different cargoes left different ports, but the metal story is the same: New World silver was mined for export as money, not only for local wages.",
+      "Seville received fleets and registered treasure. Manila received silver that paid for Asian goods. The piece of eight was one face of that flow — a minted unit that could leave a chest and enter a shop without being melted first, though melting and reminting happened often enough once the metal reached a new jurisdiction.",
+    ],
+  },
+  {
+    heading: "China as the great buyer",
+    paragraphs: [
+      "China was the biggest buyer. It needed silver for trade and for taxes, and it paid well. Chinese merchants tested the coins and stamped them with small \"chop marks\" to show they were good. By some estimates, as much as a **third** of the silver mined in Spanish America ended up in Asia. Traders in Canton, Amsterdam, London, and Boston all knew what a piece of eight was worth, because the silver inside it was steady and well known.",
+      "A chop mark is a private assay mark: a punch that says this piece has been tested and accepted. It does not make the coin Spanish law in China. It makes the coin acceptable to the merchant who punched it and to others who trust that punch. The global reach of Spanish silver was not only imperial shipping. It was also local verification in markets that used the metal without using Madrid's courts.",
+      "One-third is an estimate, not a ledger line. The point of the estimate is direction: a large share of the American silver output left the Spanish commercial system for Asia. Europe felt the inflow too. The same mountain could feed both.",
+    ],
+  },
+  {
+    heading: "The American colonies and the dollar",
+    paragraphs: [
+      "It was also the everyday money of the American colonies. When the new United States picked a money unit in **1785**, it chose the dollar. In **1786**, Congress set the dollar's silver content to match the Spanish coins people were already using.",
+      "The Coinage Act of **1792** made it law. A U.S. dollar would have \"the value of a Spanish milled dollar as the same is now current,\" with about **24 grams** of pure silver. Even the **$** sign most likely grew out of a merchants' shorthand for pesos. Americans still call a quarter \"two bits,\" because a bit was one real, an eighth of a Spanish dollar.",
+      "The Spanish coins did not disappear once the U.S. began minting its own. They stayed legal tender in the United States until **1857**. For decades after independence, the minted Spanish dollar and the new American dollar shared tills. The statute that named the Spanish milled dollar as the reference was recognizing a coin people already counted in — not inventing a unit from a blank page.",
+      "\"Two bits\" survives as speech long after the real stopped being everyday change. Language kept a fraction of the Spanish dollar when the coin itself had left ordinary circulation. That habit is a small reminder of how deep the piece of eight sat in North American money talk.",
+    ],
+  },
+  {
+    heading: "What \"first global money\" means here",
+    paragraphs: [
+      "Calling Spanish silver the world's first global money is a claim about reach and recognition, not about perfection. Other metals and other coins moved before 1545. What changed after Cerro Rico was scale: one American mountain at the center of world silver supply for a long stretch of the sixteenth century, a minted eight-real piece that Atlantic and Pacific traders could price, and an Asian demand strong enough to pull a large share of that metal across the Pacific.",
+      "The human cost of the *mita*, the mercury, and the mines belongs in the same account as the fleets and the chops. The coin's familiarity in Canton and Boston does not erase how the ore was won. The dated story is both: a mountain, a draft, a mint, two oceans, and a later republic that wrote the Spanish dollar into its first coinage law.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Strike, draft, mint, oceans, then the dollar's name."],
+    list: [
+      "**1545.** Silver is found at Cerro Rico. Potosí grows at the mountain's foot.",
+      "**1565.** Manila galleons begin the Acapulco–Manila run — silver west, Asian goods east.",
+      "**1570s.** Potosí has its own mint; the *real de a ocho* becomes the famous product.",
+      "**1573.** The *mita* draft begins for Potosí and Huancavelica; it lasts until 1812.",
+      "**Second half of the 1500s.** At peak, estimates put Cerro Rico near 60 percent of world silver output.",
+      "**1785–1786.** The United States chooses the dollar and matches its silver content to Spanish coins already in use.",
+      "**1792.** The Coinage Act ties the U.S. dollar to the Spanish milled dollar (~24 grams pure silver).",
+      "**1857.** Spanish coins cease to be legal tender in the United States.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "A mountain in the Andes gave the world a coin merchants could trust from Seville to Canton, and the world's best-known currency still carries the name English speakers gave to that Spanish silver: the dollar.",
+      "Cerro Rico, Potosí, the *mita*, the piece of eight, the Manila galleon, and the Coinage Act of 1792 are one continuous metal story — not separate legends.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104667282366402560).",
+    ],
+  },
+];
+
 const sweden1931LeftGold: Section[] = [
   {
     heading: "",
@@ -3367,6 +3454,7 @@ const sweden1931LeftGold: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/spanish-silver-first-global-money": spanishSilverFirstGlobalMoney,
   "blog/sweden-1931-left-gold": sweden1931LeftGold,
   "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
   "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,

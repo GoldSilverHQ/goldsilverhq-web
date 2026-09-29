@@ -1,9 +1,11 @@
 name: X Blog Mirror
-# Twice daily Europe/Berlin ≈ 10:00 and 18:00.
-# Cron is UTC: 0 8,16 * * * ≈ 10:00/18:00 CEST (UTC+2); ≈ 09:00/17:00 CET (UTC+1).
+# Thrice daily Europe/Berlin ≈ 03:00, 10:00, and 18:00.
+# Cron is UTC. In CEST (UTC+2): 0 1,8,16 * * * = 03:00 / 10:00 / 18:00 Berlin.
+# DST drift: in CET (UTC+1) the same UTC cron fires at 02:00 / 09:00 / 17:00 Berlin.
+# Cursor Automation (timezone-aware Europe/Berlin): 0 3,10,18 * * * — see Project store docs.
 on:
   schedule:
-    - cron: "0 8,16 * * *"
+    - cron: "0 1,8,16 * * *"
   workflow_dispatch:
 
 permissions:
@@ -98,7 +100,7 @@ jobs:
         if: steps.discover.outputs.exit_code == '0'
         run: |
           if [ -z "${{ secrets.X_BEARER_TOKEN }}" ]; then
-            echo "::notice::Set repo secret X_BEARER_TOKEN (X API app Bearer) to enable scheduled discover. Fallback: Cursor Automation / timer twice daily Berlin — see docs/x-blog-republisher.md in the Project store."
+            echo "::notice::Set repo secret X_BEARER_TOKEN (X API app Bearer) to enable scheduled discover. Fallback: Cursor Automation / timer thrice daily Berlin (03:00, 10:00, 18:00) — see docs/x-blog-automation-setup.md in the Project store."
           else
             echo "::notice::No new eligible Articles (or already mirrored)."
           fi
