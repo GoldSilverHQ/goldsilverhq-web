@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/mises-inflation-as-policy",
+    src: "/images/blog/mises-inflation-as-policy.jpg",
+    ogSrc: "/og/cards/blog-mises-inflation-as-policy.jpg",
+    alt: "Black-and-white portrait of Ludwig von Mises beside the title Ludwig von Mises and the Policy Behind Inflation.",
+    caption: "29 September 1881 — inflation as a policy, not a storm.",
+    credit: "Title image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+  },
+  {
     path: "/blog/spanish-silver-first-global-money",
     src: "/images/blog/spanish-silver-first-global-money.jpg",
     ogSrc: "/og/cards/blog-spanish-silver-first-global-money.jpg",

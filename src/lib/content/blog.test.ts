@@ -39,8 +39,19 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 10);
-    assert.equal(listBlogPosts().length, 10);
+    assert.equal(blogPosts.length, 11);
+    assert.equal(listBlogPosts().length, 11);
+    const mises = getBlogPost("mises-inflation-as-policy");
+    assert.ok(mises);
+    assert.equal(mises.title, "Ludwig von Mises and the Policy Behind Inflation");
+    assert.deepEqual(mises.tags, ["History", "Ideas"]);
+    assert.equal(mises.date, "2026-09-29");
+    assert.equal(mises.sourceXId, "2104952749670481920");
+    assert.match(mises.xArticleUrl ?? "", /x\.com\/i\/article\/2104952749670481920/);
+    assert.ok(
+      mises.summary.length >= 140 && mises.summary.length <= 160,
+      `summary length ${mises.summary.length}`,
+    );
     const spanish = getBlogPost("spanish-silver-first-global-money");
     assert.ok(spanish);
     assert.equal(
@@ -131,6 +142,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/mises-inflation-as-policy",
         "/blog/spanish-silver-first-global-money",
         "/blog/sweden-1931-left-gold",
         "/blog/interest-costs-vs-us-gold",
@@ -148,10 +160,10 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 8);
+    assert.equal(listBlogPostsByTag("History").length, 9);
     assert.equal(listBlogPostsByTag("Metals").length, 7);
     assert.equal(listBlogPostsByTag("Markets").length, 4);
-    assert.equal(listBlogPostsByTag("Ideas").length, 1);
+    assert.equal(listBlogPostsByTag("Ideas").length, 2);
   });
 
   it("lists the blog hub and posts on the Phase-1 sitemap", () => {
@@ -163,6 +175,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "mises-inflation-as-policy",
       "spanish-silver-first-global-money",
       "sweden-1931-left-gold",
       "interest-costs-vs-us-gold",
@@ -175,6 +188,28 @@ describe("blog section", () => {
       const words = bodyWordCount(slug);
       assert.ok(words > 1200, `expected site essay >1200 words for ${slug}, got ${words}`);
     }
+  });
+
+  it("interlinks the Mises inflation note lightly and credits the X Article once", () => {
+    const body = getBody("blog", "mises-inflation-as-policy")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[Ludwig von Mises\]\(\/history\/vip\/ludwig-von-mises\)/);
+    assert.match(text, /\[purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal((text.match(/\]\(\/sound-money\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2104952749670481920/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("mises-inflation-as-policy");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
   });
 
   it("interlinks the Spanish silver note lightly and credits the X Article once", () => {
@@ -358,6 +393,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/mises-inflation-as-policy",
       "/blog/spanish-silver-first-global-money",
       "/blog/sweden-1931-left-gold",
       "/blog/newton-1717-guinea",

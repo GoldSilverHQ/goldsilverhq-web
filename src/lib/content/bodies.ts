@@ -3279,6 +3279,79 @@ const september1971OfficialGoldPrice: Section[] = [
   },
 ];
 
+const misesInflationAsPolicy: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **29 September 1881**, [Ludwig von Mises](/history/vip/ludwig-von-mises) was born in Lemberg, then part of Austria-Hungary. The city is Lviv, in Ukraine, today. He died in **1973**. The note published on his birthday is not a full life. It returns to one hard idea he made plain: rising prices are not a weather event. When money loses [purchasing power](/sound-money/inflation-purchasing-power) because more of it is created, that is a choice.",
+      "A weather event has no desk that decided it. A loss of purchasing power that comes from a larger stock of money does. Someone enlarged the stock. The prices people then meet are the surface of that enlargement, not a storm that arrived from outside the decision. If inflation is named as weather, the thinner unit looks like bad luck. If it is named as a choice, the question is who expanded the money, and what the expansion was meant to carry.",
+    ],
+  },
+  {
+    heading: "Two books at the center",
+    paragraphs: [
+      "Mises spent his career explaining money, prices, and the limits of state power in language ordinary people could follow if they slowed down. Two books still sit at the center of that work. In **1912** he published *The Theory of Money and Credit*. In **1949** came *Human Action*.",
+      "The **1912** book treated money as a good people demand for its purchasing power — not a veil floating above the real economy. A veil, in that picture, would be a wrapper: goods and labor would be the real story, and money would only rename the tags. The book refuses that. People demand the unit because of what it still buys. The unit is part of the choice, not a label stuck on after the choice is finished. If they expect it to command less, they spend it sooner, ask more of it for the same good, or try to hold something else.",
+      "*Human Action*, in **1949**, is his large treatise on how purposeful human choice builds markets, prices, and cooperation. Purposeful means people act for ends they have in mind. A price, on that account, is not a number an office assigns so a table will balance. It is what emerges when people trade because each side expects to be better off. Cooperation is people fitting their plans to one another through those trades. The earlier book asks what money is doing inside exchange. The later one asks how exchange itself is built from choice.",
+      "Describing that argument is not a recommendation to hold metal, and it is not a forecast. The birthday note can name both books without pretending to replace either.",
+    ],
+  },
+  {
+    heading: "Cheap credit, then the bust",
+    paragraphs: [
+      "From the money book grew a warning that still fits paper-money systems. When a central bank or a treasury expands credit and the money supply, interest rates can look artificially cheap. Businesses and households then make plans that only work while the cheap credit lasts. When the expansion slows or stops, those plans unravel. Boom, then bust.",
+      "Interest, in this warning, is a price for time and for committing capital. A project that takes years has to cover that price, not only materials and wages. If policy makes the rate look cheaper than the real cost of waiting, more projects look as if they will pay. The plans are real. The rate that made them look sound is not a report of how much capital is actually free to commit. A household loan that feels easy to carry while credit is being expanded can stop feeling easy when the expansion pauses. The unraveling is those plans meeting the cost the cheap rate had hidden.",
+      "Mises did not treat the cycle as a mystery of capitalism. He treated it as the aftermath of monetary policy that misleads people about the real cost of time and capital. The boom is what people do when the price of waiting has been painted too low. The bust is what happens when that paint wears off and the projects that needed it cannot be finished on the old terms. The sequence needs no extra percent and no named crisis: expand, let rates look cheap, watch dependent plans form, slow or stop the expansion, watch those plans fail.",
+    ],
+  },
+  {
+    heading: "Inflation as a policy",
+    paragraphs: [
+      "That is why a line commonly attributed to him still lands. The article prints it under his name. It says the most important thing to remember is that inflation is not an act of God, that inflation is not a catastrophe of the elements or a disease that comes like the plague. Inflation is a policy — a deliberate policy of people who resort to inflation because they consider it to be a lesser evil than unemployment. In the not very long run, the passage says, such a policy defeats its own purpose and brings about the very consequences it is supposed to avoid.",
+      "The note then says the same thing in plainer words. Inflation is not a plague and not a storm. Someone decides to expand the stock of money. Someone decides that today’s deficit, war bill, or stimulus will be paid with tomorrow’s thinner purchasing power. A deficit is spending beyond what taxes bring in. A war bill is the cost of fighting, presented for payment. A stimulus is spending or credit meant to lift activity now. The shared move is the method of payment: not an extra stock of goods, but a larger stock of money, so that each unit buys less later.",
+      "Sound money — money that is hard to create at will — was, for Mises, a way to limit that temptation. The issuer cannot meet a deficit, a war bill, or a stimulus simply by adding units. That is a constraint on the method, not a promise that no deficit, war, or slump will appear. Calling inflation a policy also changes what a later rise in prices is evidence of. If prices are weather, a higher level is a misfortune. If prices are the surface of a larger stock of money, the higher level is a record of the earlier decision. Someone decided.",
+    ],
+  },
+  {
+    heading: "When control becomes compulsion",
+    paragraphs: [
+      "He was just as blunt about the state. Power without competence or restraint is not a neutral helper. Expanding government control over prices, production, and credit does not stay “technical.” It becomes compulsion.",
+      "A ceiling, a quota, or a directed loan can be written as if it only measured. The article’s point is that it does not stay a measurement. A price that may not rise has to be enforced against the seller who would have charged more. A production mandate has to be enforced against the plan that would have made something else. Directed credit has to be enforced against the lender who would have lent elsewhere. Enforcement is the compulsion.",
+      "The article prints a second passage under his name. The state, it says, is essentially an apparatus of compulsion and coercion. The characteristic feature of its nature is the enforcement of its commands by beating, killing, and imprisonment. Those who ask for more government interference are asking ultimately for more compulsion and less freedom.",
+      "The same logic applies to creeping controls. Price caps, production mandates, and credit allocation rarely stay temporary. Each fix invites the next. More interference means more force and less room for voluntary exchange. Temporary is the promise that makes the first control easier to accept. The first rule changes the prices, the output, or the loans people would have chosen. The gap that remains is then treated as a reason for a second rule. Voluntary exchange is the trade both sides accept. The note’s claim is that this sequence moves the arrangement toward compulsion, not that every statute is a beating.",
+    ],
+  },
+  {
+    heading: "Prices as the method of calculation",
+    paragraphs: [
+      "A third passage on the article’s page turns from the state to the market. Social cooperation and the division of labor, it says, can be achieved only by the market. There is no other system that could be substituted for the market economy. The market is the only method of economic calculation.",
+      "In his view, civilization depends on peaceful cooperation through markets and property, not on worship of the apparatus that can override both. Money prices are information. Distort the money, and you distort the signals. Remove the signals, and central plans become guesswork. A money price reports what others will give up for what someone offers. If the unit those prices are written in is being expanded, the signal mixes two stories: what the good is worth relative to other goods, and what the unit itself is becoming. Plans that read the mix as if it were only about goods are the plans the cheap-credit warning already described.",
+      "Take the signals away and a plan can still list tons, hours, and rations. Without prices formed in exchange, the list stipulates. It does not calculate. That is why readers who care about gold, silver, and scarce money still read him. He connects the unit of account to the possibility of rational economic life. A unit of account is what the prices are counted in. Scarce money, in this note, means a unit that is hard to multiply, so the prices written in it can keep doing the job of information. The connection is a claim about calculation. It is not a shopping list.",
+    ],
+  },
+  {
+    heading: "The spine of the note",
+    paragraphs: ["On his birthday the article asks for the spine, not for jargon."],
+    list: [
+      "**29 September 1881.** Born in Lemberg, then Austria-Hungary, now Lviv. Died in **1973**.",
+      "**1912.** *The Theory of Money and Credit* treats money as a good demanded for its purchasing power, not a veil over the real economy.",
+      "**1949.** *Human Action* treats markets, prices, and cooperation as the result of purposeful choice.",
+      "**Boom and bust.** Expanding credit and the money stock can make interest look artificially cheap. Plans that depend on that cheapness unravel when the expansion slows or stops.",
+      "**Inflation.** Not a plague and not a storm. Someone expands the stock of money so that a deficit, a war bill, or a stimulus is paid with thinner purchasing power.",
+      "**The state.** Control over prices, production, and credit becomes compulsion. Creeping controls rarely stay temporary.",
+      "**Calculation.** Money prices are information. Distort the money and the signals distort. Remove them and central plans become guesswork.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Paper that can be printed without limit invites abuse. Hard money narrows that path. That is the note’s last claim, stated as his view: a unit that is difficult to create leaves less room for paying today’s bills by thinning tomorrow’s purchasing power.",
+      "The dates are few. Born **29 September 1881**. The money book in **1912**. The treatise on human action in **1949**. Died in **1973**. Between those marks the article keeps one argument: inflation as policy, the cycle as the cost of artificial expansion, the state as force when it replaces voluntary exchange, and the unit of account as a condition of economic calculation.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104952749670481920).",
+    ],
+  },
+];
+
 const spanishSilverFirstGlobalMoney: Section[] = [
   {
     heading: "",
@@ -3454,6 +3527,7 @@ const sweden1931LeftGold: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/mises-inflation-as-policy": misesInflationAsPolicy,
   "blog/spanish-silver-first-global-money": spanishSilverFirstGlobalMoney,
   "blog/sweden-1931-left-gold": sweden1931LeftGold,
   "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
