@@ -1,9 +1,21 @@
 {
-  "updatedAt": "2026-09-29T18:30:00.000Z",
+  "updatedAt": "2026-09-30T18:30:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2105187582904500224",
+      "postId": "2105297059989406160",
+      "title": "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",
+      "status": "mirrored",
+      "slug": "greenspan-1966-print-money",
+      "sitePath": "/blog/greenspan-1966-print-money",
+      "xArticleUrl": "https://x.com/i/article/2105187582904500224",
+      "publishedAt": "2026-09-30T14:01:48.000Z",
+      "mirroredAt": "2026-09-30T18:30:00.000Z",
+      "inlineMediaCount": 1
+    },
     {
       "articleId": "2104952749670481920",
       "postId": "2104955541415973247",

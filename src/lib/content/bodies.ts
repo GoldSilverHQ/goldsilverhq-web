@@ -3568,7 +3568,126 @@ const sweden1931LeftGold: Section[] = [
   },
 ];
 
+/** Blog: Greenspan 1966 essay to the 2011 print-money line — longer than the X Article. */
+const greenspan1966PrintMoney: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In August **2011**, Standard & Poor's had just downgraded U.S. credit. Alan Greenspan sat on NBC's Meet the Press. He was no longer Chairman of the Federal Reserve. He was the man who had run the place for nearly two decades, answering the question hanging over every Treasury holder in the room.",
+      "Could America default?",
+    ],
+  },
+  {
+    heading: "Print money, zero default",
+    paragraphs: [
+      "The article dates the appearance as NBC's Meet the Press, **7 August 2011**, and labels him former Fed Chairman. The sentence it prints under his name is this: \"The United States can pay any debt it has because we can always print money to do that. So, there is zero probability of default.\"",
+      "Print money. Zero default. Said calmly, as if it were plumbing.",
+      "A default, in the narrow sense of that sentence, is a failure to pay a debt in the unit the debt is written in. Treasury debt is a promise to pay dollars. Greenspan treats the dollar as a unit the United States can create. If the issuer can create the unit, running out of dollars need not be why a payment fails. The sentence does not say what those dollars will buy.",
+      "That line lands harder when you know what the same man wrote forty-five years earlier.",
+    ],
+  },
+  {
+    heading: "A private essay in 1966",
+    paragraphs: [
+      "In July **1966**, Greenspan was a private economist in Ayn Rand's Objectivist circle. He was not a public official. He was not a central banker. He published an essay called \"Gold and Economic Freedom\" in *The Objectivist* newsletter. Rand reprinted it the next year in *Capitalism: The Unknown Ideal*.",
+      "He did not hedge. The line the article places there is his: \"Gold and economic freedom are inseparable.\"",
+      "Inseparable joins the two. The freedom to hold, trade, and plan sits, in that sentence, with a money that is gold or tied to gold. The essay's title already pairs them. What follows in the note is the mechanism, then a warning about savings.",
+    ],
+  },
+  {
+    heading: "The brake is metal",
+    paragraphs: [
+      "Further in, he named the mechanism. Hard money plus free banking keeps credit honest. Expand too far, and gold drains away. The brake is metal, not a speech.",
+      "Hard money, in that picture, is a unit that cannot be multiplied at will. Free banking, as the essay uses it, is a banking system that is not told by a central office how far credit may run. The two together are the constraint. A bank that expands credit too far loses gold. Depositors and rivals present claims. Metal leaves. The loss is the signal to stop. No chairman has to announce a pause. The drain announces it.",
+      "The article prints this sentence from the essay, under his name and the title *Gold and Economic Freedom*, **1966**: \"Thus, under the gold standard, a free banking system stands as the protector of an economy's stability and balanced growth.\"",
+      "The protector in that sentence is the arrangement: gold as the standard, and banks free enough that a gold drain can punish an expansion. A speech can describe the brake. The essay says the brake is the metal leaving.",
+    ],
+  },
+  {
+    heading: "The essay's stark word",
+    paragraphs: [
+      "Then he named what happens to savings when that constraint disappears. The article points at the essay's own stark word, and prints it on a graphic.",
+    ],
+    figure: {
+      src: "/images/blog/greenspan-1966-print-money-quote-confiscation.jpg",
+      alt: "Quote card on a dark ground with a gold dollar-sign seal, printing Alan Greenspan’s 1966 lines on the gold standard, savings, confiscation through inflation, and deficit spending.",
+      caption:
+        "The 1966 essay’s stark word — confiscation — on the graphic from the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Alan Greenspan’s 1966 gold essay.",
+      width: 1199,
+      height: 765,
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The graphic opens with his sentence: \"In the absence of the gold standard, there is no way to protect savings from confiscation through inflation.\" It goes on that there is no safe store of value. Further down the same card he writes: \"Deficit spending is simply a scheme for the confiscation of wealth. Gold stands in the way of this insidious process. It stands as a protector of property rights.\"",
+      "Confiscation is the stark word. It usually means a taking by law. Here he applies it to inflation. Savings lose [purchasing power](/sound-money/inflation-purchasing-power). The unit still has the same name. It buys less. Deficit spending, in the same passage, is spending beyond what taxes bring in, covered by creating claims. He calls that a scheme, and he writes that gold stands in the way of it.",
+      "Read those lines again, as the article asks. Gold as a wall. Paper that can be printed without limit as a door that never closes. When money is tied to gold, banks cannot flood the system forever. When gold is cut loose, governments can cover deficits by creating claims faster than goods. Savers lose purchasing power quietly — not in a crash announcement, but in the thinning of every paycheck and every account balance. That was the young essayist's argument. Gold as constraint. Paper as temptation.",
+    ],
+  },
+  {
+    heading: "The system under his feet",
+    paragraphs: [
+      "Then the world under his feet changed.",
+      "In August **1971**, Nixon closed the [gold window](/history/20th-century/bretton-woods-nixon-1971). Foreign official holders could no longer redeem dollars for gold at a fixed price. Bretton Woods was finished. The dollar became a pure fiat note — still called a dollar, no longer a claim on metal sitting in a vault.",
+      "Redeem meant a foreign treasury or central bank could present dollars and take gold at the posted official price. Closing the window ended that channel. Fiat, in the article's phrase, is the note that remains after the claim on metal is gone. The essay of **1966** had described what follows when gold is cut loose. **1971** was that cut for the dollar's official gold link.",
+    ],
+  },
+  {
+    heading: "A chair in a post-gold system",
+    paragraphs: [
+      "By the time Greenspan took the Fed chair in **1987**, that fight was already over. He did not inherit a gold standard. He inherited the operating desk of a post-gold system — and ran it until early **2006**.",
+      "The Sunday interview in **2011** sits after that run. He is no longer the chairman. He is the former chairman, asked about default after a downgrade, having already spent the chairmanship inside the system the **1966** essay had described.",
+    ],
+  },
+  {
+    heading: "The job, the system, the question",
+    paragraphs: [
+      "So why do the **1966** essay and the **2011** print-money answer feel like they belong to different men?",
+      "Because the job changed. The money system changed. The question changed.",
+      "In **1966** he was writing a critique from outside: what happens when paper escapes gold. In **2011** he was describing a technical feature of the system he had already managed. Debts written in a government's own currency can be met by creating more of that currency. Formal default, in the narrow sense, can be avoided.",
+      "The essay asks what savers lose when the gold constraint is gone. The Sunday answer asks whether the Treasury can fail to pay in dollars. The article's reading is that the question moved.",
+    ],
+  },
+  {
+    heading: "Inflation is a different question",
+    paragraphs: [
+      "That is not the same claim as \"printing has no cost.\" Inflation is a different question from technical default. The **1966** essay was already about that difference. The Meet the Press line answered a narrower one: can the Treasury fail to pay in dollars? His answer was no — because dollars can be made.",
+      "Technical default is the missed payment in the unit named on the bond. Inflation is the thinning of what that unit buys after the payment is made. A creditor can receive every dollar the contract names and still command fewer goods. The essay calls that thinning a confiscation when it comes from money created to cover deficits. The Sunday line answers the missed payment. It does not say the new units leave savings untouched.",
+    ],
+  },
+  {
+    heading: "Three frames",
+    paragraphs: [
+      "Same name across forty-five years. Young Objectivist essayist. Fed Chair of a fiat central bank. Former Chair on Sunday television after a downgrade. Three frames, one through-line: paper money can dodge formal default and still erode what savers hold.",
+      "July **1966** is the outsider, writing that gold is the wall. **1987** to early **2006** is the chair of a system in which that wall is already gone. **7 August 2011** is the former chair, after a downgrade, saying dollars can be made. Dodging formal default is the Sunday claim. Eroding what savers hold is the essay's claim.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Essay, window, chair, Sunday answer."],
+    list: [
+      "**July 1966.** Greenspan, a private economist in Ayn Rand's circle, publishes \"Gold and Economic Freedom\" in *The Objectivist*. He writes that gold and economic freedom are inseparable, that free banking under a gold standard protects stability, and that without the gold standard savings cannot be protected from confiscation through inflation.",
+      "**The next year.** Rand reprints the essay in *Capitalism: The Unknown Ideal*.",
+      "**August 1971.** Nixon closes the gold window. Foreign official holders can no longer redeem dollars for gold at a fixed price. Bretton Woods ends. The dollar remains a dollar without that metal claim.",
+      "**1987 to early 2006.** Greenspan chairs the Federal Reserve. He inherits the operating desk of a post-gold system, not a gold standard.",
+      "**August 2011.** S&P downgrades U.S. credit. On Meet the Press, **7 August**, the former chairman says the United States can pay any debt it has because it can always print money, so there is zero probability of default.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "The essay named the cost. The television answer named the escape hatch. Both can be true at once. That is the story.",
+      "The cost is on the graphic: savings confiscated through inflation when the gold standard is gone. The escape hatch is the Sunday sentence: a debt in dollars can be paid by making dollars. Forty-five years separate the newsletter and the studio. The job changed. The money system changed. The question changed.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2105187582904500224).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/greenspan-1966-print-money": greenspan1966PrintMoney,
   "blog/mises-inflation-as-policy": misesInflationAsPolicy,
   "blog/spanish-silver-first-global-money": spanishSilverFirstGlobalMoney,
   "blog/sweden-1931-left-gold": sweden1931LeftGold,
