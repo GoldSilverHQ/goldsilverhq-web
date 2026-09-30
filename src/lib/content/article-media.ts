@@ -332,6 +332,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/greenspan-1966-print-money",
+    src: "/images/blog/greenspan-1966-print-money.jpg",
+    ogSrc: "/og/cards/blog-greenspan-1966-print-money.jpg",
+    alt: "Title card with a portrait of Alan Greenspan beside the words “We can always print money,” dated from a 1966 gold essay to Meet the Press in 2011.",
+    caption: "1966 to 2011 — the gold essay, then the line about printing money.",
+    credit: "Title image from the GoldSilverHQ X Article on Alan Greenspan’s 1966 gold essay.",
+  },
+  {
     path: "/blog/mises-inflation-as-policy",
     src: "/images/blog/mises-inflation-as-policy.jpg",
     ogSrc: "/og/cards/blog-mises-inflation-as-policy.jpg",

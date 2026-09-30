@@ -774,6 +774,10 @@ export const historyClusters: Cluster[] = [
             title: "September 1971 and the official gold price",
             href: "/blog/september-1971-official-gold-price",
           },
+          {
+            title: "Greenspan’s 1966 gold essay",
+            href: "/blog/greenspan-1966-print-money",
+          },
           { title: "What “backed” means", href: "/sound-money/backed-money" },
           { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
         ],

@@ -49,6 +49,33 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "greenspan-1966-print-money",
+    title:
+      "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",
+    summary:
+      "In July 1966 Greenspan wrote that gold and economic freedom are inseparable. On 7 August 2011 he said the United States can always print money to pay.",
+    date: "2026-09-30",
+    status: "ready",
+    tags: ["History", "Ideas"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Nixon shock 1971",
+        href: "/history/20th-century/bretton-woods-nixon-1971",
+      },
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/20th-century/bretton-woods-nixon-1971",
+      "/sound-money/inflation-purchasing-power",
+    ],
+    xArticleUrl: "https://x.com/i/article/2105187582904500224",
+    sourceXId: "2105187582904500224",
+  },
+  {
     slug: "mises-inflation-as-policy",
     title: "Ludwig von Mises and the Policy Behind Inflation",
     summary:

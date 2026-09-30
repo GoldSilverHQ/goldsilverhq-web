@@ -39,8 +39,22 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 11);
-    assert.equal(listBlogPosts().length, 11);
+    assert.equal(blogPosts.length, 12);
+    assert.equal(listBlogPosts().length, 12);
+    const greenspan = getBlogPost("greenspan-1966-print-money");
+    assert.ok(greenspan);
+    assert.equal(
+      greenspan.title,
+      "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",
+    );
+    assert.deepEqual(greenspan.tags, ["History", "Ideas"]);
+    assert.equal(greenspan.date, "2026-09-30");
+    assert.equal(greenspan.sourceXId, "2105187582904500224");
+    assert.match(greenspan.xArticleUrl ?? "", /x\.com\/i\/article\/2105187582904500224/);
+    assert.ok(
+      greenspan.summary.length >= 140 && greenspan.summary.length <= 160,
+      `summary length ${greenspan.summary.length}`,
+    );
     const mises = getBlogPost("mises-inflation-as-policy");
     assert.ok(mises);
     assert.equal(mises.title, "Ludwig von Mises and the Policy Behind Inflation");
@@ -142,6 +156,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/greenspan-1966-print-money",
         "/blog/mises-inflation-as-policy",
         "/blog/spanish-silver-first-global-money",
         "/blog/sweden-1931-left-gold",
@@ -160,10 +175,10 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 9);
+    assert.equal(listBlogPostsByTag("History").length, 10);
     assert.equal(listBlogPostsByTag("Metals").length, 7);
     assert.equal(listBlogPostsByTag("Markets").length, 4);
-    assert.equal(listBlogPostsByTag("Ideas").length, 2);
+    assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
 
   it("lists the blog hub and posts on the Phase-1 sitemap", () => {
@@ -175,6 +190,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "greenspan-1966-print-money",
       "mises-inflation-as-policy",
       "spanish-silver-first-global-money",
       "sweden-1931-left-gold",
@@ -210,6 +226,36 @@ describe("blog section", () => {
     const words = bodyWordCount("mises-inflation-as-policy");
     assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
     assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+  });
+
+  it("embeds the Greenspan inline quote card and credits the X Article once", () => {
+    const body = getBody("blog", "greenspan-1966-print-money")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[gold window\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
+    assert.match(text, /\[purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal((text.match(/\]\(\/sound-money\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2105187582904500224/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("greenspan-1966-print-money");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 1, `expected 1 inline figure, got ${figures.length}`);
+    assert.equal(
+      figures[0]!.src,
+      "/images/blog/greenspan-1966-print-money-quote-confiscation.jpg",
+    );
+    assert.match(figures[0]!.credit ?? "", /GoldSilverHQ X Article/);
+    assert.ok(existsSync(join(publicRoot, figures[0]!.src.replace(/^\//, ""))));
   });
 
   it("embeds every inline X Article figure for the Mises note (not cover-only)", () => {
@@ -411,6 +457,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/greenspan-1966-print-money",
       "/blog/mises-inflation-as-policy",
       "/blog/spanish-silver-first-global-money",
       "/blog/sweden-1931-left-gold",
