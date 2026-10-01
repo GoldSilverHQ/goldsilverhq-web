@@ -1,6 +1,8 @@
-import { getBody, type Section } from "@/lib/content/bodies";
+import { Fragment } from "react";
+import { getBody, type Section, type SectionFigure } from "@/lib/content/bodies";
 import type { ArticleHero as ArticleHeroMeta } from "@/lib/content/article-media";
 import { continueLinks, type Episode } from "@/lib/content/map";
+import { ArticleFigure } from "@/components/ArticleFigure";
 
 type ArticleFace = "display" | "sans";
 
@@ -55,6 +57,17 @@ export function RichText({ text }: { text: string }) {
   );
 }
 
+function figurePlacementIndex(figure: SectionFigure | undefined, paragraphCount: number): number | null {
+  if (!figure) return null;
+  const placement = figure.placement ?? "end";
+  if (placement === "start") return 0;
+  if (placement === "end") return paragraphCount;
+  if (typeof placement === "number" && Number.isFinite(placement)) {
+    return Math.max(0, Math.min(paragraphCount, Math.floor(placement)));
+  }
+  return paragraphCount;
+}
+
 export function ArticleSections({
   sections,
   face = "display",
@@ -65,96 +78,87 @@ export function ArticleSections({
   const nums = face === "sans" ? "tabular-nums" : "";
   return (
     <>
-      {sections.map((block, i) => (
-        <section key={block.heading || i} className="mb-10">
-          {block.heading ? (
-            <h2 className={`mb-4 ${faceClass(face)} text-3xl text-fg`}>{block.heading}</h2>
-          ) : null}
-          {block.callout ? (
-            <aside className="mb-6 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
-              <p className="font-sans text-xs font-semibold tracking-[0.14em] text-silver uppercase">
-                {block.callout.label}
-              </p>
-              {block.callout.paragraphs.map((p) => (
-                <p key={p.slice(0, 48)} className={`mt-3 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+      {sections.map((block, i) => {
+        const insertAt = figurePlacementIndex(block.figure, block.paragraphs.length);
+        const figureEl = block.figure ? (
+          <ArticleFigure key={`figure-${block.figure.src}-${block.heading || i}`} figure={block.figure} />
+        ) : null;
+
+        return (
+          <section
+            key={block.heading || i}
+            className={`mb-10${block.figure?.layout?.startsWith("float-") ? " after:clear-both after:table after:content-['']" : ""}`}
+          >
+            {block.heading ? (
+              <h2 className={`mb-4 ${faceClass(face)} text-3xl text-fg`}>{block.heading}</h2>
+            ) : null}
+            {block.callout ? (
+              <aside className="mb-6 rounded-xl bg-raised px-5 py-6 shadow-[0_0_0_1px_color-mix(in_oklab,var(--color-silver)_28%,transparent)]">
+                <p className="font-sans text-xs font-semibold tracking-[0.14em] text-silver uppercase">
+                  {block.callout.label}
+                </p>
+                {block.callout.paragraphs.map((p) => (
+                  <p key={p.slice(0, 48)} className={`mt-3 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+                    <RichText text={p} />
+                  </p>
+                ))}
+              </aside>
+            ) : null}
+            {block.paragraphs.map((p, pi) => (
+              <Fragment key={p.slice(0, 48)}>
+                {insertAt === pi ? figureEl : null}
+                <p className={`mb-4 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
                   <RichText text={p} />
                 </p>
-              ))}
-            </aside>
-          ) : null}
-          {block.paragraphs.map((p) => (
-            <p key={p.slice(0, 48)} className={`mb-4 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
-              <RichText text={p} />
-            </p>
-          ))}
-          {block.figure ? (
-            <figure className="my-8 w-full max-w-[42rem]">
-              <div className="overflow-hidden rounded-xl bg-raised">
-                <img
-                  src={block.figure.src}
-                  alt={block.figure.alt}
-                  width={block.figure.width ?? 800}
-                  height={block.figure.height ?? 856}
-                  className="h-auto w-full object-contain"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </div>
-              {block.figure.caption || block.figure.credit ? (
-                <figcaption className="mt-2 max-w-prose text-sm leading-snug text-muted">
-                  {block.figure.caption ? <span className="block">{block.figure.caption}</span> : null}
-                  {block.figure.credit ? (
-                    <span className="mt-0.5 block text-xs text-faint">{block.figure.credit}</span>
+              </Fragment>
+            ))}
+            {insertAt === block.paragraphs.length ? figureEl : null}
+            {block.table ? (
+              <div className="-mx-1 mb-6 overflow-x-auto">
+                <table className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}>
+                  {block.table.caption ? (
+                    <caption className="mb-3 caption-top text-left text-sm leading-relaxed text-muted">
+                      <RichText text={block.table.caption} />
+                    </caption>
                   ) : null}
-                </figcaption>
-              ) : null}
-            </figure>
-          ) : null}
-          {block.table ? (
-            <div className="-mx-1 mb-6 overflow-x-auto">
-              <table className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}>
-                {block.table.caption ? (
-                  <caption className="mb-3 caption-top text-left text-sm leading-relaxed text-muted">
-                    <RichText text={block.table.caption} />
-                  </caption>
-                ) : null}
-                <thead>
-                  <tr className="border-b border-line text-xs tracking-[0.12em] text-silver uppercase">
-                    {block.table.headers.map((header) => (
-                      <th key={header} className="px-3 py-3 font-semibold first:pl-0 last:pr-0">
-                        {header}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {block.table.rows.map((row) => (
-                    <tr key={row[0]} className="border-b border-line last:border-0">
-                      {row.map((cell, i) => (
-                        <td
-                          key={`${row[0]}-${i}`}
-                          className={`px-3 py-3 align-top first:pl-0 last:pr-0 ${i === 1 ? "text-gold-soft" : ""}`}
-                        >
-                          <RichText text={cell} />
-                        </td>
+                  <thead>
+                    <tr className="border-b border-line text-xs tracking-[0.12em] text-silver uppercase">
+                      {block.table.headers.map((header) => (
+                        <th key={header} className="px-3 py-3 font-semibold first:pl-0 last:pr-0">
+                          {header}
+                        </th>
                       ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ) : null}
-          {block.list?.length ? (
-            <ol className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
-              {block.list.map((item) => (
-                <li key={item.slice(0, 40)}>
-                  <RichText text={item} />
-                </li>
-              ))}
-            </ol>
-          ) : null}
-        </section>
-      ))}
+                  </thead>
+                  <tbody>
+                    {block.table.rows.map((row) => (
+                      <tr key={row[0]} className="border-b border-line last:border-0">
+                        {row.map((cell, i) => (
+                          <td
+                            key={`${row[0]}-${i}`}
+                            className={`px-3 py-3 align-top first:pl-0 last:pr-0 ${i === 1 ? "text-gold-soft" : ""}`}
+                          >
+                            <RichText text={cell} />
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
+            {block.list?.length ? (
+              <ol className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+                {block.list.map((item) => (
+                  <li key={item.slice(0, 40)}>
+                    <RichText text={item} />
+                  </li>
+                ))}
+              </ol>
+            ) : null}
+          </section>
+        );
+      })}
     </>
   );
 }

@@ -1,5 +1,16 @@
 export type Callout = { label: string; paragraphs: string[] };
 export type SectionTable = { caption?: string; headers: string[]; rows: string[][] };
+/**
+ * Mid-article figure layout (opt-in). Omit `layout` to keep the legacy stacked
+ * figure. Setting `layout` also enables click-to-enlarge lightbox unless
+ * `lightbox` is explicitly false.
+ *
+ * - `breakout` — full prose-column width (panoramas / maps)
+ * - `inset` — narrower centered plate (coins, detail crops)
+ * - `float-start` / `float-end` — text-wrap on desktop; stack on mobile
+ */
+export type SectionFigureLayout = "breakout" | "inset" | "float-start" | "float-end";
+
 export type SectionFigure = {
   src: string;
   alt: string;
@@ -7,6 +18,17 @@ export type SectionFigure = {
   credit?: string;
   width?: number;
   height?: number;
+  /** Composition relative to the prose column. */
+  layout?: SectionFigureLayout;
+  /**
+   * Where the figure sits inside the section:
+   * - `end` (default) — after all paragraphs (legacy)
+   * - `start` — after the heading, before paragraphs (best for float wrap)
+   * - number — after that many leading paragraphs
+   */
+  placement?: "start" | "end" | number;
+  /** Click-to-enlarge lightbox. Defaults to true when `layout` is set. */
+  lightbox?: boolean;
 };
 export type Section = {
   heading: string;
@@ -3409,6 +3431,17 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       "The reason was the silver. Historians estimate that in the second half of the **1500s**, at its peak, Cerro Rico may have produced around **60 percent** of all the silver mined in the world. Estimates vary. Even careful ones put this one mountain at the center of the world's silver supply for decades after the strike.",
       "A mining camp that large, that high, and that dependent on a single ore body was not a quiet village with a lucky seam. Food, timber, tools, and labor had to climb. The ore had to leave. The crown and the merchants who financed the work measured success in bars and coins that could travel. The mountain's fame was a claim about how much metal it yielded relative to everywhere else — not a claim that life there was easy.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/potosi-panorama.jpg",
+      alt: "1758 panorama of the Imperial Villa of Potosí with Cerro Rico rising behind the colonial city.",
+      caption: "Villa Imperial de Potosí (1758) — Cerro Rico and the silver city above the tree line.",
+      credit: "CC0 — Gaspar Miguel de Berrío panorama reproduction via Wikimedia Commons.",
+      width: 1200,
+      height: 480,
+      layout: "breakout",
+      placement: 1,
+      lightbox: true,
+    },
   },
   {
     heading: "The mita and the mercury",
@@ -3424,6 +3457,17 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       "A cob is a minting method before a machine-made round. Silver is cut from a bar, hammered, and struck with dies that do not always fill the irregular planchet. Merchants still weighed and tested. The later milled dollar was easier to recognize at a glance: round, lettered or milled edge, columns and waves that advertised Spanish America. *PLUS ULTRA* named an empire that had passed the old Columns of Hercules into the Atlantic and Pacific. The coin carried that motto into markets that did not speak Spanish.",
       "What made the piece of eight travel was not a slogan. It was a fairly steady silver content that traders learned to trust, plus a minting system that poured enough coins into Atlantic and Pacific trade that the type became familiar. When a coin is familiar, less bargaining goes into whether the metal is what it claims to be.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/pillar-dollar.jpg",
+      alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse of the Spanish colonial silver coin.",
+      caption: "Carlos III pillar dollar, 8 reales (Mexico, 1771) — the piece of eight.",
+      credit: "Public domain (18th-century coin; copyright expired).",
+      width: 1200,
+      height: 480,
+      layout: "float-start",
+      placement: "start",
+      lightbox: true,
+    },
   },
   {
     heading: "Atlantic fleets and Pacific galleons",
@@ -3440,6 +3484,17 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       "A chop mark is a private assay mark: a punch that says this piece has been tested and accepted. It does not make the coin Spanish law in China. It makes the coin acceptable to the merchant who punched it and to others who trust that punch. The global reach of Spanish silver was not only imperial shipping. It was also local verification in markets that used the metal without using Madrid's courts.",
       "One-third is an estimate, not a ledger line. The point of the estimate is direction: a large share of the American silver output left the Spanish commercial system for Asia. Europe felt the inflow too. The same mountain could feed both.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/pillar-dollar.jpg",
+      alt: "Spanish pillar dollar whose Columns of Hercules design later shaped dollar symbolism in Atlantic trade.",
+      caption: "Columns and waves on the milled dollar — a type Asian markets learned to price by feel and chop.",
+      credit: "Public domain (18th-century coin; copyright expired).",
+      width: 1200,
+      height: 480,
+      layout: "float-end",
+      placement: "start",
+      lightbox: true,
+    },
   },
   {
     heading: "The American colonies and the dollar",
@@ -3449,6 +3504,17 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       "The Spanish coins did not disappear once the U.S. began minting its own. They stayed legal tender in the United States until **1857**. For decades after independence, the minted Spanish dollar and the new American dollar shared tills. The statute that named the Spanish milled dollar as the reference was recognizing a coin people already counted in — not inventing a unit from a blank page.",
       "\"Two bits\" survives as speech long after the real stopped being everyday change. Language kept a fraction of the Spanish dollar when the coin itself had left ordinary circulation. That habit is a small reminder of how deep the piece of eight sat in North American money talk.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/early-us-coinage.jpg",
+      alt: "1795 Flowing Hair silver dollar, obverse and reverse side by side.",
+      caption: "Flowing Hair dollar (1795) — early U.S. silver coined to the Spanish milled-dollar inheritance.",
+      credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
+      width: 1200,
+      height: 480,
+      layout: "inset",
+      placement: 2,
+      lightbox: true,
+    },
   },
   {
     heading: "What \"first global money\" means here",
