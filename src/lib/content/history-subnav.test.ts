@@ -11,7 +11,7 @@ describe("history-subnav", () => {
         "Banks & paper money",
         "US gold & silver politics",
         "Silver as money",
-        "Fed, gold & 1971",
+        "20th-century money",
         "Year by year",
         "VIPs",
       ],

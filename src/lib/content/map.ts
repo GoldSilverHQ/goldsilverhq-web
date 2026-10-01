@@ -43,7 +43,7 @@ export type Cluster = {
 export const historyHub = {
   titleTag: "Sound Money History: From Coinage to 1971",
   related: [
-    { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+    { title: "20th-century money", href: "/history/20th-century" },
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
     { title: "Gold & silver markets — current figures", href: "/markets" },
   ],
@@ -511,7 +511,7 @@ export const historyClusters: Cluster[] = [
     related: [
       { title: "Sound Money History", href: "/history" },
       { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
-      { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+      { title: "20th-century money", href: "/history/20th-century" },
       { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
     ],
     seo: {
@@ -628,7 +628,7 @@ export const historyClusters: Cluster[] = [
   },
   {
     slug: "20th-century",
-    title: "20th century: Fed, gold, and 1971",
+    title: "20th-century money",
     summary:
       "From the Panic of 1907 and the Fed, through Weimar hyperinflation, to the Nixon shock that closed the gold window.",
     sections: twentiethCenturyHubBody,
@@ -655,7 +655,7 @@ export const historyClusters: Cluster[] = [
           { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
           { title: "Road back toward gold", href: "/history/america/road-back-gold" },
           { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
         ],
         seo: {
           primary: "panic of 1907",
@@ -710,7 +710,7 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
           { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Assignats", href: "/history/banks-paper/assignats" },
           { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
@@ -739,7 +739,7 @@ export const historyClusters: Cluster[] = [
           "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of 1934 then vested title to monetary gold in the United States and reset the official price from $20.67 to $35 an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
         ],
         related: [
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
         ],
@@ -768,7 +768,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Official gold book value", href: "/markets/official-gold-book-value" },
           {
             title: "September 1971 and the official gold price",

@@ -15,7 +15,7 @@ export const HISTORY_SUBNAV: HistorySubnavItem[] = [
   { label: "Banks & paper money", href: "/history/banks-paper", cluster: "banks-paper" },
   { label: "US gold & silver politics", href: "/history/america", cluster: "america" },
   { label: "Silver as money", href: "/history/silver", cluster: "silver" },
-  { label: "Fed, gold & 1971", href: "/history/20th-century", cluster: "20th-century" },
+  { label: "20th-century money", href: "/history/20th-century", cluster: "20th-century" },
   { label: "Year by year", href: "/history/year" },
   { label: "VIPs", href: "/history/vip" },
 ];
