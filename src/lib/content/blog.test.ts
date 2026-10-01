@@ -296,6 +296,20 @@ describe("blog section", () => {
     assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
   });
 
+  it("pilots WebHispania-like figure layouts + lightbox on Spanish silver", () => {
+    const body = getBody("blog", "spanish-silver-first-global-money")!;
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 4, `expected 4 inline figures, got ${figures.length}`);
+    const layouts = figures.map((f) => f!.layout).sort();
+    assert.deepEqual(layouts, ["breakout", "float-end", "float-start", "inset"]);
+    for (const f of figures) {
+      assert.equal(f!.lightbox, true);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))), f!.src);
+    }
+  });
+
   it("interlinks Newton lightly and credits the X Article once", () => {
     const body = getBody("blog", "newton-1717-guinea")!;
     const text = body

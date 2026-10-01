@@ -336,3 +336,19 @@ html {
     font-variant-numeric: tabular-nums lining-nums;
   }
 }
+
+/* Article figure composition pilot (WebHispania-like rhythm). */
+@layer components {
+  .article-figure--breakout,
+  .article-figure--inset,
+  .article-figure--float-start,
+  .article-figure--float-end {
+    margin-inline: 0;
+  }
+
+  .article-lightbox-overlay,
+  .article-lightbox-content {
+    /* Radix portals to body; keep above site chrome. */
+    z-index: 60;
+  }
+}
