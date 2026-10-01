@@ -103,6 +103,29 @@ export function cbGrowth(id: CbTimeframe, desk: CbDesk = COMPILED_DESK): CbGrowt
   return rows.sort((a, b) => b.growth - a.growth).slice(0, 15);
 }
 
+/** Countries whose reported holdings fell over the window (net tonnes < 0). Largest reductions first. */
+export function cbSellers(id: CbTimeframe, desk: CbDesk = COMPILED_DESK, limit = 10): CbGrowth[] {
+  const years = cbWindow(id).years;
+  const startYear = years[0] - 1;
+  const rows: CbGrowth[] = [];
+  for (const c of desk.countries) {
+    const tonnes = sumYears(c.byYear, years);
+    if (!(tonnes < 0)) continue;
+    const start = c.holdYear[startYear] ?? (c.stock > 0 ? c.stock - tonnes : 0);
+    if (!(start > 0)) continue;
+    rows.push({
+      id: c.id,
+      name: c.name,
+      tonnes,
+      start: Math.round(start),
+      stock: c.stock,
+      growth: tonnes / start,
+      asOf: years.includes(2026) ? formatAsOf(c.stockAsOf) : undefined,
+    });
+  }
+  return rows.sort((a, b) => a.tonnes - b.tonnes).slice(0, limit);
+}
+
 export function cbWorld(id: CbTimeframe, desk: CbDesk = COMPILED_DESK) {
   return cbWindow(id).years.reduce((acc, y) => acc + (desk.worldWgc[y] ?? 0), 0);
 }

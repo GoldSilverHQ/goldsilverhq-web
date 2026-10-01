@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
-import { AthNow } from "@/components/AthNow";
 import { DollarPower } from "@/components/DollarPower";
 import { CentralBankGold } from "@/components/desk/CentralBankGold";
+import {
+  CbTimeline,
+  HoldersTable,
+  NetBuyingByYear,
+  ReserveShareChart,
+  UsTreasuryGold,
+} from "@/components/desk/CentralBanksExtras";
+import { PastHighs, RatioHistory, RealPriceHistory } from "@/components/desk/PriceHistory";
 import { DeskBoard, DeskMetricTile } from "@/components/desk/DeskMetricTile";
 import { MoneyPath } from "@/components/MoneyPath";
 import { SpotPriceHistory } from "@/components/SpotPriceHistory";
 import { getOfficialGold, type OfficialGold } from "@/lib/dashboard/cb-desk";
+import { CB_SHARE_LATEST_YEAR, CB_WORLD_SHARE } from "@/lib/dashboard/cb-extras";
 import { formatAsOf } from "@/lib/dashboard/central-banks";
 import {
   CHINA_SAFE_AUG_2026,
@@ -34,7 +42,6 @@ import {
   cbTakeOfMine,
   coverPct,
   investmentGoldGramsPerPerson,
-  investmentSilverOzPerPerson,
   lbmaGoldClearingRatio,
   lostVsStart,
   mineOutputRatio,
@@ -44,12 +51,7 @@ import {
   wgcShare,
 } from "@/lib/dashboard/stocks";
 
-export type DeskCategory =
-  | "prices"
-  | "official"
-  | "stocks"
-  | "money"
-  | "paper";
+export type DeskCategory = "prices" | "banks" | "debt" | "supply" | "vaults";
 
 const DESK_TABS: {
   id: DeskCategory;
@@ -58,30 +60,30 @@ const DESK_TABS: {
 }[] = [
   {
     id: "prices",
-    label: "Prices",
-    blurb: "Spot, five-year price history, the 1980 highs in today’s dollars, and the old 15:1 mint ratio.",
+    label: "Prices & ratios",
+    blurb: "Today's prices, their history in today's dollars, the gold–silver ratio, and the old record highs.",
   },
   {
-    id: "official",
-    label: "Official gold",
-    blurb: "Reported central-bank holdings and net official demand.",
+    id: "banks",
+    label: "Central banks",
+    blurb: "Who holds official gold, who is buying or selling, and how that has changed.",
   },
   {
-    id: "stocks",
-    label: "Stocks & flows",
+    id: "debt",
+    label: "Debt & money",
+    blurb: "Government debt, money supply and inflation, measured against gold.",
+  },
+  {
+    id: "supply",
+    label: "Supply & demand",
     blurb:
-      "Above-ground gold, silver supply and use, and who holds what. Mine supply is ounces leaving the ground — a published geology figure, not a miner tip or a fair-value claim.",
+      "Above-ground gold, mining, and silver supply and use. Mine supply is ounces leaving the ground — a published geology figure, not a miner tip or a fair-value claim.",
   },
   {
-    id: "money",
-    label: "Money",
-    blurb: "Money supply, the dollar’s purchasing power, and sovereign debt against gold.",
-  },
-  {
-    id: "paper",
-    label: "Exchange paper",
+    id: "vaults",
+    label: "Vaults & ETFs",
     blurb:
-      "London clearing, ETF holdings, and identifiable silver. COMEX open interest is left off — no same-day pair is stored.",
+      "Where the metal sits: London vaults, ETFs, and identifiable silver. COMEX open interest is left off — no same-day pair is stored.",
   },
 ];
 
@@ -170,7 +172,6 @@ export function FullDesk() {
         month: "short",
       })
     : "live";
-  const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
   const goldLoss = spot ? dollarLostVsGold(spot.gold) : null;
   const m2Compiled = latestUsM2();
   const usM2Bn = printers.usM2.value / 1e9;
@@ -180,10 +181,8 @@ export function FullDesk() {
   const officialCover = spot ? coverPct(official.world.tonnes, spot.gold) : null;
   const allCover = spot ? coverPct(WGC_STOCK.aboveGroundT, spot.gold) : null;
   const goldEur = spot ? spot.gold / printers.fx.eurUsd : null;
-  const goldCny = spot ? spot.gold * printers.fx.cnyUsd : null;
   const goldJpy = spot ? spot.gold * printers.fx.jpyUsd : null;
   const eurLoss = goldEur != null ? lostVsStart(goldEur, FX_START.eur.localGold) : null;
-  const cnyLoss = goldCny != null ? lostVsStart(goldCny, FX_START.cny.localGold) : null;
   const jpyLoss = goldJpy != null ? lostVsStart(goldJpy, FX_START.jpy.localGold) : null;
   const silverGap = silverSupplyGapT();
   const china = laterOfficial(official.chn, {
@@ -236,32 +235,14 @@ export function FullDesk() {
                 note="Ounces of silver per ounce of gold. The 15:1 line below is history, not a target."
               />
             </section>
+            <RealPriceHistory latest={spot ?? undefined} />
+            <PastHighs gold={spot?.gold} silver={spot?.silver} />
+            <RatioHistory latest={spot ?? undefined} />
             <SpotPriceHistory />
-            <AthNow />
-            <DeskBoard title="Old mint ratio" kicker="coinage, not a target" cols={2}>
-              <DeskMetricTile
-                kicker="History"
-                label="Bimetallic mint ratio"
-                unit="Ag : Au"
-                cadence="const"
-                asOf="history"
-                live="15 : 1"
-                note="Rome and 19th-century US coinage. Not a forecast."
-              />
-              <DeskMetricTile
-                kicker="Today"
-                label="Today vs 15 : 1"
-                unit="×"
-                cadence="live"
-                asOf={spotAsOf}
-                live={spread ? spread.toFixed(1) : undefined}
-                note="Live gold–silver ratio divided by 15. A comparison, not a target."
-              />
-            </DeskBoard>
           </>
         ) : null}
 
-        {tab === "official" ? (
+        {tab === "banks" ? (
           <>
             <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <DeskMetricTile
@@ -275,7 +256,7 @@ export function FullDesk() {
               />
               <DeskMetricTile
                 kicker="Buying"
-                label="Net official buying"
+                label="Net official buying, year to date"
                 unit="t"
                 cadence="yearly"
                 asOf={CB_YTD_2026.asOf ?? "2026"}
@@ -292,17 +273,22 @@ export function FullDesk() {
                 note="2025 official demand divided by World Gold Council mine supply."
               />
               <DeskMetricTile
-                kicker="Share"
-                label="Official share of above-ground gold"
+                kicker="Reserves"
+                label="Gold share of reserves"
                 unit="%"
                 cadence="yearly"
-                asOf={formatAsOf(WGC_STOCK.asOf)}
-                live={wgcShare(WGC_STOCK.officialT).toFixed(0)}
-                note="World Gold Council above-ground split. Wider than the year-end official book above."
+                asOf={String(CB_SHARE_LATEST_YEAR)}
+                live={CB_WORLD_SHARE[String(CB_SHARE_LATEST_YEAR)]?.toFixed(1)}
+                note="All countries reporting to the IMF: gold's value as a share of total reserves, at that year's average price."
               />
             </section>
+            <NetBuyingByYear />
             <CentralBankGold />
-            <DeskBoard title="Official holdings" kicker="country and institution prints" cols={3}>
+            <HoldersTable />
+            <ReserveShareChart />
+            <UsTreasuryGold gold={spot?.gold} asOf={spotAsOf} />
+            <CbTimeline />
+            <DeskBoard title="Latest official prints" kicker="country and institution books" cols={3}>
               <DeskMetricTile
                 kicker="US"
                 label="United States official gold"
@@ -337,7 +323,7 @@ export function FullDesk() {
           </>
         ) : null}
 
-        {tab === "stocks" ? (
+        {tab === "supply" ? (
           <>
             <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               <DeskMetricTile
@@ -389,19 +375,9 @@ export function FullDesk() {
                 live={silverVisibleMonths().toFixed(1)}
                 note="Identifiable bullion divided by 2025 fabrication. Not jewelry, and not a daily vault print."
               />
-              <DeskMetricTile
-                kicker="Per person"
-                label="Investment silver per person"
-                tone="silver"
-                unit="oz"
-                cadence="yearly"
-                asOf={SILVER_2025.asOf}
-                live={investmentSilverOzPerPerson().toFixed(2)}
-                note="End-2025 identifiable bullion divided by 8.2 billion people. Not a forecast."
-              />
             </section>
 
-            <DeskBoard title="Who holds the gold" kicker="World Gold Council, Q2 2026" cols={3}>
+            <DeskBoard title="Who holds the gold" kicker="World Gold Council, Q2 2026" cols={4}>
               <DeskMetricTile
                 kicker="Jewelry"
                 label="Jewelry"
@@ -429,11 +405,16 @@ export function FullDesk() {
                 live={wgcShare(WGC_STOCK.otcT + WGC_STOCK.otherT).toFixed(0)}
                 note="Fabrication, over-the-counter bars, and the World Gold Council residual."
               />
+              <DeskMetricTile
+                kicker="Official"
+                label="Central banks and institutions"
+                unit="%"
+                cadence="yearly"
+                asOf={formatAsOf(WGC_STOCK.asOf)}
+                live={wgcShare(WGC_STOCK.officialT).toFixed(0)}
+                note="WGC's official-sector cell (39,000 t). Wider than the year-end country book on the Central banks tab."
+              />
             </DeskBoard>
-            <p className="mt-3 max-w-2xl text-sm text-muted">
-              Official gold is the rest of this split ({wgcShare(WGC_STOCK.officialT).toFixed(0)}%). That share is on
-              the Official gold tab.
-            </p>
             <p className="mt-6 max-w-2xl text-sm text-muted">
               Mine output and months of visible cover are published survey figures. The{" "}
               <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
@@ -456,7 +437,7 @@ export function FullDesk() {
           </>
         ) : null}
 
-        {tab === "money" ? (
+        {tab === "debt" ? (
           <>
             <DollarPower />
             <DeskBoard
@@ -530,15 +511,6 @@ export function FullDesk() {
                 note="First euro session, 4 Jan 1999 (~€244/oz). Gold in euros = USD gold ÷ EURUSD."
               />
               <DeskMetricTile
-                kicker="CNY"
-                label="Yuan vs gold since 1971"
-                unit="% lost"
-                cadence="live"
-                asOf={spotAsOf}
-                live={cnyLoss != null ? pctLostDisplay(cnyLoss) : undefined}
-                note="Official 1971 rate, not a market yuan. Same gold-window dollar as the USD tile."
-              />
-              <DeskMetricTile
                 kicker="JPY"
                 label="Yen vs gold since 1971"
                 unit="% lost"
@@ -602,7 +574,7 @@ export function FullDesk() {
           </>
         ) : null}
 
-        {tab === "paper" ? (
+        {tab === "vaults" ? (
           <>
             <DeskBoard title="Claims vs metal" kicker="London · ETFs · vaults">
               <DeskMetricTile
