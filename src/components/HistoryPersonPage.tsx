@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArticleHeroImage, Breadcrumb } from "@/components/Article";
+import { ArticleHeroLead, Breadcrumb } from "@/components/Article";
 import { adjacentHistoryPeople, type HistoryPerson } from "@/lib/content/history-people";
 
 export function HistoryPersonPage({ person }: { person: HistoryPerson }) {
@@ -14,14 +14,13 @@ export function HistoryPersonPage({ person }: { person: HistoryPerson }) {
           { label: person.name },
         ]}
       />
-      <header className="max-w-prose">
+      <ArticleHeroLead hero={person.image}>
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">
           {person.role} · {person.life}
         </p>
         <h1 className="mt-2 font-display text-4xl text-fg sm:text-5xl">{person.name}</h1>
         <p className="mt-3 text-lg text-muted">{person.summary}</p>
-        <ArticleHeroImage hero={person.image} />
-      </header>
+      </ArticleHeroLead>
       <div className="mt-8 max-w-prose">
         {person.paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 48)} className="mt-4 text-lg leading-relaxed text-fg/90">

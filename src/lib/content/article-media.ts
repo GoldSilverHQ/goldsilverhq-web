@@ -11,6 +11,9 @@
  * - **Hero (`src`)**: flexible landscape — usually ~5:2 or natural Querformat.
  *   `ArticleHeroImage` frames at **5:2** with `object-cover` fill. Not required
  *   to be byte-identical to OG, and not forced to 1.91:1.
+ * - **Portrait hero** (`frame: "portrait"`): people, coins, upright paintings.
+ *   Native ratio, never cropped; OG is the full portrait on a brand card
+ *   (`npm run og:portrait`), never a blind center crop of a face.
  * - **OG (`ogSrc`)**: always **~1200×630** for social/X. Separate crop/export
  *   from the same motif when needed. Wire `pageShareMeta({ imagePath: hero.ogSrc })`.
  * - **Default**: when only one asset exists, letterbox (or cover-crop) OG from
@@ -43,6 +46,15 @@ export type ArticleHero = {
   caption?: string;
   /** Attribution / rights advisory. */
   credit?: string;
+  /**
+   * `"portrait"` — tall or near-square source (person, coin, upright painting):
+   * shown uncropped at native ratio beside the title on desktop, stacked on
+   * mobile. Requires `width` / `height` of `src`. Default is the 5:2 band.
+   */
+  frame?: "band" | "portrait";
+  /** Intrinsic pixel size of `src`; required for `frame: "portrait"`. */
+  width?: number;
+  height?: number;
 };
 
 /** Articles with a photographic/illustration titlebild; OG may be the same motif at 1200×630. */
@@ -97,7 +109,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     alt: "Detail of money changers’ hands, balance scale, coins, and open ledger on a table.",
     caption:
       "Marinus van Reymerswaele, “The Moneychangers” — private deposit-and-transfer work before public banks.",
-    credit: "Public domain (artist active 16th century). Hermitage reproduction via Wikimedia Commons.",
+    credit:
+      "Public domain (artist active 16th century). Hermitage reproduction via Wikimedia Commons.",
   },
   {
     path: "/history/banks-paper/bank-of-amsterdam",
@@ -113,10 +126,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/banks-paper/bank-of-england.jpg",
     ogSrc: "/og/cards/history-banks-paper-bank-of-england.jpg",
     alt: "Colorized historical print showing the Bank of England building in London.",
-    caption:
-      "A view of the Bank of England, London — colorized from a public-domain print.",
-    credit:
-      "Colorized from public-domain original. CC0 — Rijksmuseum (RP-P-2010-229).",
+    caption: "A view of the Bank of England, London — colorized from a public-domain print.",
+    credit: "Colorized from public-domain original. CC0 — Rijksmuseum (RP-P-2010-229).",
   },
   {
     path: "/history/banks-paper/john-law",
@@ -132,7 +143,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/banks-paper/assignats.jpg",
     ogSrc: "/og/cards/history-banks-paper-assignats.jpg",
     alt: "French Revolutionary assignat note for 100 livres dated 29 September 1790.",
-    caption: "Assignat of 100 livres (29 September 1790) — Revolutionary France’s paper land-backed note.",
+    caption:
+      "Assignat of 100 livres (29 September 1790) — Revolutionary France’s paper land-backed note.",
     credit: "CC0 — scanned note plate via Wikimedia Commons.",
   },
   {
@@ -140,7 +152,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/america/early-us-coinage.jpg",
     ogSrc: "/og/cards/history-america-early-us-coinage.jpg",
     alt: "1795 Flowing Hair silver dollar, obverse and reverse side by side.",
-    caption: "Flowing Hair dollar (1795) — early United States silver coinage under the Mint Act framework.",
+    caption:
+      "Flowing Hair dollar (1795) — early United States silver coinage under the Mint Act framework.",
     credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
   },
   {
@@ -166,7 +179,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/america/crime-of-1873.jpg",
     ogSrc: "/og/cards/history-america-crime-of-1873.jpg",
     alt: "Nineteenth-century cartoon about the U.S. trade dollar and the silver question after 1873.",
-    caption: "Trade-dollar cartoon — popular memory of the 1873 coinage change and the silver question.",
+    caption:
+      "Trade-dollar cartoon — popular memory of the 1873 coinage change and the silver question.",
     credit: "Public domain (19th-century U.S. print; copyright expired).",
   },
   {
@@ -174,7 +188,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/america/road-back-gold.jpg",
     ogSrc: "/og/cards/history-america-road-back-gold.jpg",
     alt: "1907 Saint-Gaudens double eagle twenty-dollar gold coin, obverse and reverse.",
-    caption: "Saint-Gaudens double eagle (1907) — high gold coinage of the restored gold-standard era.",
+    caption:
+      "Saint-Gaudens double eagle (1907) — high gold coinage of the restored gold-standard era.",
     credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
   },
   {
@@ -182,7 +197,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/20th-century/panic-1907-fed.jpg",
     ogSrc: "/og/cards/history-20th-century-panic-1907-fed.jpg",
     alt: "1907 Puck magazine cartoon titled “The panic,” showing Wall Street turmoil around the banking crisis.",
-    caption: "“The panic” (Puck, 1907) — Keppler cartoon of the banking scramble that preceded the Fed.",
+    caption:
+      "“The panic” (Puck, 1907) — Keppler cartoon of the banking scramble that preceded the Fed.",
     credit: "Public domain — Library of Congress (LCCN 2011647205); no known restrictions.",
   },
   {
@@ -190,7 +206,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/20th-century/classical-gold-standard-end.jpg",
     ogSrc: "/og/cards/history-20th-century-classical-gold-standard-end.jpg",
     alt: "Gold sovereign coin minted in India, obverse and reverse side by side.",
-    caption: "British gold sovereign (India mint) — emblem of the classical gold-standard coin network.",
+    caption:
+      "British gold sovereign (India mint) — emblem of the classical gold-standard coin network.",
     credit: "CC0 — open museum plate via Wikimedia Commons.",
   },
   {
@@ -210,8 +227,7 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     alt: "Colorized 1935 photograph of a San Francisco Mint vault stacked high with gold bars; wooden sawhorses and a plank in the foreground.",
     caption:
       "Gold bars in a San Francisco Mint vault (1935) — official stock after the U.S. gold recall; colorized.",
-    credit:
-      "Colorized from public-domain original — U.S. government photograph (NARA 296609).",
+    credit: "Colorized from public-domain original — U.S. government photograph (NARA 296609).",
   },
   {
     path: "/history/20th-century/bretton-woods-nixon-1971",
@@ -220,8 +236,7 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     alt: "Colorized photograph of President Richard Nixon seated at a table meeting with economic advisors and Cabinet members.",
     caption:
       "President Nixon with economic advisors — the policy circle around the 1971 gold-window decision; colorized.",
-    credit:
-      "Colorized from public-domain original — U.S. government photograph (NARA 194579).",
+    credit: "Colorized from public-domain original — U.S. government photograph (NARA 194579).",
   },
   {
     path: "/history/silver/potosi",
@@ -244,7 +259,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/history/silver/bimetallism.jpg",
     ogSrc: "/og/cards/history-silver-bimetallism.jpg",
     alt: "Puck cartoon “The free silver highwayman at it again,” satirizing Free Silver politics.",
-    caption: "“The free silver highwayman at it again” (Puck) — U.S. bimetallism / Free Silver debate.",
+    caption:
+      "“The free silver highwayman at it again” (Puck) — U.S. bimetallism / Free Silver debate.",
     credit: "Public domain — Library of Congress (LCCN 2012648520); no known restrictions.",
   },
   {
@@ -269,16 +285,21 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/sound-money/what-is-sound-money",
     src: "/images/sound-money/what-is-sound-money.jpg",
     ogSrc: "/og/cards/sound-money-what-is-sound-money.jpg",
+    frame: "portrait",
+    width: 900,
+    height: 1018,
     alt: "Dutch Golden Age painting of a woman weighing gold on a small balance at a sunlit table.",
     caption: "Pieter de Hooch, “Woman Weighing Gold” — testing the metal, not the slogan.",
-    credit: "Public domain (artist died 1684). Gemäldegalerie, Berlin (1401B) via Wikimedia Commons.",
+    credit:
+      "Public domain (artist died 1684). Gemäldegalerie, Berlin (1401B) via Wikimedia Commons.",
   },
   {
     path: "/sound-money/hard-money-vs-fiat",
     src: "/images/sound-money/hard-money-vs-fiat.jpg",
     ogSrc: "/og/cards/sound-money-hard-money-vs-fiat.jpg",
     alt: "Face of a 1928 United States ten-dollar gold certificate with gold treasury seal.",
-    caption: "Series 1928 $10 gold certificate — paper that named a metal claim while convertibility still held.",
+    caption:
+      "Series 1928 $10 gold certificate — paper that named a metal claim while convertibility still held.",
     credit: "Public domain (U.S. government currency design).",
   },
   {
@@ -286,7 +307,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/sound-money/inflation-purchasing-power.jpg",
     ogSrc: "/og/cards/sound-money-inflation-purchasing-power.jpg",
     alt: "Obverse of a 1923 German railways emergency note for five hundred billion marks.",
-    caption: "German railways Notgeld, 500 billion marks (1923) — a unit that stopped holding purchasing power.",
+    caption:
+      "German railways Notgeld, 500 billion marks (1923) — a unit that stopped holding purchasing power.",
     credit: "Public domain (1923 note; copyright expired).",
   },
   {
@@ -294,7 +316,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/sound-money/backed-money.jpg",
     ogSrc: "/og/cards/sound-money-backed-money.jpg",
     alt: "Stacks of gold bars stored on shelves inside a government vault.",
-    caption: "Gold bars in a U.S. vault — a reserve photograph is not the same as a public redeemability claim.",
+    caption:
+      "Gold bars in a U.S. vault — a reserve photograph is not the same as a public redeemability claim.",
     credit: "Public domain — U.S. government photograph (NARA 296609).",
   },
   // Markets fact pages
@@ -303,7 +326,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/markets/official-gold-book-value.jpg",
     ogSrc: "/og/cards/markets-official-gold-book-value.jpg",
     alt: "Detail of a 1917 Federal Reserve Board gold certificate: Payable in GOLD, Washington issue.",
-    caption: "Federal Reserve Board gold certificate (Jan. 4, 1917) — official gold dollars named on paper, ancestor of today’s book rate.",
+    caption:
+      "Federal Reserve Board gold certificate (Jan. 4, 1917) — official gold dollars named on paper, ancestor of today’s book rate.",
     credit: "Public domain (U.S. government currency design).",
   },
   {
@@ -311,7 +335,8 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     src: "/images/markets/central-bank-gold-reserves.jpg",
     ogSrc: "/og/cards/markets-central-bank-gold-reserves.jpg",
     alt: "Exterior of the United States Bullion Depository at Fort Knox.",
-    caption: "U.S. Bullion Depository, Fort Knox — one official stock among many published reserve books.",
+    caption:
+      "U.S. Bullion Depository, Fort Knox — one official stock among many published reserve books.",
     credit: "Public domain — U.S. government photograph.",
   },
   {

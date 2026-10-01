@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
 import { getBody, type Section, type SectionFigure } from "@/lib/content/bodies";
 import type { ArticleHero as ArticleHeroMeta } from "@/lib/content/article-media";
 import { continueLinks, type Episode } from "@/lib/content/map";
@@ -12,7 +12,10 @@ function faceClass(face: ArticleFace) {
 
 export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-2 text-sm text-muted">
+    <nav
+      aria-label="Breadcrumb"
+      className="mb-5 flex flex-wrap items-center gap-2 text-sm text-muted"
+    >
       {items.map((item, i) => (
         <span key={`${item.label}-${i}`} className="flex items-center gap-2">
           {i > 0 ? <span className="text-faint">/</span> : null}
@@ -50,14 +53,22 @@ export function RichText({ text }: { text: string }) {
           );
         }
         const bold = part.match(/^\*\*([^*]+)\*\*$/);
-        if (bold) return <strong key={i} className="font-semibold text-fg">{bold[1]}</strong>;
+        if (bold)
+          return (
+            <strong key={i} className="font-semibold text-fg">
+              {bold[1]}
+            </strong>
+          );
         return <span key={i}>{part}</span>;
       })}
     </>
   );
 }
 
-function figurePlacementIndex(figure: SectionFigure | undefined, paragraphCount: number): number | null {
+function figurePlacementIndex(
+  figure: SectionFigure | undefined,
+  paragraphCount: number,
+): number | null {
   if (!figure) return null;
   const placement = figure.placement ?? "end";
   if (placement === "start") return 0;
@@ -81,7 +92,10 @@ export function ArticleSections({
       {sections.map((block, i) => {
         const insertAt = figurePlacementIndex(block.figure, block.paragraphs.length);
         const figureEl = block.figure ? (
-          <ArticleFigure key={`figure-${block.figure.src}-${block.heading || i}`} figure={block.figure} />
+          <ArticleFigure
+            key={`figure-${block.figure.src}-${block.heading || i}`}
+            figure={block.figure}
+          />
         ) : null;
 
         return (
@@ -98,7 +112,10 @@ export function ArticleSections({
                   {block.callout.label}
                 </p>
                 {block.callout.paragraphs.map((p) => (
-                  <p key={p.slice(0, 48)} className={`mt-3 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+                  <p
+                    key={p.slice(0, 48)}
+                    className={`mt-3 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}
+                  >
                     <RichText text={p} />
                   </p>
                 ))}
@@ -115,7 +132,9 @@ export function ArticleSections({
             {insertAt === block.paragraphs.length ? figureEl : null}
             {block.table ? (
               <div className="-mx-1 mb-6 overflow-x-auto">
-                <table className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}>
+                <table
+                  className={`w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed text-fg/90 ${nums}`}
+                >
                   {block.table.caption ? (
                     <caption className="mb-3 caption-top text-left text-sm leading-relaxed text-muted">
                       <RichText text={block.table.caption} />
@@ -148,7 +167,9 @@ export function ArticleSections({
               </div>
             ) : null}
             {block.list?.length ? (
-              <ol className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}>
+              <ol
+                className={`mb-4 list-decimal space-y-3 pl-6 font-sans text-lg leading-relaxed text-fg/90 ${nums}`}
+              >
                 {block.list.map((item) => (
                   <li key={item.slice(0, 40)}>
                     <RichText text={item} />
@@ -198,6 +219,7 @@ export function RelatedLinks({
  * On-page: 5:2 clipped wrapper + absolute `object-cover` fill (no letterbox matte).
  */
 export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
+  if (isPortraitHero(hero)) return <PortraitHeroImage hero={hero} />;
   return (
     <figure className="mt-5 max-w-prose sm:mt-6">
       {/*
@@ -219,10 +241,78 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
       {hero.caption || hero.credit ? (
         <figcaption className="mt-2 text-sm leading-snug text-muted">
           {hero.caption ? <span className="block">{hero.caption}</span> : null}
-          {hero.credit ? <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span> : null}
+          {hero.credit ? (
+            <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span>
+          ) : null}
         </figcaption>
       ) : null}
     </figure>
+  );
+}
+
+type PortraitHero = ArticleHeroMeta & { frame: "portrait"; width: number; height: number };
+
+function isPortraitHero(hero: ArticleHeroMeta): hero is PortraitHero {
+  return hero.frame === "portrait" && Boolean(hero.width && hero.height);
+}
+
+/**
+ * Portrait / tall titlebild: native aspect ratio, never cropped. Mobile caps
+ * the height at 24rem (narrower for tall sources); desktop sits in a fixed
+ * 15rem column beside the title (see `ArticleHeroLead`).
+ */
+function PortraitHeroImage({ hero }: { hero: PortraitHero }) {
+  const mobileWidth = `min(18rem, ${((24 * hero.width) / hero.height).toFixed(2)}rem)`;
+  return (
+    <figure
+      className="mt-6 w-[var(--hero-w)] max-w-full md:mt-1 md:w-full"
+      style={{ "--hero-w": mobileWidth } as CSSProperties}
+    >
+      <img
+        src={hero.src}
+        alt={hero.alt}
+        width={hero.width}
+        height={hero.height}
+        className="block h-auto w-full rounded-xl bg-raised"
+        decoding="async"
+        fetchPriority="high"
+      />
+      {hero.caption || hero.credit ? (
+        <figcaption className="mt-2 text-sm leading-snug text-muted">
+          {hero.caption ? <span className="block">{hero.caption}</span> : null}
+          {hero.credit ? (
+            <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span>
+          ) : null}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+/**
+ * Lead wrapper at prose width. Band heroes (default) go under the text;
+ * portrait heroes sit beside it from `md` up and stack under it on mobile.
+ */
+export function ArticleHeroLead({
+  hero,
+  children,
+}: {
+  hero?: ArticleHeroMeta;
+  children: ReactNode;
+}) {
+  if (hero && isPortraitHero(hero)) {
+    return (
+      <header className="max-w-prose md:grid md:grid-cols-[minmax(0,1fr)_15rem] md:items-start md:gap-x-8">
+        <div className="min-w-0">{children}</div>
+        <PortraitHeroImage hero={hero} />
+      </header>
+    );
+  }
+  return (
+    <header className="max-w-prose">
+      {children}
+      {hero ? <ArticleHeroImage hero={hero} /> : null}
+    </header>
   );
 }
 
@@ -247,22 +337,15 @@ export function ArticleLead({
   face?: ArticleFace;
 }) {
   return (
-    <header className="max-w-prose">
+    <ArticleHeroLead hero={hero}>
       {kicker ? <p className="text-xs text-muted">{kicker}</p> : null}
       <h1 className={`mt-2 ${faceClass(face)} text-4xl text-fg`}>{title}</h1>
       {teaser ? <p className="mt-3 text-muted">{teaser}</p> : null}
-      {hero ? <ArticleHeroImage hero={hero} /> : null}
-    </header>
+    </ArticleHeroLead>
   );
 }
 
-export function EpisodeBody({
-  episode,
-  clusterSlug,
-}: {
-  episode: Episode;
-  clusterSlug?: string;
-}) {
+export function EpisodeBody({ episode, clusterSlug }: { episode: Episode; clusterSlug?: string }) {
   const sections = clusterSlug ? getBody(clusterSlug, episode.slug) : null;
   const blocks = sections ?? [{ heading: "", paragraphs: episode.paragraphs }];
   const face: ArticleFace = clusterSlug === "markets" ? "sans" : "display";
