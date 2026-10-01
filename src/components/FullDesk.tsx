@@ -18,6 +18,7 @@ import {
   officialMtmUsd,
   pctLostDisplay,
 } from "@/lib/dashboard/clock-prints";
+import { DESK_REFRESHED, staleNote } from "@/lib/dashboard/desk-refreshed";
 import { COMPILED_PRINTERS, getPrinters, type Printers } from "@/lib/dashboard/printers";
 import { getSpotLite, parseSpotAsOf } from "@/lib/dashboard/spot";
 import {
@@ -472,7 +473,8 @@ export function FullDesk() {
                 note={
                   printers.source === "live"
                     ? "FRED M2SL, latest month. Not a completed calendar year."
-                    : `Stored FRED M2SL (${usM2AsOf}; tip ${m2Compiled.asOf}). Live feed missed.`
+                    : (staleNote(DESK_REFRESHED.metrics.usM2) ??
+                      `Stored FRED M2SL (${usM2AsOf}; tip ${m2Compiled.asOf}). Live feed missed.`)
                 }
               />
               <DeskMetricTile
@@ -485,7 +487,8 @@ export function FullDesk() {
                 note={
                   printers.source === "live"
                     ? "ECB money stock, latest month. China and Japan stay on their July 2026 prints."
-                    : `Stored ECB print (${printers.eurM3.asOf}). The live feed missed; this is the saved figure.`
+                    : (staleNote(DESK_REFRESHED.metrics.eurM3) ??
+                      `Stored ECB print (${printers.eurM3.asOf}). The live feed missed; this is the saved figure.`)
                 }
               />
               <DeskMetricTile
@@ -609,7 +612,7 @@ export function FullDesk() {
                 cadence="monthly"
                 asOf={formatAsOf(`${LBMA_PAIR.asOf}-01`)}
                 live={lbmaGoldClearingRatio().toFixed(3)}
-                note={`LBMA ${formatAsOf(`${LBMA_PAIR.asOf}-01`)} daily average clearing (${LBMA_PAIR.goldClearingDailyMoz} Moz) divided by same-month London vault gold (${LBMA_PAIR.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.`}
+                note={`LBMA ${formatAsOf(`${LBMA_PAIR.asOf}-01`)} daily average clearing (${LBMA_PAIR.goldClearingDailyMoz} Moz) divided by same-month London vault gold (${LBMA_PAIR.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.${staleNote(DESK_REFRESHED.metrics.lbma) ? ` ${staleNote(DESK_REFRESHED.metrics.lbma)}` : ""}`}
               />
               <DeskMetricTile
                 kicker="ETFs"

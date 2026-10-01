@@ -116,54 +116,79 @@ async function lbmaPair() {
   };
 }
 
-export async function buildRefresh() {
-  const [m2, cpi, eurUsd, cnyUsd, jpyUsd, eurM3, lbma] = await Promise.all([
-    fredLast("M2SL"),
-    fredLast("CPIAUCSL"),
-    fredLast("DEXUSEU"),
-    fredLast("DEXCHUS"),
-    fredLast("DEXJPUS"),
-    ecbM3(),
-    lbmaPair(),
-  ]);
+/** One entry per stored metric. Each runs on its own so one dead feed cannot sink the rest. */
+export const SOURCES = {
+  usM2: async () => {
+    const m2 = await fredLast("M2SL");
+    return { bn: m2.value, asOf: m2.date.slice(0, 7), source: "FRED M2SL" };
+  },
+  cpi: async () => {
+    const cpi = await fredLast("CPIAUCSL");
+    return { value: cpi.value, asOf: cpi.date.slice(0, 7), source: "FRED CPIAUCSL" };
+  },
+  eurM3: async () => {
+    const m3 = await ecbM3();
+    return { value: m3.value, asOf: m3.asOf, source: "ECB BSI M3" };
+  },
+  fx: async () => {
+    const [eurUsd, cnyUsd, jpyUsd] = await Promise.all([fredLast("DEXUSEU"), fredLast("DEXCHUS"), fredLast("DEXJPUS")]);
+    const asOf = [eurUsd.date, cnyUsd.date, jpyUsd.date].sort().at(-1) ?? eurUsd.date;
+    return {
+      eurUsd: eurUsd.value,
+      cnyUsd: cnyUsd.value,
+      jpyUsd: jpyUsd.value,
+      asOf: asOf.slice(0, 10),
+      source: "FRED DEXUSEU / DEXCHUS / DEXJPUS",
+    };
+  },
+  lbma: lbmaPair,
+};
 
-  const fxAsOf = [eurUsd.date, cnyUsd.date, jpyUsd.date].sort().at(-1) ?? eurUsd.date;
+export const MANUAL = [
+  "Spot Au/Ag — live in-app (Yahoo 15m → gold-api), not this cron",
+  "WGC above-ground stock / GDT / mine — survey releases",
+  "World Silver Survey / USGS MCS / IMF WEO debt",
+  "China SAFE / NBP / CNB / CBU country books — national releases",
+  "China M2 / Japan M2 — no free FRED series; keep compiled prints",
+  "COMEX OI vs registered — no same-day pair stored",
+];
 
+function readPrev() {
+  try {
+    return JSON.parse(readFileSync(OUT, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Fetch every source independently. A failed source keeps its last good value,
+ * gains `staleSince` (first failed run) and keeps `lastGoodAt` (last successful run).
+ * Returns the next document plus the list of failures.
+ */
+export async function buildRefresh({ prev = readPrev(), sources = SOURCES, now = new Date() } = {}) {
+  const today = now.toISOString().slice(0, 10);
+  const ids = Object.keys(sources);
+  const settled = await Promise.allSettled(ids.map((id) => sources[id]()));
+  const metrics = {};
+  const failures = [];
+  settled.forEach((res, i) => {
+    const id = ids[i];
+    const before = prev?.metrics?.[id];
+    if (res.status === "fulfilled") {
+      metrics[id] = { ...res.value, lastGoodAt: today };
+      return;
+    }
+    const error = String(res.reason?.message ?? res.reason).slice(0, 200);
+    failures.push({ id, error });
+    if (before) {
+      metrics[id] = { ...before, lastGoodAt: before.lastGoodAt ?? prev?.refreshedAt?.slice(0, 10), staleSince: before.staleSince ?? today };
+    }
+  });
   return {
-    refreshedAt: new Date().toISOString(),
-    metrics: {
-      usM2: {
-        bn: m2.value,
-        asOf: m2.date.slice(0, 7),
-        source: "FRED M2SL",
-      },
-      cpi: {
-        value: cpi.value,
-        asOf: cpi.date.slice(0, 7),
-        source: "FRED CPIAUCSL",
-      },
-      eurM3: {
-        value: eurM3.value,
-        asOf: eurM3.asOf,
-        source: "ECB BSI M3",
-      },
-      fx: {
-        eurUsd: eurUsd.value,
-        cnyUsd: cnyUsd.value,
-        jpyUsd: jpyUsd.value,
-        asOf: fxAsOf.slice(0, 10),
-        source: "FRED DEXUSEU / DEXCHUS / DEXJPUS",
-      },
-      lbma,
-    },
-    manual: [
-      "Spot Au/Ag — live in-app (Yahoo 15m → gold-api), not this cron",
-      "WGC above-ground stock / GDT / mine — survey releases",
-      "World Silver Survey / USGS MCS / IMF WEO debt",
-      "China SAFE / NBP / CNB / CBU country books — national releases",
-      "China M2 / Japan M2 — no free FRED series; keep compiled prints",
-      "COMEX OI vs registered — no same-day pair stored",
-    ],
+    doc: { refreshedAt: now.toISOString(), metrics, manual: MANUAL },
+    failures,
+    total: ids.length,
   };
 }
 
@@ -178,30 +203,20 @@ function payloadFingerprint(doc) {
 }
 
 async function main() {
-  const next = await buildRefresh();
+  const prev = readPrev();
+  const { doc: next, failures, total } = await buildRefresh({ prev });
+  for (const f of failures) console.log(`::warning title=desk-refresh ${f.id}::${f.error} (kept last good value)`);
+  if (failures.length === total) {
+    console.error("desk-refresh: every source failed; snapshot left as is");
+    process.exit(1);
+  }
   mkdirSync(dirname(OUT), { recursive: true });
-  let prevRaw = "";
-  try {
-    prevRaw = readFileSync(OUT, "utf8");
-  } catch {
-    /* first run */
-  }
-  let changed = true;
-  if (prevRaw) {
-    try {
-      changed = payloadFingerprint(JSON.parse(prevRaw)) !== payloadFingerprint(next);
-    } catch {
-      changed = true;
-    }
-  }
-  if (!changed) {
+  if (prev && payloadFingerprint(prev) === payloadFingerprint(next)) {
     console.log("desk-refresh: unchanged");
-    process.exit(0);
+    return;
   }
   writeFileSync(OUT, stableStringify(next));
-  console.log(
-    `desk-refresh: wrote ${OUT} usM2=${next.metrics.usM2.bn} eurM3=${next.metrics.eurM3.asOf} lbma=${next.metrics.lbma.paired.asOf}`,
-  );
+  console.log(`desk-refresh: wrote ${OUT} (${total - failures.length}/${total} sources fresh)`);
 }
 
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
