@@ -11,8 +11,9 @@ import {
 } from "./robots-sitemap.ts";
 
 function expectedHistoryYearPaths() {
-  const years = [];
-  for (let year = 1545; year <= 1980; year += 1) years.push(year);
+  const early = [312, 1545, 1609, 1640, 1672, 1694, 1716, 1720, 1775];
+  const years = [...early];
+  for (let year = 1776; year <= 1980; year += 1) years.push(year);
   return years.map((year) => `/history/${year}`);
 }
 
@@ -75,6 +76,20 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/central-bank-gold-reserves",
       "/markets/gold-silver-ratio",
       "/markets/physical-silver-demand-by-country",
+      "/blog",
+      "/blog/australia-1813-holey-dollar",
+      "/blog/greenspan-1966-print-money",
+      "/blog/mises-inflation-as-policy",
+      "/blog/spanish-silver-first-global-money",
+      "/blog/sweden-1931-left-gold",
+      "/blog/interest-costs-vs-us-gold",
+      "/blog/september-1971-official-gold-price",
+      "/blog/china-1934-silver-appeal",
+      "/blog/when-exchanges-change-the-silver-rules",
+      "/blog/ltcm-1998-consortium",
+      "/blog/newton-1717-guinea",
+      "/blog/gold-silver-ratio-what-it-counts",
+      "/blog/weimar-purchasing-power-note",
     ]);
 
     const xml = sitemapXml();
@@ -83,7 +98,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 487);
+    assert.equal(locs.length, 279);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

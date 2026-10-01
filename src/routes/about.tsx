@@ -48,7 +48,7 @@ function AboutPage() {
           differ by country. If you act, you do so on your own judgment.
         </p>
 
-        <h2 className="mt-12 font-display text-3xl">Four sections</h2>
+        <h2 className="mt-12 font-display text-3xl">The four sections</h2>
         <ol className="mt-6 grid gap-3">
           {pillars.map((p) => (
             <li key={p.id}>
@@ -64,7 +64,7 @@ function AboutPage() {
           ))}
         </ol>
 
-        <h2 className="mt-12 font-display text-3xl">What we will not do</h2>
+        <h2 className="mt-12 font-display text-3xl">Lines we will not cross</h2>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-muted">
           <li>Retell Weimar or Nixon inside a definitions page.</li>
           <li>Rank dealers or publish a buy list.</li>

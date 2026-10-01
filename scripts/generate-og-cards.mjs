@@ -51,7 +51,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
   <meta charset="utf-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Figtree:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -135,7 +135,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
     }
     .title {
       margin-top: 16px;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 600;
       font-size: ${titleSize};
       line-height: 1.1;
@@ -217,7 +217,7 @@ async function main() {
   const logoHref = pathToFileURL(logoTmp).href;
 
   const only = process.argv.slice(2).filter((arg) => arg.startsWith("/"));
-  // Custom article heroes (illustration = OG) must not be overwritten by branded text cards.
+  // Custom article OG overrides (registered heroes) must not be overwritten by branded text cards.
   const heroOverrides = new Set(articleHeroOgOverridePaths());
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);

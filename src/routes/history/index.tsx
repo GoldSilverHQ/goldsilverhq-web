@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleSections, Breadcrumb, RelatedLinks } from "@/components/Article";
-import { HistoryTimeline } from "@/components/HistoryTimeline";
+import { HistorySubnav } from "@/components/HistorySubnav";
+import { HistoryYearCards } from "@/components/HistoryYearCards";
 import { SiteShell } from "@/components/SiteShell";
 import { historyHubBody } from "@/lib/content/bodies";
-import { HISTORY_YEARS } from "@/lib/content/history-years";
 import { HISTORY_PEOPLE } from "@/lib/content/history-people";
 import { historyClusters, historyHub, seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/history/")({
     meta: pageShareMeta({
       title: seoTitle(historyHub.titleTag),
       description:
-        "What happened when money was metal, paper, or both. A documentary path through coinage, banks, crises, and statute—from ancient coinage to the 1971 gold-window close.",
+        "What happened when money was metal, paper, or both — from clipped coins and warehouse receipts to Weimar, Bretton Woods, and the 1971 gold-window close.",
       path: "/history",
     }),
   }),
@@ -27,55 +27,14 @@ function HistoryHub() {
         <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "History" }]} />
         <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">History</p>
         <h1 className="mt-2 font-display text-4xl sm:text-5xl">A short history of sound money</h1>
+        <HistorySubnav className="mt-6" />
         <div className="mt-8">
           <ArticleSections sections={historyHubBody} />
         </div>
 
-        <HistoryTimeline />
-
-        <h2 className="mt-16 font-display text-3xl">One year</h2>
-        <p className="mt-2 max-w-prose text-muted">
-          A short note and one picture for a single year. The longer articles stay in the stretches below.
-        </p>
-        <p className="mt-4 flex flex-wrap gap-2">
-          {HISTORY_YEARS.map((year) => (
-            <Link
-              key={year.year}
-              to="/history/$cluster"
-              params={{ cluster: String(year.year) }}
-              className="rounded-full bg-surface px-3 py-1.5 font-sans text-sm tabular-nums text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
-            >
-              {year.year}
-            </Link>
-          ))}
-          <Link to="/history/year" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
-            All years →
-          </Link>
-        </p>
-
-        <h2 className="mt-16 font-display text-3xl">Notable people</h2>
-        <p className="mt-2 max-w-prose text-muted">
-          Financiers, economists, and the politicians who signed the statutes. One page each.
-        </p>
-        <p className="mt-4 flex flex-wrap gap-2">
-          {HISTORY_PEOPLE.map((person) => (
-            <Link
-              key={person.slug}
-              to="/history/vip/$person"
-              params={{ person: person.slug }}
-              className="rounded-full bg-surface px-3 py-1.5 text-sm text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
-            >
-              {person.name}
-            </Link>
-          ))}
-          <Link to="/history/vip" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
-            All people →
-          </Link>
-        </p>
-
         <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
         <p className="mt-2 max-w-prose text-muted">
-          From ancient coinage to the gold-window close — five stretches, each with its own dated articles.
+          Coinage before paper, paper before fiat, statutes that redefined the dollar, and the century that closed the gold window.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {historyClusters.map((cluster) => (
@@ -91,6 +50,28 @@ function HistoryHub() {
             </Link>
           ))}
         </div>
+
+        <h2 className="mt-16 font-display text-3xl">Notable people</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Financiers, economists, and the politicians who signed the statutes. One page each.
+        </p>
+        <p className="mt-6 flex flex-wrap gap-3">
+          {HISTORY_PEOPLE.map((person) => (
+            <Link
+              key={person.slug}
+              to="/history/vip/$person"
+              params={{ person: person.slug }}
+              className="rounded-full bg-surface px-5 py-2.5 text-base text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
+            >
+              {person.name}
+            </Link>
+          ))}
+          <Link to="/history/vip" className="rounded-full px-5 py-2.5 text-base text-muted hover:text-fg">
+            All people →
+          </Link>
+        </p>
+
+        <HistoryYearCards />
         <RelatedLinks links={historyHub.related} />
       </div>
     </SiteShell>

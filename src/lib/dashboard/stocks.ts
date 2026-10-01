@@ -1,4 +1,5 @@
 import { TROY_OZ_PER_TONNE, officialMtmUsd } from "./clock-prints.ts";
+import { refreshedLbmaPaired } from "./desk-refreshed.ts";
 
 /** Million troy ounces → metric tonnes. */
 export const MOZ_TO_T = 1_000_000 / TROY_OZ_PER_TONNE;
@@ -68,14 +69,18 @@ export const SILVER_ETP_2025 = {
 } as const;
 
 /**
- * LBMA July 2026 daily-average clearing paired with end-July London vault gold.
- * Clearing page is the latest month; August vaults are a later stock with no August clearing yet.
+ * LBMA daily-average clearing paired with the same calendar month’s London vault gold.
+ * Cron refreshes the pair from LBMA JSON; do not mix months.
  */
-export const LBMA_JUL_2026 = {
-  asOf: "2026-07",
-  goldClearingDailyMoz: 15.8,
-  vaultGoldT: 9_534,
+const lbmaPaired = refreshedLbmaPaired();
+export const LBMA_PAIR = {
+  asOf: lbmaPaired.asOf,
+  goldClearingDailyMoz: lbmaPaired.goldClearingDailyMoz,
+  vaultGoldT: lbmaPaired.vaultGoldT,
 } as const;
+
+/** @deprecated alias — prefer LBMA_PAIR */
+export const LBMA_JUL_2026 = LBMA_PAIR;
 
 export function wgcShare(tonnes: number) {
   return (tonnes / WGC_STOCK.aboveGroundT) * 100;
@@ -121,8 +126,8 @@ export function investmentSilverOzPerPerson() {
 
 /** Daily average clearing ounces ÷ end-month vault ounces. Not annualised. */
 export function lbmaGoldClearingRatio() {
-  const vaultOz = LBMA_JUL_2026.vaultGoldT * TROY_OZ_PER_TONNE;
-  return (LBMA_JUL_2026.goldClearingDailyMoz * 1e6) / vaultOz;
+  const vaultOz = LBMA_PAIR.vaultGoldT * TROY_OZ_PER_TONNE;
+  return (LBMA_PAIR.goldClearingDailyMoz * 1e6) / vaultOz;
 }
 
 export function coverPct(tonnes: number, spotPerOz: number, debtUsd = IMF_GOV_DEBT.usd) {

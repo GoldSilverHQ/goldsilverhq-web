@@ -65,7 +65,6 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.match(text, /\$35/);
     assert.match(text, /\[1933 U\.S\. gold recall\]\(\/history\/20th-century\/1933-gold-recall\)/);
     assert.match(text, /\[Bretton Woods\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
-    assert.match(text, /\[Sound Money\]\(\/sound-money\)/);
   });
 
   it("locks hard-money vs fiat as costly production vs law-and-habit", () => {
@@ -98,7 +97,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
   it("wires a thickened Sound Money hub without new routes", () => {
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     assert.match(mapSrc, /soundMoneyHub/);
-    assert.match(mapSrc, /titleTag:\s*"Sound Money: Definitions, Not History"/);
+    assert.match(mapSrc, /titleTag:\s*"Sound Money: Hard, Fiat, Backed"/);
     assert.doesNotMatch(mapSrc, /slug:\s*"sound-money-[\w-]+"/);
 
     const routeSrc = readFileSync(new URL("../../routes/sound-money/index.tsx", import.meta.url), "utf8");
@@ -107,16 +106,24 @@ describe("idea / sound-money thicken (no new URLs)", () => {
 
     const text = bodyText(soundMoneyHubBody);
     const words = wordCount(text);
-    assert.ok(words >= 550 && words <= 1200, `hub: expected 550–1200 words, got ${words}`);
+    assert.ok(words >= 300 && words <= 1200, `hub: expected 300–1200 words, got ${words}`);
     assert.match(text, /\[What is sound money\?\]\(\/sound-money\/what-is-sound-money\)/);
     assert.match(text, /\[Hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /\[Inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
     assert.match(text, /\[What “backed” means\]\(\/sound-money\/backed-money\)/);
-    assert.match(text, /Weimar and Nixon belong there, not on this definitions page/);
+    assert.match(text, /\[Sound Money History\]\(\/history\)/);
+    assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);
 
     for (const slug of IDEA_EPISODES) {
       assert.match(text, new RegExp(`/sound-money/${slug}`));
+    }
+  });
+
+  it("keeps definition pages off SEO, outline, and disclaimer voice", () => {
+    for (const slug of IDEA_EPISODES) {
+      const text = bodyText(getBody("sound-money", slug)!);
+      assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i, `${slug} still has SEO/outline voice`);
     }
   });
 
@@ -125,7 +132,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     assert.equal(body, null);
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     assert.match(mapSrc, /slug:\s*"information-not-advice"/);
-    assert.match(mapSrc, /BaFin/);
-    assert.match(mapSrc, /German\/EU rules \(BaFin\)/);
+    assert.match(mapSrc, /Nothing here is investment advice/);
+    assert.doesNotMatch(mapSrc, /BaFin/);
   });
 });

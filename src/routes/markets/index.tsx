@@ -10,7 +10,7 @@ export const Route = createFileRoute("/markets/")({
     meta: pageShareMeta({
       title: seoTitle(marketsHub.titleTag),
       description:
-        "Gold and silver market facts: official U.S. book value, central-bank reserves, the gold–silver ratio, and physical silver demand by country. Documentary figures — not tips, and not sound-money history.",
+        "Why the U.S. still books gold at $42.22, how central banks report gold reserves, what the gold–silver ratio measures, and which countries buy and use the most silver.",
       path: "/markets",
     }),
   }),
@@ -28,9 +28,9 @@ function MarketsHub() {
           <ArticleSections sections={marketsHubBody} face="sans" />
         </div>
 
-        <h2 className="mt-16 font-sans text-3xl">Where the captions live</h2>
+        <h2 className="mt-16 font-sans text-3xl">The articles</h2>
         <p className="mt-2 max-w-prose text-muted">
-          Book value, reserves, the ratio, and country offtake — each page follows one number.
+          Each one takes a single number and explains where it comes from.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {marketPages.map((page) => (

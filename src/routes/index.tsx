@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HomeDashboard } from "@/components/HomeDashboard";
 import { HomeEditorial } from "@/components/HomeEditorial";
+import { HomeSidebar } from "@/components/HomeSidebar";
 import { SiteShell } from "@/components/SiteShell";
+import { onThisDay } from "@/lib/content/on-this-day";
+import { getSilverMovers } from "@/lib/dashboard/silver-movers";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/")({
@@ -14,13 +17,21 @@ export const Route = createFileRoute("/")({
       imagePath: "/og.jpg",
     }),
   }),
+  loader: async () => {
+    const movers = await getSilverMovers().catch(() => null);
+    return { day: onThisDay(new Date()), movers };
+  },
+  staleTime: 5 * 60 * 1000,
   component: Home,
 });
 
 function Home() {
+  const { day, movers } = Route.useLoaderData();
   return (
     <SiteShell>
-      <HomeDashboard />
+      <HomeDashboard
+        sidebar={<HomeSidebar dayLabel={day.label} events={day.events} movers={movers} />}
+      />
       <HomeEditorial />
     </SiteShell>
   );

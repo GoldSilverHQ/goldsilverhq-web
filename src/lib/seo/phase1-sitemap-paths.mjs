@@ -7,11 +7,14 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
  * disclaimers. `/gold-silver` and `/gold-silver/bars-vs-coins` are listed.
  * Plain ESM so OG card scripts and the Grok head injector can share it.
  */
-/** Inclusive. One page every calendar year from Potosí through Silver Thursday. */
-export const HISTORY_YEAR_SPAN = [1545, 1980];
+/** Spot years before the continuous run. Notable hinges only — not every quiet year. */
+export const HISTORY_EARLY_YEARS = [312, 1545, 1609, 1640, 1672, 1694, 1716, 1720, 1775];
+
+/** Inclusive. One page every calendar year from Independence through Silver Thursday. */
+export const HISTORY_YEAR_SPAN = [1776, 1980];
 
 export function allHistoryYearNumbers() {
-  const years = [];
+  const years = [...HISTORY_EARLY_YEARS];
   for (let year = HISTORY_YEAR_SPAN[0]; year <= HISTORY_YEAR_SPAN[1]; year += 1) years.push(year);
   return years;
 }
@@ -71,6 +74,20 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/central-bank-gold-reserves",
   "/markets/gold-silver-ratio",
   "/markets/physical-silver-demand-by-country",
+  "/blog",
+  "/blog/australia-1813-holey-dollar",
+  "/blog/greenspan-1966-print-money",
+  "/blog/mises-inflation-as-policy",
+  "/blog/spanish-silver-first-global-money",
+  "/blog/sweden-1931-left-gold",
+  "/blog/interest-costs-vs-us-gold",
+  "/blog/september-1971-official-gold-price",
+  "/blog/china-1934-silver-appeal",
+  "/blog/when-exchanges-change-the-silver-rules",
+  "/blog/ltcm-1998-consortium",
+  "/blog/newton-1717-guinea",
+  "/blog/gold-silver-ratio-what-it-counts",
+  "/blog/weimar-purchasing-power-note",
 ];
 
 export const DEFAULT_OG_IMAGE_PATH = "/og.jpg";

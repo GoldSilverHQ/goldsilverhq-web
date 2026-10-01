@@ -49,6 +49,14 @@ const FORBIDDEN =
 const STRUCTURAL_HUB_CHROME =
   /What you will find here|What this is not|How to read an article|How to read a markets page|Where the other sections sit|A reading order|Where to start|Where to enter the modern story|How the five chapters form a path|Start with a date, or with a definition|Four pages that open the rest of the site|Read by chapter|Read by definition|Read by topic|Articles in this chapter|Five chapters$|The five chapters|The four topics|The definitions/;
 
+/** Outline and SEO-briefing voice that History chapter hubs must not speak in. */
+const CHAPTER_HUB_OUTLINE =
+  /\bhinges?\b|\bstretch(?:es)?\b|\bpillars?\b|on-ramp|\bdoors?\b|how this section works|\bThe claim:|dated claims|Calendar order is|Linear order is|This overview|This chapter (?:is|stays|exists|follows|sits)|this (?:article|page|hub) stays|If you arrived|does not sell metal|forecast prices|not a pitch|pitch to (?:hold|buy)|price target|remonetization brief|Documentary only|Facts only|information versus advice|information-not-advice/i;
+
+/** Headings that count the chapter ("Five doors…", "Three silver stories…") instead of naming it. */
+const COUNTED_HEADING =
+  /^(?:Two|Three|Four|Five|Six|Seven)\s+(?:[\w’-]+\s+)?(?:doors?|hinges?|stretches|pillars?|claims?|stories|fights?|captions?|words?|topics?|chapters?|articles|stops|dated)\b/i;
+
 function assertClean(label: string, text: string) {
   assert.doesNotMatch(text, FORBIDDEN, `${label} still has writer/taxonomy jargon`);
 }
@@ -75,6 +83,27 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const opener = historyHubBody[0]?.paragraphs[0] ?? "";
     assert.match(opener, /1923|1971/);
     assert.doesNotMatch(opener, /This section records|not a glossary|not a sales page/);
+    const history = bodyText(historyHubBody);
+    assert.doesNotMatch(history, /\bhinges?\b|\bstretches?\b|Four hinges|five stretches/i);
+    assert.doesNotMatch(history, /You do not need every page|do not sell metal|forecast prices|turn a panic into a pitch/i);
+    assert.doesNotMatch(history, /curious adult can leave able to explain|is the place to start|Merging \*\*\d+/);
+    assert.doesNotMatch(history, /densest modern door|natural entry|slower on-ramp|articles here stay with those moments/);
+  });
+
+  it("keeps History chapter hubs free of outline and SEO-briefing voice", () => {
+    for (const [label, body] of [
+      ["20th-century hub", twentiethCenturyHubBody],
+      ["america hub", americaHubBody],
+      ["silver hub", silverHubBody],
+      ["banks-paper hub", banksPaperHubBody],
+      ["ancient hub", ancientHubBody],
+    ] as const) {
+      assert.doesNotMatch(bodyText(body), CHAPTER_HUB_OUTLINE, `${label} still has outline/SEO voice`);
+      for (const s of body) {
+        assert.doesNotMatch(s.heading, COUNTED_HEADING, `${label} heading "${s.heading}" counts the chapter`);
+        assert.doesNotMatch(s.paragraphs.join("\n"), /\*\*[^*]*\?\*\*/, `${label} bolds a search query`);
+      }
+    }
   });
 
   it("keeps hub episode doors as narrative links, not catalog-only lists", () => {
@@ -93,16 +122,95 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       assert.match(text, /\]\(\//, `${label} must still door into child pages`);
     }
     const history = bodyText(historyHubBody);
+    // Quiet, useful episode doors only — not a forced glossary of every chapter
     assert.match(history, /\[Weimar \*\*1923\*\*\]\(\/history\/20th-century\/weimar-1923\)/);
-    assert.match(history, /\[John Law \*\*1720\*\*\]\(\/history\/banks-paper\/john-law\)/);
+    assert.match(history, /\[John Law[^\]]*1720[^\]]*\]\(\/history\/banks-paper\/john-law\)/);
     assert.match(history, /\[Potosí\]\(\/history\/silver\/potosi\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/ancient\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/banks-paper\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/america\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/silver\)/);
+    assert.doesNotMatch(history, /\]\(\/history\/20th-century\)/);
+    assert.doesNotMatch(history, /why-markets-chose-gold-silver/);
+    assert.doesNotMatch(history, /crime-of-1873/);
+  });
+
+  it("keeps history hub route chrome free of sitemap positioning", () => {
+    const src = readFileSync(join(root, "routes/history/index.tsx"), "utf8");
+    assert.doesNotMatch(src, /five stretches/);
+    assert.doesNotMatch(src, /documentary path through/);
+  });
+  it("keeps 20th-century episodes off meta closings and shuttle links", () => {
+    for (const slug of ["panic-1907-fed", "weimar-1923", "bretton-woods-nixon-1971", "1933-gold-recall"]) {
+      const text = bodyText(getBody("20th-century", slug)!);
+      assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i, `${slug} still has SEO/outline voice`);
+    }
+  });
+
+  it("keeps banks-paper episodes off chapter-outline and glossary-briefing voice", () => {
+    const BANKS_OUTLINE =
+      /Later machines in this chapter|not a mash of later paper disasters|The order is (?:England|Amsterdam|European)|That is why it is not an Amsterdam clone|Restriction is a wartime English fact|Three instruments sit close together|The instruments were different things|Set beside the other paper|A \*\*(?:giro balance|goldsmith note|Bank of England note|warehouse receipt|bank note|public-bank balance|Law note|assignat)\*\* is\b/i;
+    for (const slug of [
+      "warehouses-to-public-banks",
+      "bank-of-amsterdam",
+      "bank-of-england",
+      "john-law",
+      "assignats",
+    ]) {
+      const text = bodyText(getBody("banks-paper", slug)!);
+      assert.doesNotMatch(text, BANKS_OUTLINE, `banks-paper/${slug} still has outline/SEO voice`);
+      assert.doesNotMatch(text, CHAPTER_HUB_OUTLINE, `banks-paper/${slug} still has hub outline voice`);
+    }
+  });
+
+  it("keeps episode summaries and leads off contrast-list SEO positioning", () => {
+    // Forced “Not A, not B, not C” / “This is not X, and it is not Y” shuttles that
+    // name-check other episodes to position the page — not ordinary “not metal itself.”
+    const CONTRAST_LIST =
+      /Not John Law|not England[’']s Restriction|not Weimar|France printed Weimar|not 1720 and not Weimar|This is not John Law|This is not the assignats|It is not the same episode as France[’']s later|Not the 1914 convertibility|This is not 1914, and it is not the 1971|This is not 1797, and it is not the American|It is not the assignats of the 1790s, and it is not Germany|Weimar was not \*\*1720\*\* again|A paper collapse in Regency France is not Weimar/i;
+
+    for (const cluster of historyClusters) {
+      for (const ep of cluster.episodes) {
+        const blurb = [ep.title, ep.summary, ...(ep.paragraphs ?? [])].join("\n");
+        assert.doesNotMatch(blurb, CONTRAST_LIST, `${cluster.slug}/${ep.slug} map blurb`);
+      }
+    }
+
+    const assignats = bodyText(getBody("banks-paper", "assignats")!);
+    assert.doesNotMatch(assignats, CONTRAST_LIST, "assignats body");
+    assert.match(assignats, /biens nationaux/);
+    assert.doesNotMatch(assignats, /Not John Law[’']s 1720, not England/i);
+  });
+
+  it("keeps Silver Thursday off the information-vs-advice shuttle", () => {
+    const text = bodyText(getBody("silver", "silver-thursday")!);
+    assert.doesNotMatch(text, /information versus advice|information-not-advice/i);
+  });
+
+  it("keeps the Markets hub and articles free of outline and disclaimer voice", () => {
+    const MARKETS_VOICE =
+      /Four captions that need a page|Four doors, four jobs|This page stays with|does not forecast|if you have just (?:read|looked|seen)|continues the story if|This is not a separate URL|Read those sentences as|Read the (?:table|Canada block) as|a private reader should follow|That is the claim|that is the stop|holds the (?:four )?(?:fact pages|topics)|None of those sentences is a path|Nothing here is a (?:reason|mean)|This page (?:only records|keeps the market quotient|does not invent)|Name the clock|The sections below explain|Reading a reserve headline|It is not a shopping list|Not a central bank|not separate articles/i;
+    assert.doesNotMatch(bodyText(marketsHubBody), MARKETS_VOICE, "markets hub");
+    for (const slug of [
+      "official-gold-book-value",
+      "central-bank-gold-reserves",
+      "gold-silver-ratio",
+      "physical-silver-demand-by-country",
+    ]) {
+      const body = getBody("markets", slug);
+      assert.ok(body, `missing body for markets/${slug}`);
+      assert.doesNotMatch(bodyText(body), MARKETS_VOICE, `markets/${slug}`);
+    }
+    const route = readFileSync(join(root, "routes/markets/index.tsx"), "utf8");
+    assert.doesNotMatch(route, /Where the captions live|not tips, and not sound-money history/);
   });
 
   it("keeps every Phase-1 article body free of taxonomy jargon", () => {
     for (const path of PHASE1_SITEMAP_PATHS) {
       if (path === "/history" || path === "/sound-money" || path === "/gold-silver" || path === "/markets") continue;
       const parts = path.split("/").filter(Boolean);
-      if (parts[0] === "history" && parts.length === 3) {
+      // Episode articles only — year pages and VIP bios use other content modules
+      if (parts[0] === "history" && parts.length === 3 && parts[1] !== "vip") {
         const body = getBody(parts[1], parts[2]);
         assert.ok(body, `missing body for ${path}`);
         assertClean(path, bodyText(body));
@@ -155,7 +263,7 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
       "routes/desk.tsx",
       "components/Article.tsx",
       "components/HomeEditorial.tsx",
-      "components/HistoryTimeline.tsx",
+      "components/HistoryYearCards.tsx",
       "components/NotFound.tsx",
     ];
     for (const rel of files) {
@@ -189,7 +297,40 @@ describe("reader voice (no writer jargon on sitemap pages)", () => {
     const featuredSrc = readFileSync(join(root, "lib/content/featured.ts"), "utf8");
     assert.doesNotMatch(featuredSrc, /Then the Rentenmark\./);
     assert.doesNotMatch(featuredSrc, /floating fiat\./);
-    assert.match(featuredSrc, /Rentenmark\) that restored/);
-    assert.match(featuredSrc, /fiat = money by law/);
+    assert.match(featuredSrc, /Rentenmark of November restored/);
+    assert.match(featuredSrc, /Nixon shock closed the last official promise/);
+  });
+
+  it("keeps home and desk chrome free of door / outline voice", () => {
+    const home = readFileSync(join(root, "components/HomeEditorial.tsx"), "utf8");
+    assert.doesNotMatch(home, /Four doors|doors into/i);
+    assert.doesNotMatch(home, /Open with/i);
+    assert.doesNotMatch(home, /A crisis, a definition, a turning point/i);
+    assert.doesNotMatch(home, /a [a-z]+, a [a-z]+, a [a-z]+/i);
+    const dash = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
+    assert.doesNotMatch(dash, /not a stock tip|Start with the/i);
+    const desk = readFileSync(join(root, "routes/desk.tsx"), "utf8");
+    assert.doesNotMatch(desk, /Four doors|If you arrived|does not sell metal/i);
+  });
+
+  it("keeps silver episode closers free of curriculum triad openers", () => {
+    const bodies = readFileSync(join(root, "lib/content/bodies.ts"), "utf8");
+    assert.doesNotMatch(bodies, /A squeeze, a rule book, a dated break/);
+    assert.doesNotMatch(bodies, /a mountain, a coin, a law, a market break/);
+  });
+
+  it("keeps Practice hub off overview-shelf and disclaimer chrome", () => {
+    const text = bodyText(practiceHubBody);
+    assert.doesNotMatch(
+      text,
+      /This overview stays|leave for History|standing line|These pages inform|Mixing the jobs|educational menu|not a shop|Information only|Current figures sit under|Dated collapses and statute fights live in|belongs to history|belongs to Markets/i,
+    );
+  });
+
+  it("keeps Sound Money map fallback off section-stays outline voice", () => {
+    const page = ideaPages.find((p) => p.slug === "what-is-sound-money");
+    assert.ok(page);
+    const text = page.paragraphs.join("\n");
+    assert.doesNotMatch(text, /This section stays|Mixing definitions with dated events|From here, read/i);
   });
 });

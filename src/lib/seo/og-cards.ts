@@ -1,3 +1,4 @@
+import { getBlogPost } from "../content/blog.ts";
 import { getHistoryPerson, HISTORY_VIP_DESCRIPTION } from "../content/history-people.ts";
 import { getHistoryYear } from "../content/history-years.ts";
 import {
@@ -61,7 +62,7 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: "Gold, silver, and sound money — GoldSilverHQ",
       description:
         "A short gold and silver dashboard: live prices, estimated ounces mined this year, and the map of sound money and history. Media only.",
-      kicker: "Desk · Media",
+      kicker: "Live · Media",
     };
   }
 
@@ -82,7 +83,7 @@ export function sharePageForPath(pathname: string): SharePage | null {
       cardTitle: "Sound money by year",
       title: seoTitle("Sound money by year"),
       description:
-        "One short page for every year from 1545 through 1980. A note and one picture. No forecast.",
+        "One short page for every year from 1776 through 1980, plus a few earlier hinges. A note and one picture. No forecast.",
       kicker: pillarKicker("history"),
     };
   }
@@ -219,6 +220,29 @@ export function sharePageForPath(pathname: string): SharePage | null {
       title: seoTitle(tag),
       description: page.summary,
       kicker: pillarKicker("markets"),
+    };
+  }
+
+  if (path === "/blog") {
+    return {
+      path,
+      cardTitle: "Blog",
+      title: seoTitle("Blog"),
+      description: "Notes from GoldSilverHQ on sound money, metals history, and markets.",
+      kicker: "Blog",
+    };
+  }
+
+  const blogMatch = path.match(/^\/blog\/([^/]+)$/);
+  if (blogMatch) {
+    const post = getBlogPost(blogMatch[1]);
+    if (!post || post.status !== "ready") return null;
+    return {
+      path,
+      cardTitle: post.title,
+      title: seoTitle(post.title),
+      description: post.summary,
+      kicker: "Blog",
     };
   }
 

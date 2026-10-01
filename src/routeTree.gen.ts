@@ -16,8 +16,13 @@ import { Route as FlowsRouteImport } from './routes/flows'
 import { Route as Googleb53ee24d705afe09DothtmlRouteImport } from './routes/googleb53ee24d705afe09[.]html'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as MapsRouteImport } from './routes/maps'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as SilverStocksRouteImport } from './routes/silver-stocks'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as GoldSilverIndexRouteImport } from './routes/gold-silver/index'
 import { Route as GoldSilverSlugRouteImport } from './routes/gold-silver/$slug'
 import { Route as HistoryIndexRouteImport } from './routes/history/index'
@@ -67,14 +72,39 @@ const MapsRoute = MapsRouteImport.update({
   path: '/maps',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
   id: '/robots.txt',
   path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SilverStocksRoute = SilverStocksRouteImport.update({
+  id: '/silver-stocks',
+  path: '/silver-stocks',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GoldSilverIndexRoute = GoldSilverIndexRouteImport.update({
@@ -146,12 +176,17 @@ export interface FileRoutesByFullPath {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
   '/markets/': typeof MarketsIndexRoute
@@ -169,12 +204,17 @@ export interface FileRoutesByTo {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog': typeof BlogIndexRoute
   '/gold-silver': typeof GoldSilverIndexRoute
   '/history': typeof HistoryIndexRoute
   '/markets': typeof MarketsIndexRoute
@@ -193,12 +233,17 @@ export interface FileRoutesById {
   '/googleb53ee24d705afe09.html': typeof Googleb53ee24d705afe09DothtmlRoute
   '/impressum': typeof ImpressumRoute
   '/maps': typeof MapsRoute
+  '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
   '/history/year': typeof HistoryYearRoute
   '/markets/$slug': typeof MarketsSlugRoute
   '/sound-money/$slug': typeof SoundMoneySlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/gold-silver/': typeof GoldSilverIndexRoute
   '/history/': typeof HistoryIndexRoute
   '/markets/': typeof MarketsIndexRoute
@@ -218,12 +263,17 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
+    | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog/'
     | '/gold-silver/'
     | '/history/'
     | '/markets/'
@@ -241,12 +291,17 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
+    | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog'
     | '/gold-silver'
     | '/history'
     | '/markets'
@@ -264,12 +319,17 @@ export interface FileRouteTypes {
     | '/googleb53ee24d705afe09.html'
     | '/impressum'
     | '/maps'
+    | '/partners'
     | '/robots.txt'
+    | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
+    | '/blog/$slug'
     | '/gold-silver/$slug'
     | '/history/year'
     | '/markets/$slug'
     | '/sound-money/$slug'
+    | '/blog/'
     | '/gold-silver/'
     | '/history/'
     | '/markets/'
@@ -288,12 +348,17 @@ export interface RootRouteChildren {
   Googleb53ee24d705afe09DothtmlRoute: typeof Googleb53ee24d705afe09DothtmlRoute
   ImpressumRoute: typeof ImpressumRoute
   MapsRoute: typeof MapsRoute
+  PartnersRoute: typeof PartnersRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
+  ShopRoute: typeof ShopRoute
+  SilverStocksRoute: typeof SilverStocksRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
   HistoryYearRoute: typeof HistoryYearRoute
   MarketsSlugRoute: typeof MarketsSlugRoute
   SoundMoneySlugRoute: typeof SoundMoneySlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   GoldSilverIndexRoute: typeof GoldSilverIndexRoute
   HistoryIndexRoute: typeof HistoryIndexRoute
   MarketsIndexRoute: typeof MarketsIndexRoute
@@ -355,6 +420,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MapsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/robots.txt': {
       id: '/robots.txt'
       path: '/robots.txt'
@@ -362,11 +434,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/silver-stocks': {
+      id: '/silver-stocks'
+      path: '/silver-stocks'
+      fullPath: '/silver-stocks'
+      preLoaderRoute: typeof SilverStocksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold-silver/': {
@@ -464,12 +564,17 @@ const rootRouteChildren: RootRouteChildren = {
   Googleb53ee24d705afe09DothtmlRoute: Googleb53ee24d705afe09DothtmlRoute,
   ImpressumRoute: ImpressumRoute,
   MapsRoute: MapsRoute,
+  PartnersRoute: PartnersRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
+  ShopRoute: ShopRoute,
+  SilverStocksRoute: SilverStocksRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogSlugRoute: BlogSlugRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,
   HistoryYearRoute: HistoryYearRoute,
   MarketsSlugRoute: MarketsSlugRoute,
   SoundMoneySlugRoute: SoundMoneySlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
   GoldSilverIndexRoute: GoldSilverIndexRoute,
   HistoryIndexRoute: HistoryIndexRoute,
   MarketsIndexRoute: MarketsIndexRoute,

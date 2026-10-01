@@ -1,0 +1,184 @@
+{
+  "updatedAt": "2026-10-01T03:10:00.000Z",
+  "account": "GoldSilverHQ",
+  "accountUserId": "1744721184623890432",
+  "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
+  "articles": [
+    {
+      "articleId": "2105337579369627661",
+      "postId": "2105379134990172419",
+      "title": "When Australia Punched Holes in Spanish Silver Dollars",
+      "status": "mirrored",
+      "slug": "australia-1813-holey-dollar",
+      "sitePath": "/blog/australia-1813-holey-dollar",
+      "xArticleUrl": "https://x.com/i/article/2105337579369627661",
+      "publishedAt": "2026-09-30T19:27:56.000Z",
+      "mirroredAt": "2026-10-01T03:10:00.000Z",
+      "inlineMediaCount": 1
+    },
+    {
+      "articleId": "2105187582904500224",
+      "postId": "2105297059989406160",
+      "title": "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",
+      "status": "mirrored",
+      "slug": "greenspan-1966-print-money",
+      "sitePath": "/blog/greenspan-1966-print-money",
+      "xArticleUrl": "https://x.com/i/article/2105187582904500224",
+      "publishedAt": "2026-09-30T14:01:48.000Z",
+      "mirroredAt": "2026-09-30T18:30:00.000Z",
+      "inlineMediaCount": 1
+    },
+    {
+      "articleId": "2104952749670481920",
+      "postId": "2104955541415973247",
+      "title": "Ludwig von Mises and the Policy Behind Inflation",
+      "status": "mirrored",
+      "slug": "mises-inflation-as-policy",
+      "sitePath": "/blog/mises-inflation-as-policy",
+      "xArticleUrl": "https://x.com/i/article/2104952749670481920",
+      "publishedAt": "2026-09-29T15:24:43.000Z",
+      "mirroredAt": "2026-09-29T18:30:00.000Z"
+    },
+    {
+      "articleId": "2104667282366402560",
+      "postId": "2104668115326107650",
+      "title": "How Spanish Silver Became the World's First Global Money",
+      "status": "mirrored",
+      "slug": "spanish-silver-first-global-money",
+      "sitePath": "/blog/spanish-silver-first-global-money",
+      "xArticleUrl": "https://x.com/i/article/2104667282366402560",
+      "publishedAt": "2026-09-28T20:22:36.000Z",
+      "mirroredAt": "2026-09-29T08:50:00.000Z",
+      "missNote": "Manual catch-up: status 2104668115326107650 published after the 2026-09-28 evening Berlin slot; mirrored outside schedule window."
+    },
+    {
+      "articleId": "2104261329636712450",
+      "postId": "2104262739665576407",
+      "title": "The Night Sweden Left Gold and Aimed at Prices Instead",
+      "status": "mirrored",
+      "slug": "sweden-1931-left-gold",
+      "sitePath": "/blog/sweden-1931-left-gold",
+      "xArticleUrl": "https://x.com/i/article/2104261329636712450",
+      "publishedAt": "2026-09-27T17:31:47.000Z",
+      "mirroredAt": "2026-09-27T18:20:00.000Z"
+    },
+    {
+      "articleId": "2103752801566261248",
+      "postId": "2104131498844565923",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2103752801566261248",
+      "publishedAt": "2026-09-27T08:50:16.000Z",
+      "skippedAt": "2026-09-27T18:20:00.000Z"
+    },
+    {
+      "articleId": "2103742623928156160",
+      "postId": "2103819945104572919",
+      "title": "When One Year of Interest Costs More Than All of America's Gold",
+      "status": "mirrored",
+      "slug": "interest-costs-vs-us-gold",
+      "sitePath": "/blog/interest-costs-vs-us-gold",
+      "xArticleUrl": "https://x.com/i/article/2103742623928156160",
+      "publishedAt": "2026-09-26T12:12:16.000Z",
+      "mirroredAt": "2026-09-26T18:45:00.000Z",
+      "missNote": "Queued behind newer Article 2103888968727060480 on the 2026-09-26 automation run (at most one per run). compose/articles/edit URL is the author editor, not a draft signal."
+    },
+    {
+      "articleId": "2103888968727060480",
+      "postId": "2103890890401948059",
+      "title": "How a September Meeting in 1971 Led to Raising the Official Gold Price",
+      "status": "mirrored",
+      "slug": "september-1971-official-gold-price",
+      "sitePath": "/blog/september-1971-official-gold-price",
+      "xArticleUrl": "https://x.com/i/article/2103888968727060480",
+      "publishedAt": "2026-09-26T16:54:11.000Z",
+      "mirroredAt": "2026-09-26T18:30:00.000Z"
+    },
+    {
+      "articleId": "2103038843947466754",
+      "postId": "2103229128572801122",
+      "title": "The Day China Asked America to Stop Buying Silver",
+      "status": "mirrored",
+      "slug": "china-1934-silver-appeal",
+      "sitePath": "/blog/china-1934-silver-appeal",
+      "xArticleUrl": "https://x.com/i/article/2103038843947466754",
+      "publishedAt": "2026-09-24T21:04:35.000Z",
+      "mirroredAt": "2026-09-25T10:24:38.000Z"
+    },
+    {
+      "articleId": "2103033593492537345",
+      "postId": "2103171852608962740",
+      "title": "When Exchanges Change the Silver Rules",
+      "status": "mirrored",
+      "slug": "when-exchanges-change-the-silver-rules",
+      "sitePath": "/blog/when-exchanges-change-the-silver-rules",
+      "xArticleUrl": "https://x.com/i/article/2103033593492537345",
+      "publishedAt": "2026-09-24T17:16:59.000Z",
+      "mirroredAt": "2026-09-24T18:30:00.000Z"
+    },
+    {
+      "articleId": "2102821638521688064",
+      "postId": "2102825847904166156",
+      "title": "The Day Banks Put Up $3.6 Billion to Stop a Hedge Fund Collapse",
+      "status": "mirrored",
+      "slug": "ltcm-1998-consortium",
+      "sitePath": "/blog/ltcm-1998-consortium",
+      "xArticleUrl": "https://x.com/i/article/2102821638521688064",
+      "publishedAt": "2026-09-23T18:22:05.000Z",
+      "mirroredAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2102003835015155712",
+      "postId": "2102089592773939308",
+      "title": "Isaac Newton Fixed Gold’s Price in 1717 — Here’s Why Britain’s Silver Coins Vanished",
+      "status": "mirrored",
+      "slug": "newton-1717-guinea",
+      "sitePath": "/blog/newton-1717-guinea",
+      "xArticleUrl": "https://x.com/i/article/2102003835015155712",
+      "publishedAt": "2026-09-21T17:36:28.000Z",
+      "mirroredAt": "2026-09-21T00:00:00.000Z",
+      "seedNote": "Seeded from existing site post on first pipeline run."
+    },
+    {
+      "articleId": "2101265682671222784",
+      "postId": "2101589593384509653",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2101265682671222784",
+      "publishedAt": "2026-09-20T08:29:39.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2098698807026335759",
+      "postId": "2098704778930876848",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2098698807026335759",
+      "publishedAt": "2026-09-12T09:26:26.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2096495920640585728",
+      "postId": "2096498346802176126",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2096495920640585728",
+      "publishedAt": "2026-09-06T07:18:51.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    },
+    {
+      "articleId": "2093610508523819008",
+      "postId": "2093627664498036945",
+      "title": "Silver Stocks - Weekly Roundup",
+      "status": "skipped",
+      "reason": "weekly-roundup-stock-tips",
+      "xArticleUrl": "https://x.com/i/article/2093610508523819008",
+      "publishedAt": "2026-08-29T09:11:47.000Z",
+      "skippedAt": "2026-09-23T18:40:00.000Z"
+    }
+  ]
+}

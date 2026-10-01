@@ -5,7 +5,10 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ogImagePathForRoute } from "../src/lib/seo/phase1-sitemap-paths.mjs";
+import {
+  CANONICAL_ORIGIN,
+  ogImagePathForRoute,
+} from "../src/lib/seo/phase1-sitemap-paths.mjs";
 
 export const DEFAULT_APP_NAME = "Grok App";
 export const OG_SERVICE_URL_DEFAULT = "https://og.grok.me";
@@ -397,7 +400,39 @@ export function grokOgHeadTags({
       tags.push(`<meta property="x:game:image:height" content="264">`);
     }
   }
+  const pageUrl = absolutePageUrl(pathname, publicHost);
+  if (pageUrl) {
+    tags.push(`<meta property="og:url" content="${escapeHtml(pageUrl)}">`);
+  }
   return tags;
+}
+
+/**
+ * Absolute document URL for og:url / canonical.
+ * Live goldsilverhq hosts always use CANONICAL_ORIGIN (www).
+ * Other public hosts (preview) use https://{host}.
+ */
+export function absolutePageUrl(pathname, publicHost = "") {
+  const path = String(pathname ?? "").trim();
+  if (!path) return "";
+  const normalized = path.replace(/\/+$/, "") || "/";
+  const host = String(publicHost ?? "")
+    .split(",")[0]
+    .trim()
+    .split(":")[0]
+    .toLowerCase();
+  const origin =
+    !host || host === "www.goldsilverhq.com" || host === "goldsilverhq.com"
+      ? host
+        ? CANONICAL_ORIGIN
+        : ""
+      : `https://${host}`;
+  if (!origin) return "";
+  return normalized === "/" ? `${origin}/` : `${origin}${normalized}`;
+}
+
+export function stripCanonicalLinkTags(html) {
+  return String(html).replace(/<link\b[^>]*\brel\s*=\s*["']canonical["'][^>]*>/gi, "");
 }
 
 export function stripShareMetaTags(html) {
@@ -459,7 +494,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
     host,
     documentTitle,
   );
-  let next = stripShareMetaTags(html);
+  let next = stripCanonicalLinkTags(stripShareMetaTags(html));
 
   const missing = grokPwaHeadTags(appName)
     .filter(([key]) => {
@@ -469,9 +504,10 @@ export function injectGrokPwaHead(html, ctx = {}) {
     })
     .map(([, tag]) => tag);
 
-  next = insertAfterHeadOpen(
-    next,
-    grokOgHeadTags({
+  const publicHost = resolvePublicHost(host);
+  const pageUrl = absolutePageUrl(pathname, publicHost);
+  const headOpenTags = [
+    ...grokOgHeadTags({
       host,
       appName,
       site,
@@ -479,8 +515,11 @@ export function injectGrokPwaHead(html, ctx = {}) {
       documentDescription,
       pathname,
       cwd,
-    }).join(""),
-  );
+    }),
+    ...(pageUrl ? [`<link rel="canonical" href="${escapeHtml(pageUrl)}">`] : []),
+  ];
+
+  next = insertAfterHeadOpen(next, headOpenTags.join(""));
 
   if (!next.includes("/grok-app-builder/extensions.js")) {
     missing.push(...grokExtensionsHeadTags(projectId));

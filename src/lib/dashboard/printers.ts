@@ -1,9 +1,11 @@
 import { createServerFn } from "@tanstack/react-start";
+import { DESK_REFRESHED } from "./desk-refreshed.ts";
 
-export type PrinterBook = { value: number; asOf: string; unit: "EUR" | "CNY" | "JPY" };
+export type PrinterBook = { value: number; asOf: string; unit: "EUR" | "CNY" | "JPY" | "USD" };
 export type FxBook = { eurUsd: number; cnyUsd: number; jpyUsd: number; asOf: string };
 
 export type Printers = {
+  usM2: PrinterBook;
   eurM3: PrinterBook;
   cnyM2: PrinterBook;
   jpyM2: PrinterBook;
@@ -11,12 +13,20 @@ export type Printers = {
   source: "live" | "compiled";
 };
 
-/** PBOC 2026-07 and BOJ 2026-07. FRED’s China/Japan M2 series stopped years ago. */
+const r = DESK_REFRESHED.metrics;
+
+/** China/Japan M2 have no free FRED series; keep the last cited national prints. */
 export const COMPILED_PRINTERS: Printers = {
-  eurM3: { value: 17.637718e12, asOf: "2026-07", unit: "EUR" },
+  usM2: { value: r.usM2.bn * 1e9, asOf: r.usM2.asOf, unit: "USD" },
+  eurM3: { value: r.eurM3.value, asOf: r.eurM3.asOf, unit: "EUR" },
   cnyM2: { value: 355.51e12, asOf: "2026-07", unit: "CNY" },
   jpyM2: { value: 1_297e12, asOf: "2026-07", unit: "JPY" },
-  fx: { eurUsd: 1.16, cnyUsd: 6.73, jpyUsd: 160, asOf: "2026-08" },
+  fx: {
+    eurUsd: r.fx.eurUsd,
+    cnyUsd: r.fx.cnyUsd,
+    jpyUsd: r.fx.jpyUsd,
+    asOf: r.fx.asOf.slice(0, 7),
+  },
   source: "compiled",
 };
 
@@ -51,7 +61,8 @@ async function ecbM3(): Promise<PrinterBook> {
 
 export const getPrinters = createServerFn({ method: "GET" }).handler(async (): Promise<Printers> => {
   try {
-    const [eurM3, eurUsd, cnyUsd, jpyUsd] = await Promise.all([
+    const [usM2, eurM3, eurUsd, cnyUsd, jpyUsd] = await Promise.all([
+      fredLast("M2SL"),
       ecbM3(),
       fredLast("DEXUSEU"),
       fredLast("DEXCHUS"),
@@ -59,6 +70,7 @@ export const getPrinters = createServerFn({ method: "GET" }).handler(async (): P
     ]);
     const fxAsOf = [eurUsd.date, cnyUsd.date, jpyUsd.date].sort().at(-1) ?? eurUsd.date;
     return {
+      usM2: { value: usM2.value * 1e9, asOf: usM2.date.slice(0, 7), unit: "USD" },
       eurM3,
       cnyM2: COMPILED_PRINTERS.cnyM2,
       jpyM2: COMPILED_PRINTERS.jpyM2,
