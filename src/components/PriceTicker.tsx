@@ -29,12 +29,12 @@ export function PriceTicker() {
 
   const items = spot
     ? [
-        { k: "gold", v: `$${fmt(spot.gold, 0)}`, color: "text-gold" },
-        { k: "silver", v: `$${fmt(spot.silver, 2)}`, color: "text-silver" },
+        { k: "Gold", v: `$${fmt(spot.gold, 0)}`, color: "text-gold" },
+        { k: "Silver", v: `$${fmt(spot.silver, 2)}`, color: "text-silver" },
       ]
     : [
-        { k: "gold", v: "—", color: "text-gold" },
-        { k: "silver", v: "—", color: "text-silver" },
+        { k: "Gold", v: "—", color: "text-gold" },
+        { k: "Silver", v: "—", color: "text-silver" },
       ];
 
   return (
