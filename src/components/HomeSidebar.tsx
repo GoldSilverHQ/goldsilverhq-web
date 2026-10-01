@@ -1,55 +1,46 @@
 import { Link } from "@tanstack/react-router";
 import type { OnThisDayEvent } from "@/lib/content/on-this-day";
+import { fmtDayMonYear } from "@/lib/dashboard/dates";
+import { fmtSignedPct, pctToneClass } from "@/lib/dashboard/pct";
 import type { SilverMovers } from "@/lib/dashboard/silver-movers";
 
 function Box({
   kicker,
   title,
   titleClassName = "",
+  centered = false,
   footer,
   children,
 }: {
-  kicker: string;
+  kicker?: string;
   title: string;
   titleClassName?: string;
+  /** Title first, kicker below as a plain date row, both centred. */
+  centered?: boolean;
   footer: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <section className="flex flex-col rounded-sm bg-surface p-4 shadow-[var(--shadow-border)]">
-      <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">{kicker}</p>
-      <h2 className={`mt-1 font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
+      {centered ? (
+        <header className="text-center">
+          <h2 className={`font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
+          <p className="mt-1 text-sm font-semibold text-gold">{kicker}</p>
+        </header>
+      ) : (
+        <>
+          {kicker ? (
+            <p className="mb-1 text-xs font-semibold tracking-[0.14em] text-gold uppercase">
+              {kicker}
+            </p>
+          ) : null}
+          <h2 className={`font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
+        </>
+      )}
       <div className="mt-3 flex-1">{children}</div>
       <p className="mt-4 border-t border-line pt-3 text-sm">{footer}</p>
     </section>
   );
-}
-
-function roundPct(n: number) {
-  return Math.round(n * 100) / 100;
-}
-
-function fmtPct(n: number) {
-  const r = roundPct(n);
-  const s = Math.abs(r).toFixed(2);
-  return r > 0 ? `+${s}%` : r < 0 ? `\u2212${s}%` : `${s}%`;
-}
-
-function pctColor(n: number) {
-  const r = roundPct(n);
-  return r > 0 ? "text-up" : r < 0 ? "text-down" : "text-muted";
-}
-
-function fmtDate(iso: string) {
-  const d = new Date(`${iso}T12:00:00Z`);
-  return Number.isNaN(d.getTime())
-    ? iso
-    : d.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-        timeZone: "UTC",
-      });
 }
 
 export function HomeSidebar({
@@ -69,6 +60,7 @@ export function HomeSidebar({
       <Box
         kicker={dayLabel}
         title="On this day in Sound Money History"
+        centered
         footer={
           <Link to="/history" className="text-gold hover:text-gold-soft">
             Sound Money History →
@@ -99,8 +91,7 @@ export function HomeSidebar({
       </Box>
 
       <Box
-        kicker={movers ? `Last trading day · ${fmtDate(movers.asOf)}` : "Last trading day"}
-        title="Silver producers: top 5 daily change"
+        title={`Silver producers: top 5 daily change${movers ? ` (${fmtDayMonYear(movers.asOf)})` : ""}`}
         titleClassName="w-fit text-silver-shine"
         footer={
           <Link
@@ -129,8 +120,10 @@ export function HomeSidebar({
                     <span className="block leading-tight">{r.name}</span>
                     <span className="text-xs tracking-wide text-faint">{r.ticker}</span>
                   </td>
-                  <td className={`py-1.5 text-right align-top tabular-nums ${pctColor(r.dayPct)}`}>
-                    {fmtPct(r.dayPct)}
+                  <td
+                    className={`py-1.5 text-right align-top tabular-nums ${pctToneClass(r.dayPct)}`}
+                  >
+                    {fmtSignedPct(r.dayPct)}
                   </td>
                 </tr>
               ))}
