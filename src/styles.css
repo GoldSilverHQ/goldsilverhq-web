@@ -15,6 +15,11 @@
   --color-gold-deep: #7a5e10;
   --color-gold-bright: #f3dc9a;
   --color-silver: #c5cdd4;
+  --color-silver-bright: #f4f7fa;
+  --color-silver-deep: #8d98a3;
+  /* Daily change on --color-surface: both ≥6:1. Always paired with a +/− sign. */
+  --color-up: #4ade80;
+  --color-down: #f87171;
   --color-line: color-mix(in oklab, #f2ede4 12%, transparent);
   --color-line-gold: color-mix(in oklab, #c9a227 38%, transparent);
   /* Display = same readable face as body (Figtree). Hierarchy stays size/weight. */
@@ -88,6 +93,28 @@ html {
     box-shadow:
       inset 0 1px 0 color-mix(in oklab, white 26%, transparent),
       0 0 0 1px color-mix(in oklab, var(--color-gold-deep) 55%, transparent);
+  }
+
+  /* Silver sheen in the spirit of .btn-gold, clipped to text. The deep stop stays
+     ≥4.5:1 on --color-surface; browsers without background-clip:text keep solid silver. */
+  .text-silver-shine {
+    color: var(--color-silver);
+    text-decoration-color: var(--color-silver);
+  }
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    .text-silver-shine {
+      background: linear-gradient(
+        100deg,
+        var(--color-silver-bright) 0%,
+        var(--color-silver) 30%,
+        var(--color-silver-deep) 52%,
+        var(--color-silver-bright) 74%,
+        var(--color-silver) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   }
 
   /* Header nav: one radius language + gold hover/selected (desktop flyouts + mobile accordion). */
