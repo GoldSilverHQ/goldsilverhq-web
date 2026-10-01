@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import type { CbHolder } from "@/lib/dashboard/cb-extras";
 import type { CbDesk, CbLiveCountry } from "@/lib/dashboard/central-banks";
 
 type EntityRow = { id: string; name: string; stock_tonnes: number | null; stock_as_of: string | null };
@@ -55,6 +56,38 @@ export const getCbDesk = createServerFn({ method: "GET" }).handler(async (): Pro
     for (const row of world) worldWgc[yearOf(row.period)] = Number(row.tonnes);
 
     return { source: "gshq", worldWgc, countries };
+  } catch {
+    return null;
+  }
+});
+
+/** Largest official holders (countries + IMF/ECB/BIS) with year-end holdings for the change columns. */
+export const getCbHolders = createServerFn({ method: "GET" }).handler(async (): Promise<CbHolder[] | null> => {
+  const { gshq, gshqConfigured } = await import("@/lib/data/rest");
+  if (!gshqConfigured()) return null;
+  try {
+    const top = await gshq<{ id: string; name: string; kind: string; stock_tonnes: number | null; stock_as_of: string | null }[]>(
+      "cb_entities?kind=in.(country,institution)&stock_tonnes=not.is.null&select=id,name,kind,stock_tonnes,stock_as_of&order=stock_tonnes.desc&limit=20",
+    );
+    if (!top.length) return null;
+    const ids = top.map((t) => t.id).join(",");
+    const holds = await gshq<HoldRow[]>(
+      `cb_holdings?freq=eq.year&entity_id=in.(${ids})&period=gte.2015-01-01&select=entity_id,period,tonnes&limit=1000`,
+    );
+    const byId = new Map<string, Record<string, number>>();
+    for (const h of holds) {
+      const cur = byId.get(h.entity_id) ?? {};
+      cur[String(yearOf(h.period))] = Number(h.tonnes);
+      byId.set(h.entity_id, cur);
+    }
+    return top.map((t) => ({
+      id: t.id,
+      name: t.name,
+      kind: t.kind === "institution" ? "institution" : "country",
+      tonnes: Number(t.stock_tonnes),
+      asOf: t.stock_as_of,
+      hold: byId.get(t.id) ?? {},
+    }));
   } catch {
     return null;
   }

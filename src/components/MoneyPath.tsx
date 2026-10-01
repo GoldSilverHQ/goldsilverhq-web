@@ -130,14 +130,14 @@ export function MoneyPath() {
               label: "Gold vs US M2",
               value: fmtX(stats.goldx),
               unit: "",
-              note: `M2-implied $${fmtMoney(stats.impliedGold)} · actual $${fmtMoney(stats.to.gold)}. Since ${stats.from.year}.`,
+              note: `$${fmtMoney(stats.from.gold)} in ${stats.from.year} → $${fmtMoney(stats.to.gold)} in ${stats.to.year}.`,
               tone: "gold",
             }}
           />
           <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">Gold</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-gold">{fmtX(stats.goldx)}</p>
           <p className="mt-1 text-sm text-muted">
-            M2-implied ${fmtMoney(stats.impliedGold)} · actual ${fmtMoney(stats.to.gold)}
+            ${fmtMoney(stats.from.gold)} in {stats.from.year} → ${fmtMoney(stats.to.gold)}
           </p>
         </article>
         <article className="relative rounded-xl bg-surface p-5 pr-12 shadow-[var(--shadow-border)]">
@@ -148,14 +148,14 @@ export function MoneyPath() {
               label: "Silver vs US M2",
               value: fmtX(stats.silverx),
               unit: "",
-              note: `M2-implied $${fmtMoney(stats.impliedSilver)} · actual $${fmtMoney(stats.to.silver)}. Since ${stats.from.year}.`,
+              note: `$${fmtMoney(stats.from.silver)} in ${stats.from.year} → $${fmtMoney(stats.to.silver)} in ${stats.to.year}.`,
               tone: "silver",
             }}
           />
           <p className="text-xs font-semibold tracking-[0.14em] text-silver uppercase">Silver</p>
           <p className="mt-2 font-sans text-3xl tabular-nums text-silver">{fmtX(stats.silverx)}</p>
           <p className="mt-1 text-sm text-muted">
-            M2-implied ${fmtMoney(stats.impliedSilver)} · actual ${fmtMoney(stats.to.silver)}
+            ${fmtMoney(stats.from.silver)} in {stats.from.year} → ${fmtMoney(stats.to.silver)}
           </p>
         </article>
       </div>
@@ -194,7 +194,7 @@ export function MoneyPath() {
       </div>
       <p className="mt-3 text-xs text-faint">
         M2: FRED M2SL. CPI: FRED CPIAUCSL. Metals: annual averages (LBMA / COMEX); 2026 is latest, not a completed year.
-        M2-implied price = start price × (M2 now ÷ M2 then). Compiled desk — not a live feed.
+        Multiples compare the latest print with the start year. Compiled desk — not a live feed.
       </p>
     </section>
   );

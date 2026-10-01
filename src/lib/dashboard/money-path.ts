@@ -63,7 +63,8 @@ export const MONEY_PATH: MoneyYear[] = [
   { year: 2022, gold: 1800.09, silver: 21.76, m2: 21293.2, cpi: 298.8 },
   { year: 2023, gold: 1940.54, silver: 23.35, m2: 20779.9, cpi: 308.7 },
   { year: 2024, gold: 2386, silver: 28.27, m2: 21487.6, cpi: 317.6 },
-  { year: 2025, gold: 3380, silver: 36.5, m2: 22355.3, cpi: 326.0 },
+  // 2025 silver: London price average, World Silver Survey 2026.
+  { year: 2025, gold: 3380, silver: 40.03, m2: 22355.3, cpi: 326.0 },
   // Tip year: m2/cpi overwritten when desk-refresh cron runs (see desk-refreshed.json).
   { year: 2026, gold: 4609, silver: 69.41, m2: 23342.8, cpi: 334.1 },
 ];
