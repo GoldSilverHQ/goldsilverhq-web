@@ -118,10 +118,7 @@ export function ArticleFigure({ figure }: { figure: SectionFigure }) {
             }
           }}
         >
-          <div className="flex items-center justify-between gap-3 border-b border-black/8 px-4 py-3">
-            <Dialog.Title className="truncate font-sans text-sm font-medium text-[#3d3830]">
-              {figure.caption || figure.alt}
-            </Dialog.Title>
+          <div className="flex items-center justify-end px-2 pt-2">
             <Dialog.Close asChild>
               <button
                 type="button"
@@ -133,7 +130,7 @@ export function ArticleFigure({ figure }: { figure: SectionFigure }) {
               </button>
             </Dialog.Close>
           </div>
-          <div className="min-h-0 flex-1 overflow-auto px-4 py-4 sm:px-6 sm:py-5">
+          <div className="min-h-0 flex-1 overflow-auto px-4 pb-4 sm:px-6 sm:pb-5">
             <img
               src={figure.src}
               alt={figure.alt}
@@ -142,14 +139,16 @@ export function ArticleFigure({ figure }: { figure: SectionFigure }) {
               className="mx-auto h-auto max-h-[min(70vh,40rem)] w-auto max-w-full object-contain"
               decoding="async"
             />
-            {(figure.caption || figure.credit) && (
-              <div className="mx-auto mt-4 max-w-2xl text-center text-sm leading-snug text-[#5a5348]">
-                {figure.caption ? <p className="m-0">{figure.caption}</p> : null}
-                {figure.credit ? (
-                  <p className="mt-1 text-xs text-[#7a7368]">{figure.credit}</p>
-                ) : null}
-              </div>
-            )}
+            <div className="mx-auto mt-4 max-w-2xl text-center text-sm leading-snug text-[#5a5348]">
+              <Dialog.Title asChild>
+                <p className={cn("m-0 font-normal", !figure.caption && "sr-only")}>
+                  {figure.caption || figure.alt}
+                </p>
+              </Dialog.Title>
+              {figure.credit ? (
+                <p className="mt-1 text-xs text-[#7a7368]">{figure.credit}</p>
+              ) : null}
+            </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
