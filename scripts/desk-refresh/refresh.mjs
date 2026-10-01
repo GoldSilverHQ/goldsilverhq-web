@@ -70,6 +70,17 @@ function kozToTonnes(koz) {
   return (koz * 1_000) / TROY_OZ_PER_TONNE;
 }
 
+/** Month-end London vault holdings, tonnes, oldest first. Rows are [ms, goldKoz, silverKoz]. */
+export function vaultHistory(vault) {
+  return vault
+    .filter((row) => Array.isArray(row) && Number.isFinite(Number(row[1])) && Number.isFinite(Number(row[2])))
+    .map((row) => ({
+      m: monthKeyFromMs(row[0]),
+      goldT: Math.round(kozToTonnes(Number(row[1]))),
+      silverT: Math.round(kozToTonnes(Number(row[2]))),
+    }));
+}
+
 /** LBMA clearing + vault JSON; pair clearing month with same-month vault gold. */
 async function lbmaPair() {
   const [clearing, vault] = await Promise.all([
@@ -96,6 +107,7 @@ async function lbmaPair() {
   const latestVaultSilverKoz = Number(vaultLast[2]);
 
   return {
+    history: vaultHistory(vault),
     clearing: {
       asOf: monthKeyFromMs(clearTs),
       goldClearingDailyMoz,
@@ -261,6 +273,29 @@ async function imfGovDebt(now = new Date()) {
   return { year: y1, byYear, source: "IMF World Economic Outlook (DataMapper GGXWDG_NGDP × NGDPD)" };
 }
 
+const CFTC = "https://publicreporting.cftc.gov/resource/6dca-aqww.json";
+
+/** COMEX gold (088691, 100 oz) and silver (084691, 5,000 oz) futures open interest, latest weekly report. */
+async function comexOpenInterest() {
+  const one = async (code, ozPerContract) => {
+    const q = new URLSearchParams({
+      $limit: "1",
+      $where: `cftc_contract_market_code='${code}'`,
+      $order: "report_date_as_yyyy_mm_dd DESC",
+    });
+    const [r] = await fetchJson(`${CFTC}?${q}`);
+    const contracts = Number(r?.open_interest_all);
+    if (!Number.isFinite(contracts) || contracts <= 0) throw new Error(`cftc ${code} empty`);
+    return {
+      contracts,
+      tonnes: Math.round((contracts * ozPerContract) / TROY_OZ_PER_TONNE),
+      asOf: String(r.report_date_as_yyyy_mm_dd).slice(0, 10),
+    };
+  };
+  const [gold, silver] = await Promise.all([one("088691", 100), one("084691", 5_000)]);
+  return { gold, silver, source: "CFTC Commitments of Traders (futures only), COMEX" };
+}
+
 /** One entry per stored metric. Each runs on its own so one dead feed cannot sink the rest. */
 export const SOURCES = {
   usM2: async () => {
@@ -289,6 +324,7 @@ export const SOURCES = {
   usTreasuryGold,
   usDebtHistory,
   imfGovDebt: () => imfGovDebt(),
+  comexOpenInterest,
 };
 
 export const MANUAL = [
@@ -297,7 +333,8 @@ export const MANUAL = [
   "World Silver Survey / USGS MCS",
   "IIF Global Debt Monitor headline — quoted by hand with credit (dataset is members-only)",
   "China SAFE / NBP / CNB / CBU country books — national releases",
-  "COMEX OI vs registered — no same-day pair stored",
+  "COMEX registered / eligible warehouse stocks — CME files not machine-reachable; open interest alone is on the cron (CFTC)",
+  "ETF holdings (GLD / SLV) — issuer files not machine-readable; WGC / Silver Survey yearly figures used",
 ];
 
 function readPrev() {

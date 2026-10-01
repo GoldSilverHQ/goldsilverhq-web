@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-10-01T10:22:03.319Z",
+  "refreshedAt": "2026-10-01T10:30:15.359Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
@@ -29,6 +29,583 @@
       "lastGoodAt": "2026-10-01"
     },
     "lbma": {
+      "history": [
+        {
+          "m": "2016-07",
+          "goldT": 7283,
+          "silverT": 29593
+        },
+        {
+          "m": "2016-08",
+          "goldT": 7457,
+          "silverT": 29791
+        },
+        {
+          "m": "2016-09",
+          "goldT": 7590,
+          "silverT": 30145
+        },
+        {
+          "m": "2016-10",
+          "goldT": 7656,
+          "silverT": 30426
+        },
+        {
+          "m": "2016-11",
+          "goldT": 7653,
+          "silverT": 30895
+        },
+        {
+          "m": "2016-12",
+          "goldT": 7523,
+          "silverT": 31238
+        },
+        {
+          "m": "2017-01",
+          "goldT": 7430,
+          "silverT": 31444
+        },
+        {
+          "m": "2017-02",
+          "goldT": 7427,
+          "silverT": 31423
+        },
+        {
+          "m": "2017-03",
+          "goldT": 7449,
+          "silverT": 32078
+        },
+        {
+          "m": "2017-04",
+          "goldT": 7496,
+          "silverT": 32826
+        },
+        {
+          "m": "2017-05",
+          "goldT": 7514,
+          "silverT": 32767
+        },
+        {
+          "m": "2017-06",
+          "goldT": 7559,
+          "silverT": 33425
+        },
+        {
+          "m": "2017-07",
+          "goldT": 7500,
+          "silverT": 33525
+        },
+        {
+          "m": "2017-08",
+          "goldT": 7586,
+          "silverT": 33686
+        },
+        {
+          "m": "2017-09",
+          "goldT": 7743,
+          "silverT": 33872
+        },
+        {
+          "m": "2017-10",
+          "goldT": 7827,
+          "silverT": 34107
+        },
+        {
+          "m": "2017-11",
+          "goldT": 7841,
+          "silverT": 34328
+        },
+        {
+          "m": "2017-12",
+          "goldT": 7826,
+          "silverT": 34416
+        },
+        {
+          "m": "2018-01",
+          "goldT": 7828,
+          "silverT": 34482
+        },
+        {
+          "m": "2018-02",
+          "goldT": 7818,
+          "silverT": 34369
+        },
+        {
+          "m": "2018-03",
+          "goldT": 7780,
+          "silverT": 33786
+        },
+        {
+          "m": "2018-04",
+          "goldT": 7784,
+          "silverT": 33918
+        },
+        {
+          "m": "2018-05",
+          "goldT": 7731,
+          "silverT": 34121
+        },
+        {
+          "m": "2018-06",
+          "goldT": 7684,
+          "silverT": 34901
+        },
+        {
+          "m": "2018-07",
+          "goldT": 7632,
+          "silverT": 34453
+        },
+        {
+          "m": "2018-08",
+          "goldT": 7528,
+          "silverT": 35094
+        },
+        {
+          "m": "2018-09",
+          "goldT": 7452,
+          "silverT": 35135
+        },
+        {
+          "m": "2018-10",
+          "goldT": 7411,
+          "silverT": 35124
+        },
+        {
+          "m": "2018-11",
+          "goldT": 7444,
+          "silverT": 35327
+        },
+        {
+          "m": "2018-12",
+          "goldT": 7491,
+          "silverT": 35386
+        },
+        {
+          "m": "2019-01",
+          "goldT": 7557,
+          "silverT": 35660
+        },
+        {
+          "m": "2019-02",
+          "goldT": 7629,
+          "silverT": 35719
+        },
+        {
+          "m": "2019-03",
+          "goldT": 7671,
+          "silverT": 36195
+        },
+        {
+          "m": "2019-04",
+          "goldT": 7650,
+          "silverT": 36067
+        },
+        {
+          "m": "2019-05",
+          "goldT": 7627,
+          "silverT": 35835
+        },
+        {
+          "m": "2019-06",
+          "goldT": 7608,
+          "silverT": 35552
+        },
+        {
+          "m": "2019-07",
+          "goldT": 7811,
+          "silverT": 35479
+        },
+        {
+          "m": "2019-08",
+          "goldT": 8028,
+          "silverT": 35636
+        },
+        {
+          "m": "2019-09",
+          "goldT": 8228,
+          "silverT": 35654
+        },
+        {
+          "m": "2019-10",
+          "goldT": 8264,
+          "silverT": 35876
+        },
+        {
+          "m": "2019-11",
+          "goldT": 8263,
+          "silverT": 36096
+        },
+        {
+          "m": "2019-12",
+          "goldT": 8326,
+          "silverT": 36147
+        },
+        {
+          "m": "2020-01",
+          "goldT": 8363,
+          "silverT": 36253
+        },
+        {
+          "m": "2020-02",
+          "goldT": 8444,
+          "silverT": 36393
+        },
+        {
+          "m": "2020-03",
+          "goldT": 8515,
+          "silverT": 36570
+        },
+        {
+          "m": "2020-04",
+          "goldT": 8482,
+          "silverT": 35667
+        },
+        {
+          "m": "2020-05",
+          "goldT": 8485,
+          "silverT": 35616
+        },
+        {
+          "m": "2020-06",
+          "goldT": 8669,
+          "silverT": 34701
+        },
+        {
+          "m": "2020-07",
+          "goldT": 8790,
+          "silverT": 34011
+        },
+        {
+          "m": "2020-08",
+          "goldT": 8955,
+          "silverT": 33390
+        },
+        {
+          "m": "2020-09",
+          "goldT": 9069,
+          "silverT": 33508
+        },
+        {
+          "m": "2020-10",
+          "goldT": 9350,
+          "silverT": 33440
+        },
+        {
+          "m": "2020-11",
+          "goldT": 9452,
+          "silverT": 33475
+        },
+        {
+          "m": "2020-12",
+          "goldT": 9537,
+          "silverT": 33608
+        },
+        {
+          "m": "2021-01",
+          "goldT": 9602,
+          "silverT": 34346
+        },
+        {
+          "m": "2021-02",
+          "goldT": 9559,
+          "silverT": 34996
+        },
+        {
+          "m": "2021-03",
+          "goldT": 9461,
+          "silverT": 35557
+        },
+        {
+          "m": "2021-04",
+          "goldT": 9440,
+          "silverT": 35867
+        },
+        {
+          "m": "2021-05",
+          "goldT": 9499,
+          "silverT": 36440
+        },
+        {
+          "m": "2021-06",
+          "goldT": 9587,
+          "silverT": 36706
+        },
+        {
+          "m": "2021-07",
+          "goldT": 9634,
+          "silverT": 36589
+        },
+        {
+          "m": "2021-08",
+          "goldT": 9718,
+          "silverT": 36567
+        },
+        {
+          "m": "2021-09",
+          "goldT": 9709,
+          "silverT": 36486
+        },
+        {
+          "m": "2021-10",
+          "goldT": 9661,
+          "silverT": 36110
+        },
+        {
+          "m": "2021-11",
+          "goldT": 9696,
+          "silverT": 36421
+        },
+        {
+          "m": "2021-12",
+          "goldT": 9637,
+          "silverT": 36125
+        },
+        {
+          "m": "2022-01",
+          "goldT": 9611,
+          "silverT": 35522
+        },
+        {
+          "m": "2022-02",
+          "goldT": 9636,
+          "silverT": 35191
+        },
+        {
+          "m": "2022-03",
+          "goldT": 9669,
+          "silverT": 34462
+        },
+        {
+          "m": "2022-04",
+          "goldT": 9672,
+          "silverT": 33646
+        },
+        {
+          "m": "2022-05",
+          "goldT": 9616,
+          "silverT": 31758
+        },
+        {
+          "m": "2022-06",
+          "goldT": 9614,
+          "silverT": 31023
+        },
+        {
+          "m": "2022-07",
+          "goldT": 9617,
+          "silverT": 29576
+        },
+        {
+          "m": "2022-08",
+          "goldT": 9565,
+          "silverT": 28506
+        },
+        {
+          "m": "2022-09",
+          "goldT": 9443,
+          "silverT": 27101
+        },
+        {
+          "m": "2022-10",
+          "goldT": 9308,
+          "silverT": 26503
+        },
+        {
+          "m": "2022-11",
+          "goldT": 9169,
+          "silverT": 26138
+        },
+        {
+          "m": "2022-12",
+          "goldT": 9053,
+          "silverT": 26155
+        },
+        {
+          "m": "2023-01",
+          "goldT": 9032,
+          "silverT": 26154
+        },
+        {
+          "m": "2023-02",
+          "goldT": 8990,
+          "silverT": 26347
+        },
+        {
+          "m": "2023-03",
+          "goldT": 8958,
+          "silverT": 26380
+        },
+        {
+          "m": "2023-04",
+          "goldT": 8963,
+          "silverT": 26331
+        },
+        {
+          "m": "2023-05",
+          "goldT": 8903,
+          "silverT": 26395
+        },
+        {
+          "m": "2023-06",
+          "goldT": 8865,
+          "silverT": 26748
+        },
+        {
+          "m": "2023-07",
+          "goldT": 8864,
+          "silverT": 26886
+        },
+        {
+          "m": "2023-08",
+          "goldT": 8788,
+          "silverT": 27305
+        },
+        {
+          "m": "2023-09",
+          "goldT": 8727,
+          "silverT": 27594
+        },
+        {
+          "m": "2023-10",
+          "goldT": 8587,
+          "silverT": 26402
+        },
+        {
+          "m": "2023-11",
+          "goldT": 8584,
+          "silverT": 26284
+        },
+        {
+          "m": "2023-12",
+          "goldT": 8686,
+          "silverT": 26631
+        },
+        {
+          "m": "2024-01",
+          "goldT": 8635,
+          "silverT": 26328
+        },
+        {
+          "m": "2024-02",
+          "goldT": 8562,
+          "silverT": 25319
+        },
+        {
+          "m": "2024-03",
+          "goldT": 8562,
+          "silverT": 25612
+        },
+        {
+          "m": "2024-04",
+          "goldT": 8552,
+          "silverT": 25470
+        },
+        {
+          "m": "2024-05",
+          "goldT": 8540,
+          "silverT": 25883
+        },
+        {
+          "m": "2024-06",
+          "goldT": 8599,
+          "silverT": 26136
+        },
+        {
+          "m": "2024-07",
+          "goldT": 8651,
+          "silverT": 26618
+        },
+        {
+          "m": "2024-08",
+          "goldT": 8675,
+          "silverT": 26245
+        },
+        {
+          "m": "2024-09",
+          "goldT": 8663,
+          "silverT": 26212
+        },
+        {
+          "m": "2024-10",
+          "goldT": 8775,
+          "silverT": 26629
+        },
+        {
+          "m": "2024-11",
+          "goldT": 8716,
+          "silverT": 26458
+        },
+        {
+          "m": "2024-12",
+          "goldT": 8686,
+          "silverT": 25740
+        },
+        {
+          "m": "2025-01",
+          "goldT": 8535,
+          "silverT": 23528
+        },
+        {
+          "m": "2025-02",
+          "goldT": 8477,
+          "silverT": 22462
+        },
+        {
+          "m": "2025-03",
+          "goldT": 8488,
+          "silverT": 22127
+        },
+        {
+          "m": "2025-04",
+          "goldT": 8536,
+          "silverT": 22859
+        },
+        {
+          "m": "2025-05",
+          "goldT": 8598,
+          "silverT": 23367
+        },
+        {
+          "m": "2025-06",
+          "goldT": 8776,
+          "silverT": 23791
+        },
+        {
+          "m": "2025-07",
+          "goldT": 8865,
+          "silverT": 24199
+        },
+        {
+          "m": "2025-08",
+          "goldT": 8831,
+          "silverT": 24646
+        },
+        {
+          "m": "2025-09",
+          "goldT": 8841,
+          "silverT": 24581
+        },
+        {
+          "m": "2025-10",
+          "goldT": 8858,
+          "silverT": 26255
+        },
+        {
+          "m": "2025-11",
+          "goldT": 8907,
+          "silverT": 27186
+        },
+        {
+          "m": "2026-07",
+          "goldT": 9534,
+          "silverT": 28213
+        },
+        {
+          "m": "2026-08",
+          "goldT": 9632,
+          "silverT": 28431
+        }
+      ],
       "clearing": {
         "asOf": "2026-07",
         "goldClearingDailyMoz": 15.8,
@@ -150,6 +727,20 @@
       },
       "source": "IMF World Economic Outlook (DataMapper GGXWDG_NGDP × NGDPD)",
       "lastGoodAt": "2026-10-01"
+    },
+    "comexOpenInterest": {
+      "gold": {
+        "contracts": 412800,
+        "tonnes": 1284,
+        "asOf": "2026-09-22"
+      },
+      "silver": {
+        "contracts": 106474,
+        "tonnes": 16559,
+        "asOf": "2026-09-22"
+      },
+      "source": "CFTC Commitments of Traders (futures only), COMEX",
+      "lastGoodAt": "2026-10-01"
     }
   },
   "manual": [
@@ -158,6 +749,7 @@
     "World Silver Survey / USGS MCS",
     "IIF Global Debt Monitor headline — quoted by hand with credit (dataset is members-only)",
     "China SAFE / NBP / CNB / CBU country books — national releases",
-    "COMEX OI vs registered — no same-day pair stored"
+    "COMEX registered / eligible warehouse stocks — CME files not machine-reachable; open interest alone is on the cron (CFTC)",
+    "ETF holdings (GLD / SLV) — issuer files not machine-readable; WGC / Silver Survey yearly figures used"
   ]
 }

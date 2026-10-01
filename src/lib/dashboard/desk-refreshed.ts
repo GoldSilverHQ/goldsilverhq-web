@@ -17,6 +17,7 @@ export type DeskRefreshed = {
     eurM3: Book & { value: number };
     fx: Book & { eurUsd: number; cnyUsd: number; jpyUsd: number };
     lbma: FeedStamp & {
+      history?: { m: string; goldT: number; silverT: number }[];
       clearing: { asOf: string; goldClearingDailyMoz: number; source: string };
       vaultLatest: { asOf: string; goldT: number; silverT: number; source: string };
       paired: { asOf: string; goldClearingDailyMoz: number; vaultGoldT: number; vaultSilverT: number; note: string };
@@ -28,6 +29,11 @@ export type DeskRefreshed = {
       debtGdpPct: number;
       debtGdpAsOf: string;
       yearEndUsd: Record<string, number>;
+      source: string;
+    };
+    comexOpenInterest?: FeedStamp & {
+      gold: { contracts: number; tonnes: number; asOf: string };
+      silver: { contracts: number; tonnes: number; asOf: string };
       source: string;
     };
     imfGovDebt?: FeedStamp & {
