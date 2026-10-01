@@ -848,6 +848,7 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
           { title: "Spanish silver as global money", href: "/blog/spanish-silver-first-global-money" },
+          { title: "Australia’s 1813 holey dollar", href: "/blog/australia-1813-holey-dollar" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },

@@ -357,6 +357,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/australia-1813-holey-dollar",
+    src: "/images/blog/australia-1813-holey-dollar.jpg",
+    ogSrc: "/og/cards/blog-australia-1813-holey-dollar.jpg",
+    alt: "Title card reading When Australia Punched Holes in Spanish Silver Dollars, with a holey dollar and a dump on a dark ground.",
+    caption: "30 September 1813 — a Spanish dollar punched into a holey dollar and a dump.",
+    credit: "Title image from the GoldSilverHQ X Article on Australia's holey dollar.",
+  },
+  {
     path: "/blog/greenspan-1966-print-money",
     src: "/images/blog/greenspan-1966-print-money.jpg",
     ogSrc: "/og/cards/blog-greenspan-1966-print-money.jpg",

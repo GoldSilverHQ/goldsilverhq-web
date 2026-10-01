@@ -75,6 +75,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/gold-silver-ratio",
   "/markets/physical-silver-demand-by-country",
   "/blog",
+  "/blog/australia-1813-holey-dollar",
   "/blog/greenspan-1966-print-money",
   "/blog/mises-inflation-as-policy",
   "/blog/spanish-silver-first-global-money",

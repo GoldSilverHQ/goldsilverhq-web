@@ -49,6 +49,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "australia-1813-holey-dollar",
+    title: "When Australia Punched Holes in Spanish Silver Dollars",
+    summary:
+      "On 30 September 1813 New South Wales made the holey dollar and the dump legal tender, punching Spanish silver dollars so the coins would stay.",
+    date: "2026-09-30",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+      {
+        title: "Spanish silver as global money",
+        href: "/blog/spanish-silver-first-global-money",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/piece-of-eight",
+      "/blog/spanish-silver-first-global-money",
+    ],
+    xArticleUrl: "https://x.com/i/article/2105337579369627661",
+    sourceXId: "2105337579369627661",
+  },
+  {
     slug: "greenspan-1966-print-money",
     title:
       "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",

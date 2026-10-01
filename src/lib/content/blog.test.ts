@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 12);
-    assert.equal(listBlogPosts().length, 12);
+    assert.equal(blogPosts.length, 13);
+    assert.equal(listBlogPosts().length, 13);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/australia-1813-holey-dollar",
         "/blog/greenspan-1966-print-money",
         "/blog/mises-inflation-as-policy",
         "/blog/spanish-silver-first-global-money",
@@ -176,8 +177,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 10);
-    assert.equal(listBlogPostsByTag("Metals").length, 7);
+    assert.equal(listBlogPostsByTag("History").length, 11);
+    assert.equal(listBlogPostsByTag("Metals").length, 8);
     assert.equal(listBlogPostsByTag("Markets").length, 4);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -191,6 +192,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "australia-1813-holey-dollar",
       "greenspan-1966-print-money",
       "mises-inflation-as-policy",
       "spanish-silver-first-global-money",
@@ -254,6 +256,44 @@ describe("blog section", () => {
     assert.equal(
       figures[0]!.src,
       "/images/blog/greenspan-1966-print-money-quote-confiscation.jpg",
+    );
+    assert.match(figures[0]!.credit ?? "", /GoldSilverHQ X Article/);
+    assert.ok(existsSync(join(publicRoot, figures[0]!.src.replace(/^\//, ""))));
+  });
+
+  it("embeds the holey-dollar coin and credits the X Article once", () => {
+    const post = getBlogPost("australia-1813-holey-dollar");
+    assert.ok(post);
+    assert.equal(post.title, "When Australia Punched Holes in Spanish Silver Dollars");
+    assert.equal(post.date, "2026-09-30");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2105337579369627661");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    const body = getBody("blog", "australia-1813-holey-dollar")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[pieces of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2105337579369627661/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("australia-1813-holey-dollar");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 1, `expected 1 inline figure, got ${figures.length}`);
+    assert.equal(
+      figures[0]!.src,
+      "/images/blog/australia-1813-holey-dollar-ring-and-dump.jpg",
     );
     assert.match(figures[0]!.credit ?? "", /GoldSilverHQ X Article/);
     assert.ok(existsSync(join(publicRoot, figures[0]!.src.replace(/^\//, ""))));
@@ -495,6 +535,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/australia-1813-holey-dollar",
       "/blog/greenspan-1966-print-money",
       "/blog/mises-inflation-as-policy",
       "/blog/spanish-silver-first-global-money",

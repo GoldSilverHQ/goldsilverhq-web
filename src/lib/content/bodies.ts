@@ -4003,7 +4003,86 @@ const greenspan1966PrintMoney: Section[] = [
   },
 ];
 
+/** Blog: 1813 holey dollar and dump — longer than the X Article. */
+const australia1813HoleyDollar: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In **1813**, New South Wales was short of everyday cash. The silver that did show up was mostly Spanish dollars — big silver coins used across the world's trading ports, sometimes nicknamed [pieces of eight](/history/silver/piece-of-eight). They arrived with ships. They left with ships. Merchants and sailors knew those coins were good money far from Sydney. So the colony's best silver kept walking out the door.",
+      "A port that lives by ships has a coin problem an inland market does not. The same piece that pays a shop in Sydney will pay a shop in another port, because the stamp is Spanish and the weight is already known. Sailors and merchants do not have to learn a local name. They trust the coin they already carry. When a colony's small change is made of coins the world accepts, those coins are always one departure from leaving. Everyday cash is whatever is still in the till after the ship has sailed. In New South Wales, too much of that silver did not stay.",
+      "Governor Lachlan Macquarie did not wait for a new mint from London. He kept the silver by spoiling it on purpose.",
+    ],
+    figure: {
+      src: "/images/blog/australia-1813-holey-dollar-ring-and-dump.jpg",
+      alt: "Silver holey dollar, a ring with a round hole stamped FIVE SHILLINGS and New South Wales 1813, beside the small centre plug, the dump, stamped FIFTEEN PENCE.",
+      caption:
+        "The ring and the plug — five shillings around the hole, fifteen pence on the dump.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Australia's holey dollar.",
+      width: 820,
+      height: 820,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "Spoil the export shape",
+    paragraphs: [
+      "Spoiling, here, did not mean melting the silver into bars or locking it in a chest forever. It meant changing the shape so the coin no longer looked like the Spanish dollar a sailor would pocket for the next voyage. A whole dollar is a familiar object. A ring with a hole, and the small plug cut from the middle, are not. The metal is still silver. The marks are no longer the marks of a coin that moves from port to port under a Spanish name. That is the device. Keep the silver. Ruin it as export money.",
+    ],
+  },
+  {
+    heading: "Counted, sealed, still not street money",
+    paragraphs: [
+      "Britain had already arranged, through the East India Company, for about ten thousand pounds' worth of Spanish dollars to be bought in India and shipped to New South Wales on the government's account. Roughly forty thousand of those coins reached Sydney in late **1812**. The National Museum of Australia dates the Samarang's landing to **26 November**. That December a committee at Government House counted the boxes, found nearly thirty-nine thousand nine hundred and nine dollars, and sealed them again. The silver was in the colony. Keeping it there was another problem.",
+      "The shipment answers one question and leaves the next one open. London, through the Company, had put Spanish silver on a government account and sent it to Sydney. These were not loose private coins that a merchant could claim and carry out the next morning without a count. A committee at Government House opened the boxes, counted, and sealed them. Nearly thirty-nine thousand nine hundred and nine is the count this note uses — the article's figure, not a round forty thousand standing in for it. Roughly forty thousand is the size of what reached Sydney. The December count is what the committee found in the boxes. Sealing them again means the silver was received and then shut up. Receipt is not circulation. A coin in a sealed box pays no wages and settles no shop bill. The colony had silver in hand. It did not yet have a silver coin that people would spend locally and leave behind.",
+    ],
+  },
+  {
+    heading: "One punch, two coins",
+    paragraphs: [
+      "Macquarie hired William Henshall — a convict transported for forgery, a man who knew metal — to punch a hole through each Spanish dollar and stamp both pieces for New South Wales. In a basement workshop they called the Factory, Henshall worked a drop hammer. The outer ring became the holey dollar, worth five shillings. The centre plug became the dump, worth fifteen pence. One Spanish coin turned into two colonial coins. Once New South Wales marks sat on the metal, it no longer looked like Spanish money anyone would gladly carry back to sea.",
+      "The hire is part of the story, and the article tells it plainly. Henshall was not an engraver sent out from London with a new mint. He was a convict, transported for forgery: a man punished for working metal the wrong way, then set to work metal on the governor's orders. The note does not dress that up. It names the skill. He knew metal. The tool was a drop hammer in a basement called the Factory. A drop hammer falls. It punches. The punch is the policy.",
+      "What the punch produced was two denominations from one coin. The outer ring — the holey dollar — was rated at five shillings. The centre plug — the dump — was rated at fifteen pence. The article names those two values and stops there. It does not say the ring and the plug were meant to add up to the Spanish dollar's old price in some other port. The point of the cut is the cut. A ring stamped for New South Wales, and a plug stamped for New South Wales, are local pieces. A whole Spanish dollar is a coin a sailor already understands. After the hammer, he is holding something that has to be explained.",
+      "The names followed the shapes. Holey dollar is the ring: a dollar with a hole, the Spanish coin emptied at the centre and restamped. Dump is the plug that came out of that hole, a small thick disc of the same silver. One punch, two pieces, two ratings. Five shillings on the ring. Fifteen pence on the plug. Colonial stamps on both. The silver did not leave the colony as a familiar Spanish dollar, because that dollar was no longer in one piece.",
+    ],
+  },
+  {
+    heading: "The day the law called them money",
+    paragraphs: [
+      "On **30 September 1813**, the proclamation took effect. The holey dollar and the dump became legal tender. Melting them or shipping them out was an offence. Government pay and private contracts after that date were meant to run on the new silver, unless the parties said otherwise. Counterfeiting and clipping were punishable. Henshall was still punching rings and plugs — Museums of History NSW notes the coins were not ready for general issue until **January 1814** — but **30 September** is the day the law called them money.",
+      "Legal tender is a legal status, not a pile of finished coins on a counter. The proclamation said these pieces were money in New South Wales. It also said what you could not do with them. Melting them turned them back toward raw silver, which could leave in another form. Shipping them out returned them to the sea the punch was meant to close. Both were offences. Counterfeiting and clipping were punishable, the ordinary defense of a coin once a government has put its name on it. Clipping takes metal from the edge. A holey dollar has already lost its centre on purpose. The law still had to say that further theft from the ring was a crime.",
+      "The dates are easy to blur, and the article keeps them apart. **30 September 1813** is the day the proclamation took effect. **January 1814** is when Museums of History NSW says the coins were ready for general issue. Between those dates Henshall was still at the drop hammer. The law ran ahead of the finished stock. Government pay and private contracts after the proclamation were meant to run on the new silver, unless the parties said otherwise. That exception is narrow. It is not a claim that every bargain in the colony switched overnight. It is the rule the article records: the new silver was the money those payments were meant to use, with room for the parties to name something else.",
+    ],
+  },
+  {
+    heading: "Both lives in the silver",
+    paragraphs: [
+      "Look at a surviving holey dollar and you can still read both lives in the silver. Spanish titles sit on the outer rim. **FIVE SHILLINGS** sits around the hole. The dump, the plug that came out of that hole, carries its own stamp: fifteen pence, and New South Wales. Australia's first distinctive coins were born on paper that day. One punch. Two denominations. Silver that stayed.",
+      "The rim is the first life. It is still a Spanish dollar's edge: titles from the coin Henshall punched, the writing a merchant in another port would once have trusted without asking. The inner legend is the second life. Five shillings is the colonial rating, cut into the ring around the hole the hammer made. The dump is the missing centre, now its own coin, with fifteen pence and the name of the colony on it. Nothing in that reading requires a new mint building. It requires the old coin, a punch, and a date on which the law agreed to call both pieces money.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Shipment, punch, proclamation, then general issue."],
+    list: [
+      "**Late 1812.** Roughly forty thousand Spanish dollars reach Sydney on the government's account, bought in India through the East India Company. The National Museum of Australia dates the Samarang's landing to 26 November.",
+      "**That December.** A committee at Government House counts the boxes, finds nearly thirty-nine thousand nine hundred and nine dollars, and seals them again. The silver is in the colony. It is not yet money in the street.",
+      "**1813.** Macquarie hires William Henshall, a convict transported for forgery, to punch each Spanish dollar in a basement workshop called the Factory. A drop hammer makes the ring — the holey dollar, five shillings — and the centre plug — the dump, fifteen pence.",
+      "**30 September 1813.** The proclamation takes effect. The holey dollar and the dump are legal tender. Melting them or shipping them out is an offence. Government pay and private contracts are meant to run on the new silver unless the parties say otherwise. Counterfeiting and clipping are punishable.",
+      "**January 1814.** Museums of History NSW notes the coins were not ready for general issue until then. Henshall was still punching after the proclamation. 30 September remains the day the law called them money.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1813**, Macquarie's holey dollar and dump became legal tender in New South Wales. The silver had arrived the year before, counted and sealed. The hammer made two coins out of one. The proclamation gave them a status, and it closed the easy way out. General issue waited until the new year. The day the law spoke was **30 September**.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2105337579369627661).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/australia-1813-holey-dollar": australia1813HoleyDollar,
   "blog/greenspan-1966-print-money": greenspan1966PrintMoney,
   "blog/mises-inflation-as-policy": misesInflationAsPolicy,
   "blog/spanish-silver-first-global-money": spanishSilverFirstGlobalMoney,
