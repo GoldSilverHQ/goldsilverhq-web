@@ -1,5 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -307,6 +308,29 @@ describe("blog section", () => {
       assert.ok(f!.alt.length > 20);
       assert.ok(f!.caption.length > 10);
       assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))), f!.src);
+    }
+  });
+
+  it("keeps Spanish silver body figures at native aspect (not 5:2 hero crops)", () => {
+    const body = getBody("blog", "spanish-silver-first-global-money")!;
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    for (const f of figures) {
+      const w = f!.width!;
+      const h = f!.height!;
+      assert.ok(w > 0 && h > 0, `${f!.src} missing width/height`);
+      const ratio = w / h;
+      // Hero titlebilds are ~5:2 (2.5). Coin plates ~2:1; Potosí painting ~4:3.
+      assert.ok(
+        ratio < 2.35,
+        `${f!.src} looks like a 5:2 hero crop (w/h=${ratio.toFixed(3)}); use natural aspect`,
+      );
+      const file = join(publicRoot, f!.src.replace(/^\//, ""));
+      const dims = execFileSync(
+        "ffprobe",
+        ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", file],
+        { encoding: "utf8" },
+      ).trim();
+      assert.equal(dims, `${w},${h}`, `${f!.src} metadata must match file pixels`);
     }
   });
 
