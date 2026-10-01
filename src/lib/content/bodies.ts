@@ -3994,43 +3994,43 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. The argument goes nowhere until the words hold still.",
-      "Sound money is the oldest of those words. It means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. Most of the rest follows from that one test.",
+      "People argue about gold and paper money with a handful of words, and they rarely mean the same thing by them. One person says “backed” and means a note you can swap for metal at a bank counter. Another means gold sitting in a central-bank vault that nobody can ask for. Until the words are pinned down, the argument goes in circles.",
+      "Sound money is the oldest of those words. It describes money the issuer cannot simply create more of. For most of history the limit came from the metal: an ounce of gold takes real work to dig out and refine. Later it came from law, when a paper note could be exchanged for a fixed weight of gold or silver. Ask whether the issuer can add to the supply by decision alone, and most of the other questions sort themselves out.",
     ],
   },
   {
-    heading: "A unit nobody can simply make more of",
+    heading: "Money nobody can simply make more of",
     paragraphs: [
-      "[What is sound money?](/sound-money/what-is-sound-money) starts with a note that clears the till on Monday and asks a harder question of it: can whoever issued it create more by decision alone? Circulation is not the test. A unit can pay for groceries today and still fail, if the issuer may dilute the stock as policy.",
-      "Older English carried the same idea in two senses. A sound coin rang true when it was dropped on a counter; a clipped or plated one did not. A sound standard was healthy, not quietly lightened. Both senses point at the same fear: a unit worth less than its face claims.",
+      "[What is sound money?](/sound-money/what-is-sound-money) begins with an ordinary banknote that pays for groceries on Monday. That proves it works as money today. It says nothing about whether the issuer can print more of it next week. A currency can be accepted everywhere and still lose value if whoever issues it is free to expand the supply.",
+      "The word itself is old. In English a sound coin was one that rang true when dropped on a counter, while a clipped or plated coin gave a dull note. Merchants tested coins that way because forgers, and sometimes rulers, shaved off metal. The worry behind the word has always been a coin worth less than it claims.",
     ],
   },
   {
-    heading: "Dug from the ground, or declared by law",
+    heading: "Mined, or made by law",
     paragraphs: [
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** — money that exists by law and habit, from the Latin *fiat*, “let it be done.” Nobody mines a new ounce of gold with a vote. A treasury can create a new note with a signature.",
-      "Circulation does not decide that category either. A well-run fiat regime can be stable for years; a mismanaged gold regime can still debase the coin. And the same engraved note can change sides overnight. When a convertibility window closes, a claim on metal becomes paper that exists because the law says so. The ink does not change. The stop does.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) comes down to cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin, *fiat*, “let it be done.” A treasury can issue a new note with a signature.",
+      "Neither kind guarantees a good or bad outcome. Some fiat currencies have held steady for years, and Roman emperors had cut the silver in the denarius to a few percent by the 270s AD. The same note can also change category overnight. When the United States stopped exchanging dollars for gold in August 1971, the notes in people’s wallets looked exactly as before. What had changed was that only the law stood behind them.",
     ],
   },
   {
-    heading: "What the unit still buys",
+    heading: "What money buys over the years",
     paragraphs: [
-      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the damage in plain terms: what an hour of work buys across years. Prices are the surface. The object is the unit itself. Hyperinflation, when prices rise by half or more in a single month, is the extreme case, not the everyday meaning.",
-      "Scarcity, war, and a bad harvest move prices under any money. What sound money constrains is one source of a general rise — a stock the issuer can expand whenever a budget runs short.",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the loss in everyday terms: how much bread or rent an hour of work pays for, compared across decades. Rising prices are what people notice. The underlying change is in the currency. Hyperinflation is the extreme case. The economist Phillip Cagan drew the line in 1956 at prices rising by half or more in a single month.",
+      "Prices also rise for reasons that have nothing to do with money, such as war, drought or a failed harvest. Sound money cannot prevent those. What it removes is one particular cause: an issuer adding to the money supply whenever the budget runs short.",
     ],
   },
   {
-    heading: "Backed by what, and for whom",
+    heading: "Gold in the vault, or gold you can claim",
     paragraphs: [
-      "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, take a known weight of metal — from a vault total that no holder can claim. A contract can be tested at a window. A slogan cannot.",
-      "Governments hold gold for many reasons. None of them makes a note convertible unless the law gives the holder the right to present it. Across the twentieth century that right narrowed step by step — suspended by war in **1914**, taken from American citizens in **1933**, withdrawn from foreign governments in **1971** — while the word “gold” stayed in the story.",
+      "No word in these arguments gets stretched further than “backed.” [What “backed” means](/sound-money/backed-money) draws one line. A note is **redeemable** if you can hand it in and receive a known weight of metal. Gold in a vault that no holder has a right to claim is something else. You can test redeemability at a bank window. You cannot test a slogan.",
+      "Governments hold gold for many reasons, and holding it does not make their notes convertible. Only the law does that, by giving the holder the right to ask. In the twentieth century that right was taken away in stages. Most of Europe’s warring governments suspended it in **1914**. Franklin Roosevelt’s Executive Order 6102 told Americans to hand in their gold coin in **1933**. Richard Nixon stopped exchanging dollars for gold with foreign governments in **1971**. Washington kept the gold. The US Treasury still reports about 261 million troy ounces.",
     ],
   },
   {
-    heading: "The dates behind the words",
+    heading: "Where the words were tested",
     paragraphs: [
-      "The words matter because of what happened to them. In **1923** the German paper mark stopped working as money. In **1933** Americans were ordered to hand in their gold coin. In **1971** the last official promise to turn dollars into gold was suspended. Weimar, the gold recall, and Nixon are told in full in [Sound Money History](/history), each with its own laws and its own numbers.",
-      "Every one of those stories turns on the same few questions: what the unit was, who could make more of it, and whether anyone could still take it to a window and walk out with metal.",
+      "These definitions come from real events. In November **1923** one US dollar cost 4.2 trillion German paper marks. In **1933** Americans turned in their gold coin at $20.67 an ounce, and a year later Washington revalued gold at $35. On 15 August **1971** the last official link between the dollar and gold was cut. [Sound Money History](/history) tells each of these stories in full, with the laws and the numbers.",
+      "In each case two questions explain most of what happened. Who was able to create more money? And could a holder still walk into a bank with a note and walk out with metal?",
     ],
   },
 ];
