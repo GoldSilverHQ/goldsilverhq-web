@@ -176,6 +176,22 @@ export function nextUnseenArticle(articles, seen) {
   return unseenEligibleArticles(articles, seen)[0] ?? null;
 }
 
+export const SITE_ORIGIN = "https://www.goldsilverhq.com";
+
+/**
+ * Mirrored seen-list entries that should already be live. Entries mirrored
+ * less than `graceMinutes` ago are left out so a deploy still in flight is
+ * not reported as missing.
+ */
+export function mirroredEntriesDueLive(seen, { now = Date.now(), graceMinutes = 45 } = {}) {
+  const cutoff = now - graceMinutes * 60_000;
+  return (seen.articles ?? []).filter((a) => {
+    if (a.status !== "mirrored" || !a.sitePath) return false;
+    const at = Date.parse(a.mirroredAt ?? "");
+    return Number.isNaN(at) || at <= cutoff;
+  });
+}
+
 export function siteAlreadyHasArticle({ articleId, title, articleUrl }) {
   // Lightweight check against blog.ts source (no TS import in plain node).
   const blogSrc = readFileSync(join(REPO_ROOT, "src/lib/content/blog.ts"), "utf8");
