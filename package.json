@@ -22,7 +22,8 @@
     "x-blog:observe": "node scripts/x-blog-mirror/observe.mjs",
     "x-blog:discover": "node scripts/x-blog-mirror/discover.mjs",
     "x-blog:download-inline": "node scripts/x-blog-mirror/download-inline.mjs",
-    "og:from-hero": "node scripts/og-from-hero.mjs"
+    "og:from-hero": "node scripts/og-from-hero.mjs",
+    "og:portrait": "node --experimental-strip-types scripts/og-portrait-cards.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

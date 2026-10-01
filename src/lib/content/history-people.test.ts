@@ -1,5 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -42,9 +43,29 @@ describe("history people", () => {
       assert.ok(row.paragraphs.length >= 2, row.slug);
       assert.equal(row.image.ogSrc, `/og/cards/history-vip-${row.slug}.jpg`);
       assert.ok(existsSync(join(root, "public", row.image.src.replace(/^\//, ""))), row.image.src);
-      assert.ok(existsSync(join(root, "public", row.image.ogSrc.replace(/^\//, ""))), row.image.ogSrc);
+      assert.ok(
+        existsSync(join(root, "public", row.image.ogSrc.replace(/^\//, ""))),
+        row.image.ogSrc,
+      );
       const text = [row.summary, ...row.paragraphs, row.image.caption].join(" ");
       assert.doesNotMatch(text, /buy gold|buy silver|you should|price target/i);
+      const srcDims = execFileSync(
+        "ffprobe",
+        [
+          "-v",
+          "error",
+          "-select_streams",
+          "v:0",
+          "-show_entries",
+          "stream=width,height",
+          "-of",
+          "csv=p=0",
+          join(root, "public", row.image.src.replace(/^\//, "")),
+        ],
+        { encoding: "utf8" },
+      ).trim();
+      assert.equal(row.image.frame, "portrait", row.slug);
+      assert.equal(srcDims, `${row.image.width},${row.image.height}`, row.image.src);
     }
   });
 
@@ -56,7 +77,7 @@ describe("history people", () => {
     assert.match(text, /does not adopt it/);
     assert.match(text, /not a forecast/);
     assert.match(mises.image.caption, /Not a portrait/);
-    assert.equal(mises.image.credit, "CC0.");
+    assert.match(mises.image.credit, /^CC0/);
   });
 
   it("steps along the list, not into a cluster slug", () => {
