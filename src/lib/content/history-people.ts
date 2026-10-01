@@ -15,6 +15,10 @@ export type HistoryPersonImage = {
   alt: string;
   caption: string;
   credit: string;
+  /** Person pages show the uncropped portrait (native ratio), not the 5:2 band. */
+  frame: "portrait";
+  width: number;
+  height: number;
 };
 
 export type HistoryPerson = {
@@ -31,7 +35,7 @@ export type HistoryPerson = {
 
 function person(
   slug: string,
-  image: Omit<HistoryPersonImage, "path" | "ogSrc" | "src"> & { src?: string },
+  image: Omit<HistoryPersonImage, "path" | "ogSrc" | "src" | "frame"> & { src?: string },
   page: Omit<HistoryPerson, "slug" | "image">,
 ): HistoryPerson {
   const path = `/history/vip/${slug}`;
@@ -45,6 +49,9 @@ function person(
       alt: image.alt,
       caption: image.caption,
       credit: image.credit,
+      frame: "portrait",
+      width: image.width,
+      height: image.height,
     },
   };
 }
@@ -53,15 +60,18 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
   person(
     "john-law",
     {
-      alt: "Portrait of John Law.",
-      caption: "Portrait of John Law.",
+      alt: "Portrait of John Law in a grey wig, holding a sealed letter.",
+      caption: "John Law, after Alexis Simon Belle (19th-century copy, Château de Versailles).",
       credit: "Public domain.",
+      width: 736,
+      height: 920,
     },
     {
       name: "John Law",
       life: "1671–1729",
       role: "Financier",
-      summary: "Regency France fused his note-issuing bank with Mississippi Company shares. Both broke in 1720.",
+      summary:
+        "Regency France fused his note-issuing bank with Mississippi Company shares. Both broke in 1720.",
       paragraphs: [
         "John Law persuaded the Regency of Philippe d’Orléans to charter a bank whose notes and a colonial share company rose together. In 1720 the paper and the shares came down together.",
         "That is one regency’s paper-and-shares collapse — notes and Mississippi equity breaking in the same year.",
@@ -72,9 +82,11 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
   person(
     "adam-smith",
     {
-      alt: "Portrait of Adam Smith.",
-      caption: "Portrait of Adam Smith.",
+      alt: "Profile etching of Adam Smith in a wig and coat.",
+      caption: "Adam Smith, profile etching after the 1787 Tassie medallion.",
       credit: "Public domain.",
+      width: 900,
+      height: 1342,
     },
     {
       name: "Adam Smith",
@@ -92,15 +104,18 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
   person(
     "alexander-hamilton",
     {
-      alt: "Portrait of Alexander Hamilton.",
-      caption: "Portrait of Alexander Hamilton.",
+      alt: "Portrait of Alexander Hamilton in a dark coat and white cravat.",
+      caption: "Alexander Hamilton, by John Trumbull (1806).",
       credit: "Public domain.",
+      width: 900,
+      height: 1066,
     },
     {
       name: "Alexander Hamilton",
       life: "1755–1804",
       role: "Treasury secretary",
-      summary: "His 1791 mint report argued for a bimetallic dollar. The Coinage Act of 1792 wrote that into statute.",
+      summary:
+        "His 1791 mint report argued for a bimetallic dollar. The Coinage Act of 1792 wrote that into statute.",
       paragraphs: [
         "Hamilton’s Report on the Establishment of a Mint (1791) argued for a dollar in both gold and silver, at a ratio close to market practice. Congress wrote that into the Coinage Act of 1792: two metals, one legal unit, a fixed mint ratio.",
         "The law could fix the ratio. The market did not have to keep it. When world prices drifted, the cheaper metal stayed in the till and the other left. This page is that report and that Act, not a brief for either metal.",
@@ -111,9 +126,11 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
   person(
     "andrew-jackson",
     {
-      alt: "Portrait of Andrew Jackson.",
-      caption: "Portrait of Andrew Jackson.",
-      credit: "Public domain.",
+      alt: "Portrait of Andrew Jackson, white-haired, in a dark coat.",
+      caption: "Andrew Jackson, by Thomas Sully (1845).",
+      credit: "CC0 — National Gallery of Art, Washington (1942.8.34).",
+      width: 900,
+      height: 1072,
     },
     {
       name: "Andrew Jackson",
@@ -130,9 +147,11 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
   person(
     "woodrow-wilson",
     {
-      alt: "Portrait of Woodrow Wilson, 1913.",
-      caption: "Woodrow Wilson, 1913.",
-      credit: "Public domain.",
+      alt: "Photograph of Woodrow Wilson in a suit and tie, December 1912.",
+      caption: "Woodrow Wilson as president-elect, 2 December 1912.",
+      credit: "Public domain — Library of Congress (cph.3a04218).",
+      width: 900,
+      height: 1096,
     },
     {
       name: "Woodrow Wilson",
@@ -151,7 +170,9 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
     {
       alt: "Austrian four-ducat gold piece of Franz Joseph I, dated 1888.",
       caption: "Austrian four-ducat gold piece, Franz Joseph I, 1888. Not a portrait of Mises.",
-      credit: "CC0.",
+      credit: "CC0 — Metropolitan Museum of Art Open Access.",
+      width: 900,
+      height: 904,
     },
     {
       name: "Ludwig von Mises",
@@ -179,7 +200,10 @@ export function getHistoryPerson(slug: string): HistoryPerson | undefined {
   return BY_SLUG.get(slug);
 }
 
-export function adjacentHistoryPeople(slug: string): { prev?: HistoryPerson; next?: HistoryPerson } {
+export function adjacentHistoryPeople(slug: string): {
+  prev?: HistoryPerson;
+  next?: HistoryPerson;
+} {
   const i = HISTORY_PEOPLE.findIndex((row) => row.slug === slug);
   if (i < 0) return {};
   return {

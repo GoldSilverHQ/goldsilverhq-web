@@ -3,11 +3,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
-import {
-  ARTICLE_HEROES,
-  articleHeroForPath,
-  articleHeroOgOverridePaths,
-} from "./article-media.ts";
+import { ARTICLE_HEROES, articleHeroForPath, articleHeroOgOverridePaths } from "./article-media.ts";
 import { absoluteOgImageUrl, ogImagePathForRoute } from "../seo/og-cards.ts";
 import { pageShareMeta } from "../seo/share-meta.ts";
 import { historyClusters } from "./map.ts";
@@ -101,10 +97,21 @@ describe("article hero + separate OG", () => {
       assert.equal(probeDims(ogFile), "1200,630", `${ogFile} must be 1200×630`);
 
       const [hw, hh] = probeDims(srcFile).split(",").map(Number);
+      if (hero.frame === "portrait") {
+        assert.equal(`${hero.width},${hero.height}`, `${hw},${hh}`, `${srcFile} declared size`);
+        continue;
+      }
       assert.ok(hw >= 800 && hh >= 320, `${srcFile} dims ${hw}×${hh} too small`);
-      // Landscape / Querformat — not portrait; on-page CSS crops to 5:2.
+      // Landscape / Querformat; on-page CSS crops to 5:2.
       assert.ok(hw / hh >= 1.4, `${srcFile} must be landscape (got ${hw}×${hh})`);
     }
+  });
+
+  it("shows de Hooch uncropped as a portrait hero", () => {
+    const hero = articleHeroForPath("/sound-money/what-is-sound-money");
+    assert.ok(hero);
+    assert.equal(hero.frame, "portrait");
+    assert.ok(hero.width! / hero.height! < 1);
   });
 
   it("allows hero and OG to differ (Potosi: native 5:2; Nixon: separate OG crop)", () => {
@@ -159,6 +166,13 @@ describe("article body figures (layout rollout)", () => {
       "banks-paper/bank-of-england",
       "banks-paper/assignats",
       "blog/mises-inflation-as-policy",
+      "banks-paper/john-law",
+      "banks-paper/bank-of-amsterdam",
+      "20th-century/panic-1907-fed",
+      "silver/potosi",
+      "silver/bimetallism",
+      "america/jackson-and-the-bank",
+      "america/crime-of-1873",
     ]) {
       assert.ok(keys.has(key), `${key} should have laid-out figures`);
     }
