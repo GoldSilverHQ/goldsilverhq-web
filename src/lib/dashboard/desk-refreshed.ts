@@ -13,13 +13,27 @@ export type DeskRefreshed = {
   refreshedAt: string;
   metrics: {
     usM2: Book & { bn: number };
-    cpi: Book & { value: number };
+    cpi: Book & { value: number; yoyPct?: number | null };
     eurM3: Book & { value: number };
     fx: Book & { eurUsd: number; cnyUsd: number; jpyUsd: number };
     lbma: FeedStamp & {
       clearing: { asOf: string; goldClearingDailyMoz: number; source: string };
       vaultLatest: { asOf: string; goldT: number; silverT: number; source: string };
       paired: { asOf: string; goldClearingDailyMoz: number; vaultGoldT: number; vaultSilverT: number; note: string };
+    };
+    usDebt?: Book & { totalUsd: number; publicUsd: number; intragovUsd: number };
+    usInterest?: Book & { ttmGrossUsd: number; ttmPublicUsd: number; fytdGrossUsd: number; fiscalYear: number };
+    usTreasuryGold?: Book & { oz: number; bookUsd: number };
+    usDebtHistory?: FeedStamp & {
+      debtGdpPct: number;
+      debtGdpAsOf: string;
+      yearEndUsd: Record<string, number>;
+      source: string;
+    };
+    imfGovDebt?: FeedStamp & {
+      year: number;
+      byYear: Record<string, { usd: number; countries: number }>;
+      source: string;
     };
   };
   manual: string[];

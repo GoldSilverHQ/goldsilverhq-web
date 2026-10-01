@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DollarPower } from "@/components/DollarPower";
 import { CentralBankGold } from "@/components/desk/CentralBankGold";
+import { UsDebtAndGold, WorldDebt } from "@/components/desk/DebtMoney";
 import {
   CbTimeline,
   HoldersTable,
@@ -23,7 +24,6 @@ import {
   fmtUsdCompact,
   laterOfficial,
   latestUsM2,
-  officialMtmUsd,
   pctLostDisplay,
 } from "@/lib/dashboard/clock-prints";
 import { DESK_REFRESHED, staleNote } from "@/lib/dashboard/desk-refreshed";
@@ -32,7 +32,6 @@ import { getSpotLite, parseSpotAsOf } from "@/lib/dashboard/spot";
 import {
   CB_YTD_2026,
   FX_START,
-  IMF_GOV_DEBT,
   LBMA_PAIR,
   SILVER_2025,
   SILVER_ETP_2025,
@@ -40,7 +39,6 @@ import {
   WGC_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
-  coverPct,
   investmentGoldGramsPerPerson,
   lbmaGoldClearingRatio,
   lostVsStart,
@@ -176,10 +174,6 @@ export function FullDesk() {
   const m2Compiled = latestUsM2();
   const usM2Bn = printers.usM2.value / 1e9;
   const usM2AsOf = printers.usM2.asOf;
-  const officialMtm = spot ? officialMtmUsd(official.world.tonnes, spot.gold) : null;
-  const allGoldMtm = spot ? officialMtmUsd(WGC_STOCK.aboveGroundT, spot.gold) : null;
-  const officialCover = spot ? coverPct(official.world.tonnes, spot.gold) : null;
-  const allCover = spot ? coverPct(WGC_STOCK.aboveGroundT, spot.gold) : null;
   const goldEur = spot ? spot.gold / printers.fx.eurUsd : null;
   const goldJpy = spot ? spot.gold * printers.fx.jpyUsd : null;
   const eurLoss = goldEur != null ? lostVsStart(goldEur, FX_START.eur.localGold) : null;
@@ -439,10 +433,12 @@ export function FullDesk() {
 
         {tab === "debt" ? (
           <>
-            <DollarPower />
+            <UsDebtAndGold spot={spot?.gold} spotAsOf={spotAsOf} />
+            <WorldDebt spot={spot?.gold} spotAsOf={spotAsOf} officialTonnes={official.world.tonnes} />
             <DeskBoard
-              title="Money supply"
+              title="Money supply and inflation"
               kicker={printers.source === "live" ? "latest month" : `stored ${usM2AsOf}`}
+              cols={3}
             >
               <DeskMetricTile
                 kicker="USD"
@@ -467,31 +463,26 @@ export function FullDesk() {
                 live={fmtCompact(printers.eurM3.value, "€")}
                 note={
                   printers.source === "live"
-                    ? "ECB money stock, latest month. China and Japan stay on their July 2026 prints."
+                    ? "ECB money stock, latest month."
                     : (staleNote(DESK_REFRESHED.metrics.eurM3) ??
                       `Stored ECB print (${printers.eurM3.asOf}). The live feed missed; this is the saved figure.`)
                 }
               />
               <DeskMetricTile
-                kicker="CNY"
-                label="China M2"
-                unit="CNY"
+                kicker="CPI"
+                label="US consumer prices, year on year"
+                unit="%"
                 cadence="monthly"
-                asOf={formatAsOf(printers.cnyM2.asOf)}
-                live={fmtCompact(printers.cnyM2.value, "CN¥")}
-                note="People’s Bank of China, July 2026. Shown on its own, not folded into the US figure."
-              />
-              <DeskMetricTile
-                kicker="JPY"
-                label="Japan M2"
-                unit="JPY"
-                cadence="monthly"
-                asOf={formatAsOf(printers.jpyM2.asOf)}
-                live={fmtCompact(printers.jpyM2.value, "¥")}
-                note="Bank of Japan, July 2026."
+                asOf={formatAsOf(DESK_REFRESHED.metrics.cpi.asOf)}
+                live={DESK_REFRESHED.metrics.cpi.yoyPct != null ? DESK_REFRESHED.metrics.cpi.yoyPct.toFixed(1) : undefined}
+                note={
+                  staleNote(DESK_REFRESHED.metrics.cpi) ??
+                  "FRED CPIAUCSL (BLS), seasonally adjusted, latest month vs the same month a year earlier."
+                }
               />
             </DeskBoard>
-            <DeskBoard title="Currencies vs gold" kicker="share of purchasing power lost">
+            <DollarPower />
+            <DeskBoard title="Currencies vs gold" kicker="share of purchasing power lost" cols={3}>
               <DeskMetricTile
                 kicker="USD"
                 label="Dollar vs gold since 1971"
@@ -518,56 +509,6 @@ export function FullDesk() {
                 asOf={spotAsOf}
                 live={jpyLoss != null ? pctLostDisplay(jpyLoss) : undefined}
                 note="¥360 × $40.62 at the gold window. Bretton Woods closed 15 Aug 1971."
-              />
-            </DeskBoard>
-            <DeskBoard title="Sovereign debt vs gold" kicker="IMF debt · WGC / official gold">
-              <DeskMetricTile
-                kicker="World"
-                label="Global sovereign debt"
-                unit="USD"
-                cadence="yearly"
-                asOf={IMF_GOV_DEBT.asOf}
-                wide
-                live={fmtUsdCompact(IMF_GOV_DEBT.usd)}
-                note="IMF WEO gross public debt, 2025. Not IIF’s larger ‘all debt’ stock."
-              />
-              <DeskMetricTile
-                kicker="All gold"
-                label="Above-ground gold, mark-to-market"
-                unit="USD"
-                cadence="live"
-                asOf={spotAsOf}
-                live={allGoldMtm != null ? fmtUsdCompact(allGoldMtm) : undefined}
-                note={`WGC ${formatAsOf(WGC_STOCK.asOf)} stock × spot. Jewelry plus vaults. Not all of it can be sold at the posted price.`}
-              />
-              <DeskMetricTile
-                kicker="Official"
-                label="Official gold, mark-to-market"
-                unit="USD"
-                cadence="live"
-                asOf={spotAsOf}
-                live={officialMtm != null ? fmtUsdCompact(officialMtm) : undefined}
-                note="World official tonnes times the gold spot. A mark-to-market, not a bid for the whole stock."
-              />
-              <DeskMetricTile
-                kicker="Cover"
-                label="All gold vs world gov debt"
-                unit="%"
-                cadence="live"
-                asOf={spotAsOf}
-                wide
-                live={allCover != null ? (allCover * 100).toFixed(0) : undefined}
-                note="Above-ground gold, marked to spot, as a share of IMF gross public debt."
-              />
-              <DeskMetricTile
-                kicker="Cover"
-                label="Official gold vs world gov debt"
-                unit="%"
-                cadence="live"
-                asOf={spotAsOf}
-                wide
-                live={officialCover != null ? (officialCover * 100).toFixed(1) : undefined}
-                note="Year-end official book, marked to spot, as a share of the same IMF debt. Not all above-ground gold."
               />
             </DeskBoard>
             <MoneyPath />
