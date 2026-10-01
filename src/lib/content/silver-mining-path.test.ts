@@ -27,10 +27,16 @@ describe("silver-mining intent path (existing URLs only)", () => {
     assert.match(hub, /Mine supply is ounces leaving the ground/);
     assert.match(hub, /No page here names a miner/);
     assert.match(hub, /\[gold–silver ratio\]\(\/markets\/gold-silver-ratio\)/);
-    assert.match(hub, /\[Physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/);
+    assert.match(
+      hub,
+      /\[Physical silver demand by country\]\(\/markets\/physical-silver-demand-by-country\)/,
+    );
     assert.match(hub, /\[Stocks & flows\]\(\/desk\)/);
     assert.match(hub, /\[hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
-    assert.match(hub, /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/);
+    assert.match(
+      hub,
+      /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/,
+    );
     assert.doesNotMatch(hub, /buy miner|best silver stock|price target for/i);
 
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/gold-silver-ratio"));
@@ -42,7 +48,10 @@ describe("silver-mining intent path (existing URLs only)", () => {
     const text = bodyText(getBody("markets", "gold-silver-ratio")!);
     assert.match(text, /not a list of mining companies/i);
     assert.match(text, /miner pick|Nothing here is a miner pick/i);
-    assert.match(text, /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/);
+    assert.match(
+      text,
+      /\[monetary history and industry\]\(\/history\/silver\/monetary-and-industry\)/,
+    );
     assert.match(text, /\[hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /Stocks & flows/);
     assert.doesNotMatch(text, /buy miners|NYSE|TSX|ticker symbol/i);
@@ -82,10 +91,11 @@ describe("silver-mining intent path (existing URLs only)", () => {
     assert.ok(page.related.some((r) => r.href === "/markets/gold-silver-ratio"));
   });
 
-  it("adds a home mine-pace bridge and desk stocks copy", () => {
+  it("keeps the home desk button and desk stocks copy", () => {
     const home = readFileSync(join(root, "components/HomeDashboard.tsx"), "utf8");
-    assert.match(home, /Mine supply is ounces leaving the ground/);
-    assert.match(home, /markets\/gold-silver-ratio/);
+    assert.doesNotMatch(home, /Mine supply is ounces leaving the ground/);
+    assert.doesNotMatch(home, /Open Live/);
+    assert.match(home, /More Golden Numbers/);
     assert.match(home, /to="\/desk"/);
     assert.doesNotMatch(home, /not a stock tip|Start with the/i);
 
@@ -97,4 +107,3 @@ describe("silver-mining intent path (existing URLs only)", () => {
     assert.doesNotMatch(desk, /not equity tips\. Read the/i);
   });
 });
-
