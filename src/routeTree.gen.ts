@@ -19,6 +19,7 @@ import { Route as MapsRouteImport } from './routes/maps'
 import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as SilverStocksRouteImport } from './routes/silver-stocks'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
@@ -84,6 +85,11 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SilverStocksRoute = SilverStocksRouteImport.update({
+  id: '/silver-stocks',
+  path: '/silver-stocks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -173,6 +179,7 @@ export interface FileRoutesByFullPath {
   '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -200,6 +207,7 @@ export interface FileRoutesByTo {
   '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -228,6 +236,7 @@ export interface FileRoutesById {
   '/partners': typeof PartnersRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/shop': typeof ShopRoute
+  '/silver-stocks': typeof SilverStocksRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/gold-silver/$slug': typeof GoldSilverSlugRoute
@@ -257,6 +266,7 @@ export interface FileRouteTypes {
     | '/partners'
     | '/robots.txt'
     | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -284,6 +294,7 @@ export interface FileRouteTypes {
     | '/partners'
     | '/robots.txt'
     | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -311,6 +322,7 @@ export interface FileRouteTypes {
     | '/partners'
     | '/robots.txt'
     | '/shop'
+    | '/silver-stocks'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/gold-silver/$slug'
@@ -339,6 +351,7 @@ export interface RootRouteChildren {
   PartnersRoute: typeof PartnersRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   ShopRoute: typeof ShopRoute
+  SilverStocksRoute: typeof SilverStocksRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   GoldSilverSlugRoute: typeof GoldSilverSlugRoute
@@ -426,6 +439,13 @@ declare module '@tanstack/react-router' {
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/silver-stocks': {
+      id: '/silver-stocks'
+      path: '/silver-stocks'
+      fullPath: '/silver-stocks'
+      preLoaderRoute: typeof SilverStocksRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -547,6 +567,7 @@ const rootRouteChildren: RootRouteChildren = {
   PartnersRoute: PartnersRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   ShopRoute: ShopRoute,
+  SilverStocksRoute: SilverStocksRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   GoldSilverSlugRoute: GoldSilverSlugRoute,

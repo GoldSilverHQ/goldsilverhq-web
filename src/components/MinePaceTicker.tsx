@@ -57,12 +57,16 @@ function PaceTile({
     <article className="relative flex min-h-[9.25rem] flex-col rounded-lg bg-surface px-4 pt-4 pb-5 pr-10 shadow-[var(--shadow-border)]">
       <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
       <InfoHint label={`${kicker} details`}>{info}</InfoHint>
-      <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
+      <p
+        className={`clock-value mt-3 flex flex-wrap items-baseline gap-x-2 font-sans tabular-nums tracking-tight ${color}`}
+      >
         {value}
-        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">{unit}</span>
+        <span className="font-sans text-xs tracking-widest text-muted">{unit}</span>
       </p>
       {estimate ? (
-        <p className="mt-2 text-xs leading-snug tabular-nums tracking-normal text-faint">{estimate}</p>
+        <p className="mt-2 text-xs leading-snug tabular-nums tracking-normal text-faint">
+          {estimate}
+        </p>
       ) : null}
     </article>
   );
