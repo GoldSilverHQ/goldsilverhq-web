@@ -357,6 +357,7 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
         "/history/silver/bimetallism",
+        "/blog/gold-silver-ratio-what-it-counts",
         "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
@@ -421,6 +422,7 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
         "/history/silver/bimetallism",
+        "/blog/gold-silver-ratio-what-it-counts",
         "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
@@ -494,6 +496,7 @@ describe("markets page thicken (no new URLs)", () => {
         "/markets/physical-silver-demand-by-country",
         "/history/silver/monetary-and-industry",
         "/history/silver/bimetallism",
+        "/blog/gold-silver-ratio-what-it-counts",
         "/history/silver/piece-of-eight",
         "/sound-money/hard-money-vs-fiat",
       ],
@@ -562,7 +565,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(table, /Czech Republic/);
     assert.match(table, /\*\*14\*\*/);
     assert.doesNotMatch(table, /Tether/i);
-    assert.match(page, /Not a central bank/);
+    assert.match(page, /Tether’s gold/);
     assert.match(page, /27\.1 tonnes/);
     assert.match(page, /22\.01 tonnes/);
     assert.doesNotMatch(page, /~40|40 t est|who to follow|forecast|Kauf|buy gold/i);
@@ -607,7 +610,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /SAFE/);
     assert.doesNotMatch(text, /private reader should follow|Read the table as/i);
     assert.doesNotMatch(text, /buy gold|Kauf|forecast|who to follow/i);
-    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("china")));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /\/markets\/china|china-gold/.test(path)));
   });
 
   it("adds dated gold-as-share prints without inventing the X-hook percentages", () => {
@@ -638,12 +641,13 @@ describe("markets page thicken (no new URLs)", () => {
 
     const page = getMarket("central-bank-gold-reserves");
     assert.ok(page);
-    assert.equal(page.title, "How central banks report gold in FX reserves");
+    assert.equal(page.title, "Central-bank gold reserves");
     assert.deepEqual(
       page.related.map((r) => r.href),
       [
         "/markets",
         "/markets/official-gold-book-value",
+        "/blog/interest-costs-vs-us-gold",
         "/sound-money/backed-money",
         "/history/20th-century/bretton-woods-nixon-1971",
       ],
@@ -735,17 +739,18 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /\*\*26%\*\*/);
     assert.match(page, /2,387/);
     assert.match(page, /648 tonnes/);
-    assert.match(page, /Not a central bank/);
+    assert.match(page, /Tether’s gold/);
     assert.match(page, /27\.1 tonnes/);
 
     const pageMeta = getMarket("central-bank-gold-reserves");
     assert.ok(pageMeta);
-    assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
+    assert.equal(pageMeta.title, "Central-bank gold reserves");
     assert.deepEqual(
       pageMeta.related.map((r) => r.href),
       [
         "/markets",
         "/markets/official-gold-book-value",
+        "/blog/interest-costs-vs-us-gold",
         "/sound-money/backed-money",
         "/history/20th-century/bretton-woods-nixon-1971",
       ],
@@ -818,18 +823,19 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /\*\*14\.30%\*\*/);
     assert.match(page, /2,387/);
     assert.match(page, /648 tonnes/);
-    assert.match(page, /Not a central bank/);
+    assert.match(page, /Tether’s gold/);
     assert.match(page, /27\.1 tonnes/);
     assert.match(page, /22\.01 tonnes/);
 
     const pageMeta = getMarket("central-bank-gold-reserves");
     assert.ok(pageMeta);
-    assert.equal(pageMeta.title, "How central banks report gold in FX reserves");
+    assert.equal(pageMeta.title, "Central-bank gold reserves");
     assert.deepEqual(
       pageMeta.related.map((r) => r.href),
       [
         "/markets",
         "/markets/official-gold-book-value",
+        "/blog/interest-costs-vs-us-gold",
         "/sound-money/backed-money",
         "/history/20th-century/bretton-woods-nixon-1971",
       ],
@@ -916,7 +922,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /\*\*14\.30%\*\*/);
     assert.match(page, /2,387/);
     assert.match(page, /648 tonnes/);
-    assert.match(page, /Not a central bank/);
+    assert.match(page, /Tether’s gold/);
     assert.match(page, /printed \*\*Gold: 0\*\*/);
     assert.match(page, /Poland: from 103 tonnes to 648/);
     assert.match(page, /Brown’s Bottom.*1999–2002|UK gold sales of 1999–2002/);
@@ -935,6 +941,7 @@ describe("markets page thicken (no new URLs)", () => {
       [
         "/markets",
         "/markets/official-gold-book-value",
+        "/blog/interest-costs-vs-us-gold",
         "/sound-money/backed-money",
         "/history/20th-century/bretton-woods-nixon-1971",
       ],
@@ -1015,7 +1022,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(page, /\*\*14\.30%\*\*/);
     assert.match(page, /2,387/);
     assert.match(page, /648 tonnes/);
-    assert.match(page, /Not a central bank/);
+    assert.match(page, /Tether’s gold/);
     assert.match(page, /\*\*1999–2002\*\* UK auction programme/);
     assert.match(page, /Canada: Gold: 0 on the official book/);
 
@@ -1034,6 +1041,7 @@ describe("markets page thicken (no new URLs)", () => {
       [
         "/markets",
         "/markets/official-gold-book-value",
+        "/blog/interest-costs-vs-us-gold",
         "/sound-money/backed-money",
         "/history/20th-century/bretton-woods-nixon-1971",
       ],

@@ -43,7 +43,7 @@ export type Cluster = {
 export const historyHub = {
   titleTag: "Sound Money History: From Coinage to 1971",
   related: [
-    { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+    { title: "20th-century money", href: "/history/20th-century" },
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
     { title: "Gold & silver markets — current figures", href: "/markets" },
   ],
@@ -51,34 +51,34 @@ export const historyHub = {
 
 /** Pillar hub /sound-money — search title and related; body lives in soundMoneyHubBody. */
 export const soundMoneyHub = {
-  titleTag: "Sound Money: Definitions, Not History",
+  titleTag: "Sound Money: Hard, Fiat, Backed",
   related: [
     { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
     { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
     { title: "What “backed” means", href: "/sound-money/backed-money" },
-    { title: "Sound Money History — what happened", href: "/history" },
+    { title: "Sound Money History", href: "/history" },
   ],
 };
 
 /** Pillar hub /gold-silver — search title and related; body lives in practiceHubBody. */
 export const practiceHub = {
-  titleTag: "Gold & Silver in Practice: Handling, Not a Shop",
+  titleTag: "Gold & Silver in Practice: Form, Premium, Custody",
   related: [
-    { title: "Sound Money — vocabulary and disclaimer", href: "/sound-money" },
+    { title: "Sound Money", href: "/sound-money" },
     { title: "Why markets chose gold and silver", href: "/history/ancient/why-markets-chose-gold-silver" },
   ],
 };
 
 /** Pillar hub /markets — search title and related; body lives in marketsHubBody. */
 export const marketsHub = {
-  titleTag: "Gold & Silver Markets: Facts, Not Tips",
+  titleTag: "Gold & Silver Markets: Book Value, Reserves, Ratio",
   related: [
     { title: "Official gold book value", href: "/markets/official-gold-book-value" },
     { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
     { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
     { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
-    { title: "Sound Money History — what happened", href: "/history" },
+    { title: "Sound Money History", href: "/history" },
   ],
 };
 
@@ -99,7 +99,7 @@ export const pillars: Pillar[] = [
     kicker: "The idea",
     question: "What does sound money mean?",
     summary:
-      "Definitions only: hard money versus fiat, purchasing power, and what “backed” does and does not mean. Dated events live under History.",
+      "Hard money versus fiat, purchasing power, and what “backed” does and does not mean.",
   },
   {
     id: "history",
@@ -108,7 +108,7 @@ export const pillars: Pillar[] = [
     kicker: "What happened",
     question: "What happened?",
     summary:
-      "Five chapters from ancient coinage to 1971. Weimar, the Fed, and the Nixon shock live here — not under the definitions.",
+      "From ancient coinage to 1971: Weimar, the Fed, and the Nixon shock among the dated cases.",
   },
   {
     id: "gold-silver",
@@ -117,7 +117,7 @@ export const pillars: Pillar[] = [
     kicker: "How to handle metal",
     question: "How do I handle metal?",
     summary:
-      "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist. Neutral and educational.",
+      "Bars versus coins, premiums, storage, fakes at a high level, and a first-ounces checklist.",
   },
   {
     id: "markets",
@@ -126,7 +126,7 @@ export const pillars: Pillar[] = [
     kicker: "Current figures",
     question: "What do the current figures say?",
     summary:
-      "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country — dated market facts. Not sound-money history, and not how to buy a bar.",
+      "Official book value, central-bank gold, the gold–silver ratio, and physical silver demand by country.",
   },
 ];
 
@@ -134,12 +134,11 @@ export const ideaPages: Episode[] = [
   {
     slug: "what-is-sound-money",
     title: "What is sound money?",
-    summary: "A working definition: money that holds its function as a store of value without depending on a printing press.",
+    summary: "Money its issuer cannot create more of at will. For centuries gold did that job, because mining it is slow and costly.",
     status: "ready",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. Historically that constraint came from the cost of mining gold and silver. The point of the idea is not nostalgia. It is about whether the unit of account stays honest over long periods.",
-      "This section stays on meaning. Weimar, Nixon, and the Fed belong in history. Mixing definitions with dated events makes both harder to follow.",
-      "From here, read hard money versus fiat, inflation, and what “backed” actually means.",
+      "Hard money versus fiat, inflation and purchasing power, and what “backed” actually means follow from that one test.",
     ],
     related: [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
@@ -160,7 +159,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "hard-money-vs-fiat",
     title: "Hard money vs fiat",
-    summary: "Money costly to produce versus money created by law and habit. Circulation does not decide the category.",
+    summary: "Gold takes work to mine. Fiat money exists because the law says so. Both can circulate, and both can be mismanaged.",
     status: "ready",
     paragraphs: [
       "Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways.",
@@ -170,6 +169,7 @@ export const ideaPages: Episode[] = [
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
       { title: "Gold–silver ratio (mining vs market)", href: "/markets/gold-silver-ratio" },
+      { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
       { title: "Sound Money History", href: "/history" },
     ],
     seo: {
@@ -184,7 +184,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "inflation-purchasing-power",
     title: "Inflation and purchasing power",
-    summary: "A decline in what the unit buys. Prices are the surface. Hyperinflation is a case, not the definition.",
+    summary: "Inflation is a fall in what money buys. Rising prices are the symptom. Hyperinflation, at 50% or more a month, is the extreme.",
     status: "ready",
     paragraphs: [
       "Inflation is a decline in purchasing power of the unit. Prices are the visible surface. The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure.",
@@ -193,6 +193,9 @@ export const ideaPages: Episode[] = [
       { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
+      { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
+      { title: "Sweden leaves gold, 1931", href: "/blog/sweden-1931-left-gold" },
+      { title: "Mises and inflation as policy", href: "/blog/mises-inflation-as-policy" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Assignats", href: "/history/banks-paper/assignats" },
     ],
@@ -208,7 +211,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "backed-money",
     title: "What “backed money” means (and what it doesn’t)",
-    summary: "“Backed” means a redeemable contract — present the note, take metal — not gold in a vault with no public claim.",
+    summary: "A backed note is one you can exchange for a set weight of metal. Gold in a vault that nobody can claim does not count.",
     status: "ready",
     paragraphs: [
       "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing. A currency said to be “supported by” gold sitting in a vault with no public claim on it is another.",
@@ -231,10 +234,10 @@ export const ideaPages: Episode[] = [
   {
     slug: "information-not-advice",
     title: "Information vs investment advice",
-    summary: "A short media line: this site informs; it does not recommend buying or selling.",
+    summary: "GoldSilverHQ publishes history and explanation. Nothing here recommends buying or selling anything.",
     status: "ready",
     paragraphs: [
-      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation. The copy is written to stay clear of investment advice under German/EU rules (BaFin).",
+      "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation.",
       "Markets move. Laws differ by country. If you act, you do so on your own judgment and, where needed, with a licensed adviser in your jurisdiction.",
     ],
     related: [{ title: "Gold & silver in practice", href: "/gold-silver" }],
@@ -344,11 +347,12 @@ export const historyClusters: Cluster[] = [
       },
       {
         slug: "solidus-continuity",
-        title: "After Rome: the solidus and early continuity",
-        summary: "Constantine’s gold unit kept its weight into Byzantium — continuity, not paper and not 1971.",
+        title: "Constantine’s solidus: gold that kept its weight",
+        summary:
+          "After silver had been washed thin, Constantine’s mint settled on a gold coin of fixed weight. It outlasted the western empire as Byzantium’s nomisma.",
         status: "ready",
         paragraphs: [
-          "The solidus carried gold coinage through late antiquity. Continuity of weight and fineness is the story, not a romance of empire.",
+          "In the early fourth century Constantine settled on a gold coin of tightly held weight and fineness. That solidus outlasted the western empire and lived on in Constantinople as the nomisma.",
         ],
         related: [
           { title: "Rome: denarius and aureus", href: "/history/ancient/rome-denarius-aureus" },
@@ -361,7 +365,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
-          titleTag: "The Solidus: Gold Weight Continuity after Rome",
+          titleTag: "Constantine’s Solidus: Gold that Kept Its Weight",
         },
       },
     ],
@@ -387,7 +391,7 @@ export const historyClusters: Cluster[] = [
           "Before public banks, paper money is a warehouse or goldsmith receipt — a claim check on deposited metal. Banking begins when that ticket pays.",
         status: "ready",
         paragraphs: [
-          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault. Later crises in this chapter depend on that handoff; they are not this article, and they are not one another.",
+          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -433,7 +437,7 @@ export const historyClusters: Cluster[] = [
           "The 1694 charter is war finance with a note issue attached — not a city giro table. In 1797 the Bank stopped paying gold for notes (Restriction); gold payout returned in the 1820s (resumption).",
         status: "ready",
         paragraphs: [
-          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam. Its notes became the ordinary paper of London. When gold payout stopped in 1797 (Restriction) and returned in the 1820s (resumption), that was England’s own suspend–resume cycle — not 1720 and not Weimar.",
+          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam’s civic giro. Its notes became the ordinary paper of London. In 1797 the Bank stopped paying gold for those notes; full gold payout returned in the 1820s. England suspended and resumed the same window.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -456,7 +460,7 @@ export const historyClusters: Cluster[] = [
           "How John Law’s bank and Mississippi Company turned paper credit into a 1720 collapse — an early case of notes without a trusted stop.",
         status: "ready",
         paragraphs: [
-          "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt. It is not the same episode as France’s later assignats, and it is not “France printed Weimar.”",
+          "John Law’s System in France fused a note-issuing bank with a rising colonial trading company. In 1719–1720 paper notes and Mississippi Company shares inflated together. The bust of 1720 was a paper-and-shares collapse under a regency seeking relief from war debt.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -473,12 +477,12 @@ export const historyClusters: Cluster[] = [
       },
       {
         slug: "assignats",
-        title: "Assignats and early paper collapses",
+        title: "Assignats",
         summary:
-          "Revolutionary France issued land-tied paper — the assignats — then over-issued it until the unit died. Not John Law’s 1720, not England’s Restriction, not Weimar.",
+          "Revolutionary France paid with assignats — paper tied to seized church and émigré land — then issued more than land sales could retire. By 1795–96 the unit was dead.",
         status: "ready",
         paragraphs: [
-          "Assignats began as paper tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By 1795–96 the paper was not a unit anyone would hold. That is a revolutionary fiscal instrument with a land story. It is not John Law’s 1720 bank-and-company System, not England’s Restriction and resumption, and not Germany’s 1923 mark.",
+          "Assignats began as paper tied to confiscated church and émigré lands, the biens nationaux. The land was real. Quantity rose faster than retirement. By 1795–96 shops still held the slips, but coin had taken the unit’s job. France returned toward metal by abandoning the paper, not by redeeming it later at an old metal definition.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -507,7 +511,7 @@ export const historyClusters: Cluster[] = [
     related: [
       { title: "Sound Money History", href: "/history" },
       { title: "Panic of 1907 and the Fed", href: "/history/20th-century/panic-1907-fed" },
-      { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+      { title: "20th-century money", href: "/history/20th-century" },
       { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
     ],
     seo: {
@@ -624,7 +628,7 @@ export const historyClusters: Cluster[] = [
   },
   {
     slug: "20th-century",
-    title: "20th century: Fed, gold, and 1971",
+    title: "20th-century money",
     summary:
       "From the Panic of 1907 and the Fed, through Weimar hyperinflation, to the Nixon shock that closed the gold window.",
     sections: twentiethCenturyHubBody,
@@ -650,7 +654,8 @@ export const historyClusters: Cluster[] = [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
           { title: "Road back toward gold", href: "/history/america/road-back-gold" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
+          { title: "20th-century money", href: "/history/20th-century" },
         ],
         seo: {
           primary: "panic of 1907",
@@ -697,14 +702,15 @@ export const historyClusters: Cluster[] = [
         slug: "weimar-1923",
         title: "Weimar hyperinflation (1923)",
         summary:
-          "What caused German hyperinflation in 1923: war finance, the Ruhr occupation, the collapse of the paper mark, and how the Rentenmark stopped it.",
+          "In 1923 the German paper mark died as money — prices rose by the hour — until the Rentenmark of mid-November restored a usable unit.",
         status: "ready",
         paragraphs: [
-          "In 1923 the German mark lost all practical value. Prices rose by the hour. People spent cash the day they received it. The cartoon of “printing money” is not wrong, but it is incomplete. The sequence starts with war finance.",
+          "In autumn 1923 a German mark bought less by the hour than it had that morning. War finance, reparations, a Reichsbank that created marks against Treasury bills, and the Ruhr occupation drove the spiral. Mid-November the Rentenmark stopped it: one trillion paper marks equaled one Rentenmark.",
         ],
         related: [
           { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Assignats", href: "/history/banks-paper/assignats" },
           { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
@@ -720,20 +726,20 @@ export const historyClusters: Cluster[] = [
           demand: "high",
           difficulty: "high",
           intent: "history",
-          titleTag: "Weimar Hyperinflation 1923: Causes, Timeline, Rentenmark",
+          titleTag: "Weimar Hyperinflation 1923 and the Rentenmark",
         },
       },
       {
         slug: "1933-gold-recall",
         title: "1933 U.S. gold recall (Executive Order 6102)",
         summary:
-          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Not the 1914 convertibility break, and not the 1971 gold-window close.",
+          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Official gold became a Treasury asset.",
         status: "ready",
         paragraphs: [
           "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of 1934 then vested title to monetary gold in the United States and reset the official price from $20.67 to $35 an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
         ],
         related: [
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
         ],
@@ -755,15 +761,23 @@ export const historyClusters: Cluster[] = [
         slug: "bretton-woods-nixon-1971",
         title: "Nixon shock 1971: the gold window closes",
         summary:
-          "August 15, 1971: the United States suspended dollar–gold convertibility. How Bretton Woods worked, and why it ended.",
+          "On 15 August 1971 — the Nixon shock — the United States suspended dollar-to-gold convertibility for foreign official holders and closed the Bretton Woods gold window.",
         status: "ready",
         paragraphs: [
-          "On 15 August 1971 the United States suspended the dollar’s convertibility into gold for foreign official holders. That act did not invent fiat money overnight. It ended the last official gold link in the post-war dollar system. Private Americans had already been barred from monetary gold under the 1933 recall. Bretton Woods did not fail in a single night. Pressure had built for years.",
+          "On Sunday 15 August 1971 President Nixon suspended the dollar’s convertibility into gold for foreign treasuries and central banks. That closed the last official gold window in the postwar system. Official dollar claims had outgrown the U.S. gold stock at $35 an ounce for years; the Camp David weekend made the break public.",
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
-          { title: "20th century: Fed, gold, and 1971", href: "/history/20th-century" },
+          { title: "20th-century money", href: "/history/20th-century" },
           { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+          {
+            title: "September 1971 and the official gold price",
+            href: "/blog/september-1971-official-gold-price",
+          },
+          {
+            title: "Greenspan’s 1966 gold essay",
+            href: "/blog/greenspan-1966-print-money",
+          },
           { title: "What “backed” means", href: "/sound-money/backed-money" },
           { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
         ],
@@ -809,6 +823,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+          { title: "Spanish silver as global money", href: "/blog/spanish-silver-first-global-money" },
           { title: "Silver in history", href: "/history/silver" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Greece: silver and trade", href: "/history/ancient/greece-silver-trade" },
@@ -832,8 +847,11 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
+          { title: "Spanish silver as global money", href: "/blog/spanish-silver-first-global-money" },
+          { title: "Australia’s 1813 holey dollar", href: "/blog/australia-1813-holey-dollar" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
+          { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver in history", href: "/history/silver" },
         ],
@@ -858,6 +876,7 @@ export const historyClusters: Cluster[] = [
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
+          { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
           { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
         ],
@@ -881,6 +900,10 @@ export const historyClusters: Cluster[] = [
         related: [
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
           { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
+          {
+            title: "When exchanges change the silver rules",
+            href: "/blog/when-exchanges-change-the-silver-rules",
+          },
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
           { title: "Silver in history", href: "/history/silver" },
@@ -904,6 +927,7 @@ export const historyClusters: Cluster[] = [
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
+          { title: "China’s 1934 silver appeal", href: "/blog/china-1934-silver-appeal" },
           { title: "Gold bars vs coins", href: "/gold-silver/bars-vs-coins" },
           { title: "Silver hub", href: "/history/silver" },
         ],
@@ -924,10 +948,10 @@ export const practicePages: Episode[] = [
   {
     slug: "bars-vs-coins",
     title: "Gold bars vs coins",
-    summary: "Bars usually cost less per ounce. Coins cost more and are easier to recognise. Comparison only — not a recommendation.",
+    summary: "Bars usually cost less per ounce. Coins cost more and are easier to recognise.",
     status: "ready",
     paragraphs: [
-      "Bars minimise fabrication cost per ounce. Coins maximise recognisability. The tone stays practical and neutral.",
+      "Bars minimise fabrication cost per ounce. Coins maximise recognisability.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -945,10 +969,10 @@ export const practicePages: Episode[] = [
     slug: "premium-over-spot",
     title: "Premium over spot",
     summary:
-      "Spot is a reference price. The premium is the price of form, brand, mint, and liquidity — not a tip and not a forecast of what is cheap.",
+      "Spot is a reference price. The premium is the price of form, brand, mint, and liquidity.",
     status: "ready",
     paragraphs: [
-      "Premium over spot is the markup of an object above a screen or LBMA reference. It prices form, brand, mint, and liquidity. It is not a shopping tip and not a forecast of which premiums are cheap.",
+      "Premium over spot is the markup of an object above a screen or LBMA reference. It prices form, brand, mint, and liquidity.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -966,10 +990,10 @@ export const practicePages: Episode[] = [
     slug: "storage",
     title: "Storing gold and silver",
     summary:
-      "Storage is a menu of access, cost, and counterparty — home, allocated vault, or unallocated claim. A description, not a recommendation.",
+      "Home, an allocated vault, or an unallocated claim — different facts about access, cost, and counterparty.",
     status: "ready",
     paragraphs: [
-      "Storage is access, cost, and counterparty. Home, allocated, and unallocated are different arrangements. The menu is described, not recommended.",
+      "Storage is access, cost, and counterparty. Home, allocated, and unallocated are different arrangements.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -1008,10 +1032,10 @@ export const practicePages: Episode[] = [
     slug: "beginner-checklist",
     title: "Beginner checklist: first ounces",
     summary:
-      "First ounces are a process of four decisions — form, counterparty, storage location, documentation — a menu of mechanics, not a purchase recommendation.",
+      "First ounces are four decisions: form, counterparty, storage location, and documentation.",
     status: "ready",
     paragraphs: [
-      "First ounces are four decisions: form, counterparty, storage location, and documentation. A process, not a shop list, and not a recommendation.",
+      "First ounces are four decisions: form, counterparty, storage location, and documentation.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },
@@ -1078,6 +1102,10 @@ export const marketPages: Episode[] = [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Nixon shock 1971: the gold window closes", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Central-bank gold reserves", href: "/markets/central-bank-gold-reserves" },
+      {
+        title: "Interest costs vs U.S. gold",
+        href: "/blog/interest-costs-vs-us-gold",
+      },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
     ],
     seo: {
@@ -1091,16 +1119,20 @@ export const marketPages: Episode[] = [
   },
   {
     slug: "central-bank-gold-reserves",
-    title: "How central banks report gold in FX reserves",
+    title: "Central-bank gold reserves",
     summary:
-      "Share of reserves, official gold relative to GDP, vault preferences, and dated official purchases and sales — including China’s published official stock since 2000, a 2026 year-to-date buyer table, a short July 2026 seller table, Finance Canada’s printed Gold: 0 line, and the 1999–2002 UK auction programme known as Brown’s Bottom. Poland’s recent buying and Canada’s zero book are covered in short sections on that same page (not separate articles).",
+      "How much gold central banks hold, what share of reserves that metal makes up, how the stock compares with GDP, where the bars sit, and who has bought or sold — including China’s published stock since 2000, Poland’s climb to 648 tonnes, Finance Canada’s printed Gold: 0, and the 1999–2002 UK auctions known as Brown’s Bottom.",
     status: "ready",
     paragraphs: [
-      "Central banks report gold as part of official reserve assets. The figures are stocks, shares, and dated purchases — not a shopping list.",
+      "Central banks report gold as part of official reserve assets: stocks in tonnes, shares of reserves, and dated purchases and sales.",
     ],
     related: [
       { title: "Gold & silver markets", href: "/markets" },
       { title: "Official gold book value", href: "/markets/official-gold-book-value" },
+      {
+        title: "Interest costs vs U.S. gold",
+        href: "/blog/interest-costs-vs-us-gold",
+      },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
     ],
@@ -1116,7 +1148,7 @@ export const marketPages: Episode[] = [
       demand: "high",
       difficulty: "mid",
       intent: "markets",
-      titleTag: "Central-Bank Gold Reserves: Share, Vaults, Official Buys",
+      titleTag: "Central-Bank Gold Reserves — Holdings, Shares, and Buys",
     },
   },
   {
@@ -1133,6 +1165,10 @@ export const marketPages: Episode[] = [
       { title: "Physical silver demand by country", href: "/markets/physical-silver-demand-by-country" },
       { title: "Silver: monetary and industry", href: "/history/silver/monetary-and-industry" },
       { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      {
+        title: "What the gold–silver ratio is counting",
+        href: "/blog/gold-silver-ratio-what-it-counts",
+      },
       { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     ],

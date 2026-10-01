@@ -121,7 +121,7 @@ export const HISTORY_HUB_YEAR_CARDS: readonly HistoryHubYearCard[] = [
   },
   {
     year: 1971,
-    blurb: "The United States suspends dollar–gold convertibility for foreign officials.",
+    blurb: "Nixon shock: the United States closes the gold window for foreign officials.",
     episode: "/history/20th-century/bretton-woods-nixon-1971",
   },
   {

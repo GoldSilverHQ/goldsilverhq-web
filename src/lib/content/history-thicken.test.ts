@@ -138,16 +138,21 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.doesNotMatch(text, /Nixon announces|15 August 1971/);
   });
 
-  it("locks solidus as weight continuity, not paper or 1971", () => {
+  it("locks solidus as a stand-alone gold-weight article, without series glue", () => {
     const text = bodyText(getBody("ancient", "solidus-continuity")!);
     assert.match(text, /Constantine/);
     assert.match(text, /solidus/i);
     assert.match(text, /nomisma/i);
     assert.match(text, /1\/72|4\.5 grams/);
     assert.match(text, /\[Rome: denarius and aureus\]\(\/history\/ancient\/rome-denarius-aureus\)/);
-    assert.match(text, /\[warehouses to public banks\]\(\/history\/banks-paper\/warehouses-to-public-banks\)/);
-    assert.match(text, /\[ancient money\]\(\/history\/ancient\)/);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|should buy/i);
+    assert.doesNotMatch(text, /continuity, not|not paper and not 1971|Gold Weight Continuity|as the product|Coin, not a receipt|Weight held, then the ticket/i);
+    assert.doesNotMatch(text, /this article|If you arrived|does not sell metal/i);
+    assert.doesNotMatch(
+      text,
+      /silver side of that story|this chapter|Later pages of|That story belongs|ancient monetary story ends|leaves off:/i,
+    );
+    assert.doesNotMatch(text, /\[warehouses to public banks\]|\[banks and paper\]|\[Sound Money History\]|\[ancient money\]/);
   });
 
   it("wires SEO titleTags for the four rest episodes without new routes", () => {
@@ -155,7 +160,8 @@ describe("ancient rest thicken Wave B (no new URLs)", () => {
     assert.match(mapSrc, /titleTag:\s*"Lydia and the First Coins/);
     assert.match(mapSrc, /titleTag:\s*"Greece: Laurion Silver/);
     assert.match(mapSrc, /titleTag:\s*"Rome: Denarius, Aureus/);
-    assert.match(mapSrc, /titleTag:\s*"The Solidus: Gold Weight Continuity/);
+    assert.match(mapSrc, /titleTag:\s*"Constantine’s Solidus: Gold that Kept Its Weight"/);
+    assert.doesNotMatch(mapSrc, /Gold Weight Continuity|continuity, not paper and not 1971/);
     assert.doesNotMatch(mapSrc, /slug:\s*"ancient-[\w-]+"/);
   });
 });
@@ -310,8 +316,8 @@ describe("silver cluster thicken Wave C (no new URLs)", () => {
     assert.match(text, /Hunt/);
     assert.match(text, /\$49\.45|\$50/);
     assert.match(text, /COMEX|margin/i);
-    assert.match(text, /\[information versus advice\]\(\/sound-money\/information-not-advice\)/);
     assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.doesNotMatch(text, /information versus advice|information-not-advice/i);
     assert.doesNotMatch(text, /should buy|price target to/i);
   });
 
@@ -427,8 +433,7 @@ describe("reader polish: documentary takeaways (no new URLs)", () => {
 
     const solidus = bodyText(getBody("ancient", "solidus-continuity")!);
     assert.match(solidus, /\[Rome: denarius and aureus\]\(\/history\/ancient\/rome-denarius-aureus\)/);
-    assert.match(solidus, /\[banks and paper\]\(\/history\/banks-paper\)/);
-    assert.match(solidus, /\[Sound Money History\]\(\/history\)/);
+    assert.doesNotMatch(solidus, /\[banks and paper\]|\[Sound Money History\]|\[warehouses to public banks\]|\[ancient money\]/);
 
     const assignats = bodyText(getBody("banks-paper", "assignats")!);
     assert.match(assignats, /\[John Law and the Mississippi Bubble\]\(\/history\/banks-paper\/john-law\)/);

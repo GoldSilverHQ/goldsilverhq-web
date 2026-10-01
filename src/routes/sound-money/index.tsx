@@ -10,7 +10,7 @@ export const Route = createFileRoute("/sound-money/")({
     meta: pageShareMeta({
       title: seoTitle(soundMoneyHub.titleTag),
       description:
-        "What sound money means: a unit that cannot be expanded at will. Hard money vs fiat, inflation, and backed money — definitions only. History lives elsewhere.",
+        "Sound money is money its issuer cannot create more of at will. Hard money and fiat, inflation, and what “backed by gold” really means.",
       path: "/sound-money",
     }),
   }),
@@ -29,7 +29,7 @@ function IdeaHub() {
           <ArticleSections sections={soundMoneyHubBody} />
         </div>
 
-        <h2 className="mt-16 font-display text-3xl">Where the words settle</h2>
+        <h2 className="mt-16 font-display text-3xl">The words in detail</h2>
         <ol className="mt-10 grid gap-3">
           {ideaPages.map((page) => (
             <li key={page.slug}>

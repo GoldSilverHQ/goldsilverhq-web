@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { refreshedAthFallback } from "./desk-refreshed.ts";
 
 /** London PM / COMEX prints, January 1980. */
 export const ATH_1980 = {
@@ -8,7 +9,15 @@ export const ATH_1980 = {
   m2Then: 1482.7,
 } as const;
 
-const FALLBACK = { cpi: 332.813, m2: 23218, cpiDate: "2026-07", m2Date: "2026-07", gold: 4456, silver: 66.5 };
+const tip = refreshedAthFallback();
+const FALLBACK = {
+  cpi: tip.cpi,
+  m2: tip.m2,
+  cpiDate: tip.cpiDate,
+  m2Date: tip.m2Date,
+  gold: 4456,
+  silver: 66.5,
+};
 
 async function fredLast(id: string): Promise<{ date: string; value: number }> {
   const res = await fetch(`https://fred.stlouisfed.org/graph/fredgraph.csv?id=${id}`);

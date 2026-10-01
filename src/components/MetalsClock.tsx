@@ -23,7 +23,7 @@ import {
   pctLostDisplay,
 } from "@/lib/dashboard/clock-prints";
 import { COMPILED_PRINTERS, getPrinters, type Printers } from "@/lib/dashboard/printers";
-import { getSpotLite } from "@/lib/dashboard/spot";
+import { getSpotLite, parseSpotAsOf } from "@/lib/dashboard/spot";
 import {
   CB_YTD_2026,
   FX_START,
@@ -186,11 +186,13 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
   const silverOn = face === "both" || face === "silver";
   const fiatOn = face === "both" || face === "fiat";
   const spotAsOf = spot?.asOf
-    ? new Date(`${spot.asOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+    ? parseSpotAsOf(spot.asOf).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
     : "live";
   const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
   const goldLoss = spot ? dollarLostVsGold(spot.gold) : null;
-  const m2 = latestUsM2();
+  const m2Compiled = latestUsM2();
+  const usM2Bn = printers.usM2.value / 1e9;
+  const usM2AsOf = printers.usM2.asOf;
   const officialMtm = spot ? officialMtmUsd(official.world.tonnes, spot.gold) : null;
   const allGoldMtm = spot ? officialMtmUsd(WGC_STOCK.aboveGroundT, spot.gold) : null;
   const officialCover = spot ? coverPct(official.world.tonnes, spot.gold) : null;
@@ -497,16 +499,20 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
         <Board
           icon={Banknote}
           title="Four printers"
-          kicker={printers.source === "live" ? "ECB live · Asia compiled" : "compiled prints"}
+          kicker={printers.source === "live" ? "FRED/ECB live · Asia compiled" : "compiled prints"}
         >
           <Tile
             kicker="USD"
             label="US M2"
             unit="USD"
-            cadence="yearly"
-            asOf={String(m2.year)}
-            live={fmtUsdCompact(m2.bn * 1e9)}
-            note="FRED M2SL, compiled year. Not per-second. 2026 is latest, not a completed year."
+            cadence="monthly"
+            asOf={formatAsOf(usM2AsOf)}
+            live={fmtUsdCompact(usM2Bn * 1e9)}
+            note={
+              printers.source === "live"
+                ? "FRED M2SL, latest month. Not a completed calendar year."
+                : `Stored FRED M2SL (${usM2AsOf}; tip ${m2Compiled.asOf}). Live feed missed.`
+            }
           />
           <Tile
             kicker="EUR"
@@ -518,7 +524,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
             note={
               printers.source === "live"
                 ? "ECB BSI M3, latest month. China and Japan M2 stay compiled — FRED dropped those series."
-                : "Compiled ECB print (Jul 2026). Live feed missed; this is the seed, not a gag."
+                : `Compiled ECB print (${printers.eurM3.asOf}). Live feed missed; this is the seed, not a gag.`
             }
           />
           <Tile
@@ -683,7 +689,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
       <p className="mt-8 text-center text-sm text-muted">
         Dashes are missing prints, not broken widgets. COMEX open interest and LBMA clearing stay empty on purpose.{" "}
         <Link to="/desk" className="text-gold hover:text-gold-soft">
-          Desk with the figures we already store →
+          Live with the figures we already store →
         </Link>
       </p>
     </div>

@@ -10,6 +10,8 @@ import type { Section } from "./bodies.ts";
  *
  * X→blog mirror: `scripts/x-blog-mirror/` + `data/x-articles-seen.json`.
  * Append a ready row here (and a body in `bodies.ts`) when mirroring an Article.
+ * Images: cover → ARTICLE_HEROES; every inline X MEDIA figure → section.figure
+ * (cover alone is incomplete — see download-inline.mjs / x-blog-automation-setup).
  */
 
 /** Small closed tag set — mirrors reader shelves, not SEO directories. */
@@ -46,6 +48,186 @@ export type BlogPost = {
 
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "australia-1813-holey-dollar",
+    title: "When Australia Punched Holes in Spanish Silver Dollars",
+    summary:
+      "On 30 September 1813 New South Wales made the holey dollar and the dump legal tender, punching Spanish silver dollars so the coins would stay.",
+    date: "2026-09-30",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+      {
+        title: "Spanish silver as global money",
+        href: "/blog/spanish-silver-first-global-money",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/piece-of-eight",
+      "/blog/spanish-silver-first-global-money",
+    ],
+    xArticleUrl: "https://x.com/i/article/2105337579369627661",
+    sourceXId: "2105337579369627661",
+  },
+  {
+    slug: "greenspan-1966-print-money",
+    title:
+      "How Alan Greenspan Went from His 1966 Gold Essay to “We Can Always Print Money”",
+    summary:
+      "In July 1966 Greenspan wrote that gold and economic freedom are inseparable. On 7 August 2011 he said the United States can always print money to pay.",
+    date: "2026-09-30",
+    status: "ready",
+    tags: ["History", "Ideas"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Nixon shock 1971",
+        href: "/history/20th-century/bretton-woods-nixon-1971",
+      },
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/20th-century/bretton-woods-nixon-1971",
+      "/sound-money/inflation-purchasing-power",
+    ],
+    xArticleUrl: "https://x.com/i/article/2105187582904500224",
+    sourceXId: "2105187582904500224",
+  },
+  {
+    slug: "mises-inflation-as-policy",
+    title: "Ludwig von Mises and the Policy Behind Inflation",
+    summary:
+      "Born 29 September 1881, Mises treated inflation as policy: more money and thinner purchasing power, not a storm, a plague, or an act of God.",
+    date: "2026-09-29",
+    status: "ready",
+    tags: ["History", "Ideas"],
+    paragraphs: [],
+    related: [
+      { title: "Ludwig von Mises", href: "/history/vip/ludwig-von-mises" },
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/vip/ludwig-von-mises",
+      "/sound-money/inflation-purchasing-power",
+    ],
+    xArticleUrl: "https://x.com/i/article/2104952749670481920",
+    sourceXId: "2104952749670481920",
+  },
+  {
+    slug: "spanish-silver-first-global-money",
+    title: "How Spanish Silver Became the World's First Global Money",
+    summary:
+      "In 1545 Cerro Rico filled Potosí with silver. The piece of eight carried it worldwide — and the U.S. dollar took its name and weight from that Spanish coin.",
+    date: "2026-09-28",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Potosí", href: "/history/silver/potosi" },
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/potosi",
+      "/history/silver/piece-of-eight",
+    ],
+    xArticleUrl: "https://x.com/i/article/2104667282366402560",
+    sourceXId: "2104667282366402560",
+  },
+  {
+    slug: "sweden-1931-left-gold",
+    title: "The Night Sweden Left Gold and Aimed at Prices Instead",
+    summary:
+      "Late on 27 September 1931 Sweden ended the krona’s gold convertibility. Hamrin named domestic purchasing power, not a new gold parity, as the guide.",
+    date: "2026-09-27",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Inflation and purchasing power",
+        href: "/sound-money/inflation-purchasing-power",
+      },
+    ],
+    relatedArticlePaths: ["/sound-money/inflation-purchasing-power"],
+    xArticleUrl: "https://x.com/i/article/2104261329636712450",
+    sourceXId: "2104261329636712450",
+  },
+  {
+    slug: "interest-costs-vs-us-gold",
+    title: "When One Year of Interest Costs More Than All of America's Gold",
+    summary:
+      "U.S. gross interest reached $1.267T in eleven months of FY2026 — roughly the market value of the Treasury’s reported 261.5 million ounces of gold.",
+    date: "2026-09-26",
+    status: "ready",
+    tags: ["Markets", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Official gold book value",
+        href: "/markets/official-gold-book-value",
+      },
+      {
+        title: "Central-bank gold reserves",
+        href: "/markets/central-bank-gold-reserves",
+      },
+    ],
+    relatedArticlePaths: [
+      "/markets/official-gold-book-value",
+      "/markets/central-bank-gold-reserves",
+    ],
+    xArticleUrl: "https://x.com/i/article/2103742623928156160",
+    sourceXId: "2103742623928156160",
+  },
+  {
+    slug: "september-1971-official-gold-price",
+    title: "How a September Meeting in 1971 Led to Raising the Official Gold Price",
+    summary:
+      "On 26 September 1971 the Group of Ten met under Connally and signed no gold deal. December’s Smithsonian accord later raised the official price from $35 to $38.",
+    date: "2026-09-26",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Nixon shock 1971",
+        href: "/history/20th-century/bretton-woods-nixon-1971",
+      },
+    ],
+    relatedArticlePaths: ["/history/20th-century/bretton-woods-nixon-1971"],
+    xArticleUrl: "https://x.com/i/article/2103888968727060480",
+    sourceXId: "2103888968727060480",
+  },
+  {
+    slug: "china-1934-silver-appeal",
+    title: "The Day China Asked America to Stop Buying Silver",
+    summary:
+      "On 24 September 1934 H. H. Kung cabled Hull: U.S. silver buying was draining China and risking panic. Hull answered on 2 October. China left silver in 1935.",
+    date: "2026-09-24",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      {
+        title: "Silver: monetary history and industry",
+        href: "/history/silver/monetary-and-industry",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/bimetallism",
+      "/history/silver/monetary-and-industry",
+    ],
+    xArticleUrl: "https://x.com/i/article/2103038843947466754",
+    sourceXId: "2103038843947466754",
+  },
   {
     slug: "when-exchanges-change-the-silver-rules",
     title: "When Exchanges Change the Silver Rules",
@@ -116,8 +298,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Markets", "Metals"],
     paragraphs: [
       "The [gold–silver ratio](/markets/gold-silver-ratio) is ordinary arithmetic: gold’s price divided by silver’s price on a dated print. It does not invent a mint statute. It does not freeze a [bimetallic](/history/silver/bimetallism) legal number. It only reports how many ounces of silver one ounce of gold buys at that quote.",
-      "Readers sometimes treat the ratio as a forecast machine. These pages do not. A quotient can sit still while both metals move, or jump when one print shifts. The claim on the Markets page is the dated figure and its sources — not a band that “must” return.",
-      "When the question is law rather than quote — two metals under one mint ratio — open [bimetallism](/history/silver/bimetallism). When the question is England’s 1717 Mint arithmetic, open the [Newton note](/blog/newton-1717-guinea). Keep the jobs separate: market print here, statute story there.",
+      "A quotient can sit still while both metals move, or jump when one print shifts. The Markets page holds the dated figure and its sources — not a band that “must” return.",
+      "When two metals sit under one mint ratio, that is [bimetallism](/history/silver/bimetallism). When the question is England’s 1717 Mint arithmetic, that is the [Newton note](/blog/newton-1717-guinea).",
     ],
     related: [
       { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
@@ -130,14 +312,13 @@ export const blogPosts: BlogPost[] = [
     slug: "weimar-purchasing-power-note",
     title: "Weimar’s mark and what purchasing power means",
     summary:
-      "A short door from the 1923 collapse into the Sound Money definition of purchasing power — dated history on one side, vocabulary on the other.",
+      "A short note linking the 1923 collapse to the Sound Money vocabulary of purchasing power — dated history on one side, definitions on the other.",
     date: "2026-09-15",
     status: "ready",
     tags: ["History", "Ideas"],
     paragraphs: [
-      "In autumn **1923**, a German mark could buy less by the hour than it had bought that morning. The documentary path through that collapse sits under [Weimar 1923](/history/20th-century/weimar-1923) — dates, notes, and what failed.",
-      "The vocabulary page is separate. [Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what the unit still buys over time, without retelling Weimar hour by hour. Mixing the definition with the dated event makes both harder to follow.",
-      "This note only holds the door: history for what happened; Sound Money for the words. Neither page is a tip, a forecast, or a call to buy metal.",
+      "In autumn **1923**, a German mark could buy less by the hour than it had bought that morning. The dates, notes, and failure of that collapse are on [Weimar 1923](/history/20th-century/weimar-1923).",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) names what a unit still buys over time, without retelling Weimar hour by hour. The dated event and the vocabulary answer different questions.",
     ],
     related: [
       { title: "Weimar 1923", href: "/history/20th-century/weimar-1923" },

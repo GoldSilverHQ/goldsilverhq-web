@@ -1,5 +1,20 @@
 export type Callout = { label: string; paragraphs: string[] };
 export type SectionTable = { caption?: string; headers: string[]; rows: string[][] };
+/**
+ * Mid-article figure layout (opt-in). Omit `layout` to keep the legacy stacked
+ * figure. Setting `layout` also enables click-to-enlarge lightbox unless
+ * `lightbox` is explicitly false.
+ *
+ * Assets should keep their **natural aspect ratio** (full coin plates, painting
+ * proportions). Do not feed 5:2 hero crops into body figures — heroes stay on
+ * `ArticleHeroImage`.
+ *
+ * - `breakout` — full prose-column width (panoramas / maps)
+ * - `inset` — narrower centered plate (coins, detail plates)
+ * - `float-start` / `float-end` — text-wrap on desktop; stack on mobile
+ */
+export type SectionFigureLayout = "breakout" | "inset" | "float-start" | "float-end";
+
 export type SectionFigure = {
   src: string;
   alt: string;
@@ -7,6 +22,17 @@ export type SectionFigure = {
   credit?: string;
   width?: number;
   height?: number;
+  /** Composition relative to the prose column. */
+  layout?: SectionFigureLayout;
+  /**
+   * Where the figure sits inside the section:
+   * - `end` (default) — after all paragraphs (legacy)
+   * - `start` — after the heading, before paragraphs (best for float wrap)
+   * - number — after that many leading paragraphs
+   */
+  placement?: "start" | "end" | number;
+  /** Click-to-enlarge lightbox. Defaults to true when `layout` is set. */
+  lightbox?: boolean;
 };
 export type Section = {
   heading: string;
@@ -33,14 +59,34 @@ const johnLaw: Section[] = [
       "France carried heavy public debts from long wars. Tax revenues strained. Coin was hoarded or exported when confidence slipped. Law offered a modern-sounding fix: a bank that issued notes, and a company that could absorb state debt while developing colonial trade around the Mississippi basin and Louisiana.",
       "His early proposals stressed order, reserves, and commerce — a reform of credit, not a carnival from day one. Political need and market mania then outran those restraints. The System grew by stages — bank notes, company shares, debt conversion, monopoly privileges — until the pieces locked together and broke.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/john-law/john-law-portrait-1720.jpg",
+      alt: "Full-length engraved portrait of John Law in a long wig and coat, standing on a terrace above a garden.",
+      caption: "John Law as Controller General of Finances, 1720 — engraved portrait.",
+      credit: "CC0 — Rijksmuseum (RP-P-OB-60.539).",
+      width: 930,
+      height: 1400,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "Bank notes and company shares",
     paragraphs: [
       "In **1716** Law founded the Banque Générale. It was later reorganized as the Banque Royale when the crown took a closer grip. The bank issued notes payable in coin under stated rules. Those notes circulated as a convenient claim on metal, not as metal itself.",
       "Alongside the bank stood the company later known as the Mississippi Company — first the Compagnie d’Occident, then the Compagnie des Indes after mergers with other trading privileges. It held rights over colonial trade and related monopolies. The state used the company to refinance debt. Creditors were steered into shares instead of older claims on the treasury.",
-      "The two instruments were different. A **bank note** was a promise to pay in coin, subject to the bank’s rules and reserves. A **share** was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
+      "The two instruments were different. A bank note promised to pay in coin, subject to the bank’s rules and reserves. A share was ownership in the company, priced in the market and fed by dividends, privileges, and speculation. Law’s danger was fusion. When the same political machine pushed both, a rise in shares felt like proof that notes were sound — and plentiful notes made shares easier to bid up.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/john-law/banque-royale-10-livres-1720.jpg",
+      alt: "Handwritten-style printed bank note for ten livres tournois, dated Paris, 1 January 1720, with three signatures.",
+      caption: "Ten livres tournois, 1 January 1720: the bank “promises to pay the bearer on sight” in silver coin.",
+      credit: "CC0 — Musée Carnavalet, Paris Musées.",
+      width: 1280,
+      height: 757,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "How the bubble inflated",
@@ -50,6 +96,16 @@ const johnLaw: Section[] = [
       "Metal moved the wrong way for a durable note system. Coin and bullion were drawn into the whirl, then driven out as people preferred to hold or export hard money while spending the paper. When confidence is high, notes displace coin in daily use. When confidence cracks, coin leaves circulation or leaves the country. The note becomes a claim on a thinning reserve. Law’s System leaned on confidence longer than on metal.",
       "Peak mania sits in late **1719** and early **1720**. Prices that had multiplied then struggled to find new buyers. Controls on coin, forced relations between notes and shares, and shifting decrees signaled strain rather than mastery. Peak and bust belong to that narrow window.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/john-law/rue-quincampoix-1720.jpg",
+      alt: "Engraving of a narrow Paris street packed with a jostling crowd of share dealers beneath tall houses and shop signs.",
+      caption: "“Rue Quinquempoix en l’année 1720” — the share crowd, as reprinted in the Dutch satire collection Het Groote Tafereel der Dwaasheid.",
+      credit: "CC0 — Rijksmuseum (RP-P-OB-83.520).",
+      width: 1600,
+      height: 1104,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "The collapse of 1720",
@@ -95,6 +151,16 @@ const panic1907: Section[] = [
       "Knickerbocker’s suspension turned fear into a route map. Runs moved to other trusts and into the call-money market that funded broker loans. A crowd forms. Payment slows. Rumor names the next door. Without a backstop that can lend against good assets, solvent firms can fail for lack of cash in the hour they need it.",
       "That is ordinary panic mechanics — and it is why the episode still matters. The United States had no standing public lender of last resort with a legal duty to supply emergency liquidity to the whole banking field. Metal still settled contracts in the wider monetary order. Access to cash at the point of panic did not.",
     ],
+    figure: {
+      src: "/images/history/20th-century/panic-1907-fed/knickerbocker-trust-c1904.jpg",
+      alt: "Photograph of a white columned bank building on a Fifth Avenue corner, with the tall Waldorf-Astoria hotel behind it.",
+      caption: "The Knickerbocker Trust Company on Fifth Avenue, beside the Waldorf-Astoria, about 1904.",
+      credit: "Public domain — Detroit Publishing Co., Library of Congress (LC-DIG-det-4a11677).",
+      width: 826,
+      height: 1024,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "Why the trusts were the weak point",
@@ -150,7 +216,7 @@ const weimar: Section[] = [
     heading: "",
     paragraphs: [
       "In the autumn of **1923**, a German mark could buy less by the hour than it had bought that morning. Wages paid at noon were spent before supper. Café prices rose between the first course and the bill. By November a U.S. dollar — about **4.2 marks** before the First World War — was quoted at roughly **4.2 trillion paper marks**. Notes did not vanish. People stopped holding them, and stopped pricing in them.",
-      "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The wheelbarrow cartoons are not invented, and they are not the cause. The sequence is older: war finance without a gold stop, a fiscal gap after Versailles, a Reichsbank that created marks against Treasury bills, then the Ruhr occupation. Printing is the mechanism. The start is the missing constraint.",
+      "Weimar hyperinflation is that collapse of the German paper mark as money in **1922–23**. The sequence runs from war finance without a gold stop, through a fiscal gap after Versailles and a Reichsbank that created marks against Treasury bills, to the Ruhr occupation of **January 1923**. Printing was the channel. The spiral ended in mid-**November 1923**, when the **Rentenmark** was issued at **one trillion** paper marks to one and the press stopped financing the Treasury as before.",
     ],
   },
   {
@@ -173,6 +239,16 @@ const weimar: Section[] = [
       "**Autumn 1923.** The paper mark dies as a unit of account. Contracts move to foreign currency, gold-marks as a unit of calculation, or barter.",
       "**15–20 November 1923.** The Rentenmark is issued. **One trillion paper marks = one Rentenmark.** The dollar is pinned at 4.2 in the new unit — the old parity under a new name. The press stops financing the Treasury as before.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/milliarde-overprint-1923.jpg",
+      alt: "Reichsbank 1,000-mark note of December 1922 with a red overprint reading “Eine Milliarde Mark” — one billion marks.",
+      caption: "A 1,000-mark note of December 1922, overprinted in red in 1923 to read one billion marks.",
+      credit: "Public domain (Reichsbank note, 1922/1923; copyright expired). Scan via Wikimedia Commons.",
+      width: 1600,
+      height: 1064,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "The Ruhr and the final spiral",
@@ -189,6 +265,16 @@ const weimar: Section[] = [
       "Everyday prices followed. A loaf of bread that cost a fraction of a mark before the war was in the hundreds of billions of marks by November 1923. Postage, tram fares, and café bills were revised so often that a price at the start of a meal was not the price at the end. Banknotes were overprinted with new face values because new plates could not keep up.",
       "Exact multipliers differ by series — wholesale, retail, exchange. The qualitative fact does not: the paper mark ceased to work as a store of value or a unit of account.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/berlin-bread-cart-1923.jpg",
+      alt: "Black-and-white press photograph of a dense Berlin crowd pressing around a baker’s cart, hands raised with banknotes.",
+      caption: "Berlin, October 1923: a crowd presses around a baker’s cart, paying for bread in millions of marks.",
+      credit: "Public domain — Agence Meurisse press photograph (1923), Bibliothèque nationale de France.",
+      width: 1600,
+      height: 1170,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "Who lost, and who did not",
@@ -205,6 +291,16 @@ const weimar: Section[] = [
       "The Reichsbank was barred from discounting government bills as before. Rudolf Havenstein, the Reichsbank president of the inflation years, died on 20 November. Hjalmar Schacht, as currency commissioner and then Reichsbank head, enforced the new line. Contemporaries called the halt a miracle. The narrower fact: once the public believed the press would not run for the Treasury, the old paper was scaled by a trillion and set aside.",
       "In 1924 the Reichsmark succeeded the Rentenmark. The Dawes Plan rearranged reparations and credit. Those are sequels. The hyperinflation of the paper mark ended in November 1923.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/rentenmark-1923.jpg",
+      alt: "Green one-Rentenmark note of the Deutsche Rentenbank, dated 1 November 1923.",
+      caption: "One Rentenmark, dated 1 November 1923 — exchanged for one trillion paper marks.",
+      credit: "Public domain (Deutsche Rentenbank note, 1923; copyright expired). Scan via Wikimedia Commons.",
+      width: 688,
+      height: 371,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "Printing was the channel, not the whole cause",
@@ -220,25 +316,35 @@ const nixon: Section[] = [
     heading: "",
     paragraphs: [
       "On Sunday evening, **15 August 1971**, President Richard Nixon told the country the United States would no longer convert dollars into gold for foreign official holders. The postwar deal negotiated at **Bretton Woods** in **1944** had pegged other currencies to the dollar, and the dollar to gold at **$35** an ounce for those holders. That night the last official gold promise in the system was suspended.",
-      "The act did not invent fiat money overnight. Private Americans had already been barred from monetary gold under the [1933 recall](/history/20th-century/1933-gold-recall). Bretton Woods did not fail in a single night either. Pressure had built for years. What ended was the official gold window — the channel through which foreign treasuries and central banks could still present dollars and demand US gold at the posted price.",
+      "That announcement is the **Nixon shock** — the closing of the **gold window**. Foreign treasuries and central banks could no longer present dollars and demand U.S. gold at the posted price. By August 1971, official dollar claims far exceeded the gold that could pay them at thirty-five dollars an ounce; years of pressure made the mismatch impossible to ignore. Private Americans had already been outside monetary gold since the [1933 recall](/history/20th-century/1933-gold-recall). What ended that Sunday was the remaining official link — and with it the working heart of Bretton Woods.",
     ],
   },
   {
-    heading: "The gold window, not a retail counter",
+    heading: "The gold window",
     paragraphs: [
       "Nixon’s New Economic Policy mixed a ninety-day wage and price freeze with a temporary import surcharge. The line that mattered for money was simpler: suspend convertibility of the dollar into gold for foreign official holders.",
-      "That suspension is often called the closing of the gold window. The window was not a teller for citizens. It was the official redemption channel under Bretton Woods rules. Closing it meant the dollar was no longer redeemable in metal for the partners who had treated dollars as claims on US gold.",
-      "The shock was a policy choice under stress, not a sudden discovery that gold had vanished from history. The administration framed the move as temporary. It was not reversed.",
+      "The gold window was the official redemption channel under Bretton Woods rules — not a teller for citizens. Closing it meant the dollar was no longer redeemable in metal for the partners who had treated dollars as claims on U.S. gold.",
+      "The administration framed the move as temporary. It was not reversed. Pegs were rebuilt briefly, then failed; by **1973** major currencies floated without an official gold anchor.",
     ],
   },
   {
-    heading: "How Bretton Woods actually worked",
+    heading: "How Bretton Woods worked",
     paragraphs: [
       "Bretton Woods was negotiated in **1944** at Bretton Woods, New Hampshire. Member currencies were pegged to the US dollar within narrow bands. The dollar itself was defined against gold at thirty-five dollars per troy ounce.",
       "That design made the system a **gold-exchange** standard, not a classical gold standard. Most countries held dollars as reserves. They treated those dollars as claims that could, in theory, be turned into US gold. Ordinary people in the United States did not redeem paper for coin at the Treasury window. Their private gold rights had already been removed in 1933.",
       "Under the classical gold standard before 1914, national currencies were convertible into gold for a wider set of holders, and settlement often moved metal directly between countries. Bretton Woods put the dollar in the middle. Gold sat behind the dollar for official partners. The rest of the world sat behind the dollar peg.",
       "At thirty-five dollars an ounce, one dollar was defined as one thirty-fifth of an ounce of gold. If a foreign central bank held one billion dollars of official claims, those claims implied a right to about **28.6 million ounces** of US gold at the posted rate — if convertibility still worked. When claims grew faster than the gold stock, the board stopped matching the vault.",
     ],
+    figure: {
+      src: "/images/history/20th-century/bretton-woods-nixon-1971/morgenthau-bretton-woods-1944.jpg",
+      alt: "Henry Morgenthau Jr. speaking at a lectern on a flag-lined stage before seated delegates at Bretton Woods.",
+      caption: "Treasury Secretary Henry Morgenthau Jr. opens the Bretton Woods conference, July 1944.",
+      credit: "Public domain — U.S. government photograph (National Archives, Office of War Information, RG 208).",
+      width: 706,
+      height: 572,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "Why the window came under pressure",
@@ -270,6 +376,16 @@ const nixon: Section[] = [
       "The Camp David weekend framed the announcement. Treasury Secretary John Connally and Under Secretary Paul Volcker were central voices on the gold and exchange decisions. The public speech mixed domestic inflation politics with the external dollar problem. Wage and price controls addressed the home front. The surcharge pressed trading partners. The gold suspension addressed the mismatch between dollar claims and US gold.",
       "The key legal and monetary fact remained narrow. Foreign official holders could no longer present dollars and receive gold at the fixed official price. The dollar stayed the world’s main reserve currency in practice. Its last official gold anchor did not.",
     ],
+    figure: {
+      src: "/images/history/20th-century/bretton-woods-nixon-1971/connally-15-august-1971.jpg",
+      alt: "Black-and-white close portrait of John Connally, glasses in hand, looking down in thought.",
+      caption: "Treasury Secretary John Connally, photographed by the White House on 15 August 1971 — the day of the announcement.",
+      credit: "Public domain — White House Photo Office, Nixon Library (NARA 194732).",
+      width: 929,
+      height: 1400,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "What the temporary close became",
@@ -358,6 +474,16 @@ const goldRecall1933: Section[] = [
       "The order required persons in the United States to deliver most gold coin, gold bullion, and gold certificates. Payment was at the official price then in force: **$20.67 an ounce**. Later licenses and exemptions matter more than that May date alone.",
       "It did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January.",
     ],
+    figure: {
+      src: "/images/history/20th-century/1933-gold-recall/executive-order-6102-poster.jpg",
+      alt: "Printed 1933 notice headed “Under Executive Order of the President”, ordering delivery of gold coin, bullion, and certificates on or before May 1, 1933.",
+      caption: "The 1933 notice: gold coin, gold bullion, and gold certificates to be delivered to a Federal Reserve Bank by 1 May 1933.",
+      credit: "Public domain — U.S. government notice (1933).",
+      width: 671,
+      height: 1004,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "The bank holiday and the power to call gold",
@@ -374,6 +500,16 @@ const goldRecall1933: Section[] = [
       "The Gold Reserve Act of **30 January 1934** vested title to monetary gold in the United States. Federal Reserve Banks transferred their gold to the Treasury and received gold certificates in exchange. The Treasury was forbidden to redeem currency in gold for the public. The President set a new official dollar price of **$35 an ounce** — a devaluation of the gold dollar by statute, not a market print.",
       "At $20.67, one dollar had been a known weight of fine gold. At $35, that weight was cut. The same official stock, marked to the new price, produced a book profit on the Treasury’s accounts. Part of that increment funded the Exchange Stabilization Fund. The metal did not multiply. Official gold is then a government asset at an official price — not a pile the public can test at a window.",
     ],
+    figure: {
+      src: "/images/history/20th-century/1933-gold-recall/roosevelt-signs-gold-bill-1934.jpg",
+      alt: "Franklin Roosevelt seated at his desk signing a bill while six men in suits stand behind him.",
+      caption: "Roosevelt signs the gold bill — the Gold Reserve Act — in January 1934, with Treasury and Federal Reserve officials behind him.",
+      credit: "Public domain — Harris & Ewing, Library of Congress (LC-DIG-hec-46991); no known restrictions.",
+      width: 1024,
+      height: 793,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "A short timeline",
@@ -651,8 +787,8 @@ const barsVsCoins: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A bar and a coin can share the same metal, the same fineness, and the same troy-ounce arithmetic. What differs is the object: how the metal was formed, what stamp a stranger can read, and how much work it takes to turn the object back into a later bid. That is a comparison of form factor — fabrication, premium, and resale friction. It is an educational comparison. It is not a shop, and it is not a recommendation.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names form as the first handling decision. The paragraphs below stay on that decision. They do not rank a product, name a quantity, or treat a mint design as a reason to hold metal.",
+      "A bar and a coin can share the same metal, the same fineness, and the same troy-ounce arithmetic. What differs is the object: how the metal was formed, what stamp a stranger can read, and how much work it takes to turn the object back into a later bid. That is a comparison of form factor — fabrication, premium, and resale friction.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names form as the first handling decision. The paragraphs below stay with that decision.",
     ],
   },
   {
@@ -660,7 +796,7 @@ const barsVsCoins: Section[] = [
     paragraphs: [
       "The useful question is not which form wins. It is what the comparison is measuring. A poured kilo bar, a one-ounce minted bar, and a government bullion coin can all be .999 or .9999 fine gold or silver. They are not the same object in commerce. Weight and fineness describe the metal. Form describes the work done to the metal and the market that later has to accept it.",
       "Size is part of form. A large wholesale bar spreads fabrication and assay cost over many ounces. A one-ounce piece carries that cost on a single ounce. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison. Small minted bars sit closer to coins on cost and on how easily they change hands. Name the size, or the comparison is empty.",
-      "Bullion and collectibles are different markets. A proof, a commemorative, or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication premium turns into a narrative price. Nothing here ranks collectibles, and nothing here says bullion is the right holding.",
+      "Bullion and collectibles are different markets. A proof, a commemorative, or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication premium turns into a narrative price.",
     ],
   },
   {
@@ -674,7 +810,7 @@ const barsVsCoins: Section[] = [
   {
     heading: "Premium as a price of form",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the [premium over spot](/gold-silver/premium-over-spot). It is a price of form and of liquidity. It is not automatically a trick, and it is not a tip.",
+      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the [premium over spot](/gold-silver/premium-over-spot). It is a price of form and of liquidity. It is not automatically a trick.",
       "A large bar often prints a smaller premium per ounce because fabrication and assay were spread. A common bullion coin often prints a larger premium because more work sat on each ounce and because the design is easy to name. A thin product with a fat ask and a poor bid is expensive twice: once when it leaves a dealer, again when it returns. The number that matters later is the bid, not only the ask.",
       "Premiums move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can cheapen when many are offered and widen when they are scarce at retail. A large bar can sit near spot and still be awkward if the only later buyer wants a melt or a brand they do not know. Compare the gap to the form, not to a story about purity.",
     ],
@@ -688,10 +824,9 @@ const barsVsCoins: Section[] = [
     ],
   },
   {
-    heading: "Information only",
+    heading: "What the comparison leaves you with",
     paragraphs: [
-      "The comparison measures form factor: how the metal was made, what that work costs per ounce, how the premium prices that work and that liquidity, and how much friction a later sale carries. It does not measure which object anyone ought to hold. It does not rank a dealer. It does not name a quantity.",
-      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the gap between the screen and the object, open [premium over spot](/gold-silver/premium-over-spot).",
+      "The comparison measures form factor: how the metal was made, what that work costs per ounce, how the premium prices that work and that liquidity, and how much friction a later sale carries. Back on [Gold & Silver in Practice](/gold-silver) the same facts sit beside premium, storage, authenticity, and starting size. If the next question is the gap between the screen and the object, open [premium over spot](/gold-silver/premium-over-spot).",
     ],
   },
 ];
@@ -700,8 +835,8 @@ const premiumOverSpot: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A dealing screen prints a price for an ounce that no one has to ship. The object on a counter was poured or struck, branded, insured, and offered by a desk that must later bid for it. The gap is the premium over spot — the price of form, brand, mint, and liquidity. It is a documentary measure of that markup. It is not a shopping tip, and it is not a forecast of which premiums are cheap.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names premium as one handling fact among form, storage, authenticity, and starting size. These paragraphs stay on that fact. They do not rank a product.",
+      "A dealing screen prints a price for an ounce that no one has to ship. The object on a counter was poured or struck, branded, insured, and offered by a desk that must later bid for it. The gap is the premium over spot — the price of form, brand, mint, and liquidity.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names premium as one handling fact among form, storage, authenticity, and starting size. The paragraphs below stay with that fact.",
     ],
   },
   {
@@ -717,14 +852,14 @@ const premiumOverSpot: Section[] = [
     paragraphs: [
       "Fabrication is the first cost. Refined metal must be poured or struck into a countable piece, stamped with weight and fineness, and — above a certain size — given a serial. Dies, molds, inspection, and assay do not disappear because the screen already has a number. A large bar spreads that work. A small piece concentrates it.",
       "Distribution is the second. The object has to leave a mint, sit in insured transit, and arrive at a desk that will still be there when someone wants the same stamp back. Freight, insurance, and capital tied up in transit are not in the LBMA print. They are in the ask.",
-      "Inventory is the third. A dealer who shows a coin or a bar has already paid for it, or borrowed to hold it, and must carry the metal through a quiet week. The bid–ask is how that book is funded. A wide ask with a thin bid can mean the desk does not want more of that stamp. A tight pair can mean the stamp is easy to turn. Neither reading is a tip.",
+      "Inventory is the third. A dealer who shows a coin or a bar has already paid for it, or borrowed to hold it, and must carry the metal through a quiet week. The bid–ask is how that book is funded. A wide ask with a thin bid can mean the desk does not want more of that stamp. A tight pair can mean the stamp is easy to turn.",
       "Recognition is the fourth. A stamp a stranger can name without a laboratory is easier to bid for. A government mint mark, a well-known refiner, a common weight — those facts reduce the next counterparty’s checking cost. Brand and mint are part of liquidity: how quickly the object can change hands without a melt. Liquidity has a price. The premium is where that price often shows up.",
     ],
   },
   {
     heading: "Form and size",
     paragraphs: [
-      "Form and size change the gap because they change how much work sits on each ounce and how easy the object is to name later. A wholesale bar can print a smaller premium per ounce because fabrication and assay were spread. A common bullion coin can print a larger one because more work sat on a single ounce and because the design is already in the public vocabulary. Small minted bars sit between those poles. The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This page only needs the price consequence: the premium moves with the form.",
+      "Form and size change the gap because they change how much work sits on each ounce and how easy the object is to name later. A wholesale bar can print a smaller premium per ounce because fabrication and assay were spread. A common bullion coin can print a larger one because more work sat on a single ounce and because the design is already in the public vocabulary. Small minted bars sit between those poles. The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). The price consequence is simpler: the premium moves with the form.",
       "Silver often shows a larger percentage gap than gold for the same reason of scale. Striking or pouring a one-ounce silver piece costs labor that is a bigger share of a cheaper ounce. That is arithmetic of fabrication, not a verdict that silver is dear or gold is cheap.",
       "Premiums also move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can tighten when many are offered and widen when retail stock is thin. A large bar can sit near the London print and still be awkward if the only later buyer wants a melt or a brand they do not know. Those moves describe supply of objects, not a signal that the metal itself has become a bargain.",
     ],
@@ -733,15 +868,14 @@ const premiumOverSpot: Section[] = [
     heading: "What the premium is not",
     paragraphs: [
       "The premium is not a measure of whether gold or silver is fairly valued. Spot already is a market print for the paper ounce. Adding fabrication and a dealer’s book does not produce a second, truer price of the metal. It produces the price of a particular object. Treating a low premium as proof that metal is cheap, or a high premium as proof that metal is dear, confuses the object with the ounce.",
-      "The premium is not a timing tip. A narrow gap does not say it is time to acquire metal. A wide gap does not say it is time to wait. Those sentences would be advice. Premiums can be wide when objects are scarce at retail and tight when they are plentiful. That is inventory and mint runs — not a forecast of the next print, and not a rule for when a holding is cheap.",
-      "The premium is not a morality tale about dealers, and not a ranking of brands. A large markup can be the ordinary cost of a small, well-known coin. A small markup can sit on a bar that is hard to move. Neither fact picks a winner. Neither fact names a shop. Compare the gap to the form and to the later bid — not to a story about purity, and not to a shopping list.",
+      "The premium is not a timing tip. A narrow gap does not say it is time to acquire metal. A wide gap does not say it is time to wait. Premiums can be wide when objects are scarce at retail and tight when they are plentiful. That is inventory and mint runs — not a forecast of the next print.",
+      "The premium is not a morality tale about dealers, and not a ranking of brands. A large markup can be the ordinary cost of a small, well-known coin. A small markup can sit on a bar that is hard to move. Neither fact picks a winner. Neither fact names a shop. Compare the gap to the form and to the later bid — not to a story about purity.",
     ],
   },
   {
-    heading: "Information only",
+    heading: "Reading the gap",
     paragraphs: [
-      "The premium over spot measures the markup of an object above a London or screen reference: form, brand, mint, and the liquidity of a physical book. It does not measure fair value of the metal. It does not say which gap is cheap.",
-      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the object rather than the gap, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "The premium over spot measures the markup of an object above a London or screen reference: form, brand, mint, and the liquidity of a physical book. Back on [Gold & Silver in Practice](/gold-silver) the same fact sits beside form, storage, authenticity, and starting size. If the next question is the object rather than the gap, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
     ],
   },
 ];
@@ -750,8 +884,8 @@ const storage: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Metal that has already been poured or struck still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal. This page describes that menu. It is not a recommendation.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names storage as access versus cost versus counterparty. The paragraphs below stay on that trade-off. They do not pick a shelf.",
+      "Metal that has already been poured or struck still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names storage as access versus cost versus counterparty. The paragraphs below stay with that trade-off.",
     ],
   },
   {
@@ -759,7 +893,7 @@ const storage: Section[] = [
     paragraphs: [
       "Access is how quickly the object can be reached and moved. Home access is immediate: the metal is in a room the household already occupies. Vault access is scheduled — hours, identification, a release. A claim that is only a line on a statement has no object to reach until a counterparty delivers one.",
       "Cost is what is paid, or not paid, to keep the arrangement in place. Home storage has no vault invoice. It still has a lock, a place, and the work of keeping both quiet. A vault invoices for space, insurance, and handling. An unallocated or pool account often invoices less because the operator is not setting aside a named bar for each name. A lower fee is a different product, not a verdict.",
-      "Counterparty is whose failure stands between the holder and the metal. At home that counterparty is the household: fire, theft, a forgotten combination, a safe that advertises itself. In a vault it is the operator, the insurer, and the law of the place. On an unallocated book it is the claim itself — a promise to deliver metal, not a named pile. Storage is the trade-off among those three facts. It is not a score that picks a winner.",
+      "Counterparty is whose failure stands between the holder and the metal. At home that counterparty is the household: fire, theft, a forgotten combination, a safe that advertises itself. In a vault it is the operator, the insurer, and the law of the place. On an unallocated book it is the claim itself — a promise to deliver metal, not a named pile. Storage is the trade-off among those three facts.",
     ],
   },
   {
@@ -787,8 +921,8 @@ const storage: Section[] = [
   {
     heading: "What storage is not",
     paragraphs: [
-      "Storage is not a vendor list. No vault, no insurer, and no dealer is ranked here. A name that appears in a contract is a fact about that contract, not a recommendation of the name.",
-      "Storage is not a search for a preferred place to keep metal, and not buy or sell advice. Home, allocated, and unallocated are different products. Calling one of them preferable would be a pick. This page does not pick. It does not say which arrangement is cheap, which is safe, or which a household ought to use. A vault invoice is not a reason to hold gold or silver.",
+      "Storage is not a vendor list. No vault, no insurer, and no dealer is ranked here. A name that appears in a contract is a fact about that contract.",
+      "Home, allocated, and unallocated are different products. Calling one of them preferable would be a pick. A vault invoice is not a reason to hold gold or silver.",
     ],
   },
   {
@@ -799,10 +933,9 @@ const storage: Section[] = [
     ],
   },
   {
-    heading: "Information only",
+    heading: "Access, cost, counterparty in one place",
     paragraphs: [
-      "Storage measures access, cost, and counterparty: home control and household risk, identifiable allocated bars or coins, and an unallocated or pool claim that is not a stack. It does not measure which arrangement anyone ought to use. It does not rank a vendor.",
-      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is the object rather than the place, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "Storage measures access, cost, and counterparty: home control and household risk, identifiable allocated bars or coins, and an unallocated or pool claim that is not a stack. Back on [Gold & Silver in Practice](/gold-silver) the same menu sits beside form, premium, authenticity, and starting size. If the next question is the object rather than the place, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
     ],
   },
 ];
@@ -812,14 +945,14 @@ const spottingFakes: Section[] = [
     heading: "",
     paragraphs: [
       "Counterfeits exist, especially of popular coins and of small bars with famous stamps. Authenticity starts with a counterparty you can still find in a year, and with specs — weight and dimensions — checked against a published figure. It does not start with a home laboratory, and it is not a guarantee. These paragraphs are a filter for the obvious. They are not a test manual.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names authenticity as a filter, not a laboratory course. The paragraphs below stay on that filter. They do not rank a dealer or name a gadget.",
+      "The [Gold & Silver in Practice](/gold-silver) overview already names authenticity as a filter, not a laboratory course. The paragraphs below stay with that filter.",
     ],
   },
   {
     heading: "A filter, not a laboratory",
     paragraphs: [
       "A filter asks whether this object fails an obvious check against a known spec or a known desk. A laboratory asks whether the metal is what the stamp claims, to a stated tolerance, under a method that can damage a good piece if it is done badly. This page is the first of those two jobs. It is not the second.",
-      "It is also not a shop. It does not name vendors. It does not tell anyone to acquire metal, or to refuse a piece on the strength of a blog paragraph. A piece that matches weight and dimensions can still be plated, filled, or struck from the wrong alloy. A piece that fails them is only a reason to stop treating the stamp as settled. The gap between those two facts is why a filter is not a guarantee.",
+      "It does not name vendors. A piece that matches weight and dimensions can still be plated, filled, or struck from the wrong alloy. A piece that fails them is only a reason to stop treating the stamp as settled. The gap between those two facts is why a filter is not a guarantee.",
     ],
   },
   {
@@ -841,15 +974,15 @@ const spottingFakes: Section[] = [
   {
     heading: "A price far below the market",
     paragraphs: [
-      "A quote far below everyone else’s print is information. It is not a bargain, and it is not a reason to acquire metal. Spot is a screen price for a paper ounce. The object on a counter carries fabrication, shipping, and a dealer’s book. An ask that undercuts that whole field by a wide margin has to be explained by something other than generosity.",
-      "The explanation may be a distressed sale, a thin market, or a stamp that is not the metal. This page does not decide which. It only names the reading: treat the outlier as a warning, not a bargain. A high ask is not proof of honesty. A low ask is not proof of a fake. Nothing here is buy or sell advice. The price is one more filter: a reason to stop, not a verdict.",
+      "A quote far below everyone else’s print is information. It is not a bargain. Spot is a screen price for a paper ounce. The object on a counter carries fabrication, shipping, and a dealer’s book. An ask that undercuts that whole field by a wide margin has to be explained by something other than generosity.",
+      "The explanation may be a distressed sale, a thin market, or a stamp that is not the metal. Treat the outlier as a warning, not a bargain. A high ask is not proof of honesty. A low ask is not proof of a fake. The price is one more filter: a reason to stop, not a verdict.",
     ],
   },
   {
     heading: "When a professional is needed",
     paragraphs: [
       "A professional is needed when a fake would matter — when a loss would change a household’s or a firm’s books. Weight and a ruler do not close that case. A desk that will still be there next year also does not close it if the object itself is the question.",
-      "Assay offices, refiners, and some dealers run tests that this page will not describe. Sending a piece out costs time and a fee. Keeping a doubtful piece without that step costs the risk that the stamp is theatre. A blog post is not that step. A scale is not that step. If a plated bar or a filled coin would matter, use a professional. No page on this site replaces that test.",
+      "Assay offices, refiners, and some dealers run tests that this page will not describe. Sending a piece out costs time and a fee. Keeping a doubtful piece without that step costs the risk that the stamp is theatre. A blog post is not that step. A scale is not that step. If a plated bar or a filled coin would matter, use a professional.",
     ],
   },
   {
@@ -860,10 +993,9 @@ const spottingFakes: Section[] = [
     ],
   },
   {
-    heading: "Information only",
+    heading: "Filter, not guarantee",
     paragraphs: [
-      "Authenticity starts with counterparty and specs — weight and dimensions — not a home laboratory and not a guarantee. The checks above are a filter for the obvious. They are not a test manual, not a vendor list, and not a promise that copies will all be found.",
-      "These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the next question is where an accepted object sits, open [storing gold and silver](/gold-silver/storage).",
+      "Authenticity starts with counterparty and specs — weight and dimensions — not a home laboratory and not a guarantee. The checks above are a filter for the obvious. Back on [Gold & Silver in Practice](/gold-silver) authenticity sits beside form, premium, storage, and starting size. If the next question is where an accepted object sits, open [storing gold and silver](/gold-silver/storage).",
     ],
   },
 ];
@@ -872,29 +1004,29 @@ const beginnerChecklist: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "First ounces are not a shop list. They are a process of four decisions — form, counterparty, storage location, documentation — a menu of mechanics, not a purchase recommendation. Skip any one and the others get expensive: an object with no place to sit, a drawer with no record, a quote from a desk that will not answer next year.",
-      "The [Gold & Silver in Practice](/gold-silver) overview names starting size as that process. The paragraphs below stay on the four decisions. They do not name a quantity, rank a dealer, or treat a first holding as a reason to act.",
+      "First ounces are not a shop list. They are a process of four decisions — form, counterparty, storage location, documentation. Skip any one and the others get expensive: an object with no place to sit, a drawer with no record, a quote from a desk that will not answer next year.",
+      "The [Gold & Silver in Practice](/gold-silver) overview names starting size as that process. The paragraphs below stay with the four decisions.",
     ],
   },
   {
     heading: "Process instead of a shop list",
     paragraphs: [
       "A shop list is a set of objects. A process is a sequence. Form, then seller, then storage, then record-keeping — in that order, because each later decision is cheaper if the earlier one has already been named. The temptation is to start with a quote. A quote is the last number, not the first fact. A price without a form is a screen ounce. A parcel without a place is metal in transit toward a question you have not answered.",
-      "Form is the object: bar or coin, and the size. Seller is the counterparty — a name, a place, a history that can be checked without their own FAQ. Storage is the place the object lives once it exists. Record-keeping is what you write down so the other three facts can still be found later: invoices, serials, a note of location that is not only the same drawer as the metal. None of those four steps is a reason to acquire metal.",
+      "Form is the object: bar or coin, and the size. Seller is the counterparty — a name, a place, a history that can be checked without their own FAQ. Storage is the place the object lives once it exists. Record-keeping is what you write down so the other three facts can still be found later: invoices, serials, a note of location that is not only the same drawer as the metal.",
     ],
   },
   {
     heading: "Form and size before the price screen",
     paragraphs: [
       "The useful first question is not what the screen prints. It is what object you are even comparing to that print. A poured kilo, a one-ounce minted bar, and a government bullion coin can share a fineness and still not be the same object in commerce. Weight and fineness describe the metal. Form describes the work done to it. Size is part of form: a large bar spreads fabrication; a one-ounce piece carries that cost alone. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison.",
-      "The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This checklist only needs the sequence: name the form and the size before you look at a quote. Otherwise you are comparing a paper ounce to a story about purity. Bullion and collectibles are different markets. A proof or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication gap turns into a narrative price. Nothing here ranks collectibles.",
+      "The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This checklist only needs the sequence: name the form and the size before you look at a quote. Otherwise you are comparing a paper ounce to a story about purity. Bullion and collectibles are different markets. A proof or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication gap turns into a narrative price.",
     ],
   },
   {
     heading: "Premium and bid/ask as facts, not tips",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the premium over spot — a price of form and of liquidity, not a tip, and not a forecast of which gaps are cheap.",
-      "The later number is the bid: what a desk will pay for that same object today. Reading only the ask is reading only half the tape. A thin product with a fat ask and a poor bid is expensive twice. Premiums move with mint capacity and how common a stamp is. Those moves describe supply of objects, not a signal that metal has become a bargain. This page does not teach when a premium is cheap. It only names ask and bid as facts beside the form.",
+      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the premium over spot — a price of form and of liquidity.",
+      "The later number is the bid: what a desk will pay for that same object today. Reading only the ask is reading only half the tape. A thin product with a fat ask and a poor bid is expensive twice. Premiums move with mint capacity and how common a stamp is. Those moves describe supply of objects, not a signal that metal has become a bargain. Ask and bid are facts beside the form.",
     ],
   },
   {
@@ -914,14 +1046,14 @@ const beginnerChecklist: Section[] = [
   {
     heading: "What this checklist is not",
     paragraphs: [
-      "This checklist is not a dealer ranking. No name, no shop, and no “best” desk appears here. A counterparty is a fact about a process, not a recommended vendor. It is not a shopping list, and it is not buy or sell advice. It does not say anyone ought to acquire gold or silver. It does not name a quantity or a first product. “First ounces” names the process of four decisions. It is not a cue to act.",
-      "It is also not a forecast. Nothing here says metal is cheap or dear, or that a premium is a signal. Treating form, seller, storage, and records as a reason to hold metal would turn a menu into a pitch.",
+      "This checklist is not a dealer ranking. No name, no shop, and no “best” desk appears here. A counterparty is a fact about a process, not a recommended vendor. “First ounces” names the process of four decisions.",
+      "Nothing here says metal is cheap or dear, or that a premium is a signal. Treating form, seller, storage, and records as a reason to hold metal would turn a menu into a pitch.",
     ],
   },
   {
-    heading: "Information only",
+    heading: "Four decisions",
     paragraphs: [
-      "The checklist measures a process: form, counterparty, storage location, and documentation. It does not measure which object anyone ought to hold. It does not rank a dealer. These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop.",
+      "The checklist measures a process: form, counterparty, storage location, and documentation. Back on [Gold & Silver in Practice](/gold-silver) the same facts sit beside premium and authenticity. The object comparison lives on [gold bars vs coins](/gold-silver/bars-vs-coins); the custody menu on [storing gold and silver](/gold-silver/storage).",
     ],
   },
 ];
@@ -947,7 +1079,7 @@ const warehouses: Section[] = [
     heading: "",
     paragraphs: [
       "In **1640**, Charles I seized merchants’ bullion stored in the Tower mint. The Crown needed cash for war. Depositors who thought a royal warehouse was safe learned that a sovereign can close a window. After the Restoration, London’s custom shifted toward goldsmiths — private keepers whose running-cash notes could be endorsed onward while the metal stayed put.",
-      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking begins when that paper pays a debt without the metal leaving the vault. A city giro, a war bank’s notes, a regency’s shares, a revolution’s land paper — each of those later machines grew from that handoff.",
+      "Before public banks, paper money is a warehouse receipt: a claim check on deposited metal. Banking begins when that paper pays a debt without the metal leaving the vault. City giro balances, war-bank notes, regency shares, and revolutionary land paper all grew from that handoff — each on its own date.",
     ],
   },
   {
@@ -973,7 +1105,7 @@ const warehouses: Section[] = [
     paragraphs: [
       "What changes everything is circulation without movement of the metal. Once a third party accepts the ticket in payment, the issuer has issued money in use, even if the law still calls it a deposit receipt. The vault need not empty. The paper does the paying.",
       "As long as redemption is ordinary, the ticket remains a claim. People hold it because it is lighter than coin, not because they have given up on coin. When issue outruns what the window can pay, the same paper becomes a bet on the keeper. That is the quiet shift from warehouse to bank. It does not require a theory of fiat. It requires a queue the till cannot meet.",
-      "Three instruments sit close together here. A **warehouse receipt** is a claim on identified metal. A **bank note** is a promise to pay, often against a mixed reserve and a loan book. A **public-bank balance** is a book entry the city or the state has made hard to refuse for large settlement. The first can become the second without a revolution. The second becomes the third when settlement is pulled onto a public ledger.",
+      "The warehouse receipt still named metal in a pile. A bank note promised to pay, often against a mixed reserve and a loan book. A public-bank balance was a book entry the city or the state had made hard to refuse for large settlement. The first could become the second without a revolution. The second became the third when settlement was pulled onto a public ledger.",
     ],
   },
   {
@@ -986,7 +1118,7 @@ const warehouses: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is European, not a single national ladder."],
+    paragraphs: ["Civic tables, goldsmith notes, and a war bank — on separate dates."],
     list: [
       "**1401.** Barcelona’s Taula de Canvi: an early civic deposit table.",
       "**1587.** Venice’s Banco della Piazza di Rialto, after private-bank failures.",
@@ -1000,8 +1132,8 @@ const warehouses: Section[] = [
   {
     heading: "Why the handoff matters",
     paragraphs: [
-      "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. The warehouse ticket made those later machines possible because the public had already learned to pay with paper claims.",
-      "Each of those failures kept its own date. [John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The assignats ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization. The mechanisms rhyme. The regimes, the promises, and the centuries do not.",
+      "Once notes and book money are public, the issuer can be leaned on. A city can borrow against the vault. A crown can borrow against a charter. A regency can fuse a note-issuing bank with a rising company. Revolutionary paper can be tied to confiscated land and issued faster than it is retired. Those steps were possible because the public had already learned to pay with paper claims.",
+      "[John Law’s](/history/banks-paper/john-law) Mississippi System broke in **1720**: notes and shares under a French regency. The [assignats](/history/banks-paper/assignats) ran from **1789** to **1796**: revolutionary paper with a land story. Germany’s mark in **1923** was a twentieth-century collapse after war, reparations, and extreme monetization.",
       "All of them rested on the habit the goldsmiths taught London: a slip of paper could settle a debt while the metal stayed where it was. The ticket stayed good exactly as long as the window paid.",
     ],
   },
@@ -1021,12 +1153,22 @@ const amsterdam: Section[] = [
       "Amsterdam was a bill-of-exchange market. Large debts among merchants were written on the city. Payment still meant assembling a pile of coin and haggling over quality. Private cashiers already kept money and made transfers. Failures and quality fights still reached the wholesale market.",
       "The city answered with a public deposit bank. An ordinance of **31 January 1609** created the Amsterdamsche Wisselbank. Mixed specie went in. A standard credit came out. Large bills drawn on Amsterdam were to be settled through its books. The point was not to invent a national paper currency. It was to give the bill market one ledger everyone had to use.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/bank-of-amsterdam/dam-wisselbank-1611.jpg",
+      alt: "Engraving of Dam Square crowded with people, with the old town hall, the Nieuwe Kerk spire, and the Weigh House.",
+      caption: "The Dam in 1611: the old town hall that housed the new Wisselbank, with the Nieuwe Kerk and the Weigh House.",
+      credit: "CC0 — Rijksmuseum (RP-P-AO-21-5-3).",
+      width: 1600,
+      height: 1028,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "How giro money settles",
     paragraphs: [
       "Giro is settlement by transfer of a balance. The depositor does not collect coin and cart it across the Dam. He orders the bank to debit his account and credit another. The metal stays. The books move. For a bill falling due, that is payment.",
-      "The instruments were different things. A **warehouse receipt** is a claim on identified metal. A **giro balance** is a book credit at a public table, transferable to another account-holder. A **bank note** is a circulating promise to pay, typically issued by a later corporation with a loan book. Amsterdam’s ordinary machine is the second. It does not need a printed note walking the street. It needs a merchant with an account, or a cashier who has one, and a rule that large bills clear on those books.",
+      "A warehouse receipt still named metal in a pile. A giro balance was a book credit at a public table, transferable to another account-holder. A circulating bank note — a promise to pay against a loan book — belonged to later corporations. Amsterdam’s ordinary machine was the giro. It did not need a printed note walking the street. It needed a merchant with an account, or a cashier who had one, and a rule that large bills clear on those books.",
       "Convertibility still mattered. Coin could be withdrawn, subject to fees and to the bank’s rules. Fees made leaving the metal in, and paying on the books, the cheaper habit. As long as the window was ordinary, the florin banco was a convenient claim on a civic vault.",
       "From **1683** the bank issued receipts for coin left on deposit. The receipt was a claim on those coins. The bank balance was a transferable credit in banco. To take the original metal out, a holder needed the receipt. To pay a bill, he needed only the balance. The two claims could be sold apart. That split made bank money a settlement unit even when a given bag of coin stayed put. It was still not a circulating note. It was a more complete giro.",
     ],
@@ -1050,7 +1192,7 @@ const amsterdam: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is Amsterdam’s, not a mash of later paper disasters."],
+    paragraphs: ["From the 1609 ordinance to liquidation."],
     list: [
       "**31 January 1609.** City ordinance: the Wisselbank takes in coin and credits bank money.",
       "**Seventeenth century.** Large bills on Amsterdam settle by giro; banco stands at an agio over worn current coin.",
@@ -1064,7 +1206,7 @@ const amsterdam: Section[] = [
   {
     heading: "One book the market had to use",
     paragraphs: [
-      "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Later machines in this chapter do not copy Amsterdam. They use the habit it taught: book or paper money as settlement, with metal in the background until it is not.",
+      "Once a whole market pays on one public book, the issuer can be leaned on. The city can borrow against the vault and still call the credit a warehouse claim. Amsterdam taught the habit: book or paper money as settlement, with metal in the background until it is not.",
       "London built a different machine. The [Bank of England](/history/banks-paper/bank-of-england), chartered in **1694**, was war finance with a note issue attached, not a city giro table. It was built for a crown’s borrowing, not for a city’s bill market.",
       "For most of two centuries the florin banco was quoted above the coin it claimed. When the city’s loans became known, the premium went to a discount, and the table that had settled the bill market of Europe never recovered its place.",
     ],
@@ -1084,7 +1226,7 @@ const england: Section[] = [
     paragraphs: [
       "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Its concealed lending, and the collapse of the agio, came much later.",
       "London in the 1690s had a different problem. William III was at war with Louis XIV. The Crown needed a large loan at once. Goldsmith running-cash notes already circulated; the Stop of the Exchequer in **1672** had shown that a sovereign can close a window. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass.",
-      "The paper came in kinds. A **giro balance** is a book credit at a public table. A **goldsmith note** is a private claim on metal left with a keeper. A **Bank of England note** is a circulating promise to pay, issued by a chartered corporation that has already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine is war finance with that habit attached.",
+      "Amsterdam settled by giro — a book credit at a public table. London already had goldsmith notes: private claims on metal left with a keeper. The Bank’s note was something else again: a circulating promise to pay, issued by a chartered corporation that had already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine put that habit on a war loan.",
     ],
   },
   {
@@ -1092,7 +1234,7 @@ const england: Section[] = [
     paragraphs: [
       "Parliament needed money for the Nine Years’ War. The scheme that became the Bank offered a subscription: about **£1.2 million** lent to the government, at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England. The corporation could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
       "William Paterson and others had argued for such a bank. The political fact is the charter: a private company received a public privilege because the fiscal need was urgent. The notes were the Bank’s own paper, accepted because the window paid and because London learned to treat that paper as cash.",
-      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start. That is why it is not an Amsterdam clone.",
+      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start — a war lender with a note issue, not a city table for mixed coin.",
     ],
   },
   {
@@ -1102,26 +1244,46 @@ const england: Section[] = [
       "Country banks issued their own notes outside London. In the capital, Bank of England paper crowded the field. Statute helped. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing. The result was national money grown from a war loan, not from a city warehouse ticket alone.",
       "Convertibility was the ordinary test. Holders could present notes and ask for gold. Counterparties took the paper because they trusted that window. When the window is open, a note is a claim. When the window closes, the same note is a wartime unit that still spends if the public will hold it.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/bank-of-england/great-hall-1808.jpg",
+      alt: "Hand-colored aquatint of the Bank of England’s Great Hall: a tall columned room with clerks at counters and customers crossing the floor.",
+      caption: "The Great Hall of the Bank of England in 1808, from Ackermann’s Microcosm of London — Rowlandson and Pugin.",
+      credit: "CC0 — Metropolitan Museum of Art (59.533.569).",
+      width: 1600,
+      height: 1340,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "Restriction, 1797",
     paragraphs: [
       "War with revolutionary France strained the gold stock. Coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes. The Bank Restriction Act of **1797** made that suspension statute. The notes stayed in circulation. The window did not.",
-      "Restriction is a wartime English fact. The pound kept its name. The public could no longer test the name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
-      "Restriction was an English bank closing the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
+      "The pound kept its name. The public could no longer test that name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
+      "The Bank had closed the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/bank-of-england/gillray-midas-1797.jpg",
+      alt: "Hand-colored Gillray caricature of William Pitt as a giant Midas astride the Bank of England, swallowing gold and spewing paper notes.",
+      caption: "Gillray, “Midas, Transmuting All into Paper” (1797) — Pitt turns the Bank’s gold into notes after the Restriction.",
+      credit: "CC0 — National Gallery of Art, Washington (2015.49.1).",
+      width: 1011,
+      height: 1400,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "Resumption in the 1820s",
     paragraphs: [
       "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**, two years ahead of the Act’s final date.",
-      "The cycle was England’s own: suspend for war, keep the notes in use, resume later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
+      "England suspended for war, kept the notes in use, and resumed later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
       "Resumption did not make the Bank a warehouse. The loan book and the note issue remained. What returned was the ordinary test at the window.",
     ],
   },
   {
     heading: "A short timeline",
-    paragraphs: ["The order is England’s, not a mash of later paper disasters."],
+    paragraphs: ["From the Exchequer stop to cash payments again."],
     list: [
       "**1672.** Stop of the Exchequer; private paper that funded the Crown meets a closed sovereign window.",
       "**1694.** Bank of England charter: about £1.2 million as a war loan, with a note issue attached.",
@@ -1135,7 +1297,7 @@ const england: Section[] = [
   {
     heading: "War finance with a note attached",
     paragraphs: [
-      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. Later machines in this chapter do not copy London. They use the habit it taught: a great state’s daily money can be a bank’s paper.",
+      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. England showed that a great state’s daily money can be a bank’s paper — and that the paper can lose its metal window, then get it back.",
       "France tried two other answers in the same century. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**. The revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
     ],
   },
@@ -1146,14 +1308,14 @@ const assignats: Section[] = [
     heading: "",
     paragraphs: [
       "By **1795**, shops in revolutionary France quoted two worlds: a paper price that moved by the week, and a coin price people preferred. Assignats — notes first issued in **1789–90**, supposedly retired by sales of seized church and émigré land — still filled drawers. They no longer filled the role of money. The Directory was already returning toward metal.",
-      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. Seventy years after [John Law and the Mississippi Bubble](/history/banks-paper/john-law), France was again paying its way in paper — this time without a bank, and with land instead of a trading company as the advertised backing.",
+      "The land was real. The promise was that paper would come back in as land went out. Quantity rose faster than retirement. France paid its way in that paper for about six years, then abandoned it.",
     ],
   },
   {
     heading: "What an assignat was",
     paragraphs: [
       "The National Assembly inherited a broken treasury. In **November 1789** it placed church property at the disposal of the nation. That stock — later enlarged by émigré estates — became the biens nationaux. The first assignats, decreed in **December 1789**, were large, interest-bearing paper: more a state claim to be paid from land sales than a daily note.",
-      "Set beside the other paper of the century, the difference is plain. A **warehouse receipt** is a claim on identified metal at a window. A **Bank of England note** is a circulating promise to pay coin, subject to the Bank’s rules. A **Law note** was a bank promise fused with a rising company share. An **assignat** was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
+      "A warehouse receipt still named metal at a window. A [Bank of England](/history/banks-paper/bank-of-england) note was a circulating promise to pay coin, subject to the Bank’s rules. An assignat was a state liability whose advertised stop was land to be sold, not coin to be paid on demand. You could not walk to a vault and demand a posted weight. You were told the land was there, and that sales would retire the paper.",
       "The land story was the political sale. Metal was scarce in the till. Land was visible. If the paper was a claim on that land, the argument ran, it could not become worthless. Land can be real and still fail as a stop if issue is not retired and no window pays a fixed thing.",
     ],
   },
@@ -1164,6 +1326,16 @@ const assignats: Section[] = [
       "The Assembly treated quantity as a vote. **September 1790** added a large new issue and called the total a ceiling. The ceiling did not hold. Later years added more paper against the same land story, then against war. Once small notes exist, the state can pay in its own slip. Retirement becomes a hope about future sales, not a nightly burning that matches the press.",
       "Authorized totals moved from a few hundred million livres in the first decrees toward tens of billions by the mid-1790s. Series disagree on the last digit. The order does not: issue outran the sales meant to cancel it.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/assignats/assignat-10-sous-1793.jpg",
+      alt: "Small printed assignat of ten sous, dated 23 May 1793, headed “domaines nationaux”, with a triangle bearing the numeral 10.",
+      caption: "Assignat of ten sous (May 1793) — small enough to pay wages and buy bread.",
+      credit: "CC0 — Musée Carnavalet, Paris Musées.",
+      width: 1280,
+      height: 1036,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "Quantity outran retirement",
@@ -1180,6 +1352,16 @@ const assignats: Section[] = [
       "By **1795** the assignat was failing as a store of value and as a unit of account. Markets reached for coin, barter, or foreign units. In **February 1796** the printing plates were destroyed in public. The Directory had already begun to live with metal again. A brief sequel, the mandats territoriaux, tried another land paper in **1796** and died in months. That is a postscript, not a second System.",
       "The paper did not vanish from drawers. It ceased to be money. France returned toward specie by abandoning the assignat, not by promising to redeem the same notes later at an old metal definition.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/assignats/destruction-of-plates-1796.jpg",
+      alt: "Engraving of officials feeding a bonfire in a Paris square while onlookers watch smoke rise past the buildings.",
+      caption: "Burning the assignat plates on the Place Vendôme, 19 February 1796 — later engraving.",
+      credit: "CC0 — Musée Carnavalet, Paris Musées (G.29143).",
+      width: 887,
+      height: 1292,
+      layout: "float-start",
+      placement: 1,
+    },
   },
   {
     heading: "A short timeline",
@@ -1199,9 +1381,8 @@ const assignats: Section[] = [
     heading: "Land on the advertisement, press in the till",
     paragraphs: [
       "Once a state can pay in its own land-tied slip, the issuer can be leaned on. The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
-      "Law’s System had fused a note-issuing bank with a colonial trading company under the Regency; notes and Mississippi shares inflated together and broke in **1720**. The assignats had no Banque Royale and no rue Quincampoix. They were revolutionary state paper with a land story, issued under a different regime and for a different war.",
-      "Across the Channel, the [Bank of England](/history/banks-paper/bank-of-england) stopped paying gold for its notes in **1797**. Those notes stayed everyday English money, and resumption in the **1820s** brought the window back. The same wars strained both treasuries. England suspended and resumed. France’s paper died.",
-      "When Germany’s mark collapsed in [1923](/history/20th-century/weimar-1923), commentators reached back for the assignats. The parallel holds in mechanism — issue that outruns any real limit — and in little else: the century, the regime, and the promise printed on the paper were all different.",
+      "France had already lived through one paper disaster: [John Law and the Mississippi Bubble](/history/banks-paper/john-law) in **1720**. The Revolution did not revive that bank-and-company machine. It issued state paper with a land story — and still printed faster than sales could retire it.",
+      "Across the Channel, the same wars strained the [Bank of England](/history/banks-paper/bank-of-england). In **1797** London stopped gold payout on Bank notes; those notes stayed everyday English money, and resumption in the **1820s** brought the window back. England suspended and resumed. France’s paper died.",
     ],
   },
 ];
@@ -1442,43 +1623,42 @@ const solidus: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "After Rome’s silver had been washed thin, pay tables and tax assessments still needed a coin strangers would trust overnight. In the early **fourth century**, Constantine gave them one. The **solidus** was a gold coin of tightly held weight and fineness — about **1/72 of a Roman pound**, roughly **4.5 grams**. It outlasted the western empire and lived on in Constantinople as the **nomisma**. What made it famous was not its beauty. It was that the weight stayed put.",
-      "The silver side of that story is [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus), where the mint lightened the everyday coin under fiscal pressure. The solidus is the opposite case: a gold unit defended as a standard for centuries.",
+      "In the early **fourth century**, Constantine’s mints settled on a gold coin of tightly held weight and fineness — about **1/72 of a Roman pound**, roughly **4.5 grams**. The **solidus** became the premier gold unit of the late Roman world. It outlasted the western empire and lived on in Constantinople as the **nomisma**. What made it famous was not its beauty. It was that the weight stayed put.",
+      "The timing mattered. By the worst years of the third century, many coins that still passed as silver were bronze underneath — a wash over a familiar face. Pay tables and tax assessments still needed a piece strangers would trust overnight. Gold already covered large payments; Constantine’s solidus made that order explicit and durable.",
     ],
   },
   {
     heading: "What Constantine changed",
     paragraphs: [
-      "In the 310s Constantine’s mints settled on the gold solidus. The tetrarchs before him had experimented with gold; Constantine’s coin is the one that stuck as the empire’s premier gold unit.",
-      "Gold had already been the metal of large payments while silver turned into tokens. The solidus made that order explicit and durable. Accounts, taxes, and payments to the elite could refer to a coin whose metal content people trusted. Bronze and reformed base coins still handled small change under other names.",
-      "The setting was imperial consolidation after civil war. A stable gold unit supported a state that collected and spent across an enormous territory.",
-      "Pay tables that could name a reliable gold piece cut through the confusion left by silver coins that no longer meant what their designs claimed. That practical usefulness is why the solidus outlived the slogans of restoration and became the empire’s reference gold coin for centuries.",
+      "In the 310s the solidus stuck as the empire’s premier gold unit. The tetrarchs before Constantine had experimented with gold; his coin is the one that held. Accounts, taxes, and payments to the elite could name a piece whose metal content people trusted. Bronze and reformed base coins still handled small change under other names.",
+      "The setting was imperial consolidation after civil war. A state that collected and spent across an enormous territory needed a gold unit that did not have to be re-assayed every time a bag crossed a desk. Pay tables that could name a reliable gold piece cut through the confusion left by silver coins that no longer meant what their designs claimed.",
+      "That practical usefulness is why the solidus outlived slogans of restoration. It became the reference gold coin for centuries — not because a decree said so forever, but because the metal in the hand stayed close to what the type promised.",
     ],
   },
   {
-    heading: "Weight and fineness as the product",
+    heading: "A known weight of gold",
     paragraphs: [
-      "What set the solidus apart from the late antoninianus was not a handsome type. It was discipline about mass and purity. A merchant or a tax official could treat the coin as a known quantity of gold. That is Lydia’s logic again — only now the promise was a gold weight held for generations.",
-      "The pressure to debase never disappears in a state that needs money. The solidus is famous because, for long periods, Byzantine authorities treated its standard as something to defend. When later debasements and reforms came, they were measured against the memory of that hard gold coin.",
-      "Silver and base coins could still be adjusted for local pay. The solidus had a different job: the large, trusted settlement piece, the metal people reached for after silver’s reputation had burned in the third century.",
-      "Fractions — the semissis, the tremissis, and later related issues — let the gold standard work at more than one size of payment without abandoning the fixed weight. The full solidus stayed the reference.",
+      "What set the solidus apart was not a handsome type. It was discipline about mass and purity. A merchant or a tax official could treat the coin as a known quantity of gold — the same logic as an early mint stamp, only now the promise was a gold weight held for generations.",
+      "The pressure to debase never disappears in a state that needs money. The solidus is remembered because, for long periods, authorities treated its standard as something to defend. When later debasements and reforms came, they were measured against the memory of that hard gold piece.",
+      "Silver and base coins could still be adjusted for local pay. The solidus had a different job: the large, trusted settlement piece people reached for after silver’s reputation had burned. Everyday markets still needed small change; large contracts and fiscal accounts needed something that held.",
+      "Fractions — the semissis, the tremissis, and later related issues — let gold work at more than one size of payment without abandoning the fixed weight. The full solidus stayed the reference. A half or a third was still a slice of the same standard, not a new promise invented for convenience.",
     ],
   },
   {
     heading: "From Rome to Byzantium: the nomisma",
     paragraphs: [
       "As imperial power centered on Constantinople, the solidus continued in Greek as the nomisma, with related denominations. Western kingdoms minted their own gold at times, often imitating familiar types. The eastern empire kept the solidus alive as a working standard for Mediterranean and Near Eastern trade.",
-      "Foreigners gave good Byzantine gold names that signaled trust. The medieval “bezant” of western sources is that reputation traveling. Across changing dynasties, the coin’s weight stayed credible enough to price contracts and tribute.",
-      "Byzantine finances were not frozen; they had their own crises. But the ancient story of money ends on a coin that kept its metal, not on a bank or a note.",
-      "Trade routes still needed a settlement metal strangers would accept overnight. For centuries the nomisma filled that role, because the mint’s promise stayed close to the metal in the hand — the opposite of the washed silver of the third century.",
+      "Foreigners gave good Byzantine gold names that signaled trust. The medieval “bezant” of western sources is that reputation traveling. Across changing dynasties, the coin’s weight stayed credible enough to price contracts and tribute. A merchant who had never seen the emperor still knew what a solidus-weight of gold looked like in the balance.",
+      "Byzantine finances were not frozen. The empire had its own crises, reforms, and later lightenings. Even so, for a long stretch the solidus and its heirs kept their metal — a unit that could outlast a capital because the scales, not the slogans, were what people trusted.",
+      "Trade routes still needed a settlement metal strangers would accept overnight. For centuries the nomisma filled that role, because the mint’s promise stayed close to the metal in the hand.",
     ],
   },
   {
-    heading: "Coin, not a receipt",
+    heading: "How long a gold weight can last",
     paragraphs: [
-      "A lasting gold weight does not mean Rome never fell. The collapse of the west and the survival of the east are separate facts from the mint’s scales. A gold standard can outlast a capital, and this one outlasted Rome itself by the better part of a thousand years.",
-      "The two fail in different ways. A coin can be clipped or debased, and the cheat shows up on the scale; Rome’s washed silver had taught everyone to look. A receipt can be issued beyond the metal behind it, and nobody sees that until enough holders ask for the metal on the same day. The late empire had cheated in the first way. Later centuries would learn the second.",
-      "A solidus is a coin you hold. A receipt is a claim on a coin you are not holding. Receipts, public banks, and banknotes arrive with the merchants and deposit banks of later centuries — the story picks up in [warehouses to public banks](/history/banks-paper/warehouses-to-public-banks).",
+      "A lasting gold weight does not mean Rome never fell. The collapse of the west and the survival of the east are separate facts from the mint’s scales. A gold standard can outlast a capital, and this one outlasted western Rome by the better part of a thousand years.",
+      "Clipping and debasement fail on the scale; washed silver had taught everyone to look. The solidus’s reputation rested on how often that check still matched the type. A coin you hold is honest — or not — by metal and mass. That is the whole test.",
+      "Later Europe would invent different instruments: warehouse receipts, deposit banks, banknotes — claims on metal kept elsewhere. Those are other machines. The solidus is simpler. Its promise is the gold in the hand.",
     ],
   },
   {
@@ -1487,14 +1667,14 @@ const solidus: Section[] = [
     list: [
       "**Early 4th century:** Constantine establishes the solidus as the premier gold unit, about 1/72 of a pound.",
       "**4th–5th centuries:** The gold solidus frames elite and fiscal payments while the memory of third-century silver lingers.",
-      "**Byzantine centuries:** The nomisma carries the weight tradition forward; western traders call it the bezant.",
+      "**Byzantine centuries:** The nomisma carries the weight forward; western traders call good eastern gold the bezant.",
     ],
   },
   {
-    heading: "Weight held, then the ticket",
+    heading: "Where the weight held",
     paragraphs: [
-      "Rome thinned its silver until a wash over bronze stood where a denarius had been. Constantine answered with gold, and the weight held — for longer than the western empire itself. That is where [ancient money](/history/ancient) ends: on a coin whose metal still matched its face.",
-      "What comes next in [Sound Money History](/history) is a different instrument. Merchants started trusting a piece of paper that said the gold was somewhere else — the long story of [banks and paper](/history/banks-paper).",
+      "Third-century silver had been thinned until a wash stood where a denarius had been. Constantine answered with gold of fixed weight, and that weight held — for longer than the western empire itself. A solidus is a coin you hold. Its honesty is metal and mass.",
+      "Anyone curious about how Rome’s everyday silver got there can read [Rome: denarius and aureus](/history/ancient/rome-denarius-aureus). The solidus itself needs no sequel: for centuries, the type and the gold stayed close enough that strangers could settle on the scales.",
     ],
   },
 ];
@@ -1593,6 +1773,16 @@ const jackson: Section[] = [
       "Land sales in the West were booming. Speculators often paid with bank paper. In **1836** the Specie Circular ordered that public lands be paid for in gold and silver. The rule was a hard-money brake on paper land fever. It also drained specie from banks that had been extending credit against land notes.",
       "The mix — deposit removal, state-bank expansion, then a sudden specie demand for land — belongs in any account of the mid-1830s. Whether one blames Jackson, Biddle, state banks, or the land boom depends on the historian. The sequence does not.",
     ],
+    figure: {
+      src: "/images/history/america/jackson-and-the-bank/downfall-of-mother-bank-1833.jpg",
+      alt: "Lithograph cartoon: Andrew Jackson holds up an order removing the public deposits while the Bank’s columns collapse and Nicholas Biddle, drawn as a devil, flees with his allies.",
+      caption: "“The Downfall of Mother Bank” (1833) — Jackson’s order removing the deposits brings the Second Bank down.",
+      credit: "Public domain — Library of Congress (LC-DIG-ds-14737).",
+      width: 1024,
+      height: 749,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "Panic of 1837 and the aftermath",
@@ -1601,6 +1791,16 @@ const jackson: Section[] = [
       "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early **1840s**. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the **1860s**.",
       "Seventy years later the [Panic of 1907](/history/20th-century/panic-1907-fed) reopened the question of a central bank at full volume, and that time Congress built one. The Federal Reserve was a different institution, answering a trust-company run rather than Jackson’s veto message.",
     ],
+    figure: {
+      src: "/images/history/america/jackson-and-the-bank/clay-the-times-1837.jpg",
+      alt: "Crowded street scene cartoon dated July 4th 1837: idle workers, a mother and child begging, a pawnbroker’s, the Custom House demanding specie, and a bank posting “No specie payments made here.”",
+      caption: "Edward W. Clay, “The Times” (1837) — idle hands, a pawnbroker’s queue, and a bank that will not pay in specie.",
+      credit: "Public domain — Library of Congress (LC-DIG-ds-04507).",
+      width: 1024,
+      height: 714,
+      layout: "breakout",
+      placement: 1,
+    },
   },
   {
     heading: "A short timeline",
@@ -1725,6 +1925,16 @@ const crime1873: Section[] = [
       "Bryan did not invent the silver question. He inherited a fight that began with the Mint list of 1873 and ran through purchase acts, Treasury gold drains, and the language of crime. The campaign is the peak volume, not the first statute.",
       "After 1896 the path ran toward the [Gold Standard Act of 1900](/history/america/road-back-gold), which defined the dollar in gold in law.",
     ],
+    figure: {
+      src: "/images/history/america/crime-of-1873/bryan-16-to-1-1896.jpg",
+      alt: "Colour campaign print headed by a portrait of William Jennings Bryan, with the large text “16 to 1” over a printed speech.",
+      caption: "“16 to 1 … the speech that won the nomination” (1896) — a campaign print of Bryan’s free-silver speech.",
+      credit: "Public domain — Henderson Lithographing Co., Library of Congress (LC-DIG-pga-03796).",
+      width: 687,
+      height: 1024,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "A short timeline",
@@ -1786,6 +1996,7 @@ const roadBack: Section[] = [
       credit: "Public domain — copyright 1900, Keppler & Schwarzmann; term expired.",
       width: 1280,
       height: 1369,
+      layout: "inset",
     },
   },
   {
@@ -1831,6 +2042,16 @@ const pieceOfEight: Section[] = [
       "“Piece of eight” is the English name. “Spanish dollar” is the commercial name that stuck in North America and the Caribbean. Neither name describes a new metal. Both name a familiar weight of silver that strangers could recognise without a letter of credit from a local prince.",
       "Cut pieces — bits of eight — were everyday arithmetic. Two bits made a quarter dollar, as later American slang still remembers. The whole coin stayed the large settlement piece. Divisible in practice, not only on paper, it traveled well.",
     ],
+    figure: {
+      src: "/images/history/silver/piece-of-eight/eight-reales-1796.jpg",
+      alt: "Both sides of a worn silver eight-real coin of Carlos IV dated 1796: laureate bust, and crowned arms between two pillars.",
+      caption: "Eight reales of Carlos IV, Mexico City mint, 1796. The small dents are later chop marks from money-changers in Asia.",
+      credit: "CC0 — coin photograph via Wikimedia Commons (Flickr, Joe deSousa).",
+      width: 1600,
+      height: 798,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "From American mints to world ports",
@@ -1839,6 +2060,16 @@ const pieceOfEight: Section[] = [
       "In the Caribbean and British North America, where local coin was scarce, Spanish dollars were ordinary money. Contracts, wages, and taxes often meant that coin when they said “dollar.” In East Asia, after earlier paper experiments had failed or been abandoned, trade absorbed Spanish silver as settlement metal. A coin from a Spanish American mint could close a deal in Canton or Manila because both the metal and the design were known.",
       "There were rivals — Dutch and Portuguese coins, later British trade dollars. The Spanish piece won on volume and familiarity. Money has network effects: the coin you can spend tomorrow is the coin you accept today.",
     ],
+    figure: {
+      src: "/images/history/silver/piece-of-eight/chopmarked-eight-reales.jpg",
+      alt: "Silver eight-real coin so densely stamped with small Chinese characters that the original design is almost hidden.",
+      caption: "An eight-real piece of 1821, later stamped over and over with Chinese merchants’ chop marks.",
+      credit: "CC0 — Bode-Museum, Berlin; photograph via Wikimedia Commons.",
+      width: 1385,
+      height: 1367,
+      layout: "float-end",
+      placement: 1,
+    },
   },
   {
     heading: "Why one silver coin travelled",
@@ -1855,6 +2086,16 @@ const pieceOfEight: Section[] = [
       "The United States took over a unit traders understood, then spent the next century fighting over whether gold, silver, or paper would rule it. The piece of eight is the coin it inherited. The Crime of 1873 was a later American fight over the law.",
       "Spanish dollars kept circulating in the United States for decades after independence. Laws and mint output took time to replace a coin the whole Atlantic already knew. Foreign silver stayed legal tender in the United States until **1857**.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/early-us-coinage.jpg",
+      alt: "Obverse and reverse of a 1795 Flowing Hair silver dollar: Liberty with loose hair, and an eagle in a wreath.",
+      caption: "Flowing Hair dollar (1795) — an American silver dollar struck to a weight close to the Spanish coin.",
+      credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
+      width: 1600,
+      height: 806,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "A short timeline",
@@ -1872,7 +2113,7 @@ const pieceOfEight: Section[] = [
     heading: "One coin, several later fights",
     paragraphs: [
       "The Spanish dollar faded as national mints and gold standards took over. The fights it left behind did not. The mountain that fed so much of its metal is [Potosí](/history/silver/potosi). The American dollar that copied its weight is [early U.S. coinage](/history/america/early-us-coinage). The problem of keeping two metals in one money is [bimetallism](/history/silver/bimetallism).",
-      "Those threads run through the rest of [silver in history](/history/silver): a mountain, a coin, a law, a market break, and an industry.",
+      "Those threads run through the rest of [silver in history](/history/silver) — from Potosí and the Spanish dollar through the mint-ratio fights, Silver Thursday, and silver’s industrial half.",
     ],
   },
 ];
@@ -1931,10 +2172,10 @@ const silverThursday: Section[] = [
     ],
   },
   {
-    heading: "A squeeze, a rule book, a dated break",
+    heading: "What the record holds",
     paragraphs: [
-      "What the record holds is a concentrated long, a set of new margin and position rules at COMEX, a January peak, and a break on **27 March 1980**. Silver was already an industrial metal by then; that side of its story is [monetary history and industry](/history/silver/monetary-and-industry).",
-      "Silver Thursday gets retold as a trading lesson. The record itself is information: who held what, which rules changed, and on which day the price broke. What anyone should do with silver today is a different question — the one [information versus advice](/sound-money/information-not-advice) is about.",
+      "What the record holds is a concentrated long, a set of new margin and position rules at COMEX, a January peak near **$49.45** an ounce, and a break on **27 March 1980**. Silver was already an industrial metal by then; that side of its story is [monetary history and industry](/history/silver/monetary-and-industry).",
+      "Silver Thursday gets retold as a trading lesson. The record itself is quieter: who held what, which rules changed, and on which day the price broke. January’s peak and March’s unwind are still the dated pair that later markets remember.",
     ],
   },
 ];
@@ -1970,6 +2211,16 @@ const bimetallism: Section[] = [
       "As silver’s price in gold fell and the major trading states came to prefer gold for large payments, fixed ratios grew harder to defend. Silver could survive as small change with limited legal-tender status while the main unit went to gold. That European turn sits behind America’s 1873 politics without being the same thing.",
       "Union members still faced Gresham’s arithmetic whenever the market ratio drifted from the mint ratio. Coordinating coin designs does not freeze the world price of silver. The pressure was the same everywhere: a world market for silver, creditors and large-payment systems that preferred gold, and mint ratios that no longer matched trade.",
     ],
+    figure: {
+      src: "/images/history/silver/bimetallism/belgium-5-francs-1869.jpg",
+      alt: "Both sides of a Belgian silver five-franc coin of 1869: Leopold II in profile, and the crowned lion arms.",
+      caption: "Belgian five francs of 1869 — a Latin Monetary Union silver coin struck to the shared standard.",
+      credit: "CC0 — coin photograph via Wikimedia Commons.",
+      width: 1211,
+      height: 612,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "America’s version of the same problem",
@@ -2017,6 +2268,16 @@ const potosi: Section[] = [
       "Potosí was not the only American mine. New Spain, in today’s Mexico, and other Andean sites mattered too. But Cerro Rico became the symbol and, for long periods, the largest single source. A city grew at high altitude around the mountain, and the finances of the Spanish empire ran partly on it. Ore in a mountain is not yet money in a port. It took refining, forced labour, and a mint mark to make it that.",
       "Annual tonnage series differ from one reconstruction to the next. The direction does not. Silver from Potosí and mines like it flooded Eurasian payments for generations. Geology plus imperial organisation produced a monetary fact: a stock of silver large enough that later mint ratios and Asian settlement habits had to live with it.",
     ],
+    figure: {
+      src: "/images/history/silver/potosi/cieza-cerro-del-potosi-1553.jpg",
+      alt: "Woodcut of a steep mountain labelled “Cerro del Potosí” with paths up its slopes and a small town at its foot.",
+      caption: "“Cerro del Potosí” — an early printed view of the mountain, from Pedro Cieza de León’s Crónica del Perú (Seville, 1553).",
+      credit: "Public domain — woodcut from Cieza de León, Crónica del Perú (1553).",
+      width: 862,
+      height: 650,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "Why the silver moved",
@@ -2214,24 +2475,24 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "When a headline says a central bank bought ten tonnes of gold last month, the number comes from a reserve report: a stock of gold in tonnes or ounces, filed with the IMF or published by the bank itself. From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how it compares with the size of the economy, and who bought or sold in a given month. It is not a shopping list. Central banks buy and sell under statute, sanctions, and reserve rules that have nothing to do with a household’s savings.",
-      "The sections below explain each kind of figure, then follow a few countries through their own books: China’s published stock, Poland’s buying spree, Canada’s reserve table, which now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
+      "Poland’s central bank closed **August 2026** with **648 tonnes** of gold on its books — up from about **103 tonnes** at the end of **2017**. China’s published stock sat near **2,387 tonnes**. Canada’s monthly reserve table still prints **Gold: 0**. Those three lines come from the same kind of document: an official reserve report filed with the IMF or published by the bank itself.",
+      "From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how the stock compares with the size of the economy, and who bought or sold in a given month. Central banks move metal under statute, sanctions, and reserve rules. The arithmetic is a state ledger, not a household savings plan.",
     ],
   },
   {
-    heading: "How gold enters the reserve statement",
+    heading: "How gold gets onto the reserve books",
     paragraphs: [
       "The IMF’s International Financial Statistics and related reserve templates ask members to report official gold holdings. The physical quantity is the durable fact: tonnes or troy ounces of monetary gold. A dollar value is then attached so gold can sit beside foreign-currency assets, **SDRs** (Special Drawing Rights — an IMF reserve asset), and IMF reserve positions in one reserve total.",
-      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) of $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not tell you which.",
-      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots used on this site (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table below. Germany, Italy, and France hold large legacy European stocks. China’s published official figure — dated in the holdings section below — sits above **2,300 tonnes** and is widely treated as a floor, not a full count. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
+      "That dollar value is a reporting convention. Some authorities mark gold near a market price when they compute gold’s **share** of reserves. Others keep a historical or statutory cost on their own books — the U.S. [official book value](/markets/official-gold-book-value) of $42.22 is the extreme case. A high gold share can mean a large inherited stock, a small foreign-currency book, a mark-to-market revaluation, or recent buying. The share alone does not say which.",
+      "World official gold, compiled from those country books plus IMF and ECB lines, is on the order of **36,000 tonnes** in recent year-end snapshots (about **35,908 tonnes** at end-2025 in the compiled desk). The United States remains the largest single reported stock, **8,133.5 tonnes** in the July **2026** World Gold Council / IMF book used in the GDP table further down. Germany, Italy, and France hold large legacy European stocks. China’s published official figure sits above **2,300 tonnes** and is widely treated as a floor, not a full count. Russia’s July **2026** line in that same compilation is **2,276.8 tonnes**.",
     ],
   },
   {
     heading: "Gold as a share of FX and gold reserves",
     paragraphs: [
-      "Tonnes and share answer different questions. The share used here is gold valued near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It is not based on the U.S. statutory **$42.22** book.",
+      "Tonnes and share answer different questions. The share used here is gold valued near a market price, divided by foreign-exchange reserves plus that gold value — the World Gold Council’s usual construction from the IMF’s “total reserves minus gold” line and an end-period LBMA gold price. It does not use the U.S. statutory **$42.22** book.",
       "Two published world figures sit a year apart and should not be joined into a trend line. In the Council’s **2025** reserve-manager survey, the prompt stated that gold accounted for **19 percent** of total reported reserves — foreign exchange plus gold — in **Q3 2024**. The Council’s market primer dated **1 April 2026**, using IMF COFER and IFS, puts gold at **26 percent** of total global allocated reserves by **Q3 2025**. Different bases, different dates: two prints, not one spliced series.",
-      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited in the China section. Narodowy Bank Polski’s first-quarter **2026** statement put gold at **29.4 percent** of Poland’s official reserve assets at the end of **March 2026**. Poland’s share is higher because its foreign-currency book is smaller, not because it holds more gold than China.",
+      "The same primer splits the **2025** average by group: about **30 percent** at developed-market central banks, about **15 percent** at emerging-market central banks, against about **4 percent** for emerging markets in **2010**. Country books show why a world average is a blend. China’s stock is large in tonnes and still small as a share of a very large reserve book: **4 percent** at end-**2023**, **5 percent** at end-**2024**, and **8.9 percent** of China’s foreign-exchange reserves in **May 2026**, per the World Gold Council notes cited with China’s holdings below. Narodowy Bank Polski’s first-quarter **2026** statement put gold at **29.4 percent** of Poland’s official reserve assets at the end of **March 2026**. Poland’s share is higher because its foreign-currency book is smaller, not because it holds more gold than China.",
     ],
     table: {
       caption:
@@ -2259,10 +2520,10 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "Official gold relative to GDP",
     paragraphs: [
-      "A third way to size a gold stock is against the whole economy. Take the reported official gold, value it at a named market price, and divide by that country’s nominal GDP. A large vault beside a large economy can look light on this measure; a smaller vault beside a smaller economy can look heavy. It measures weight against output, not the size of the vault.",
-      "The country set below is short and labeled. Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared — the same July compilation the year-to-date buyer table uses. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026**, the end-month London price that matches that holdings month, and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
-      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP. Switzerland’s **1,039.9 tonnes** are about **12.90 percent** of **$1,043.544 billion**. Italy’s **2,451.8 tonnes** are about **12.45 percent** of **$2,550.111 billion**. Russia’s **2,276.8 tonnes** are about **11.39 percent** of **$2,587.938 billion**. France (**2,437.0 tonnes**, **9.36 percent** of **$3,368.925 billion**) and Germany (**3,349.5 tonnes**, **8.59 percent** of **$5,048.059 billion**) sit in the same European neighborhood. The United States has by far the largest stock, **8,133.5 tonnes**, yet it is only about **3.42 percent** of **$30,767.075 billion**. Japan’s **846.0 tonnes** are about **2.47 percent** of **$4,435.163 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**.",
-      "The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP — close to Germany. Later months stay out of this division: Poland’s August stock of **648 tonnes** and China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, appear in their own sections below. Mixing them into a July calculation would produce a percentage no source published.",
+      "Another way to size a gold stock is against the whole economy: take the reported official gold, value it at a named market price, and divide by that country’s nominal GDP. A large vault beside a large economy can look light on this measure; a smaller vault beside a smaller economy can look heavy. It measures weight against output, not the size of the vault.",
+      "Tonnes are the World Gold Council compilation drawn from IMF International Financial Statistics, dated **3 September 2026**, with country books through **31 July 2026** where those books have appeared — the same July compilation the year-to-date buyer table uses. Market value uses the LBMA Gold Price PM of **$4,026.60** an ounce on **31 July 2026**, the end-month London price that matches that holdings month, and **32,150.7466** troy ounces per tonne. Nominal GDP is the IMF World Economic Outlook **April 2026** current-price dollar line for calendar **2025**. Portugal’s **2025** line in that vintage is still an IMF estimate; the vintage’s latest actual year for Portugal is **2024**.",
+      "On that arithmetic, Portugal’s **382.7 tonnes** are about **14.30 percent** of its **$346.412 billion** 2025 GDP — the heaviest row in the table. Switzerland, Italy, and Russia follow in the low teens. The United States has by far the largest stock, **8,133.5 tonnes**, yet only about **3.42 percent** of **$30,767.075 billion**. China’s July book of **2,366.3 tonnes** is about **1.56 percent** of **$19,626.247 billion**. The same July compilation puts Poland at **640.2 tonnes**, about **8.00 percent** of its **$1,035.586 billion** 2025 GDP — close to Germany’s **8.59 percent**.",
+      "Later months stay out of this division: Poland’s August stock of **648 tonnes** and China’s August SAFE print of **76.73 million ounces**, about **2,387 tonnes**, appear with their own dated books below. Mixing them into a July calculation would produce a percentage no source published.",
     ],
     table: {
       caption:
@@ -2284,11 +2545,11 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "This percentage is not gold’s share of reserves; that is the table above. Change the gold price or the GDP year and every row moves: a higher gold price lifts every country’s figure, and a faster-growing economy pulls its own figure down.",
+      "Gold-to-GDP is a different clock from gold’s share of reserves — the table above. Change the gold price or the GDP year and every row moves: a higher gold price lifts every country’s figure, and a faster-growing economy pulls its own figure down.",
     ],
   },
   {
-    heading: "Vaults and where the bars sit",
+    heading: "Where the bars sit",
     paragraphs: [
       "Reported gold is not always in the reporting capital. For much of the postwar period, European and other official holders kept bars at the Federal Reserve Bank of New York, the Bank of England, and the Banque de France. Custody was a service; title stayed with the owner. Location still matters for politics and for logistics: a bar in New York is not a bar in Frankfurt.",
       "The 2010s brought a documented repatriation wave. The Deutsche Bundesbank’s 2013–2017 programme moved gold from New York and Paris to Frankfurt (300 tonnes from the New York Fed and 374 tonnes from the Banque de France under that plan). De Nederlandsche Bank announced in 2014 that it would bring 122 tonnes from New York to Amsterdam. Austria, Hungary, and others published their own transfers. The Bank of England remains a major custodian for official gold that has not been called home.",
@@ -2296,11 +2557,37 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
-    heading: "Recent official purchases, dated",
+    heading: "Where the U.S. official gold sits",
     paragraphs: [
-      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on this site’s desk are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
-      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland** (covered at more length below). Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
-      "Each line is a reported change in official gold for a calendar year. The monthly picture for 2026, buyers first and then sellers, follows.",
+      "The United States also publishes an address list for the gold on its own books: the Treasury’s Status Report of U.S. Government Gold Reserve, carried on FiscalData as the [U.S. Treasury-Owned Gold](https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold) dataset. The report month is **August 2026**, record date **31 August 2026**. The dataset page was last updated **10 September 2026**.",
+      "Fine troy ounces in the table are the printed lines. Tonnes divide those ounces by **32,150.7466**. Each share divides the line by the sum of the report, **261,498,926.241** fine troy ounces. Fort Knox, West Point, and Denver are Mint deep storage — gold bullion bars. Mint working stock is coins, blanks, and miscellaneous gold at Mint locations set aside for coinage. The New York line is Treasury-owned bullion at the Federal Reserve Bank of New York; foreign official bars stored in that building stay on the foreign owner’s reserve book. Display bullion and Reserve Bank coin lines are grouped as other.",
+    ],
+    table: {
+      caption:
+        "U.S. Treasury-Owned Gold, record date 31 August 2026. Tonnes equal fine troy ounces divided by 32,150.7466, rounded to 0.01 tonne; the total tonne is that conversion of the total ounces. Shares use the unrounded ounces and are rounded to 0.01 percentage point, so the rounded rows add to 100.01. Other adds display bullion (1,993.321 oz), coins in the New York vault (73,452.066 oz), and display coins (377.434 oz).",
+      headers: ["Facility", "Fine troy ounces", "Tonnes", "Share of total"],
+      rows: [
+        ["Fort Knox (Mint deep storage)", "**147,341,858.382**", "**4,582.84**", "**56.35%**"],
+        ["West Point (Mint deep storage)", "**54,067,331.379**", "**1,681.68**", "**20.68%**"],
+        ["Denver (Mint deep storage)", "**43,853,707.279**", "**1,364.00**", "**16.77%**"],
+        ["Mint working stock", "**2,783,218.656**", "**86.57**", "**1.06%**"],
+        ["Federal Reserve Bank of New York", "**13,376,987.724**", "**416.07**", "**5.12%**"],
+        ["Other (display and coin lines)", "**75,822.821**", "**2.36**", "**0.03%**"],
+        ["Total", "**261,498,926.241**", "**8,133.53**", "**100%**"],
+      ],
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The United States Bullion Depository at Fort Knox took its first gold in January **1937**, and the [U.S. Mint](https://www.usmint.gov/news/inside-the-mint/fort-knox-history) records that the depository was fully operational that June. These are the same ounces carried at the statutory **$42.2222** per fine troy ounce on [official gold book value](/markets/official-gold-book-value): about **261.5 million** fine troy ounces, **8,133.53 tonnes** at the conversion above. The **8,133.5 tonnes** in the GDP table is that stock rounded to a tenth of a tonne.",
+    ],
+  },
+  {
+    heading: "Recent official purchases",
+    paragraphs: [
+      "After years of modest net official demand, the World Gold Council’s annual tallies show a sharp rise in net buying by central banks in the early 2020s. The compiled world net figures used on the [desk](/desk) are **1,080 tonnes** in 2022, **1,050.8 tonnes** in 2023, and **1,092.4 tonnes** in 2024, with a still-open 2025 line. Those are official-sector nets — purchases minus sales — not private investment flows.",
+      "Country lines in the same compiled series, drawn from IMF-reported changes, include **China** (large 2023 additions, then smaller 2024–2025 increments), **Türkiye** (heavy two-way activity across several years), **India**, **Kazakhstan**, **Uzbekistan**, **Czechia** (a multi-year buying programme announced in 2023), and **Poland**. Singapore, Brazil, and Azerbaijan appear as notable 2024–2025 lines. Russia’s large reported additions sit mainly in 2016–2019 in that series.",
     ],
   },
   {
@@ -2351,7 +2638,7 @@ const centralBankGoldReserves: Section[] = [
     heading: "Reported net official sellers, YTD through July 2026",
     paragraphs: [
       "The same World Gold Council monthly compilation — through **31 July 2026**, published **3 September 2026** — also names the largest reported official reductions. Like the buyer figures, each tonne is a change on a central bank’s published books, not a private investment flow.",
-      "Two countries dominate the year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and its July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan is still a net buyer for the year, as the table above shows. No August seller total has been published yet.",
+      "Two countries dominate the year-to-date sales list. The Central Bank of the Republic of Türkiye sold **1 tonne** in July, bringing reported year-to-date sales to **85 tonnes**. The Central Bank of Russia sold **6 tonnes** in July, bringing reported year-to-date sales to **50 tonnes** and its July stock to **2,277 tonnes** — the same July book the GDP table rounds to **2,276.8 tonnes**. Jordan and Uzbekistan each reported a **1-tonne** July reduction in that note; Uzbekistan is still a net buyer for the year, as the buyer table shows. No August seller total has been published yet.",
     ],
     table: {
       caption:
@@ -2386,13 +2673,13 @@ const centralBankGoldReserves: Section[] = [
       "On **7 May 1999**, HM Treasury announced a restructuring of the United Kingdom’s foreign-currency and gold reserves. The Bank of England, acting as the Treasury’s agent, then ran **17** uniform-price auctions from **July 1999** to **March 2002**. Approximately **395 tonnes** of gold were sold. The [Bank of England Quarterly Bulletin for Summer 2003](https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2003/an-analysis-of-the-uk-gold-auctions-1999-2002.pdf) records that the stock then stood around **715 tonnes**, with a medium-term aim of around **300 tonnes**. At each of the first eleven auctions, **25 tonnes** were offered; at each of the last six, **20 tonnes** were offered.",
       "The same Bank article puts the average auction price at around **$275** an ounce — **$274.9** in the footnote that also names the programme’s revenue at approximately **$3.5 billion**. HM Treasury’s later [GOV.UK disclosure](https://www.gov.uk/government/publications/the-sale-of-part-of-the-uk-gold-reserves-1999-2002), published **31 March 2010**, uses the same tonne, auction-count, and dollar-proceeds figures, and adds a contemporaneous sterling figure of about **£1.9 billion**. The proceeds stayed inside the reserves, reinvested in dollar, euro, and yen interest-bearing assets.",
       "The Treasury’s stated aim was to restructure the reserves — less gold, more foreign currency — so the portfolio held a larger share in interest-bearing currencies. The reserves did not shrink; their mix changed.",
-      "The auction clearing price was a market price: dollars per ounce actually paid by successful bidders. It is not a statutory book rate. The U.S. leftover par of **$42.22**, explained under [official gold book value](/markets/official-gold-book-value), is a reporting convention on another ledger. One number is what the auctions fetched; the other is what a Treasury line still writes for ounces it never sold.",
+      "The auction clearing price was a market price: dollars per ounce actually paid by successful bidders. The U.S. leftover par of **$42.22**, explained under [official gold book value](/markets/official-gold-book-value), is a reporting convention on another ledger. One number is what the auctions fetched; the other is what a Treasury line still writes for ounces it never sold.",
     ],
   },
   {
     heading: "",
     callout: {
-      label: "Not a central bank",
+      label: "Tether’s gold",
       paragraphs: [
         "Tether is a private issuer. It does not report gold to the IMF as official reserve assets, so it has no row in the official tables above. Two gold figures appear under its name, and they measure different things. Tether Gold (XAU₮) is a token whose bars are vaulted for token holders: an independent attestation as of **30 June 2026** put that stock at **707,747.139 fine troy ounces**, about **22.01 tonnes**, owned by the holders, not by the company. Separately, Tether’s 3 August 2026 note said Tether International SA de CV bought about **27.1 tonnes** of gold in the first half of 2026 for its own reserve book. That half-year purchase is a company statement. No official August year-to-date figure for it has been published.",
       ],
@@ -2406,7 +2693,7 @@ const centralBankGoldReserves: Section[] = [
       "For long stretches the published number did not move. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** figure held, in the WGC/IMF book, through **2010** and on to early **2015**.",
       "In **July 2015** the PBoC said the stock at the end of **June 2015** was **1,658 tonnes** (**53.31 million ounces**). Monthly SAFE reporting followed. The WGC year-end **2015** line is **1,760 tonnes**. A later pause left the book near **1,948 tonnes** — **62.64 million ounces** at the end of **October 2019**, per PBoC data carried by Xinhua — and the WGC **2020** year-end line is **1,950 tonnes**.",
       "Reported buying resumed and produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
-      "The 2026 monthly figures are the same series the year-to-date table above uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the table above rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
+      "The 2026 monthly figures are the same series the year-to-date table uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the buyer table rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
     ],
     table: {
       caption:
@@ -2451,14 +2738,14 @@ const centralBankGoldReserves: Section[] = [
       "Canada’s reserve table is unusual among large economies: its gold line reads zero, the end of a sell-down that ran for decades.",
       "Finance Canada’s monthly Official International Reserves tables still print **Gold: 0**. The [release dated 6 August 2026](https://www.canada.ca/en/department-finance/services/publications/monthly-official-international-reserves/2026/08.html), covering **31 July 2026**, puts total official international reserves at **US$127,038 million** and lists the gold cell as **0**. Earlier 2026 monthly tables in the same series, including June and May, show the same. The Bank of Canada’s weekly international-reserves snapshot uses the same **Gold: 0** line.",
       "Contemporary reporting of the close-out — including [CBC’s March 2016 coverage](https://www.cbc.ca/news/business/gold-canada-reserves-1.3475818) of Finance Canada’s monthly figures — put the peak stock in the **1960s** at more than **1,000 tonnes**. By **2003** the published stock was about **3.4 tonnes**. The last disposals were coin sales: Finance Canada’s [February 2016 Official International Reserves](https://www.canada.ca/en/department-finance/news/2016/03/official-international-reserves.html) footnote records **21,851** ounces of gold coins sold for settlement in February, with holdings at **77** ounces on **29 February 2016**. CBC’s reporting of the same Finance releases names earlier coin sales of **41,106** ounces in December and **32,860** ounces in January. The February table already showed the gold value as **0** in millions of U.S. dollars — the remaining ounces were too few to register at that scale.",
-      "The other G7 books tell a different story. The same July **2026** World Gold Council / IMF compilation used in the GDP table above still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**), while Canada’s reserves are held almost entirely in foreign currencies and other non-gold assets.",
+      "The other G7 books tell a different story. The same July **2026** World Gold Council / IMF compilation used in the GDP table still shows large reported stocks for the United States (**8,133.5 tonnes**), Germany (**3,349.5 tonnes**), Italy (**2,451.8 tonnes**), France (**2,437.0 tonnes**), and Japan (**846.0 tonnes**), while Canada’s reserves are held almost entirely in foreign currencies and other non-gold assets.",
     ],
   },
   {
-    heading: "Reading a reserve headline",
+    heading: "",
     paragraphs: [
-      "Most reserve headlines come down to one of four figures: a stock in tonnes, a share of reserves, a ratio to GDP, or a change over a month or a year. A rising share can be new buying or simply a higher gold price. A repatriation moves bars without changing who owns them. A sale like the **1999–2002** UK auction programme swaps gold for currency inside the same reserves. Canada’s printed **Gold: 0** is what a long sell-down looks like once it is finished. Asking which of these a number is usually settles what it means.",
-      "The U.S. figure of **$42.22** is a separate accounting convention, explained under [official gold book value](/markets/official-gold-book-value). The **1971** end of dollar–gold convertibility, which set the stage for all of this, is told in [Sound Money History](/history).",
+      "A rising share can be new buying or simply a higher gold price. A repatriation moves bars without changing who owns them. A sale like the **1999–2002** UK auction programme swaps gold for currency inside the same reserves. Canada’s printed **Gold: 0** is what a long sell-down looks like once it is finished.",
+      "The U.S. figure of **$42.22** is a separate accounting convention, explained under [official gold book value](/markets/official-gold-book-value). The **1971** end of dollar–gold convertibility is told in [Sound Money History](/history).",
     ],
   },
 ];
@@ -2468,14 +2755,14 @@ const goldSilverRatio: Section[] = [
     heading: "",
     paragraphs: [
       "Divide the price of an ounce of gold by the price of an ounce of silver and you get the gold–silver ratio: how many ounces of silver buy one ounce of gold on that day. In September **2026** it stood near **68**. In January **1980** it briefly touched about **17**; in late April **2011**, about **31.5**. The ratio moves because both prices move, and it means exactly what the two prices meant on the day they were taken — no more.",
-      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. This page explains all three, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
+      "The same phrase, ounces of silver per ounce of gold, is also used for three different counts: market price, mine output, and London vault stocks. They give very different answers, near **68**, near **7**, and near **3**. All three are below, starting with the price ratio. The mine figures are world totals from survey books, not a list of mining companies, and nothing here is a miner pick.",
     ],
   },
   {
     heading: "What the ratio measures",
     paragraphs: [
       "Call gold G and silver S, both in the same currency per troy ounce. The ratio is G ÷ S. If gold is $2,000 and silver is $25, the ratio is 80: eighty ounces of silver have the same dollar value as one ounce of gold at that pair of prices. Change either price and the ratio changes. There is no hidden third input.",
-      "The two prices must be taken at the same time. A London gold afternoon fix set against a COMEX silver future from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from matching live prices. This page uses **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s figure.",
+      "The two prices must be taken at the same time. A London gold afternoon fix set against a COMEX silver future from another session is a mixed snapshot. This site’s [desk](/desk) shows a live ratio from matching live prices. The figures below use **named prints** and **year averages** so the arithmetic can be checked. This site’s published year-average price series is an LBMA/COMEX annual average for each metal; dividing those two averages gives a year-average ratio, which is not the same as any single day’s figure.",
       "Governments once wrote a ratio into law as well: the **mint ratio**, a legal number of silver units per gold unit. The Coinage Act of 1792 used 15 to 1; later statutes used 16 to 1. When the legal ratio and the market ratio drifted apart, the metal the law overvalued stayed in coin and the other tended to disappear from circulation — the old bimetallic problem, told under [bimetallism](/history/silver/bimetallism).",
     ],
   },
@@ -2786,6 +3073,92 @@ const physicalSilverDemandByCountry: Section[] = [
 ];
 
 /** Blog: COMEX 1980 silver rules — longer site essay than the X Article. */
+/** Blog: China 1934 silver appeal — longer site essay than the X Article. */
+const china1934SilverAppeal: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **24 September 1934**, China’s Minister in Washington, Sao-ke Alfred Sze, handed Secretary of State Cordell Hull a cable from Finance Minister H. H. Kung in Nanking. The message was not ceremonial. China, still on a silver standard, told the United States that American silver buying was draining Chinese silver, punishing trade, and raising the risk of panic — and it asked Washington to help stop the rise.",
+      "The statute behind that bid was only a few months old. On **19 June 1934**, President Franklin D. Roosevelt signed the Silver Purchase Act. Congress declared it U.S. policy to raise silver’s share of the nation’s monetary metal stocks toward one-fourth of their monetary value, and directed the Treasury to acquire silver at home or abroad until that objective was met — so long as purchases did not exceed silver’s statutory “monetary value.” For China, which still used silver as money, a rising world silver price was not a windfall. It was a squeeze.",
+    ],
+  },
+  {
+    heading: "When silver is the money",
+    paragraphs: [
+      "On a silver standard the metal is the money. Raise its price in foreign currencies and, if the exchange rate follows, you have raised the foreign-currency value of the money supply. If the exchange has not fully followed, the gap invites export: an ounce is worth more in the foreign bid than left in circulation. The metal leaves, goods prices fall, and ordinary exports have a harder time.",
+      "That is the mechanism in Kung’s cable, preserved in the State Department’s *Foreign Relations of the United States*. Since **1931**, he wrote, the rise of silver in terms of foreign currencies had brought severe deflation and economic losses to China and had disrupted the balance of payments, in part by hampering exports. A higher world silver price is not a gain for a country whose cash is silver. It is a bid for the circulating medium.",
+      "This is not the two-metal mint arithmetic of [bimetallism](/history/silver/bimetallism), where a legal ratio decides which metal stays in the till. China in **1934** was on silver alone. It was watching a foreign statute lift the price of the one metal its money was made of.",
+    ],
+  },
+  {
+    heading: "What the Act ordered",
+    paragraphs: [
+      "The one-fourth target and the monetary-value ceiling belong together. The Act told the Treasury to enlarge silver’s share of official monetary metal. It also told the Treasury not to pay above the value the statute itself assigned. It was not an open order to chase any price.",
+      "Domestic silver already inside the country sat under a tighter ceiling. Silver held in the continental United States on **1 May 1934** was not to be taken above fifty cents a fine ounce. That date draws a line through holdings already in the United States. It is not a world-market quote for every ounce offered later, including metal from abroad.",
+      "The program was meant to expand America’s silver reserves and to please domestic silver interests. China met that buyer as a drain: a reserve policy in Washington, a money supply at home.",
+    ],
+  },
+  {
+    heading: "What the cable measured",
+    paragraphs: [
+      "The rise since **1931** was the background. The recent clause was sharper. Stimulation of silver prices abroad — to which Chinese exchange had not fully responded — had caused a “serious drain of silver,” creating “great alarm.” Until the exchange caught the metal, holders who could ship silver had a reason to ship it.",
+      "Silver exports that year to date were already more than three times greater than in any previous full year. By **24 September**, with months of the year still ahead, China had already moved more silver out than in any completed year on its own record. Then the line that still lands: “Further material silver price increase would cause very serious injury to China, possibly severe panics.” Kung was naming a threshold, not a panic already finished that morning. Another material rise, on top of that drain, could turn alarm into panic.",
+    ],
+  },
+  {
+    heading: "Two asks",
+    paragraphs: [
+      "China’s request was twofold. First, an assurance: the United States should refrain from action that would continue the drain, cooperate to prevent a further rise, and keep silver stable in the spirit of the London silver agreement — preferably, from China’s view, at a level somewhat lower than the price then prevailing. The cable did not ask Washington to abandon silver as a monetary metal. It asked Washington to stop feeding a rise that was pulling China’s money out.",
+      "Second, a question about the standard itself. China felt it should not alone maintain the silver standard. It was considering a gradual move toward a gold-basis currency, and it wanted to know whether Washington would, in principle, exchange gold for Chinese silver. That is a request for a counterparty, not a forecast. If the price keeps rising, the drain continues. If China wants to leave silver and cannot exchange the stock, it leaves alone into a market the American statute is still bidding.",
+      "Silver’s other life, as reserve metal and as an industrial input as well as money, is the longer split under [monetary history and industry](/history/silver/monetary-and-industry). In September **1934** the cable was about the monetary side: silver in circulation, and silver that could be exported.",
+    ],
+  },
+  {
+    heading: "Hull’s answer on 2 October",
+    paragraphs: [
+      "Eight days later, on **2 October**, Hull called Sze in and answered orally. A government-to-government swap of fixed amounts of gold and silver, he said, was not normal procedure. Gold could be acquired in the usual way on world markets such as London. The second ask was declined as a way of doing business. China was pointed at the market where gold already traded, not at a closed exchange with the Treasury.",
+      "The United States would talk informally about coordinated use of gold and silver as a monetary standard — talks of the casual kind already held with countries such as Canada and Mexico. Conversation was on offer. A commitment to take China’s silver and hand over gold was not.",
+      "Hull also refused to confine U.S. silver purchases to metal inside the United States. That, he said, would violate the mandate Congress had given the Executive. The Act directed purchases at home or abroad, inside the monetary-value ceiling, until the one-fourth objective was met. China’s preference — stop the foreign bid — ran into that instruction.",
+      "He thought not more than about five hundred thousand ounces had so far been purchased direct from China. That count is the direct channel, not the export total Kung had put at more than three times any previous full year. A modest direct figure does not cancel a wider drain. Washington, he added, wanted to avoid undue interference with silver prices and monetary conditions elsewhere. The wish is in the answer. The policy that remained was the Act.",
+    ],
+  },
+  {
+    heading: "What those weeks did not finish",
+    paragraphs: [
+      "The cable did not end the story on **24 September**, and the oral answer did not end it on **2 October**. China’s silver drain and credit squeeze deepened through late **1934** and **1935**. A finance minister can name the mechanism, a secretary of state can decline to rewrite the statute, and the metal can keep leaving while both statements stand.",
+      "The September appeal is still the primary language for how the Chinese government read the American program in real time: as an external price shock hitting a silver-standard money supply. That reading does not make the purchase program the only cause of what followed. It keeps Kung’s facts attached to Kung’s verbs — deflation since **1931**, a drain, exports already past three times any previous full year, and injury if the price rose further.",
+    ],
+  },
+  {
+    heading: "November 1935",
+    paragraphs: [
+      "On **3–4 November 1935**, the National Government abandoned the exclusive silver standard. Notes of the Central Bank of China, the Bank of China, and the Bank of Communications became full legal tender. Silver was nationalized for currency purposes. The same three banks were charged with keeping the external value of the Chinese dollar stable by buying and selling foreign exchange.",
+      "Read in that order, the note replaced silver as full money. Silver was pulled into a state purpose instead of remaining the object people held and shipped. The external value of the unit was assigned to foreign-exchange dealings, not left to the world silver price each morning. A silver standard lets the metal’s foreign price write the exchange rate, with the lag Kung had described. An instruction to three banks — hold that external value in the foreign-exchange market — is a different job.",
+      "Many forces pressed on the reform: fiscal strain, the world depression, politics, and war risk among them. The U.S. purchase program was not the only cause. November **1935** is not the automatic result of one September cable. The cable shows the reading, in advance. The reform shows the exit, the following year, under more pressures than a single statute.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Statute, cable, answer, exit."],
+    list: [
+      "**1 May 1934.** Domestic silver already held in the continental United States faces a later purchase ceiling of fifty cents a fine ounce.",
+      "**19 June 1934.** Roosevelt signs the Silver Purchase Act. Silver is to move toward one-fourth of the monetary value of U.S. monetary metal stocks. The Treasury acquires it at home or abroad, without going above the statutory monetary value.",
+      "**24 September 1934.** Sze delivers Kung’s cable. Drain, alarm, exports already more than three times any previous full year, and a warning of injury and possible panic if the price rises further.",
+      "**2 October 1934.** Hull answers orally. No fixed government swap of gold and silver; gold can be acquired on markets such as London. Informal talks, of the kind already held with Canada and Mexico, are acceptable. Purchases will not be confined to metal inside the United States. Direct purchases from China, in his estimate, not more than about five hundred thousand ounces.",
+      "**Late 1934 through 1935.** The silver drain and the credit squeeze deepen.",
+      "**3–4 November 1935.** The National Government leaves the exclusive silver standard. Three banks’ notes become full legal tender, silver is nationalized for currency purposes, and those banks are to hold the Chinese dollar’s external value in foreign exchange.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1934**, a silver country asked a gold-and-silver buyer to stop pulling the metal out from under its currency — and floated gold in return. Washington kept buying under statute. China, within a year, left the exclusive silver standard behind.",
+      "It is a dated account of what China asked, what Hull declined, and what the National Government changed the following year.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103038843947466754).",
+    ],
+  },
+];
+
 const exchangesChangeSilverRules: Section[] = [
   {
     heading: "",
@@ -2849,7 +3222,7 @@ const exchangesChangeSilverRules: Section[] = [
     paragraphs: [
       "When exchanges change the silver rules, they are not editing geology. They are editing the claim. The metal still answers to chemistry. The screen answers to the rule book — and in January **1980** the rule book moved first.",
       "COMEX switched silver futures to liquidation-only trading. The Chicago Board of Trade adopted a similar restriction. Earlier that month, position limits and higher margins had already tightened the same market. The printed price, which had reached the high forties, reversed after the curb. In March the unwind climaxed on Silver Thursday, **27 March 1980**.",
-      "None of that tells a reader what to hold. It is a dated description of how a quote can outlive the permission that gave it its meaning.",
+      "It is a dated description of how a quote can outlive the permission that gave it its meaning.",
       "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103033593492537345).",
     ],
   },
@@ -2862,7 +3235,7 @@ const ltcm1998Consortium: Section[] = [
     paragraphs: [
       "By late September **1998**, Long-Term Capital Management was no longer a quiet hedge fund with Nobel names on the letterhead. It was a leveraged portfolio markets could not ignore. Russia’s August devaluation and debt moratorium had blown out credit spreads worldwide. Positions meant to diversify moved together. Losses stacked.",
       "And on **23 September**, after meetings at the Federal Reserve Bank of New York, fourteen banks and brokerage firms agreed to put about **$3.6 billion** of their own capital into the fund — private money, Fed facilitation, no public check.",
-      "That sentence is the whole public claim of the evening. Everything else — bailout or fire drill, prudence or precedent — is argument built on those facts. This note stays with the sequence: how the book was built, how August broke it, who sat in the room, and what the New York Fed did and did not do.",
+      "That sentence is the whole public claim of the evening. Everything else — bailout or fire drill, prudence or precedent — is argument built on those facts. What follows is the sequence: how the book was built, how August broke it, who sat in the room, and what the New York Fed did and did not do.",
     ],
   },
   {
@@ -2903,7 +3276,7 @@ const ltcm1998Consortium: Section[] = [
     paragraphs: [
       "American financial history already knew a version of the locked room. In the [Panic of 1907](/history/20th-century/panic-1907-fed), J.P. Morgan and other bankers decided who still had a till when trust companies ran and the Clearing House window was not open to everyone. Congress later turned that improvisation into a permanent statute — the Federal Reserve.",
       "**1998** is not **1907**. LTCM was a hedge fund, not a Fifth Avenue trust company. The New York Fed already existed. Gold was not the settlement backstop it had been in Morgan’s New York. The rhyme is institutional, not identical: when markets seize, someone gathers creditors, ranks who can still be saved, and decides whether the close will be orderly or simultaneous.",
-      "In **1907** the gatherer was a private house acting as a last window. In **1998** the gatherer was a regional Fed bank that refused to write the cheque and still set the table. Readers who want the earlier sequence can open that History page. This note stays with LTCM’s September.",
+      "In **1907** the gatherer was a private house acting as a last window. In **1998** the gatherer was a regional Fed bank that refused to write the cheque and still set the table.",
     ],
   },
   {
@@ -3039,7 +3412,710 @@ const newton1717Guinea: Section[] = [
   },
 ];
 
+/** Blog: interest vs U.S. gold stock — longer site essay than the X Article. */
+const interestCostsVsUsGold: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Two numbers usually live in different worlds. One is the value of all the gold the United States government reports it owns. The other is what the government pays each year to borrow money. This week they ended up side by side.",
+      "A bond yield is simply the interest rate a government has to offer when it borrows for a fixed number of years. When yields rise, new borrowing costs more. Right now they are rising in several large markets at once. By that count, **10-year** yields are at their highest since **1996** in Japan, since **2007** in the United States, and since **2008** in Britain and France. The U.S. number matches the Treasury’s own daily data: the **10-year** note closed at **5.17%** on **25 September**.",
+    ],
+  },
+  {
+    heading: "How higher yields become a bigger bill",
+    paragraphs: [
+      "Here is the part most headlines skip. The government does not borrow once. It borrows all the time, because old debt keeps coming due. When a bond matures, the Treasury usually pays it off by selling a new one. That is what rolling over debt means. The old loan may have cost **1.5%**. The new one costs whatever lenders ask for today.",
+      "That swap happens trillions of dollars at a time. Treasury data show the average interest rate on all U.S. marketable debt was **1.42%** in January **2022**. By August **2026** it was **3.48%**. Spread that change across a debt of more than **$40 trillion** and the bill grows even if no new spending is ever approved.",
+      "And it has grown. In fiscal year **2020** the government’s net interest cost was **$345 billion**. In fiscal **2025** it was **$970 billion**. In just the first eleven months of fiscal **2026** (October **2025** to August **2026**) it reached **$1.017 trillion**, according to the Monthly Treasury Statement. The broader “gross” figure, which also counts interest the government pays into its own trust funds such as Social Security, came to **$1.267 trillion** over the same eleven months.",
+      "Net and gross are not rival stories. Net is what the public accounts treat as the government’s interest cost to others. Gross adds the interest that stays inside the government’s own books — payments into trust funds. Both lines rose. The larger one is the one that sits closest to the gold stock’s market value.",
+    ],
+  },
+  {
+    heading: "Put the gold next to it",
+    paragraphs: [
+      "The Treasury reports holding **261.5 million** troy ounces of gold, most of it at Fort Knox, West Point, and Denver. To value it at a market price, you multiply ounces by price. At about **$4,300** an ounce, roughly where gold traded on **25 September**, that comes to about **$1.12 trillion**, in line with the short post’s **$1.13 trillion**.",
+      "Now compare. **$1.267 trillion** of gross interest in eleven months works out to about **$3.8 billion** a day. At that pace, interest matches the value of the entire gold stock in roughly ten months. Even on the narrower net measure, one year of interest is now about as large as all the gold.",
+      "The government’s own books make the gold look smaller still. It is recorded at **$42.22** an ounce, a legal book value set in **1973** and never updated — the leftover rate explained under [official gold book value](/markets/official-gold-book-value). At that price the whole stock is worth **$11.04 billion**. That is less than three days of interest at the gross eleven-month pace.",
+      "Book value and market value are not competing truths about the metal. Book is the statute still written on the Treasury line. Market is ounces times a dated quote. The interest bill does not care which column a reader prefers. It grows with every rollover either way.",
+    ],
+  },
+  {
+    heading: "What gold price would cover the debt?",
+    paragraphs: [
+      "Flip the question around: what would gold have to cost for those ounces to equal the debt? Divide the debt by the ounces. **$40.1 trillion** ÷ **261.5 million** ounces ≈ **$153,300** an ounce. That is the short post’s “100% cover” price, and the Treasury’s own stock and debt figures back it up. The **10%** and **20%** versions — **$15,300** and **$30,700** — are just a tenth and a fifth of that.",
+      "At today’s price, the gold covers less than **3%** of the debt. Cover here is arithmetic, not a policy proposal. It is ounces into dollars on one side, and the stock of marketable claims on the other. The same ounces appear in the [central-bank gold reserves](/markets/central-bank-gold-reserves) story as a national stock. The share of debt they would extinguish at any chosen price is a different sentence.",
+    ],
+  },
+  {
+    heading: "The last time Washington repriced its gold",
+    paragraphs: [
+      "This is not the first time the official gold price and the government’s money problems have met. In January **1934** the Gold Reserve Act raised the official price from **$20.67** to **$35** an ounce. Overnight, the Treasury’s gold went from about **$4.2 billion** to **$7.0 billion** on paper, and **$2 billion** of that gain was used to set up the Exchange Stabilization Fund.",
+      "The official price was raised twice more in the early **1970s**, finally to **$42.22** in **1973**. It has stayed there ever since, while the market price kept moving. Repricing changed the books. It did not create new ounces. The stock that sits beside today’s interest bill is still counted in the same **261.5 million** ounces, month after month.",
+      "The interest burden has a history too. Measured against the size of the economy, net interest peaked at **3.2%** in **1991**, the highest since World War II. The Congressional Budget Office projected **3.3%** for **2026**, which would be a new record on that measure.",
+    ],
+  },
+  {
+    heading: "What moves, and what does not",
+    paragraphs: [
+      "The gold stock has barely changed in decades: **261.5 million** ounces, printed again and again. The interest bill changes with every bond that rolls over, and right now each rollover resets it a little higher when the new rate is above the old one.",
+      "A yield is a price for new money. An average interest rate on the whole book is a lagging average of past deals still outstanding. Raise the new-money price, and the average climbs only as paper matures and is replaced. That is why the jump from **1.42%** in January **2022** to **3.48%** in August **2026** is a story about time as much as about one print on the **10-year**.",
+      "Put the two clocks together and the comparison this week is almost mechanical. The metal stock is nearly fixed. The interest line is not. When gross interest over eleven months reaches **$1.267 trillion**, and the same ounces at about **$4,300** are worth about **$1.12 trillion**, the two worlds share a page whether or not anyone meant them to.",
+    ],
+  },
+  {
+    heading: "The figures in order",
+    paragraphs: ["Yields, the average coupon, the interest bill, the ounces."],
+    list: [
+      "**25 September.** U.S. **10-year** yield closes at **5.17%**. Contemporaneous counts put **10-year** yields at multi-decade highs in Japan (since **1996**), the United States (since **2007**), and Britain and France (since **2008**).",
+      "**January 2022 → August 2026.** Average interest rate on all U.S. marketable debt rises from **1.42%** to **3.48%**.",
+      "**Fiscal 2020 / 2025.** Net interest **$345 billion**, then **$970 billion**.",
+      "**October 2025 – August 2026.** Net interest **$1.017 trillion**; gross interest **$1.267 trillion** (Monthly Treasury Statement).",
+      "**Stock.** Treasury gold **261.5 million** troy ounces. At about **$4,300**, roughly **$1.12 trillion**. At book **$42.22**, **$11.04 billion**.",
+      "**Cover arithmetic.** **$40.1 trillion** ÷ **261.5 million** ounces ≈ **$153,300** an ounce for a full match; **$15,300** and **$30,700** for **10%** and **20%**.",
+      "**1934 / 1973.** Official price raised to **$35**, later to **$42.22**; book rate unchanged since.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Two ledgers, one week. The borrowing line is measured in interest. The gold line is measured in ounces that barely move. Set them next to each other and the interest bill, on the gross eleven-month count, is already in the same neighborhood as the market value of the stock.",
+      "It is a dated comparison of Treasury figures, not a forecast. The ounces are the ones the Treasury reports. The interest is the bill the Monthly Treasury Statement already printed.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103742623928156160).",
+    ],
+  },
+];
+
+/** Blog: 26 September 1971 G-10 — longer site essay than the X Article. */
+const september1971OfficialGoldPrice: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **26 September 1971**, Treasury Secretary John B. Connally sat as chairman of a Group of Ten ministerial meeting in Washington. Six weeks earlier, President Richard Nixon had suspended the convertibility of dollars into U.S. Treasury gold for foreign official holders. That suspension is the closing of the [gold window](/history/20th-century/bretton-woods-nixon-1971). It ended the practical heart of Bretton Woods.",
+      "Major currencies were already floating. The United States had placed a temporary **10 percent** surcharge on dutiable imports. Allies wanted new exchange-rate parities, an end to the surcharge, and — France above all — a higher dollar price of gold. No package was signed that Sunday. The meeting still belongs in the story. It was one of the hard bargaining stops on the road that ended, in December, with a new official gold price for the dollar.",
+    ],
+  },
+  {
+    heading: "What the room was asked to settle",
+    paragraphs: [
+      "Finance ministers and central-bank governors were there to see whether a package could be signed. On **26 September** the pieces did not move together.",
+      "A parity is the official rate a currency is supposed to hold. After the window closed, those rates were no longer being defended in the old way. Currencies were floating: the market printed a rate each day instead of a government holding one. Allies wanted new parities, a set of official rates they could live with, and they wanted the American surcharge gone. A **10 percent** extra charge on dutiable imports is leverage in a negotiation and a cost in trade at the same time.",
+      "France's demand sat in a different column. A higher dollar price of gold means more dollars per ounce at the official rate. Bretton Woods had named **$35**. Raising that figure is a devaluation of the dollar in terms of gold, and it was the American concession that would make a new set of rates politically possible. The Sunday meeting did not write that concession down. It recorded that the concession was still being refused.",
+    ],
+  },
+  {
+    heading: "The promise the meeting inherited",
+    paragraphs: [
+      "Bretton Woods had rested on a promise. Other countries pegged to the dollar, and the United States pledged to redeem official dollar balances in gold at **$35** an ounce. Official keeps the promise narrow. It was not a counter for the public. It was a channel for foreign official holders — treasuries and central banks — who could present dollars and ask for U.S. Treasury gold at the posted price.",
+      "By the late **1960s**, dollar claims abroad had grown faster than the U.S. gold stock. Inflation and a widening U.S. payments gap made the pledge look fragile. Foreign central banks converted dollars into gold. Speculators pushed funds out of the dollar. The September meeting did not discover that mismatch. It sat down six weeks after Washington had already stopped paying it.",
+    ],
+  },
+  {
+    heading: "What 15 August had already changed",
+    paragraphs: [
+      "On **15 August 1971**, Nixon cut the convertibility link, announced the surcharge, and pressed partners to revalue their currencies against the dollar without, at first, offering a U.S. gold-price change. End the metal promise. Tax imports. Ask other countries to make their currencies worth more dollars — and do not, yet, change the **$35** gold definition of the dollar.",
+      "A revaluation against the dollar, without an American gold-price move, puts the adjustment on everyone else. The dollar's gold definition stays put. France, above all, did not accept that split. The gold price was the American half of any realignment. Six weeks later, that argument was still open when the ministers took their seats.",
+    ],
+  },
+  {
+    heading: "Connally in the chair",
+    paragraphs: [
+      "Into that crisis stepped Connally. He was a former Texas governor, newly at Treasury, and by late September the rotating chair of the Group of Ten. The deputies had met in Washington on **25 September**. The ministers met on the **26th**, the day before the IMF Annual Meetings opened.",
+      "Deputies do the technical work the day before. Ministers arrive to decide. The Fund's annual meetings, opening the next day, meant the same officials would walk from a closed bargaining room into a larger public gathering with the package either signed or not. It was not signed.",
+      "European officials pressed for new parities. French authorities insisted on a change in the dollar price of gold. Trade talks, the surcharge, and whether fixed rates should return quickly were all still open. The Sunday session left them open.",
+    ],
+  },
+  {
+    heading: "A political problem, and a clean float",
+    paragraphs: [
+      "Connally's press line after the meeting made the U.S. stance plain. In the IMF's official history of those months, he characterized \"the gold question\" as primarily \"a political problem, not an economic one.\"",
+      "The line is a bargaining position. If the gold question is economic, the mismatch of claims and the gold stock forces a new price, and the meeting should name it. If it is political, Washington can refuse to name it until partners move on trade and on their own rates. Connally was telling the room which description the United States would use.",
+      "Rather than a premature decision on parities, he proposed a \"general clean float\" of major exchange rates. Clean, in that phrase, means without official intervention: governments do not step into the market to hold a rate. The proposal was a way to avoid locking parities before the gold argument was settled.",
+      "The United States was using the surcharge and the float as leverage. Partners wanted the surcharge gone and a realignment that included an American gold-price move. **26 September** recorded the deadlock, not the deal. A meeting that refuses a number can still fix the terms on which a later meeting will accept one.",
+    ],
+  },
+  {
+    heading: "What December signed",
+    paragraphs: [
+      "The deal came less than three months later. On **17–18 December 1971**, the same Group of Ten met at the Smithsonian Institution in Washington, again under Connally's chairmanship. The items on the table were the ones September had left unsigned.",
+      "In the Smithsonian Agreement, the United States agreed to propose to Congress a devaluation of the dollar in terms of gold to **$38** an ounce — roughly an **8.5 percent** rise in the official gold price. The agreement did not rewrite the statute that week. It was a promise to propose the change to Congress, once a related set of short-term trade measures was ready for scrutiny.",
+      "Other countries offered to revalue against the dollar. The net effect was about a **10.7 percent** average devaluation of the dollar against the other key currencies. The two percentages measure different things. **8.5 percent** is the gold price alone, from **$35** to **$38**. **10.7 percent** is the dollar against other currencies after those currencies also moved. A higher gold price devalues the dollar in metal. Partner revaluations devalue it further against their units.",
+      "The United States would suppress the import surcharge. Wider bands around the new rates were allowed, so a market rate could wander further before it counted as a break in the peg. Longer-term reform talks were promised. September had been the refusal. December was the bargain: a gold price for Congress, revaluations from partners, the surcharge withdrawn, wider bands, and talks still to come.",
+    ],
+  },
+  {
+    heading: "What the new price did not restore",
+    paragraphs: [
+      "Smithsonian did not save Bretton Woods. A new official gold price is a new definition of the dollar in metal. December named the price that would be proposed to Congress, together with partner revaluations and wider bands around the new rates.",
+      "Within about fifteen months, another dollar devaluation and a wave of floats ended the adjustable-peg system. An adjustable peg is a rate that stays fixed until governments agree to move it. Smithsonian was one such move: a new official gold price, partner revaluations, and wider bands. The system those numbers belonged to did not last. September is the earlier stop, when the gold-price change was still being refused.",
+      "**26 September** was the first Group of Ten ministerial Connally chaired after the gold window closed. It was the day gold was framed as politics as much as economics, and a waypoint on the path from **$35** to **$38**.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Window, meeting, refusal, bargain."],
+    list: [
+      "**15 August 1971.** Nixon suspends convertibility of dollars into U.S. Treasury gold for foreign official holders, announces a temporary **10 percent** surcharge on dutiable imports, and presses partners to revalue without, at first, a U.S. gold-price change.",
+      "**25 September 1971.** Group of Ten deputies meet in Washington.",
+      "**26 September 1971.** Ministers meet under Connally, the day before the IMF Annual Meetings open. No package is signed. In the IMF's official history of those months, he calls the gold question primarily a political problem, not an economic one, and proposes a general clean float.",
+      "**17–18 December 1971.** At the Smithsonian, again under Connally, the United States agrees to propose an official gold price of **$38** an ounce to Congress. Partners offer revaluations. The dollar's average move against the other key currencies is about **10.7 percent**. The surcharge is to be suppressed. Wider bands are allowed.",
+      "**Within about fifteen months.** Another dollar devaluation and a wave of floats end the adjustable-peg system.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1971**, America and its allies sat in Washington with currencies floating and gold off the convertibility table. They did not settle the price of gold that Sunday. By December, they had agreed to ask Congress to raise it.",
+      "The official price was to move from **$35** to **$38**. The surcharge that had pressed the negotiation was to come off. The pegs built around that bargain did not last.",
+      "It is a dated account of one Sunday's deadlock, and of the December bargain that followed it.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2103888968727060480).",
+    ],
+  },
+];
+
+const misesInflationAsPolicy: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **29 September 1881**, [Ludwig von Mises](/history/vip/ludwig-von-mises) was born in Lemberg, then part of Austria-Hungary. The city is Lviv, in Ukraine, today. He died in **1973**. The note published on his birthday is not a full life. It returns to one hard idea he made plain: rising prices are not a weather event. When money loses [purchasing power](/sound-money/inflation-purchasing-power) because more of it is created, that is a choice.",
+      "A weather event has no desk that decided it. A loss of purchasing power that comes from a larger stock of money does. Someone enlarged the stock. The prices people then meet are the surface of that enlargement, not a storm that arrived from outside the decision. If inflation is named as weather, the thinner unit looks like bad luck. If it is named as a choice, the question is who expanded the money, and what the expansion was meant to carry.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-portrait.jpg",
+      alt: "Portrait of Ludwig von Mises in a dark suit, white shirt, and patterned tie.",
+      caption: "Ludwig von Mises — the birthday note returns to inflation as a choice, not weather.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 874,
+      height: 874,
+      layout: "float-start",
+      placement: "start",
+    },
+  },
+  {
+    heading: "Two books at the center",
+    paragraphs: [
+      "Mises spent his career explaining money, prices, and the limits of state power in language ordinary people could follow if they slowed down. Two books still sit at the center of that work. In **1912** he published *The Theory of Money and Credit*. In **1949** came *Human Action*.",
+      "The **1912** book treated money as a good people demand for its purchasing power — not a veil floating above the real economy. A veil, in that picture, would be a wrapper: goods and labor would be the real story, and money would only rename the tags. The book refuses that. People demand the unit because of what it still buys. The unit is part of the choice, not a label stuck on after the choice is finished. If they expect it to command less, they spend it sooner, ask more of it for the same good, or try to hold something else.",
+      "*Human Action*, in **1949**, is his large treatise on how purposeful human choice builds markets, prices, and cooperation. Purposeful means people act for ends they have in mind. A price, on that account, is not a number an office assigns so a table will balance. It is what emerges when people trade because each side expects to be better off. Cooperation is people fitting their plans to one another through those trades. The earlier book asks what money is doing inside exchange. The later one asks how exchange itself is built from choice.",
+      "Describing that argument is not a recommendation to hold metal, and it is not a forecast. The birthday note can name both books without pretending to replace either.",
+    ],
+  },
+  {
+    heading: "Cheap credit, then the bust",
+    paragraphs: [
+      "From the money book grew a warning that still fits paper-money systems. When a central bank or a treasury expands credit and the money supply, interest rates can look artificially cheap. Businesses and households then make plans that only work while the cheap credit lasts. When the expansion slows or stops, those plans unravel. Boom, then bust.",
+      "Interest, in this warning, is a price for time and for committing capital. A project that takes years has to cover that price, not only materials and wages. If policy makes the rate look cheaper than the real cost of waiting, more projects look as if they will pay. The plans are real. The rate that made them look sound is not a report of how much capital is actually free to commit. A household loan that feels easy to carry while credit is being expanded can stop feeling easy when the expansion pauses. The unraveling is those plans meeting the cost the cheap rate had hidden.",
+      "Mises did not treat the cycle as a mystery of capitalism. He treated it as the aftermath of monetary policy that misleads people about the real cost of time and capital. The boom is what people do when the price of waiting has been painted too low. The bust is what happens when that paint wears off and the projects that needed it cannot be finished on the old terms. The sequence needs no extra percent and no named crisis: expand, let rates look cheap, watch dependent plans form, slow or stop the expansion, watch those plans fail.",
+    ],
+  },
+  {
+    heading: "Inflation as a policy",
+    paragraphs: [
+      "That is why a line commonly attributed to him still lands. The article prints it under his name. It says the most important thing to remember is that inflation is not an act of God, that inflation is not a catastrophe of the elements or a disease that comes like the plague. Inflation is a policy — a deliberate policy of people who resort to inflation because they consider it to be a lesser evil than unemployment. In the not very long run, the passage says, such a policy defeats its own purpose and brings about the very consequences it is supposed to avoid.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-inflation.jpg",
+      alt: "Quote card: Ludwig von Mises saying inflation is a policy, not an act of God, a catastrophe of the elements, or a plague.",
+      caption: "Inflation as policy — the line the X Article prints under his name.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The note then says the same thing in plainer words. Inflation is not a plague and not a storm. Someone decides to expand the stock of money. Someone decides that today’s deficit, war bill, or stimulus will be paid with tomorrow’s thinner purchasing power. A deficit is spending beyond what taxes bring in. A war bill is the cost of fighting, presented for payment. A stimulus is spending or credit meant to lift activity now. The shared move is the method of payment: not an extra stock of goods, but a larger stock of money, so that each unit buys less later.",
+      "Sound money — money that is hard to create at will — was, for Mises, a way to limit that temptation. The issuer cannot meet a deficit, a war bill, or a stimulus simply by adding units. That is a constraint on the method, not a promise that no deficit, war, or slump will appear. Calling inflation a policy also changes what a later rise in prices is evidence of. If prices are weather, a higher level is a misfortune. If prices are the surface of a larger stock of money, the higher level is a record of the earlier decision. Someone decided.",
+    ],
+  },
+  {
+    heading: "When control becomes compulsion",
+    paragraphs: [
+      "He was just as blunt about the state. Power without competence or restraint is not a neutral helper. Expanding government control over prices, production, and credit does not stay “technical.” It becomes compulsion.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-state.jpg",
+      alt: "Quote card: Ludwig von Mises on worship of the state as worship of force, and the danger of incompetent or corrupt government.",
+      caption: "The state as force — the second graphic the X Article places under his name.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "A ceiling, a quota, or a directed loan can be written as if it only measured. The article’s point is that it does not stay a measurement. A price that may not rise has to be enforced against the seller who would have charged more. A production mandate has to be enforced against the plan that would have made something else. Directed credit has to be enforced against the lender who would have lent elsewhere. Enforcement is the compulsion.",
+      "The article prints a second passage under his name. The state, it says, is essentially an apparatus of compulsion and coercion. The characteristic feature of its nature is the enforcement of its commands by beating, killing, and imprisonment. Those who ask for more government interference are asking ultimately for more compulsion and less freedom.",
+      "The same logic applies to creeping controls. Price caps, production mandates, and credit allocation rarely stay temporary. Each fix invites the next. More interference means more force and less room for voluntary exchange. Temporary is the promise that makes the first control easier to accept. The first rule changes the prices, the output, or the loans people would have chosen. The gap that remains is then treated as a reason for a second rule. Voluntary exchange is the trade both sides accept. The note’s claim is that this sequence moves the arrangement toward compulsion, not that every statute is a beating.",
+    ],
+    figure: {
+      src: "/images/blog/mises-inflation-as-policy-quote-interference.jpg",
+      alt: "Quote card: Ludwig von Mises saying that asking for more government interference is asking for more compulsion and less freedom.",
+      caption: "More interference, more compulsion — the third graphic from the X Article.",
+      credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
+      width: 850,
+      height: 400,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Prices as the method of calculation",
+    paragraphs: [
+      "A third passage on the article’s page turns from the state to the market. Social cooperation and the division of labor, it says, can be achieved only by the market. There is no other system that could be substituted for the market economy. The market is the only method of economic calculation.",
+      "In his view, civilization depends on peaceful cooperation through markets and property, not on worship of the apparatus that can override both. Money prices are information. Distort the money, and you distort the signals. Remove the signals, and central plans become guesswork. A money price reports what others will give up for what someone offers. If the unit those prices are written in is being expanded, the signal mixes two stories: what the good is worth relative to other goods, and what the unit itself is becoming. Plans that read the mix as if it were only about goods are the plans the cheap-credit warning already described.",
+      "Take the signals away and a plan can still list tons, hours, and rations. Without prices formed in exchange, the list stipulates. It does not calculate. That is why readers who care about gold, silver, and scarce money still read him. He connects the unit of account to the possibility of rational economic life. A unit of account is what the prices are counted in. Scarce money, in this note, means a unit that is hard to multiply, so the prices written in it can keep doing the job of information. The connection is a claim about calculation. It is not a shopping list.",
+    ],
+  },
+  {
+    heading: "The spine of the note",
+    paragraphs: ["On his birthday the article asks for the spine, not for jargon."],
+    list: [
+      "**29 September 1881.** Born in Lemberg, then Austria-Hungary, now Lviv. Died in **1973**.",
+      "**1912.** *The Theory of Money and Credit* treats money as a good demanded for its purchasing power, not a veil over the real economy.",
+      "**1949.** *Human Action* treats markets, prices, and cooperation as the result of purposeful choice.",
+      "**Boom and bust.** Expanding credit and the money stock can make interest look artificially cheap. Plans that depend on that cheapness unravel when the expansion slows or stops.",
+      "**Inflation.** Not a plague and not a storm. Someone expands the stock of money so that a deficit, a war bill, or a stimulus is paid with thinner purchasing power.",
+      "**The state.** Control over prices, production, and credit becomes compulsion. Creeping controls rarely stay temporary.",
+      "**Calculation.** Money prices are information. Distort the money and the signals distort. Remove them and central plans become guesswork.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Paper that can be printed without limit invites abuse. Hard money narrows that path. That is the note’s last claim, stated as his view: a unit that is difficult to create leaves less room for paying today’s bills by thinning tomorrow’s purchasing power.",
+      "The dates are few. Born **29 September 1881**. The money book in **1912**. The treatise on human action in **1949**. Died in **1973**. Between those marks the article keeps one argument: inflation as policy, the cycle as the cost of artificial expansion, the state as force when it replaces voluntary exchange, and the unit of account as a condition of economic calculation.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104952749670481920).",
+    ],
+  },
+];
+
+const spanishSilverFirstGlobalMoney: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In **1545**, silver was found in a red, cone-shaped mountain high in the Andes. Spanish miners rushed to claim it. They called it Cerro Rico, the \"Rich Mountain,\" and the mining town that grew at its foot became [Potosí](/history/silver/potosi), in what is now Bolivia.",
+      "That mountain did more than enrich a crown. It filled a city where almost nothing grew, stamped a coin that merchants on four continents could recognize by weight and feel, and left a name English speakers still use for their unit of account. The story is about silver leaving a high Andean ridge and becoming money people trusted far from Spain.",
+    ],
+  },
+  {
+    heading: "A city above the tree line",
+    paragraphs: [
+      "Potosí sits more than **4,000 meters** above sea level. Almost nothing grows there. Yet within three decades it had more than **150,000** people — the largest city in the Americas at the time. Spaniards began to say *vale un Potosí*, \"it's worth a Potosí,\" about anything priceless.",
+      "The reason was the silver. Historians estimate that in the second half of the **1500s**, at its peak, Cerro Rico may have produced around **60 percent** of all the silver mined in the world. Estimates vary. Even careful ones put this one mountain at the center of the world's silver supply for decades after the strike.",
+      "A mining camp that large, that high, and that dependent on a single ore body was not a quiet village with a lucky seam. Food, timber, tools, and labor had to climb. The ore had to leave. The crown and the merchants who financed the work measured success in bars and coins that could travel. The mountain's fame was a claim about how much metal it yielded relative to everywhere else — not a claim that life there was easy.",
+    ],
+    figure: {
+      src: "/images/blog/spanish-silver/potosi-panorama.jpg",
+      alt: "1758 panorama of the Imperial Villa of Potosí with Cerro Rico rising behind the colonial city.",
+      caption: "Villa Imperial de Potosí (1758) — Cerro Rico and the silver city above the tree line.",
+      credit: "CC0 — Gaspar Miguel de Berrío panorama reproduction via Wikimedia Commons.",
+      width: 1600,
+      height: 1200,
+      layout: "breakout",
+      placement: 1,
+      lightbox: true,
+    },
+  },
+  {
+    heading: "The mita and the mercury",
+    paragraphs: [
+      "That wealth came at a terrible human cost. From **1573**, Spain ran a forced labor draft called the *mita*. More than **200** Indigenous communities had to send **one in seven** adult men to work in the mines of Potosí and the mercury mines of Huancavelica. The tunnels were dangerous, and the mercury used to refine the ore poisoned workers and the land. The *mita* lasted until **1812**. No one knows how many people it killed.",
+      "Mercury mattered because refining silver at that scale was not only pick and shovel. Amalgamation bound fine silver to mercury so the metal could be recovered from ore that simple smelting handled poorly. Huancavelica supplied the mercury; Potosí supplied the silver. The draft tied highland communities to both places. The record of how many died is incomplete. The statute that required the rotations is not. The *mita* is part of how Spanish American silver reached the world's tills — not a side note beside the coin story.",
+    ],
+  },
+  {
+    heading: "From bars to the piece of eight",
+    paragraphs: [
+      "The silver was turned into coins. By the **1570s** Potosí had its own mint, and its most famous product was the *real de a ocho*, a coin worth eight reales. English speakers called it the [piece of eight](/history/silver/piece-of-eight). It weighed about **27 grams** and was more than **90 percent** pure silver. Early pieces were rough \"cobs,\" cut from silver bars and struck by hand. Later ones were round and machine-made, stamped with the Columns of Hercules and the motto *PLUS ULTRA*, \"further beyond.\"",
+      "A cob is a minting method before a machine-made round. Silver is cut from a bar, hammered, and struck with dies that do not always fill the irregular planchet. Merchants still weighed and tested. The later milled dollar was easier to recognize at a glance: round, lettered or milled edge, columns and waves that advertised Spanish America. *PLUS ULTRA* named an empire that had passed the old Columns of Hercules into the Atlantic and Pacific. The coin carried that motto into markets that did not speak Spanish.",
+      "What made the piece of eight travel was not a slogan. It was a fairly steady silver content that traders learned to trust, plus a minting system that poured enough coins into Atlantic and Pacific trade that the type became familiar. When a coin is familiar, less bargaining goes into whether the metal is what it claims to be.",
+    ],
+    figure: {
+      src: "/images/blog/spanish-silver/pillar-dollar.jpg",
+      alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse of the Spanish colonial silver coin.",
+      caption: "Carlos III pillar dollar, 8 reales (Mexico, 1771) — the piece of eight.",
+      credit: "Public domain (18th-century coin; copyright expired).",
+      width: 1600,
+      height: 802,
+      layout: "float-start",
+      placement: "start",
+      lightbox: true,
+    },
+  },
+  {
+    heading: "Atlantic fleets and Pacific galleons",
+    paragraphs: [
+      "Then the coin went around the world. Treasure fleets carried silver across the Atlantic to Seville, and from there it spread through Europe. From **1565**, the Manila galleons crossed the Pacific between Acapulco in Mexico and Manila in the Philippines. They sailed west full of silver and came back with Chinese silk and porcelain.",
+      "The Atlantic route answered Europe's demand for coin and for silver as a means of settling balances. The Pacific route answered China's. Spanish America sat between two oceans of demand. Mexican and Peruvian silver did not have to choose one theater. Different cargoes left different ports, but the metal story is the same: New World silver was mined for export as money, not only for local wages.",
+      "Seville received fleets and registered treasure. Manila received silver that paid for Asian goods. The piece of eight was one face of that flow — a minted unit that could leave a chest and enter a shop without being melted first, though melting and reminting happened often enough once the metal reached a new jurisdiction.",
+    ],
+  },
+  {
+    heading: "China as the great buyer",
+    paragraphs: [
+      "China was the biggest buyer. It needed silver for trade and for taxes, and it paid well. Chinese merchants tested the coins and stamped them with small \"chop marks\" to show they were good. By some estimates, as much as a **third** of the silver mined in Spanish America ended up in Asia. Traders in Canton, Amsterdam, London, and Boston all knew what a piece of eight was worth, because the silver inside it was steady and well known.",
+      "A chop mark is a private assay mark: a punch that says this piece has been tested and accepted. It does not make the coin Spanish law in China. It makes the coin acceptable to the merchant who punched it and to others who trust that punch. The global reach of Spanish silver was not only imperial shipping. It was also local verification in markets that used the metal without using Madrid's courts.",
+      "One-third is an estimate, not a ledger line. The point of the estimate is direction: a large share of the American silver output left the Spanish commercial system for Asia. Europe felt the inflow too. The same mountain could feed both.",
+    ],
+    figure: {
+      src: "/images/blog/spanish-silver/pillar-dollar.jpg",
+      alt: "Spanish pillar dollar whose Columns of Hercules design later shaped dollar symbolism in Atlantic trade.",
+      caption: "Columns and waves on the milled dollar — a type Asian markets learned to price by feel and chop.",
+      credit: "Public domain (18th-century coin; copyright expired).",
+      width: 1600,
+      height: 802,
+      layout: "float-end",
+      placement: "start",
+      lightbox: true,
+    },
+  },
+  {
+    heading: "The American colonies and the dollar",
+    paragraphs: [
+      "It was also the everyday money of the American colonies. When the new United States picked a money unit in **1785**, it chose the dollar. In **1786**, Congress set the dollar's silver content to match the Spanish coins people were already using.",
+      "The Coinage Act of **1792** made it law. A U.S. dollar would have \"the value of a Spanish milled dollar as the same is now current,\" with about **24 grams** of pure silver. Even the **$** sign most likely grew out of a merchants' shorthand for pesos. Americans still call a quarter \"two bits,\" because a bit was one real, an eighth of a Spanish dollar.",
+      "The Spanish coins did not disappear once the U.S. began minting its own. They stayed legal tender in the United States until **1857**. For decades after independence, the minted Spanish dollar and the new American dollar shared tills. The statute that named the Spanish milled dollar as the reference was recognizing a coin people already counted in — not inventing a unit from a blank page.",
+      "\"Two bits\" survives as speech long after the real stopped being everyday change. Language kept a fraction of the Spanish dollar when the coin itself had left ordinary circulation. That habit is a small reminder of how deep the piece of eight sat in North American money talk.",
+    ],
+    figure: {
+      src: "/images/blog/spanish-silver/early-us-coinage.jpg",
+      alt: "1795 Flowing Hair silver dollar, obverse and reverse side by side.",
+      caption: "Flowing Hair dollar (1795) — early U.S. silver coined to the Spanish milled-dollar inheritance.",
+      credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
+      width: 1600,
+      height: 806,
+      layout: "inset",
+      placement: 2,
+      lightbox: true,
+    },
+  },
+  {
+    heading: "What \"first global money\" means here",
+    paragraphs: [
+      "Calling Spanish silver the world's first global money is a claim about reach and recognition, not about perfection. Other metals and other coins moved before 1545. What changed after Cerro Rico was scale: one American mountain at the center of world silver supply for a long stretch of the sixteenth century, a minted eight-real piece that Atlantic and Pacific traders could price, and an Asian demand strong enough to pull a large share of that metal across the Pacific.",
+      "The human cost of the *mita*, the mercury, and the mines belongs in the same account as the fleets and the chops. The coin's familiarity in Canton and Boston does not erase how the ore was won. The dated story is both: a mountain, a draft, a mint, two oceans, and a later republic that wrote the Spanish dollar into its first coinage law.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Strike, draft, mint, oceans, then the dollar's name."],
+    list: [
+      "**1545.** Silver is found at Cerro Rico. Potosí grows at the mountain's foot.",
+      "**1565.** Manila galleons begin the Acapulco–Manila run — silver west, Asian goods east.",
+      "**1570s.** Potosí has its own mint; the *real de a ocho* becomes the famous product.",
+      "**1573.** The *mita* draft begins for Potosí and Huancavelica; it lasts until 1812.",
+      "**Second half of the 1500s.** At peak, estimates put Cerro Rico near 60 percent of world silver output.",
+      "**1785–1786.** The United States chooses the dollar and matches its silver content to Spanish coins already in use.",
+      "**1792.** The Coinage Act ties the U.S. dollar to the Spanish milled dollar (~24 grams pure silver).",
+      "**1857.** Spanish coins cease to be legal tender in the United States.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "A mountain in the Andes gave the world a coin merchants could trust from Seville to Canton, and the world's best-known currency still carries the name English speakers gave to that Spanish silver: the dollar.",
+      "Cerro Rico, Potosí, the *mita*, the piece of eight, the Manila galleon, and the Coinage Act of 1792 are one continuous metal story — not separate legends.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104667282366402560).",
+    ],
+  },
+];
+
+const sweden1931LeftGold: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "Late in the evening of Sunday, **27 September 1931**, Sweden's finance minister, Felix Hamrin, spoke for the government. The Riksbank, he said, was relieved of its legal duty to convert banknotes into gold on demand. He explained how the country had reached that point. Then he added the sentence that would make the night famous. The bank's policy should now be aimed, using all means available, at preserving the domestic [purchasing power](/sound-money/inflation-purchasing-power) of the Swedish krona.",
+      "While that duty stood, a Riksbank note was a claim the bank was legally bound to meet in gold when the note was presented. Ending the duty meant the bank no longer had to pay gold for its notes on demand. The krona could still circulate. It was no longer a ticket the law required the Riksbank to redeem in metal. The sentence Hamrin added named what would stand in place of that ticket: what the krona still bought inside Sweden.",
+    ],
+  },
+  {
+    heading: "What the gold duty had been",
+    paragraphs: [
+      "A gold parity is the official rate the currency is supposed to hold against gold. While convertibility is in force, that rate is a rule the bank is expected to honor when notes are presented. Foreign reserves — gold and foreign claims the bank can use — are the stock that makes the rule believable. If holders think the stock is too thin, they present claims sooner. The drain is the test of the rule.",
+      "Sweden had an emergency exit written into the constitution, the same kind of exit it had used in wartime. The Board of the Riksbank asked the government for permission to suspend convertibility under that clause. By Sunday the government had little real choice about that first half. The reserves meant to defend gold parity were nearly gone. What was not inevitable was the second half: floating the krona, and naming domestic purchasing power as the new guide.",
+    ],
+  },
+  {
+    heading: "Eight days after Britain",
+    paragraphs: [
+      "Eight days earlier, Britain had left the gold standard. Speculators turned on the krona. Foreign reserves drained. A large gold-standard currency had stepped off, and a smaller one was still promising metal. Holders of the krona asked whether the Swedish parity would be next. They sold it, or they presented claims, while the bank was still paying. The reserve fell because the rule was still being honored, and because that honor looked temporary.",
+      "By Sunday evening the reserves argument was no longer a forecast. Leaving gold, in that narrow sense, recognized a payment the bank could not keep making. A float answers whether gold will still be paid at the old rate. The market prints a krona price each day, and the bank no longer holds one against gold. Hamrin's second sentence answered the question a float leaves open: what the bank would aim at instead.",
+    ],
+  },
+  {
+    heading: "The draft from the night before",
+    paragraphs: [
+      "That language did not appear from nowhere. On Saturday, **26 September**, Hamrin asked the economist Gustav Cassel to draft a statement on Sweden's monetary position. Cassel worked into the night and sent his proposal by messenger. Eli Heckscher also shaped the thinking around the government line. Berg and Jonung later traced the famous purchasing-power sentence to that weekend of advice.",
+      "The full story of who wrote which words remains debated. A messenger draft, a second economist's influence, and a minister's speech do not leave one manuscript with a single hand on every clause. The public result does not wait on that debate. In the finance minister's voice, gold payment had stopped, and domestic purchasing power was the aim that replaced it.",
+      "Sweden became the first country to make stabilization of the domestic price level the official goal of monetary policy, and in the interwar years the only country that did so. A price level is a picture of what money buys, taken as a height rather than a speed of change from year to year. Stabilizing it means resisting a fall as well as a rise. On that Sunday the domestic price level took the place the gold parity had occupied: the stated purpose of the bank's policy.",
+    ],
+  },
+  {
+    heading: "From one sentence to guidelines",
+    paragraphs: [
+      "The one-sentence goal of **27 September** was not yet a finished program. Through the winter and spring, the Riksbank's board, three leading economists, and the Banking Committee of the Riksdag turned it into guidelines. Parliament confirmed them in **May 1932**.",
+      "Deflation was to be resisted as strongly as inflation. A falling price level was not a harmless correction beside a rising one treated as the only danger. The September sentence had said policy should preserve purchasing power. The May guidelines read that preservation in both directions. The krona was not to buy steadily less, and a shrinking price level was not, by itself, to count as success.",
+      "Some recovery in wholesale prices could be accepted if the cost of living was not lifted much. Wholesale prices are what merchants and factories see. The cost of living is what households see. The guideline allowed a repair in the first when it did not become a large rise in the second. It separated a wholesale recovery from a jump in the household bill.",
+      "Policy was not to be chained to a single index figure. An index is a constructed number — a basket, weights, a base period — and the guidelines refused to make one print the whole result. The aim stayed the domestic price level, watched with judgment. Interest rates should stay as low as the purchasing-power aim allowed. A low rate was a preference inside the aim. Where preserving purchasing power required something higher, the price aim won. The guideline names that constraint. It does not name a percent.",
+    ],
+  },
+  {
+    heading: "Who holds the instruments",
+    paragraphs: [
+      "In **June 1933** the Riksdag added another piece: the choice of instruments for reaching the goal should rest with the Riksbank. Parliament had confirmed the aim. The June addition put the tools with the bank, so the goal was an operating rule rather than a sentence reopened in every session.",
+      "After the announcement, the bank began compiling a weekly consumer price index, so it could watch the domestic price level at short intervals. The weekly index sits beside the refusal to chain policy to a single figure. It is a short-interval picture of household prices. The guidelines still ask for judgment. The September night had named the aim. The index was how the bank proposed to see, often enough, whether domestic buying power was holding.",
+    ],
+  },
+  {
+    heading: "What happened to the krona",
+    paragraphs: [
+      "The krona was written down sharply after the break with gold — on the order of **thirty percent** in the Riksbank's later account. The krona bought less foreign money, and less gold, than under the old parity. The September aim was still the domestic side. The write-down is what the foreign price of the krona did once the parity was no longer defended.",
+      "Foreign reserves that had stood near **SEK 300 million** fell toward **SEK 30 million** within three months. The stock meant to make gold payment credible was already nearly gone on the Sunday of the announcement. The later fall is the reserve account of the months that followed. Near and toward are the caution in that later account. They are not a claim that either stock was exact to the krona.",
+      "In **July 1933** Sweden pegged the krona to sterling and joined the sterling area. Britain had already left gold, so the pound Sweden pegged to was itself off the metal standard. The krona's foreign rate would be managed with sterling rather than restored to a gold parity. That peg was not then treated as a contradiction of the purchasing-power aim. It was a practical exchange-rate choice inside a program that still started from domestic prices.",
+      "Sweden, by many contemporary and later measures, weathered the **1930s** strains better than most. People at the time, and people looking back, often placed it among the countries that came through with less damage than the worst cases.",
+    ],
+  },
+  {
+    heading: "A later target, a different design",
+    paragraphs: [
+      "The price-stability idea faded in the postwar decades when other goals took the lead. Fading means a change in what the bank was asked to put first. It leaves the Sunday-night sentence in the record.",
+      "The idea returned as orthodoxy in the **1990s**. In **1993** the Riksbank defined its modern target as **two percent** annual inflation — a rate of change, with prices rising two percent a year on the definition the bank adopted. That is a different design from the **1930s** price-level experiment. A price-level goal looks at the height of prices and treats a fall as something to resist. An inflation target looks at the speed of change, and in the 1993 design a steady low rise is the aim. The same bank that had been told, on a Sunday night in 1931, to preserve domestic purchasing power later named a modern inflation number. The number is a later design, and it still belongs to the institution that lived through the night convertibility ended.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Sunday night, then a program, then a peg, then a later target."],
+    list: [
+      "**Eight days before 27 September 1931.** Britain leaves the gold standard. Speculators turn on the krona. Foreign reserves drain.",
+      "**26 September 1931.** Hamrin asks Gustav Cassel for a draft. Cassel works into the night and sends it by messenger. Eli Heckscher also shapes the thinking around the government line.",
+      "**27 September 1931.** Hamrin relieves the Riksbank of the duty to convert banknotes into gold on demand, and aims policy at the domestic purchasing power of the krona. The reserves meant to defend gold parity are nearly gone.",
+      "**May 1932.** Parliament confirms the guidelines: resist deflation as strongly as inflation; allow some wholesale-price recovery if the cost of living is not lifted much; refuse a single index figure; keep interest rates as low as the purchasing-power aim allows.",
+      "**Within three months.** The Riksbank's later account puts the krona's write-down on the order of thirty percent, and reserves near SEK 300 million falling toward SEK 30 million.",
+      "**June 1933.** The Riksdag leaves the choice of instruments with the Riksbank.",
+      "**July 1933.** Sweden pegs the krona to sterling and joins the sterling area.",
+      "**1993.** The Riksbank defines a target of two percent annual inflation, a different design from the 1930s price-level experiment.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1931**, Sweden left gold on a Sunday night and told the public what would replace it: the domestic value of the krona in people's hands.",
+      "The reserves had already forced the suspension. Sweden chose the sentence about purchasing power. Guidelines, instruments, the sterling peg, and the 1993 target of two percent inflation came later. That 1993 target was a different design from the price-level aim of the Sunday night.",
+      "It is a dated account of one Sunday's announcement, and of the program built on the sentence.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2104261329636712450).",
+    ],
+  },
+];
+
+/** Blog: Greenspan 1966 essay to the 2011 print-money line — longer than the X Article. */
+const greenspan1966PrintMoney: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In August **2011**, Standard & Poor's had just downgraded U.S. credit. Alan Greenspan sat on NBC's Meet the Press. He was no longer Chairman of the Federal Reserve. He was the man who had run the place for nearly two decades, answering the question hanging over every Treasury holder in the room.",
+      "Could America default?",
+    ],
+  },
+  {
+    heading: "Print money, zero default",
+    paragraphs: [
+      "The article dates the appearance as NBC's Meet the Press, **7 August 2011**, and labels him former Fed Chairman. The sentence it prints under his name is this: \"The United States can pay any debt it has because we can always print money to do that. So, there is zero probability of default.\"",
+      "Print money. Zero default. Said calmly, as if it were plumbing.",
+      "A default, in the narrow sense of that sentence, is a failure to pay a debt in the unit the debt is written in. Treasury debt is a promise to pay dollars. Greenspan treats the dollar as a unit the United States can create. If the issuer can create the unit, running out of dollars need not be why a payment fails. The sentence does not say what those dollars will buy.",
+      "That line lands harder when you know what the same man wrote forty-five years earlier.",
+    ],
+  },
+  {
+    heading: "A private essay in 1966",
+    paragraphs: [
+      "In July **1966**, Greenspan was a private economist in Ayn Rand's Objectivist circle. He was not a public official. He was not a central banker. He published an essay called \"Gold and Economic Freedom\" in *The Objectivist* newsletter. Rand reprinted it the next year in *Capitalism: The Unknown Ideal*.",
+      "He did not hedge. The line the article places there is his: \"Gold and economic freedom are inseparable.\"",
+      "Inseparable joins the two. The freedom to hold, trade, and plan sits, in that sentence, with a money that is gold or tied to gold. The essay's title already pairs them. What follows in the note is the mechanism, then a warning about savings.",
+    ],
+  },
+  {
+    heading: "The brake is metal",
+    paragraphs: [
+      "Further in, he named the mechanism. Hard money plus free banking keeps credit honest. Expand too far, and gold drains away. The brake is metal, not a speech.",
+      "Hard money, in that picture, is a unit that cannot be multiplied at will. Free banking, as the essay uses it, is a banking system that is not told by a central office how far credit may run. The two together are the constraint. A bank that expands credit too far loses gold. Depositors and rivals present claims. Metal leaves. The loss is the signal to stop. No chairman has to announce a pause. The drain announces it.",
+      "The article prints this sentence from the essay, under his name and the title *Gold and Economic Freedom*, **1966**: \"Thus, under the gold standard, a free banking system stands as the protector of an economy's stability and balanced growth.\"",
+      "The protector in that sentence is the arrangement: gold as the standard, and banks free enough that a gold drain can punish an expansion. A speech can describe the brake. The essay says the brake is the metal leaving.",
+    ],
+  },
+  {
+    heading: "The essay's stark word",
+    paragraphs: [
+      "Then he named what happens to savings when that constraint disappears. The article points at the essay's own stark word, and prints it on a graphic.",
+    ],
+    figure: {
+      src: "/images/blog/greenspan-1966-print-money-quote-confiscation.jpg",
+      alt: "Quote card on a dark ground with a gold dollar-sign seal, printing Alan Greenspan’s 1966 lines on the gold standard, savings, confiscation through inflation, and deficit spending.",
+      caption:
+        "The 1966 essay’s stark word — confiscation — on the graphic from the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Alan Greenspan’s 1966 gold essay.",
+      width: 1199,
+      height: 765,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The graphic opens with his sentence: \"In the absence of the gold standard, there is no way to protect savings from confiscation through inflation.\" It goes on that there is no safe store of value. Further down the same card he writes: \"Deficit spending is simply a scheme for the confiscation of wealth. Gold stands in the way of this insidious process. It stands as a protector of property rights.\"",
+      "Confiscation is the stark word. It usually means a taking by law. Here he applies it to inflation. Savings lose [purchasing power](/sound-money/inflation-purchasing-power). The unit still has the same name. It buys less. Deficit spending, in the same passage, is spending beyond what taxes bring in, covered by creating claims. He calls that a scheme, and he writes that gold stands in the way of it.",
+      "Read those lines again, as the article asks. Gold as a wall. Paper that can be printed without limit as a door that never closes. When money is tied to gold, banks cannot flood the system forever. When gold is cut loose, governments can cover deficits by creating claims faster than goods. Savers lose purchasing power quietly — not in a crash announcement, but in the thinning of every paycheck and every account balance. That was the young essayist's argument. Gold as constraint. Paper as temptation.",
+    ],
+  },
+  {
+    heading: "The system under his feet",
+    paragraphs: [
+      "Then the world under his feet changed.",
+      "In August **1971**, Nixon closed the [gold window](/history/20th-century/bretton-woods-nixon-1971). Foreign official holders could no longer redeem dollars for gold at a fixed price. Bretton Woods was finished. The dollar became a pure fiat note — still called a dollar, no longer a claim on metal sitting in a vault.",
+      "Redeem meant a foreign treasury or central bank could present dollars and take gold at the posted official price. Closing the window ended that channel. Fiat, in the article's phrase, is the note that remains after the claim on metal is gone. The essay of **1966** had described what follows when gold is cut loose. **1971** was that cut for the dollar's official gold link.",
+    ],
+  },
+  {
+    heading: "A chair in a post-gold system",
+    paragraphs: [
+      "By the time Greenspan took the Fed chair in **1987**, that fight was already over. He did not inherit a gold standard. He inherited the operating desk of a post-gold system — and ran it until early **2006**.",
+      "The Sunday interview in **2011** sits after that run. He is no longer the chairman. He is the former chairman, asked about default after a downgrade, having already spent the chairmanship inside the system the **1966** essay had described.",
+    ],
+  },
+  {
+    heading: "The job, the system, the question",
+    paragraphs: [
+      "So why do the **1966** essay and the **2011** print-money answer feel like they belong to different men?",
+      "Because the job changed. The money system changed. The question changed.",
+      "In **1966** he was writing a critique from outside: what happens when paper escapes gold. In **2011** he was describing a technical feature of the system he had already managed. Debts written in a government's own currency can be met by creating more of that currency. Formal default, in the narrow sense, can be avoided.",
+      "The essay asks what savers lose when the gold constraint is gone. The Sunday answer asks whether the Treasury can fail to pay in dollars. The article's reading is that the question moved.",
+    ],
+  },
+  {
+    heading: "Inflation is a different question",
+    paragraphs: [
+      "That is not the same claim as \"printing has no cost.\" Inflation is a different question from technical default. The **1966** essay was already about that difference. The Meet the Press line answered a narrower one: can the Treasury fail to pay in dollars? His answer was no — because dollars can be made.",
+      "Technical default is the missed payment in the unit named on the bond. Inflation is the thinning of what that unit buys after the payment is made. A creditor can receive every dollar the contract names and still command fewer goods. The essay calls that thinning a confiscation when it comes from money created to cover deficits. The Sunday line answers the missed payment. It does not say the new units leave savings untouched.",
+    ],
+  },
+  {
+    heading: "Three frames",
+    paragraphs: [
+      "Same name across forty-five years. Young Objectivist essayist. Fed Chair of a fiat central bank. Former Chair on Sunday television after a downgrade. Three frames, one through-line: paper money can dodge formal default and still erode what savers hold.",
+      "July **1966** is the outsider, writing that gold is the wall. **1987** to early **2006** is the chair of a system in which that wall is already gone. **7 August 2011** is the former chair, after a downgrade, saying dollars can be made. Dodging formal default is the Sunday claim. Eroding what savers hold is the essay's claim.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Essay, window, chair, Sunday answer."],
+    list: [
+      "**July 1966.** Greenspan, a private economist in Ayn Rand's circle, publishes \"Gold and Economic Freedom\" in *The Objectivist*. He writes that gold and economic freedom are inseparable, that free banking under a gold standard protects stability, and that without the gold standard savings cannot be protected from confiscation through inflation.",
+      "**The next year.** Rand reprints the essay in *Capitalism: The Unknown Ideal*.",
+      "**August 1971.** Nixon closes the gold window. Foreign official holders can no longer redeem dollars for gold at a fixed price. Bretton Woods ends. The dollar remains a dollar without that metal claim.",
+      "**1987 to early 2006.** Greenspan chairs the Federal Reserve. He inherits the operating desk of a post-gold system, not a gold standard.",
+      "**August 2011.** S&P downgrades U.S. credit. On Meet the Press, **7 August**, the former chairman says the United States can pay any debt it has because it can always print money, so there is zero probability of default.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "The essay named the cost. The television answer named the escape hatch. Both can be true at once. That is the story.",
+      "The cost is on the graphic: savings confiscated through inflation when the gold standard is gone. The escape hatch is the Sunday sentence: a debt in dollars can be paid by making dollars. Forty-five years separate the newsletter and the studio. The job changed. The money system changed. The question changed.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2105187582904500224).",
+    ],
+  },
+];
+
+/** Blog: 1813 holey dollar and dump — longer than the X Article. */
+const australia1813HoleyDollar: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In **1813**, New South Wales was short of everyday cash. The silver that did show up was mostly Spanish dollars — big silver coins used across the world's trading ports, sometimes nicknamed [pieces of eight](/history/silver/piece-of-eight). They arrived with ships. They left with ships. Merchants and sailors knew those coins were good money far from Sydney. So the colony's best silver kept walking out the door.",
+      "A port that lives by ships has a coin problem an inland market does not. The same piece that pays a shop in Sydney will pay a shop in another port, because the stamp is Spanish and the weight is already known. Sailors and merchants do not have to learn a local name. They trust the coin they already carry. When a colony's small change is made of coins the world accepts, those coins are always one departure from leaving. Everyday cash is whatever is still in the till after the ship has sailed. In New South Wales, too much of that silver did not stay.",
+      "Governor Lachlan Macquarie did not wait for a new mint from London. He kept the silver by spoiling it on purpose.",
+    ],
+    figure: {
+      src: "/images/blog/australia-1813-holey-dollar-ring-and-dump.jpg",
+      alt: "Silver holey dollar, a ring with a round hole stamped FIVE SHILLINGS and New South Wales 1813, beside the small centre plug, the dump, stamped FIFTEEN PENCE.",
+      caption:
+        "The ring and the plug — five shillings around the hole, fifteen pence on the dump.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Australia's holey dollar.",
+      width: 820,
+      height: 820,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "Spoil the export shape",
+    paragraphs: [
+      "Spoiling, here, did not mean melting the silver into bars or locking it in a chest forever. It meant changing the shape so the coin no longer looked like the Spanish dollar a sailor would pocket for the next voyage. A whole dollar is a familiar object. A ring with a hole, and the small plug cut from the middle, are not. The metal is still silver. The marks are no longer the marks of a coin that moves from port to port under a Spanish name. That is the device. Keep the silver. Ruin it as export money.",
+    ],
+  },
+  {
+    heading: "Counted, sealed, still not street money",
+    paragraphs: [
+      "Britain had already arranged, through the East India Company, for about ten thousand pounds' worth of Spanish dollars to be bought in India and shipped to New South Wales on the government's account. Roughly forty thousand of those coins reached Sydney in late **1812**. The National Museum of Australia dates the Samarang's landing to **26 November**. That December a committee at Government House counted the boxes, found nearly thirty-nine thousand nine hundred and nine dollars, and sealed them again. The silver was in the colony. Keeping it there was another problem.",
+      "The shipment answers one question and leaves the next one open. London, through the Company, had put Spanish silver on a government account and sent it to Sydney. These were not loose private coins that a merchant could claim and carry out the next morning without a count. A committee at Government House opened the boxes, counted, and sealed them. Nearly thirty-nine thousand nine hundred and nine is the count this note uses — the article's figure, not a round forty thousand standing in for it. Roughly forty thousand is the size of what reached Sydney. The December count is what the committee found in the boxes. Sealing them again means the silver was received and then shut up. Receipt is not circulation. A coin in a sealed box pays no wages and settles no shop bill. The colony had silver in hand. It did not yet have a silver coin that people would spend locally and leave behind.",
+    ],
+  },
+  {
+    heading: "One punch, two coins",
+    paragraphs: [
+      "Macquarie hired William Henshall — a convict transported for forgery, a man who knew metal — to punch a hole through each Spanish dollar and stamp both pieces for New South Wales. In a basement workshop they called the Factory, Henshall worked a drop hammer. The outer ring became the holey dollar, worth five shillings. The centre plug became the dump, worth fifteen pence. One Spanish coin turned into two colonial coins. Once New South Wales marks sat on the metal, it no longer looked like Spanish money anyone would gladly carry back to sea.",
+      "The hire is part of the story, and the article tells it plainly. Henshall was not an engraver sent out from London with a new mint. He was a convict, transported for forgery: a man punished for working metal the wrong way, then set to work metal on the governor's orders. The note does not dress that up. It names the skill. He knew metal. The tool was a drop hammer in a basement called the Factory. A drop hammer falls. It punches. The punch is the policy.",
+      "What the punch produced was two denominations from one coin. The outer ring — the holey dollar — was rated at five shillings. The centre plug — the dump — was rated at fifteen pence. The article names those two values and stops there. It does not say the ring and the plug were meant to add up to the Spanish dollar's old price in some other port. The point of the cut is the cut. A ring stamped for New South Wales, and a plug stamped for New South Wales, are local pieces. A whole Spanish dollar is a coin a sailor already understands. After the hammer, he is holding something that has to be explained.",
+      "The names followed the shapes. Holey dollar is the ring: a dollar with a hole, the Spanish coin emptied at the centre and restamped. Dump is the plug that came out of that hole, a small thick disc of the same silver. One punch, two pieces, two ratings. Five shillings on the ring. Fifteen pence on the plug. Colonial stamps on both. The silver did not leave the colony as a familiar Spanish dollar, because that dollar was no longer in one piece.",
+    ],
+  },
+  {
+    heading: "The day the law called them money",
+    paragraphs: [
+      "On **30 September 1813**, the proclamation took effect. The holey dollar and the dump became legal tender. Melting them or shipping them out was an offence. Government pay and private contracts after that date were meant to run on the new silver, unless the parties said otherwise. Counterfeiting and clipping were punishable. Henshall was still punching rings and plugs — Museums of History NSW notes the coins were not ready for general issue until **January 1814** — but **30 September** is the day the law called them money.",
+      "Legal tender is a legal status, not a pile of finished coins on a counter. The proclamation said these pieces were money in New South Wales. It also said what you could not do with them. Melting them turned them back toward raw silver, which could leave in another form. Shipping them out returned them to the sea the punch was meant to close. Both were offences. Counterfeiting and clipping were punishable, the ordinary defense of a coin once a government has put its name on it. Clipping takes metal from the edge. A holey dollar has already lost its centre on purpose. The law still had to say that further theft from the ring was a crime.",
+      "The dates are easy to blur, and the article keeps them apart. **30 September 1813** is the day the proclamation took effect. **January 1814** is when Museums of History NSW says the coins were ready for general issue. Between those dates Henshall was still at the drop hammer. The law ran ahead of the finished stock. Government pay and private contracts after the proclamation were meant to run on the new silver, unless the parties said otherwise. That exception is narrow. It is not a claim that every bargain in the colony switched overnight. It is the rule the article records: the new silver was the money those payments were meant to use, with room for the parties to name something else.",
+    ],
+  },
+  {
+    heading: "Both lives in the silver",
+    paragraphs: [
+      "Look at a surviving holey dollar and you can still read both lives in the silver. Spanish titles sit on the outer rim. **FIVE SHILLINGS** sits around the hole. The dump, the plug that came out of that hole, carries its own stamp: fifteen pence, and New South Wales. Australia's first distinctive coins were born on paper that day. One punch. Two denominations. Silver that stayed.",
+      "The rim is the first life. It is still a Spanish dollar's edge: titles from the coin Henshall punched, the writing a merchant in another port would once have trusted without asking. The inner legend is the second life. Five shillings is the colonial rating, cut into the ring around the hole the hammer made. The dump is the missing centre, now its own coin, with fifteen pence and the name of the colony on it. Nothing in that reading requires a new mint building. It requires the old coin, a punch, and a date on which the law agreed to call both pieces money.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Shipment, punch, proclamation, then general issue."],
+    list: [
+      "**Late 1812.** Roughly forty thousand Spanish dollars reach Sydney on the government's account, bought in India through the East India Company. The National Museum of Australia dates the Samarang's landing to 26 November.",
+      "**That December.** A committee at Government House counts the boxes, finds nearly thirty-nine thousand nine hundred and nine dollars, and seals them again. The silver is in the colony. It is not yet money in the street.",
+      "**1813.** Macquarie hires William Henshall, a convict transported for forgery, to punch each Spanish dollar in a basement workshop called the Factory. A drop hammer makes the ring — the holey dollar, five shillings — and the centre plug — the dump, fifteen pence.",
+      "**30 September 1813.** The proclamation takes effect. The holey dollar and the dump are legal tender. Melting them or shipping them out is an offence. Government pay and private contracts are meant to run on the new silver unless the parties say otherwise. Counterfeiting and clipping are punishable.",
+      "**January 1814.** Museums of History NSW notes the coins were not ready for general issue until then. Henshall was still punching after the proclamation. 30 September remains the day the law called them money.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "On this day in **1813**, Macquarie's holey dollar and dump became legal tender in New South Wales. The silver had arrived the year before, counted and sealed. The hammer made two coins out of one. The proclamation gave them a status, and it closed the easy way out. General issue waited until the new year. The day the law spoke was **30 September**.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2105337579369627661).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/australia-1813-holey-dollar": australia1813HoleyDollar,
+  "blog/greenspan-1966-print-money": greenspan1966PrintMoney,
+  "blog/mises-inflation-as-policy": misesInflationAsPolicy,
+  "blog/spanish-silver-first-global-money": spanishSilverFirstGlobalMoney,
+  "blog/sweden-1931-left-gold": sweden1931LeftGold,
+  "blog/interest-costs-vs-us-gold": interestCostsVsUsGold,
+  "blog/september-1971-official-gold-price": september1971OfficialGoldPrice,
+  "blog/china-1934-silver-appeal": china1934SilverAppeal,
   "blog/when-exchanges-change-the-silver-rules": exchangesChangeSilverRules,
   "blog/ltcm-1998-consortium": ltcm1998Consortium,
   "blog/newton-1717-guinea": newton1717Guinea,
@@ -3088,6 +4164,11 @@ export function getBody(cluster: string, slug: string): Section[] | null {
   return bodies[`${cluster}/${slug}`] ?? null;
 }
 
+/** Every article body keyed by `cluster/slug`. */
+export function listBodies(): [string, Section[]][] {
+  return Object.entries(bodies);
+}
+
 /** Pillar hub /history — rendered by the history index route. */
 export const historyHubBody: Section[] = [
   {
@@ -3101,7 +4182,7 @@ export const historyHubBody: Section[] = [
     heading: "From metal in the hand to paper that floats",
     paragraphs: [
       "The story does not start with a modern central bank. Traders settled in gold and silver by weight; a stamp cut the cost of checking that metal; a warehouse ticket began to pay a debt while the bullion stayed in the vault. Paper is late. Fiat — money that exists by law and habit rather than by redeemability into a known weight — is later still.",
-      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French assignats. A paper collapse in Regency France is not Weimar, and Weimar is not **1971**.",
+      "Lydia, Greece, and Rome turned the stamp into a fiscal tool long before any national bank. Centuries later the receipt becomes a note: Amsterdam’s public bank, the Bank of England’s war charter, [John Law’s **1720** System](/history/banks-paper/john-law), and the French [assignats](/history/banks-paper/assignats). Each broke under its own laws, in its own century.",
     ],
   },
   {
@@ -3118,43 +4199,43 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "People argue about gold, paper, and “backing” with words that slip. One speaker means a coin that is costly to dig. Another means a note you can present for metal. A third means a vault photo beside a slogan. The argument goes nowhere until the words hold still.",
-      "Sound money is the oldest of those words. It means a unit whose supply cannot be expanded at will by the issuer — usually because metal is costly to produce, or because paper is legally redeemable for a known weight of metal. Most of the rest follows from that one test.",
+      "People argue about gold and paper money with a handful of words, and they rarely mean the same thing by them. One person says “backed” and means a note you can swap for metal at a bank counter. Another means gold sitting in a central-bank vault that nobody can ask for. Until the words are pinned down, the argument goes in circles.",
+      "Sound money is the oldest of those words. It describes money the issuer cannot simply create more of. For most of history the limit came from the metal: an ounce of gold takes real work to dig out and refine. Later it came from law, when a paper note could be exchanged for a fixed weight of gold or silver. Ask whether the issuer can add to the supply by decision alone, and most of the other questions sort themselves out.",
     ],
   },
   {
-    heading: "A unit nobody can simply make more of",
+    heading: "Money nobody can simply make more of",
     paragraphs: [
-      "[What is sound money?](/sound-money/what-is-sound-money) starts with a note that clears the till on Monday and asks a harder question of it: can whoever issued it create more by decision alone? Circulation is not the test. A unit can pay for groceries today and still fail, if the issuer may dilute the stock as policy.",
-      "Older English carried the same idea in two senses. A sound coin rang true when it was dropped on a counter; a clipped or plated one did not. A sound standard was healthy, not quietly lightened. Both senses point at the same fear: a unit worth less than its face claims.",
+      "[What is sound money?](/sound-money/what-is-sound-money) begins with an ordinary banknote that pays for groceries on Monday. That proves it works as money today. It says nothing about whether the issuer can print more of it next week. A currency can be accepted everywhere and still lose value if whoever issues it is free to expand the supply.",
+      "The word itself is old. In English a sound coin was one that rang true when dropped on a counter, while a clipped or plated coin gave a dull note. Merchants tested coins that way because forgers, and sometimes rulers, shaved off metal. The worry behind the word has always been a coin worth less than it claims.",
     ],
   },
   {
-    heading: "Dug from the ground, or declared by law",
+    heading: "Mined, or made by law",
     paragraphs: [
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) splits money that is costly to produce from **fiat** — money that exists by law and habit, from the Latin *fiat*, “let it be done.” Nobody mines a new ounce of gold with a vote. A treasury can create a new note with a signature.",
-      "Circulation does not decide that category either. A well-run fiat regime can be stable for years; a mismanaged gold regime can still debase the coin. And the same engraved note can change sides overnight. When a convertibility window closes, a claim on metal becomes paper that exists because the law says so. The ink does not change. The stop does.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) comes down to cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin for “let it be done.” A treasury can issue a new note with a signature.",
+      "Neither kind guarantees a good or bad outcome. Some fiat currencies have held steady for years, and Roman emperors had cut the silver in the denarius to a few percent by the 270s AD. The same note can also change category overnight. When the United States stopped exchanging dollars for gold in August 1971, the notes in people’s wallets looked exactly as before. What had changed was that only the law stood behind them.",
     ],
   },
   {
-    heading: "What the unit still buys",
+    heading: "What money buys over the years",
     paragraphs: [
-      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the damage in plain terms: what an hour of work buys across years. Prices are the surface. The object is the unit itself. Hyperinflation, when prices rise by half or more in a single month, is the extreme case, not the everyday meaning.",
-      "Scarcity, war, and a bad harvest move prices under any money. What sound money constrains is one source of a general rise — a stock the issuer can expand whenever a budget runs short.",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the loss in everyday terms: how much bread or rent an hour of work pays for, compared across decades. Rising prices are what people notice. The underlying change is in the currency. Hyperinflation is the extreme case. The economist Phillip Cagan drew the line in 1956 at prices rising by half or more in a single month.",
+      "Prices also rise for reasons that have nothing to do with money, such as war, drought or a failed harvest. Sound money cannot prevent those. What it removes is one particular cause: an issuer adding to the money supply whenever the budget runs short.",
     ],
   },
   {
-    heading: "Backed by what, and for whom",
+    heading: "Gold in the vault, or gold you can claim",
     paragraphs: [
-      "The word most often abused is “backed.” [What “backed” means](/sound-money/backed-money) separates **redeemability** — present the note, take a known weight of metal — from a vault total that no holder can claim. A contract can be tested at a window. A slogan cannot.",
-      "Governments hold gold for many reasons. None of them makes a note convertible unless the law gives the holder the right to present it. Across the twentieth century that right narrowed step by step — suspended by war in **1914**, taken from American citizens in **1933**, withdrawn from foreign governments in **1971** — while the word “gold” stayed in the story.",
+      "No word in these arguments gets stretched further than “backed.” [What “backed” means](/sound-money/backed-money) draws one line. A note is **redeemable** if you can hand it in and receive a known weight of metal. Gold in a vault that no holder has a right to claim is something else. You can test redeemability at a bank window. You cannot test a slogan.",
+      "Governments hold gold for many reasons, and holding it does not make their notes convertible. Only the law does that, by giving the holder the right to ask. In the twentieth century that right was taken away in stages. Most of Europe’s warring governments suspended it in **1914**. Franklin Roosevelt’s Executive Order 6102 told Americans to hand in their gold coin in **1933**. Richard Nixon stopped exchanging dollars for gold with foreign governments in **1971**. Washington kept the gold. The US Treasury still reports about 261 million troy ounces.",
     ],
   },
   {
-    heading: "The dates behind the words",
+    heading: "Where the words were tested",
     paragraphs: [
-      "The words matter because of what happened to them. In **1923** the German paper mark stopped working as money. In **1933** Americans were ordered to hand in their gold coin. In **1971** the last official promise to turn dollars into gold was suspended. Weimar, the gold recall, and Nixon are told in full in [Sound Money History](/history), each with its own laws and its own numbers.",
-      "Every one of those stories turns on the same few questions: what the unit was, who could make more of it, and whether anyone could still take it to a window and walk out with metal.",
+      "These definitions come from real events. In November **1923** one US dollar cost 4.2 trillion German paper marks. In **1933** Americans turned in their gold coin at $20.67 an ounce, and a year later Washington revalued gold at $35. On 15 August **1971** the last official link between the dollar and gold was cut. [Sound Money History](/history) tells each of these stories in full, with the laws and the numbers.",
+      "In each case two questions explain most of what happened. Who was able to create more money? And could a holder still walk into a bank with a note and walk out with metal?",
     ],
   },
 ];
@@ -3163,16 +4244,15 @@ export const practiceHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between those two facts sit fabrication, a premium, a place the object lives, and a later buyer who must believe the stamp. People who handle physical gold and silver already live in that gap. These pages name the usual decisions — form, premium, storage, authenticity, and starting size — as mechanics. They are an educational menu. They are not a shop, and they are not a recommendation.",
-      "The older question is why two metals kept winning in trade. That story lives on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver): portability, durability, divisibility, recognizability — metal before the mint. The vocabulary that must stay still before any handling note — hard, fiat, backed, and the line that information is not advice — lives under [Sound Money](/sound-money). Dated events stay under [Sound Money History](/history). Current figures stay under [Markets](/markets). This overview only describes how an object already moves through commerce.",
+      "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between those two facts sit fabrication, a premium, a place the object lives, and a later buyer who must believe the stamp. People who handle physical gold and silver already live in that gap — form, premium, storage, authenticity, and starting size as ordinary mechanics of the object.",
+      "Why two metals kept winning in trade is an older question: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — portability, durability, divisibility, recognizability — metal before the mint. Hard, fiat, and backed are the words that have to hold still when a stamp, a premium, or a vault invoice is in front of you; those definitions live under [Sound Money](/sound-money). Weimar, the Fed, and **1971** are told in [Sound Money History](/history). Official book rates and country offtake sit under [Markets](/markets).",
     ],
   },
   {
-    heading: "Handling is not a history of money",
+    heading: "The object in front of you",
     paragraphs: [
-      "History answers what happened when a mint lightened a coin, a bank wrote a receipt, or a statute closed a gold window. Markets answers what a leftover book rate, a reserve line, or a gold–silver quotient measures on a named date. Sound money answers what the words mean before those stories and figures can stay honest. Handling is a fourth job. It is the object: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
-      "Mixing the jobs produces a pitch. A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Weimar, the Fed, and **1971** belong on the history shelf. Country offtake tables and official reserve lines belong on Markets. If a word is slipping — “backed,” “hard,” “advice” — the definition pages are the stop, not a storage note.",
-      "This overview stays on the handling shelf. When the next question is a date, leave for History. When it is a caption on the tape, leave for Markets. When a word is the question, leave for Sound Money. The paragraphs below only name how people already move metal through form, price, custody, and authenticity — not a quantity, and not a dealer ranking.",
+      "A mint that lightens a coin, a bank that writes a receipt, or a statute that closes a gold window is a dated case. A leftover book rate, a reserve line, or a gold–silver quotient on a named date is a caption on the tape. Handling is the object: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
+      "A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Country offtake tables and official reserve lines are market captions. When “backed” or “hard” slips, the [Sound Money](/sound-money) pages hold the word still.",
     ],
   },
   {
@@ -3180,29 +4260,23 @@ export const practiceHubBody: Section[] = [
     paragraphs: [
       "Form is the first split. A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay cost over more ounces, so the premium above the screen is often lower. Storage is denser. Resale of a large bar can mean finding a counterparty who will assay or who already trusts the brand and serial. A bullion coin is a government or mint product with a face value far below the metal. The extra cost often buys recognizability: a stranger can name the type without a laboratory. Small minted bars sit closer to coins on premium. The slogan “bars versus coins” is empty until you name the size. Numismatic and proof pieces are a different market. These notes stay on bullion — metal as metal. Mixing collectibles into a first holding is how a premium becomes a story instead of a fabrication cost.",
       "Premium is the gap between the screen and the object. Spot is a paper ounce. The product in hand was cast or struck, shipped, insured, and sold by someone who must later bid for it. That difference is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market. A coin can carry a large premium and still be a clean product. A bar can sit near spot and still be hard to resell. The number that matters later is the dealer’s buy price — the bid — not only the ask. A thin product with a fat ask and a poor bid is expensive twice. Compare the gap to the form trade-off, not to a morality tale about purity.",
-      "Storage is access versus cost versus counterparty. Home keeps the metal near and the operational risk on the household: fire, theft, forgetfulness, a safe that advertises itself. There is no vault fee and no auditor. A vault is distant and on them. Allocated storage, done properly, identifies bars or coins as yours; you should be able to name what you own. Pooled or unallocated accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile. A seller who will “store it for you” and never ship has only moved the custody question into another costume. This overview describes the menu. It does not pick a shelf.",
-      "Authenticity is a filter, not a laboratory course. Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defense is a counterparty you can still find in a year, a product common enough to be known, and a check of weight and dimensions against the published spec. Weigh it. Measure it. Look at the edge, the reeding, and the stamp. None of that is conclusive. A price far below everyone else is information: treat it as a warning, not a bargain. A wrong test can damage a good piece. If a fake would matter, use a professional. No page on this site replaces that test.",
-      "Starting size is a process, not a slogan. First ounces are four decisions: what form, from whom, where the metal lives, and what you write down. Skip any one and the others get expensive. Decide the form and the size before looking at a quote. Know the premium and the bid, not only the ask. Choose storage before a parcel moves. Keep invoices, serials, and a note of location that is not only the same drawer as the metal. Stay off collectibles until bullion is understood. If the channel is remote, the watch-fors are identity of the dealer, payment finality, shipping, and the empty-box case — logistics, not a vendor ranking. None of those steps is a reason to acquire metal. They are the decisions people already face when metal moves.",
+      "Storage is access versus cost versus counterparty. Home keeps the metal near and the operational risk on the household: fire, theft, forgetfulness, a safe that advertises itself. There is no vault fee and no auditor. A vault is distant and on them. Allocated storage, done properly, identifies bars or coins as yours; you should be able to name what you own. Pooled or unallocated accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
+      "Authenticity is a filter, not a laboratory course. Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defense is a counterparty you can still find in a year, a product common enough to be known, and a check of weight and dimensions against the published spec. Weigh it. Measure it. Look at the edge, the reeding, and the stamp. None of that is conclusive. A price far below everyone else is information: treat it as a warning, not a bargain. A wrong test can damage a good piece. If a fake would matter, use a professional.",
+      "Starting size is a process, not a slogan. First ounces are four decisions: what form, from whom, where the metal lives, and what you write down. Skip any one and the others get expensive. Decide the form and the size before looking at a quote. Know the premium and the bid, not only the ask. Choose storage before a parcel moves. Keep invoices, serials, and a note of location that is not only the same drawer as the metal. Stay off collectibles until bullion is understood. If the channel is remote, the watch-fors are identity of the dealer, payment finality, shipping, and the empty-box case — logistics, not a vendor ranking.",
     ],
   },
   {
-    heading: "Six existing notes",
+    heading: "Six notes",
     paragraphs: [
-      "Six pages already sit under this heading. This overview names their jobs so a reader can open one without treating the list as a course, a shop, or a recommendation to hold metal.",
+      "Six pages sit under this heading. Open any one for the detail.",
     ],
     list: [
       "[Gold bars vs coins](/gold-silver/bars-vs-coins) — Fabrication, recognition, size; bullion versus collectibles.",
       "[Premium over spot](/gold-silver/premium-over-spot) — Screen price versus product in hand; bid as well as ask.",
       "[Storing gold and silver](/gold-silver/storage) — Access, cost, counterparty; home, allocated, unallocated.",
       "[Spotting fakes](/gold-silver/spotting-fakes) — High-level filter only; counterparty and specs before gadgetry.",
-      "[Beginner checklist](/gold-silver/beginner-checklist) — Named decisions; still not a recommendation.",
+      "[Beginner checklist](/gold-silver/beginner-checklist) — Named decisions for first ounces.",
       "[Buying online](/gold-silver/buying-online) — Remote identity, payment, shipping, invoice; no vendor list.",
-    ],
-  },
-  {
-    heading: "",
-    paragraphs: [
-      "These pages inform. They do not advise a purchase, name a quantity, or rank a dealer. They do not turn a premium, a vault menu, or a first-ounces list into a cue to act. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. The standing line lives with the vocabulary under [Sound Money](/sound-money). Why two metals were chosen for trade lives on [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Handling stays here. History, definitions, and market numbers stay on their own pages.",
     ],
   },
 ];
@@ -3220,7 +4294,7 @@ export const marketsHubBody: Section[] = [
     heading: "The numbers behind the headlines",
     paragraphs: [
       "[Official gold book value](/markets/official-gold-book-value) explains the **$42.22**: how the official price climbed from $35 to its last statutory level after the **1971** gold-window close, why the Treasury still counts its roughly **261.5 million** ounces at that rate, and what you get when you divide a market price by it.",
-      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) explains how central banks report gold — tonnes held, gold’s share of reserves, gold measured against GDP, and dated purchases and sales. It follows China’s published stock, Poland’s buying, Canada’s reserve table that now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
+      "[Central-bank gold reserves](/markets/central-bank-gold-reserves) covers the tonnes held, gold’s share of reserves, gold measured against GDP, and dated purchases and sales — China’s published stock, Poland’s buying, Canada’s reserve table that now reads **Gold: 0**, and the Bank of England’s gold auctions of **1999–2002**.",
       "The [gold–silver ratio](/markets/gold-silver-ratio) is gold’s price divided by silver’s. The same phrase, ounces of silver per ounce of gold, is also used for mine output and for metal in London vaults, and those three counts give very different answers: near **68**, near **7**, and near **3** in 2026. The article also dates the famous lows, about **17** in January **1980** and the “30:1” of late April **2011**.",
       "[Physical silver demand by country](/markets/physical-silver-demand-by-country) ranks countries by bars and coins bought in **2024** — the United States first at **64.9 million ounces**, India close behind at **59.8** — and sets beside it the **2025** tables for industrial use, jewelry, coin minting, and recycled scrap. China tops the factory table and barely registers on the bar-and-coin one.",
     ],
@@ -3230,7 +4304,7 @@ export const marketsHubBody: Section[] = [
     paragraphs: [
       "Prices are the London (**LBMA**) and U.S. futures (**COMEX**) figures shown on the desk. Reserve figures come from IMF statistics, national central banks, and World Gold Council compilations. Silver demand comes from the World Silver Survey, researched by Metals Focus for the Silver Institute; mine output from the U.S. Geological Survey and the same survey. Every figure carries its date and source, because a July number and an August number from different books do not mix.",
       "Mine supply is ounces leaving the ground in a year, and it is a separate count again. The desk’s [Stocks & flows](/desk) tab shows mine output and above-ground metal beside these articles. No page here names a miner or a stock; the mine figures are geology, not picks.",
-      "How $35 became $42.22, and what closed in **1971**, is told in [Sound Money History](/history). Whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat), and silver’s double life as money and industrial metal in [monetary history and industry](/history/silver/monetary-and-industry). Buying, storing, and checking bars and coins is covered under [gold and silver in practice](/gold-silver).",
+      "How $35 became $42.22, and what closed in **1971**, is told in [Sound Money History](/history). Whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat), and silver’s double life as money and industrial metal in [monetary history and industry](/history/silver/monetary-and-industry).",
     ],
   },
 ];
@@ -3268,7 +4342,7 @@ export const twentiethCenturyHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Paper had lost trust before. [John Law’s System](/history/banks-paper/john-law) broke in France in **1720**, and the revolutionary assignats in the **1790s** — the same kind of failure under different laws, in a different century. Weimar was not **1720** again, and **1971** did not invent paper money. The older chapters of [Sound Money History](/history) begin with coins and warehouse receipts.",
+      "Paper had lost trust before. [John Law’s System](/history/banks-paper/john-law) broke in France in **1720**, and the revolutionary [assignats](/history/banks-paper/assignats) died in the **1790s**. **1971** did not invent paper money. The older chapters of [Sound Money History](/history) begin with coins and warehouse receipts.",
     ],
   },
 ];
@@ -3419,7 +4493,7 @@ export const banksPaperHubBody: Section[] = [
     heading: "Paper on confiscated land",
     paragraphs: [
       "Seven decades later, revolutionary France issued [assignats](/history/banks-paper/assignats): paper supposedly secured by confiscated church and émigré lands, the biens nationaux. The land was real. The quantity of paper rose far faster than any land was sold to retire it. By **1795–96** the assignat was not a unit anyone wanted to hold.",
-      "Law’s System was a royal bank bolted to a trading company. The assignats were a revolutionary fiscal instrument with a land story. Germany’s mark in **1923**, a twentieth-century collapse after war and reparations, is another case again. The mechanism rhymes — paper that stops being a trusted claim — but the dates, the regimes, and the window that failed are different each time.",
+      "The Revolution needed a till. The wars needed a larger one. The biens nationaux were the advertised limit. The press was the actual one.",
     ],
   },
   {
@@ -3463,7 +4537,7 @@ export const ancientHubBody: Section[] = [
   {
     heading: "A gold coin that held its weight",
     paragraphs: [
-      "Constantine’s solidus, struck from the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire and carried on for centuries as the Byzantine nomisma. [After Rome: the solidus and early continuity](/history/ancient/solidus-continuity) is the story of a unit that kept its weight while the state around it changed.",
+      "Constantine’s solidus, struck from the early fourth century, was a gold coin of tightly held weight and fineness. It outlasted the western empire and carried on for centuries as the Byzantine nomisma. [Constantine’s solidus: gold that kept its weight](/history/ancient/solidus-continuity) follows that unit while the state around it changed.",
     ],
   },
   {

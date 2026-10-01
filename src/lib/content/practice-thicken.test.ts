@@ -66,16 +66,15 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
     }
   });
 
-  it("locks the claim: handling menu, not a shop, jobs kept apart", () => {
+  it("keeps handling facts without shop / overview-shelf chrome", () => {
     const text = bodyText(practiceHubBody);
-    assert.match(text, /not a shop/i);
-    assert.match(text, /not a recommendation/i);
     assert.match(text, /form, premium, storage, authenticity/i);
     assert.match(text, /first ounces/i);
     assert.match(text, /\[Sound Money\]\(\/sound-money\)/);
     assert.match(text, /\[why markets chose gold and silver\]\(\/history\/ancient\/why-markets-chose-gold-silver\)/);
     assert.match(text, /\[Sound Money History\]\(\/history\)/);
     assert.match(text, /\[Markets\]\(\/markets\)/);
+    assert.doesNotMatch(text, /not a shop|educational menu|This overview stays|leave for History|standing line|These pages inform|Mixing the jobs/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
   });
@@ -107,7 +106,7 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
 
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     assert.match(mapSrc, /practiceHub/);
-    assert.match(mapSrc, /titleTag:\s*"Gold & Silver in Practice: Handling, Not a Shop"/);
+    assert.match(mapSrc, /titleTag:\s*"Gold & Silver in Practice: Form, Premium, Custody"/);
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/index.tsx", import.meta.url), "utf8");
     assert.match(routeSrc, /practiceHubBody/);
@@ -146,17 +145,16 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () 
     assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
   });
 
-  it("locks the claim: form factor, fabrication, premium, resale — not a shop", () => {
+  it("locks the claim: form factor, fabrication, premium, resale", () => {
     const text = bodyText(getBody("gold-silver", "bars-vs-coins")!);
     assert.match(text, /form factor/);
-    assert.match(text, /not a shop/);
-    assert.match(text, /not a recommendation/);
     assert.match(text, /Minting, casting, pouring/);
     assert.match(text, /premium over spot/);
     assert.match(text, /Recognition and resale friction/);
-    assert.match(text, /Information only/);
+    assert.match(text, /What the comparison leaves you with/);
     assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[premium over spot\]\(\/gold-silver\/premium-over-spot\)/);
+    assert.doesNotMatch(text, /Information only|These paragraphs inform|not a shop|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
@@ -211,11 +209,9 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
     assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
   });
 
-  it("locks the claim: form, brand, mint, liquidity — not a tip, not a cheap forecast", () => {
+  it("locks the claim: form, brand, mint, liquidity", () => {
     const text = bodyText(getBody("gold-silver", "premium-over-spot")!);
     assert.match(text, /form, brand, mint, and liquidity/);
-    assert.match(text, /not a shopping tip/);
-    assert.match(text, /not a forecast of which premiums are cheap/);
     assert.match(text, /LBMA/);
     assert.match(text, /dealer’s ask/);
     assert.match(text, /Fabrication is the first cost/);
@@ -224,9 +220,10 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
     assert.match(text, /Recognition is the fourth/);
     assert.match(text, /not a timing tip/);
     assert.match(text, /fairly valued/);
-    assert.match(text, /Information only/);
+    assert.match(text, /Reading the gap/);
     assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
+    assert.doesNotMatch(text, /Information only|These paragraphs inform|not a shopping tip|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
@@ -283,20 +280,19 @@ describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
     assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
   });
 
-  it("locks the claim: access, cost, counterparty — not a recommendation", () => {
+  it("locks the claim: access, cost, counterparty", () => {
     const text = bodyText(getBody("gold-silver", "storage")!);
     assert.match(text, /access, cost, and counterparty/);
-    assert.match(text, /not a recommendation/);
     assert.match(text, /[Ii]dentifiable bars and coins/);
     assert.match(text, /claim, not a stack/);
     assert.match(text, /practical household risks/);
     assert.match(text, /Documentation and segregation/);
     assert.match(text, /not a vendor list/);
-    assert.match(text, /does not rank a vendor/);
     assert.match(text, /form you hold and the place it sits/);
-    assert.match(text, /Information only/);
+    assert.match(text, /Access, cost, counterparty in one place/);
     assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
+    assert.doesNotMatch(text, /Information only|These paragraphs inform|This page does not pick|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
@@ -369,10 +365,10 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
     assert.match(text, /When a professional is needed/);
     assert.match(text, /What a filter does not teach/);
     assert.match(text, /acid tests, X-ray fluorescence/);
-    assert.match(text, /not a vendor list/);
-    assert.match(text, /Information only/);
+    assert.match(text, /Filter, not guarantee/);
     assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
+    assert.doesNotMatch(text, /Information only|These paragraphs inform|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
@@ -433,12 +429,10 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke off sitemap)
     assert.doesNotMatch(routeSrc, /createFileRoute\("\/gold-silver\/[\w-]+\/"/);
   });
 
-  it("locks the claim: four decisions as a menu of mechanics, not a purchase recommendation", () => {
+  it("locks the claim: four decisions as a process", () => {
     const text = bodyText(getBody("gold-silver", "beginner-checklist")!);
     assert.match(text, /four decisions/);
     assert.match(text, /form, counterparty, storage location, documentation/);
-    assert.match(text, /menu of mechanics/);
-    assert.match(text, /not a purchase recommendation/);
     assert.match(text, /Process instead of a shop list/);
     assert.match(text, /Form and size before the price screen/);
     assert.match(text, /Premium and bid\/ask as facts, not tips/);
@@ -446,9 +440,9 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke off sitemap)
     assert.match(text, /Authenticity filters only as stop-rules/);
     assert.match(text, /What this checklist is not/);
     assert.match(text, /not a dealer ranking/);
-    assert.match(text, /not buy or sell advice/);
-    assert.match(text, /Information only/);
+    assert.match(text, /Four decisions/);
     assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.doesNotMatch(text, /Information only|These paragraphs inform|not buy or sell advice|as mechanics, not as a shop/i);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
     assert.match(text, /premium over spot/);
