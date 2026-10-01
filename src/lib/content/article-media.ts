@@ -357,6 +357,14 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/us-gold-booked-at-42-22",
+    src: "/images/blog/us-gold-booked-at-42-22.jpg",
+    ogSrc: "/og/cards/blog-us-gold-booked-at-42-22.jpg",
+    alt: "Gold bars beside a $42.22 price tag labeled the statutory gold price, fixed by Congress in 1973.",
+    caption: "Statutory gold-certificate price — $42.22 an ounce, fixed in 1973.",
+    credit: "Title image from the GoldSilverHQ X Article on the $42.22 statutory gold price.",
+  },
+  {
     path: "/blog/australia-1813-holey-dollar",
     src: "/images/blog/australia-1813-holey-dollar.jpg",
     ogSrc: "/og/cards/blog-australia-1813-holey-dollar.jpg",
