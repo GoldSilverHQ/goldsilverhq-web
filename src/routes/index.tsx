@@ -5,6 +5,7 @@ import { HomeSidebar } from "@/components/HomeSidebar";
 import { SiteShell } from "@/components/SiteShell";
 import { onThisDay } from "@/lib/content/on-this-day";
 import { getSilverMovers } from "@/lib/dashboard/silver-movers";
+import { getSpotPerformance } from "@/lib/dashboard/spot-performance";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 
 export const Route = createFileRoute("/")({
@@ -18,18 +19,22 @@ export const Route = createFileRoute("/")({
     }),
   }),
   loader: async () => {
-    const movers = await getSilverMovers().catch(() => null);
-    return { day: onThisDay(new Date()), movers };
+    const [movers, performance] = await Promise.all([
+      getSilverMovers().catch(() => null),
+      getSpotPerformance().catch(() => null),
+    ]);
+    return { day: onThisDay(new Date()), movers, performance };
   },
   staleTime: 5 * 60 * 1000,
   component: Home,
 });
 
 function Home() {
-  const { day, movers } = Route.useLoaderData();
+  const { day, movers, performance } = Route.useLoaderData();
   return (
     <SiteShell>
       <HomeDashboard
+        performance={performance}
         sidebar={<HomeSidebar dayLabel={day.label} events={day.events} movers={movers} />}
       />
       <HomeEditorial />

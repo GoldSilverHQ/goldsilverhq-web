@@ -2,7 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { type ReactNode, useEffect, useState } from "react";
 import { MinePaceTicker } from "@/components/MinePaceTicker";
 import { COMPILED_OFFICIAL } from "@/lib/dashboard/clock-prints";
+import { fmtDayMonYear } from "@/lib/dashboard/dates";
+import { fmtSignedPct, pctToneClass } from "@/lib/dashboard/pct";
 import { getSpotLite } from "@/lib/dashboard/spot";
+import {
+  PERF_PERIODS,
+  type MetalPerformance,
+  type SpotPerformance,
+} from "@/lib/dashboard/spot-performance";
 import { SILVER_2025, silverVisibleMonths } from "@/lib/dashboard/stocks";
 
 type Spot = { gold: number; silver: number; ratio: number; asOf?: string };
@@ -24,11 +31,11 @@ function FaceTile({
   tone: "gold" | "silver" | "fg";
   unit: string;
   value?: string;
-  note: string;
+  note: ReactNode;
 }) {
   const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
   return (
-    <article className="rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
+    <article className="@container rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
       <p className="text-xs font-semibold tracking-[0.16em] text-faint">{kicker}</p>
       <h3 className="mt-1 text-sm text-muted">{label}</h3>
       <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
@@ -37,12 +44,46 @@ function FaceTile({
           {unit}
         </span>
       </p>
-      <p className="mt-2 text-xs text-faint">{note}</p>
+      {typeof note === "string" ? <p className="mt-2 text-xs text-faint">{note}</p> : note}
     </article>
   );
 }
 
-export function HomeDashboard({ sidebar }: { sidebar?: ReactNode }) {
+function PerfRow({ perf, label }: { perf: MetalPerformance | null | undefined; label: string }) {
+  return (
+    <div className="mt-3">
+      <dl
+        aria-label={`${label} price change`}
+        className="grid grid-cols-3 gap-x-1 gap-y-1.5 @[15rem]:grid-cols-5"
+      >
+        {PERF_PERIODS.map((p) => {
+          const v = perf?.changes[p];
+          return (
+            <div key={p} className="min-w-0">
+              <dt className="text-[10px] font-semibold tracking-[0.12em] text-faint">{p}</dt>
+              <dd
+                className={`text-[11px] whitespace-nowrap tabular-nums ${v == null ? "text-faint" : pctToneClass(v, 1)}`}
+              >
+                {v == null ? "—" : fmtSignedPct(v, 1)}
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+      <p className="mt-1.5 text-[10px] text-faint">
+        {perf ? `COMEX closes · as of ${fmtDayMonYear(perf.asOf)}` : "COMEX closes"}
+      </p>
+    </div>
+  );
+}
+
+export function HomeDashboard({
+  sidebar,
+  performance,
+}: {
+  sidebar?: ReactNode;
+  performance?: SpotPerformance | null;
+}) {
   const [spot, setSpot] = useState<Spot | null>(null);
 
   useEffect(() => {
@@ -68,7 +109,7 @@ export function HomeDashboard({ sidebar }: { sidebar?: ReactNode }) {
             tone="gold"
             unit="USD / oz"
             value={spot ? `$${fmtMoney(spot.gold, 0)}` : undefined}
-            note="Same print as the header tape."
+            note={<PerfRow perf={performance?.gold} label="Gold" />}
           />
           <FaceTile
             kicker="silver"
@@ -76,7 +117,7 @@ export function HomeDashboard({ sidebar }: { sidebar?: ReactNode }) {
             tone="silver"
             unit="USD / oz"
             value={spot ? `$${fmtMoney(spot.silver, 2)}` : undefined}
-            note="Same feed as gold."
+            note={<PerfRow perf={performance?.silver} label="Silver" />}
           />
           <FaceTile
             kicker="GSR"
