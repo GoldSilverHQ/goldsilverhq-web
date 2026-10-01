@@ -199,6 +199,16 @@ const weimar: Section[] = [
       "**Autumn 1923.** The paper mark dies as a unit of account. Contracts move to foreign currency, gold-marks as a unit of calculation, or barter.",
       "**15–20 November 1923.** The Rentenmark is issued. **One trillion paper marks = one Rentenmark.** The dollar is pinned at 4.2 in the new unit — the old parity under a new name. The press stops financing the Treasury as before.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/milliarde-overprint-1923.jpg",
+      alt: "Reichsbank 1,000-mark note of December 1922 with a red overprint reading “Eine Milliarde Mark” — one billion marks.",
+      caption: "A 1,000-mark note of December 1922, overprinted in red in 1923 to read one billion marks.",
+      credit: "Public domain (Reichsbank note, 1922/1923; copyright expired). Scan via Wikimedia Commons.",
+      width: 1600,
+      height: 1064,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "The Ruhr and the final spiral",
@@ -215,6 +225,16 @@ const weimar: Section[] = [
       "Everyday prices followed. A loaf of bread that cost a fraction of a mark before the war was in the hundreds of billions of marks by November 1923. Postage, tram fares, and café bills were revised so often that a price at the start of a meal was not the price at the end. Banknotes were overprinted with new face values because new plates could not keep up.",
       "Exact multipliers differ by series — wholesale, retail, exchange. The qualitative fact does not: the paper mark ceased to work as a store of value or a unit of account.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/berlin-bread-cart-1923.jpg",
+      alt: "Black-and-white press photograph of a dense Berlin crowd pressing around a baker’s cart, hands raised with banknotes.",
+      caption: "Berlin, October 1923: a crowd presses around a baker’s cart, paying for bread in millions of marks.",
+      credit: "Public domain — Agence Meurisse press photograph (1923), Bibliothèque nationale de France.",
+      width: 1600,
+      height: 1170,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "Who lost, and who did not",
@@ -231,6 +251,16 @@ const weimar: Section[] = [
       "The Reichsbank was barred from discounting government bills as before. Rudolf Havenstein, the Reichsbank president of the inflation years, died on 20 November. Hjalmar Schacht, as currency commissioner and then Reichsbank head, enforced the new line. Contemporaries called the halt a miracle. The narrower fact: once the public believed the press would not run for the Treasury, the old paper was scaled by a trillion and set aside.",
       "In 1924 the Reichsmark succeeded the Rentenmark. The Dawes Plan rearranged reparations and credit. Those are sequels. The hyperinflation of the paper mark ended in November 1923.",
     ],
+    figure: {
+      src: "/images/history/20th-century/weimar-1923/rentenmark-1923.jpg",
+      alt: "Green one-Rentenmark note of the Deutsche Rentenbank, dated 1 November 1923.",
+      caption: "One Rentenmark, dated 1 November 1923 — exchanged for one trillion paper marks.",
+      credit: "Public domain (Deutsche Rentenbank note, 1923; copyright expired). Scan via Wikimedia Commons.",
+      width: 688,
+      height: 371,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "Printing was the channel, not the whole cause",
@@ -265,6 +295,16 @@ const nixon: Section[] = [
       "Under the classical gold standard before 1914, national currencies were convertible into gold for a wider set of holders, and settlement often moved metal directly between countries. Bretton Woods put the dollar in the middle. Gold sat behind the dollar for official partners. The rest of the world sat behind the dollar peg.",
       "At thirty-five dollars an ounce, one dollar was defined as one thirty-fifth of an ounce of gold. If a foreign central bank held one billion dollars of official claims, those claims implied a right to about **28.6 million ounces** of US gold at the posted rate — if convertibility still worked. When claims grew faster than the gold stock, the board stopped matching the vault.",
     ],
+    figure: {
+      src: "/images/history/20th-century/bretton-woods-nixon-1971/morgenthau-bretton-woods-1944.jpg",
+      alt: "Henry Morgenthau Jr. speaking at a lectern on a flag-lined stage before seated delegates at Bretton Woods.",
+      caption: "Treasury Secretary Henry Morgenthau Jr. opens the Bretton Woods conference, July 1944.",
+      credit: "Public domain — U.S. government photograph (National Archives, Office of War Information, RG 208).",
+      width: 706,
+      height: 572,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "Why the window came under pressure",
@@ -296,6 +336,16 @@ const nixon: Section[] = [
       "The Camp David weekend framed the announcement. Treasury Secretary John Connally and Under Secretary Paul Volcker were central voices on the gold and exchange decisions. The public speech mixed domestic inflation politics with the external dollar problem. Wage and price controls addressed the home front. The surcharge pressed trading partners. The gold suspension addressed the mismatch between dollar claims and US gold.",
       "The key legal and monetary fact remained narrow. Foreign official holders could no longer present dollars and receive gold at the fixed official price. The dollar stayed the world’s main reserve currency in practice. Its last official gold anchor did not.",
     ],
+    figure: {
+      src: "/images/history/20th-century/bretton-woods-nixon-1971/connally-15-august-1971.jpg",
+      alt: "Black-and-white close portrait of John Connally, glasses in hand, looking down in thought.",
+      caption: "Treasury Secretary John Connally, photographed by the White House on 15 August 1971 — the day of the announcement.",
+      credit: "Public domain — White House Photo Office, Nixon Library (NARA 194732).",
+      width: 929,
+      height: 1400,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "What the temporary close became",
@@ -384,6 +434,16 @@ const goldRecall1933: Section[] = [
       "The order required persons in the United States to deliver most gold coin, gold bullion, and gold certificates. Payment was at the official price then in force: **$20.67 an ounce**. Later licenses and exemptions matter more than that May date alone.",
       "It did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January.",
     ],
+    figure: {
+      src: "/images/history/20th-century/1933-gold-recall/executive-order-6102-poster.jpg",
+      alt: "Printed 1933 notice headed “Under Executive Order of the President”, ordering delivery of gold coin, bullion, and certificates on or before May 1, 1933.",
+      caption: "The 1933 notice: gold coin, gold bullion, and gold certificates to be delivered to a Federal Reserve Bank by 1 May 1933.",
+      credit: "Public domain — U.S. government notice (1933).",
+      width: 671,
+      height: 1004,
+      layout: "float-start",
+      placement: "start",
+    },
   },
   {
     heading: "The bank holiday and the power to call gold",
@@ -400,6 +460,16 @@ const goldRecall1933: Section[] = [
       "The Gold Reserve Act of **30 January 1934** vested title to monetary gold in the United States. Federal Reserve Banks transferred their gold to the Treasury and received gold certificates in exchange. The Treasury was forbidden to redeem currency in gold for the public. The President set a new official dollar price of **$35 an ounce** — a devaluation of the gold dollar by statute, not a market print.",
       "At $20.67, one dollar had been a known weight of fine gold. At $35, that weight was cut. The same official stock, marked to the new price, produced a book profit on the Treasury’s accounts. Part of that increment funded the Exchange Stabilization Fund. The metal did not multiply. Official gold is then a government asset at an official price — not a pile the public can test at a window.",
     ],
+    figure: {
+      src: "/images/history/20th-century/1933-gold-recall/roosevelt-signs-gold-bill-1934.jpg",
+      alt: "Franklin Roosevelt seated at his desk signing a bill while six men in suits stand behind him.",
+      caption: "Roosevelt signs the gold bill — the Gold Reserve Act — in January 1934, with Treasury and Federal Reserve officials behind him.",
+      credit: "Public domain — Harris & Ewing, Library of Congress (LC-DIG-hec-46991); no known restrictions.",
+      width: 1024,
+      height: 793,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "A short timeline",
@@ -1124,6 +1194,16 @@ const england: Section[] = [
       "Country banks issued their own notes outside London. In the capital, Bank of England paper crowded the field. Statute helped. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing. The result was national money grown from a war loan, not from a city warehouse ticket alone.",
       "Convertibility was the ordinary test. Holders could present notes and ask for gold. Counterparties took the paper because they trusted that window. When the window is open, a note is a claim. When the window closes, the same note is a wartime unit that still spends if the public will hold it.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/bank-of-england/great-hall-1808.jpg",
+      alt: "Hand-colored aquatint of the Bank of England’s Great Hall: a tall columned room with clerks at counters and customers crossing the floor.",
+      caption: "The Great Hall of the Bank of England in 1808, from Ackermann’s Microcosm of London — Rowlandson and Pugin.",
+      credit: "CC0 — Metropolitan Museum of Art (59.533.569).",
+      width: 1600,
+      height: 1340,
+      layout: "breakout",
+      placement: 2,
+    },
   },
   {
     heading: "Restriction, 1797",
@@ -1132,6 +1212,16 @@ const england: Section[] = [
       "The pound kept its name. The public could no longer test that name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
       "The Bank had closed the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/bank-of-england/gillray-midas-1797.jpg",
+      alt: "Hand-colored Gillray caricature of William Pitt as a giant Midas astride the Bank of England, swallowing gold and spewing paper notes.",
+      caption: "Gillray, “Midas, Transmuting All into Paper” (1797) — Pitt turns the Bank’s gold into notes after the Restriction.",
+      credit: "CC0 — National Gallery of Art, Washington (2015.49.1).",
+      width: 1011,
+      height: 1400,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "Resumption in the 1820s",
@@ -1186,6 +1276,16 @@ const assignats: Section[] = [
       "The Assembly treated quantity as a vote. **September 1790** added a large new issue and called the total a ceiling. The ceiling did not hold. Later years added more paper against the same land story, then against war. Once small notes exist, the state can pay in its own slip. Retirement becomes a hope about future sales, not a nightly burning that matches the press.",
       "Authorized totals moved from a few hundred million livres in the first decrees toward tens of billions by the mid-1790s. Series disagree on the last digit. The order does not: issue outran the sales meant to cancel it.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/assignats/assignat-10-sous-1793.jpg",
+      alt: "Small printed assignat of ten sous, dated 23 May 1793, headed “domaines nationaux”, with a triangle bearing the numeral 10.",
+      caption: "Assignat of ten sous (May 1793) — small enough to pay wages and buy bread.",
+      credit: "CC0 — Musée Carnavalet, Paris Musées.",
+      width: 1280,
+      height: 1036,
+      layout: "float-end",
+      placement: "start",
+    },
   },
   {
     heading: "Quantity outran retirement",
@@ -1202,6 +1302,16 @@ const assignats: Section[] = [
       "By **1795** the assignat was failing as a store of value and as a unit of account. Markets reached for coin, barter, or foreign units. In **February 1796** the printing plates were destroyed in public. The Directory had already begun to live with metal again. A brief sequel, the mandats territoriaux, tried another land paper in **1796** and died in months. That is a postscript, not a second System.",
       "The paper did not vanish from drawers. It ceased to be money. France returned toward specie by abandoning the assignat, not by promising to redeem the same notes later at an old metal definition.",
     ],
+    figure: {
+      src: "/images/history/banks-paper/assignats/destruction-of-plates-1796.jpg",
+      alt: "Engraving of officials feeding a bonfire in a Paris square while onlookers watch smoke rise past the buildings.",
+      caption: "Burning the assignat plates on the Place Vendôme, 19 February 1796 — later engraving.",
+      credit: "CC0 — Musée Carnavalet, Paris Musées (G.29143).",
+      width: 887,
+      height: 1292,
+      layout: "float-start",
+      placement: 1,
+    },
   },
   {
     heading: "A short timeline",
@@ -1806,6 +1916,7 @@ const roadBack: Section[] = [
       credit: "Public domain — copyright 1900, Keppler & Schwarzmann; term expired.",
       width: 1280,
       height: 1369,
+      layout: "inset",
     },
   },
   {
@@ -1851,6 +1962,16 @@ const pieceOfEight: Section[] = [
       "“Piece of eight” is the English name. “Spanish dollar” is the commercial name that stuck in North America and the Caribbean. Neither name describes a new metal. Both name a familiar weight of silver that strangers could recognise without a letter of credit from a local prince.",
       "Cut pieces — bits of eight — were everyday arithmetic. Two bits made a quarter dollar, as later American slang still remembers. The whole coin stayed the large settlement piece. Divisible in practice, not only on paper, it traveled well.",
     ],
+    figure: {
+      src: "/images/history/silver/piece-of-eight/eight-reales-1796.jpg",
+      alt: "Both sides of a worn silver eight-real coin of Carlos IV dated 1796: laureate bust, and crowned arms between two pillars.",
+      caption: "Eight reales of Carlos IV, Mexico City mint, 1796. The small dents are later chop marks from money-changers in Asia.",
+      credit: "CC0 — coin photograph via Wikimedia Commons (Flickr, Joe deSousa).",
+      width: 1600,
+      height: 798,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "From American mints to world ports",
@@ -1859,6 +1980,16 @@ const pieceOfEight: Section[] = [
       "In the Caribbean and British North America, where local coin was scarce, Spanish dollars were ordinary money. Contracts, wages, and taxes often meant that coin when they said “dollar.” In East Asia, after earlier paper experiments had failed or been abandoned, trade absorbed Spanish silver as settlement metal. A coin from a Spanish American mint could close a deal in Canton or Manila because both the metal and the design were known.",
       "There were rivals — Dutch and Portuguese coins, later British trade dollars. The Spanish piece won on volume and familiarity. Money has network effects: the coin you can spend tomorrow is the coin you accept today.",
     ],
+    figure: {
+      src: "/images/history/silver/piece-of-eight/chopmarked-eight-reales.jpg",
+      alt: "Silver eight-real coin so densely stamped with small Chinese characters that the original design is almost hidden.",
+      caption: "An eight-real piece of 1821, later stamped over and over with Chinese merchants’ chop marks.",
+      credit: "CC0 — Bode-Museum, Berlin; photograph via Wikimedia Commons.",
+      width: 1385,
+      height: 1367,
+      layout: "float-end",
+      placement: 1,
+    },
   },
   {
     heading: "Why one silver coin travelled",
@@ -1875,6 +2006,16 @@ const pieceOfEight: Section[] = [
       "The United States took over a unit traders understood, then spent the next century fighting over whether gold, silver, or paper would rule it. The piece of eight is the coin it inherited. The Crime of 1873 was a later American fight over the law.",
       "Spanish dollars kept circulating in the United States for decades after independence. Laws and mint output took time to replace a coin the whole Atlantic already knew. Foreign silver stayed legal tender in the United States until **1857**.",
     ],
+    figure: {
+      src: "/images/blog/spanish-silver/early-us-coinage.jpg",
+      alt: "Obverse and reverse of a 1795 Flowing Hair silver dollar: Liberty with loose hair, and an eagle in a wreath.",
+      caption: "Flowing Hair dollar (1795) — an American silver dollar struck to a weight close to the Spanish coin.",
+      credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
+      width: 1600,
+      height: 806,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "A short timeline",
@@ -3319,6 +3460,8 @@ const misesInflationAsPolicy: Section[] = [
       credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
       width: 874,
       height: 874,
+      layout: "float-start",
+      placement: "start",
     },
   },
   {
@@ -3350,6 +3493,7 @@ const misesInflationAsPolicy: Section[] = [
       credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
       width: 850,
       height: 400,
+      layout: "breakout",
     },
   },
   {
@@ -3371,6 +3515,7 @@ const misesInflationAsPolicy: Section[] = [
       credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
       width: 850,
       height: 400,
+      layout: "breakout",
     },
   },
   {
@@ -3387,6 +3532,7 @@ const misesInflationAsPolicy: Section[] = [
       credit: "Inline image from the GoldSilverHQ X Article on Ludwig von Mises and inflation.",
       width: 850,
       height: 400,
+      layout: "breakout",
     },
   },
   {
@@ -3687,6 +3833,7 @@ const greenspan1966PrintMoney: Section[] = [
         "Inline image from the GoldSilverHQ X Article on Alan Greenspan’s 1966 gold essay.",
       width: 1199,
       height: 765,
+      layout: "breakout",
     },
   },
   {
@@ -3810,6 +3957,11 @@ const bodies: Record<string, Section[]> = {
 
 export function getBody(cluster: string, slug: string): Section[] | null {
   return bodies[`${cluster}/${slug}`] ?? null;
+}
+
+/** Every article body keyed by `cluster/slug`. */
+export function listBodies(): [string, Section[]][] {
+  return Object.entries(bodies);
 }
 
 /** Pillar hub /history — rendered by the history index route. */
