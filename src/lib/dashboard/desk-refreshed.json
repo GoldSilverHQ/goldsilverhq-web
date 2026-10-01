@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-10-01T10:30:15.359Z",
+  "refreshedAt": "2026-10-01T13:13:46.213Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
@@ -624,7 +624,8 @@
         "vaultSilverT": 28213,
         "note": "Daily-average clearing ÷ same-month end vault. Not annualised. Not COMEX."
       },
-      "lastGoodAt": "2026-09-30"
+      "lastGoodAt": "2026-09-30",
+      "staleSince": "2026-10-01"
     },
     "usDebt": {
       "totalUsd": 40096954633566.68,
