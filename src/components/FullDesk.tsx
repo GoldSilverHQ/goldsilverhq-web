@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { DollarPower } from "@/components/DollarPower";
 import { CentralBankGold } from "@/components/desk/CentralBankGold";
 import { UsDebtAndGold, WorldDebt } from "@/components/desk/DebtMoney";
+import { MineSupply, SilverMarket, VaultsAndEtfs } from "@/components/desk/SupplyVaults";
 import {
   CbTimeline,
   HoldersTable,
@@ -32,19 +33,12 @@ import { getSpotLite, parseSpotAsOf } from "@/lib/dashboard/spot";
 import {
   CB_YTD_2026,
   FX_START,
-  LBMA_PAIR,
   SILVER_2025,
-  SILVER_ETP_2025,
-  USGS_MINE_2025,
   WGC_MINE_2025,
   WGC_STOCK,
   cbTakeOfMine,
   investmentGoldGramsPerPerson,
-  lbmaGoldClearingRatio,
   lostVsStart,
-  mineOutputRatio,
-  silverIdentifiableMoz,
-  silverSupplyGapT,
   silverVisibleMonths,
   wgcShare,
 } from "@/lib/dashboard/stocks";
@@ -75,13 +69,13 @@ const DESK_TABS: {
     id: "supply",
     label: "Supply & demand",
     blurb:
-      "Above-ground gold, mining, and silver supply and use. Mine supply is ounces leaving the ground — a published geology figure, not a miner tip or a fair-value claim.",
+      "Mining by country, above-ground gold, and silver supply and use. Mine supply is ounces leaving the ground — a published geology figure, not a miner tip or a fair-value claim.",
   },
   {
     id: "vaults",
     label: "Vaults & ETFs",
     blurb:
-      "Where the metal sits: London vaults, ETFs, and identifiable silver. COMEX open interest is left off — no same-day pair is stored.",
+      "Where the metal sits: London vaults, COMEX futures, ETFs, and identifiable silver stocks.",
   },
 ];
 
@@ -178,7 +172,6 @@ export function FullDesk() {
   const goldJpy = spot ? spot.gold * printers.fx.jpyUsd : null;
   const eurLoss = goldEur != null ? lostVsStart(goldEur, FX_START.eur.localGold) : null;
   const jpyLoss = goldJpy != null ? lostVsStart(goldJpy, FX_START.jpy.localGold) : null;
-  const silverGap = silverSupplyGapT();
   const china = laterOfficial(official.chn, {
     tonnes: CHINA_SAFE_AUG_2026.tonnes,
     asOf: CHINA_SAFE_AUG_2026.asOf,
@@ -319,10 +312,11 @@ export function FullDesk() {
 
         {tab === "supply" ? (
           <>
-            <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <MineSupply />
+            <DeskBoard title="Above-ground gold" kicker="World Gold Council, Q2 2026" cols={2}>
               <DeskMetricTile
                 kicker="Stock"
-                label="Above-ground gold"
+                label="All gold ever mined, still above ground"
                 unit="t"
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
@@ -338,39 +332,7 @@ export function FullDesk() {
                 live={investmentGoldGramsPerPerson().toFixed(1)}
                 note="Bars, coins, and ETFs divided by 8.2 billion people. Not a purchase suggestion."
               />
-              <DeskMetricTile
-                kicker="Mines"
-                label="Mine output ratio"
-                tone="silver"
-                unit="Ag : Au"
-                cadence="yearly"
-                asOf={USGS_MINE_2025.asOf}
-                live={`${mineOutputRatio().toFixed(1)} : 1`}
-                note={`USGS 2025 estimate: ${USGS_MINE_2025.silverT.toLocaleString("en-US")} t silver / ${USGS_MINE_2025.goldT.toLocaleString("en-US")} t gold. Geology, not a price target.`}
-              />
-              <DeskMetricTile
-                kicker="Balance"
-                label="Silver mine + recycle vs demand"
-                tone="silver"
-                unit="t"
-                cadence="yearly"
-                asOf={SILVER_2025.asOf}
-                live={`${silverGap > 0 ? "+" : ""}${Math.round(silverGap).toLocaleString("en-US")}`}
-                secondary={`Survey balance ${SILVER_2025.marketBalanceMoz} Moz. That line also counts hedging and official sales.`}
-                note="World Silver Survey 2026, calendar 2025. Mine plus recycle minus total demand. Negative means that pair is short."
-              />
-              <DeskMetricTile
-                kicker="Cover"
-                label="Months of visible silver"
-                tone="silver"
-                unit="mo"
-                cadence="yearly"
-                asOf={SILVER_2025.asOf}
-                live={silverVisibleMonths().toFixed(1)}
-                note="Identifiable bullion divided by 2025 fabrication. Not jewelry, and not a daily vault print."
-              />
-            </section>
-
+            </DeskBoard>
             <DeskBoard title="Who holds the gold" kicker="World Gold Council, Q2 2026" cols={4}>
               <DeskMetricTile
                 kicker="Jewelry"
@@ -388,7 +350,7 @@ export function FullDesk() {
                 cadence="yearly"
                 asOf={formatAsOf(WGC_STOCK.asOf)}
                 live={wgcShare(WGC_STOCK.barsCoinsT + WGC_STOCK.etfT).toFixed(0)}
-                note="Private bars and coins plus gold ETFs. ETF tonnes alone are on Exchange paper."
+                note="Private bars and coins plus gold ETFs. ETF tonnes alone are on Vaults & ETFs."
               />
               <DeskMetricTile
                 kicker="Other"
@@ -409,8 +371,21 @@ export function FullDesk() {
                 note="WGC's official-sector cell (39,000 t). Wider than the year-end country book on the Central banks tab."
               />
             </DeskBoard>
+            <SilverMarket />
+            <DeskBoard title="Silver cover" kicker="our calculation" cols={2}>
+              <DeskMetricTile
+                kicker="Cover"
+                label="Months of industrial and jewellery use in identifiable stocks"
+                tone="silver"
+                unit="mo"
+                cadence="yearly"
+                asOf={SILVER_2025.asOf}
+                live={silverVisibleMonths().toFixed(1)}
+                note="GoldSilverHQ calculation, not a survey figure: identifiable bullion (1,394.5 Moz) ÷ 2025 demand excluding coins and bars, × 12."
+              />
+            </DeskBoard>
             <p className="mt-6 max-w-2xl text-sm text-muted">
-              Mine output and months of visible cover are published survey figures. The{" "}
+              Mine output and the silver balance are published survey figures. The{" "}
               <a href="/markets/gold-silver-ratio" className="text-gold hover:text-gold-soft">
                 mining vs market ratio
               </a>{" "}
@@ -517,50 +492,7 @@ export function FullDesk() {
 
         {tab === "vaults" ? (
           <>
-            <DeskBoard title="Claims vs metal" kicker="London · ETFs · vaults">
-              <DeskMetricTile
-                kicker="London"
-                label="Clearing vs vaulted gold"
-                unit="×"
-                cadence="monthly"
-                asOf={formatAsOf(`${LBMA_PAIR.asOf}-01`)}
-                live={lbmaGoldClearingRatio().toFixed(3)}
-                note={`LBMA ${formatAsOf(`${LBMA_PAIR.asOf}-01`)} daily average clearing (${LBMA_PAIR.goldClearingDailyMoz} Moz) divided by same-month London vault gold (${LBMA_PAIR.vaultGoldT.toLocaleString("en-US")} t). A daily ratio, not a full year, and not COMEX.${staleNote(DESK_REFRESHED.metrics.lbma) ? ` ${staleNote(DESK_REFRESHED.metrics.lbma)}` : ""}`}
-              />
-              <DeskMetricTile
-                kicker="ETFs"
-                label="Gold ETF tonnes"
-                unit="t"
-                cadence="yearly"
-                asOf={formatAsOf(WGC_STOCK.asOf)}
-                live={fmtTonnes(WGC_STOCK.etfT)}
-                note="World Gold Council above-ground split, Q2 2026. Not a daily holdings series."
-              />
-              <DeskMetricTile
-                kicker="Vaults"
-                label="Identifiable silver"
-                tone="silver"
-                unit="moz"
-                cadence="yearly"
-                asOf={SILVER_2025.asOf}
-                live={silverIdentifiableMoz().toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
-                note="World Silver Survey 2026 identifiable bullion, end-2025. London, CME, SGE, SHFE, and other exchanges. Not a daily vault print."
-              />
-              <DeskMetricTile
-                kicker="ETFs"
-                label="Silver ETF tonnes"
-                tone="silver"
-                unit="t"
-                cadence="yearly"
-                asOf="2025"
-                live={fmtTonnes(SILVER_ETP_2025.tonnes)}
-                note="World Silver Survey 2026 end-2025 exchange-traded holdings (1,317.6 Moz, printed as 40,982 t). Not a daily series."
-              />
-            </DeskBoard>
-            <p className="mt-6 max-w-2xl text-sm text-muted">
-              COMEX gold and silver open interest versus registered stocks are not shown. No same-day warehouse pair is
-              stored, so those tiles stay off the page rather than as empty dashes.
-            </p>
+            <VaultsAndEtfs />
           </>
         ) : null}
       </div>

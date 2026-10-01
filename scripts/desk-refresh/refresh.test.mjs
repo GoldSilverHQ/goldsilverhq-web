@@ -3,7 +3,7 @@ import { describe, it } from "node:test";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildRefresh } from "./refresh.mjs";
+import { buildRefresh, vaultHistory } from "./refresh.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const OUT = join(ROOT, "src/lib/dashboard/desk-refreshed.json");
@@ -52,6 +52,16 @@ describe("desk-refresh resilience", () => {
   it("reports every failure when nothing answers", async () => {
     const { failures, total } = await buildRefresh({ prev: PREV, now: NOW, sources: { a: fail, b: fail } });
     assert.equal(failures.length, total);
+  });
+});
+
+describe("desk-refresh LBMA vault history", () => {
+  it("turns [ms, goldKoz, silverKoz] rows into monthly tonnes", () => {
+    const h = vaultHistory([
+      [Date.UTC(2016, 6, 1, 23), 234144, 951433],
+      [Date.UTC(2016, 7, 1, 23), "bad", 1],
+    ]);
+    assert.deepEqual(h, [{ m: "2016-07", goldT: 7283, silverT: 29593 }]);
   });
 });
 
