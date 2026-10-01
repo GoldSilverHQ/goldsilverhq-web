@@ -159,6 +159,13 @@ describe("article body figures (layout rollout)", () => {
       "banks-paper/bank-of-england",
       "banks-paper/assignats",
       "blog/mises-inflation-as-policy",
+      "banks-paper/john-law",
+      "banks-paper/bank-of-amsterdam",
+      "20th-century/panic-1907-fed",
+      "silver/potosi",
+      "silver/bimetallism",
+      "america/jackson-and-the-bank",
+      "america/crime-of-1873",
     ]) {
       assert.ok(keys.has(key), `${key} should have laid-out figures`);
     }
