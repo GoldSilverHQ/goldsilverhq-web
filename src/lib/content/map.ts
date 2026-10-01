@@ -134,7 +134,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "what-is-sound-money",
     title: "What is sound money?",
-    summary: "A working definition: money that holds its function as a store of value without depending on a printing press.",
+    summary: "Money its issuer cannot create more of at will. For centuries gold did that job, because mining it is slow and costly.",
     status: "ready",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. Historically that constraint came from the cost of mining gold and silver. The point of the idea is not nostalgia. It is about whether the unit of account stays honest over long periods.",
@@ -159,7 +159,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "hard-money-vs-fiat",
     title: "Hard money vs fiat",
-    summary: "Money costly to produce versus money created by law and habit. Circulation does not decide the category.",
+    summary: "Gold takes work to mine. Fiat money exists because the law says so. Both can circulate, and both can be mismanaged.",
     status: "ready",
     paragraphs: [
       "Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways.",
@@ -184,7 +184,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "inflation-purchasing-power",
     title: "Inflation and purchasing power",
-    summary: "A decline in what the unit buys. Prices are the surface. Hyperinflation is a case, not the definition.",
+    summary: "Inflation is a fall in what money buys. Rising prices are the symptom. Hyperinflation, at 50% or more a month, is the extreme.",
     status: "ready",
     paragraphs: [
       "Inflation is a decline in purchasing power of the unit. Prices are the visible surface. The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure.",
@@ -211,7 +211,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "backed-money",
     title: "What “backed money” means (and what it doesn’t)",
-    summary: "“Backed” means a redeemable contract — present the note, take metal — not gold in a vault with no public claim.",
+    summary: "A backed note is one you can exchange for a set weight of metal. Gold in a vault that nobody can claim does not count.",
     status: "ready",
     paragraphs: [
       "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing. A currency said to be “supported by” gold sitting in a vault with no public claim on it is another.",
@@ -234,7 +234,7 @@ export const ideaPages: Episode[] = [
   {
     slug: "information-not-advice",
     title: "Information vs investment advice",
-    summary: "A short media line: this site informs; it does not recommend buying or selling.",
+    summary: "GoldSilverHQ publishes history and explanation. Nothing here recommends buying or selling anything.",
     status: "ready",
     paragraphs: [
       "GoldSilverHQ publishes educational media about monetary history and physical metal. Nothing here is investment advice, a solicitation, or a personal recommendation.",
