@@ -1,27 +1,32 @@
 {
-  "refreshedAt": "2026-09-29T12:52:00.782Z",
+  "refreshedAt": "2026-10-01T10:22:03.319Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
       "asOf": "2026-08",
-      "source": "FRED M2SL"
+      "source": "FRED M2SL",
+      "lastGoodAt": "2026-10-01"
     },
     "cpi": {
       "value": 334.131,
       "asOf": "2026-08",
-      "source": "FRED CPIAUCSL"
+      "yoyPct": 3.4,
+      "source": "FRED CPIAUCSL",
+      "lastGoodAt": "2026-10-01"
     },
     "eurM3": {
       "value": 17628992353019.54,
       "asOf": "2026-08",
-      "source": "ECB BSI M3"
+      "source": "ECB BSI M3",
+      "lastGoodAt": "2026-10-01"
     },
     "fx": {
       "eurUsd": 1.14,
       "cnyUsd": 6.711,
       "jpyUsd": 157.18,
       "asOf": "2026-09-25",
-      "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS"
+      "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS",
+      "lastGoodAt": "2026-10-01"
     },
     "lbma": {
       "clearing": {
@@ -41,15 +46,118 @@
         "vaultGoldT": 9534,
         "vaultSilverT": 28213,
         "note": "Daily-average clearing ÷ same-month end vault. Not annualised. Not COMEX."
-      }
+      },
+      "lastGoodAt": "2026-09-30"
+    },
+    "usDebt": {
+      "totalUsd": 40096954633566.68,
+      "publicUsd": 32367872193303.63,
+      "intragovUsd": 7729082440263.05,
+      "asOf": "2026-09-29",
+      "source": "US Treasury Fiscal Data, Debt to the Penny",
+      "lastGoodAt": "2026-10-01"
+    },
+    "usInterest": {
+      "ttmGrossUsd": 1359074800827,
+      "ttmPublicUsd": 1063860159594,
+      "fytdGrossUsd": 1267805144581,
+      "fiscalYear": 2026,
+      "asOf": "2026-08-31",
+      "source": "US Treasury Fiscal Data, Interest Expense on the Public Debt Outstanding",
+      "lastGoodAt": "2026-10-01"
+    },
+    "usTreasuryGold": {
+      "oz": 261498926.241,
+      "bookUsd": 11041059957.9,
+      "asOf": "2026-08-31",
+      "source": "US Treasury Fiscal Data, U.S. Treasury-Owned Gold",
+      "lastGoodAt": "2026-10-01"
+    },
+    "usDebtHistory": {
+      "debtGdpPct": 122.6,
+      "debtGdpAsOf": "2026-01",
+      "yearEndUsd": {
+        "1971": 424131000000,
+        "1972": 448473000000,
+        "1973": 469073000000,
+        "1974": 492664000000,
+        "1975": 576649000000,
+        "1976": 653543000000,
+        "1977": 718943000000,
+        "1978": 789207000000,
+        "1979": 845116000000,
+        "1980": 930210000000,
+        "1981": 1028729000000,
+        "1982": 1197074000000,
+        "1983": 1410702000000,
+        "1984": 1662966000000,
+        "1985": 1945942000000,
+        "1986": 2214835000000,
+        "1987": 2431715000000,
+        "1988": 2684392000000,
+        "1989": 2952994000000,
+        "1990": 3364820000000,
+        "1991": 3801698000000,
+        "1992": 4177009000000,
+        "1993": 4535687000000,
+        "1994": 4800150000000,
+        "1995": 4988665000000,
+        "1996": 5323172000000,
+        "1997": 5502388000000,
+        "1998": 5614217000000,
+        "1999": 5776091000000,
+        "2000": 5662216000000,
+        "2001": 5943439000000,
+        "2002": 6405707000000,
+        "2003": 6997964000000,
+        "2004": 7596143000000,
+        "2005": 8170413000000,
+        "2006": 8680224000000,
+        "2007": 9229172000000,
+        "2008": 10699805000000,
+        "2009": 12311349000000,
+        "2010": 14025215000000,
+        "2011": 15222940000000,
+        "2012": 16432730000000,
+        "2013": 17156119000000,
+        "2014": 18141444000000,
+        "2015": 18922179000000,
+        "2016": 19976827000000,
+        "2017": 20492747000000,
+        "2018": 21974096000000,
+        "2019": 23201380000000,
+        "2020": 27747798000000,
+        "2021": 29617215000000,
+        "2022": 31419689000000,
+        "2023": 34001494000000,
+        "2024": 36218605000000,
+        "2025": 38514009000000
+      },
+      "source": "FRED GFDEGDQ188S / GFDEBTN",
+      "lastGoodAt": "2026-10-01"
+    },
+    "imfGovDebt": {
+      "year": 2025,
+      "byYear": {
+        "2024": {
+          "usd": 102598792301000,
+          "countries": 192
+        },
+        "2025": {
+          "usd": 110808510104000,
+          "countries": 190
+        }
+      },
+      "source": "IMF World Economic Outlook (DataMapper GGXWDG_NGDP × NGDPD)",
+      "lastGoodAt": "2026-10-01"
     }
   },
   "manual": [
     "Spot Au/Ag — live in-app (Yahoo 15m → gold-api), not this cron",
     "WGC above-ground stock / GDT / mine — survey releases",
-    "World Silver Survey / USGS MCS / IMF WEO debt",
+    "World Silver Survey / USGS MCS",
+    "IIF Global Debt Monitor headline — quoted by hand with credit (dataset is members-only)",
     "China SAFE / NBP / CNB / CBU country books — national releases",
-    "China M2 / Japan M2 — no free FRED series; keep compiled prints",
     "COMEX OI vs registered — no same-day pair stored"
   ]
 }

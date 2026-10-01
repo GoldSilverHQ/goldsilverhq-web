@@ -15,6 +15,7 @@ import {
 } from "@/lib/dashboard/cb-extras";
 import { CB_WORLD_TOTAL, PUBLISHED_YTD_2026, flagEmoji, formatAsOf } from "@/lib/dashboard/central-banks";
 import { TROY_OZ_PER_TONNE, fmtUsdCompact } from "@/lib/dashboard/clock-prints";
+import { TREASURY_GOLD } from "@/lib/dashboard/debt";
 
 function t0(n: number) {
   return Math.round(n).toLocaleString("en-US");
@@ -223,7 +224,7 @@ export function ReserveShareChart() {
 
 /** US Treasury-owned gold: ounces, statutory book value, and value at today's spot. */
 export function UsTreasuryGold({ gold, asOf }: { gold?: number; asOf: string }) {
-  const g = US_TREASURY_GOLD;
+  const g = { ...US_TREASURY_GOLD, ...TREASURY_GOLD };
   const market = gold ? g.oz * gold : null;
   const tonnes = g.oz / TROY_OZ_PER_TONNE;
   return (
