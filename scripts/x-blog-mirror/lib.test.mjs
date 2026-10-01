@@ -5,6 +5,7 @@ import {
   articleIdFromUrl,
   nextUnseenArticle,
   unseenEligibleArticles,
+  mirroredEntriesDueLive,
 } from "./lib.mjs";
 
 describe("x-blog-mirror helpers", () => {
@@ -49,5 +50,22 @@ describe("x-blog-mirror helpers", () => {
     ];
     assert.deepEqual(unseenEligibleArticles(articles, seen), []);
     assert.equal(nextUnseenArticle(articles, seen), null);
+  });
+
+  it("lists mirrored entries due live, skipping skipped and in-flight ones", () => {
+    const now = Date.parse("2026-10-01T21:00:00Z");
+    const seen = {
+      articles: [
+        { articleId: "1", status: "mirrored", sitePath: "/blog/a", mirroredAt: "2026-10-01T18:20:00Z" },
+        { articleId: "2", status: "mirrored", sitePath: "/blog/b", mirroredAt: "2026-10-01T20:40:00Z" },
+        { articleId: "3", status: "skipped", sitePath: "/blog/c", mirroredAt: "2026-09-01T00:00:00Z" },
+        { articleId: "4", status: "mirrored", sitePath: "/blog/d" },
+        { articleId: "5", status: "mirrored", mirroredAt: "2026-09-01T00:00:00Z" },
+      ],
+    };
+    assert.deepEqual(
+      mirroredEntriesDueLive(seen, { now }).map((a) => a.articleId),
+      ["1", "4"],
+    );
   });
 });

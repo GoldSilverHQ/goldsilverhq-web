@@ -96,6 +96,35 @@ jobs:
             --title "x-blog-mirror: $title" \
             --body "$body"
 
+      - name: Check mirrored posts are live on production
+        id: live
+        run: |
+          set +e
+          node scripts/x-blog-mirror/verify-live.mjs
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open issue when a mirrored post is not live
+        if: steps.live.outputs.exit_code == '79'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          body=$(node -e "
+            const r=require('./data/x-articles-not-live.json');
+            const lines=['Merged to main but not reachable on production. Usually a failed Vercel production deploy — check the Vercel status on the latest main commit and redeploy.',''];
+            for (const m of r.missing) lines.push('- ' + m.url + ' (' + m.status + ') — ' + m.title + ' · mirrored ' + (m.mirroredAt||'?'));
+            process.stdout.write(lines.join('\n'));
+          ")
+          existing=$(gh issue list --state open --search "x-blog-mirror not live in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "x-blog-mirror: mirrored post not live" --body "$body" --label "x-blog-mirror" || \
+            gh issue create --title "x-blog-mirror: mirrored post not live" --body "$body"
+          fi
+          exit 1
+
       - name: Notice when X token missing
         if: steps.discover.outputs.exit_code == '0'
         run: |
