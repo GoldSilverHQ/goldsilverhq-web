@@ -1,9 +1,21 @@
 {
-  "updatedAt": "2026-09-30T18:30:00.000Z",
+  "updatedAt": "2026-10-01T03:10:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2105337579369627661",
+      "postId": "2105379134990172419",
+      "title": "When Australia Punched Holes in Spanish Silver Dollars",
+      "status": "mirrored",
+      "slug": "australia-1813-holey-dollar",
+      "sitePath": "/blog/australia-1813-holey-dollar",
+      "xArticleUrl": "https://x.com/i/article/2105337579369627661",
+      "publishedAt": "2026-09-30T19:27:56.000Z",
+      "mirroredAt": "2026-10-01T03:10:00.000Z",
+      "inlineMediaCount": 1
+    },
     {
       "articleId": "2105187582904500224",
       "postId": "2105297059989406160",
