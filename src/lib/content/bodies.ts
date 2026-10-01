@@ -4008,7 +4008,7 @@ export const soundMoneyHubBody: Section[] = [
   {
     heading: "Mined, or made by law",
     paragraphs: [
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) comes down to cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin, *fiat*, “let it be done.” A treasury can issue a new note with a signature.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) comes down to cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin for “let it be done.” A treasury can issue a new note with a signature.",
       "Neither kind guarantees a good or bad outcome. Some fiat currencies have held steady for years, and Roman emperors had cut the silver in the denarius to a few percent by the 270s AD. The same note can also change category overnight. When the United States stopped exchanging dollars for gold in August 1971, the notes in people’s wallets looked exactly as before. What had changed was that only the law stood behind them.",
     ],
   },
