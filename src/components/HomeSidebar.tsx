@@ -5,27 +5,39 @@ import type { SilverMovers } from "@/lib/dashboard/silver-movers";
 function Box({
   kicker,
   title,
+  titleClassName = "",
   footer,
   children,
 }: {
   kicker: string;
   title: string;
+  titleClassName?: string;
   footer: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <section className="flex flex-col rounded-sm bg-surface p-4 shadow-[var(--shadow-border)]">
       <p className="text-xs font-semibold tracking-[0.14em] text-gold uppercase">{kicker}</p>
-      <h2 className="mt-1 font-display text-lg leading-snug">{title}</h2>
+      <h2 className={`mt-1 font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
       <div className="mt-3 flex-1">{children}</div>
       <p className="mt-4 border-t border-line pt-3 text-sm">{footer}</p>
     </section>
   );
 }
 
+function roundPct(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
 function fmtPct(n: number) {
-  const s = n.toFixed(2);
-  return n > 0 ? `+${s}%` : `${s}%`;
+  const r = roundPct(n);
+  const s = Math.abs(r).toFixed(2);
+  return r > 0 ? `+${s}%` : r < 0 ? `\u2212${s}%` : `${s}%`;
+}
+
+function pctColor(n: number) {
+  const r = roundPct(n);
+  return r > 0 ? "text-up" : r < 0 ? "text-down" : "text-muted";
 }
 
 function fmtDate(iso: string) {
@@ -89,8 +101,12 @@ export function HomeSidebar({
       <Box
         kicker={movers ? `Last trading day · ${fmtDate(movers.asOf)}` : "Last trading day"}
         title="Silver producers: top 5 daily change"
+        titleClassName="w-fit text-silver-shine"
         footer={
-          <Link to="/silver-stocks" className="text-gold hover:text-gold-soft">
+          <Link
+            to="/silver-stocks"
+            className="text-silver-shine underline-offset-2 hover:underline"
+          >
             Silver stocks report →
           </Link>
         }
@@ -113,9 +129,7 @@ export function HomeSidebar({
                     <span className="block leading-tight">{r.name}</span>
                     <span className="text-xs tracking-wide text-faint">{r.ticker}</span>
                   </td>
-                  <td
-                    className={`py-1.5 text-right align-top tabular-nums ${r.dayPct > 0 ? "text-gold" : r.dayPct < 0 ? "text-muted" : "text-faint"}`}
-                  >
+                  <td className={`py-1.5 text-right align-top tabular-nums ${pctColor(r.dayPct)}`}>
                     {fmtPct(r.dayPct)}
                   </td>
                 </tr>
