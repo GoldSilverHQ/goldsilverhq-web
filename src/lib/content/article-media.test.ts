@@ -11,6 +11,7 @@ import {
 import { absoluteOgImageUrl, ogImagePathForRoute } from "../seo/og-cards.ts";
 import { pageShareMeta } from "../seo/share-meta.ts";
 import { historyClusters } from "./map.ts";
+import { listBodies } from "./bodies.ts";
 
 const root = join(import.meta.dirname, "../../..");
 
@@ -140,5 +141,50 @@ describe("article hero + separate OG", () => {
     assert.ok(articleHeroOgOverridePaths().includes("/history/america/jackson-and-the-bank"));
     assert.ok(articleHeroOgOverridePaths().includes("/sound-money/what-is-sound-money"));
     assert.equal(articleHeroOgOverridePaths().length, 45);
+  });
+});
+
+describe("article body figures (layout rollout)", () => {
+  const laidOut = listBodies().flatMap(([key, sections]) =>
+    sections.flatMap((s) => (s.figure?.layout ? [{ key, figure: s.figure }] : [])),
+  );
+
+  it("rolls the figure layout out beyond the Spanish silver pilot", () => {
+    const keys = new Set(laidOut.map((f) => f.key));
+    for (const key of [
+      "20th-century/weimar-1923",
+      "20th-century/bretton-woods-nixon-1971",
+      "20th-century/1933-gold-recall",
+      "silver/piece-of-eight",
+      "banks-paper/bank-of-england",
+      "banks-paper/assignats",
+      "blog/mises-inflation-as-policy",
+    ]) {
+      assert.ok(keys.has(key), `${key} should have laid-out figures`);
+    }
+  });
+
+  it("keeps laid-out figures at native aspect with matching pixel metadata", () => {
+    for (const { key, figure: f } of laidOut) {
+      const file = join(root, "public", f.src.replace(/^\//, ""));
+      assert.ok(existsSync(file), `${key}: missing ${f.src}`);
+      assert.ok(f.width && f.height, `${key}: ${f.src} missing width/height`);
+      const dims = execFileSync(
+        "ffprobe",
+        ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", file],
+        { encoding: "utf8" },
+      ).trim();
+      assert.equal(dims, `${f.width},${f.height}`, `${key}: ${f.src} metadata must match file pixels`);
+      assert.ok(f.width! / f.height! < 2.35, `${key}: ${f.src} looks like a 5:2 hero crop`);
+    }
+  });
+
+  it("captions and credits every laid-out figure without CC BY obligations", () => {
+    for (const { key, figure: f } of laidOut) {
+      assert.ok(f.alt.length > 20, `${key}: ${f.src} alt too short`);
+      assert.ok(f.caption.length > 10, `${key}: ${f.src} caption too short`);
+      assert.ok(f.credit && f.credit.length > 10, `${key}: ${f.src} needs a source credit`);
+      assert.doesNotMatch(f.credit!, /CC[ -]?BY/i, `${key}: ${f.src} must not need attribution`);
+    }
   });
 });
