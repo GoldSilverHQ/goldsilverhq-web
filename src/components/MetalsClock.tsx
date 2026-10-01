@@ -23,7 +23,7 @@ import {
   pctLostDisplay,
 } from "@/lib/dashboard/clock-prints";
 import { COMPILED_PRINTERS, getPrinters, type Printers } from "@/lib/dashboard/printers";
-import { getSpotLite } from "@/lib/dashboard/spot";
+import { getSpotLite, parseSpotAsOf } from "@/lib/dashboard/spot";
 import {
   CB_YTD_2026,
   FX_START,
@@ -186,7 +186,7 @@ export function MetalsClock({ asSection = false }: { asSection?: boolean }) {
   const silverOn = face === "both" || face === "silver";
   const fiatOn = face === "both" || face === "fiat";
   const spotAsOf = spot?.asOf
-    ? new Date(`${spot.asOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+    ? parseSpotAsOf(spot.asOf).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
     : "live";
   const spread = spot && spot.ratio > 0 ? spot.ratio / 15 : null;
   const goldLoss = spot ? dollarLostVsGold(spot.gold) : null;

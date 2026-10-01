@@ -78,6 +78,11 @@ function alignRatio(gold: PricePoint[], silver: PricePoint[]): PricePoint[] {
   return out;
 }
 
+/** Bare `YYYY-MM-DD` dates are pinned to midday UTC so they don't drift a day across time zones. */
+export function parseSpotAsOf(asOf: string): Date {
+  return new Date(/^\d{4}-\d{2}-\d{2}$/.test(asOf) ? `${asOf}T12:00:00Z` : asOf);
+}
+
 /** Optional cache from goldenagestocks — only if as_of is fresh (Marketstack feed is gone). */
 async function spotFromGasFresh(): Promise<SpotPair | null> {
   const { gas, gasConfigured } = await import("@/lib/data/rest");
@@ -86,7 +91,7 @@ async function spotFromGasFresh(): Promise<SpotPair | null> {
 
   const freshEnough = (asOf?: string) => {
     if (!asOf) return false;
-    const t = Date.parse(asOf.length <= 10 ? `${asOf}T12:00:00Z` : asOf);
+    const t = parseSpotAsOf(asOf).getTime();
     return Number.isFinite(t) && Date.now() - t <= maxAgeMs;
   };
 
