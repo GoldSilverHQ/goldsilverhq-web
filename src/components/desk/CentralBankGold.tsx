@@ -3,10 +3,12 @@ import {
   CB_TIMEFRAMES,
   COMPILED_DESK,
   cbGrowth,
+  cbSellers,
   cbWorld,
   flagEmoji,
   withPublishedYtd,
   type CbDesk,
+  type CbGrowth,
   type CbTimeframe,
 } from "@/lib/dashboard/central-banks";
 import { getCbDesk } from "@/lib/dashboard/cb-desk";
@@ -18,7 +20,46 @@ function fmtTonnes(n: number) {
   return `${sign}${n.toLocaleString("en-US", { maximumFractionDigits: 0 })} t`;
 }
 
-/** Reported net official buying — bars + table (Official gold tab). */
+function fmtPct(n: number) {
+  return `${n > 0 ? "+" : ""}${n.toFixed(1)}%`;
+}
+
+type Row = { id: string; name: string; pct: number; tonnes: number };
+
+function BarRow({ row, mode, max }: { row: Row; mode: "relative" | "absolute"; max: number }) {
+  const value = Math.abs(mode === "relative" ? row.pct : row.tonnes);
+  const label = mode === "relative" ? fmtPct(row.pct) : fmtTonnes(row.tonnes);
+  const sold = row.tonnes < 0;
+  return (
+    <li className="cb-bar-row" title={`${row.name}: ${fmtPct(row.pct)} · ${fmtTonnes(row.tonnes)}`}>
+      <p className="text-sm text-fg">
+        <span className="mr-1.5" aria-hidden>
+          {flagEmoji(row.id)}
+        </span>
+        {row.name}
+      </p>
+      <div className="h-7 overflow-hidden rounded-md bg-raised">
+        <div
+          className={`h-full rounded-md ${sold ? "bg-[#8a8f96]" : "bg-gold"}`}
+          style={{ width: `${Math.max(8, (value / max) * 100)}%` }}
+        />
+      </div>
+      <p className={`text-sm tabular-nums sm:text-right ${sold ? "text-muted" : "text-gold-soft"}`}>{label}</p>
+    </li>
+  );
+}
+
+const toRow = (r: CbGrowth) => ({
+  id: r.id,
+  name: r.name,
+  pct: Math.round(r.growth * 1000) / 10,
+  tonnes: r.tonnes,
+  start: Math.round(r.start),
+  stock: r.stock,
+  asOf: r.asOf,
+});
+
+/** Reported net official buying and selling — bars + table (Central banks tab). */
 export function CentralBankGold() {
   const [cbRange, setCbRange] = useState<CbTimeframe>("1Y");
   const [mode, setMode] = useState<"relative" | "absolute">("absolute");
@@ -38,18 +79,14 @@ export function CentralBankGold() {
 
   const world = cbWorld(cbRange, desk);
   const rows = useMemo(() => {
-    const list = cbGrowth(cbRange, desk).map((r) => ({
-      id: r.id,
-      name: r.name,
-      pct: Math.round(r.growth * 1000) / 10,
-      tonnes: r.tonnes,
-      start: Math.round(r.start),
-      stock: r.stock,
-      asOf: r.asOf,
-    }));
+    const list = cbGrowth(cbRange, desk).map(toRow);
     return [...list].sort((a, b) => (mode === "relative" ? b.pct - a.pct : b.tonnes - a.tonnes));
   }, [cbRange, mode, desk]);
-  const max = Math.max(...rows.map((r) => (mode === "relative" ? r.pct : r.tonnes)), 1);
+  const sellers = useMemo(() => {
+    const list = cbSellers(cbRange, desk).map(toRow);
+    return [...list].sort((a, b) => (mode === "relative" ? a.pct - b.pct : a.tonnes - b.tonnes));
+  }, [cbRange, mode, desk]);
+  const max = Math.max(...[...rows, ...sellers].map((r) => Math.abs(mode === "relative" ? r.pct : r.tonnes)), 1);
   const worldLabel =
     cbRange === "1Y"
       ? "WGC net official demand, H1 2026 (through Jun; includes unreported)"
@@ -58,7 +95,7 @@ export function CentralBankGold() {
   return (
     <section className="mt-8">
       <p className="text-center text-xs font-semibold tracking-[0.14em] text-gold uppercase">
-        Reported buying
+        Reported buying and selling
       </p>
       <h2 className="mt-2 text-center font-sans text-3xl">Central bank gold</h2>
       <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted">
@@ -104,33 +141,22 @@ export function CentralBankGold() {
 
       <div className="mt-6 grid w-full gap-4 lg:grid-cols-2">
         <div className="rounded-xl bg-surface p-4 shadow-[var(--shadow-border)] sm:p-6">
+          <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-gold uppercase">Net buyers</p>
           <ul className="flex flex-col gap-3">
-            {rows.map((row) => {
-              const value = mode === "relative" ? row.pct : row.tonnes;
-              const label = mode === "relative" ? `+${row.pct.toFixed(1)}%` : fmtTonnes(row.tonnes);
-              return (
-                <li
-                  key={row.id}
-                  className="cb-bar-row"
-                  title={`${row.name}: +${row.pct.toFixed(1)}% · ${fmtTonnes(row.tonnes)}`}
-                >
-                  <p className="text-sm text-fg">
-                    <span className="mr-1.5" aria-hidden>
-                      {flagEmoji(row.id)}
-                    </span>
-                    {row.name}
-                  </p>
-                  <div className="h-7 overflow-hidden rounded-md bg-raised">
-                    <div
-                      className="h-full rounded-md bg-gold"
-                      style={{ width: `${Math.max(8, (value / max) * 100)}%` }}
-                    />
-                  </div>
-                  <p className="text-sm tabular-nums text-gold-soft sm:text-right">{label}</p>
-                </li>
-              );
-            })}
+            {rows.map((row) => (
+              <BarRow key={row.id} row={row} mode={mode} max={max} />
+            ))}
           </ul>
+          <p className="mt-6 mb-3 text-xs font-semibold tracking-[0.14em] text-muted uppercase">Net sellers</p>
+          {sellers.length ? (
+            <ul className="flex flex-col gap-3">
+              {sellers.map((row) => (
+                <BarRow key={row.id} row={row} mode={mode} max={max} />
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-faint">No reported net reductions in this window.</p>
+          )}
         </div>
 
         <div className="overflow-x-auto rounded-xl bg-surface shadow-[var(--shadow-border)]">
@@ -148,7 +174,7 @@ export function CentralBankGold() {
               </tr>
             </thead>
             <tbody>
-              {rows.map((row, i) => (
+              {[...rows, ...sellers].map((row, i) => (
                 <tr key={row.id} className="border-b border-line last:border-0">
                   <td className="px-4 py-3 tabular-nums text-faint">{i + 1}</td>
                   <td className="px-4 py-3 text-fg">
@@ -157,11 +183,11 @@ export function CentralBankGold() {
                     </span>
                     {row.name}
                   </td>
-                  <td className="px-4 py-3 tabular-nums text-gold-soft">{fmtTonnes(row.tonnes)}</td>
+                  <td className={`px-4 py-3 tabular-nums ${row.tonnes < 0 ? "text-muted" : "text-gold-soft"}`}>{fmtTonnes(row.tonnes)}</td>
                   <td className="hidden px-4 py-3 tabular-nums text-muted sm:table-cell">
                     {row.start.toLocaleString("en-US")} t
                   </td>
-                  <td className="px-4 py-3 tabular-nums text-gold">+{row.pct.toFixed(1)}%</td>
+                  <td className={`px-4 py-3 tabular-nums ${row.pct < 0 ? "text-muted" : "text-gold"}`}>{fmtPct(row.pct)}</td>
                   {cbRange === "1Y" ? (
                     <td className="hidden px-4 py-3 text-faint sm:table-cell">
                       {row.asOf ?? "Jun 2026"}
@@ -176,7 +202,7 @@ export function CentralBankGold() {
       <p className="mt-3 text-xs text-faint">
         Official prints only — no estimates. An earlier 2026 buyer line is replaced when an August national release is
         already published: China 80 t (SAFE), Poland 98 t (NBP), Czechia 14 t (CNB), Uzbekistan 48 t (CBU). World total
-        is WGC GDT H1, not the sum of the table. Top 15.{" "}
+        is WGC GDT H1, not the sum of the table. Top 15 buyers and top 10 sellers by reported net change.{" "}
         {desk.source === "gshq" ? "Country book from GSHQ, then those August prints." : "Compiled fallback."}
       </p>
     </section>

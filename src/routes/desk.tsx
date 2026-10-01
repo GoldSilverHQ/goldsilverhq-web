@@ -9,7 +9,7 @@ export const Route = createFileRoute("/desk")({
     meta: pageShareMeta({
       title: seoTitle("Golden Numbers"),
       description:
-        "Gold and silver live by category: prices and five-year COMEX history, official gold holdings, stocks and flows, money supply, and exchange paper.",
+        "Golden Numbers: gold and silver prices and ratios, central-bank gold, debt and money, supply and demand, and vaults and ETFs — dated public figures.",
       imagePath: "/og.jpg",
     }),
   }),
