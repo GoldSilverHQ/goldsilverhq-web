@@ -1106,6 +1106,10 @@ export const marketPages: Episode[] = [
         title: "Interest costs vs U.S. gold",
         href: "/blog/interest-costs-vs-us-gold",
       },
+      {
+        title: "Why the books still say $42.22",
+        href: "/blog/us-gold-booked-at-42-22",
+      },
       { title: "What “backed” means", href: "/sound-money/backed-money" },
     ],
     seo: {

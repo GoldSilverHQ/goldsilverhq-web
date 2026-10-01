@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-01T03:10:00.000Z",
+  "updatedAt": "2026-10-01T18:20:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2105592919012810752",
+      "postId": "2105680309639409862",
+      "title": "Why the U.S. Still Books Its Gold at $42.22 an Ounce",
+      "status": "mirrored",
+      "slug": "us-gold-booked-at-42-22",
+      "sitePath": "/blog/us-gold-booked-at-42-22",
+      "xArticleUrl": "https://x.com/i/article/2105592919012810752",
+      "publishedAt": "2026-10-01T15:24:42.000Z",
+      "mirroredAt": "2026-10-01T18:20:00.000Z",
+      "inlineMediaCount": 2,
+      "inlineNote": "entityMap has three TWEET embeds and zero MEDIA entities. Two embeds carry images (book-vs-market photo, debt-per-ounce still). The first embed is text-only and has no image to download."
+    },
     {
       "articleId": "2105337579369627661",
       "postId": "2105379134990172419",

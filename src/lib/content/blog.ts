@@ -49,6 +49,32 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "us-gold-booked-at-42-22",
+    title: "Why the U.S. Still Books Its Gold at $42.22 an Ounce",
+    summary:
+      "The U.S. Treasury still books gold certificates at $42.22 a fine troy ounce — the 1973 statutory rate, not the market price of the same metal.",
+    date: "2026-10-01",
+    status: "ready",
+    tags: ["History", "Markets"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Official gold book value",
+        href: "/markets/official-gold-book-value",
+      },
+      {
+        title: "Nixon shock 1971",
+        href: "/history/20th-century/bretton-woods-nixon-1971",
+      },
+    ],
+    relatedArticlePaths: [
+      "/markets/official-gold-book-value",
+      "/history/20th-century/bretton-woods-nixon-1971",
+    ],
+    xArticleUrl: "https://x.com/i/article/2105592919012810752",
+    sourceXId: "2105592919012810752",
+  },
+  {
     slug: "australia-1813-holey-dollar",
     title: "When Australia Punched Holes in Spanish Silver Dollars",
     summary:

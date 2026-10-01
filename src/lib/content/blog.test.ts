@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 13);
-    assert.equal(listBlogPosts().length, 13);
+    assert.equal(blogPosts.length, 14);
+    assert.equal(listBlogPosts().length, 14);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/us-gold-booked-at-42-22",
         "/blog/australia-1813-holey-dollar",
         "/blog/greenspan-1966-print-money",
         "/blog/mises-inflation-as-policy",
@@ -177,9 +178,9 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 11);
+    assert.equal(listBlogPostsByTag("History").length, 12);
     assert.equal(listBlogPostsByTag("Metals").length, 8);
-    assert.equal(listBlogPostsByTag("Markets").length, 4);
+    assert.equal(listBlogPostsByTag("Markets").length, 5);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
 
@@ -192,6 +193,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "us-gold-booked-at-42-22",
       "australia-1813-holey-dollar",
       "greenspan-1966-print-money",
       "mises-inflation-as-policy",
@@ -297,6 +299,51 @@ describe("blog section", () => {
     );
     assert.match(figures[0]!.credit ?? "", /GoldSilverHQ X Article/);
     assert.ok(existsSync(join(publicRoot, figures[0]!.src.replace(/^\//, ""))));
+  });
+
+  it("embeds both $42.22 charts and credits the X Article once", () => {
+    const post = getBlogPost("us-gold-booked-at-42-22");
+    assert.ok(post);
+    assert.equal(post.title, "Why the U.S. Still Books Its Gold at $42.22 an Ounce");
+    assert.equal(post.date, "2026-10-01");
+    assert.deepEqual(post.tags, ["History", "Markets"]);
+    assert.equal(post.sourceXId, "2105592919012810752");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    const body = getBody("blog", "us-gold-booked-at-42-22")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
+    assert.match(text, /\[gold window\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
+    assert.equal((text.match(/\]\(\/markets\//g) ?? []).length, 1);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2105592919012810752/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("us-gold-booked-at-42-22");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 2, `expected 2 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/us-gold-booked-at-42-22-book-vs-market.jpg",
+        "/images/blog/us-gold-booked-at-42-22-debt-per-ounce.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
   });
 
   it("embeds every inline X Article figure for the Mises note (not cover-only)", () => {
@@ -535,6 +582,7 @@ describe("blog section", () => {
 
     const mapSrc = readFileSync(join(root, "map.ts"), "utf8");
     for (const path of [
+      "/blog/us-gold-booked-at-42-22",
       "/blog/australia-1813-holey-dollar",
       "/blog/greenspan-1966-print-money",
       "/blog/mises-inflation-as-policy",
