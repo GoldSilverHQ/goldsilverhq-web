@@ -12,19 +12,19 @@ export function HistoryYearCards() {
         Dates that changed the money rule. Each card opens that year.
       </p>
 
-      <ul className="mt-8 grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-8 grid list-none gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {HISTORY_HUB_YEAR_CARDS.map((card) => {
           const href = historyHubYearHref(card);
           return (
             <li key={card.year}>
               <Link
                 to={href}
-                className="block h-full rounded-xl bg-surface p-5 shadow-[var(--shadow-border)] transition-[box-shadow,color] duration-150 ease-out hover:shadow-[var(--shadow-border-hover)] active:scale-[0.99] sm:p-6"
+                className="block h-full rounded-xl bg-surface p-4 shadow-[var(--shadow-border)] transition-[box-shadow,color] duration-150 ease-out hover:shadow-[var(--shadow-border-hover)] active:scale-[0.99]"
               >
-                <span className="block font-display text-3xl leading-none tabular-nums text-gold sm:text-4xl">
+                <span className="block font-display text-2xl leading-none tabular-nums text-gold sm:text-3xl">
                   {card.year}
                 </span>
-                <span className="mt-3 block text-sm leading-relaxed text-muted">{card.blurb}</span>
+                <span className="mt-2 block text-sm leading-relaxed text-muted">{card.blurb}</span>
               </Link>
             </li>
           );

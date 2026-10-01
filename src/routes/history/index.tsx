@@ -55,18 +55,18 @@ function HistoryHub() {
         <p className="mt-2 max-w-prose text-muted">
           Financiers, economists, and the politicians who signed the statutes. One page each.
         </p>
-        <p className="mt-4 flex flex-wrap gap-2">
+        <p className="mt-6 flex flex-wrap gap-3">
           {HISTORY_PEOPLE.map((person) => (
             <Link
               key={person.slug}
               to="/history/vip/$person"
               params={{ person: person.slug }}
-              className="rounded-full bg-surface px-3 py-1.5 text-sm text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
+              className="rounded-full bg-surface px-5 py-2.5 text-base text-gold shadow-[var(--shadow-border)] hover:text-gold-soft"
             >
               {person.name}
             </Link>
           ))}
-          <Link to="/history/vip" className="rounded-full px-3 py-1.5 text-sm text-muted hover:text-fg">
+          <Link to="/history/vip" className="rounded-full px-5 py-2.5 text-base text-muted hover:text-fg">
             All people →
           </Link>
         </p>
