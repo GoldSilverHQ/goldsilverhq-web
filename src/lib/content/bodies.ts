@@ -5,8 +5,12 @@ export type SectionTable = { caption?: string; headers: string[]; rows: string[]
  * figure. Setting `layout` also enables click-to-enlarge lightbox unless
  * `lightbox` is explicitly false.
  *
+ * Assets should keep their **natural aspect ratio** (full coin plates, painting
+ * proportions). Do not feed 5:2 hero crops into body figures — heroes stay on
+ * `ArticleHeroImage`.
+ *
  * - `breakout` — full prose-column width (panoramas / maps)
- * - `inset` — narrower centered plate (coins, detail crops)
+ * - `inset` — narrower centered plate (coins, detail plates)
  * - `float-start` / `float-end` — text-wrap on desktop; stack on mobile
  */
 export type SectionFigureLayout = "breakout" | "inset" | "float-start" | "float-end";
@@ -3436,8 +3440,8 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       alt: "1758 panorama of the Imperial Villa of Potosí with Cerro Rico rising behind the colonial city.",
       caption: "Villa Imperial de Potosí (1758) — Cerro Rico and the silver city above the tree line.",
       credit: "CC0 — Gaspar Miguel de Berrío panorama reproduction via Wikimedia Commons.",
-      width: 1200,
-      height: 480,
+      width: 1600,
+      height: 1200,
       layout: "breakout",
       placement: 1,
       lightbox: true,
@@ -3462,8 +3466,8 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       alt: "1771 Mexican pillar dollar of eight reales, obverse and reverse of the Spanish colonial silver coin.",
       caption: "Carlos III pillar dollar, 8 reales (Mexico, 1771) — the piece of eight.",
       credit: "Public domain (18th-century coin; copyright expired).",
-      width: 1200,
-      height: 480,
+      width: 1600,
+      height: 802,
       layout: "float-start",
       placement: "start",
       lightbox: true,
@@ -3489,8 +3493,8 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       alt: "Spanish pillar dollar whose Columns of Hercules design later shaped dollar symbolism in Atlantic trade.",
       caption: "Columns and waves on the milled dollar — a type Asian markets learned to price by feel and chop.",
       credit: "Public domain (18th-century coin; copyright expired).",
-      width: 1200,
-      height: 480,
+      width: 1600,
+      height: 802,
       layout: "float-end",
       placement: "start",
       lightbox: true,
@@ -3509,8 +3513,8 @@ const spanishSilverFirstGlobalMoney: Section[] = [
       alt: "1795 Flowing Hair silver dollar, obverse and reverse side by side.",
       caption: "Flowing Hair dollar (1795) — early U.S. silver coined to the Spanish milled-dollar inheritance.",
       credit: "Public domain — National Numismatic Collection, Smithsonian (U.S. government work).",
-      width: 1200,
-      height: 480,
+      width: 1600,
+      height: 806,
       layout: "inset",
       placement: 2,
       lightbox: true,

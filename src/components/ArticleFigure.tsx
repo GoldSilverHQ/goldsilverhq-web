@@ -41,6 +41,10 @@ function FigureCaption({
  * Mid-article figure with optional layout variants + click-to-enlarge lightbox.
  * Default (no `layout`) preserves the legacy stacked figure. Set `lightbox`
  * (or any `layout`) to opt into the WebHispania-style enlarge pattern.
+ *
+ * Body figures keep the asset’s **intrinsic aspect ratio** (no 5:2 / square
+ * crop frame). Use natural-format JPEGs here — do not reuse hero `cover52`
+ * crops for coin plates. Hero/OG stay on `ArticleHeroImage` (5:2 cover).
  */
 export function ArticleFigure({ figure }: { figure: SectionFigure }) {
   const captionId = useId();
@@ -51,6 +55,7 @@ export function ArticleFigure({ figure }: { figure: SectionFigure }) {
   const frame = (
     <div
       className={cn(
+        // No aspect-* / object-cover — frame follows the image, not a site crop.
         "overflow-hidden rounded-xl bg-raised",
         lightbox && "ring-0 transition-[box-shadow] duration-150 hover:shadow-[var(--shadow-border-hover)]",
       )}
@@ -60,7 +65,7 @@ export function ArticleFigure({ figure }: { figure: SectionFigure }) {
         alt={figure.alt}
         width={figure.width ?? 800}
         height={figure.height ?? 480}
-        className="h-auto w-full object-contain"
+        className="block h-auto w-full max-w-full object-contain"
         decoding="async"
         loading="lazy"
       />
