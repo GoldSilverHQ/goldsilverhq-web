@@ -32,24 +32,21 @@ async function fredLast(id: string): Promise<{ date: string; value: number }> {
 }
 
 export const getAthNow = createServerFn({ method: "GET" }).handler(async () => {
-  try {
-    const [cpi, m2, gold, silver] = await Promise.all([
-      fredLast("CPIAUCSL"),
-      fredLast("M2SL"),
-      fetch("https://api.gold-api.com/price/XAU").then((r) => r.json() as Promise<{ price: number }>),
-      fetch("https://api.gold-api.com/price/XAG").then((r) => r.json() as Promise<{ price: number }>),
-    ]);
-    return {
-      cpi: cpi.value,
-      m2: m2.value,
-      cpiDate: cpi.date,
-      m2Date: m2.date,
-      gold: gold.price,
-      silver: silver.price,
-    };
-  } catch {
-    return FALLBACK;
-  }
+  const [cpi, m2, gold, silver] = await Promise.allSettled([
+    fredLast("CPIAUCSL"),
+    fredLast("M2SL"),
+    fetch("https://api.gold-api.com/price/XAU").then((r) => r.json() as Promise<{ price: number }>),
+    fetch("https://api.gold-api.com/price/XAG").then((r) => r.json() as Promise<{ price: number }>),
+  ]);
+  const ok = <T,>(r: PromiseSettledResult<T>) => (r.status === "fulfilled" ? r.value : null);
+  return {
+    cpi: ok(cpi)?.value ?? FALLBACK.cpi,
+    m2: ok(m2)?.value ?? FALLBACK.m2,
+    cpiDate: ok(cpi)?.date ?? FALLBACK.cpiDate,
+    m2Date: ok(m2)?.date ?? FALLBACK.m2Date,
+    gold: ok(gold)?.price || FALLBACK.gold,
+    silver: ok(silver)?.price || FALLBACK.silver,
+  };
 });
 
 export function adjAth(print: number, then: number, now: number) {

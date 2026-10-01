@@ -60,24 +60,26 @@ async function ecbM3(): Promise<PrinterBook> {
 }
 
 export const getPrinters = createServerFn({ method: "GET" }).handler(async (): Promise<Printers> => {
-  try {
-    const [usM2, eurM3, eurUsd, cnyUsd, jpyUsd] = await Promise.all([
-      fredLast("M2SL"),
-      ecbM3(),
-      fredLast("DEXUSEU"),
-      fredLast("DEXCHUS"),
-      fredLast("DEXJPUS"),
-    ]);
-    const fxAsOf = [eurUsd.date, cnyUsd.date, jpyUsd.date].sort().at(-1) ?? eurUsd.date;
-    return {
-      usM2: { value: usM2.value * 1e9, asOf: usM2.date.slice(0, 7), unit: "USD" },
-      eurM3,
-      cnyM2: COMPILED_PRINTERS.cnyM2,
-      jpyM2: COMPILED_PRINTERS.jpyM2,
-      fx: { eurUsd: eurUsd.value, cnyUsd: cnyUsd.value, jpyUsd: jpyUsd.value, asOf: fxAsOf.slice(0, 7) },
-      source: "live",
-    };
-  } catch {
-    return COMPILED_PRINTERS;
-  }
+  const [usM2, eurM3, fx] = await Promise.allSettled([
+    fredLast("M2SL"),
+    ecbM3(),
+    Promise.all([fredLast("DEXUSEU"), fredLast("DEXCHUS"), fredLast("DEXJPUS")]),
+  ]);
+  const fxBook = (): FxBook => {
+    if (fx.status !== "fulfilled") return COMPILED_PRINTERS.fx;
+    const [eurUsd, cnyUsd, jpyUsd] = fx.value;
+    const asOf = [eurUsd.date, cnyUsd.date, jpyUsd.date].sort().at(-1) ?? eurUsd.date;
+    return { eurUsd: eurUsd.value, cnyUsd: cnyUsd.value, jpyUsd: jpyUsd.value, asOf: asOf.slice(0, 7) };
+  };
+  return {
+    usM2:
+      usM2.status === "fulfilled"
+        ? { value: usM2.value.value * 1e9, asOf: usM2.value.date.slice(0, 7), unit: "USD" }
+        : COMPILED_PRINTERS.usM2,
+    eurM3: eurM3.status === "fulfilled" ? eurM3.value : COMPILED_PRINTERS.eurM3,
+    cnyM2: COMPILED_PRINTERS.cnyM2,
+    jpyM2: COMPILED_PRINTERS.jpyM2,
+    fx: fxBook(),
+    source: usM2.status === "fulfilled" && eurM3.status === "fulfilled" ? "live" : "compiled",
+  };
 });
