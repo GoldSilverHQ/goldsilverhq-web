@@ -32,7 +32,24 @@ function HistoryHub() {
           <ArticleSections sections={historyHubBody} />
         </div>
 
-        <HistoryYearCards />
+        <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
+        <p className="mt-2 max-w-prose text-muted">
+          Coinage before paper, paper before fiat, statutes that redefined the dollar, and the century that closed the gold window.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {historyClusters.map((cluster) => (
+            <Link
+              key={cluster.slug}
+              to="/history/$cluster"
+              params={{ cluster: cluster.slug }}
+              className="rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
+            >
+              <h3 className="font-display text-2xl">{cluster.title}</h3>
+              <p className="mt-2 text-sm text-muted">{cluster.summary}</p>
+              <p className="mt-4 text-sm text-gold">Continue →</p>
+            </Link>
+          ))}
+        </div>
 
         <h2 className="mt-16 font-display text-3xl">Notable people</h2>
         <p className="mt-2 max-w-prose text-muted">
@@ -54,24 +71,7 @@ function HistoryHub() {
           </Link>
         </p>
 
-        <h2 className="mt-16 font-display text-3xl">Where the story continues</h2>
-        <p className="mt-2 max-w-prose text-muted">
-          Coinage before paper, paper before fiat, statutes that redefined the dollar, and the century that closed the gold window.
-        </p>
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {historyClusters.map((cluster) => (
-            <Link
-              key={cluster.slug}
-              to="/history/$cluster"
-              params={{ cluster: cluster.slug }}
-              className="rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
-            >
-              <h3 className="font-display text-2xl">{cluster.title}</h3>
-              <p className="mt-2 text-sm text-muted">{cluster.summary}</p>
-              <p className="mt-4 text-sm text-gold">Continue →</p>
-            </Link>
-          ))}
-        </div>
+        <HistoryYearCards />
         <RelatedLinks links={historyHub.related} />
       </div>
     </SiteShell>
