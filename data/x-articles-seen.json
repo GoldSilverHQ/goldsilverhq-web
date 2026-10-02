@@ -1,9 +1,21 @@
 {
-  "updatedAt": "2026-10-01T18:20:00.000Z",
+  "updatedAt": "2026-10-02T03:15:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2105579156780052480",
+      "postId": "2105729431734022209",
+      "title": "The Day the Government Became America's Only Money Printer",
+      "status": "mirrored",
+      "slug": "government-only-money-printer-1877",
+      "sitePath": "/blog/government-only-money-printer-1877",
+      "xArticleUrl": "https://x.com/i/article/2105579156780052480",
+      "publishedAt": "2026-10-01T18:39:53.000Z",
+      "mirroredAt": "2026-10-02T03:15:00.000Z",
+      "inlineMediaCount": 3
+    },
     {
       "articleId": "2105592919012810752",
       "postId": "2105680309639409862",

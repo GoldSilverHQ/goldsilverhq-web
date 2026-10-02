@@ -4263,7 +4263,116 @@ const usGoldBookedAt4222: Section[] = [
   },
 ];
 
+/** Blog: 1 October 1877 — BEP becomes the only printer of U.S. notes. Longer than the X Article. */
+const governmentOnlyMoneyPrinter1877: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **1 October 1877**, the greenback stopped leaving private presses. That morning the Bureau of Engraving and Printing — the Treasury office that engraved and printed federal securities — took over the entire production of United States Notes and National Bank Notes. For years those notes had been a shared job. Private banknote companies cut plates and ran presses. The Bureau sealed, trimmed, or finished what Washington still would not do alone. On this day the shared shop ended. The printer of America's paper money was the government itself.",
+      "A plate, a press, and a finish bench are three different pieces of work. Cutting a plate is drawing the note into steel. Running a press is putting ink on paper. Sealing, trimming, and finishing are what happens after a sheet already exists. For years the United States split those pieces. Private companies did the early work. The Bureau did what the Treasury had not yet taken in full. **1 October** is the morning that split ended for United States Notes and National Bank Notes. One office held the plate, the press, and the finish.",
+    ],
+    figure: {
+      src: "/images/blog/government-only-money-printer-1877-bep-facade.jpg",
+      alt: "Colorized photograph of the historic Bureau of Engraving and Printing, a red-brick building with arched windows and a central tower.",
+      caption:
+        "Historic Bureau of Engraving and Printing facade, colorized — the Treasury office that took the presses.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the government becoming the only money printer.",
+      width: 1200,
+      height: 675,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "One office, not a finish shop",
+    paragraphs: [
+      "The name of that office is part of the fact. It is the Bureau of Engraving and Printing, inside the Treasury, not a private firm that happened to work in Washington. Its job, as this note states it, was to engrave and print federal securities. Notes are securities of a particular kind: paper the law treats as money. Taking over their entire production means the Bureau no longer only received a sheet someone else had printed and then sealed it. It made the sheet.",
+    ],
+  },
+  {
+    heading: "Two kinds of paper, one printing question",
+    paragraphs: [
+      "The greenback was the everyday name for the federal paper that had flooded the Union during the Civil War — Legal Tender notes, also called United States Notes, that the law required creditors to take. How that paper was authorized, and how it traded below gold until specie payments returned, is the story of [greenbacks and the Civil War](/history/america/greenbacks-civil-war). This note starts later. It asks who printed the notes once the war was over, not why Congress first required creditors to take them.",
+      "National Bank Notes were different in form but not in the printing question that mattered on **1 October**. They were notes issued by federally chartered banks, secured by United States bonds deposited with the Treasury, and designed to circulate as a uniform currency. A greenback is a federal note. A National Bank Note carries a bank's name and still depends on bonds left with the Treasury. The issuer on the face is not the same. The question of this day is the same for both: who engraves, inks, and finishes the paper.",
+      "Both classes of paper had to be engraved, inked, and finished somewhere. For more than a decade after the war, that somewhere still meant a mix of private New York banknote firms and the growing Bureau on the Potomac. The war had ended. The notes had not gone back to a single government shop. Private firms in New York still had a hand in the work, and the Bureau in Washington was growing into the rest. A uniform currency on the face of a National Bank Note did not yet mean a single printer.",
+    ],
+    figure: {
+      src: "/images/blog/government-only-money-printer-1877-national-bank-note-1875.jpg",
+      alt: "Series 1875 one-thousand-dollar National Bank Note of Salem, a large engraved note with an allegorical figure at the center and a red seal.",
+      caption:
+        "Series 1875 $1,000 National Bank Note of Salem — private company names still beside Bureau credits.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the government becoming the only money printer.",
+      width: 1200,
+      height: 675,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The margins of a shared year",
+    paragraphs: [
+      "A Series **1875** one-thousand-dollar National Bank Note from Salem is a picture of the shared years, not of the morning they ended. The short piece points to the margins. Private company names sit beside Bureau credits. That is a snapshot of the arrangement just before the door closed: more than one shop still named on the paper. The denomination and the city are the ones the caption uses — a thousand dollars, Salem — and the point of the note is the credit line. It shows who printed. It is not a price.",
+    ],
+  },
+  {
+    heading: "The Bureau took the work in pieces",
+    paragraphs: [
+      "The Bureau had been absorbing that work in pieces. In **July 1869** it began engraving and printing the faces and seals of United States Notes of the Series of **1869** — a big step from finishing toward full production. Finishing is what you do to a note someone else has already printed. Engraving the face is drawing it. Printing the face is running it. Seals are the marks that say the Treasury has touched the sheet. Taking faces and seals of the Series of **1869**, in **July 1869**, moved the Bureau from the end of the line toward the start, for United States Notes.",
+      "National Bank Notes stayed longer in private hands. Companies printed them, and the Bureau finished them, until about **1875**, when the Bureau also began printing the faces. The note keeps that \"about.\" It does not pin the National Bank Note faces to a single day inside **1875**. It says the Bureau began that printing then, after years in which private companies printed and the Bureau finished. Even that step left the arrangement incomplete.",
+      "Plates, presses, and contracts still threaded through private shops. A face printed in a government bureau can still depend on a plate cut elsewhere, a press run under a contract, a shop that has not yet given up the work. Incomplete means the chain was not yet inside one office. Congress closed the gap on **3 March 1877**.",
+      "The statute told the Treasury to engrave and print notes, bonds, and other securities at the Department itself whenever that work could be done as cheaply, as safely, and as perfectly as by private firms. Cost, safety, and quality — not ideology alone — were the legal test. The statute, in this telling, does not say private printing is wrong as a creed. It says the Department is to do the work when it can match private firms on those three counts. Notes, bonds, and other securities are the list. United States Notes and National Bank Notes are the paper this story follows to **1 October**. By autumn the Bureau was ready to meet the test.",
+    ],
+  },
+  {
+    heading: "Sherman, Hayes, and the day the calendar locked",
+    paragraphs: [
+      "Secretary of the Treasury John Sherman held the office under President Rutherford B. Hayes. The calendar day that locked the change was **1 October**. From that date the Bureau of Engraving and Printing produced all United States Notes and all National Bank currency without outside help. The private firms that had engraved America's money for a generation lost the federal note contract they had shared. The greenback's face, ink, and press sat inside one bureau.",
+      "A statute in March is an instruction. A date in October is the day the instruction is met. **3 March 1877** is Congress telling the Treasury to take the work when cost, safety, and quality allow it. **1 October** is the day the Bureau, under Sherman, produced those notes without outside help. Without outside help is the phrase that ends the shared shop. Not a smaller contract. Not a finish bench beside a private press. All United States Notes. All National Bank currency. One bureau. The private firms are not named one by one here. They had engraved America's money for a generation, and they lost the federal note contract they had shared.",
+    ],
+    figure: {
+      src: "/images/blog/government-only-money-printer-1877-john-sherman.jpg",
+      alt: "Colorized engraved portrait of John Sherman, a bearded man in a dark suit and tie, from a Bureau of Engraving and Printing plate.",
+      caption:
+        "John Sherman — Bureau of Engraving and Printing engraved portrait, colorized. He was Treasury secretary on 1 October 1877.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the government becoming the only money printer.",
+      width: 757,
+      height: 983,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The plate, the press, and the statute",
+    paragraphs: [
+      "That mattered for more than payroll. Whoever engraves the note controls the plate. Whoever runs the press controls the supply of paper that the law calls money. Before **1877** the United States had already decided what its notes would say and what they would be worth in statute. After **1 October** it also decided, without a private partner, who would put those notes into the world.",
+      "Payroll is the small version of the change: whose wages, whose contract. The larger version is the plate and the press. A plate is the engraved original. A press multiplies it into sheets. United States Notes were already legal tender — creditors had to take them. National Bank Notes were already designed as a uniform currency, secured by bonds at the Treasury. Those decisions about words and legal worth were on the books before **1877**. What **1 October** added was the hand: no private partner between the statute and the sheet.",
+      "The National Bank Note of **1875** still carries the story in its margins — private company names beside Bureau credits — a snapshot of the shared years just before the door closed. On this day the door closed for good on shared production of those notes.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["The work moved in this order."],
+    list: [
+      "**Civil War.** Greenbacks — Legal Tender notes, also called United States Notes — flood the Union. The law requires creditors to take them. National Bank Notes are a different form: federally chartered banks issue them, United States bonds at the Treasury secure them, and they are designed to circulate as a uniform currency.",
+      "**More than a decade after the war.** Engraving, ink, and finish still mix private New York banknote firms with the Bureau of Engraving and Printing on the Potomac.",
+      "**July 1869.** The Bureau begins engraving and printing the faces and seals of United States Notes of the Series of 1869. That is a step from finishing toward full production.",
+      "**About 1875.** National Bank Notes, printed by companies and finished by the Bureau, reach the point where the Bureau also begins printing the faces. Plates, presses, and contracts still run through private shops. A Series 1875 National Bank Note — the thousand-dollar Salem note — still shows private company names beside Bureau credits.",
+      "**3 March 1877.** Congress tells the Treasury to engrave and print notes, bonds, and other securities at the Department when that work can be done as cheaply, as safely, and as perfectly as by private firms. The legal test is cost, safety, and quality.",
+      "**1 October 1877.** Under Secretary John Sherman, during the presidency of Rutherford B. Hayes, the Bureau produces all United States Notes and all National Bank currency without outside help. The shared federal note contract ends.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Money is a promise on paper. Printing is the hand that makes the promise physical. On **1 October 1877**, that hand became a government hand alone: one bureau, one printer, and the paper money of the United States no longer leaving a contractor's press.",
+      "The promise and the hand are different facts. The promise is what the note says and what a creditor must accept, or what a bond at the Treasury secures. The hand is who engraves the plate and who runs the press. That hand stayed shared — private firms and the Bureau — until the statute of **3 March** and the day of **1 October**. After that day those notes no longer left a contractor's press.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2105579156780052480).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/government-only-money-printer-1877": governmentOnlyMoneyPrinter1877,
   "blog/us-gold-booked-at-42-22": usGoldBookedAt4222,
   "blog/australia-1813-holey-dollar": australia1813HoleyDollar,
   "blog/greenspan-1966-print-money": greenspan1966PrintMoney,
