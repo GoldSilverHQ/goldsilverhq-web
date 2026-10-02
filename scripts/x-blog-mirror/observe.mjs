@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
  * Observe pass: list @GoldSilverHQ X Articles vs data/x-articles-seen.json.
+ * Credit-free (FxTwitter public JSON); X API only as fallback with X_BEARER_TOKEN.
  *
- * Exit 0 always on "nothing to do" / missing token (prints reason).
- * Exit 0 with JSON summary when candidate(s) exist (does not publish).
+ * Exit 0 on "nothing to do" and when candidate(s) exist (does not publish).
+ * Exit 2 when no discovery source answered.
  *
  * Usage:
  *   node scripts/x-blog-mirror/observe.mjs
@@ -11,13 +12,12 @@
  */
 
 import {
-  bearerToken,
-  listRecentArticles,
   loadSeen,
   unseenEligibleArticles,
   siteAlreadyHasArticle,
   shouldSkipTitle,
 } from "./lib.mjs";
+import { discoverArticles } from "./public-source.mjs";
 
 const asJson = process.argv.includes("--json");
 
@@ -57,29 +57,16 @@ function summarizePending(a) {
 }
 
 async function main() {
-  if (!bearerToken()) {
-    print({
-      ok: true,
-      blocked: "NO_X_TOKEN",
-      message:
-        "No X_BEARER_TOKEN — observe skipped quietly. Add the secret for GH Action cron, or run via Cursor X MCP (public @GoldSilverHQ reads).",
-    });
-    process.exit(0);
-  }
-
   const seen = loadSeen();
   const known = new Set((seen.articles ?? []).map((a) => String(a.articleId)));
-  let articles;
+  let discovered;
   try {
-    articles = await listRecentArticles({ maxResults: 50 });
+    discovered = await discoverArticles();
   } catch (err) {
-    print({
-      ok: false,
-      error: err.message,
-      message: `X API error: ${err.message}`,
-    });
-    process.exit(err.code === "NO_X_TOKEN" ? 0 : 1);
+    print({ ok: false, error: err.message, message: `Discovery unavailable: ${err.message}` });
+    process.exit(2);
   }
+  const { source, articles, warnings } = discovered;
 
   const summarized = articles.map((a) => ({
     articleId: a.articleId,
@@ -99,11 +86,13 @@ async function main() {
 
   print({
     ok: true,
+    source,
+    warnings,
     count: summarized.length,
     unseenEligible: pending.length,
     message: pending.length
-      ? `${pending.length} new eligible Article(s): ${pending.map((a) => a.title).join(" | ")}`
-      : "No new eligible Articles (exit quietly).",
+      ? `${pending.length} new eligible Article(s) via ${source}: ${pending.map((a) => a.title).join(" | ")}`
+      : `No new eligible Articles via ${source} (exit quietly).`,
     articles: summarized,
     pending: pending.map(summarizePending),
     next: next ? summarizePending(next) : null,

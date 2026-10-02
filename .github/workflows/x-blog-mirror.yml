@@ -125,11 +125,12 @@ jobs:
           fi
           exit 1
 
-      - name: Notice when X token missing
+      - name: Notice when nothing new
         if: steps.discover.outputs.exit_code == '0'
+        run: echo "::notice::No new eligible Articles (or already mirrored)."
+
+      - name: Fail when no discovery source answered
+        if: steps.discover.outputs.exit_code == '2'
         run: |
-          if [ -z "${{ secrets.X_BEARER_TOKEN }}" ]; then
-            echo "::notice::Set repo secret X_BEARER_TOKEN (X API app Bearer) to enable scheduled discover. Fallback: Cursor Automation / timer thrice daily Berlin (03:00, 10:00, 18:00) — see docs/x-blog-automation-setup.md in the Project store."
-          else
-            echo "::notice::No new eligible Articles (or already mirrored)."
-          fi
+          echo "::error::FxTwitter public JSON unreachable and no X_BEARER_TOKEN fallback — discovery skipped this slot."
+          exit 1
