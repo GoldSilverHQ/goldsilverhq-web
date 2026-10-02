@@ -572,6 +572,10 @@ export const historyClusters: Cluster[] = [
           { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
           { title: "Inflation (the idea)", href: "/sound-money/inflation-purchasing-power" },
+          {
+            title: "When the government became the only printer",
+            href: "/blog/government-only-money-printer-1877",
+          },
         ],
         seo: {
           primary: "greenbacks civil war",

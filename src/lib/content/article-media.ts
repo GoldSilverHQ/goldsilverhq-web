@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/government-only-money-printer-1877",
+    src: "/images/blog/government-only-money-printer-1877.jpg",
+    ogSrc: "/og/cards/blog-government-only-money-printer-1877.jpg",
+    alt: "Title card for 1 October 1877, when the Bureau of Engraving and Printing took over printing United States Notes and National Bank Notes, over an engraved note.",
+    caption:
+      "1 October 1877 — the Bureau of Engraving and Printing becomes the only printer of those notes.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the government becoming the only money printer.",
+  },
+  {
     path: "/blog/us-gold-booked-at-42-22",
     src: "/images/blog/us-gold-booked-at-42-22.jpg",
     ogSrc: "/og/cards/blog-us-gold-booked-at-42-22.jpg",
