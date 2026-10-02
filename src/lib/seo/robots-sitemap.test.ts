@@ -77,6 +77,7 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/gold-silver-ratio",
       "/markets/physical-silver-demand-by-country",
       "/blog",
+      "/blog/government-only-money-printer-1877",
       "/blog/us-gold-booked-at-42-22",
       "/blog/australia-1813-holey-dollar",
       "/blog/greenspan-1966-print-money",
@@ -99,7 +100,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 280);
+    assert.equal(locs.length, 281);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
