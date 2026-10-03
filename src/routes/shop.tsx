@@ -107,15 +107,16 @@ const SHOP_CATEGORIES: { id: ShopCategory; label: string }[] = [
   { id: "ebook", label: "Ebook" },
 ];
 
-function ComingSoon({ id }: { id: "jewelry" | "ebook" }) {
+function ComingSoon({ id, hidden }: { id: "jewelry" | "ebook"; hidden: boolean }) {
   return (
     <section
       id={`shop-panel-${id}`}
       role="tabpanel"
       aria-labelledby={`shop-tab-${id}`}
+      hidden={hidden}
       className="shop-section mt-8"
     >
-      <p className="text-muted">Coming soon</p>
+      <p className="text-lg text-fg">Coming soon</p>
     </section>
   );
 }
@@ -211,9 +212,9 @@ function ShopPage() {
             </section>
           ) : null}
 
-          {category === "jewelry" ? <ComingSoon id="jewelry" /> : null}
+          <ComingSoon id="jewelry" hidden={category !== "jewelry"} />
 
-          {category === "ebook" ? <ComingSoon id="ebook" /> : null}
+          <ComingSoon id="ebook" hidden={category !== "ebook"} />
 
           <p className="mt-16 max-w-prose text-sm text-faint">
             Educational pages stay on{" "}
