@@ -1801,33 +1801,31 @@ const jackson: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In **1832**, Congress sent Andrew Jackson a bill to recharter the Second Bank of the United States years before the charter expired. He vetoed it. The veto message attacked the Bank as unconstitutional privilege and foreign-tinged power. The presidential campaign that autumn made the Bank the issue. Jackson won. The federal center would not be renewed on that bill.",
-      "What followed came in sequence: federal deposits moved to state “pet” banks, the Specie Circular of **1836** required gold and silver for public land, and the Panic of **1837** hit American banks and commerce. The quarrel was over who would hold the government’s money and who would issue the country’s paper. The United States would not have a federal central bank again until **1913**.",
+      "The Second Bank of the United States was a privilege written into a federal charter. Private stockholders owned most of it. The United States owned a share, named directors, and kept the Treasury’s cash in its vaults. The Bank issued notes that passed from hand to hand, and it could present the notes of state banks for gold or silver. Whoever held those public balances could lend on them.",
+      "That is the fact underneath the cartoons and the campaign. A corporation with a federal seal and the government’s account is not a neutral warehouse for coin. It is a favored issuer sitting on the country’s cash.",
     ],
   },
   {
-    heading: "What the Second Bank was",
+    heading: "What the charter gave",
     paragraphs: [
-      "The First Bank of the United States (**1791–1811**) had already shown the pattern: a federal charter, mixed public and private ownership, note issue, and a role as the government’s fiscal agent. After the War of 1812, Congress chartered the Second Bank in **1816**, with a twenty-year term. Nicholas Biddle became its dominant president. The Bank’s notes circulated widely. It also restrained state banks by presenting their notes for specie.",
-      "Supporters called that discipline sound. Opponents called it a monopoly over credit and politics. The Bank was not a modern central bank with a dual mandate and open-market operations. It was a privileged corporation with a federal seal, a large capital, and the Treasury’s account. That was enough to make it a national issue.",
-      "By the early **1830s** the charter’s end was in sight. Biddle and allies pressed for early recharter. Jackson and the Democratic coalition framed the Bank as a threat to equal rights and hard money. The fight was about power and specie as much as about balance sheets.",
+      "Congress had tried the arrangement once. The First Bank of the United States ran from **1791** to **1811** and was not renewed. After the War of 1812, with the Treasury short and many state banks refusing to redeem their notes, James Madison signed a new charter in April **1816**. The Second Bank opened in Philadelphia in January **1817**, for twenty years, with a capital of **$35 million**. Twenty-five directors governed it. The president appointed five; the stockholders elected the rest. Branches followed the settlement west until there were twenty-five of them.",
+      "Nicholas Biddle became president in **1823**. The Bank held federal deposits, paid the government’s bills, and issued its own notes. It also accumulated the notes of state banks, and it could present them for coin. Supporters called that discipline. Critics called it a monopoly with politics attached. This was not a lender of last resort, and it did not hold the banking system’s reserves. It was large, chartered, and close enough to the Treasury to loosen or tighten credit with other banks’ notes and with the public cash.",
     ],
   },
   {
-    heading: "The 1832 veto and the election",
+    heading: "The veto of 10 July 1832",
     paragraphs: [
-      "Congress passed a recharter bill in **1832**, well before the **1836** expiry. Biddle and his allies in Congress, Henry Clay among them, chose the timing to force the question before the election. Jackson’s veto message of **10 July 1832** was politics as much as jurisprudence. It made the Bank the issue of the **1832** presidential campaign.",
-      "Jackson won reelection. The veto stood. Biddle still ran the existing institution until the charter ran out, but the political verdict had landed: the federal center would not be renewed by that Congress and that President.",
-      "The veto stopped recharter. Removing the deposits was a separate executive move, and it starved the Bank of the government’s cash. It was not easy even for Jackson. One Treasury secretary was moved to the State Department and his successor was dismissed for refusing the order before Roger Taney, installed at the Treasury, began the removal in **September 1833**.",
+      "A recharter bill went to Congress in January **1832**, four years before the charter expired. Henry Clay was among those who wanted the question forced before the election. Both houses passed it. Jackson sent it back on **10 July 1832**.",
+      "The veto message, in the wording of A Compilation of the Messages and Papers of the Presidents (1897), as transcribed by the Avalon Project at Yale Law School, says: “It is to be regretted that the rich and powerful too often bend the acts of government to their selfish purposes.” The same paragraph speaks of using the laws “to grant titles, gratuities, and exclusive privileges, to make the rich richer and the potent more powerful,” and it closes on the bill itself: “In the act before me there seems to be a wide and unnecessary departure from these just principles.” Citing papers already before Congress, the message put foreign holdings at **$8,405,500** of the **$28 million** in private stock on **1 January 1832**, mostly in Britain.",
+      "That is an attack on exclusive privilege. It is not a plan that moves the Treasury onto coin or stops banks from issuing notes. Congress did not override the veto. Jackson won reelection that autumn. Biddle still ran the Bank under the old charter. Only the renewal was dead.",
     ],
   },
   {
-    heading: "Pet banks and the Specie Circular",
+    heading: "Where the deposits went",
     paragraphs: [
-      "After the veto fight, Jackson’s Treasury began removing federal deposits from the Second Bank and placing them in selected state banks — the “pet banks” of contemporary abuse. The government’s money no longer sat in one federally chartered vault. It sat in a scattered set of state institutions whose note issue and lending the administration preferred to the Bank’s discipline.",
-      "Biddle answered by contracting the Bank’s loans through **1833–34**, arguing prudence while critics called it a deliberate squeeze to prove the Bank indispensable. Credit tightened in the commercial cities. The contraction won Biddle no recharter. It hardened the view that one private corporation held too much power over the country’s money.",
-      "Land sales in the West were booming. Speculators often paid with bank paper. In **1836** the Specie Circular ordered that public lands be paid for in gold and silver. The rule was a hard-money brake on paper land fever. It also drained specie from banks that had been extending credit against land notes.",
-      "The mix — deposit removal, state-bank expansion, then a sudden specie demand for land — belongs in any account of the mid-1830s. Whether one blames Jackson, Biddle, state banks, or the land boom depends on the historian. The sequence does not.",
+      "The veto left the public money where it was. After the election Jackson ordered it out of the Bank. By late **1833** most of the federal deposits sat in selected state banks, called pet banks. The cash did not become coin in a government vault. It became balances at banks that issued notes and made loans. One privilege had been broken into several, and the pieces were easier to expand.",
+      "Biddle did not replace the lost deposits with new private funds. He limited credit and called in loans through **1833** and **1834**, counting on the squeeze to force the Treasury back. Credit tightened in the commercial cities. The contraction won no recharter. In April **1834** the House voted to leave the deposits with the state banks and not to renew the Bank. Calling in loans showed what the critics had claimed: one corporation could make money scarce.",
+      "Land offices in the West were selling fast, and the buyers often paid with bank notes. In **1836** the Specie Circular instructed those offices to take gold or silver. That was a hard-money brake on paper land sales. It was also a sudden demand for coin from banks that had already lent against the boom. The federal charter expired the same year.",
     ],
     figure: {
       src: "/images/history/america/jackson-and-the-bank/downfall-of-mother-bank-1833.png",
@@ -1841,11 +1839,11 @@ const jackson: Section[] = [
     },
   },
   {
-    heading: "Panic of 1837 and the aftermath",
+    heading: "Panic of 1837",
     paragraphs: [
-      "In **1837** a financial panic hit American banks and commerce. Specie payments were suspended in many places. Failures spread. The causes were several: international credit conditions, cotton prices, land speculation, and the domestic banking scramble after the Bank war. No single villain explains it. The panic followed the deposit and specie sequence by months, not decades.",
-      "The Second Bank’s federal charter expired. Biddle’s institution continued for a time under a Pennsylvania charter and then failed in the early **1840s**. The United States entered a long stretch without a federally chartered central bank. The Independent Treasury system later tried to keep federal money out of banks altogether. State banks and note chaos filled the gap until the Civil War’s national banking acts — and until the [greenback](/history/america/greenbacks-civil-war) war finance of the **1860s**.",
-      "Seventy years later the [Panic of 1907](/history/20th-century/panic-1907-fed) reopened the question of a central bank at full volume, and that time Congress built one. The Federal Reserve was a different institution, answering a trust-company run rather than Jackson’s veto message.",
+      "In **1837** the break came. Banks suspended specie payments. Failures spread among merchants and among the state banks that had been holding public money and lending it out as notes. Cotton prices and credit from Britain were part of the strain. They do not replace the domestic sequence. Public cash had left the chartered bank for banks that multiplied paper, and the Specie Circular had then asked those banks for metal.",
+      "Jackson is not the hero of what followed. He had named the Bank’s exclusive privilege and refused to renew it. He had not put a scarcer money in its place. The deposits sat where new notes could be written against them. The panic is what that paper, joined to a government cash account, produced: a boom in promises, then a demand for coin the promises had already outrun.",
+      "The Philadelphia institution continued under a Pennsylvania charter and failed in the early **1840s**. The United States went on for the rest of the century without a federally chartered central bank, and it did not go on without paper. In the **1860s** the Union paid its bills in [greenbacks](/history/america/greenbacks-civil-war). Seventy years after **1837**, the [Panic of 1907](/history/20th-century/panic-1907-fed) put a central bank back before Congress, which passed the Federal Reserve Act in **1913**.",
     ],
     figure: {
       src: "/images/history/america/jackson-and-the-bank/clay-the-times-1837.jpg",
@@ -1860,21 +1858,21 @@ const jackson: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["Veto first, then deposits, then specie, then panic."],
+    paragraphs: ["The charter, the veto, the deposits, the metal, the panic."],
     list: [
-      "**1816:** Second Bank of the United States chartered for twenty years.",
-      "**1832:** Congress passes recharter; Jackson vetoes; Jackson reelected with the Bank as a campaign issue.",
-      "**1833–34:** Federal deposits removed from the Bank to state “pet” banks; Biddle contracts the Bank’s loans.",
-      "**1836:** Specie Circular — gold and silver required for public-land purchases; Bank’s federal charter expires.",
-      "**1837:** Panic; widespread suspension of specie payments.",
-      "**1913:** Federal Reserve Act — after the Panic of 1907.",
+      "**1816–17:** Congress charters the Second Bank; it opens in Philadelphia with a capital of $35 million.",
+      "**10 July 1832:** Jackson vetoes recharter. He is reelected that autumn. The old charter still runs.",
+      "**Late 1833:** Most federal deposits have been moved to selected state banks, the pet banks. Biddle calls in loans.",
+      "**1836:** The Specie Circular requires gold or silver for public land. The federal charter expires.",
+      "**1837:** Panic. Banks suspend specie payments.",
+      "**1913:** Federal Reserve Act, after the Panic of 1907.",
     ],
   },
   {
-    heading: "Who holds the government’s money",
+    heading: "Privilege, then a scatter of paper",
     paragraphs: [
-      "The Bank war was fought over a charter, but the stake was custody. Whoever held the Treasury’s balances could lend on them, and whoever issued the country’s most trusted notes could discipline everyone else’s. Jackson took both away from Biddle and scattered them among state banks.",
-      "The Specie Circular then asked those banks for metal they had lent out as paper. A year later the country was in panic, and for most of the next generation the federal government kept its money in its own vaults.",
+      "The fight is remembered as Jackson against the Bank. The stake was custody. Whoever held the Treasury’s balances could lend on them, and whoever issued the notes other banks had to honor could discipline everyone else’s paper. The charter had given both to one corporation.",
+      "The veto refused that grant. It did not make the money harder to multiply. The privilege was real. Scattering the public cash into note-issuing banks was not sound money.",
     ],
   },
 ];
