@@ -85,5 +85,12 @@ describe("fourthwall public feed", () => {
     const shop = readFileSync(join(root, "../../routes/shop.tsx"), "utf8");
     assert.equal(shop.includes("Andrew Jackson"), false);
     assert.equal(shop.includes("12.00 USD"), false);
+    assert.equal(shop.includes("PETER_STONE_PRODUCTS"), false);
+    assert.match(shop, /loadFourthwallProducts/);
+    assert.match(shop, /staleTime:\s*0/);
+    assert.match(shop, /no-store/);
+    assert.match(shop, /Jewelry — Peter Stone/);
+    assert.match(shop, /Rare-coins ebook/);
+    assert.equal(shop.includes("Affiliate link pending"), false);
   });
 });

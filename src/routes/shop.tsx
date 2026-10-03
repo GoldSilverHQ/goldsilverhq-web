@@ -9,13 +9,6 @@ import {
   loadFourthwallProducts,
   type FourthwallProduct,
 } from "@/lib/shop/fourthwall";
-import {
-  PETER_STONE_PRODUCTS,
-  ctaHref,
-  hasAffiliateTracking,
-  peterStoneAffiliateId,
-  type PeterStoneProduct,
-} from "@/lib/shop/peter-stone";
 
 export const Route = createFileRoute("/shop")({
   loader: async () => {
@@ -25,73 +18,21 @@ export const Route = createFileRoute("/shop")({
       return { merch: [] as FourthwallProduct[] };
     }
   },
-  staleTime: 60_000,
+  // Refetch the Fourthwall feed on each visit. Do not keep a stale catalog.
+  staleTime: 0,
+  headers: () => ({
+    "Cache-Control": "private, no-store",
+  }),
   head: () => ({
     meta: pageShareMeta({
       title: seoTitle("Shop"),
       description:
-        "GoldSilverHQ Shop: Peter Stone jewelry and merch from the Fourthwall catalog. Commerce only — not investment advice.",
+        "GoldSilverHQ Shop: Fourthwall merch from the live catalog, with reserved sections for Peter Stone jewelry and a rare-coins ebook. Commerce only — not investment advice.",
       imagePath: "/og.jpg",
     }),
   }),
   component: ShopPage,
 });
-
-function ProductPlate({ product }: { product: PeterStoneProduct }) {
-  if (product.imageSrc) {
-    return (
-      <img
-        src={product.imageSrc}
-        alt={product.imageAlt ?? product.name}
-        className="aspect-[4/5] w-full object-cover"
-        loading="lazy"
-      />
-    );
-  }
-
-  return (
-    <div
-      className="shop-product-plate relative aspect-[4/5] w-full overflow-hidden"
-      aria-hidden="true"
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,color-mix(in_oklab,var(--color-gold)_22%,transparent),transparent_55%),radial-gradient(ellipse_at_80%_90%,color-mix(in_oklab,var(--color-silver)_16%,transparent),transparent_50%),linear-gradient(165deg,var(--color-raised),var(--color-surface))]" />
-      <div className="absolute inset-[12%] border border-[color-mix(in_oklab,var(--color-gold)_28%,transparent)]" />
-      <p className="absolute inset-x-4 bottom-4 text-center text-[0.65rem] tracking-[0.18em] text-faint uppercase">
-        Image pending
-      </p>
-    </div>
-  );
-}
-
-function JewelryCard({ product }: { product: PeterStoneProduct }) {
-  const href = ctaHref(product);
-  const tracked = hasAffiliateTracking(product);
-
-  return (
-    <article className="shop-product flex flex-col">
-      <ProductPlate product={product} />
-      <div className="flex flex-1 flex-col pt-4">
-        <h3 className="font-display text-xl text-fg">{product.name}</h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{product.blurb}</p>
-        {tracked && href ? (
-          <a
-            href={href}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            className="btn-gold mt-5 inline-flex min-h-11 items-center justify-center rounded-sm px-4 text-sm font-semibold"
-          >
-            View at Peter Stone
-          </a>
-        ) : (
-          <p className="mt-5 border-t border-line pt-4 text-sm text-faint">
-            Affiliate link pending
-            {peterStoneAffiliateId() ? " — paste dashboard URL into config" : ""}.
-          </p>
-        )}
-      </div>
-    </article>
-  );
-}
 
 function MerchCard({ product }: { product: FourthwallProduct }) {
   const first = product.variants[0];
@@ -163,20 +104,12 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
   );
 }
 
-function ComingSoonBlock({
-  id,
-  title,
-  body,
-}: {
-  id: string;
-  title: string;
-  body: string;
-}) {
+function ReservedSlot({ id, title, body }: { id: string; title: string; body: string }) {
   return (
-    <section id={id} className="shop-section scroll-mt-24">
+    <section id={id} className="shop-section mt-20 scroll-mt-24 border-t border-line pt-16">
       <h2 className="font-display text-3xl">{title}</h2>
       <p className="mt-3 max-w-prose text-muted">{body}</p>
-      <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Coming soon</p>
+      <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Not listed yet</p>
     </section>
   );
 }
@@ -202,70 +135,33 @@ function ShopPage() {
               <span className="text-fg">HQ</span>
               <span className="text-muted"> Shop</span>
             </p>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl">Jewelry, notes, and merch.</h1>
+            <h1 className="mt-4 font-display text-4xl sm:text-5xl">Merch, jewelry, and a note.</h1>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              {merch.length > 0
-                ? "A small commerce corner — curated craft jewelry via Peter Stone’s affiliate program, and merch from the Fourthwall shop. PDFs later. Not a metals desk. Not investment advice."
-                : "A small commerce corner — curated craft jewelry via Peter Stone’s affiliate program, with PDFs and merch to follow. Not a metals desk. Not investment advice."}
+              Fourthwall merch is listed from their public catalog. Peter Stone jewelry and a
+              rare-coins ebook have their own sections and are not listed yet. Not a metals desk.
+              Not investment advice.
             </p>
           </header>
 
-          <aside
-            className="shop-disclosure mt-10 max-w-3xl border-l-2 border-gold/50 pl-4 text-sm leading-relaxed text-muted"
-            aria-label="Affiliate disclosure"
-          >
-            <p>
-              <span className="font-medium text-fg">Affiliate disclosure:</span> Some links to Peter
-              Stone are affiliate links. If you buy through them, we may earn a commission or store
-              credit — at no extra cost to you. This page is jewelry and merch commerce only.
-            </p>
-            <p className="mt-2">
-              <span className="font-medium text-fg">Affiliate-Hinweis:</span> Einige Links zu Peter
-              Stone sind Affiliate-Links. Bei einem Kauf darüber erhalten wir ggf. eine Provision oder
-              Gutschrift — ohne Mehrkosten für Sie. Schmuck-/Merch-Handel, keine Anlageberatung.
-            </p>
-          </aside>
-
           <nav className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted" aria-label="Shop sections">
-            <a href="#jewelry" className="hover:text-gold-soft">
-              Jewelry
-            </a>
             <a href="#merch" className="hover:text-gold-soft">
               Merch
             </a>
-            <a href="#pdfs" className="hover:text-gold-soft">
-              PDFs
+            <a href="#jewelry" className="hover:text-gold-soft">
+              Jewelry
+            </a>
+            <a href="#ebook" className="hover:text-gold-soft">
+              Ebook
             </a>
           </nav>
 
-          <section id="jewelry" className="shop-section mt-16 scroll-mt-24">
-            <h2 className="font-display text-3xl">Jewelry — Peter Stone</h2>
-            <p className="mt-3 max-w-prose text-muted">
-              Cultural and craft jewelry from{" "}
-              <a
-                href="https://www.peterstone.com/"
-                className="text-gold hover:text-gold-soft"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Peter Stone
-              </a>
-              . Placeholders until real product URLs and images are wired from the affiliate
-              dashboard.
-            </p>
-            <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {PETER_STONE_PRODUCTS.map((product) => (
-                <JewelryCard key={product.id} product={product} />
-              ))}
-            </div>
-          </section>
-
-          <section id="merch" className="shop-section mt-20 scroll-mt-24 border-t border-line pt-16">
-            <h2 className="font-display text-3xl">Merch</h2>
+          <section id="merch" className="shop-section mt-16 scroll-mt-24">
+            <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
             {merch.length > 0 ? (
               <>
                 <p className="mt-3 max-w-prose text-muted">
-                  Listed from the GoldSilverHQ Fourthwall catalog. Checkout opens on Fourthwall.
+                  Names and prices come from the public Fourthwall catalog on each visit. Checkout
+                  opens on Fourthwall.
                 </p>
                 <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
                   {merch.map((product) => (
@@ -274,22 +170,23 @@ function ShopPage() {
                 </div>
               </>
             ) : (
-              <>
-                <p className="mt-3 max-w-prose text-muted">
-                  Site merch will appear here when the Fourthwall catalog lists it.
-                </p>
-                <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Coming soon</p>
-              </>
+              <p className="mt-3 max-w-prose text-muted">
+                Nothing is in the public Fourthwall catalog right now.
+              </p>
             )}
           </section>
 
-          <div className="mt-20 border-t border-line pt-16">
-            <ComingSoonBlock
-              id="pdfs"
-              title="PDFs"
-              body="Guides and printable notes will land here. Structure reserved — nothing for sale yet."
-            />
-          </div>
+          <ReservedSlot
+            id="jewelry"
+            title="Jewelry — Peter Stone"
+            body="Reserved for Peter Stone jewelry. No pieces, prices, or links are listed yet."
+          />
+
+          <ReservedSlot
+            id="ebook"
+            title="Rare-coins ebook"
+            body="Reserved for a rare-coins ebook. Nothing is listed yet."
+          />
 
           <p className="mt-16 max-w-prose text-sm text-faint">
             Educational pages stay on{" "}
