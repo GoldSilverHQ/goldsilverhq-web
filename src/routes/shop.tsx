@@ -107,17 +107,15 @@ const SHOP_CATEGORIES: { id: ShopCategory; label: string }[] = [
   { id: "ebook", label: "Ebook" },
 ];
 
-function ReservedSlot({ id, title, body }: { id: string; title: string; body: string }) {
+function ComingSoon({ id }: { id: "jewelry" | "ebook" }) {
   return (
     <section
       id={`shop-panel-${id}`}
       role="tabpanel"
       aria-labelledby={`shop-tab-${id}`}
-      className="shop-section mt-10"
+      className="shop-section mt-8"
     >
-      <h2 className="font-display text-3xl">{title}</h2>
-      <p className="mt-3 max-w-prose text-muted">{body}</p>
-      <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Not listed yet</p>
+      <p className="text-muted">Coming soon</p>
     </section>
   );
 }
@@ -158,7 +156,7 @@ function ShopPage() {
           </header>
 
           <div
-            className="mt-10 grid grid-cols-3 gap-2 sm:gap-3"
+            className="mt-8 inline-flex flex-wrap gap-1 rounded-md border border-line bg-surface p-1"
             role="tablist"
             aria-label="Shop categories"
             onKeyDown={onTabKeyDown}
@@ -175,10 +173,8 @@ function ShopPage() {
                   aria-controls={`shop-panel-${item.id}`}
                   tabIndex={on ? 0 : -1}
                   onClick={() => setCategory(item.id)}
-                  className={`min-h-16 rounded-md border px-2 text-lg font-semibold tracking-tight transition-[color,background-color,border-color] duration-150 sm:min-h-20 sm:px-5 sm:text-2xl ${
-                    on
-                      ? "border-transparent bg-gold text-bg"
-                      : "border-line bg-surface text-fg hover:border-gold hover:text-gold-soft"
+                  className={`min-h-11 rounded-sm px-4 text-sm font-medium transition-[color,background-color] duration-150 ${
+                    on ? "bg-gold text-bg" : "text-muted hover:text-fg"
                   }`}
                 >
                   {item.label}
@@ -215,21 +211,9 @@ function ShopPage() {
             </section>
           ) : null}
 
-          {category === "jewelry" ? (
-            <ReservedSlot
-              id="jewelry"
-              title="Jewelry — Peter Stone"
-              body="Reserved for Peter Stone jewelry. No pieces, prices, or links are listed yet."
-            />
-          ) : null}
+          {category === "jewelry" ? <ComingSoon id="jewelry" /> : null}
 
-          {category === "ebook" ? (
-            <ReservedSlot
-              id="ebook"
-              title="Rare-coins ebook"
-              body="Reserved for a rare-coins ebook. Nothing is listed yet."
-            />
-          ) : null}
+          {category === "ebook" ? <ComingSoon id="ebook" /> : null}
 
           <p className="mt-16 max-w-prose text-sm text-faint">
             Educational pages stay on{" "}
