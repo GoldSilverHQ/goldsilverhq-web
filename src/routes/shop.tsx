@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
 import { seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
+import {
+  fourthwallCheckoutUrl,
+  loadFourthwallProducts,
+  type FourthwallProduct,
+} from "@/lib/shop/fourthwall";
 import {
   PETER_STONE_PRODUCTS,
   ctaHref,
@@ -12,11 +18,19 @@ import {
 } from "@/lib/shop/peter-stone";
 
 export const Route = createFileRoute("/shop")({
+  loader: async () => {
+    try {
+      return { merch: await loadFourthwallProducts() };
+    } catch {
+      return { merch: [] as FourthwallProduct[] };
+    }
+  },
+  staleTime: 60_000,
   head: () => ({
     meta: pageShareMeta({
       title: seoTitle("Shop"),
       description:
-        "GoldSilverHQ Shop: curated Peter Stone jewelry via affiliate links, plus PDFs and merch coming later. Commerce only — not investment advice.",
+        "GoldSilverHQ Shop: Peter Stone jewelry and merch from the Fourthwall catalog. Commerce only — not investment advice.",
       imagePath: "/og.jpg",
     }),
   }),
@@ -79,6 +93,76 @@ function JewelryCard({ product }: { product: PeterStoneProduct }) {
   );
 }
 
+function MerchCard({ product }: { product: FourthwallProduct }) {
+  const first = product.variants[0];
+  const [variantId, setVariantId] = useState(first?.id ?? "");
+  const variant = product.variants.find((item) => item.id === variantId) ?? first;
+  if (!variant) return null;
+
+  const checkout = fourthwallCheckoutUrl(variant.id, variant.currency);
+
+  return (
+    <article className="shop-product flex flex-col">
+      {product.imageUrl ? (
+        <div className="shop-product-plate relative aspect-[4/5] w-full overflow-hidden bg-surface">
+          <img
+            src={product.imageUrl}
+            alt={product.title}
+            className="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        <div
+          className="shop-product-plate relative aspect-[4/5] w-full overflow-hidden"
+          aria-hidden="true"
+        />
+      )}
+      <div className="flex flex-1 flex-col pt-4">
+        <h3 className="font-display text-xl text-fg">{product.title}</h3>
+        <p className="mt-2 text-sm text-muted">{variant.priceLabel}</p>
+        {product.description ? (
+          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{product.description}</p>
+        ) : (
+          <div className="flex-1" />
+        )}
+        {product.variants.length > 1 ? (
+          <label className="mt-4 block text-sm text-muted">
+            <span className="mb-1 block text-xs tracking-[0.12em] text-faint uppercase">Size</span>
+            <select
+              className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-fg"
+              value={variant.id}
+              onChange={(event) => setVariantId(event.target.value)}
+            >
+              {product.variants.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.label ? `${item.label} — ${item.priceLabel}` : item.priceLabel}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : variant.label ? (
+          <p className="mt-3 text-sm text-muted">{variant.label}</p>
+        ) : null}
+        {variant.inStock ? (
+          <a
+            href={checkout}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold mt-5 inline-flex min-h-11 items-center justify-center rounded-sm px-4 text-sm font-semibold"
+          >
+            Checkout on Fourthwall
+          </a>
+        ) : (
+          <p className="mt-5 border-t border-line pt-4 text-sm text-faint">
+            {variant.availability || "Unavailable"}
+          </p>
+        )}
+      </div>
+    </article>
+  );
+}
+
 function ComingSoonBlock({
   id,
   title,
@@ -98,6 +182,8 @@ function ComingSoonBlock({
 }
 
 function ShopPage() {
+  const { merch } = Route.useLoaderData();
+
   return (
     <SiteShell>
       <div className="shop-hub relative overflow-hidden">
@@ -118,8 +204,9 @@ function ShopPage() {
             </p>
             <h1 className="mt-4 font-display text-4xl sm:text-5xl">Jewelry, notes, and merch.</h1>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              A small commerce corner — curated craft jewelry via Peter Stone’s affiliate program,
-              with PDFs and merch to follow. Not a metals desk. Not investment advice.
+              {merch.length > 0
+                ? "A small commerce corner — curated craft jewelry via Peter Stone’s affiliate program, and merch from the Fourthwall shop. PDFs later. Not a metals desk. Not investment advice."
+                : "A small commerce corner — curated craft jewelry via Peter Stone’s affiliate program, with PDFs and merch to follow. Not a metals desk. Not investment advice."}
             </p>
           </header>
 
@@ -143,11 +230,11 @@ function ShopPage() {
             <a href="#jewelry" className="hover:text-gold-soft">
               Jewelry
             </a>
-            <a href="#pdfs" className="hover:text-gold-soft">
-              PDFs
-            </a>
             <a href="#merch" className="hover:text-gold-soft">
               Merch
+            </a>
+            <a href="#pdfs" className="hover:text-gold-soft">
+              PDFs
             </a>
           </nav>
 
@@ -173,16 +260,34 @@ function ShopPage() {
             </div>
           </section>
 
-          <div className="mt-20 grid gap-16 border-t border-line pt-16 md:grid-cols-2">
+          <section id="merch" className="shop-section mt-20 scroll-mt-24 border-t border-line pt-16">
+            <h2 className="font-display text-3xl">Merch</h2>
+            {merch.length > 0 ? (
+              <>
+                <p className="mt-3 max-w-prose text-muted">
+                  Listed from the GoldSilverHQ Fourthwall catalog. Checkout opens on Fourthwall.
+                </p>
+                <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                  {merch.map((product) => (
+                    <MerchCard key={product.id} product={product} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="mt-3 max-w-prose text-muted">
+                  Site merch will appear here when the Fourthwall catalog lists it.
+                </p>
+                <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Coming soon</p>
+              </>
+            )}
+          </section>
+
+          <div className="mt-20 border-t border-line pt-16">
             <ComingSoonBlock
               id="pdfs"
               title="PDFs"
               body="Guides and printable notes will land here. Structure reserved — nothing for sale yet."
-            />
-            <ComingSoonBlock
-              id="merch"
-              title="Merch"
-              body="Site merch (non-investment apparel and objects) will appear here later."
             />
           </div>
 
