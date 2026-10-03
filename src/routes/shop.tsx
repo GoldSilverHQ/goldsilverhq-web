@@ -6,7 +6,7 @@ import { seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 import {
   defaultFourthwallVariant,
-  fourthwallCheckoutUrl,
+  fourthwallProductUrl,
   loadFourthwallProducts,
   type FourthwallProduct,
 } from "@/lib/shop/fourthwall";
@@ -41,7 +41,9 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
   const variant = product.variants.find((item) => item.id === variantId) ?? initial;
   if (!variant) return null;
 
-  const checkout = fourthwallCheckoutUrl(variant.id, variant.currency);
+  const productHref = product.productUrl
+    ? fourthwallProductUrl(product.productUrl, variant.id)
+    : null;
   const imageUrl = variant.imageUrl ?? product.imageUrl;
 
   return (
@@ -80,16 +82,16 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
         ) : variant.label ? (
           <p className="mt-3 text-sm text-muted">{variant.label}</p>
         ) : null}
-        {variant.inStock ? (
+        {variant.inStock && productHref ? (
           <a
-            href={checkout}
+            href={productHref}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold mt-5 inline-flex min-h-11 items-center justify-center rounded-sm px-4 text-sm font-semibold"
           >
-            Checkout on Fourthwall
+            View on Fourthwall
           </a>
-        ) : (
+        ) : variant.inStock ? null : (
           <p className="mt-5 border-t border-line pt-4 text-sm text-faint">
             {variant.availability || "Unavailable"}
           </p>
@@ -195,8 +197,8 @@ function ShopPage() {
               {merch.length > 0 ? (
                 <>
                   <p className="mt-3 max-w-prose text-muted">
-                    Names and prices come from the public Fourthwall catalog on each visit. Checkout
-                    opens on Fourthwall.
+                    Names and prices come from the public Fourthwall catalog on each visit. The
+                    product page opens on Fourthwall.
                   </p>
                   <div className="mt-10 flex flex-col gap-16">
                     {merch.map((product) => (
