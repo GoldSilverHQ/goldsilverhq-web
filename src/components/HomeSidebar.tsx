@@ -91,7 +91,7 @@ export function HomeSidebar({
       </Box>
 
       <Box
-        title={`Silver producers: top 5 daily change${movers ? ` (${fmtDayMonYear(movers.asOf)})` : ""}`}
+        title={`Silver producers: top 5 YTD${movers ? ` (${fmtDayMonYear(movers.asOf)})` : ""}`}
         titleClassName="w-fit text-silver-shine"
         footer={
           <Link
@@ -105,12 +105,12 @@ export function HomeSidebar({
         {movers ? (
           <table className="w-full text-sm">
             <caption className="caption-bottom pt-2 text-left text-xs text-faint">
-              Close-to-close change, producers only.
+              Year-to-date change, producers only.
             </caption>
             <thead className="sr-only">
               <tr>
                 <th>Company and ticker</th>
-                <th>Daily change</th>
+                <th>Year-to-date change</th>
               </tr>
             </thead>
             <tbody>
@@ -121,9 +121,9 @@ export function HomeSidebar({
                     <span className="text-xs tracking-wide text-faint">{r.ticker}</span>
                   </td>
                   <td
-                    className={`py-1.5 text-right align-top tabular-nums ${pctToneClass(r.dayPct)}`}
+                    className={`py-1.5 text-right align-top tabular-nums ${pctToneClass(r.ytdPct)}`}
                   >
-                    {fmtSignedPct(r.dayPct)}
+                    {fmtSignedPct(r.ytdPct)}
                   </td>
                 </tr>
               ))}

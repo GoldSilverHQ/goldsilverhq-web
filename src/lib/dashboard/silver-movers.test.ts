@@ -2,15 +2,15 @@ import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { rankSilverMovers, type MetricRow } from "./silver-movers.ts";
 
-const row = (ticker: string, as_of_date: string | null, day_pct: number | null): MetricRow => ({
+const row = (ticker: string, as_of_date: string | null, ytd_pct: number | null): MetricRow => ({
   ticker,
   name: `${ticker} Co `,
   as_of_date,
-  day_pct,
+  ytd_pct,
 });
 
 describe("rankSilverMovers", () => {
-  it("ranks only the dominant session, best daily change first", () => {
+  it("ranks only the dominant session, best year-to-date change first", () => {
     const out = rankSilverMovers([
       row("A", "2026-09-29", 1),
       row("B", "2026-09-29", 3),
