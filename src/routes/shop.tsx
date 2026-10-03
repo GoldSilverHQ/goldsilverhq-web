@@ -170,13 +170,8 @@ function MerchPanel({ products }: { products: FourthwallProduct[] }) {
       aria-labelledby="shop-tab-merch"
       className="shop-section mt-10"
     >
-      <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
       {products.length > 0 ? (
         <>
-          <p className="mt-3 max-w-prose text-muted">
-            Names and prices come from the public Fourthwall catalog on each visit. The product page
-            opens on Fourthwall.
-          </p>
           {categories.length > 0 ? (
             <MerchTypeFilter options={typeOptions} value={activeType} onChange={setTypeId} />
           ) : null}
