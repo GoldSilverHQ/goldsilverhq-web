@@ -1,7 +1,7 @@
 /**
  * Sound Money discovery links — short reader labels for the header flyout.
  * Existing `/sound-money/*` routes only (no new paths).
- * Disclaimer stays in the footer, not in this menu.
+ * The information-not-advice page is not in this menu.
  */
 export type SoundMoneyNavItem = {
   label: string;

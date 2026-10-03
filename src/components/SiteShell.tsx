@@ -451,18 +451,8 @@ export function SiteShell({
             <a href="/partners" className="hover:text-gold-soft">
               Partners
             </a>
-            <Link to="/about" className="hover:text-gold-soft">
-              About
-            </Link>
             <Link to="/impressum" className="hover:text-gold-soft">
               Impressum
-            </Link>
-            <Link
-              to="/sound-money/$slug"
-              params={{ slug: "information-not-advice" }}
-              className="hover:text-gold-soft"
-            >
-              Information vs advice
             </Link>
           </nav>
           <div className="ml-auto flex items-center gap-3">
