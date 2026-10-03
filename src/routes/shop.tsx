@@ -5,6 +5,7 @@ import { SiteShell } from "@/components/SiteShell";
 import { seoTitle } from "@/lib/content/map";
 import { pageShareMeta } from "@/lib/seo/share-meta";
 import {
+  defaultFourthwallVariant,
   fourthwallCheckoutUrl,
   loadFourthwallProducts,
   type FourthwallProduct,
@@ -35,9 +36,9 @@ export const Route = createFileRoute("/shop")({
 });
 
 function MerchCard({ product }: { product: FourthwallProduct }) {
-  const first = product.variants[0];
-  const [variantId, setVariantId] = useState(first?.id ?? "");
-  const variant = product.variants.find((item) => item.id === variantId) ?? first;
+  const initial = defaultFourthwallVariant(product);
+  const [variantId, setVariantId] = useState(initial?.id ?? "");
+  const variant = product.variants.find((item) => item.id === variantId) ?? initial;
   if (!variant) return null;
 
   const checkout = fourthwallCheckoutUrl(variant.id, variant.currency);
