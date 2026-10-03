@@ -103,8 +103,13 @@ describe("fourthwall public feed", () => {
     assert.match(shop, /loadFourthwallProducts/);
     assert.match(shop, /staleTime:\s*0/);
     assert.match(shop, /no-store/);
-    assert.match(shop, /Jewelry — Peter Stone/);
-    assert.match(shop, /Rare-coins ebook/);
+    assert.equal(shop.includes("Jewelry — Peter Stone"), false);
+    assert.equal(shop.includes("Reserved for Peter Stone"), false);
+    assert.equal(shop.includes("Rare-coins ebook"), false);
+    assert.equal(shop.includes("Not listed yet"), false);
+    assert.match(shop, /Coming soon/);
+    assert.equal(shop.includes("min-h-20"), false);
+    assert.equal(shop.includes("sm:text-2xl"), false);
     assert.match(shop, /role="tablist"/);
     assert.match(shop, /aria-label="Shop categories"/);
     assert.equal(shop.includes("Merch, jewelry, and a note."), false);
