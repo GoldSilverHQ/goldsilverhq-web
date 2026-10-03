@@ -107,6 +107,10 @@ describe("fourthwall public feed", () => {
     assert.equal(shop.includes("Reserved for Peter Stone"), false);
     assert.equal(shop.includes("Rare-coins ebook"), false);
     assert.equal(shop.includes("Not listed yet"), false);
+    assert.equal(shop.includes('category === "jewelry"'), false);
+    assert.equal(shop.includes('category === "ebook"'), false);
+    assert.match(shop, /<ComingSoon id="jewelry"/);
+    assert.match(shop, /<ComingSoon id="ebook"/);
     assert.match(shop, /Coming soon/);
     assert.equal(shop.includes("min-h-20"), false);
     assert.equal(shop.includes("sm:text-2xl"), false);
