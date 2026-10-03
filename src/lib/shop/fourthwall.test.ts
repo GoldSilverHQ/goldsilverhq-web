@@ -105,6 +105,10 @@ describe("fourthwall public feed", () => {
     assert.match(shop, /no-store/);
     assert.match(shop, /Jewelry — Peter Stone/);
     assert.match(shop, /Rare-coins ebook/);
+    assert.match(shop, /role="tablist"/);
+    assert.match(shop, /aria-label="Shop categories"/);
+    assert.equal(shop.includes("Merch, jewelry, and a note."), false);
+    assert.equal(shop.includes("Fourthwall merch is listed from their public catalog"), false);
     assert.equal(shop.includes("Affiliate link pending"), false);
     assert.equal(shop.includes("lg:grid-cols-4"), false);
     assert.equal(shop.includes("aspect-[4/5]"), false);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumb } from "@/components/Article";
 import { SiteShell } from "@/components/SiteShell";
@@ -99,9 +99,22 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
   );
 }
 
+type ShopCategory = "merch" | "jewelry" | "ebook";
+
+const SHOP_CATEGORIES: { id: ShopCategory; label: string }[] = [
+  { id: "merch", label: "Merch" },
+  { id: "jewelry", label: "Jewelry" },
+  { id: "ebook", label: "Ebook" },
+];
+
 function ReservedSlot({ id, title, body }: { id: string; title: string; body: string }) {
   return (
-    <section id={id} className="shop-section mt-20 scroll-mt-24 border-t border-line pt-16">
+    <section
+      id={`shop-panel-${id}`}
+      role="tabpanel"
+      aria-labelledby={`shop-tab-${id}`}
+      className="shop-section mt-10"
+    >
       <h2 className="font-display text-3xl">{title}</h2>
       <p className="mt-3 max-w-prose text-muted">{body}</p>
       <p className="mt-8 text-sm tracking-[0.12em] text-faint uppercase">Not listed yet</p>
@@ -111,6 +124,18 @@ function ReservedSlot({ id, title, body }: { id: string; title: string; body: st
 
 function ShopPage() {
   const { merch } = Route.useLoaderData();
+  const [category, setCategory] = useState<ShopCategory>("merch");
+
+  function onTabKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+    event.preventDefault();
+    const index = SHOP_CATEGORIES.findIndex((item) => item.id === category);
+    const step = event.key === "ArrowRight" ? 1 : -1;
+    const next = SHOP_CATEGORIES[(index + step + SHOP_CATEGORIES.length) % SHOP_CATEGORIES.length];
+    if (!next) return;
+    setCategory(next.id);
+    document.getElementById(`shop-tab-${next.id}`)?.focus();
+  }
 
   return (
     <SiteShell>
@@ -123,65 +148,88 @@ function ShopPage() {
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
           <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Shop" }]} />
 
-          <header className="shop-hero mt-6 max-w-2xl">
-            <p className="font-brand text-3xl tracking-tight sm:text-4xl">
+          <header className="shop-hero mt-6">
+            <h1 className="font-brand text-3xl tracking-tight sm:text-4xl">
               <span className="text-gold">Gold</span>
               <span className="text-silver">Silver</span>
               <span className="text-fg">HQ</span>
               <span className="text-muted"> Shop</span>
-            </p>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl">Merch, jewelry, and a note.</h1>
-            <p className="mt-4 text-lg leading-relaxed text-muted">
-              Fourthwall merch is listed from their public catalog. Peter Stone jewelry and a
-              rare-coins ebook have their own sections and are not listed yet. Not a metals desk.
-              Not investment advice.
-            </p>
+            </h1>
           </header>
 
-          <nav className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted" aria-label="Shop sections">
-            <a href="#merch" className="hover:text-gold-soft">
-              Merch
-            </a>
-            <a href="#jewelry" className="hover:text-gold-soft">
-              Jewelry
-            </a>
-            <a href="#ebook" className="hover:text-gold-soft">
-              Ebook
-            </a>
-          </nav>
+          <div
+            className="mt-10 grid grid-cols-3 gap-2 sm:gap-3"
+            role="tablist"
+            aria-label="Shop categories"
+            onKeyDown={onTabKeyDown}
+          >
+            {SHOP_CATEGORIES.map((item) => {
+              const on = item.id === category;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  role="tab"
+                  id={`shop-tab-${item.id}`}
+                  aria-selected={on}
+                  aria-controls={`shop-panel-${item.id}`}
+                  tabIndex={on ? 0 : -1}
+                  onClick={() => setCategory(item.id)}
+                  className={`min-h-16 rounded-md border px-2 text-lg font-semibold tracking-tight transition-[color,background-color,border-color] duration-150 sm:min-h-20 sm:px-5 sm:text-2xl ${
+                    on
+                      ? "border-transparent bg-gold text-bg"
+                      : "border-line bg-surface text-fg hover:border-gold hover:text-gold-soft"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
 
-          <section id="merch" className="shop-section mt-16 scroll-mt-24">
-            <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
-            {merch.length > 0 ? (
-              <>
+          {category === "merch" ? (
+            <section
+              id="shop-panel-merch"
+              role="tabpanel"
+              aria-labelledby="shop-tab-merch"
+              className="shop-section mt-10"
+            >
+              <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
+              {merch.length > 0 ? (
+                <>
+                  <p className="mt-3 max-w-prose text-muted">
+                    Names and prices come from the public Fourthwall catalog on each visit. Checkout
+                    opens on Fourthwall.
+                  </p>
+                  <div className="mt-10 flex flex-col gap-16">
+                    {merch.map((product) => (
+                      <MerchCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                </>
+              ) : (
                 <p className="mt-3 max-w-prose text-muted">
-                  Names and prices come from the public Fourthwall catalog on each visit. Checkout
-                  opens on Fourthwall.
+                  Nothing is in the public Fourthwall catalog right now.
                 </p>
-                <div className="mt-10 flex flex-col gap-16">
-                  {merch.map((product) => (
-                    <MerchCard key={product.id} product={product} />
-                  ))}
-                </div>
-              </>
-            ) : (
-              <p className="mt-3 max-w-prose text-muted">
-                Nothing is in the public Fourthwall catalog right now.
-              </p>
-            )}
-          </section>
+              )}
+            </section>
+          ) : null}
 
-          <ReservedSlot
-            id="jewelry"
-            title="Jewelry — Peter Stone"
-            body="Reserved for Peter Stone jewelry. No pieces, prices, or links are listed yet."
-          />
+          {category === "jewelry" ? (
+            <ReservedSlot
+              id="jewelry"
+              title="Jewelry — Peter Stone"
+              body="Reserved for Peter Stone jewelry. No pieces, prices, or links are listed yet."
+            />
+          ) : null}
 
-          <ReservedSlot
-            id="ebook"
-            title="Rare-coins ebook"
-            body="Reserved for a rare-coins ebook. Nothing is listed yet."
-          />
+          {category === "ebook" ? (
+            <ReservedSlot
+              id="ebook"
+              title="Rare-coins ebook"
+              body="Reserved for a rare-coins ebook. Nothing is listed yet."
+            />
+          ) : null}
 
           <p className="mt-16 max-w-prose text-sm text-faint">
             Educational pages stay on{" "}
