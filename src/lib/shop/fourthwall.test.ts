@@ -5,6 +5,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   FOURTHWALL_PRODUCT_FEED,
+  defaultFourthwallVariant,
   fourthwallCheckoutUrl,
   parseFourthwallFeed,
 } from "./fourthwall.ts";
@@ -38,6 +39,15 @@ const FEED = `<?xml version="1.0" encoding="UTF-8"?>
       <g:size>8" x 10"</g:size>
     </item>
     <item>
+      <g:id>26ca1421-9f1f-46a0-bdb3-6f546b77fffb</g:id>
+      <g:item_group_id>fa4fd02b-22e2-4dac-a49e-52dacdb02192</g:item_group_id>
+      <g:title><![CDATA[Andrew Jackson Portrait]]></g:title>
+      <g:image_link>https://imgproxy.fourthwall.dev/twenty-by-thirty.jpg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>27.00 USD</g:price>
+      <g:size>20" x 30"</g:size>
+    </item>
+    <item>
       <g:id>not-a-uuid</g:id>
       <g:title><![CDATA[Skip me]]></g:title>
       <g:price>1.00 USD</g:price>
@@ -53,13 +63,17 @@ describe("fourthwall public feed", () => {
     assert.equal(product?.id, "fa4fd02b-22e2-4dac-a49e-52dacdb02192");
     assert.equal(product?.title, "Andrew Jackson Portrait");
     assert.equal(product?.description, "");
-    assert.equal(product?.imageUrl, "https://imgproxy.fourthwall.dev/example.jpg");
-    assert.equal(product?.variants.length, 2);
+    assert.equal(product?.imageUrl, "https://imgproxy.fourthwall.dev/twenty-by-thirty.jpg");
+    assert.equal(product?.variants.length, 3);
     assert.equal(product?.variants[0]?.price, "12.00 USD");
     assert.equal(product?.variants[0]?.priceLabel, "$12.00");
     assert.equal(product?.variants[0]?.label, '5" x 7"');
     assert.equal(product?.variants[1]?.priceLabel, "$14.00");
     assert.equal(product?.variants[1]?.label, '8" x 10"');
+    const featured = product ? defaultFourthwallVariant(product) : undefined;
+    assert.equal(featured?.label, '20" x 30"');
+    assert.equal(featured?.priceLabel, "$27.00");
+    assert.equal(featured?.imageUrl, "https://imgproxy.fourthwall.dev/twenty-by-thirty.jpg");
   });
 
   it("builds a Fourthwall checkout URL from the variant id", () => {
@@ -91,6 +105,14 @@ describe("fourthwall public feed", () => {
     assert.match(shop, /no-store/);
     assert.match(shop, /Jewelry — Peter Stone/);
     assert.match(shop, /Rare-coins ebook/);
+    assert.match(shop, /role="tablist"/);
+    assert.match(shop, /aria-label="Shop categories"/);
+    assert.equal(shop.includes("Merch, jewelry, and a note."), false);
+    assert.equal(shop.includes("Fourthwall merch is listed from their public catalog"), false);
     assert.equal(shop.includes("Affiliate link pending"), false);
+    assert.equal(shop.includes("lg:grid-cols-4"), false);
+    assert.equal(shop.includes("aspect-[4/5]"), false);
+    assert.match(shop, /h-auto w-full/);
+    assert.match(shop, /defaultFourthwallVariant/);
   });
 });

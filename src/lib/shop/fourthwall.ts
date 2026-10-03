@@ -89,7 +89,29 @@ export function parseFourthwallFeed(xml: string): FourthwallProduct[] {
     });
   }
 
+  for (const product of products.values()) {
+    const featured = defaultFourthwallVariant(product);
+    if (featured?.imageUrl) product.imageUrl = featured.imageUrl;
+  }
+
   return [...products.values()];
+}
+
+/** Largest printed size in the feed. Falls back to the first variant. */
+export function defaultFourthwallVariant(
+  product: FourthwallProduct,
+): FourthwallVariant | undefined {
+  let best = product.variants[0];
+  let bestArea = best ? sizeArea(best.label) : null;
+  for (const variant of product.variants) {
+    const area = sizeArea(variant.label);
+    if (area == null) continue;
+    if (bestArea == null || area > bestArea) {
+      best = variant;
+      bestArea = area;
+    }
+  }
+  return best;
 }
 
 export async function loadFourthwallProducts(
@@ -138,6 +160,15 @@ function formatFeedPrice(price: string): string {
   } catch {
     return price;
   }
+}
+
+function sizeArea(label: string): number | null {
+  const match = label.match(/(\d+(?:\.\d+)?)\s*(?:["″']|in)?\s*[x×]\s*(\d+(?:\.\d+)?)/i);
+  if (!match) return null;
+  const width = Number(match[1]);
+  const height = Number(match[2]);
+  if (!Number.isFinite(width) || !Number.isFinite(height)) return null;
+  return width * height;
 }
 
 function absoluteUrl(value: string): string | null {
