@@ -7,6 +7,7 @@ import {
   FOURTHWALL_PRODUCT_FEED,
   defaultFourthwallVariant,
   fourthwallCheckoutUrl,
+  fourthwallProductUrl,
   parseFourthwallFeed,
 } from "./fourthwall.ts";
 
@@ -74,6 +75,21 @@ describe("fourthwall public feed", () => {
     assert.equal(featured?.label, '20" x 30"');
     assert.equal(featured?.priceLabel, "$27.00");
     assert.equal(featured?.imageUrl, "https://imgproxy.fourthwall.dev/twenty-by-thirty.jpg");
+    assert.equal(
+      product?.productUrl,
+      "https://goldsilverhq-shop.fourthwall.com/products/andrew-jackson-portrait",
+    );
+    const href = featured
+      ? fourthwallProductUrl(
+          "https://shop.goldsilverhq.com/products/andrew-jackson-portrait",
+          featured.id,
+        )
+      : null;
+    const productPage = href ? new URL(href) : null;
+    assert.equal(productPage?.pathname, "/products/andrew-jackson-portrait");
+    assert.equal(productPage?.searchParams.get("variant"), featured?.id);
+    assert.equal(productPage?.pathname.includes("/cart/checkout"), false);
+    assert.equal(fourthwallProductUrl("https://shop.goldsilverhq.com/password", featured?.id ?? ""), null);
   });
 
   it("builds a Fourthwall checkout URL from the variant id", () => {
@@ -123,5 +139,8 @@ describe("fourthwall public feed", () => {
     assert.equal(shop.includes("aspect-[4/5]"), false);
     assert.match(shop, /h-auto w-full/);
     assert.match(shop, /defaultFourthwallVariant/);
+    assert.match(shop, /fourthwallProductUrl/);
+    assert.equal(shop.includes("/cart/checkout"), false);
+    assert.equal(shop.includes("Checkout on Fourthwall"), false);
   });
 });

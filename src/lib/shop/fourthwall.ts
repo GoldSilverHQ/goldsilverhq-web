@@ -4,10 +4,8 @@
  * Official feed (no storefront token):
  *   https://goldsilverhq-shop.fourthwall.com/.well-known/merchant-center/rss.xml
  *
- * Checkout stays on Fourthwall:
- *   /cart/checkout?products=<variant-uuid>:1&currency=USD
- * The themed product page is still behind the shop password, so the card
- * does not link there.
+ * The public product page is the feed's <g:link>. A selected size is
+ * ?variant=<variant-uuid> on that page.
  */
 
 export const FOURTHWALL_SHOP_ORIGIN = "https://goldsilverhq-shop.fourthwall.com";
@@ -36,8 +34,19 @@ export type FourthwallProduct = {
   /** Feed description only. Empty when Fourthwall sends none. */
   description: string;
   imageUrl: string | null;
+  /** Product page from the feed's link. Null when the feed has none. */
+  productUrl: string | null;
   variants: FourthwallVariant[];
 };
+
+/** Product page for one size. Null unless `productUrl` is a Fourthwall product path. */
+export function fourthwallProductUrl(productUrl: string, variantId: string): string | null {
+  const page = productPageUrl(productUrl);
+  if (!page || !VARIANT_ID.test(variantId)) return null;
+  const url = new URL(page);
+  url.searchParams.set("variant", variantId);
+  return url.toString();
+}
 
 export function fourthwallCheckoutUrl(variantId: string, currency: string): string {
   const params = new URLSearchParams({
@@ -72,11 +81,13 @@ export function parseFourthwallFeed(xml: string): FourthwallProduct[] {
       inStock: /in stock/i.test(tag(item, "availability")),
     };
 
+    const pageUrl = productPageUrl(tag(item, "link"));
     const existing = products.get(groupId);
     if (existing) {
       existing.variants.push(variant);
       if (!existing.imageUrl && variant.imageUrl) existing.imageUrl = variant.imageUrl;
       if (!existing.description) existing.description = tag(item, "description");
+      if (!existing.productUrl && pageUrl) existing.productUrl = pageUrl;
       continue;
     }
 
@@ -85,6 +96,7 @@ export function parseFourthwallFeed(xml: string): FourthwallProduct[] {
       title,
       description: tag(item, "description"),
       imageUrl: variant.imageUrl,
+      productUrl: pageUrl,
       variants: [variant],
     });
   }
@@ -169,6 +181,24 @@ function sizeArea(label: string): number | null {
   const height = Number(match[2]);
   if (!Number.isFinite(width) || !Number.isFinite(height)) return null;
   return width * height;
+}
+
+function productPageUrl(value: string): string | null {
+  const absolute = absoluteUrl(value);
+  if (!absolute) return null;
+  let url: URL;
+  try {
+    url = new URL(absolute);
+  } catch {
+    return null;
+  }
+  if (url.protocol !== "https:" && url.protocol !== "http:") return null;
+  if (url.pathname === "/password" || url.pathname.startsWith("/password/")) return null;
+  if (url.pathname.startsWith("/cart/")) return null;
+  if (!/^\/products\/[^/]+/.test(url.pathname)) return null;
+  url.search = "";
+  url.hash = "";
+  return url.toString();
 }
 
 function absoluteUrl(value: string): string | null {
