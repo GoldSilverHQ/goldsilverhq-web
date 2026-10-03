@@ -92,5 +92,8 @@ describe("fourthwall public feed", () => {
     assert.match(shop, /Jewelry — Peter Stone/);
     assert.match(shop, /Rare-coins ebook/);
     assert.equal(shop.includes("Affiliate link pending"), false);
+    assert.equal(shop.includes("lg:grid-cols-4"), false);
+    assert.equal(shop.includes("aspect-[4/5]"), false);
+    assert.match(shop, /h-auto w-full/);
   });
 });

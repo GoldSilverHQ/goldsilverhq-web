@@ -41,25 +41,19 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
   if (!variant) return null;
 
   const checkout = fourthwallCheckoutUrl(variant.id, variant.currency);
+  const imageUrl = variant.imageUrl ?? product.imageUrl;
 
   return (
-    <article className="shop-product flex flex-col">
-      {product.imageUrl ? (
-        <div className="shop-product-plate relative aspect-[4/5] w-full overflow-hidden bg-surface">
-          <img
-            src={product.imageUrl}
-            alt={product.title}
-            className="h-full w-full object-contain"
-            loading="lazy"
-          />
-        </div>
-      ) : (
-        <div
-          className="shop-product-plate relative aspect-[4/5] w-full overflow-hidden"
-          aria-hidden="true"
+    <article className="shop-product flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
+      {imageUrl ? (
+        <img
+          src={imageUrl}
+          alt={product.title}
+          className="h-auto w-full lg:w-[min(40rem,52%)]"
+          loading="lazy"
         />
-      )}
-      <div className="flex flex-1 flex-col pt-4">
+      ) : null}
+      <div className="flex min-w-0 flex-1 flex-col lg:max-w-sm lg:pt-2">
         <h3 className="font-display text-xl text-fg">{product.title}</h3>
         <p className="mt-2 text-sm text-muted">{variant.priceLabel}</p>
         {product.description ? (
@@ -163,7 +157,7 @@ function ShopPage() {
                   Names and prices come from the public Fourthwall catalog on each visit. Checkout
                   opens on Fourthwall.
                 </p>
-                <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-10 flex flex-col gap-16">
                   {merch.map((product) => (
                     <MerchCard key={product.id} product={product} />
                   ))}
