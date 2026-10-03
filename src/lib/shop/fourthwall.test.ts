@@ -8,6 +8,7 @@ import {
   defaultFourthwallVariant,
   fourthwallCheckoutUrl,
   fourthwallProductUrl,
+  merchCategories,
   parseFourthwallFeed,
 } from "./fourthwall.ts";
 
@@ -56,6 +57,105 @@ const FEED = `<?xml version="1.0" encoding="UTF-8"?>
   </channel>
 </rss>`;
 
+const TYPED_FEED = `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <item>
+      <g:id>11111111-1111-4111-8111-111111111111</g:id>
+      <g:item_group_id>aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1</g:item_group_id>
+      <g:title><![CDATA[The Bank is Trying to Kill Me Framed Poster]]></g:title>
+      <g:link>https://shop.goldsilverhq.com/products/the-bank-is-trying-to-kill-me-framed-poster</g:link>
+      <g:availability>in stock</g:availability>
+      <g:price>29.00 USD</g:price>
+      <g:color>Black</g:color>
+      <g:size>8" x 10"</g:size>
+    </item>
+    <item>
+      <g:id>11111111-1111-4111-8111-111111111112</g:id>
+      <g:item_group_id>aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1</g:item_group_id>
+      <g:title><![CDATA[The Bank is Trying to Kill Me Framed Poster]]></g:title>
+      <g:availability>in stock</g:availability>
+      <g:price>29.00 USD</g:price>
+      <g:color>White</g:color>
+      <g:size>8" x 10"</g:size>
+    </item>
+    <item>
+      <g:id>11111111-1111-4111-8111-111111111113</g:id>
+      <g:item_group_id>aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1</g:item_group_id>
+      <g:title><![CDATA[The Bank is Trying to Kill Me Framed Poster]]></g:title>
+      <g:availability>in stock</g:availability>
+      <g:price>99.00 USD</g:price>
+      <g:color>Black</g:color>
+      <g:size>24" x 36"</g:size>
+    </item>
+    <item>
+      <g:id>22222222-2222-4222-8222-222222222221</g:id>
+      <g:item_group_id>bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbb1</g:item_group_id>
+      <g:title><![CDATA[The Bank is Trying to Kill Me Mug]]></g:title>
+      <g:link>https://shop.goldsilverhq.com/products/the-bank-is-trying-to-kill-me-mug</g:link>
+      <g:availability>in stock</g:availability>
+      <g:price>15.00 USD</g:price>
+      <g:color>White</g:color>
+      <g:size>11oz</g:size>
+    </item>
+    <item>
+      <g:id>22222222-2222-4222-8222-222222222222</g:id>
+      <g:item_group_id>bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbb1</g:item_group_id>
+      <g:title><![CDATA[The Bank is Trying to Kill Me Mug]]></g:title>
+      <g:availability>in stock</g:availability>
+      <g:price>21.00 USD</g:price>
+      <g:color>White</g:color>
+      <g:size>20 oz</g:size>
+    </item>
+    <item>
+      <g:id>33333333-3333-4333-8333-333333333331</g:id>
+      <g:item_group_id>cccccccc-cccc-4ccc-8ccc-ccccccccccc1</g:item_group_id>
+      <g:title><![CDATA[Andrew Jackson Portrait Canvas]]></g:title>
+      <g:link>https://shop.goldsilverhq.com/products/andrew-jackson-portrait-canvas</g:link>
+      <g:availability>in stock</g:availability>
+      <g:price>29.00 USD</g:price>
+      <g:color>All-Over Print</g:color>
+      <g:size>16″×20″</g:size>
+    </item>
+    <item>
+      <g:id>33333333-3333-4333-8333-333333333332</g:id>
+      <g:item_group_id>cccccccc-cccc-4ccc-8ccc-ccccccccccc1</g:item_group_id>
+      <g:title><![CDATA[Andrew Jackson Portrait Canvas]]></g:title>
+      <g:availability>in stock</g:availability>
+      <g:price>138.14 USD</g:price>
+      <g:color>All-Over Print</g:color>
+      <g:size>40″×60″</g:size>
+    </item>
+    <item>
+      <g:id>44444444-4444-4444-8444-444444444441</g:id>
+      <g:item_group_id>dddddddd-dddd-4ddd-8ddd-ddddddddddd1</g:item_group_id>
+      <g:title><![CDATA[Andrew Jackson Portrait Poster]]></g:title>
+      <g:link>https://shop.goldsilverhq.com/products/andrew-jackson-portrait-poster-2</g:link>
+      <g:availability>in stock</g:availability>
+      <g:price>22.00 USD</g:price>
+      <g:color>White</g:color>
+      <g:size>12" x 16"</g:size>
+    </item>
+    <item>
+      <g:id>44444444-4444-4444-8444-444444444442</g:id>
+      <g:item_group_id>dddddddd-dddd-4ddd-8ddd-ddddddddddd1</g:item_group_id>
+      <g:title><![CDATA[Andrew Jackson Portrait Poster]]></g:title>
+      <g:availability>in stock</g:availability>
+      <g:price>39.00 USD</g:price>
+      <g:color>White</g:color>
+      <g:size>24" x 36"</g:size>
+    </item>
+    <item>
+      <g:id>55555555-5555-4555-8555-555555555551</g:id>
+      <g:item_group_id>eeeeeeee-eeee-4eee-8eee-eeeeeeeeeee1</g:item_group_id>
+      <g:title><![CDATA[Mystery Object]]></g:title>
+      <g:link>https://shop.goldsilverhq.com/products/mystery-object</g:link>
+      <g:availability>in stock</g:availability>
+      <g:price>9.00 USD</g:price>
+    </item>
+  </channel>
+</rss>`;
+
 describe("fourthwall public feed", () => {
   it("groups feed items into one product and keeps Fourthwall prices", () => {
     const products = parseFourthwallFeed(FEED);
@@ -75,6 +175,8 @@ describe("fourthwall public feed", () => {
     assert.equal(featured?.label, '20" x 30"');
     assert.equal(featured?.priceLabel, "$27.00");
     assert.equal(featured?.imageUrl, "https://imgproxy.fourthwall.dev/twenty-by-thirty.jpg");
+    assert.equal(product?.categoryId, "other");
+    assert.equal(product?.categoryLabel, "Other");
     assert.equal(
       product?.productUrl,
       "https://goldsilverhq-shop.fourthwall.com/products/andrew-jackson-portrait",
@@ -89,7 +191,10 @@ describe("fourthwall public feed", () => {
     assert.equal(productPage?.pathname, "/products/andrew-jackson-portrait");
     assert.equal(productPage?.searchParams.get("variant"), featured?.id);
     assert.equal(productPage?.pathname.includes("/cart/checkout"), false);
-    assert.equal(fourthwallProductUrl("https://shop.goldsilverhq.com/password", featured?.id ?? ""), null);
+    assert.equal(
+      fourthwallProductUrl("https://shop.goldsilverhq.com/password", featured?.id ?? ""),
+      null,
+    );
   });
 
   it("builds a Fourthwall checkout URL from the variant id", () => {
@@ -103,6 +208,54 @@ describe("fourthwall public feed", () => {
 
   it("returns nothing from an empty feed", () => {
     assert.deepEqual(parseFourthwallFeed("<rss><channel></channel></rss>"), []);
+  });
+
+  it("infers merch categories from the title and slug when the feed has no type", () => {
+    const products = parseFourthwallFeed(TYPED_FEED);
+    assert.deepEqual(
+      products.map((product) => product.categoryLabel),
+      ["Framed poster", "Mug", "Canvas", "Poster", "Other"],
+    );
+    assert.equal(products[0]?.categoryId, "framed-poster");
+    assert.deepEqual(
+      merchCategories(products).map((category) => category.label),
+      ["Poster", "Framed poster", "Canvas", "Mug", "Other"],
+    );
+    assert.equal(
+      merchCategories(products.filter((product) => product.categoryId === "mug")).length,
+      1,
+    );
+
+    const framed = products[0];
+    assert.equal(framed?.variants[0]?.label, '8" x 10" · Black');
+    assert.equal(defaultFourthwallVariant(framed!)?.label, '24" x 36" · Black');
+
+    const mug = products[1];
+    assert.equal(defaultFourthwallVariant(mug!)?.label, "20 oz");
+    assert.equal(mug?.variants[0]?.label, "11oz");
+
+    const canvas = products[2];
+    assert.equal(defaultFourthwallVariant(canvas!)?.label, "40″×60″");
+
+    const poster = products[3];
+    assert.equal(defaultFourthwallVariant(poster!)?.label, '24" x 36"');
+    assert.equal(poster?.variants[0]?.label, '12" x 16"');
+  });
+
+  it("prefers an explicit product type from the feed", () => {
+    const products = parseFourthwallFeed(`<?xml version="1.0"?>
+      <rss xmlns:g="http://base.google.com/ns/1.0"><channel>
+        <item>
+          <g:id>aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1</g:id>
+          <g:title><![CDATA[Untitled object]]></g:title>
+          <g:link>https://shop.goldsilverhq.com/products/untitled-object</g:link>
+          <g:price>10.00 USD</g:price>
+          <g:product_type>Canvas</g:product_type>
+          <g:availability>in stock</g:availability>
+        </item>
+      </channel></rss>`);
+    assert.equal(products[0]?.categoryId, "canvas");
+    assert.equal(products[0]?.categoryLabel, "Canvas");
   });
 
   it("points the shop at the official feed and does not hardcode the portrait", () => {
@@ -138,6 +291,12 @@ describe("fourthwall public feed", () => {
     assert.equal(shop.includes("lg:grid-cols-4"), false);
     assert.equal(shop.includes("aspect-[4/5]"), false);
     assert.match(shop, /h-auto w-full/);
+    assert.match(shop, /grid-cols-1/);
+    assert.match(shop, /md:grid-cols-2/);
+    assert.match(shop, /lg:grid-cols-3/);
+    assert.match(shop, /aria-label="Product type"/);
+    assert.match(shop, /Nothing in this category yet\./);
+    assert.equal(shop.includes("object-cover"), false);
     assert.match(shop, /defaultFourthwallVariant/);
     assert.match(shop, /fourthwallProductUrl/);
     assert.equal(shop.includes("/cart/checkout"), false);

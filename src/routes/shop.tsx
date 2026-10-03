@@ -8,6 +8,7 @@ import {
   defaultFourthwallVariant,
   fourthwallProductUrl,
   loadFourthwallProducts,
+  merchCategories,
   type FourthwallProduct,
 } from "@/lib/shop/fourthwall";
 
@@ -45,59 +46,158 @@ function MerchCard({ product }: { product: FourthwallProduct }) {
     ? fourthwallProductUrl(product.productUrl, variant.id)
     : null;
   const imageUrl = variant.imageUrl ?? product.imageUrl;
+  const choiceLabel = product.variants.some((item) => item.label.includes(" · "))
+    ? "Variant"
+    : "Size";
 
   return (
-    <article className="shop-product flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
+    <article className="shop-product flex h-full flex-col rounded-md border border-line bg-surface p-3">
       {imageUrl ? (
-        <img
-          src={imageUrl}
-          alt={product.title}
-          className="h-auto w-full lg:w-[min(40rem,52%)]"
-          loading="lazy"
-        />
+        <img src={imageUrl} alt={product.title} className="h-auto w-full" loading="lazy" />
       ) : null}
-      <div className="flex min-w-0 flex-1 flex-col lg:max-w-sm lg:pt-2">
-        <h3 className="font-display text-xl text-fg">{product.title}</h3>
-        <p className="mt-2 text-sm text-muted">{variant.priceLabel}</p>
+      <div className="mt-3 flex min-w-0 flex-1 flex-col">
+        <h3 className="font-display text-lg leading-snug text-fg">{product.title}</h3>
+        <p className="mt-1 text-sm text-muted">{variant.priceLabel}</p>
         {product.description ? (
-          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{product.description}</p>
-        ) : (
-          <div className="flex-1" />
-        )}
-        {product.variants.length > 1 ? (
-          <label className="mt-4 block text-sm text-muted">
-            <span className="mb-1 block text-xs tracking-[0.12em] text-faint uppercase">Size</span>
-            <select
-              className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-fg"
-              value={variant.id}
-              onChange={(event) => setVariantId(event.target.value)}
-            >
-              {product.variants.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.label ? `${item.label} — ${item.priceLabel}` : item.priceLabel}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : variant.label ? (
-          <p className="mt-3 text-sm text-muted">{variant.label}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{product.description}</p>
         ) : null}
-        {variant.inStock && productHref ? (
-          <a
-            href={productHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold mt-5 inline-flex min-h-11 items-center justify-center rounded-sm px-4 text-sm font-semibold"
-          >
-            View on Fourthwall
-          </a>
-        ) : variant.inStock ? null : (
-          <p className="mt-5 border-t border-line pt-4 text-sm text-faint">
-            {variant.availability || "Unavailable"}
-          </p>
-        )}
+        <div className="mt-auto pt-4">
+          {product.variants.length > 1 ? (
+            <label className="block text-sm text-muted">
+              <span className="mb-1 block text-xs tracking-[0.12em] text-faint uppercase">
+                {choiceLabel}
+              </span>
+              <select
+                className="w-full rounded-sm border border-line bg-bg px-3 py-2 text-sm text-fg"
+                value={variant.id}
+                onChange={(event) => setVariantId(event.target.value)}
+              >
+                {product.variants.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.label ? `${item.label} — ${item.priceLabel}` : item.priceLabel}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : variant.label ? (
+            <p className="text-sm text-muted">{variant.label}</p>
+          ) : null}
+          {variant.inStock && productHref ? (
+            <a
+              href={productHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-sm px-4 text-sm font-semibold"
+            >
+              View on Fourthwall
+            </a>
+          ) : variant.inStock ? null : (
+            <p className="mt-3 border-t border-line pt-3 text-sm text-faint">
+              {variant.availability || "Unavailable"}
+            </p>
+          )}
+        </div>
       </div>
     </article>
+  );
+}
+
+function MerchTypeFilter({
+  options,
+  value,
+  onChange,
+}: {
+  options: { id: string; label: string }[];
+  value: string;
+  onChange: (id: string) => void;
+}) {
+  function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+    event.preventDefault();
+    const index = options.findIndex((item) => item.id === value);
+    const step = event.key === "ArrowRight" ? 1 : -1;
+    const next = options[(index + step + options.length) % options.length];
+    if (!next) return;
+    onChange(next.id);
+    document.getElementById(`shop-type-${next.id}`)?.focus();
+  }
+
+  return (
+    <div
+      className="mt-6 inline-flex max-w-full flex-wrap gap-1 rounded-md border border-line bg-surface p-1"
+      role="radiogroup"
+      aria-label="Product type"
+      onKeyDown={onKeyDown}
+    >
+      {options.map((item) => {
+        const on = item.id === value;
+        return (
+          <button
+            key={item.id}
+            type="button"
+            role="radio"
+            id={`shop-type-${item.id}`}
+            aria-checked={on}
+            tabIndex={on ? 0 : -1}
+            onClick={() => onChange(item.id)}
+            className={`min-h-11 rounded-sm px-3 text-sm font-medium transition-[color,background-color] duration-150 ${
+              on ? "bg-gold text-bg" : "text-muted hover:text-fg"
+            }`}
+          >
+            {item.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function MerchPanel({ products }: { products: FourthwallProduct[] }) {
+  const categories = merchCategories(products);
+  const [typeId, setTypeId] = useState("all");
+  const activeType =
+    typeId !== "all" && categories.some((item) => item.id === typeId) ? typeId : "all";
+  const visible =
+    activeType === "all"
+      ? products
+      : products.filter((product) => product.categoryId === activeType);
+  const typeOptions = [{ id: "all", label: "All" }, ...categories];
+
+  return (
+    <section
+      id="shop-panel-merch"
+      role="tabpanel"
+      aria-labelledby="shop-tab-merch"
+      className="shop-section mt-10"
+    >
+      <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
+      {products.length > 0 ? (
+        <>
+          <p className="mt-3 max-w-prose text-muted">
+            Names and prices come from the public Fourthwall catalog on each visit. The product page
+            opens on Fourthwall.
+          </p>
+          {categories.length > 0 ? (
+            <MerchTypeFilter options={typeOptions} value={activeType} onChange={setTypeId} />
+          ) : null}
+          {visible.length > 0 ? (
+            <ul className="mt-8 grid list-none grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {visible.map((product) => (
+                <li key={product.id} className="min-w-0">
+                  <MerchCard product={product} />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-8 text-muted">Nothing in this category yet.</p>
+          )}
+        </>
+      ) : (
+        <p className="mt-3 max-w-prose text-muted">
+          Nothing is in the public Fourthwall catalog right now.
+        </p>
+      )}
+    </section>
   );
 }
 
@@ -186,33 +286,7 @@ function ShopPage() {
             })}
           </div>
 
-          {category === "merch" ? (
-            <section
-              id="shop-panel-merch"
-              role="tabpanel"
-              aria-labelledby="shop-tab-merch"
-              className="shop-section mt-10"
-            >
-              <h2 className="font-display text-3xl">Merch — Fourthwall</h2>
-              {merch.length > 0 ? (
-                <>
-                  <p className="mt-3 max-w-prose text-muted">
-                    Names and prices come from the public Fourthwall catalog on each visit. The
-                    product page opens on Fourthwall.
-                  </p>
-                  <div className="mt-10 flex flex-col gap-16">
-                    {merch.map((product) => (
-                      <MerchCard key={product.id} product={product} />
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <p className="mt-3 max-w-prose text-muted">
-                  Nothing is in the public Fourthwall catalog right now.
-                </p>
-              )}
-            </section>
-          ) : null}
+          {category === "merch" ? <MerchPanel products={merch} /> : null}
 
           <ComingSoon id="jewelry" hidden={category !== "jewelry"} />
 
