@@ -11,14 +11,20 @@ import {
   merchCategories,
   type FourthwallProduct,
 } from "@/lib/shop/fourthwall";
+import {
+  JEWELRY_AFFILIATE_DISCLOSURE,
+  loadPeterStoneJewelry,
+  peterStoneJewelryFallback,
+  type PeterStoneJewelryItem,
+} from "@/lib/shop/peter-stone";
 
 export const Route = createFileRoute("/shop")({
   loader: async () => {
-    try {
-      return { merch: await loadFourthwallProducts() };
-    } catch {
-      return { merch: [] as FourthwallProduct[] };
-    }
+    const [merch, jewelry] = await Promise.all([
+      loadFourthwallProducts().catch(() => [] as FourthwallProduct[]),
+      loadPeterStoneJewelry().catch(() => peterStoneJewelryFallback()),
+    ]);
+    return { merch, jewelry };
   },
   // Refetch the Fourthwall feed on each visit. Do not keep a stale catalog.
   staleTime: 0,
@@ -29,7 +35,7 @@ export const Route = createFileRoute("/shop")({
     meta: pageShareMeta({
       title: seoTitle("Shop"),
       description:
-        "GoldSilverHQ Shop: Fourthwall merch from the live catalog, with reserved sections for Peter Stone jewelry and a rare-coins ebook. Commerce only — not investment advice.",
+        "GoldSilverHQ Shop: Fourthwall merch from the live catalog, Peter Stone jewelry, and a reserved rare-coins ebook. Commerce only — not investment advice.",
       imagePath: "/og.jpg",
     }),
   }),
@@ -204,7 +210,78 @@ const SHOP_CATEGORIES: { id: ShopCategory; label: string }[] = [
   { id: "ebook", label: "Ebook" },
 ];
 
-function ComingSoon({ id, hidden }: { id: "jewelry" | "ebook"; hidden: boolean }) {
+function JewelryLink({ href }: { href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      className="btn-gold mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-sm px-4 text-sm font-semibold"
+    >
+      View at Peter Stone
+    </a>
+  );
+}
+
+function JewelryCard({ item }: { item: PeterStoneJewelryItem }) {
+  if (item.status !== "ready") {
+    return (
+      <article className="shop-product flex h-full flex-col rounded-md border border-line bg-surface p-3">
+        <div className="mt-3 flex min-w-0 flex-1 flex-col">
+          <h3 className="font-display text-lg leading-snug text-fg">Peter Stone</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            This listing could not be loaded.
+          </p>
+          <div className="mt-auto pt-4">
+            <JewelryLink href={item.href} />
+          </div>
+        </div>
+      </article>
+    );
+  }
+
+  return (
+    <article className="shop-product flex h-full flex-col rounded-md border border-line bg-surface p-3">
+      {item.imageUrl ? (
+        <img src={item.imageUrl} alt={item.name} className="h-auto w-full" loading="lazy" />
+      ) : null}
+      <div className="mt-3 flex min-w-0 flex-1 flex-col">
+        <h3 className="font-display text-lg leading-snug text-fg">{item.name}</h3>
+        <p className="mt-1 text-sm text-muted">{item.priceLabel ?? "Price unavailable"}</p>
+        <div className="mt-auto pt-4">
+          <JewelryLink href={item.href} />
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function JewelryPanel({ items, hidden }: { items: PeterStoneJewelryItem[]; hidden: boolean }) {
+  return (
+    <section
+      id="shop-panel-jewelry"
+      role="tabpanel"
+      aria-labelledby="shop-tab-jewelry"
+      hidden={hidden}
+      className="shop-section mt-10"
+    >
+      <p className="mt-6 max-w-prose text-sm text-muted">{JEWELRY_AFFILIATE_DISCLOSURE}</p>
+      {items.length > 0 ? (
+        <ul className="mt-8 grid list-none grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((item) => (
+            <li key={item.id} className="min-w-0">
+              <JewelryCard item={item} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-8 text-muted">Nothing is in the jewelry catalog right now.</p>
+      )}
+    </section>
+  );
+}
+
+function ComingSoon({ id, hidden }: { id: "ebook"; hidden: boolean }) {
   return (
     <section
       id={`shop-panel-${id}`}
@@ -219,7 +296,7 @@ function ComingSoon({ id, hidden }: { id: "jewelry" | "ebook"; hidden: boolean }
 }
 
 function ShopPage() {
-  const { merch } = Route.useLoaderData();
+  const { merch, jewelry } = Route.useLoaderData();
   const [category, setCategory] = useState<ShopCategory>("merch");
 
   function onTabKeyDown(event: KeyboardEvent<HTMLDivElement>) {
@@ -283,7 +360,7 @@ function ShopPage() {
 
           {category === "merch" ? <MerchPanel products={merch} /> : null}
 
-          <ComingSoon id="jewelry" hidden={category !== "jewelry"} />
+          <JewelryPanel items={jewelry} hidden={category !== "jewelry"} />
 
           <ComingSoon id="ebook" hidden={category !== "ebook"} />
 

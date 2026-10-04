@@ -278,7 +278,8 @@ describe("fourthwall public feed", () => {
     assert.equal(shop.includes("Not listed yet"), false);
     assert.equal(shop.includes('category === "jewelry"'), false);
     assert.equal(shop.includes('category === "ebook"'), false);
-    assert.match(shop, /<ComingSoon id="jewelry"/);
+    assert.equal(shop.includes('<ComingSoon id="jewelry"'), false);
+    assert.match(shop, /id="shop-panel-jewelry"/);
     assert.match(shop, /<ComingSoon id="ebook"/);
     assert.match(shop, /Coming soon/);
     assert.equal(shop.includes("min-h-20"), false);
