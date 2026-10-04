@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import type { OnThisDayEvent } from "@/lib/content/on-this-day";
-import { fmtDayMonYear } from "@/lib/dashboard/dates";
 import { fmtSignedPct, pctToneClass } from "@/lib/dashboard/pct";
 import type { SilverMovers } from "@/lib/dashboard/silver-movers";
 
@@ -91,7 +90,7 @@ export function HomeSidebar({
       </Box>
 
       <Box
-        title={`Silver producers: top 5 YTD${movers ? ` (${fmtDayMonYear(movers.asOf)})` : ""}`}
+        title="Top 5 2026 (YTD)"
         titleClassName="w-fit text-silver-shine"
         footer={
           <Link
@@ -109,17 +108,14 @@ export function HomeSidebar({
             </caption>
             <thead className="sr-only">
               <tr>
-                <th>Company and ticker</th>
+                <th>Company</th>
                 <th>Year-to-date change</th>
               </tr>
             </thead>
             <tbody>
               {movers.rows.map((r) => (
                 <tr key={r.ticker} className="border-b border-line last:border-0">
-                  <td className="py-1.5 pr-2">
-                    <span className="block leading-tight">{r.name}</span>
-                    <span className="text-xs tracking-wide text-faint">{r.ticker}</span>
-                  </td>
+                  <td className="py-1.5 pr-2 leading-tight">{r.name}</td>
                   <td
                     className={`py-1.5 text-right align-top tabular-nums ${pctToneClass(r.ytdPct)}`}
                   >
