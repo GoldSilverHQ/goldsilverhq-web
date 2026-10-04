@@ -162,7 +162,7 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     ogSrc: "/og/cards/history-america-jackson-and-the-bank.jpg",
     alt: "Colorized 1836 political cartoon: Andrew Jackson, cane raised, facing a many-headed monster representing the Second Bank of the United States and its state branches during the Bank War.",
     caption:
-      "“General Jackson Slaying the Many Headed Monster” (1836) — colorized Bank War / Second Bank veto cartoon.",
+      "“General Jackson Slaying the Many Headed Monster” (1836) — colorized Bank War / Second Bank veto cartoon. The framed poster is [The Bank is Trying to Kill Me](https://shop.goldsilverhq.com/products/the-bank-is-trying-to-kill-me-framed-poster?variant=51b0c67c-eb47-4fb7-a8f7-af43acb50cda).",
     credit:
       "Colorized reproduction of the 1836 Bank War cartoon (original: Library of Congress LC-DIG-ds-14740).",
   },

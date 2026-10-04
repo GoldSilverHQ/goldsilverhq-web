@@ -80,6 +80,16 @@ describe("history people", () => {
     assert.match(mises.image.credit, /^CC0/);
   });
 
+  it("points the Sully portrait at the portrait poster", () => {
+    const jackson = getHistoryPerson("andrew-jackson");
+    assert.ok(jackson);
+    assert.match(
+      jackson.image.caption,
+      /printed as the \[Andrew Jackson Portrait Poster\]\(https:\/\/shop\.goldsilverhq\.com\/products\/andrew-jackson-portrait-poster-2\?variant=6de14e5e-3ae8-4673-aea7-00e521c9c76f\)/,
+    );
+    assert.doesNotMatch(jackson.image.caption, /shop now|\bbuy\b|discover|\$\d|trying-to-kill-me|portrait-canvas/i);
+  });
+
   it("steps along the list, not into a cluster slug", () => {
     assert.equal(adjacentHistoryPeople("john-law").prev, undefined);
     assert.equal(adjacentHistoryPeople("john-law").next?.slug, "adam-smith");
