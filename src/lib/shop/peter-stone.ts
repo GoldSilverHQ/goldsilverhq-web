@@ -89,6 +89,58 @@ export const PETER_STONE_LISTINGS: readonly PeterStoneListing[] = [
     id: "gpd5150",
     href: "https://www.peterstone.com/collections/best-sellers/products/the-majestic-power-of-three-solid-gold-trinity-goddess-pendant-gpd5150?ref=qsrtsqfn&variant=31143344701504",
   },
+  {
+    id: "gri2262",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-motherhood-triquetra-or-trinity-knot-14-k-solid-gold-ring-gri2262?ref=qsrtsqfn&variant=41751412146347",
+  },
+  {
+    id: "tn258",
+    href: "https://www.peterstone.com/collections/best-sellers/products/blue-moon-silver-necklace-tn258?ref=qsrtsqfn&variant=26327729012800",
+  },
+  {
+    id: "tpd5389",
+    href: "https://www.peterstone.com/collections/best-sellers/products/the-celtic-dragonfly-with-recovery-silver-pendant-tpd5389?ref=qsrtsqfn&variant=31371195646016",
+  },
+  {
+    id: "tba284",
+    href: "https://www.peterstone.com/collections/best-sellers/products/archangel-michael-sterling-silver-cuff?ref=qsrtsqfn&variant=41754436337835",
+  },
+  {
+    id: "mpd5070",
+    href: "https://www.peterstone.com/collections/best-sellers/products/steampunk-owl-silver-and-gold-pendant-with-gemstone-mpd5070?ref=qsrtsqfn&variant=26326011936832",
+  },
+  {
+    id: "mri356",
+    href: "https://www.peterstone.com/collections/best-sellers/products/scottish-thistle-silver-ring-mri356?ref=qsrtsqfn&variant=44154608255147",
+  },
+  {
+    id: "mer702",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-quaternary-knot-earrings-mer702?ref=qsrtsqfn&variant=26323285180480",
+  },
+  {
+    id: "gpd5381",
+    href: "https://www.peterstone.com/collections/best-sellers/products/behind-mystery-mythical-raven?ref=qsrtsqfn&variant=42577208410283",
+  },
+  {
+    id: "wpd5382",
+    href: "https://www.peterstone.com/collections/best-sellers/products/mythical-raven-14k-white-gold-jewelry-pendant-with-gemstone-wpd5382?ref=qsrtsqfn&variant=42577213784235",
+  },
+  {
+    id: "gtp682",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-knotwork-solid-gold-pendant-gtp682?ref=qsrtsqfn&variant=45021329293483",
+  },
+  {
+    id: "tri1948",
+    href: "https://www.peterstone.com/collections/best-sellers/products/borre-silver-ring-with-gemstones-tri1948?ref=qsrtsqfn&variant=31177839804480",
+  },
+  {
+    id: "tri1947",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-knotwork-silver-band-ring-with-gemstones-tri1947?ref=qsrtsqfn&variant=31177837019200",
+  },
+  {
+    id: "ger1958",
+    href: "https://www.peterstone.com/collections/best-sellers/products/the-celtic-four-point-knot-cross-solid-gold-earrings-ger1958?ref=qsrtsqfn&variant=41573243945131",
+  },
 ];
 
 export type PeterStoneCard = {

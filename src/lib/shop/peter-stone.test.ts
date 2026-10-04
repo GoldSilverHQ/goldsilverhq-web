@@ -50,6 +50,32 @@ const FEATHER_HREF =
   "https://www.peterstone.com/collections/best-sellers/products/dali-inspired-feather-ring-tri580?ref=qsrtsqfn&variant=42711829643435";
 const TRINITY_HREF =
   "https://www.peterstone.com/collections/best-sellers/products/the-majestic-power-of-three-solid-gold-trinity-goddess-pendant-gpd5150?ref=qsrtsqfn&variant=31143344701504";
+const MOTHERHOOD_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/celtic-motherhood-triquetra-or-trinity-knot-14-k-solid-gold-ring-gri2262?ref=qsrtsqfn&variant=41751412146347";
+const BLUE_MOON_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/blue-moon-silver-necklace-tn258?ref=qsrtsqfn&variant=26327729012800";
+const DRAGONFLY_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/the-celtic-dragonfly-with-recovery-silver-pendant-tpd5389?ref=qsrtsqfn&variant=31371195646016";
+const MICHAEL_CUFF_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/archangel-michael-sterling-silver-cuff?ref=qsrtsqfn&variant=41754436337835";
+const OWL_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/steampunk-owl-silver-and-gold-pendant-with-gemstone-mpd5070?ref=qsrtsqfn&variant=26326011936832";
+const THISTLE_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/scottish-thistle-silver-ring-mri356?ref=qsrtsqfn&variant=44154608255147";
+const QUATERNARY_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/celtic-quaternary-knot-earrings-mer702?ref=qsrtsqfn&variant=26323285180480";
+const RAVEN_GOLD_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/behind-mystery-mythical-raven?ref=qsrtsqfn&variant=42577208410283";
+const RAVEN_WHITE_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/mythical-raven-14k-white-gold-jewelry-pendant-with-gemstone-wpd5382?ref=qsrtsqfn&variant=42577213784235";
+const KNOT_PENDANT_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/celtic-knotwork-solid-gold-pendant-gtp682?ref=qsrtsqfn&variant=45021329293483";
+const BORRE_RING_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/borre-silver-ring-with-gemstones-tri1948?ref=qsrtsqfn&variant=31177839804480";
+const KNOT_BAND_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/celtic-knotwork-silver-band-ring-with-gemstones-tri1947?ref=qsrtsqfn&variant=31177837019200";
+const CROSS_EARRINGS_HREF =
+  "https://www.peterstone.com/collections/best-sellers/products/the-celtic-four-point-knot-cross-solid-gold-earrings-ger1958?ref=qsrtsqfn&variant=41573243945131";
 
 const peace = {
   title: "Peace Infinity Heart Solid White Gold Ring",
@@ -315,7 +341,7 @@ const trinity = {
 };
 
 describe("peter stone jewelry", () => {
-  it("ships the eighteen affiliate pieces and keeps each ref and variant", () => {
+  it("ships the thirty-one affiliate pieces and keeps each ref and variant", () => {
     assert.deepEqual(
       PETER_STONE_LISTINGS.map((item) => item.href),
       [
@@ -337,6 +363,19 @@ describe("peter stone jewelry", () => {
         TRIPLE_MOON_HREF,
         FEATHER_HREF,
         TRINITY_HREF,
+        MOTHERHOOD_HREF,
+        BLUE_MOON_HREF,
+        DRAGONFLY_HREF,
+        MICHAEL_CUFF_HREF,
+        OWL_HREF,
+        THISTLE_HREF,
+        QUATERNARY_HREF,
+        RAVEN_GOLD_HREF,
+        RAVEN_WHITE_HREF,
+        KNOT_PENDANT_HREF,
+        BORRE_RING_HREF,
+        KNOT_BAND_HREF,
+        CROSS_EARRINGS_HREF,
       ],
     );
     assert.deepEqual(
@@ -360,6 +399,19 @@ describe("peter stone jewelry", () => {
         "tbg760",
         "tri580",
         "gpd5150",
+        "gri2262",
+        "tn258",
+        "tpd5389",
+        "tba284",
+        "mpd5070",
+        "mri356",
+        "mer702",
+        "gpd5381",
+        "wpd5382",
+        "gtp682",
+        "tri1948",
+        "tri1947",
+        "ger1958",
       ],
     );
     assert.ok(PETER_STONE_LISTINGS.every((item) => !item.href.includes("pr_")));
@@ -648,7 +700,29 @@ describe("peter stone jewelry", () => {
   });
 
   it("loads one card per listing from the product feed", async () => {
+    function variantProduct(variantId: number, cents: number) {
+      return {
+        title: "Piece",
+        price: cents,
+        price_varies: true,
+        featured_image: "//cdn.shopify.com/s/files/1/0061/1522/9760/files/piece.jpg",
+        variants: [{ id: variantId, price: cents, featured_image: null }],
+      };
+    }
     const feeds: [string, object][] = [
+      ["gri2262", variantProduct(41751412146347, 67000)],
+      ["tn258", variantProduct(26327729012800, 29997)],
+      ["tpd5389", variantProduct(31371195646016, 56697)],
+      ["archangel-michael-sterling-silver-cuff", variantProduct(41754436337835, 67497)],
+      ["mpd5070", variantProduct(26326011936832, 73497)],
+      ["mri356", variantProduct(44154608255147, 68697)],
+      ["mer702", variantProduct(26323285180480, 38397)],
+      ["behind-mystery-mythical-raven", variantProduct(42577208410283, 82000)],
+      ["wpd5382", variantProduct(42577213784235, 135000)],
+      ["gtp682", variantProduct(45021329293483, 90000)],
+      ["tri1948", variantProduct(31177839804480, 27497)],
+      ["tri1947", variantProduct(31177837019200, 22097)],
+      ["ger1958", variantProduct(41573243945131, 62000)],
       ["wri2580", peace],
       ["gri2308", gold],
       ["mri2353", wedding],
@@ -675,7 +749,7 @@ describe("peter stone jewelry", () => {
         headers: { "content-type": "application/json" },
       });
     });
-    assert.equal(items.length, 18);
+    assert.equal(items.length, 31);
     assert.deepEqual(
       items.map((item) => (item.status === "ready" ? item.priceLabel : null)),
       [
@@ -697,6 +771,19 @@ describe("peter stone jewelry", () => {
         "$554.97",
         "$343.97",
         "$1,590.00",
+        "$670.00",
+        "$299.97",
+        "$566.97",
+        "$674.97",
+        "$734.97",
+        "$686.97",
+        "$383.97",
+        "$820.00",
+        "$1,350.00",
+        "$900.00",
+        "$274.97",
+        "$220.97",
+        "$620.00",
       ],
     );
   });
@@ -723,7 +810,7 @@ describe("peter stone jewelry", () => {
     assert.equal(shop.includes("/cart/checkout"), false);
     const source = readFileSync(join(root, "peter-stone.ts"), "utf8");
     assert.equal(source.includes("PETER_STONE_LISTINGS"), true);
-    assert.equal((source.match(/href: "https:\/\/www\.peterstone\.com\//g) ?? []).length, 18);
+    assert.equal((source.match(/href: "https:\/\/www\.peterstone\.com\//g) ?? []).length, 31);
     assert.equal(source.includes("goaffpro"), false);
     assert.equal((shop.match(/JEWELRY_AFFILIATE_DISCLOSURE/g) ?? []).length, 2);
   });
