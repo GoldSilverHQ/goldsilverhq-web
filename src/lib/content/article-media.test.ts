@@ -65,6 +65,12 @@ describe("article hero + separate OG", () => {
     assert.equal(byProp["og:image"], absoluteOgImageUrl(hero.path));
     assert.match(hero.alt, /Jackson/i);
     assert.match(hero.credit ?? "", /Library of Congress/i);
+    assert.match(
+      hero.caption ?? "",
+      /The framed poster is \[The Bank is Trying to Kill Me\]\(https:\/\/shop\.goldsilverhq\.com\/products\/the-bank-is-trying-to-kill-me-framed-poster\?variant=51b0c67c-eb47-4fb7-a8f7-af43acb50cda\)/,
+    );
+    assert.doesNotMatch(hero.caption ?? "", /shop now|\bbuy\b|discover|\$\d/i);
+    assert.doesNotMatch(hero.caption ?? "", /portrait-poster|portrait-canvas|trying-to-kill-me-mug/);
   });
 
   it("covers every History episode with a registered hero", () => {

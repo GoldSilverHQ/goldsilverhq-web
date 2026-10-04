@@ -71,4 +71,18 @@ describe("history years", () => {
     assert.equal(adjacentHistoryYears(1980).prev?.year, 1979);
     assert.equal(adjacentHistoryYears(1980).next, undefined);
   });
+
+  it("points the 1832 Bank War cartoon at the framed poster", () => {
+    const veto = getHistoryYear("1832");
+    assert.equal(veto?.title, "Jackson vetoes the Bank");
+    assert.match(
+      veto?.image.caption ?? "",
+      /the-bank-is-trying-to-kill-me-framed-poster\?variant=51b0c67c-eb47-4fb7-a8f7-af43acb50cda/,
+    );
+    assert.doesNotMatch(veto?.image.caption ?? "", /shop now|\bbuy\b|discover/i);
+    for (const row of HISTORY_YEARS) {
+      if (row.year === 1832) continue;
+      assert.doesNotMatch(row.image.caption, /shop\.goldsilverhq\.com/, String(row.year));
+    }
+  });
 });

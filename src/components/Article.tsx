@@ -240,7 +240,11 @@ export function ArticleHeroImage({ hero }: { hero: ArticleHeroMeta }) {
       </div>
       {hero.caption || hero.credit ? (
         <figcaption className="mt-2 text-sm leading-snug text-muted">
-          {hero.caption ? <span className="block">{hero.caption}</span> : null}
+          {hero.caption ? (
+            <span className="block">
+              <RichText text={hero.caption} />
+            </span>
+          ) : null}
           {hero.credit ? (
             <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span>
           ) : null}
@@ -279,7 +283,11 @@ function PortraitHeroImage({ hero }: { hero: PortraitHero }) {
       />
       {hero.caption || hero.credit ? (
         <figcaption className="mt-2 text-sm leading-snug text-muted">
-          {hero.caption ? <span className="block">{hero.caption}</span> : null}
+          {hero.caption ? (
+            <span className="block">
+              <RichText text={hero.caption} />
+            </span>
+          ) : null}
           {hero.credit ? (
             <span className="mt-0.5 block text-xs text-faint">{hero.credit}</span>
           ) : null}

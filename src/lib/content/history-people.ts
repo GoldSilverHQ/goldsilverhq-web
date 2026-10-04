@@ -127,7 +127,8 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
     "andrew-jackson",
     {
       alt: "Portrait of Andrew Jackson, white-haired, in a dark coat.",
-      caption: "Andrew Jackson, by Thomas Sully (1845).",
+      caption:
+        "Andrew Jackson, by Thomas Sully (1845), printed as the [Andrew Jackson Portrait Poster](https://shop.goldsilverhq.com/products/andrew-jackson-portrait-poster-2?variant=6de14e5e-3ae8-4673-aea7-00e521c9c76f).",
       credit: "CC0 — National Gallery of Art, Washington (1942.8.34).",
       width: 900,
       height: 1072,
