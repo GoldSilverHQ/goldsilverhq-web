@@ -884,7 +884,7 @@ const storage: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Metal that has already been poured or struck still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal.",
+      "Gold or silver that has already been poured or struck still has to be stored somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal.",
       "The [Gold & Silver in Practice](/gold-silver) overview already names storage as access versus cost versus counterparty. The paragraphs below stay with that trade-off.",
     ],
   },
