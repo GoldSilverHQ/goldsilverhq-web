@@ -29,6 +29,66 @@ export const PETER_STONE_LISTINGS: readonly PeterStoneListing[] = [
     id: "gri2308",
     href: "https://www.peterstone.com/products/celtic-knotwork-solid-gold-ring-with-heart-gemstone-gri2308?ref=qsrtsqfn&variant=45577756606635",
   },
+  {
+    id: "mri2353",
+    href: "https://www.peterstone.com/collections/gold-accented-rings/products/celtic-knotwork-silver-and-gold-accent-wedding-ring-mri2353?ref=qsrtsqfn&variant=42310962839723",
+  },
+  {
+    id: "mri1585",
+    href: "https://www.peterstone.com/collections/gold-accented-rings/products/triskelion-spiral-silver-and-gold-ring-mri1585?ref=qsrtsqfn&variant=41094166413483",
+  },
+  {
+    id: "mri1711",
+    href: "https://www.peterstone.com/collections/gold-accented-rings/products/angel-wings-infinity-silver-gold?ref=qsrtsqfn&variant=30003838222400",
+  },
+  {
+    id: "gpd2818",
+    href: "https://www.peterstone.com/collections/best-sellers/products/sigil-of-the-archangel-michael-solid-gold-pendant?ref=qsrtsqfn&variant=29999828500544",
+  },
+  {
+    id: "tpd5154",
+    href: "https://www.peterstone.com/collections/best-sellers/products/the-seven-archangels-silver-pendant-tpd5154?ref=qsrtsqfn&variant=43294323671211",
+  },
+  {
+    id: "tba154",
+    href: "https://www.peterstone.com/collections/best-sellers/products/seven-archangels-bracelet-tba154?ref=qsrtsqfn&variant=41710585577643",
+  },
+  {
+    id: "gpd5072",
+    href: "https://www.peterstone.com/collections/best-sellers/products/soar-to-the-heavens-flying-phoenix-solid-gold-pendant?ref=qsrtsqfn&variant=30001670520896",
+  },
+  {
+    id: "tri1942",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-claddagh-love-silver-commitment-band-ring-tri1942?ref=qsrtsqfn&variant=31164646654016",
+  },
+  {
+    id: "mpd2916",
+    href: "https://www.peterstone.com/collections/best-sellers/products/majestic-phoenix-silver-and-gold-pendant-mpd2916?ref=qsrtsqfn&variant=26324951728192",
+  },
+  {
+    id: "gpd5504",
+    href: "https://www.peterstone.com/collections/best-sellers/products/egyptian-ankh-solid-gold-pendant-gpd5504?ref=qsrtsqfn&variant=43312411541675",
+  },
+  {
+    id: "gpd864",
+    href: "https://www.peterstone.com/collections/best-sellers/products/thors-hammer-solid-gold-pendant-gpd864?ref=qsrtsqfn&variant=41098246127787",
+  },
+  {
+    id: "gri573",
+    href: "https://www.peterstone.com/collections/best-sellers/products/viking-borre-knot-solid-gold-ring-gri573?ref=qsrtsqfn&variant=39395214852267",
+  },
+  {
+    id: "tbg760",
+    href: "https://www.peterstone.com/collections/best-sellers/products/celtic-triple-moon-bracelet-tbg760?ref=qsrtsqfn&variant=26323449249856",
+  },
+  {
+    id: "tri580",
+    href: "https://www.peterstone.com/collections/best-sellers/products/dali-inspired-feather-ring-tri580?ref=qsrtsqfn&variant=42711829643435",
+  },
+  {
+    id: "gpd5150",
+    href: "https://www.peterstone.com/collections/best-sellers/products/the-majestic-power-of-three-solid-gold-trinity-goddess-pendant-gpd5150?ref=qsrtsqfn&variant=31143344701504",
+  },
 ];
 
 export type PeterStoneCard = {
