@@ -1,9 +1,35 @@
 {
-  "updatedAt": "2026-10-02T03:15:00.000Z",
+  "updatedAt": "2026-10-04T18:20:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2106666104315695104",
+      "postId": "2106801874976305658",
+      "title": "When America Stopped Taking Foreign Silver as Money",
+      "status": "mirrored",
+      "slug": "foreign-silver-legal-tender-1857",
+      "sitePath": "/blog/foreign-silver-legal-tender-1857",
+      "xArticleUrl": "https://x.com/i/article/2106666104315695104",
+      "publishedAt": "2026-10-04T17:41:24.000Z",
+      "mirroredAt": "2026-10-04T18:20:00.000Z",
+      "inlineMediaCount": 0,
+      "inlineNote": "entityMap has three TWEET embeds and zero MEDIA entities. All three embeds carry a photo (8 Aug 1786 card, Flowing Hair dollar, 21 Feb 1857 card). Those three photos are the inline figures."
+    },
+    {
+      "articleId": "2106665525073854464",
+      "postId": "2106700620174348602",
+      "title": "How America Started Minting Its Own Coins",
+      "status": "mirrored",
+      "slug": "philadelphia-mint-1792",
+      "sitePath": "/blog/philadelphia-mint-1792",
+      "xArticleUrl": "https://x.com/i/article/2106665525073854464",
+      "publishedAt": "2026-10-04T10:59:03.000Z",
+      "mirroredAt": "2026-10-04T18:20:00.000Z",
+      "inlineMediaCount": 1,
+      "inlineNote": "One MEDIA entity (Philadelphia Mint, colorized) plus three TWEET embeds whose photos are also on the page: Rittenhouse card and portrait, Scot birthday card and two coin sides, 1794 dollar obverse and reverse."
+    },
     {
       "articleId": "2105579156780052480",
       "postId": "2105729431734022209",

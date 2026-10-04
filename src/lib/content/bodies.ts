@@ -4369,7 +4369,340 @@ const governmentOnlyMoneyPrinter1877: Section[] = [
   },
 ];
 
+/** Blog: 21 February 1857 — foreign silver loses U.S. legal tender. Longer than the X Article. */
+const foreignSilverLegalTender1857: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "A silver dollar in an American pocket did not have to be American. For decades after the Revolution it was often Spanish, or Mexican and struck to the same idea. People called it a [piece of eight](/history/silver/piece-of-eight). That was the coin, not a nickname for something else. Eight reales of silver made the dollar.",
+      "Cut one, and the pieces had names a shopkeeper used. One real was an eighth of the dollar, twelve and a half cents, a bit. Two reales were a quarter, two bits. A half real was a sixteenth, six and a quarter cents. The stamp was foreign. The names were the ones a till already knew.",
+      "Legal tender is narrower than a coin that passes. For a long time the United States treated this silver as money the law would recognize. This note is the day that recognition ended, and the smaller rates the offices used on the way out.",
+    ],
+  },
+  {
+    heading: "The dollar, named in Spanish silver",
+    paragraphs: [
+      "On **8 August 1786**, Congress adopted the dollar as the money unit of the United States and rooted it in that Spanish silver. The resolve fixed the dollar at 375 grains and 64 hundredths of a grain of fine silver. Fine silver is the pure metal inside the weight, not the whole coin with its alloy. The unit the United States chose already had a weight people could hold.",
+      "That date is the start of the American name, not the start of the coin. The silver was already in pockets. Congress pointed at it and said this weight is the dollar. The card set into the short piece marks the same day. What this note follows is that 1786 line.",
+    ],
+    figure: {
+      src: "/images/blog/foreign-silver-legal-tender-1857-aug-8-1786.jpg",
+      alt: "August 8 card: in 1786 Congress adopts the dollar as the monetary unit, rooted in the Spanish silver piece of eight.",
+      caption:
+        "8 August 1786 — the dollar adopted, and rooted in the Spanish piece of eight.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on foreign silver losing legal tender.",
+      width: 1968,
+      height: 1008,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "A coin that was already old",
+    paragraphs: [
+      "The piece of eight was already old. Mexico City struck it with two crowns and the sea between them, and on the other side the arms of Spain with an 8 beside the shield. A dollar of **1770** from that mint still reads. The date is under the waves. The 8 is by the shield. That 8 is the eight reales. A coin of that year was already old when Congress named the dollar, and people could still pass it.",
+    ],
+  },
+  {
+    heading: "The first American dollar, sized on the Spanish one",
+    paragraphs: [
+      "The first dollar coin the United States issued was sized on this Spanish coin. It was the Flowing Hair dollar, minted in **1794** and **1795**. Its size and its weight followed the Spanish dollar. The American piece was new. The measure it followed was not.",
+    ],
+    figure: {
+      src: "/images/blog/foreign-silver-legal-tender-1857-flowing-hair.jpg",
+      alt: "Flowing Hair silver dollar of 1794, Liberty with unbound hair and fifteen stars on the face, a small eagle in a wreath on the back.",
+      caption:
+        "The Flowing Hair dollar — minted in 1794 and 1795, sized and weighed on the Spanish dollar.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on foreign silver losing legal tender.",
+      width: 1405,
+      height: 1422,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A weight written down in 1792",
+    paragraphs: [
+      "On **2 April 1792**, Congress had already defined that dollar as 371 and a quarter grains of pure silver, inside a coin of 416 grains. The number came from Spanish dollars then passing from hand to hand. Pure silver is the fine metal. The larger number is the coin as struck, alloy included, so the piece would hold together. The statute did not invent a new weight from a blank page. It measured coins that were already moving.",
+      "A United States silver dollar dated **1843** shows Liberty seated, the date under her, and an eagle on the back with the words ONE DOL. The piece shown is a proof of that design — a carefully struck example of the type, not a shop price.",
+      "**1786** and **1792** are not the same sentence. The first fixed the dollar at 375 grains and 64 hundredths of a grain of fine silver. The second defined it as 371 and a quarter grains of pure silver, inside a coin of 416 grains. Both come from Spanish silver then passing from hand to hand.",
+    ],
+  },
+  {
+    heading: "Foreign coin, written in as money",
+    paragraphs: [
+      "On **9 February 1793**, foreign gold and silver coins became legal tender at rates written into the statute. A Spanish milled dollar passed at one hundred cents if it still weighed at least seventeen pennyweights and seven grains, which is 415 grains. Its parts passed in proportion. A creditor who was offered that coin, at that weight, was being offered something the law called a dollar.",
+      "Other foreign silver was on a clock. Three years after the mint began striking gold and silver, foreign gold coins, and foreign silver other than Spanish milled dollars and their parts, would cease to be legal tender. The Spanish dollar was the coin the law kept. One dated **1821** shows a king's head and an 8 for the eight reales.",
+    ],
+  },
+  {
+    heading: "Still on the books in 1843",
+    paragraphs: [
+      "It stayed on the books. On **3 March 1843**, Congress again set the currency of foreign gold and silver coins. The Mint's report the next year said the Spanish dollar of that older design, and the dollars of Mexico, Peru, and Bolivia, were current at one dollar if they were at least 897 thousandths fine and at least 415 grains. 897 thousandths is the share of silver in the alloy: 897 parts in a thousand. A light coin, or a coin that was not that fine, was not the dollar the report described.",
+      "A dollar of the Mexican republic showed an eagle on a cactus and the name of the republic. The stamp is not the king's head of 1821, and it is not the Mexico City piece of 1770. The report still put it with the dollars of Peru and Bolivia when the fineness and the weight were there.",
+      "Wear had lightened the small pieces. A two-reales coin was still the fourth of the dollar. At the government offices and the banks, the worn fractions were already being refused at those old names. A coin that had lost silver in a pocket was no longer the fraction a shop had been using. That refusal was already happening before Congress closed the book.",
+    ],
+  },
+  {
+    heading: "21 February 1857",
+    paragraphs: [
+      "On **21 February 1857**, the arrangement ended. That day's Coinage Act repealed every former act authorizing the currency of foreign gold or silver coins and declaring them a legal tender for debts. Spanish and Mexican silver dollars, pieces of eight, lost that standing with every other foreign gold or silver coin.",
+      "The earlier statutes had said these coins were current, at stated weights and rates. The act of this day took those authorizations off the books. Foreign gold and foreign silver were in the same sentence. The Spanish and Mexican dollars did not keep the exception they had held since 1793.",
+    ],
+    figure: {
+      src: "/images/blog/foreign-silver-legal-tender-1857-coinage-act-1857.jpg",
+      alt: "Card stating that Spanish and Mexican silver dollars, pieces of eight, were U.S. legal tender until the Coinage Act of 21 February 1857.",
+      caption:
+        "21 February 1857 — the Coinage Act ends legal tender for foreign gold and silver coins.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on foreign silver losing legal tender.",
+      width: 1200,
+      height: 599,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "What the offices could still take",
+    paragraphs: [
+      "The act still named what the offices could take in. At the Treasury and its offices, and at the post offices and the land offices, the fourth of a Spanish dollar or of a Mexican dollar, the piece of two reales, was receivable at twenty cents. The eighth, one real, at ten cents. The sixteenth, a half real, at five cents.",
+      "Twenty was not twenty-five. Ten was not twelve and a half. Five was not six and a quarter. The old names were the cut of a dollar: a quarter, an eighth, a sixteenth. The rates the offices could use on the way out were lower. A two-reales piece that a shop had called a quarter was receivable at those offices at twenty cents. The eighth came in at ten, not at a bit. The sixteenth came in at five, not at six and a quarter.",
+      "Once received, those coins were not to be paid out again. They were to be recoined at the mint. Taking them in was not the same as leaving them in circulation. The old stamp was not supposed to go back out over the counter.",
+    ],
+  },
+  {
+    heading: "Two years at the old names, in cents",
+    paragraphs: [
+      "For two years from the passage of the act, and no longer, the mint could pay out its new cents for those same pieces at the old names: twenty-five cents, twelve and a half, and six and a quarter. Then that rate closed. The cents were the new small ones. An **1858** Flying Eagle cent, dated inside that window, is the coin the mint could hand back. That mint window is not the office rate. The offices took the fractions at twenty, ten, and five, and did not pay the coins out again. The mint, for two years only, could hand back cents at the old names.",
+      "The statute set no such price on the whole piece of eight. A foreign gold or silver coin was no longer legal tender for a debt. The fractions had a temporary rate. The whole dollar did not.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["The silver was named, kept, and then released."],
+    list: [
+      "**8 August 1786.** Congress adopts the dollar and roots it in Spanish silver, at 375 grains and 64 hundredths of a grain of fine silver.",
+      "**1770.** A Mexico City dollar of that year still shows the date under the waves and an 8 by the shield.",
+      "**2 April 1792.** The dollar is 371 and a quarter grains of pure silver, inside a coin of 416 grains.",
+      "**1794 and 1795.** The Flowing Hair dollar is the first dollar coin the United States issues, sized on the Spanish dollar.",
+      "**9 February 1793.** Foreign gold and silver become legal tender at statutory rates. A Spanish milled dollar of at least 415 grains passes at one hundred cents. It is the foreign silver coin the law keeps.",
+      "**3 March 1843.** Congress sets foreign gold and silver again. The next year's Mint report holds the older Spanish dollar, and the dollars of Mexico, Peru, and Bolivia, current at one dollar if they are at least 897 thousandths fine and at least 415 grains.",
+      "**21 February 1857.** The Coinage Act repeals legal tender for foreign gold and silver coins. Offices may take the fractions at twenty, ten, and five cents, and may not pay them out again. For two years the mint may pay new cents at the old names.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "A shopkeeper could still be handed a Spanish dollar or a Mexican one. He did not have to take it as money. On **21 February 1857**, Congress stopped calling it legal tender.",
+      "Eight reales were still eight reales. What changed was the duty. A creditor no longer had to take the Spanish or Mexican dollar. The small pieces could still be turned in, at the rates the act wrote down, and then recoined. The whole piece of eight had no such price.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2106666104315695104).",
+    ],
+  },
+];
+
+/** Blog: 1792 Philadelphia mint and the first U.S. silver dollars. Longer than the X Article. */
+const philadelphiaMint1792: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "For years after the Revolution, a silver dollar in an American pocket was usually Spanish. A shopkeeper knew the [piece of eight](/history/silver/piece-of-eight) by its weight. Congress wanted a coin struck in a building the United States owned, with the silver inside it fixed by law.",
+      "The want is two facts, and they are easy to fold into one. A building the country owned is a mint, not a foreign workshop and not a private press. Silver fixed by law is a weight written down, so the coin is a measure and not only a name. The Spanish dollar already had a weight a shopkeeper trusted. The statute was a decision to strike an American coin to a stated weight in an American house.",
+    ],
+  },
+  {
+    heading: "A weight, not a name",
+    paragraphs: [
+      "That law passed on **2 April 1792**. It put a mint in Philadelphia and defined the dollar as a weight, not a name. Each dollar was to hold 371 and a quarter grains of pure silver, inside a coin of 416 grains. The rest was copper, so the piece would survive a pocket. Hold one, and you were holding the money.",
+      "Pure silver is the fine metal: 371 and a quarter grains of it. The coin of 416 grains is that silver plus the copper that makes a piece strong enough to pass from hand to hand. The difference is not a second dollar. It is the alloy. The statute's claim is plain. The dollar is the weight of silver inside the coin. The name on the face is how you recognize it. The metal is what you are holding.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-mint-philadelphia.jpg",
+      alt: "Colorized photograph of the first U.S. Mint in Philadelphia, a three-story brick building with a chimney, on a street corner.",
+      caption: "The first U.S. Mint, Philadelphia. Colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 1024,
+      height: 1008,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "An astronomer, not a politician",
+    paragraphs: [
+      "George Washington did not hand the mint to a politician. He named David Rittenhouse, the clockmaker and astronomer who had built his own instruments and measured the sky from outside Philadelphia. The card set with that paragraph dates the appointment to **13 April 1792**, and calls him the first director of the mint.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-rittenhouse-1.jpg",
+      alt: "Card for 13 April 1792, when Washington appointed David Rittenhouse the first director of the United States Mint, beside a portrait of Rittenhouse.",
+      caption:
+        "13 April 1792 — Washington appoints David Rittenhouse, on the card embedded in the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 988,
+      height: 1199,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The other picture in that pair is the painted portrait the note returns to at his death. White hair, a telescope beside him, one hand on a sheet of figures. Charles Willson Peale painted him in **1796**. The article sets the painting here, next to the appointment, and names the painter later.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-rittenhouse-2.jpg",
+      alt: "Painted portrait of David Rittenhouse, white-haired, seated at a table with papers, a telescope beside him.",
+      caption:
+        "David Rittenhouse — the portrait Charles Willson Peale painted in 1796, telescope and figures beside him.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 959,
+      height: 1199,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A brick house on Seventh Street",
+    paragraphs: [
+      "Rittenhouse took the post in **1792**. On **31 July** he laid the cornerstone of a plain three-story brick house on Seventh Street, between Market and Arch. Offices faced the street. The furnaces and the presses sat in rooms at the back. It could have been any house on the block. It was the first mint the country had.",
+      "The cornerstone date is **31 July 1792**. The law that created the mint was **2 April**. The appointment card says **13 April**. Three dates, one summer: a statute, a director, a stone in a wall. Nothing in that sequence says the coins were already in the street.",
+    ],
+  },
+  {
+    heading: "Copper first",
+    paragraphs: [
+      "Copper came out first. Cents and half cents were struck in **1793**. A silver dollar was a harder job. The mint needed dies cut deep enough for a coin as wide as the Spanish one, and it needed an engraver who could sink them.",
+      "A cent is a small disc. A dollar as wide as the Spanish piece is a broad disc, and the die has to bite that width. The mint had a house in 1792 and copper coins in 1793. The dollar waited on the die.",
+    ],
+  },
+  {
+    heading: "The man who cut the steel",
+    paragraphs: [
+      "Robert Scot was that engraver. Born in Edinburgh, he had already cut plates in America for paper money, maps, and portraits. On **23 November 1793**, he became chief engraver. The early dies were his work: steel sunk by hand, one punch and one line at a time.",
+      "A plate for paper is a surface cut to print. A die for a coin is steel sunk so a press can drive the design into metal. Scot arrived with the hand for that cutting. The office date in the note is **23 November 1793**. The card embedded after that paragraph marks **2 October 1745** as his birth, and calls him the first chief engraver.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-scot-1.jpg",
+      alt: "2 October card marking 1745, the birth of Robert Scot in Edinburgh, later chief engraver of the United States Mint.",
+      caption:
+        "2 October 1745 — Robert Scot is born in Edinburgh, on the card embedded in the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 1200,
+      height: 608,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The same embed sets the coin beside the birthday. One picture is the face Scot cut for the dollar. The other is the back.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-scot-2.jpg",
+      alt: "Obverse of an early United States silver dollar, Liberty in profile with unbound hair, ringed by stars, the date below the neck.",
+      caption: "The dollar's face, as shown with Scot's birthday card in the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 1200,
+      height: 675,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "Liberty's hair is loose. The date is under the neck. On the back, the words run around the eagle.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-scot-3.jpg",
+      alt: "Reverse of an early United States silver dollar, an eagle and the words United States of America around the rim.",
+      caption: "The other side of the dollar shown with that card.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 1200,
+      height: 561,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Liberty, unbound",
+    paragraphs: [
+      "For the dollar he cut a head of Liberty with her hair loose. Collectors later named that look Flowing Hair. It is not a picture of a real woman. It is liberty with her hair unbound, ringed by fifteen stars, one for each state then in the Union. On the back he put a small eagle inside a wreath, and the words UNITED STATES OF AMERICA.",
+      "The name came later. The article is careful about that. Scot cut a head. Collectors, afterward, called the hair flowing. Nothing in the design is a portrait of a person who sat for it. Fifteen stars is a count of states, not a decoration added for balance. The back is a small eagle in a wreath, and the country's name. That is the whole of what the note claims for the die.",
+    ],
+  },
+  {
+    heading: "A press one size too small",
+    paragraphs: [
+      "The press could not quite do what the die asked. The biggest screw press in the house still could not strike a coin that wide hard enough in a single blow. On **15 October 1794**, chief coiner Henry Voigt turned over 1,758 silver dollars. They went to Rittenhouse. They were the first silver dollars the United States had minted. The strike was soft, and dollar coinage stopped. The mint put its silver into half dollars instead.",
+      "A screw press drives the die into the blank by turning a screw. One blow is one strike. A coin as wide as the Spanish dollar asked for more force than that press could put into a single turn, and the weakness stayed in the metal. Soft, here, is not a judgment of the design. It is the article's word for a strike that did not fully take. Voigt's delivery is a count and a date: **1,758** dollars, **15 October 1794**, handed to the director. Then dollar coinage stopped. The silver did not sit idle. It went into half dollars, a smaller piece the press could finish.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-flowing-hair-1794-1.jpg",
+      alt: "1794 Flowing Hair silver dollar, Liberty with unbound hair and the date under her neck, the first dollar the United States minted.",
+      caption:
+        "1794 — the Flowing Hair dollar. On 15 October, Henry Voigt turned over 1,758 of them.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 1405,
+      height: 1422,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "",
+    paragraphs: [
+      "The second picture in that embed is the other side of the coin the card is talking about: the first dollars, struck at the Philadelphia house, 1,758 of them on that first day of dollar coinage.",
+    ],
+    figure: {
+      src: "/images/blog/philadelphia-mint-1792-flowing-hair-1794-2.jpg",
+      alt: "Reverse of the 1794 silver dollar shown with the note on the first United States dollars.",
+      caption: "The reverse shown with the 1794 dollar in the X Article.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
+      width: 375,
+      height: 372,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "One of them is in the Smithsonian",
+    paragraphs: [
+      "One of them is in the Smithsonian. The date, **1794**, is under Liberty's neck. The loose hair is there. So is the weakness the press left in the metal: Scot's die never fully bit. People at the time could see it. The 1,758 pieces were specimens, not a river of new coin. Over the years a great many were melted. A 1794 dollar you can still hold is scarce.",
+      "A specimen, in the article's word, is an example, not a flood of coins filling every shop. People at the time could see that the die had not fully bitten. Melting, over the years, took a great many of the 1,758. Scarce means a 1794 dollar you can still hold. It is not a claim about a price.",
+    ],
+  },
+  {
+    heading: "Who stayed, and who left",
+    paragraphs: [
+      "Rittenhouse was already sick. He left the mint in **1795** and died in **June 1796**. That is the year Peale painted him, white-haired, a telescope beside him, one hand on a sheet of figures. Scot stayed at the bench until **1823**. The brick house on Seventh Street struck the nation's coin until a larger mint opened in **1833**.",
+      "Rittenhouse was gone from the office in 1795, and dead the next June. Scot was still cutting in 1823. The same brick building kept striking until 1833, when a larger mint opened. The article keeps those dates apart.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Statute, house, copper, then a soft silver dollar."],
+    list: [
+      "**2 April 1792.** Congress puts a mint in Philadelphia and defines the dollar as 371 and a quarter grains of pure silver, inside a coin of 416 grains. The rest is copper.",
+      "**13 April 1792.** The card in the article dates Washington's appointment of David Rittenhouse, clockmaker and astronomer, as the first director.",
+      "**31 July 1792.** Rittenhouse lays the cornerstone of a three-story brick house on Seventh Street, between Market and Arch. Offices in front. Furnaces and presses in the back.",
+      "**1793.** Cents and half cents are struck. On 23 November, Robert Scot becomes chief engraver. The card beside that fact marks his birth as 2 October 1745, in Edinburgh.",
+      "**15 October 1794.** Chief coiner Henry Voigt turns over 1,758 silver dollars to Rittenhouse. They are the first silver dollars the United States has minted. The strike is soft. Dollar coinage stops. Silver goes into half dollars.",
+      "**1795 and June 1796.** Rittenhouse leaves the mint, then dies. Peale paints him that year. Scot stays until 1823. The brick house strikes coin until a larger mint opens in 1833.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Nothing about the start looked grand. An astronomer, a Scotsman cutting steel, a press one size too small, a doorway on an ordinary street. What came off that press on an October afternoon was still a piece of silver of a known weight, with the name of a country that had decided to mint its own.",
+      "Known weight is the 1792 sentence: 371 and a quarter grains of pure silver, in a coin of 416 grains. The name is the one Scot cut into the back, around a small eagle in a wreath. The afternoon is **15 October 1794**, and the count is 1,758. The press was too small for a clean blow. The coins were still silver of a stated weight, with the country's own stamp. A brick house, and a dollar you could hold.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2106665525073854464).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/foreign-silver-legal-tender-1857": foreignSilverLegalTender1857,
+  "blog/philadelphia-mint-1792": philadelphiaMint1792,
   "blog/government-only-money-printer-1877": governmentOnlyMoneyPrinter1877,
   "blog/us-gold-booked-at-42-22": usGoldBookedAt4222,
   "blog/australia-1813-holey-dollar": australia1813HoleyDollar,

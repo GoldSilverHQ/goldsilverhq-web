@@ -357,6 +357,25 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/foreign-silver-legal-tender-1857",
+    src: "/images/blog/foreign-silver-legal-tender-1857.jpg",
+    ogSrc: "/og/cards/blog-foreign-silver-legal-tender-1857.jpg",
+    alt: "Title card reading When America Stopped Taking Foreign Silver as Money, with Spanish, Mexican, and United States silver coins and an 1858 cent.",
+    caption:
+      "21 February 1857 — foreign silver dollars lose legal tender in the United States.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on foreign silver losing legal tender.",
+  },
+  {
+    path: "/blog/philadelphia-mint-1792",
+    src: "/images/blog/philadelphia-mint-1792.jpg",
+    ogSrc: "/og/cards/blog-philadelphia-mint-1792.jpg",
+    alt: "Title card reading How America Started Minting Its Own Coins, with the first Philadelphia Mint and a 1794 Flowing Hair dollar.",
+    caption: "1792–1794 — a mint on Seventh Street, then the first United States silver dollars.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the first United States mint.",
+  },
+  {
     path: "/blog/government-only-money-printer-1877",
     src: "/images/blog/government-only-money-printer-1877.jpg",
     ogSrc: "/og/cards/blog-government-only-money-printer-1877.jpg",
