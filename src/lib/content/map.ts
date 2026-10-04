@@ -153,7 +153,7 @@ export const ideaPages: Episode[] = [
       demand: "low",
       difficulty: "high",
       intent: "definition",
-      titleTag: "What Is Sound Money? A Working Definition",
+      titleTag: "Sound Money: The Issuer Cannot Create More at Will",
     },
   },
   {
@@ -472,7 +472,7 @@ export const historyClusters: Cluster[] = [
           demand: "low",
           difficulty: "low",
           intent: "history",
-          titleTag: "John Law and the Mississippi Bubble (1720)",
+          titleTag: "John Law and the Mississippi Company (1720)",
         },
       },
       {
@@ -796,7 +796,7 @@ export const historyClusters: Cluster[] = [
           demand: "high",
           difficulty: "high",
           intent: "history",
-          titleTag: "Nixon Shock 1971: Closing the Gold Window",
+          titleTag: "Nixon Shock, 15 August 1971: Dollar-Gold Convertibility Ends",
         },
       },
     ],
