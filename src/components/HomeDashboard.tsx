@@ -51,18 +51,18 @@ function FaceTile({
 
 function PerfRow({ perf, label }: { perf: MetalPerformance | null | undefined; label: string }) {
   return (
-    <div className="mt-3">
+    <div className="mt-2.5">
       <dl
         aria-label={`${label} price change`}
-        className="grid grid-cols-3 gap-x-1 gap-y-1.5 @[15rem]:grid-cols-5"
+        className="grid grid-cols-3 gap-x-1 gap-y-1 @[15rem]:grid-cols-5"
       >
         {PERF_PERIODS.map((p) => {
           const v = perf?.changes[p];
           return (
             <div key={p} className="min-w-0">
-              <dt className="text-[10px] font-semibold tracking-[0.12em] text-faint">{p}</dt>
+              <dt className="text-[10px] font-medium tracking-[0.08em] text-faint">{p}</dt>
               <dd
-                className={`text-[11px] whitespace-nowrap tabular-nums ${v == null ? "text-faint" : pctToneClass(v, 1)}`}
+                className={`text-[11px] leading-tight whitespace-nowrap tabular-nums ${v == null ? "text-faint" : pctToneClass(v, 1)}`}
               >
                 {v == null ? "—" : fmtSignedPct(v, 1)}
               </dd>
@@ -70,10 +70,40 @@ function PerfRow({ perf, label }: { perf: MetalPerformance | null | undefined; l
           );
         })}
       </dl>
-      <p className="mt-1.5 text-[10px] text-faint">
+      <p className="mt-1 text-[10px] leading-tight text-faint">
         {perf ? `COMEX closes · as of ${fmtDayMonYear(perf.asOf)}` : "COMEX closes"}
       </p>
     </div>
+  );
+}
+
+function PriceCard({
+  label,
+  tone,
+  unit,
+  value,
+  children,
+}: {
+  label: string;
+  tone: "gold" | "silver";
+  unit: string;
+  value?: string;
+  children?: ReactNode;
+}) {
+  const color = tone === "gold" ? "text-gold" : "text-silver";
+  return (
+    <article className="@container rounded-lg bg-surface px-3.5 py-3 shadow-[var(--shadow-border)]">
+      <h3 className="text-xs font-medium tracking-wide text-muted">{label}</h3>
+      <p
+        className={`mt-1.5 font-sans text-[1.7rem] leading-none tabular-nums tracking-tight sm:text-[1.95rem] ${color}`}
+      >
+        {value ?? "—"}
+        <span className="ml-1.5 align-middle font-sans text-[11px] font-medium tracking-[0.12em] text-muted">
+          {unit}
+        </span>
+      </p>
+      {children}
+    </article>
   );
 }
 
@@ -103,29 +133,27 @@ export function HomeDashboard({
       <h1 className="sr-only">GoldSilverHQ</h1>
       <div className="min-w-0">
         <section className="grid gap-3 sm:grid-cols-3">
-          <FaceTile
-            kicker="gold"
+          <PriceCard
             label="Gold spot"
             tone="gold"
             unit="USD / oz"
             value={spot ? `$${fmtMoney(spot.gold, 0)}` : undefined}
-            note={<PerfRow perf={performance?.gold} label="Gold" />}
-          />
-          <FaceTile
-            kicker="silver"
+          >
+            <PerfRow perf={performance?.gold} label="Gold" />
+          </PriceCard>
+          <PriceCard
             label="Silver spot"
             tone="silver"
             unit="USD / oz"
             value={spot ? `$${fmtMoney(spot.silver, 2)}` : undefined}
-            note={<PerfRow perf={performance?.silver} label="Silver" />}
-          />
-          <FaceTile
-            kicker="GSR"
+          >
+            <PerfRow perf={performance?.silver} label="Silver" />
+          </PriceCard>
+          <PriceCard
             label="Gold–silver ratio"
             tone="gold"
             unit="oz Ag / oz Au"
             value={spot ? spot.ratio.toFixed(1) : undefined}
-            note="How many ounces of silver equal one of gold at this print."
           />
         </section>
 
