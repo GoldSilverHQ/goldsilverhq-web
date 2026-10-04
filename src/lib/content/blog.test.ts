@@ -474,10 +474,17 @@ describe("blog section", () => {
     assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
     assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
     const figures = body.map((s) => s.figure).filter(Boolean);
-    assert.equal(figures.length, 8, `expected 8 inline figures, got ${figures.length}`);
-    assert.equal(
-      figures[0]!.src,
-      "/images/blog/philadelphia-mint-1792-mint-philadelphia.jpg",
+    assert.equal(figures.length, 6, `expected 6 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/philadelphia-mint-1792-mint-philadelphia.jpg",
+        "/images/blog/philadelphia-mint-1792-rittenhouse-1.jpg",
+        "/images/blog/philadelphia-mint-1792-rittenhouse-2.jpg",
+        "/images/blog/philadelphia-mint-1792-scot-1.jpg",
+        "/images/blog/philadelphia-mint-1792-flowing-hair-1794-1.jpg",
+        "/images/blog/philadelphia-mint-1792-flowing-hair-1794-2.jpg",
+      ],
     );
     for (const f of figures) {
       assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
