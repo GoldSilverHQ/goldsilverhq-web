@@ -90,7 +90,7 @@ export function HomeSidebar({
       </Box>
 
       <Box
-        title="Top 5 2026 (YTD)"
+        title="Top 5 Silver Producers 2026 (YTD)"
         titleClassName="w-fit text-silver-shine"
         footer={
           <Link
