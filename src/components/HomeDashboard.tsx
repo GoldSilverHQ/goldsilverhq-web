@@ -98,7 +98,7 @@ function PriceCard({
         className={`mt-1.5 font-sans text-[1.7rem] leading-none tabular-nums tracking-tight sm:text-[1.95rem] ${color}`}
       >
         {value ?? "—"}
-        <span className="ml-1.5 align-middle font-sans text-[11px] font-medium tracking-[0.12em] text-faint">
+        <span className="ml-1.5 align-middle font-sans text-[11px] font-medium tracking-[0.12em] text-muted">
           {unit}
         </span>
       </p>
