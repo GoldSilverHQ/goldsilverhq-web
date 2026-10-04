@@ -4596,32 +4596,12 @@ const philadelphiaMint1792: Section[] = [
     paragraphs: [
       "The same embed sets the coin beside the birthday. One picture is the face Scot cut for the dollar. The other is the back.",
     ],
-    figure: {
-      src: "/images/blog/philadelphia-mint-1792-scot-2.jpg",
-      alt: "Obverse of an early United States silver dollar, Liberty in profile with unbound hair, ringed by stars, the date below the neck.",
-      caption: "The dollar's face, as shown with Scot's birthday card in the X Article.",
-      credit:
-        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
-      width: 1200,
-      height: 675,
-      layout: "breakout",
-    },
   },
   {
     heading: "",
     paragraphs: [
       "Liberty's hair is loose. The date is under the neck. On the back, the words run around the eagle.",
     ],
-    figure: {
-      src: "/images/blog/philadelphia-mint-1792-scot-3.jpg",
-      alt: "Reverse of an early United States silver dollar, an eagle and the words United States of America around the rim.",
-      caption: "The other side of the dollar shown with that card.",
-      credit:
-        "Inline image from the GoldSilverHQ X Article on the first United States mint.",
-      width: 1200,
-      height: 561,
-      layout: "breakout",
-    },
   },
   {
     heading: "Liberty, unbound",
