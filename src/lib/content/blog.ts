@@ -49,6 +49,54 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "foreign-silver-legal-tender-1857",
+    title: "When America Stopped Taking Foreign Silver as Money",
+    summary:
+      "On 21 February 1857 Congress ended legal tender for foreign silver. Spanish and Mexican dollars, pieces of eight, no longer had to be taken as money.",
+    date: "2026-10-04",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+      {
+        title: "How America started minting its own coins",
+        href: "/blog/philadelphia-mint-1792",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/piece-of-eight",
+      "/blog/philadelphia-mint-1792",
+    ],
+    xArticleUrl: "https://x.com/i/article/2106666104315695104",
+    sourceXId: "2106666104315695104",
+  },
+  {
+    slug: "philadelphia-mint-1792",
+    title: "How America Started Minting Its Own Coins",
+    summary:
+      "On 2 April 1792 Congress put a mint in Philadelphia and fixed the silver dollar by weight. The first United States dollars left that press in 1794.",
+    date: "2026-10-04",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "The piece of eight", href: "/history/silver/piece-of-eight" },
+      { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
+      {
+        title: "When foreign silver lost legal tender",
+        href: "/blog/foreign-silver-legal-tender-1857",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/piece-of-eight",
+      "/history/america/early-us-coinage",
+      "/blog/foreign-silver-legal-tender-1857",
+    ],
+    xArticleUrl: "https://x.com/i/article/2106665525073854464",
+    sourceXId: "2106665525073854464",
+  },
+  {
     slug: "government-only-money-printer-1877",
     title: "The Day the Government Became America's Only Money Printer",
     summary:

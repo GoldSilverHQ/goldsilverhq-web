@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 15);
-    assert.equal(listBlogPosts().length, 15);
+    assert.equal(blogPosts.length, 17);
+    assert.equal(listBlogPosts().length, 17);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,8 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/foreign-silver-legal-tender-1857",
+        "/blog/philadelphia-mint-1792",
         "/blog/government-only-money-printer-1877",
         "/blog/us-gold-booked-at-42-22",
         "/blog/australia-1813-holey-dollar",
@@ -179,8 +181,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 13);
-    assert.equal(listBlogPostsByTag("Metals").length, 8);
+    assert.equal(listBlogPostsByTag("History").length, 15);
+    assert.equal(listBlogPostsByTag("Metals").length, 10);
     assert.equal(listBlogPostsByTag("Markets").length, 5);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -194,6 +196,8 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "foreign-silver-legal-tender-1857",
+      "philadelphia-mint-1792",
       "government-only-money-printer-1877",
       "us-gold-booked-at-42-22",
       "australia-1813-holey-dollar",
@@ -391,6 +395,94 @@ describe("blog section", () => {
     );
     for (const f of figures) {
       assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the 1857 foreign-silver figures and credits the X Article once", () => {
+    const post = getBlogPost("foreign-silver-legal-tender-1857");
+    assert.ok(post);
+    assert.equal(post.title, "When America Stopped Taking Foreign Silver as Money");
+    assert.equal(post.date, "2026-10-04");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2106666104315695104");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/foreign-silver-legal-tender-1857"));
+    const body = getBody("blog", "foreign-silver-legal-tender-1857")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2106666104315695104/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("foreign-silver-legal-tender-1857");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 3, `expected 3 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/foreign-silver-legal-tender-1857-aug-8-1786.jpg",
+        "/images/blog/foreign-silver-legal-tender-1857-flowing-hair.jpg",
+        "/images/blog/foreign-silver-legal-tender-1857-coinage-act-1857.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the 1792 mint figures and credits the X Article once", () => {
+    const post = getBlogPost("philadelphia-mint-1792");
+    assert.ok(post);
+    assert.equal(post.title, "How America Started Minting Its Own Coins");
+    assert.equal(post.date, "2026-10-04");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2106665525073854464");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/philadelphia-mint-1792"));
+    const body = getBody("blog", "philadelphia-mint-1792")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.match(text, /\[piece of eight\]\(\/history\/silver\/piece-of-eight\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2106665525073854464/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("philadelphia-mint-1792");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 8, `expected 8 inline figures, got ${figures.length}`);
+    assert.equal(
+      figures[0]!.src,
+      "/images/blog/philadelphia-mint-1792-mint-philadelphia.jpg",
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
       assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
     }
   });
