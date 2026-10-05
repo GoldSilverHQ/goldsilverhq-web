@@ -49,6 +49,22 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "edward-vi-1551-silver",
+    title: "How a Teenage King Put Real Silver Back in England's Money",
+    summary:
+      "On 5 October 1551 the Tower indenture restored silver to about 92 parts in 100. Edward VI was thirteen. The base shilling was already down to sixpence.",
+    date: "2026-10-05",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Newton’s 1717 Mint report", href: "/blog/newton-1717-guinea" },
+    ],
+    relatedArticlePaths: ["/blog/newton-1717-guinea"],
+    xArticleUrl: "https://x.com/i/article/2107028037153804288",
+    sourceXId: "2107028037153804288",
+  },
+  {
     slug: "foreign-silver-legal-tender-1857",
     title: "When America Stopped Taking Foreign Silver as Money",
     summary:

@@ -4680,7 +4680,175 @@ const philadelphiaMint1792: Section[] = [
   },
 ];
 
+/** Blog: 5 October 1551 — Edward VI's Tower indenture returns silver near sterling. Longer than the X Article. */
+const edwardVi1551Silver: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **5 October 1551**, inside the walls of the Tower of London, the men who ran the royal mint signed a new agreement with the crown. The paper was dry. It was full of carats, ounces, and pennyweights. It also ended seven years in which England's kings had quietly been making their coins out of less and less silver.",
+      "That agreement is a mint indenture. The crown sets the metal a coin must carry. The officers who run the presses bind themselves to strike it that way. A carat is the gold measure in this paper. Ounces and pennyweights are the silver measures. Together they are the recipe for the piece.",
+      "Those seven years run from the first cut in the silver to this October day. A shilling still carried its old name. The silver inside it did not stay the same.",
+    ],
+  },
+  {
+    heading: "A boy king, and his father's coins",
+    paragraphs: [
+      "The king was Edward VI. He was thirteen, a week short of his fourteenth birthday, and he had inherited the mess from his father.",
+      "Thirteen, and a week short of fourteen, is his age on this October day. The earlier standard was his father's. The coins already in people's purses were the ones that mint had been filling with copper. The painting set with him is Edward VI, painted by William Scrots around **1550**.",
+    ],
+    figure: {
+      src: "/images/blog/edward-vi-1551-silver-edward-portrait.jpg",
+      alt: "Portrait of Edward VI as a boy, in an embroidered crimson doublet, white collar, and black cap with a white feather, painted by William Scrots around 1550.",
+      caption: "Edward VI, painted by William Scrots around 1550.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Edward VI putting silver back into the coin.",
+      width: 623,
+      height: 623,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "Palaces, two wars, and an empty fortune",
+    paragraphs: [
+      "Henry VIII had spent heavily on palaces and even more heavily on war with France and Scotland. By the early **1540s** the fortune his own father had piled up was gone. The mint offered a way out.",
+      "Palaces are the buildings. The wars named beside them are with France and with Scotland, and that spending is the heavier of the two. The fortune was the pile Henry's own father had left. By the early 1540s it was gone. What the crown still had, as a tool, was the mint.",
+    ],
+  },
+  {
+    heading: "Sterling, then the first cut",
+    paragraphs: [
+      "A coin was supposed to carry its value in its metal. For centuries English silver coins had been sterling, 925 parts silver in every 1,000, the rest copper for strength. From **1544** Henry's mint began cutting that silver and filling the gap with copper, while the face value stayed the same. Every pound of silver could now be stretched into more coins, and the crown kept the difference.",
+      "Sterling is that old recipe: 925 parts silver in every 1,000, and copper for the rest, so the coin holds its shape in a purse. From 1544 a coin that said twelve pence still said twelve pence, and it held less silver than the old piece of that name. A pound of silver, mixed with more copper, made more coins. The crown kept the difference.",
+    ],
+  },
+  {
+    heading: "Three quarters, then half, then a third",
+    paragraphs: [
+      "The cuts kept coming. Silver went to three parts in four, then half, then a third. Gold slipped too, from about 23 carats down to 20.",
+      "Each step is less silver in the same kind of coin. Gold moved from about 23 carats down to 20. About belongs to the 23. Twenty-four carats would be pure gold. Twenty-three is a small step under pure. Twenty is a larger step under it.",
+    ],
+  },
+  {
+    heading: "Old Coppernose",
+    paragraphs: [
+      "The shilling, a twelve-pence coin that people of the time also called a testoon, showed the trick most plainly. Its thin silver skin wore off fastest on the highest point of the design, the king's nose. Copper glowed through, and Henry got the nickname that has followed him ever since: Old Coppernose.",
+      "A testoon and a shilling are the same coin here: twelve pence on the face. Wear takes the high points first. On Henry's portrait the high point was the nose. When the silver skin there was gone, copper showed through. Old Coppernose names the king by that coin.",
+    ],
+    figure: {
+      src: "/images/blog/edward-vi-1551-silver-testoon.jpg",
+      alt: "Henry VIII's debased silver shilling, the testoon, with a crowned bearded profile facing right.",
+      caption: "Henry VIII's debased shilling, the testoon.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Edward VI putting silver back into the coin.",
+      width: 1200,
+      height: 1200,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The debasement outlived Henry",
+    paragraphs: [
+      "Henry died in **1547**. The debasement did not die with him. The men governing for the boy king needed money too. They improved the gold a little and kept squeezing the silver, until early in **1551** a new shilling held only a quarter silver.",
+      "Debasement is that cutting: less fine metal, the same face. Henry's death left it standing. The men governing in Edward's name improved the gold a little and kept squeezing the silver. Early in 1551 a new shilling held only a quarter silver, below the third already reached.",
+    ],
+  },
+  {
+    heading: "A pretty little shilling",
+    paragraphs: [
+      "The preacher Hugh Latimer had already said what ordinary people thought. Preaching in front of the young king in **March 1549**, he said:",
+      "\"We have now a pretty little shilling, indeed a very pretty one. I have but one, I think, in my purse, and the last day I had put it away almost for an old groat.\"",
+      "A groat was a fourpenny piece. Latimer's joke was that the new twelve-pence shilling looked so poor he had nearly handed it over as a coin worth a third as much. \"The fineness of the silver I cannot see,\" he added. He later complained that he had been accused of speaking seditiously for it.",
+      "March 1549 comes before this indenture. A groat is four pence and a shilling is twelve, so four is a third of twelve. Fineness is the share of silver. He said he could not see it.",
+    ],
+  },
+  {
+    heading: "Good coins in chests",
+    paragraphs: [
+      "Prices had been climbing all through these years, and people treated the new coins with suspicion. Older, better coins tended to stay in chests rather than in shops.",
+      "The better coins, closer to the old sterling, tended to stay in chests. The poorer silver is what still went from hand to hand.",
+    ],
+  },
+  {
+    heading: "Nine pence, then six",
+    paragraphs: [
+      "By **1551** the council, led by John Dudley, Earl of Warwick, decided the game was over. That year it cut the official value of the base shilling twice, first to nine pence and then to six. People holding those coins took the loss.",
+      "Cutting the official value added no silver to the coin. It changed the number the law would treat the coin as. Twelve pence became nine, then six. Nine is three-quarters of twelve. Six is half. The metal in the hand was the same metal. Holders of the base shilling took the loss.",
+    ],
+  },
+  {
+    heading: "A commission, then an indenture",
+    paragraphs: [
+      "Then came the new standard, set out in a commission dated **1 October** and the Tower indenture of **5 October**.",
+      "The commission is dated 1 October. The indenture is 5 October, inside the Tower. One paper states the standard. The other binds the mint to strike it.",
+    ],
+  },
+  {
+    heading: "Eleven ounces, and nearly pure gold",
+    paragraphs: [
+      "Silver went back to 11 ounces 1 pennyweight fine. Put plainly, out of every twelve ounces of coin metal, a little over eleven were pure silver, about 92 parts in 100, a hair under the old sterling. Gold went back to nearly pure, 23 carats 3½ grains, for a heavy sovereign worth thirty shillings. Alongside it came a sovereign of 22-carat \"crown gold\", a slightly harder alloy, worth twenty shillings.",
+      "Old sterling was 925 parts silver in every 1,000. The new line is about 92 parts in 100, a hair under that. Gold at 23 carats 3½ grains is the fineness named for a heavy sovereign worth thirty shillings. The second sovereign is 22-carat crown gold, a slightly harder alloy, worth twenty shillings. The gold coin set with that standard is a half sovereign of Edward VI.",
+    ],
+    figure: {
+      src: "/images/blog/edward-vi-1551-silver-half-sovereign.jpg",
+      alt: "Gold half sovereign of Edward VI, the young king facing and crowned on one side, a crowned shield on the other.",
+      caption: "A gold half sovereign of Edward VI.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Edward VI putting silver back into the coin.",
+      width: 1200,
+      height: 964,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The first silver crown",
+    paragraphs: [
+      "The new silver came in new sizes. There was a half crown, a shilling and a sixpence, and soon a threepence. Biggest of all was a five-shilling piece called the crown. It was the first crown England ever struck in silver; until then the name had belonged to a gold coin. On one side the boy king rides an armored horse. Under the horse, in the plain numbers we still write today, is the date: **1551**.",
+      "Soon is the word on the threepence. The largest piece is the crown, five shillings, and the first crown England struck in silver. Until then that name had belonged to a gold coin. Under the horse the date is 1551, in plain numerals.",
+    ],
+    figure: {
+      src: "/images/blog/edward-vi-1551-silver-silver-crown.jpg",
+      alt: "Edward VI's silver crown of 1551, the king in armor on horseback with the date under the horse, and a crowned shield on the other side.",
+      caption: "Edward VI's silver crown, dated 1551.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on Edward VI putting silver back into the coin.",
+      width: 1200,
+      height: 1200,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "What the indenture left standing",
+    paragraphs: [
+      "The repair was not complete. The smallest change, pennies and halfpennies, stayed base. Old copper-heavy shillings kept passing from hand to hand at their reduced rate. Edward died in **1553**, at fifteen. It took his half-sister Elizabeth's great recoinage of **1560–61** to call the last of the base coins in, stamp a greyhound or a portcullis on them to mark their new, lower values, and melt them down.",
+      "Pennies and halfpennies stayed on the poor mix. The old copper-heavy shillings kept passing at the reduced rate. Edward died in 1553, at fifteen. The calling-in waited for Elizabeth. In 1560–61 the last base coins were called in, stamped with a greyhound or a portcullis to mark their new, lower values, and melted.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["The silver was cut, called down, and then put back."],
+    list: [
+      "**1544.** Henry's mint begins cutting silver and filling the gap with copper. The face value stays the same. English silver had been sterling: 925 parts in every 1,000.",
+      "**The cuts that follow.** Silver goes to three parts in four, then half, then a third. Gold slips from about 23 carats down to 20. The testoon wears through at the king's nose.",
+      "**1547.** Henry dies. The men governing for Edward improve the gold a little and keep squeezing the silver.",
+      "**March 1549.** Hugh Latimer, preaching before the young king, says he had almost put his shilling away as an old groat.",
+      "**Early 1551.** A new shilling holds only a quarter silver. The council under John Dudley, Earl of Warwick, cuts that base shilling to nine pence, then to six.",
+      "**1 October and 5 October 1551.** A commission, then the Tower indenture. Silver returns to 11 ounces 1 pennyweight fine. A heavy sovereign of 23 carats 3½ grains is worth thirty shillings. A 22-carat crown-gold sovereign is worth twenty shillings. The silver crown, the first struck in silver, carries 1551 under the horse.",
+      "**1553.** Edward dies at fifteen. Pennies, halfpennies, and the old base shillings are still in circulation at the reduced rate.",
+      "**1560–61.** Elizabeth's recoinage calls in the last base coins, stamps a greyhound or a portcullis on them, and melts them down.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "The turn came on that October day in **1551**. A boy king's mint once again put the silver back into the shilling, and stamped the year on the coin for anyone to see.",
+      "The shilling of the new standard was silver again: 11 ounces 1 pennyweight fine, about 92 parts in 100, a hair under sterling. The year under the horse was 1551.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2107028037153804288).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/edward-vi-1551-silver": edwardVi1551Silver,
   "blog/foreign-silver-legal-tender-1857": foreignSilverLegalTender1857,
   "blog/philadelphia-mint-1792": philadelphiaMint1792,
   "blog/government-only-money-printer-1877": governmentOnlyMoneyPrinter1877,
