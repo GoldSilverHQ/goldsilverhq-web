@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/edward-vi-1551-silver",
+    src: "/images/blog/edward-vi-1551-silver.jpg",
+    ogSrc: "/og/cards/blog-edward-vi-1551-silver.jpg",
+    alt: "Title card reading How a Teenage King Put Real Silver Back in England's Money, with coins of Edward VI dated 1551 and a portrait of the boy king.",
+    caption:
+      "5 October 1551 — the Tower indenture puts silver back into England's shilling.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on Edward VI putting silver back into the coin.",
+  },
+  {
     path: "/blog/foreign-silver-legal-tender-1857",
     src: "/images/blog/foreign-silver-legal-tender-1857.jpg",
     ogSrc: "/og/cards/blog-foreign-silver-legal-tender-1857.jpg",

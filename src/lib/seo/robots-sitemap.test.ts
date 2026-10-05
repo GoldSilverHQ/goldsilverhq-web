@@ -77,6 +77,7 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/gold-silver-ratio",
       "/markets/physical-silver-demand-by-country",
       "/blog",
+      "/blog/edward-vi-1551-silver",
       "/blog/foreign-silver-legal-tender-1857",
       "/blog/philadelphia-mint-1792",
       "/blog/government-only-money-printer-1877",
@@ -102,7 +103,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 283);
+    assert.equal(locs.length, 284);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
