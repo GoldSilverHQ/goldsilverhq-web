@@ -1,25 +1,24 @@
 {
-  "refreshedAt": "2026-10-04T12:21:30.119Z",
+  "refreshedAt": "2026-10-05T14:37:15.206Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
       "asOf": "2026-08",
       "source": "FRED M2SL",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "cpi": {
       "value": 334.131,
       "asOf": "2026-08",
       "yoyPct": 3.4,
       "source": "FRED CPIAUCSL",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "eurM3": {
       "value": 17628992353019.54,
       "asOf": "2026-08",
       "source": "ECB BSI M3",
-      "lastGoodAt": "2026-10-02",
-      "staleSince": "2026-10-03"
+      "lastGoodAt": "2026-10-05"
     },
     "fx": {
       "eurUsd": 1.14,
@@ -27,7 +26,7 @@
       "jpyUsd": 157.18,
       "asOf": "2026-09-25",
       "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "lbma": {
       "history": [
@@ -634,7 +633,7 @@
       "intragovUsd": 7826851578136.17,
       "asOf": "2026-10-01",
       "source": "US Treasury Fiscal Data, Debt to the Penny",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "usInterest": {
       "ttmGrossUsd": 1359074800827,
@@ -643,14 +642,14 @@
       "fiscalYear": 2026,
       "asOf": "2026-08-31",
       "source": "US Treasury Fiscal Data, Interest Expense on the Public Debt Outstanding",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "usTreasuryGold": {
       "oz": 261498926.241,
       "bookUsd": 11041059957.9,
       "asOf": "2026-08-31",
       "source": "US Treasury Fiscal Data, U.S. Treasury-Owned Gold",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "usDebtHistory": {
       "debtGdpPct": 122.6,
@@ -713,7 +712,7 @@
         "2025": 38514009000000
       },
       "source": "FRED GFDEGDQ188S / GFDEBTN",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "imfGovDebt": {
       "year": 2025,
@@ -728,7 +727,7 @@
         }
       },
       "source": "IMF World Economic Outlook (DataMapper GGXWDG_NGDP × NGDPD)",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     },
     "comexOpenInterest": {
       "gold": {
@@ -742,7 +741,7 @@
         "asOf": "2026-09-29"
       },
       "source": "CFTC Commitments of Traders (futures only), COMEX",
-      "lastGoodAt": "2026-10-04"
+      "lastGoodAt": "2026-10-05"
     }
   },
   "manual": [
