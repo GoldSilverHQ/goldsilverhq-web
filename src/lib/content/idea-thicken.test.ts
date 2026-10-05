@@ -51,10 +51,10 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       );
     }
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("information-not-advice")));
-    // Practice hub and bars-vs-coins are on-sitemap; other spokes stay off.
+    // Practice hub, bars-vs-coins, and premium-over-spot are on-sitemap; other spokes stay off.
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 

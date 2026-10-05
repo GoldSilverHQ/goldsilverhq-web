@@ -99,7 +99,7 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
     assert.doesNotMatch(mapSrc, /slug:\s*"(?!gold-silver-ratio)gold-silver-[\w-]+"/);
   });
 
-  it("keeps a two-link causal ledger and lists only the hub plus bars-vs-coins on the sitemap", () => {
+  it("keeps a two-link causal ledger and lists the hub, bars-vs-coins, and premium-over-spot on the sitemap", () => {
     assert.deepEqual(
       practiceHub.related.map((r) => r.href),
       ["/sound-money", "/history/ancient/why-markets-chose-gold-silver"],
@@ -120,13 +120,14 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
     assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
+    assert.match(sitemapSrc, /"\/gold-silver\/premium-over-spot"/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
@@ -182,20 +183,22 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () 
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
     assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
+    assert.match(sitemapSrc, /"\/gold-silver\/premium-over-spot"/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
 
-describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)", () => {
+describe("practice / premium-over-spot thicken (no new URLs, spoke on sitemap)", () => {
   it("thickens premium-over-spot to documentary depth", () => {
     const body = getBody("gold-silver", "premium-over-spot");
     assert.ok(body, "missing body for gold-silver/premium-over-spot");
@@ -231,7 +234,7 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
   });
 
-  it("keeps a two-link causal ledger and leaves the spoke off the sitemap", () => {
+  it("keeps a two-link causal ledger and lists the spoke on the sitemap", () => {
     const page = getPractice("premium-over-spot");
     assert.ok(page, "missing premium-over-spot in map.ts");
     assert.deepEqual(
@@ -251,17 +254,17 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke off sitemap)"
     const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
     assert.match(sitemapSrc, /"\/gold-silver"/);
     assert.match(sitemapSrc, /"\/gold-silver\/bars-vs-coins"/);
-    assert.doesNotMatch(sitemapSrc, /\/gold-silver\/premium-over-spot/);
+    assert.match(sitemapSrc, /"\/gold-silver\/premium-over-spot"/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
-    assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/premium-over-spot"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
@@ -324,14 +327,14 @@ describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\/storage/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/storage"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
@@ -403,14 +406,14 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\/spotting-fakes/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/spotting-fakes"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
@@ -480,14 +483,14 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke off sitemap)
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\/beginner-checklist/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/beginner-checklist"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
@@ -561,14 +564,14 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
     assert.doesNotMatch(sitemapSrc, /\/gold-silver\/buying-online/);
     assert.doesNotMatch(
       sitemapSrc,
-      /\/gold-silver\/(premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)/,
+      /\/gold-silver\/(storage|spotting-fakes|beginner-checklist|buying-online)/,
     );
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver"));
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/gold-silver/bars-vs-coins"));
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/gold-silver/buying-online"));
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
     );
   });
 });
