@@ -1053,4 +1053,46 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /browns-bottom|brown-s-bottom|uk-gold-sales/.test(path)));
   });
+
+  it("adds a dated 1999 Washington Agreement block before Brown’s Bottom", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const wag = body.find((s) => s.heading.startsWith("The Washington Agreement"));
+    assert.ok(wag, "expected a Washington Agreement section on the same spoke");
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
+    const sellers = body.find((s) => s.heading.startsWith("Reported net official sellers"));
+    assert.ok(brown && sellers);
+    assert.ok(body.indexOf(sellers) < body.indexOf(wag));
+    assert.ok(body.indexOf(wag) < body.indexOf(brown));
+
+    const text = [wag.heading, ...wag.paragraphs].join("\n");
+    assert.match(text, /26 September 1999/);
+    assert.match(text, /euro-area central banks/);
+    assert.match(text, /Sweden’s Riksbank/);
+    assert.match(text, /Swiss National Bank/);
+    assert.match(text, /Bank of England/);
+    assert.match(text, /about \*\*400 tonnes\*\*/);
+    assert.match(text, /\*\*2,000 tonnes\*\*/);
+    assert.match(text, /gold leasing/);
+    assert.match(text, /futures and options/);
+    assert.match(text, /reviewed after five years/);
+    assert.match(text, /1999–2002/);
+    assert.match(text, /Brown’s Bottom/);
+    assert.match(text, /ran while this cap was in force/);
+    assert.match(text, /section below/);
+    assert.match(text, /reported net official sellers table above/);
+    assert.match(
+      text,
+      /https:\/\/www\.ecb\.europa\.eu\/press\/pr\/date\/1999\/html\/pr990926\.en\.html/,
+    );
+    assert.doesNotMatch(text, /\b2004\b|\b2009\b|\b2014\b|\b2019\b|renewal|CBGA|Information only/i);
+    assert.doesNotMatch(text, /buy gold|forecast|price target|Kauf|should have held/i);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /washington-agreement|cbga-1999|wag-1999/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /washington-agreement|cbga/.test(path)));
+  });
 });
