@@ -41,7 +41,12 @@ function IdeaPage() {
             { label: page.title },
           ]}
         />
-        <ArticleLead kicker="Definition" title={page.title} teaser={page.summary} hero={hero} />
+        <ArticleLead
+          kicker={page.slug === "information-not-advice" ? undefined : "The idea"}
+          title={page.title}
+          teaser={page.summary}
+          hero={hero}
+        />
         <div className="mt-10">
           <EpisodeBody episode={page} clusterSlug="sound-money" />
         </div>

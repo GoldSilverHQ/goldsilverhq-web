@@ -555,56 +555,53 @@ const whatIsSoundMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A note can clear the till on Monday and still fail a harder test: can the issuer create more of it by decision alone? Sound money is money whose supply cannot be expanded at will by a political authority. The unit is costly to produce, or it is bound by a contract that can actually be enforced — typically **redeemability**: a holder can present the note and demand a known weight of metal. The point is not nostalgia for coins. It is whether the unit of account stays honest over long periods.",
+      "A note can clear the till on Monday and still be diluted on Tuesday, if the issuer can create more of it by decision alone. That is the whole test. A supply that cannot be expanded at will — because the unit is costly to produce, or because a holder can present the note and take a known weight of metal — is what the old phrase was pointing at. **Redeemability** is that presentment right. Legal tender and a busy till do not answer it.",
     ],
   },
   {
-    heading: "A working definition",
+    heading: "Who can add to the stock",
     paragraphs: [
-      "If a treasury or a central bank can create more units without a matching real cost, the money is not sound in this sense. It may still circulate. It may still be legal tender. Circulation is not the test. The test is whether the issuer can dilute the stock as a matter of policy.",
-      "Historically the constraint was the cost of mining and minting gold and silver, or a redeemability rule that let holders present paper and take a known weight of metal. When that stop is gone, the unit can still work as a medium of exchange. It no longer passes the test.",
-      "Three money jobs sit in the background of the definition: medium of exchange, unit of account, and store of value. Sound money is the claim that the third job is not optional packaging. A unit that clears today’s till but cannot be held across years without political permission to dilute it fails the store-of-value half of the idea.",
-      "Money that fails the test has a name of its own. The line between [hard money versus fiat](/sound-money/hard-money-vs-fiat) runs exactly here: one kind is costly to produce, the other exists because law and habit say it does.",
+      "For centuries the constraint was mining and minting gold and silver. A treasury that can add units with no matching real cost has already left that world. The notes may still circulate. What they no longer do is keep a store of value the issuer cannot vote away.",
+      "Money is asked to do three jobs: change hands, name prices, and hold value across years. Political money drops the third first. A unit that pays for groceries and cannot be held without permission to dilute it has failed the job that matters over a lifetime.",
+      "The line between [hard money versus fiat](/sound-money/hard-money-vs-fiat) runs here. One kind is costly to produce. The other exists because law and habit say it does.",
     ],
   },
   {
     heading: "Where the phrase comes from",
     paragraphs: [
-      "Older English used “sound” in two related ways: the ring of a good coin (as against a counterfeit or a clipped piece), and sound as in healthy, not debased. Both senses survive. A sound coin rang true. A sound monetary standard did not quietly lighten the unit.",
-      "Nineteenth-century writers used the phrase for metal standards and for convertibility rules that kept paper honest. Debates over free silver, bank notes, and gold clauses all leaned on that vocabulary: was the unit honest, or was it a political instrument dressed as money?",
-      "The phrase later migrated into textbooks, hard-money pamphlets, and modern glossaries, and picked up slogans along the way. Under the slogans the claim is still a testable one: who may create the unit, and at what cost.",
-      "Crypto writers now borrow the adjective for tokens with capped issuance schedules. That argument is about code rather than metal and statute. It is a different argument, with its own history.",
+      "Older English used “sound” two ways: the ring of a good coin, against a counterfeit or a clipped piece, and sound as in healthy, not debased. A sound coin rang true on the counter. A sound standard did not quietly lighten the unit.",
+      "Nineteenth-century writers used the phrase for metal standards and for convertibility rules that kept paper honest. Free silver, bank notes, and gold clauses were the same argument in different clothes: was the unit honest, or a political instrument dressed as money?",
+      "Textbooks and pamphlets later piled slogans on the words. Under the slogans the claim is still checkable. Who may create the unit, and at what cost?",
+      "Crypto writers now borrow the adjective for tokens with a capped issuance schedule. That argument is about code, not metal and statute. It has its own history.",
     ],
   },
   {
-    heading: "The test: issuer discretion",
+    heading: "When the window closes",
     paragraphs: [
-      "Ask one question of any unit: can the issuer expand the stock as policy, without a matching real cost or an enforceable redeemability contract? If yes, the money fails — even when it is popular, even when it is legal tender, even when it once had a gold story attached.",
-      "A gold coin can fail in practice through clipping, through a false mint ratio, or through a statute that ends public convertibility. Those are failures of the stop, not proofs that the definition was wrong. The definition names a constraint. It does not guarantee that every gold standard was well run.",
-      "Paper that is redeemable on demand in a defined weight of metal can pass while the contract holds. When the window closes, the same note becomes, for practical purposes, discretionary paper. That happened across Europe in the summer of **1914**, when war shut the gold window, and again on **15 August 1971**, when the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) suspended the last official promise to turn dollars into gold.",
-      "The test is institutional, not aesthetic. A beautiful coin with a false weight fails. An ugly note with a working redeemability window can pass while the window is open. Look at the stop, not the branding on the face.",
+      "A gold coin fails in practice through clipping, a false mint ratio, or a statute that ends public convertibility. Those are failures of the stop. A beautiful coin with a false weight fails. An ugly note with a working window can pass while the window is open. Look at the stop, not the portrait.",
+      "Paper redeemable on demand in a defined weight of metal holds while the contract holds. When the window closes, the same note is discretionary paper. War shut the gold window across Europe in the summer of **1914**. On **15 August 1971** the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) suspended the last official promise to turn dollars into gold.",
     ],
   },
   {
-    heading: "Metal, paper, and the stop",
+    heading: "Metal, paper, and a vault you cannot touch",
     paragraphs: [
-      "Metal entered money because markets needed a costly, recognisable, divisible stock. Stamps and statutes came later. Paper entered as a claim on metal, or as a warehouse receipt, long before it became a free-standing unit.",
-      "Sound money is not “only coins forever.” It is the presence of a stop that the issuer cannot casually repeal for fiscal convenience. Mining cost is one stop. A public convertibility contract is another. Gold sitting in a vault, with no holder able to claim it, is not a stop at all — which is why the word [“backed”](/sound-money/backed-money) needs such care.",
-      "Wartime suspensions, gold recalls, and closed windows are the same event seen in different years: the stop being removed. Each left the notes in circulation. Each changed what the notes were.",
+      "Metal entered money because markets needed a costly, recognisable, divisible stock. Stamps and statutes came later. Paper entered as a claim on metal, or as a warehouse receipt, long before anyone treated it as a free-standing unit.",
+      "A stop the issuer cannot repeal for a budget is the claim. Mining cost is one stop. A public convertibility contract is another. Gold in a vault, with no holder able to claim it, is not a stop — which is why [“backed”](/sound-money/backed-money) needs care.",
+      "Wartime suspensions, gold recalls, and closed windows are the same event in different years. The notes stayed in circulation. What a holder could demand for them did not.",
     ],
   },
   {
-    heading: "The stop, not nostalgia",
+    heading: "Rushes, clipping, and a stock that still grows",
     paragraphs: [
-      "The definition does not claim that gold and silver never changed in price, or that every gold standard was well run. Metal money can be debased by clipping, by mint ratio tricks, and by suspending convertibility. Relative prices still move under a hard unit. Sound money constrains one source of a general rise in prices; it does not freeze bread against rent.",
-      "Nor does a metal stop promise a fixed stock. The gold rushes in California and Australia around **1850**, and in South Africa after **1886**, added to the world’s gold and moved prices with it. What the miners could not do was add metal by decree. Every new ounce had to be found, dug, crushed, and refined before it could be coined.",
+      "Gold and silver change what they buy, and not every gold standard was well run. Clipping, mint-ratio tricks, and a suspended window debase a metal unit. Bread still moves against rent. A hard unit takes away one source of a general rise in prices. It does not freeze the shop.",
+      "A metal stop is not a fixed stock. The rushes in California and Australia around **1850**, and in South Africa after **1886**, added to the world’s gold and moved prices with it. Miners still could not add an ounce by decree. Every new ounce had to be found, dug, crushed, and refined before it could be coined.",
     ],
   },
   {
-    heading: "Where the test was failed",
+    heading: "1923, 1933, 1971",
     paragraphs: [
-      "The definition earns its keep in dated cases. In Germany in **1923**, a paper mark created against Treasury bills stopped working as money by November. In **1933** the United States ordered private gold delivered and then revalued the official ounce. In **1971** foreign governments lost the right to present dollars for gold. In each case the notes kept circulating. What the holder could demand for them did not survive.",
-      "Those episodes are told in full, with their statutes and their numbers, in [Sound Money History](/history). What falls on the holder when the unit weakens is the subject of [inflation and purchasing power](/sound-money/inflation-purchasing-power).",
+      "In Germany in **1923**, a paper mark issued against Treasury bills had stopped working as money by November. In **1933** the United States ordered private gold delivered, then revalued the official ounce. In **1971** foreign governments lost the right to present dollars for gold. The notes kept circulating each time. The claim on metal did not.",
+      "The statutes and the numbers are in [Sound Money History](/history). What the holder loses when the unit weakens is [inflation and purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
 ];
@@ -613,57 +610,57 @@ const hardMoneyVsFiat: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The same engraved note can change category overnight when a convertibility window closes. Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways. Circulation does not decide the category.",
+      "The same engraved note can change category overnight, when a convertibility window closes. On Friday it was a claim on a weight of metal. On Monday the law tells you to accept the paper. The ink is the same. The stop is gone.",
     ],
   },
   {
-    heading: "Hard money",
+    heading: "Costly to produce",
     paragraphs: [
-      "Hard money is money that is costly to produce. Historically that cost was mining and minting gold or silver. You cannot create a new ounce with a vote or a keystroke. You can steal it, debase the coin, or suspend convertibility — those are different failures — but the metal itself does not appear because a treasury needs it.",
-      "Hard is not a synonym for “never changes price.” An ounce of gold can buy more or less bread. The hardness is on the supply side: expanding the stock takes real resources. That is why markets settled on gold and silver long before stamps and statutes finished the story.",
-      "A redeemable note that is a claim on a defined weight of metal can sit in the hard category while the contract holds. The hardness is the metal stop, not the paper in the wallet. Drop the stop and the same paper migrates into the fiat column without changing its ink.",
-      "Scarcity alone is not enough. A rare collectible can be scarce and still not be money. Hard money couples costly production with monetary use — settlement, pricing, and holding balances — under rules that make new units expensive to create.",
+      "Hard money is costly to produce. Historically that cost was mining and minting gold or silver. A vote or a keystroke does not create an ounce. The metal can be stolen, the coin debased, the window suspended — those are different failures — but the ounce does not appear because a treasury needs it.",
+      "An ounce of gold can buy more bread or less. Hardness is on the supply side: expanding the stock takes real resources. Markets settled on gold and silver long before stamps and statutes finished the story.",
+      "A redeemable note, a claim on a defined weight of metal, sits with that costly unit while the contract holds. The hardness is the metal, not the paper in the wallet. Drop the stop and the same paper has changed category without a change of ink.",
+      "A rare collectible can be scarce and still not be money. Costly production has to meet monetary use — settlement, pricing, balances people hold — under rules that make the next unit expensive.",
     ],
   },
   {
-    heading: "Fiat money",
+    heading: "Let it be done",
     paragraphs: [
-      "Fiat money is a claim created by a state or a bank, accepted because of law and habit. The Latin *fiat* is “let it be done.” The unit exists because an authority says it does, and because people need it for taxes, debts, and daily settlement.",
-      "Fiat can be well managed or badly managed. Management is a separate question. The distinction is the stop. If the issuer can expand the stock as policy, the money is fiat even when it once had a gold story attached.",
-      "Legal tender rules, tax acceptance, and clearing habit keep fiat useful. Usefulness is not hardness. A convenient unit can still be discretionary paper. Central-bank independence, inflation targets, and fiscal rules are management tools inside fiat; they are not a return to mining-cost constraints.",
+      "Fiat money is a claim created by a state or a bank, accepted because of law and habit. The Latin *fiat* means “let it be done.” The unit exists because an authority says it does, and because taxes, debts, and daily settlement are demanded in it.",
+      "Management is a separate question from the stop. A fiat unit can be run tightly or loosely. If the issuer can expand the stock as policy, it is fiat even when the notes once carried a gold story.",
+      "Legal tender, tax acceptance, and clearing habit keep it convenient. Convenience is not a mining constraint. Central-bank independence, inflation targets, and fiscal rules are tools inside a discretionary unit. They do not put the next ounce back underground.",
     ],
   },
   {
-    heading: "Both can circulate",
+    heading: "What actually circulated",
     paragraphs: [
-      "Circulation does not decide the category. People have used salt, cigarettes, paper notes, bank deposits, and gold coin. A circulating fiat unit can be more convenient than coin. A hard unit can be hoarded and disappear from the till. The question is the constraint, not the popularity.",
-      "When convertibility is suspended, a note that was a claim on metal becomes, for practical purposes, fiat. That is what happened across Europe in [1914](/history/20th-century/classical-gold-standard-end), and to the dollar’s last official gold link in [1971](/history/20th-century/bretton-woods-nixon-1971). The paper did not change color overnight. The stop did.",
-      "The United States had already lived through the reverse. During the Civil War, paper greenbacks issued to pay for the fighting traded below gold in New York for years — the story of [greenbacks and the Civil War](/history/america/greenbacks-civil-war). **Resumption** in **1879** brought it back to **par** — one paper dollar again worth one gold dollar in the market. That was war paper and statute, not proof that paper always equals metal.",
-      "Gresham’s pattern — bad money driving good money out of the till when legal ratios misprice metals — is a circulation fact under hard regimes. It does not turn the undervalued metal into fiat. It shows that statute and market ratio can disagree while both metals remain costly to produce.",
+      "People have used salt, cigarettes, paper notes, bank deposits, and gold coin. Paper can be handier than coin. A hard unit can be hoarded until it leaves the till. Popularity does not name the category.",
+      "Suspend convertibility and a claim on metal becomes, for practical purposes, fiat. That is Europe in [1914](/history/20th-century/classical-gold-standard-end), and the dollar’s last official gold link in [1971](/history/20th-century/bretton-woods-nixon-1971). The paper did not change colour overnight.",
+      "The United States had already lived the reverse. Civil War greenbacks, issued to pay for the fighting, traded below gold in New York for years — [greenbacks and the Civil War](/history/america/greenbacks-civil-war). **Resumption** in **1879** brought the paper back to **par**: one paper dollar worth one gold dollar in the market again. War paper and a statute, not proof that paper and metal are the same thing.",
+      "Gresham’s pattern — bad money driving good money out of the till when a legal ratio misprices the metals — is a circulation fact under hard regimes. The undervalued metal is still costly to produce. Statute and the market ratio have simply disagreed.",
     ],
   },
   {
     heading: "Where the line blurs",
     paragraphs: [
-      "Gold-exchange systems, as after Bretton Woods, backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. The vocabulary of “gold” survived longer than the public claim.",
-      "Bank deposits that settle in fiat are claims on a banking system, not ounces. Covering a note issue with government bonds is a claim on a tax office, not metal backing. Most of the confusion gathers around the word [“backed”](/sound-money/backed-money).",
-      "Hard money is not “assets I like,” and fiat is not “money I dislike.” The line is production cost and issuer discretion. It is not a ranking of virtue. A well-run fiat regime can be stable for years. A mismanaged gold regime can still debase the coin.",
+      "After Bretton Woods, some currencies were backed with dollars and the dollar with official gold, not with coin in the public’s hand. The word “gold” outlived the public claim.",
+      "A bank deposit that settles in fiat is a claim on a banking system, not an ounce. A note issue covered by government bonds is a claim on a tax office. The confusion usually gathers on the word [“backed”](/sound-money/backed-money).",
+      "The line is production cost and whether the issuer can add units at will. A discretionary unit can sit still for years. A gold coinage can still be debased by the people who run the mint.",
     ],
   },
   {
-    heading: "Failures on each side",
+    heading: "How each one fails",
     paragraphs: [
-      "Hard money fails by debasement, by false mint ratios, by clipping, and by suspending convertibility. The metal can still exist while the unit stops being honest. [Bimetallism](/history/silver/bimetallism) — a system that makes both gold and silver legal money at a fixed mint ratio — shows how a legal ratio can push one metal out of circulation without abolishing either metal. The [Crime of 1873](/history/america/crime-of-1873) shows how statute can redefine which metal the unit points at.",
-      "Fiat fails by over-issue relative to the goods and claims it is asked to measure, by broken fiscal stops, and by loss of confidence that collapses demand for balances. Germany in **1923** is the extreme case: a paper mark issued for the Treasury until nobody would hold it, told in full in [Weimar 1923](/history/20th-century/weimar-1923).",
-      "Both categories can finance wars, pay taxes, and clear trade. The category names the stop. What holders feel when the unit weakens, under either label, is a fall in [purchasing power](/sound-money/inflation-purchasing-power).",
+      "A hard unit fails by debasement, a false mint ratio, clipping, and a suspended window. The metal can still exist while the unit stops being honest. [Bimetallism](/history/silver/bimetallism) — gold and silver both legal money at a fixed mint ratio — shows a legal ratio pushing one metal out of circulation without abolishing either. The [Crime of 1873](/history/america/crime-of-1873) shows a statute redefining which metal the unit points at.",
+      "A fiat unit fails when it is issued faster than the goods and claims it is asked to measure, when the fiscal stop breaks, and when people stop wanting to hold balances. Germany in **1923** is the extreme: a paper mark issued for the Treasury until nobody would hold it, in [Weimar 1923](/history/20th-century/weimar-1923).",
+      "Either kind can finance a war, pay a tax, and clear a trade. The name of the category is the stop. What the holder feels when the unit weakens is a fall in [purchasing power](/sound-money/inflation-purchasing-power).",
     ],
   },
   {
-    heading: "Costly production versus law and habit",
+    heading: "The next unit",
     paragraphs: [
-      "Put the two side by side and the difference is the path of the next unit. A new ounce of gold starts as ore underground. It has to be found, dug, crushed, refined, and assayed before it can settle anything, and every one of those steps costs labour and capital. A new unit of fiat starts as a decision, and the cost of carrying it out is close to nothing.",
-      "The digging never stops, and its pace can be counted. Ounces of silver leaving the ground for every ounce of gold make a mining-ratio clock, and it runs well below the price ratio traders quote as the [gold–silver ratio](/markets/gold-silver-ratio). The gap between the two numbers is a reminder that even hard money has a supply, only one that no treasury can vote into being.",
-      "Everything else follows from that difference. One kind of money can be lost, stolen, or debased by the people who handle it, but not multiplied by them. The other can be managed well for a generation and then, when a budget or a war demands it, multiplied by the institution that issues it.",
+      "A new ounce of gold starts as ore. It has to be found, dug, crushed, refined, and assayed, and every step costs labour and capital. A new fiat unit starts as a decision. Carrying the decision out costs almost nothing.",
+      "The digging has a pace. Ounces of silver leaving the ground for every ounce of gold make a mining-ratio clock, and it runs well below the price ratio traders quote as the [gold–silver ratio](/markets/gold-silver-ratio). Even a hard unit has a supply. No treasury votes that supply into being.",
+      "One kind of money can be lost, stolen, or debased by the people who handle it. They cannot multiply it. The other can be managed for a generation and then, when a budget or a war demands it, multiplied by the institution that issues it.",
     ],
   },
 ];
@@ -672,55 +669,55 @@ const inflation: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "If the same hour of work buys less bread, less rent, or less metal over years, the unit has weakened — even when no wheelbarrow appears in the street. Inflation is a decline in the purchasing power of the unit. Prices are the visible surface. Hyperinflation is a special case, not the definition.",
+      "If the same hour of work buys less bread, less rent, or less metal over the years, the unit has weakened — even when no wheelbarrow appears in the street. That loss is purchasing power. Prices are only the surface. A rise of **50% or more in a month** is a special case of the same fact, not a separate species of money.",
     ],
   },
   {
-    heading: "What inflation measures",
+    heading: "The unit, not the index",
     paragraphs: [
-      "The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check. If the same hour buys less across years, the unit has weakened. That can happen with or without a dramatic crisis.",
-      "Consumer-price indexes and wholesale indexes are measurement tools. They are not the definition. The definition is purchasing-power erosion of the unit. Indexes help document that erosion; they do not invent it. Basket choice, quality adjustments, and base years matter for reading a series — they do not rewrite the idea.",
-      "[Weimar 1923](/history/20th-century/weimar-1923) is the extreme, and it is tempting to paste it onto every mild rise in a price index. Ordinary inflation and hyperinflation share a channel when the money stock is discretionary; they do not share a severity or a timeline. A two-percent annual rise and a fifty-percent monthly rise are different animals.",
+      "The question underneath is whether the stock of money is growing faster than the goods and claims it is asked to measure. An hour of work is a useful check, with or without a crisis.",
+      "Consumer-price indexes and wholesale indexes document the erosion. They do not invent it. Basket choice, quality adjustments, and the base year change how a series reads. They do not change what the unit buys.",
+      "[Weimar 1923](/history/20th-century/weimar-1923) is the extreme, and it gets pasted onto every mild rise in an index. A two-percent annual rise and a fifty-percent monthly rise share a channel when the stock is discretionary. They do not share a speed.",
     ],
   },
   {
-    heading: "Money stock and prices",
+    heading: "Three reasons a price moves",
     paragraphs: [
-      "Prices can rise because goods are scarce, because demand shifts, or because more units chase the same things. Hard-money writers emphasise the last channel. A complete account of any year needs all three. What matters for money is the last one: a unit that can be issued without cost turns it into a policy choice.",
-      "Sound money does not make relative prices stand still. It constrains one source of a general rise. Harvest failures, war damage, and demand shifts still move particular prices under a hard unit. A gold standard that holds convertibility can still see wartime scarcity lift food prices without rewriting the unit.",
-      "When the issuer can expand the stock as policy, a fiscal gap can be closed with new units. Tax arrives later in weaker money. Real cash balances fall; people spend faster; velocity rises. That feedback is the mechanical core of severe inflation episodes — a mechanism, not a morality play.",
+      "Prices rise because goods are scarce, because demand shifts, or because more units chase the same things. A year usually has all three. The one that matters for the unit is the last: issue without cost turns the stock into a policy choice.",
+      "A hard unit does not freeze bread against rent. A failed harvest, war damage, and a shift in demand still move particular prices while convertibility holds. Wartime scarcity can lift food under a gold standard without rewriting the ounce.",
+      "When the issuer can expand the stock as policy, a fiscal gap is closed with new units. Tax arrives later, in weaker money. Real cash balances fall, people spend faster, and velocity rises. That loop is the mechanics of a severe episode.",
     ],
   },
   {
-    heading: "Purchasing power as the check",
+    heading: "What the unit buys",
     paragraphs: [
-      "Ask what a unit buys over time: a basket of goods, an hour of common labor, a weight of metal. If the basket shrinks for the same nominal wage, purchasing power fell. If metal rises sharply in the unit while the metal’s mining cost did not jump overnight, the unit may be the thing that weakened.",
-      "Premiums, taxes, and local scarcity still matter for any single price. The purchasing-power check is about the unit across many goods, not one headline. Whether the issuer can expand the stock as policy is the dividing line between [hard money and fiat](/sound-money/hard-money-vs-fiat).",
-      "Greenbacks during the American Civil War traded at a gold premium in New York. That premium was the market’s measure of paper against metal — a wartime purchasing-power gap, quoted daily, that anyone holding greenbacks could read. Resumption later closed it; the history is in [greenbacks and the Civil War](/history/america/greenbacks-civil-war).",
-      "Interest rates and bond prices move with inflation expectations too. A lender who expects the unit to weaken asks for more of it back. That is a second-order effect. The first-order object is still what the unit buys.",
+      "Check a basket of goods, an hour of common labor, a weight of metal. If the basket shrinks for the same nominal wage, purchasing power fell. If metal rises sharply in the unit and the cost of mining it did not jump overnight, the unit is the thing that weakened.",
+      "A premium, a tax, or a local shortage can move one price. The check is the unit across many goods. Whether the issuer can expand the stock as policy is the line between [hard money and fiat](/sound-money/hard-money-vs-fiat).",
+      "Greenbacks in the American Civil War traded at a gold premium in New York. That premium was paper measured against metal, quoted daily. Resumption later closed it. The history is [greenbacks and the Civil War](/history/america/greenbacks-civil-war).",
+      "A lender who expects the unit to weaken asks for more of it back. Bond prices move with that expectation. The first object is still what the unit buys.",
     ],
   },
   {
     heading: "Hyperinflation is a case",
     paragraphs: [
-      "Hyperinflation is usually marked when prices rise on the order of **50% or more in a month**. It is a phase, not a synonym for every inflation. Germany crossed that line in mid-**1922**; the paper mark then ceased to work as a store of value or a unit of account by autumn **1923**.",
-      "The cartoons — wheelbarrows, wallpaper notes — are evidence of velocity and refusal to hold balances. They are not the cause. In Germany the chain ran from war finance and a missing gold stop to fiscal gaps and a central bank that turned Treasury paper into marks.",
-      "Assignats in revolutionary France and Law’s **1720** System are other paper collapses with their own dates and instruments. Rhyme teaches mechanism. Merging them erases centuries. Each belongs to its own regime and its own decade.",
-      "Stabilisation after hyperinflation usually needs three things at once: a new unit, a fiscal stop, and a credible refusal to print for the treasury. Germany’s Rentenmark in November **1923** had all three. Without the second and third, a new name on the note only restarts the clock.",
+      "Hyperinflation is usually marked when prices rise on the order of **50% or more in a month**. It is a phase. Germany crossed that line in mid-**1922**. By autumn **1923** the paper mark had ceased to work as a store of value or a unit of account.",
+      "Wheelbarrows and wallpaper notes are evidence that people refused to hold balances. They are not the cause. In Germany the chain ran from war finance and a missing gold stop to fiscal gaps and a central bank that turned Treasury paper into marks.",
+      "Assignats in revolutionary France, and Law’s System in **1720**, are other paper collapses, with their own dates and their own instruments. The rhyme is the mechanism. Merging the episodes erases the centuries between them.",
+      "Stopping one usually takes three things at once: a new unit, a fiscal stop, and a credible refusal to print for the treasury. Germany’s Rentenmark in November **1923** had all three. A new name on the note, without the second and the third, only restarts the clock.",
     ],
   },
   {
-    heading: "Not every rise is printing",
+    heading: "After the shortage passes",
     paragraphs: [
-      "It would be too neat to call every price rise “only printing.” Scarcity and demand shifts are real, and a war or a failed harvest can lift prices under the hardest money ever minted. What the money-stock channel explains is the rise that keeps going after the scarcity passes, because the unit itself is being multiplied.",
-      "The two can be told apart over time. A shortage lifts some prices and then eases. A weakening unit lifts nearly all of them and does not ease, because the thing being measured has changed.",
+      "A war or a failed harvest can lift prices under the hardest coinage ever minted. Scarcity and a shift in demand are real. What a growing money stock explains is the rise that keeps going after the shortage has passed, because the unit itself is being multiplied.",
+      "A shortage lifts some prices and then eases. A weakening unit lifts nearly all of them and does not ease. The thing being measured has changed.",
     ],
   },
   {
     heading: "The slow case and the fast one",
     paragraphs: [
-      "Most inflation is slow. A few percent a year is hard to feel in a week and easy to feel across a working life: a saver who holds the unit for thirty years at three percent a year ends up with well under half of the purchasing power he started with. Nobody queues at a bank for that. It shows up in wages that have to be renegotiated and savings that have to be put somewhere else.",
-      "The fast case is rarer and louder. It is the one people remember, and it is the one that ends with a new unit. Both run through the same channel. What separates them is how quickly the holder notices, and how quickly he stops holding.",
+      "Most of it is slow. A few percent a year is hard to feel in a week and easy to feel across a working life. A saver who holds the unit for thirty years at three percent a year ends up with well under half the purchasing power he started with. Nobody queues at a bank for that. It shows up in wages that have to be renegotiated, and in savings that have to sit somewhere else.",
+      "The fast case is rarer and louder. It is the one people remember, and it ends with a new unit. Both run through the same channel. What separates them is how quickly the holder notices, and how quickly he stops holding.",
     ],
   },
 ];
@@ -729,56 +726,56 @@ const backedMoney: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A vault photograph and a teller window are not the same claim. “Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing: a contract. A currency said to be “supported by” gold sitting in a vault, with no public claim on it, is another: a slogan, or at best a reserve-management fact.",
+      "A vault photograph and a teller window are not the same claim. A note you can hand in for a defined weight of metal is a contract. Gold sitting in a vault, with no public right to ask for it, is a slogan — or, at best, a line on a reserve sheet. “Backed” is the word people use for both.",
     ],
   },
   {
     heading: "A contract, or a slogan",
     paragraphs: [
       "Redeemability is testable. Either a holder can demand the metal at a known price, or they cannot. Reserves on a balance sheet, without that right, do not make the unit hard.",
-      "A classical convertibility rule said: present the note, take the weight. The vault mattered because the public claim could empty it. A modern central-bank gold pile without that claim is a portfolio fact. It is not the same contract.",
-      "When writers say a currency is “backed by the full faith and credit” of a government, they name a tax and legal-tender story. That can be a strong fiscal claim. It is not metal backing.",
-      "The word “backed” sells confidence. The useful question is the mechanism. Without a presentment right, confidence is a story about the issuer — not a metal contract the holder can enforce at a teller window on a working day.",
+      "A classical convertibility rule said: present the note, take the weight. The vault mattered because the public claim could empty it. A modern central-bank gold pile without that claim is a portfolio. It is not the same contract.",
+      "“Full faith and credit” names taxes and legal tender. That can be a strong fiscal claim. It is not metal.",
+      "Without a presentment right, confidence is a story about the issuer. It is not a contract a holder can enforce at a window on a working day.",
     ],
   },
   {
-    heading: "Three easy confusions",
+    heading: "Bonds, dollars, and a mortgage",
     paragraphs: [
-      "First: covering a note issue with government bonds is not metal backing. It is a claim on a tax office. Second: a gold-exchange standard, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. Third: the [Rentenmark](/history/20th-century/weimar-1923) was “backed” by mortgages. That was an accounting and political device to stop the press, not a pile of gold at the teller window.",
-      "The official book value of U.S. gold — still carried at a statutory dollar price far from the market — is another trap for the word. The [official gold book value](/markets/official-gold-book-value) is an accounting convention, not a sign that anyone can redeem anything at that price.",
-      "Central-bank reserve totals answer “how much metal does the state hold?” They do not answer “can a private holder present notes and take metal?” A rising chart of [central-bank gold reserves](/markets/central-bank-gold-reserves) can sit beside a purely fiat domestic unit without contradiction.",
+      "Covering a note issue with government bonds is a claim on a tax office. A gold-exchange standard, as after [Bretton Woods](/history/20th-century/bretton-woods-nixon-1971), backed some currencies with dollars and dollars with official gold — not with coin in the public’s hand. The [Rentenmark](/history/20th-century/weimar-1923) was “backed” by mortgages: an accounting and political device to stop the press, not a pile of gold at the window.",
+      "The official book value of U.S. gold is still carried at a statutory dollar price far from the market. That [official gold book value](/markets/official-gold-book-value) is an accounting convention. Nobody redeems anything at that price.",
+      "A chart of [central-bank gold reserves](/markets/central-bank-gold-reserves) answers how much metal the state holds. It does not answer whether a private holder can present notes and take metal. The chart can rise beside a domestic unit that is pure fiat.",
     ],
   },
   {
-    heading: "Redeemability in practice",
+    heading: "The window",
     paragraphs: [
-      "Under a working gold or silver standard, banks and treasuries published rules for convertibility: which notes, which weights, which offices. The public test was the window. When the window closed for war or emergency, the note’s legal name might still say “gold.” The contract had changed.",
-      "The [1933 U.S. gold recall](/history/20th-century/1933-gold-recall) shows the other side: even a gold dollar can have the public claim removed by statute. Citizens lost monetary gold rights years before the **1971** close of the gold window for foreign official holders.",
-      "Bretton Woods then limited the remaining gold link to official holders at **$35** an ounce. Retail Americans were not walking into a Treasury window for coin. Calling that era “gold-backed money” without naming who could redeem is how the slogan swallows the contract.",
-      "Warehouse receipts and early bank notes started as claims on deposited metal. That is how paper money began. When the receipt stops being payable in metal on demand, the instrument has changed category even if the engraved language lags behind.",
+      "Under a working gold or silver standard, banks and treasuries published the rules: which notes, which weights, which offices. The public test was the window. When the window closed for a war or an emergency, the note might still say “gold.” The contract had changed.",
+      "The [1933 U.S. gold recall](/history/20th-century/1933-gold-recall) is the other side of the same fact. A gold dollar can have the public claim removed by statute. Americans lost monetary gold years before **1971**, when the window closed for foreign official holders.",
+      "Bretton Woods then limited the remaining gold link to those official holders, at **$35** an ounce. Retail Americans were not walking into a Treasury window for coin. Calling those years gold-backed, without naming who could redeem, is how the slogan swallows the contract.",
+      "Warehouse receipts and early bank notes started as claims on deposited metal. That is how paper money began. When the receipt stops being payable in metal on demand, the instrument has changed category even if the engraving lags behind.",
     ],
   },
   {
     heading: "Reserves without a public claim",
     paragraphs: [
-      "A treasury can hold metal, foreign exchange, and securities while the domestic unit is pure fiat. The reserves may stabilise an exchange rate, satisfy creditors, or signal prudence. None of that restores redeemability for note holders unless law says so.",
-      "Mortgage “backing,” land “backing,” and commodity baskets in propaganda often mean: we assigned an accounting cover so the new issue looks limited. The Rentenmark’s mortgages were that kind of device. Holders could not demand a farm at the teller window.",
-      "Ask two questions of any “backed” claim: backed by what instrument, and who may present the claim? If the answer is “gold in a vault, for the central bank’s own books,” you have reserves. If the answer is “a defined weight, on demand, for the holder,” you have a contract.",
-      "Fractional reserves against redeemable notes are a banking topic: the note is still a claim on metal, subject to run risk. That is not the same as a non-redeemable unit whose issuer merely owns some gold. Keep the claim structure straight before arguing ratios.",
+      "A treasury can hold metal, foreign exchange, and securities while the domestic unit is fiat. The reserves may steady an exchange rate, satisfy a creditor, or signal prudence. None of that restores a holder’s right to metal unless the law says so.",
+      "Mortgage “backing,” land “backing,” and commodity baskets in a propaganda sheet usually mean an accounting cover, so the new issue looks limited. The Rentenmark’s mortgages were that device. Holders could not demand a farm at the window.",
+      "Two questions cut through the word. Backed by what instrument, and who may present the claim? “Gold in a vault, for the central bank’s own books” is reserves. “A defined weight, on demand, for the holder” is a contract.",
+      "A fractional reserve against a redeemable note is a banking fact: the note is still a claim on metal, and it can be run. That is a different structure from a non-redeemable unit whose issuer happens to own some gold.",
     ],
   },
   {
     heading: "Why the vault still matters",
     paragraphs: [
-      "Reserves are useful to states. They settle debts between governments, defend exchange rates, and reassure creditors in a crisis. None of that is nothing. It is simply a different thing from a public right to present a note and take metal.",
-      "The difference shows up when it is tested. A holder with a contract can walk to the window. A holder with a slogan can only read about the vault. The same tonnes of gold can sit behind both arrangements; only one of them puts the key in the holder’s hand.",
+      "States use reserves. They settle debts between governments, defend an exchange rate, and reassure creditors in a crisis. The same tonnes can sit behind a public right or behind a closed door. Only one of those arrangements puts a key in the holder’s hand.",
+      "A holder with a contract can walk to the window. A holder with a slogan can read about the vault.",
     ],
   },
   {
     heading: "What the word used to mean",
     paragraphs: [
-      "For most of the nineteenth century, “backed” was not a slogan at all. A note was backed if it could be exchanged for coin, and the bank that issued it could be run if it could not pay. Each step of the twentieth century — the wartime suspensions of **1914**, the American recall of **1933**, the closing of the official window in **1971** — kept the word and removed a holder from the contract.",
-      "By the end, the word described a feeling about the issuer rather than a right against it. Pinning it back to its older meaning — who can present what, for how much — is what makes the history of those years readable. [What is sound money?](/sound-money/what-is-sound-money) names the constraint; [hard money vs fiat](/sound-money/hard-money-vs-fiat) names the cost of production behind it.",
+      "For most of the nineteenth century the word was not a feeling. A note was backed if it could be exchanged for coin, and the bank that could not pay could be run. The wartime suspensions of **1914**, the American recall of **1933**, and the closing of the official window in **1971** kept the word and removed a holder from the contract.",
+      "By the end it described a mood about the issuer rather than a right against it. Who can present what, for how much, is the older meaning, and it is the one that makes those years readable.",
     ],
   },
 ];
@@ -787,46 +784,39 @@ const barsVsCoins: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A bar and a coin can share the same metal, the same fineness, and the same troy-ounce arithmetic. What differs is the object: how the metal was formed, what stamp a stranger can read, and how much work it takes to turn the object back into a later bid. That is a comparison of form factor — fabrication, premium, and resale friction.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names form as the first handling decision. The paragraphs below stay with that decision.",
+      "A bar and a coin can share the metal, the fineness, and the troy-ounce arithmetic. What differs is the object: how it was formed, what stamp a stranger can read, and how much work it takes to turn it into a later bid. That comparison is the form factor — fabrication, the premium, and the friction of a later sale.",
     ],
   },
   {
-    heading: "What the comparison measures",
+    heading: "Weight is not the object",
     paragraphs: [
-      "The useful question is not which form wins. It is what the comparison is measuring. A poured kilo bar, a one-ounce minted bar, and a government bullion coin can all be .999 or .9999 fine gold or silver. They are not the same object in commerce. Weight and fineness describe the metal. Form describes the work done to the metal and the market that later has to accept it.",
-      "Size is part of form. A large wholesale bar spreads fabrication and assay cost over many ounces. A one-ounce piece carries that cost on a single ounce. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison. Small minted bars sit closer to coins on cost and on how easily they change hands. Name the size, or the comparison is empty.",
-      "Bullion and collectibles are different markets. A proof, a commemorative, or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication premium turns into a narrative price.",
+      "A poured kilo bar, a one-ounce minted bar, and a government bullion coin can all be .999 or .9999 fine. They are not the same object in commerce. Weight and fineness describe the metal. Form describes the work done to it, and the market that later has to accept it.",
+      "Size is part of form. A large wholesale bar spreads fabrication and assay across many ounces. A one-ounce piece carries that cost on a single ounce. Calling one “a bar” and the other “a coin,” without the weight, empties the comparison. Small minted bars sit closer to coins on cost and on how easily they change hands.",
+      "A proof, a commemorative, or a scarce date is priced as an object with a story. Bullion is metal as metal, with a common stamp. Mixing the two is how a fabrication cost turns into a narrative price.",
     ],
   },
   {
     heading: "Minting, casting, pouring",
     paragraphs: [
-      "Fabrication is the work that turns refined metal into a countable piece. The two common shop-floor paths are pouring — casting — and striking, which is minting. A poured bar is melted, poured into a mold, cooled, and stamped with weight, fineness, and a maker’s name. Larger bars often carry a serial. The economics are simple: one mold, one stamp, many ounces.",
-      "A minted piece starts as a blank of known weight. Dies strike a design. Edges may be reeded. The mint’s job is repeatability: thousands of objects that match a published spec for diameter, thickness, and weight. That is more work per ounce than a pour. Dies wear. Inspection is tighter. The extra cost is not a moral grade. It is labor and equipment spread over fewer ounces.",
-      "Government mints and private refiners both do this work. A sovereign coin usually carries a face value far below the metal and a design the public already knows — Maple Leaf, Krugerrand, Philharmonic, and the rest. A private bar usually carries a refiner’s stamp and, above a certain size, a serial. Neither path is “more metal.” The difference is how much fabrication was spent per ounce, and how much of that spend is later recoverable when a counterparty has to believe the stamp without melting the piece.",
+      "Fabrication is the work that turns refined metal into a countable piece. The two shop-floor paths are pouring — casting — and striking, which is minting. A poured bar is melted, poured into a mold, cooled, and stamped with weight, fineness, and a maker’s name. Larger bars often carry a serial. One mold, one stamp, many ounces.",
+      "A minted piece starts as a blank of known weight. Dies strike a design. Edges may be reeded. The mint’s job is repeatability: thousands of objects that match a published spec for diameter, thickness, and weight. That is more work per ounce than a pour. Dies wear. Inspection is tighter. The extra cost is labour and equipment spread over fewer ounces.",
+      "Government mints and private refiners both do the work. A sovereign coin usually carries a face value far below the metal, and a design the public already knows — Maple Leaf, Krugerrand, Philharmonic, and the rest. A private bar carries a refiner’s stamp and, above a certain size, a serial. Neither path is more metal. The difference is how much fabrication was spent per ounce, and how much of that spend a later counterparty will believe without melting the piece.",
     ],
   },
   {
-    heading: "Premium as a price of form",
+    heading: "The gap is a price of form",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the [premium over spot](/gold-silver/premium-over-spot). It is a price of form and of liquidity. It is not automatically a trick.",
-      "A large bar often prints a smaller premium per ounce because fabrication and assay were spread. A common bullion coin often prints a larger premium because more work sat on each ounce and because the design is easy to name. A thin product with a fat ask and a poor bid is expensive twice: once when it leaves a dealer, again when it returns. The number that matters later is the bid, not only the ask.",
-      "Premiums move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can cheapen when many are offered and widen when they are scarce at retail. A large bar can sit near spot and still be awkward if the only later buyer wants a melt or a brand they do not know. Compare the gap to the form, not to a story about purity.",
+      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the [premium over spot](/gold-silver/premium-over-spot): a price of form and of liquidity. It is not automatically a trick.",
+      "A large bar often prints a smaller premium per ounce because fabrication and assay were spread. A common bullion coin often prints a larger one because more work sat on each ounce and because the design is easy to name. A thin product with a fat ask and a poor bid is expensive twice — once when it leaves a dealer, again when it returns. The number that matters later is the bid.",
+      "Premiums move with mint capacity, transport, and how common a stamp is. A familiar coin can cheapen when many are offered and widen when they are scarce at retail. A large bar can sit near spot and still be awkward if the only later buyer wants a melt, or a brand they do not know.",
     ],
   },
   {
     heading: "Recognition and resale friction",
     paragraphs: [
-      "Recognition is the cost of convincing the next counterparty that the object is what the stamp says. A widely struck government coin is a type a stranger can name without a laboratory. That is why the extra fabrication often survives into the later bid: the next desk already knows the diameter, the design, and the usual fakes. A private bar is weight and a maker. If the maker is known and the serial can be checked, the friction is low. If the maker is unknown, or the bar is large enough that a desk would rather melt than inventory it, the friction rises.",
-      "Resale friction is that cost in time and in haircut. Dividing a holding is part of it. Ten one-ounce coins can leave in ones. A single large bar cannot. Storage density runs the other way: bars pack more metal into less space. None of those facts picks a winner. They are the mechanics of later sale. A coin’s face value does not make it rent money in most places; the face is a legal label far below the metal.",
-      "Counterfeits exist for popular coins and for small bars with famous stamps. That is an authenticity problem, not a form ranking. A common type is easier to check against a published spec and easier for a fake to copy. High-level filters — weight, dimensions, a counterparty who will still be there next year — belong with the other handling notes. The form comparison only needs the friction: recognition is a cost that some objects have already paid in fabrication.",
-    ],
-  },
-  {
-    heading: "What the comparison leaves you with",
-    paragraphs: [
-      "The comparison measures form factor: how the metal was made, what that work costs per ounce, how the premium prices that work and that liquidity, and how much friction a later sale carries. Back on [Gold & Silver in Practice](/gold-silver) the same facts sit beside premium, storage, authenticity, and starting size. If the next question is the gap between the screen and the object, open [premium over spot](/gold-silver/premium-over-spot).",
+      "Recognition is the cost of convincing the next counterparty that the object is what the stamp says. A widely struck government coin is a type a stranger can name without a laboratory, which is why the extra fabrication often survives into the later bid. A private bar is weight and a maker. If the maker is known and the serial can be checked, the friction is low. If the maker is unknown, or the bar is large enough that a desk would rather melt it than inventory it, the friction rises.",
+      "Ten one-ounce coins can leave in ones. A single large bar cannot. Storage density runs the other way: bars pack more metal into less space. A coin’s face value does not make it rent money in most places. The face is a legal label far below the metal.",
+      "Counterfeits exist for popular coins and for small bars with famous stamps. That is an authenticity problem, not a ranking of forms. A common type is easier to check against a published spec, and easier for a fake to copy. Weight, dimensions, and a counterparty who will still be there next year are the high-level filters. Recognition itself is a cost some objects have already paid in fabrication.",
     ],
   },
 ];
@@ -835,47 +825,38 @@ const premiumOverSpot: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A dealing screen prints a price for an ounce that no one has to ship. The object on a counter was poured or struck, branded, insured, and offered by a desk that must later bid for it. The gap is the premium over spot — the price of form, brand, mint, and liquidity.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names premium as one handling fact among form, storage, authenticity, and starting size. The paragraphs below stay with that fact.",
+      "A dealing screen prints a price for an ounce that nobody has to ship. The object on a counter was poured or struck, branded, insured, and offered by a desk that must later bid for it. The gap between those two numbers is the premium over spot — form, brand, mint, and liquidity.",
     ],
   },
   {
-    heading: "What the premium measures",
+    heading: "Screen ounce, object in hand",
     paragraphs: [
-      "Spot is a reference print for a paper ounce. In the gold and silver trade the usual references are the London Bullion Market Association prices — the LBMA Gold Price and the LBMA Silver Price — and the nearby futures prints that move with them. Those numbers describe unallocated metal of a published specification. They do not describe a one-ounce coin in a flip, or a cast bar in a retail safe.",
-      "The dealer’s ask is the price of a specific object: a named form, a named weight, a named stamp. Subtract the spot reference from that ask and the remainder is the premium. Both sides of the comparison can be .999 or .9999 fine. The premium measures the work and the market around the ounce, not a second chemistry.",
-      "The later number is the bid: what a desk will pay for that same object today. An ask far above spot can still be a clean quote for a common coin. A bid close to spot can still be a poor exit if the object is awkward to name. The spread between ask and bid is part of the physical market. Reading only the ask is reading only half the tape.",
+      "Spot is a reference print for a paper ounce. In the trade the usual references are the London Bullion Market Association prices — the LBMA Gold Price and the LBMA Silver Price — and the nearby futures prints that move with them. Those numbers describe unallocated metal of a published specification. They do not describe a one-ounce coin in a flip, or a cast bar in a retail safe.",
+      "The dealer’s ask is the price of a specific object: a named form, a named weight, a named stamp. Subtract the spot reference and the remainder is the premium. Both sides of the comparison can be .999 or .9999 fine. The premium measures the work and the market around the ounce, not a second chemistry.",
+      "The later number is the bid: what a desk will pay for that same object today. An ask far above spot can still be a clean quote for a common coin. A bid close to spot can still be a poor exit if the object is awkward to name. The spread between ask and bid is part of the physical market. The ask alone is half the tape.",
     ],
   },
   {
-    heading: "Why a premium exists",
+    heading: "Why the gap exists",
     paragraphs: [
-      "Fabrication is the first cost. Refined metal must be poured or struck into a countable piece, stamped with weight and fineness, and — above a certain size — given a serial. Dies, molds, inspection, and assay do not disappear because the screen already has a number. A large bar spreads that work. A small piece concentrates it.",
-      "Distribution is the second. The object has to leave a mint, sit in insured transit, and arrive at a desk that will still be there when someone wants the same stamp back. Freight, insurance, and capital tied up in transit are not in the LBMA print. They are in the ask.",
-      "Inventory is the third. A dealer who shows a coin or a bar has already paid for it, or borrowed to hold it, and must carry the metal through a quiet week. The bid–ask is how that book is funded. A wide ask with a thin bid can mean the desk does not want more of that stamp. A tight pair can mean the stamp is easy to turn.",
-      "Recognition is the fourth. A stamp a stranger can name without a laboratory is easier to bid for. A government mint mark, a well-known refiner, a common weight — those facts reduce the next counterparty’s checking cost. Brand and mint are part of liquidity: how quickly the object can change hands without a melt. Liquidity has a price. The premium is where that price often shows up.",
+      "Fabrication is the first cost that the screen does not carry. Refined metal has to be poured or struck into a countable piece, stamped with weight and fineness, and — above a certain size — given a serial. Dies, molds, inspection, and assay do not vanish because London already printed a number. A large bar spreads that work. A small piece concentrates it.",
+      "Then the object has to leave a mint, sit in insured transit, and arrive at a desk that will still be there when someone wants the same stamp back. Freight, insurance, and capital tied up in transit are in the ask, not in the LBMA print.",
+      "A dealer who shows a coin or a bar has already paid for it, or borrowed to hold it, and must carry it through a quiet week. The bid–ask is how that book is funded. A wide ask with a thin bid can mean the desk does not want more of that stamp. A tight pair can mean the stamp is easy to turn.",
+      "A stamp a stranger can name without a laboratory is easier to bid for. A government mint mark, a well-known refiner, a common weight — those facts cut the next counterparty’s checking cost. Brand and mint are part of how quickly the object changes hands without a melt. That liquidity has a price, and the premium is where it usually shows.",
     ],
   },
   {
     heading: "Form and size",
     paragraphs: [
-      "Form and size change the gap because they change how much work sits on each ounce and how easy the object is to name later. A wholesale bar can print a smaller premium per ounce because fabrication and assay were spread. A common bullion coin can print a larger one because more work sat on a single ounce and because the design is already in the public vocabulary. Small minted bars sit between those poles. The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). The price consequence is simpler: the premium moves with the form.",
-      "Silver often shows a larger percentage gap than gold for the same reason of scale. Striking or pouring a one-ounce silver piece costs labor that is a bigger share of a cheaper ounce. That is arithmetic of fabrication, not a verdict that silver is dear or gold is cheap.",
-      "Premiums also move. Mint capacity, transport, and how common a stamp is all change the gap. A familiar coin can tighten when many are offered and widen when retail stock is thin. A large bar can sit near the London print and still be awkward if the only later buyer wants a melt or a brand they do not know. Those moves describe supply of objects, not a signal that the metal itself has become a bargain.",
+      "The gap moves with how much work sits on each ounce, and with how easy the object is to name later. A wholesale bar can print a smaller premium per ounce because fabrication and assay were spread. A common bullion coin can print a larger one because more work sat on a single ounce and the design is already public vocabulary. Small minted bars sit between those poles. The objects themselves are compared on [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "Silver often shows a larger percentage gap than gold, for a reason of scale. Striking or pouring a one-ounce silver piece costs labour that is a bigger share of a cheaper ounce. That is fabrication arithmetic.",
+      "Mint capacity, transport, and how common a stamp is move the gap from month to month. A familiar coin can tighten when many are offered and widen when retail stock is thin. A large bar can sit near the London print and still be awkward if the only later buyer wants a melt or a brand they do not know. Those moves are a supply of objects. They are not a signal that the metal itself has become a bargain, and they are not a timing tip.",
     ],
   },
   {
-    heading: "What the premium is not",
+    heading: "The object, not a second price of the metal",
     paragraphs: [
-      "The premium is not a measure of whether gold or silver is fairly valued. Spot already is a market print for the paper ounce. Adding fabrication and a dealer’s book does not produce a second, truer price of the metal. It produces the price of a particular object. Treating a low premium as proof that metal is cheap, or a high premium as proof that metal is dear, confuses the object with the ounce.",
-      "The premium is not a timing tip. A narrow gap does not say it is time to acquire metal. A wide gap does not say it is time to wait. Premiums can be wide when objects are scarce at retail and tight when they are plentiful. That is inventory and mint runs — not a forecast of the next print.",
-      "The premium is not a morality tale about dealers, and not a ranking of brands. A large markup can be the ordinary cost of a small, well-known coin. A small markup can sit on a bar that is hard to move. Neither fact picks a winner. Neither fact names a shop. Compare the gap to the form and to the later bid — not to a story about purity.",
-    ],
-  },
-  {
-    heading: "Reading the gap",
-    paragraphs: [
-      "The premium over spot measures the markup of an object above a London or screen reference: form, brand, mint, and the liquidity of a physical book. Back on [Gold & Silver in Practice](/gold-silver) the same fact sits beside form, storage, authenticity, and starting size. If the next question is the object rather than the gap, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "Spot is already a market print for the paper ounce. Adding fabrication and a dealer’s book does not produce a truer price of the metal. It produces the price of a particular object. A low premium is not proof the metal is cheap, and a high one is not proof it is dear. A large markup can be the ordinary cost of a small, well-known coin. A small markup can sit on a bar that is hard to move.",
     ],
   },
 ];
@@ -884,58 +865,44 @@ const storage: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Gold or silver that has already been poured or struck still has to be stored somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Those three arrangements are not grades of the same product. They are different facts about who can reach the object, what it costs to keep it there, and whose books stand between the holder and the metal.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names storage as access versus cost versus counterparty. The paragraphs below stay with that trade-off.",
+      "Metal that has already been poured or struck still has to sit somewhere. Home, an allocated vault, and an unallocated claim are not grades of one product. They are different answers to who can reach the object, what it costs to leave it there, and whose failure stands between the holder and the metal.",
     ],
   },
   {
-    heading: "Access, cost, counterparty",
+    heading: "Access, cost, and counterparty",
     paragraphs: [
-      "Access is how quickly the object can be reached and moved. Home access is immediate: the metal is in a room the household already occupies. Vault access is scheduled — hours, identification, a release. A claim that is only a line on a statement has no object to reach until a counterparty delivers one.",
-      "Cost is what is paid, or not paid, to keep the arrangement in place. Home storage has no vault invoice. It still has a lock, a place, and the work of keeping both quiet. A vault invoices for space, insurance, and handling. An unallocated or pool account often invoices less because the operator is not setting aside a named bar for each name. A lower fee is a different product, not a verdict.",
-      "Counterparty is whose failure stands between the holder and the metal. At home that counterparty is the household: fire, theft, a forgotten combination, a safe that advertises itself. In a vault it is the operator, the insurer, and the law of the place. On an unallocated book it is the claim itself — a promise to deliver metal, not a named pile. Storage is the trade-off among those three facts.",
+      "Home access is immediate: the metal is in a room the household already occupies. Vault access is scheduled — hours, identification, a release. A line on a statement has no object to reach until someone delivers one.",
+      "Home storage has no vault invoice. It still has a lock, a place, and the work of keeping both quiet. A vault invoices for space, insurance, and handling. An unallocated or pool account often invoices less, because the operator is not setting aside a named bar for each name. A lower fee is a different product.",
+      "At home the counterparty is the household: fire, theft, a forgotten combination, a safe that advertises itself. In a vault it is the operator, the insurer, and the law of the place. On an unallocated book it is the claim itself — a promise to deliver metal, not a named pile.",
     ],
   },
   {
     heading: "Home",
     paragraphs: [
-      "Home storage keeps the metal in the household’s control. There is no vault fee and no auditor. The operational risk sits with the object: fire, flood, theft, a move that leaves a drawer behind, and the forgetfulness of a combination or a hiding place. A visible safe is also a sign. A hiding place no one else can find is also a place no one else can recover.",
-      "Insurance, where it exists for household metal, is a contract with limits — not a second vault. Neighbours, visitors, and repair people change who knows the house. None of those facts is an argument against home storage, and none is an argument for a vault. They are the practical household risks that come with control.",
+      "Home keeps the metal in the household’s control. There is no vault fee and no auditor. The operational risk sits with the object: fire, flood, theft, a move that leaves a drawer behind, a combination nobody else can recover. A visible safe is also a sign. A hiding place no one else can find is a place no one else can recover.",
+      "Household insurance, where it exists for metal, is a contract with limits. Neighbours, visitors, and repair people change who knows the house. Those are the practical household risks that come with control.",
     ],
   },
   {
     heading: "Allocated and unallocated",
     paragraphs: [
-      "Allocated storage, done as the word is used in the bullion trade, identifies specific bars or coins as belonging to a named holder. The metal is segregated. A bar list, a serial, a weight, a fineness, and a vault location should be nameable. Identifiable bars and coins are the test. If the paperwork cannot name the pieces, the word “allocated” is only a label.",
-      "Unallocated storage, and the pool accounts that work the same way, is a claim on a stack. The operator owes metal of a published specification. The operator does not set aside a named bar for that name. The book is easier to run — ounces in, ounces out — and easier to confuse with a bank deposit. It is not a deposit of objects. If you cannot point to a bar list, you have a claim, not a stack.",
-      "The two words are used loosely. A statement that says “allocated” and then lists only a weight is a claim with a flattering adjective. Segregation is the fact, not the adjective. Pooled metal can sit in a real vault and still not be anyone’s identifiable pile.",
+      "Allocated storage, as the bullion trade uses the word, identifies specific bars or coins as belonging to a named holder. The metal is segregated. A bar list, a serial, a weight, a fineness, and a vault location should be nameable. Identifiable bars and coins are the test. If the paperwork cannot name the pieces, “allocated” is only a label.",
+      "Unallocated storage, and the pool accounts that work the same way, is a claim on a stack. The operator owes metal of a published specification and does not set aside a named bar. The book is easier to run — ounces in, ounces out — and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a stack.",
+      "A statement that says “allocated” and then lists only a weight is a claim with a flattering adjective. Pooled metal can sit in a real vault and still not be anyone’s identifiable pile.",
     ],
   },
   {
     heading: "Documentation and segregation",
     paragraphs: [
-      "The paperwork is where the menu becomes checkable. An allocated arrangement should say whose name is on the metal, where it sits, how it is identified, and what happens if the operator fails. Serials, bar lists, vault confirmations, and a statement of segregation are the ordinary documents. They make the claim inspectable; they do not make the metal safer.",
-      "Segregation means the objects are not mixed into the operator’s inventory and not treated as a loan the operator can re-pledge at will. The contract either says that or it does not. Jurisdiction, the custodian, and the limits of any insurance sit in the same file. They are part of the counterparty, not a romance about security.",
+      "An allocated arrangement should say whose name is on the metal, where it sits, how it is identified, and what happens if the operator fails. Serials, bar lists, and a statement of segregation make the claim inspectable. They do not make the metal safer.",
+      "Segregation means the objects are not mixed into the operator’s inventory and not treated as a loan the operator can re-pledge at will. The contract either says that or it does not. Jurisdiction, the custodian, and the limits of any insurance are part of the same counterparty.",
     ],
   },
   {
-    heading: "What storage is not",
+    heading: "The object and the place",
     paragraphs: [
-      "Storage is not a vendor list. No vault, no insurer, and no dealer is ranked here. A name that appears in a contract is a fact about that contract.",
-      "Home, allocated, and unallocated are different products. Calling one of them preferable would be a pick. A vault invoice is not a reason to hold gold or silver.",
-    ],
-  },
-  {
-    heading: "Form and the place it sits",
-    paragraphs: [
-      "The object and the place talk to each other. A large wholesale bar is dense and awkward to move; a vault that handles bars by serial is built for that density. A common bullion coin is easier to recognise in a household drawer and easier to carry in ones. Small minted bars sit between those poles. The comparison of those objects — fabrication, premium, and resale friction — lives on [gold bars vs coins](/gold-silver/bars-vs-coins). The custody consequence is simpler: the form you hold and the place it sits are one decision in two sentences.",
-      "Premium is part of that same split. A coin that paid more fabrication per ounce does not become a different metal at home. A bar that printed a smaller gap to spot does not become allocated because someone said the word. Form prices the work in the object. Storage prices the arrangement around it. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
-    ],
-  },
-  {
-    heading: "Access, cost, counterparty in one place",
-    paragraphs: [
-      "Storage measures access, cost, and counterparty: home control and household risk, identifiable allocated bars or coins, and an unallocated or pool claim that is not a stack. Back on [Gold & Silver in Practice](/gold-silver) the same menu sits beside form, premium, authenticity, and starting size. If the next question is the object rather than the place, open [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "A large wholesale bar is dense and awkward to move. A vault that handles bars by serial is built for that density. A common bullion coin is easier to recognise in a drawer and easier to carry in ones. Small minted bars sit between those poles. Fabrication, premium, and resale friction are the comparison on [gold bars vs coins](/gold-silver/bars-vs-coins). The form you hold and the place it sits are one decision.",
+      "A coin that paid more fabrication per ounce does not become a different metal at home. A bar with a smaller gap to spot does not become allocated because someone said the word. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
     ],
   },
 ];
@@ -944,58 +911,50 @@ const spottingFakes: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. Authenticity starts with a counterparty you can still find in a year, and with specs — weight and dimensions — checked against a published figure. It does not start with a home laboratory, and it is not a guarantee. These paragraphs are a filter for the obvious. They are not a test manual.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already names authenticity as a filter, not a laboratory course. The paragraphs below stay with that filter.",
+      "Popular coins and small bars with famous stamps are copied. The first filter is a counterparty you can still find in a year, and a check of weight and dimensions against a published figure. That is a filter for the obvious. It is not a home laboratory, not a guarantee, and not a test manual.",
     ],
   },
   {
     heading: "A filter, not a laboratory",
     paragraphs: [
-      "A filter asks whether this object fails an obvious check against a known spec or a known desk. A laboratory asks whether the metal is what the stamp claims, to a stated tolerance, under a method that can damage a good piece if it is done badly. This page is the first of those two jobs. It is not the second.",
-      "It does not name vendors. A piece that matches weight and dimensions can still be plated, filled, or struck from the wrong alloy. A piece that fails them is only a reason to stop treating the stamp as settled. The gap between those two facts is why a filter is not a guarantee.",
+      "A filter asks whether this object fails an obvious check against a known spec or a known desk. A laboratory asks whether the metal is what the stamp claims, to a stated tolerance, under a method that can damage a good piece if it is done badly.",
+      "A piece that matches weight and dimensions can still be plated, filled, or struck from the wrong alloy. A piece that fails them is a reason to stop treating the stamp as settled. The gap between those two facts is why a filter is not a guarantee.",
     ],
   },
   {
     heading: "Counterparty before gadgets",
     paragraphs: [
-      "The first defence is the desk, not the scale. A counterparty you can still find in a year has a name, a place, and a history that can be checked without their own FAQ. They will still answer a question after the parcel arrives. A stranger at a table, a social-media account, or a one-week shopfront has none of that. Gadgets do not replace that fact.",
-      "Common products help the same way. A widely struck government coin or a well-known small bar has a published weight, a published diameter, and a public vocabulary of usual copies. An obscure commemorative or a private pour with no serial has fewer published figures to check against. Popularity also attracts copies. That is not a ranking of products. It is why a common type is easier to filter and easier to fake.",
-      "A later custody arrangement does not repair a weak desk. Metal that has already been accepted still has to sit somewhere — home, an allocated vault, or an unallocated claim. That menu of access, cost, and counterparty lives on [storing gold and silver](/gold-silver/storage). Authenticity is the prior filter: whose books you trusted, and whether the object matches the spec, before the place it sits is even a question.",
+      "The first defence is the desk, not the scale. A counterparty you can still find in a year has a name, a place, and a history that can be checked without their own FAQ. They will still answer after the parcel arrives. A stranger at a table, a social-media account, or a one-week shopfront has none of that.",
+      "A widely struck government coin or a well-known small bar has a published weight, a published diameter, and a public vocabulary of usual copies. An obscure commemorative, or a private pour with no serial, has fewer figures to check against. Popularity also attracts copies. A common type is easier to filter and easier to fake.",
+      "Metal that has already been accepted still has to sit somewhere — home, an allocated vault, or an unallocated claim. That menu is [storing gold and silver](/gold-silver/storage). Whose books you trusted, and whether the object matches the spec, comes before the place it sits.",
     ],
   },
   {
     heading: "Weight, dimensions, edge, reed, stamp",
     paragraphs: [
-      "Weight is the cheapest published number. Mints and refiners print a troy weight and a tolerance. A scale that can resolve a tenth of a gram will show a piece that is light or heavy against that figure. A piece that is far off is not yet proven fake. It is no longer a piece you treat as settled on the stamp alone.",
-      "Dimensions are the next published numbers: diameter, thickness, and sometimes a shape. A minted coin is a repeatable object. A poured bar is less so, but a famous small bar still has a length and a width in a public spec. A piece that is the right weight and the wrong size is a different alloy or a different object. The two checks together only remove the crude copies.",
-      "The edge, the reeding, and the stamp are visual filters on the same idea. Reeding that is uneven, a stamp that is soft or crowded, a colour that is trying too hard — those are reasons to compare against a known genuine piece of the same product if one is at hand. Colour is the weakest of the four. Lighting and wear change it. None of these looks is conclusive. They are a filter for the obvious.",
+      "Weight is the cheapest published number. Mints and refiners print a troy weight and a tolerance. A scale that resolves a tenth of a gram will show a piece that is light or heavy against that figure. A piece far off is not yet proven fake. It is no longer a piece you treat as settled on the stamp alone.",
+      "Diameter, thickness, and sometimes a shape come next. A minted coin is a repeatable object. A poured bar is less so, but a famous small bar still has a length and a width in a public spec. Right weight and wrong size means a different alloy or a different object. Together the two checks only remove the crude copies.",
+      "Reeding that is uneven, a stamp that is soft or crowded, a colour that is trying too hard — compare those against a known genuine piece of the same product if one is at hand. Colour is the weakest of the four. Lighting and wear change it. None of the looks is conclusive.",
     ],
   },
   {
-    heading: "A price far below the market",
+    heading: "A price far below the field",
     paragraphs: [
-      "A quote far below everyone else’s print is information. It is not a bargain. Spot is a screen price for a paper ounce. The object on a counter carries fabrication, shipping, and a dealer’s book. An ask that undercuts that whole field by a wide margin has to be explained by something other than generosity.",
-      "The explanation may be a distressed sale, a thin market, or a stamp that is not the metal. Treat the outlier as a warning, not a bargain. A high ask is not proof of honesty. A low ask is not proof of a fake. The price is one more filter: a reason to stop, not a verdict.",
+      "A quote far below everyone else’s print is information. Spot is a screen price for a paper ounce. The object on a counter carries fabrication, shipping, and a dealer’s book. An ask that undercuts that whole field by a wide margin has to be explained by something other than generosity — a distressed sale, a thin market, or a stamp that is not the metal.",
+      "Treat the outlier as a warning, not a bargain. A high ask is not proof of honesty. A low ask is not proof of a fake. The price is one more reason to stop.",
     ],
   },
   {
     heading: "When a professional is needed",
     paragraphs: [
-      "A professional is needed when a fake would matter — when a loss would change a household’s or a firm’s books. Weight and a ruler do not close that case. A desk that will still be there next year also does not close it if the object itself is the question.",
-      "Assay offices, refiners, and some dealers run tests that this page will not describe. Sending a piece out costs time and a fee. Keeping a doubtful piece without that step costs the risk that the stamp is theatre. A blog post is not that step. A scale is not that step. If a plated bar or a filled coin would matter, use a professional.",
+      "Weight and a ruler do not close a case where a fake would change a household’s or a firm’s books. A desk that will still be there next year does not close it either, if the object itself is the question.",
+      "Assay offices, refiners, and some dealers run the tests that settle a doubtful piece. Sending a piece out costs time and a fee. Keeping a doubtful piece without that step leaves the risk that the stamp is theatre. If a plated bar or a filled coin would matter, use a professional.",
     ],
   },
   {
-    heading: "What a filter does not teach",
+    heading: "Kitchen tests",
     paragraphs: [
-      "These paragraphs do not teach acid tests, X-ray fluorescence, ultrasound, specific-gravity baths, or magnet tricks as a home method. A wrong test can damage a good piece. A right test, done without a method, can still be misread. Publishing a how-to would turn a filter into a manual.",
-      "The omission is deliberate. Popular coins and famous small bars attract copies that already know the amateur checks. A list of kitchen procedures would be incomplete the day it was posted. The professional’s job is the test. This page’s job is the prior filter: counterparty, specs, and the obvious fail."
-    ],
-  },
-  {
-    heading: "Filter, not guarantee",
-    paragraphs: [
-      "Authenticity starts with counterparty and specs — weight and dimensions — not a home laboratory and not a guarantee. The checks above are a filter for the obvious. Back on [Gold & Silver in Practice](/gold-silver) authenticity sits beside form, premium, storage, and starting size. If the next question is where an accepted object sits, open [storing gold and silver](/gold-silver/storage).",
+      "Acid tests, X-ray fluorescence, ultrasound, specific-gravity baths, and magnet tricks are not a home method. A wrong test can damage a good piece. A right test, done without a method, can still be misread. Popular coins and famous small bars attract copies that already know the amateur checks.",
     ],
   },
 ];
@@ -1004,56 +963,43 @@ const beginnerChecklist: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "First ounces are not a shop list. They are a process of four decisions — form, counterparty, storage location, documentation. Skip any one and the others get expensive: an object with no place to sit, a drawer with no record, a quote from a desk that will not answer next year.",
-      "The [Gold & Silver in Practice](/gold-silver) overview names starting size as that process. The paragraphs below stay with the four decisions.",
+      "First ounces are four decisions: form, counterparty, where the metal will sit, and what gets written down. Skip one and the others get expensive — an object with no place, a drawer with no record, a quote from a desk that will not answer next year.",
     ],
   },
   {
-    heading: "Process instead of a shop list",
+    heading: "The quote is the last number",
     paragraphs: [
-      "A shop list is a set of objects. A process is a sequence. Form, then seller, then storage, then record-keeping — in that order, because each later decision is cheaper if the earlier one has already been named. The temptation is to start with a quote. A quote is the last number, not the first fact. A price without a form is a screen ounce. A parcel without a place is metal in transit toward a question you have not answered.",
-      "Form is the object: bar or coin, and the size. Seller is the counterparty — a name, a place, a history that can be checked without their own FAQ. Storage is the place the object lives once it exists. Record-keeping is what you write down so the other three facts can still be found later: invoices, serials, a note of location that is not only the same drawer as the metal.",
+      "The seller, the place, and the record are cheaper to settle once the form has a name. A quote with no form is a screen ounce. A parcel with no place is metal in transit toward a question that has not been answered.",
+      "The seller is a name, a place, and a history that can be checked without their own FAQ. The record is invoices, serials, and a note of location that is not only the same drawer as the metal.",
     ],
   },
   {
-    heading: "Form and size before the price screen",
+    heading: "Form and size before the screen",
     paragraphs: [
-      "The useful first question is not what the screen prints. It is what object you are even comparing to that print. A poured kilo, a one-ounce minted bar, and a government bullion coin can share a fineness and still not be the same object in commerce. Weight and fineness describe the metal. Form describes the work done to it. Size is part of form: a large bar spreads fabrication; a one-ounce piece carries that cost alone. Calling the first “a bar” and the second “a coin” without naming the weight empties the comparison.",
-      "The comparison of those objects lives on [gold bars vs coins](/gold-silver/bars-vs-coins). This checklist only needs the sequence: name the form and the size before you look at a quote. Otherwise you are comparing a paper ounce to a story about purity. Bullion and collectibles are different markets. A proof or a scarce date is priced as an object with a story. These paragraphs stay on bullion: metal as metal, with a common stamp. Mixing the two is how a fabrication gap turns into a narrative price.",
+      "A poured kilo, a one-ounce minted bar, and a government bullion coin can share a fineness and still be different objects. Weight and fineness describe the metal. Form describes the work done to it. A large bar spreads fabrication. A one-ounce piece carries that cost alone. The comparison is on [gold bars vs coins](/gold-silver/bars-vs-coins).",
+      "Name the form and the size before the quote. Otherwise the screen ounce is being compared to a story about purity. A proof or a scarce date is priced as an object with a story. Bullion is metal with a common stamp. Mixing the two turns a fabrication gap into a narrative price.",
     ],
   },
   {
-    heading: "Premium and bid/ask as facts, not tips",
+    heading: "Ask, bid, and the gap",
     paragraphs: [
-      "Spot is a screen price for a paper ounce. The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap is the premium over spot — a price of form and of liquidity.",
-      "The later number is the bid: what a desk will pay for that same object today. Reading only the ask is reading only half the tape. A thin product with a fat ask and a poor bid is expensive twice. Premiums move with mint capacity and how common a stamp is. Those moves describe supply of objects, not a signal that metal has become a bargain. Ask and bid are facts beside the form.",
+      "The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap above the screen is the premium over spot — form and liquidity, not a second chemistry.",
+      "The bid is what a desk will pay for that object today. A fat ask and a poor bid make the piece expensive twice. The gap moves with mint capacity and with how common the stamp is. That is a supply of objects, not a signal that metal has become a bargain.",
     ],
   },
   {
-    heading: "Choose storage location before shipping",
+    heading: "The place, before the van",
     paragraphs: [
-      "Metal that has already been named still has to sit somewhere. The place it sits is a menu of access, cost, and counterparty — home, an allocated vault, or an unallocated claim. Choose that place before a parcel is in the post. A box on a van is not a storage decision. It is a delay until the object is already moving.",
-      "Home keeps the metal near and the operational risk on the household. A vault is distant and on them. Allocated storage identifies specific bars or coins. Unallocated or pool accounts are a claim on a stack, not a named pile. The full menu lives on [storing gold and silver](/gold-silver/storage). This checklist only needs the sequence: name the place before the object ships. A seller who will “store it for you” and never ship has only moved the custody question into another costume. Documentation belongs here too — invoices, serials, a note of where the metal sits, written somewhere that is not only the same drawer. The paperwork does not make the metal safer. It makes the other three facts checkable.",
+      "Home, an allocated vault, or an unallocated claim — access, cost, and whose books stand in the way. Choose among them before a parcel is in the post. A box on a van is a delay, not a decision. The menu is on [storing gold and silver](/gold-silver/storage).",
+      "Home keeps the metal near, and the fire and theft risk with the household. A vault is distant, and the risk is theirs. Allocated storage names specific bars or coins. An unallocated or pool account is a claim on a stack, not a named pile. A seller who will “store it for you” and never ship has moved custody into another costume.",
+      "Invoices, serials, and a note of where the metal sits belong in writing somewhere that is not only the same drawer. The paperwork does not make the metal safer. It makes the other three facts checkable.",
     ],
   },
   {
-    heading: "Authenticity filters only as stop-rules",
+    heading: "A reason to stop",
     paragraphs: [
-      "Counterfeits exist, especially of popular coins and of small bars with famous stamps. Authenticity on this page is a stop-rule, not a laboratory course. A filter asks whether this object fails an obvious check — a desk you cannot find next year, a weight or diameter that does not match a published spec, a quote far below everyone else’s print. Those are reasons to stop treating the stamp as settled. They are not a verdict, and not a home test manual.",
-      "The first defence is the counterparty, not the scale. Gadgets do not replace a name and a history you can check without their own FAQ. Weight and dimensions catch the crude copies. A price far below the field is a warning, not a bargain. A piece that matches the spec can still be plated; a piece that fails it is only a reason to stop. A blog post does not replace a test. If a fake would matter, a professional is the next step. Spotting fakes is the longer filter for the obvious. Here the filter is only a reason to halt the process.",
-    ],
-  },
-  {
-    heading: "What this checklist is not",
-    paragraphs: [
-      "This checklist is not a dealer ranking. No name, no shop, and no “best” desk appears here. A counterparty is a fact about a process, not a recommended vendor. “First ounces” names the process of four decisions.",
-      "Nothing here says metal is cheap or dear, or that a premium is a signal. Treating form, seller, storage, and records as a reason to hold metal would turn a menu into a pitch.",
-    ],
-  },
-  {
-    heading: "Four decisions",
-    paragraphs: [
-      "The checklist measures a process: form, counterparty, storage location, and documentation. Back on [Gold & Silver in Practice](/gold-silver) the same facts sit beside premium and authenticity. The object comparison lives on [gold bars vs coins](/gold-silver/bars-vs-coins); the custody menu on [storing gold and silver](/gold-silver/storage).",
+      "Copies exist, especially of popular coins and of small bars with famous stamps. A desk you cannot find next year, a weight or diameter that misses the published spec, or a quote far below everyone else’s print is a reason to stop treating the stamp as settled. It is not a verdict.",
+      "The counterparty comes before the scale. Weight and dimensions catch the crude copies. A price far below the field is a warning, not a bargain. A piece that matches the spec can still be plated. If a fake would matter, a professional is the next step. The longer filter is [spotting fakes](/gold-silver/spotting-fakes).",
     ],
   },
 ];
@@ -1062,70 +1008,49 @@ const buyingOnline: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Buying gold or silver through a screen is a logistics checklist: who the dealer is, how payment settles, how a parcel moves, and what the invoice names. Identity, payment finality, shipping and insurance, and the facts on the paper. It is not a dealer ranking, and it is not a purchase tip. These paragraphs are watch-fors. They do not name a shop.",
-      "The [Gold & Silver in Practice](/gold-silver) overview already treats remote buying as logistics rather than a vendor list. The paragraphs below stay on that checklist. They do not say anyone ought to acquire metal, and they do not forecast a price.",
+      "A screen quote is not a pile on a counter. Between the number and an object in hand sit a dealer, a payment, a carrier, and a piece of paper. Each can fail on its own. Remote buying is that logistics: identity, whether the payment can still be clawed back, how the parcel moves, and what the invoice names.",
     ],
   },
   {
-    heading: "Logistics, not a ranking",
+    heading: "Who the dealer is",
     paragraphs: [
-      "A screen quote is not a pile on a counter. Between the quote and an object in hand sit a desk, a payment, a carrier, and a piece of paper. Each can fail on its own. Ranking desks would turn the checklist into a shop list. This page does not rank.",
-      "Online buying starts with whether the counterparty is a checkable firm, whether payment can still be clawed back after it leaves, whether the parcel is insured and signed for at an address you control, and whether the invoice matches the object you thought you were comparing to the screen. Watch-fors only. No preferred vendor.",
+      "A dealer is a name, a place, and a history you can check without relying only on their own FAQ. A registered company, an address that is more than a box story, years of the same trade under the same name — ordinary facts. A social-media handle, a one-week shopfront, or a page that answers every question with its own marketing is a thinner counterparty.",
+      "Checkable history means records outside the seller’s site: a company register, contact details that have stayed put, the same desk still answering after a parcel arrives. It is not a star collage the desk wrote for itself. Online, the object is not yet in the room, so the desk is the first fact, not the scale. A name that cannot be found next year is a reason to stop before any metal moves.",
     ],
   },
   {
-    heading: "Dealer identity",
+    heading: "Whether the payment is final",
     paragraphs: [
-      "A dealer is a name, a place, and a history you can check without relying only on their own FAQ. A registered company, a physical address that is not only a post-office box story, years of the same trade under the same name — those are ordinary facts. A social-media handle, a one-week shopfront, or a page that answers every question with its own marketing is a thinner counterparty.",
-      "Checkable history means records outside the seller’s own site: company registers, long-standing contact details, a trail of the same desk answering after a parcel arrives. It does not mean a five-star collage the desk wrote for itself, and it is not a ranking. A name that can be found next year is a logistics fact. A name that cannot is a reason to stop before any metal moves. Online, identity is sharper because the object is not yet in the room. The first defence is still the desk, not the scale.",
-    ],
-  },
-  {
-    heading: "Payment as a fact about finality",
-    paragraphs: [
-      "Payment methods differ in how easily money can be reversed after it leaves. Some channels leave a window to dispute a charge. Others settle as a final transfer: once the funds are gone, clawing them back is slow, expensive, or closed. Those are facts about the rail. They are not a tip about which rail to use.",
-      "A cheap method that reverses is a different product from a final method that does not. This page does not recommend a method. It only names the reading: know whether the payment is still reversible after the desk says the metal has shipped, and know what the desk’s terms say about that moment.",
+      "Some rails leave a window to dispute a charge. Others settle as a final transfer: once the funds are gone, getting them back is slow, expensive, or closed. A method that reverses is a different product from one that does not.",
+      "Know whether the payment is still reversible after the desk says the metal has shipped, and what the desk’s terms say about that moment.",
     ],
   },
   {
     heading: "Shipping, insurance, and the empty box",
     paragraphs: [
-      "Shipping is where the object leaves the desk and has not yet arrived. Insured carriage, a signature on delivery, and an address under your control are the ordinary watch-fors. “Discreet” packaging is a habit of the trade: a box that advertises bullion is also a sign.",
-      "Empty-box and non-delivery failures are the named risks of that motion. A carton arrives light, or resealed. A tracking number ends at a depot, a neighbour, or a signature that is not yours. Insurance is a contract with limits and notice windows — not a second vault. A waived signature is a different delivery from the one the invoice described. The parcel should be checkable at an address you control, under terms you can still find after the van leaves.",
+      "Shipping is the stretch where the object has left the desk and has not arrived. Insured carriage, a signature on delivery, and an address under your control are the ordinary facts. A box that advertises bullion is also a sign. Discreet packaging is a habit of the trade for that reason.",
+      "A carton arrives light, or resealed. A tracking number ends at a depot, a neighbour, or a signature that is not yours. Insurance is a contract with limits and notice windows. A waived signature is a different delivery from the one the invoice described.",
     ],
   },
   {
-    heading: "Invoice facts",
+    heading: "What the invoice names",
     paragraphs: [
-      "The invoice is the record of what was supposed to move. Product name, weight, fineness, and serials when the object carries them are the ordinary fields. The premium paid — the gap between the screen ounce and the line on the invoice — belongs on the same paper. Without those facts, a later dispute is an argument about a story.",
-      "A weight and a fineness without a product name is a paper ounce with adjectives. A product name without a weight is a stamp without a measure. The invoice does not make the metal safer. It makes the claim checkable when the box is light, when the stamp looks wrong, or when the desk and the carrier disagree about what left the building.",
+      "Product name, weight, fineness, and serials when the object carries them are the ordinary fields. The premium — the gap between the screen ounce and the line on the invoice — belongs on the same paper. Without those facts a later dispute is an argument about a story.",
+      "A weight and a fineness without a product name is a paper ounce with adjectives. A product name without a weight is a stamp without a measure. The invoice does not make the metal safer. It makes the claim checkable when the box is light, the stamp looks wrong, or the desk and the carrier disagree about what left the building.",
     ],
   },
   {
     heading: "“We store it for you”",
     paragraphs: [
-      "A seller who will only “store it for you” and never ship has not finished an online purchase. They have moved the custody question into another costume. The metal, if it exists as a named pile at all, still sits somewhere — a vault claim or an unallocated line on someone else’s books.",
-      "That menu of access, cost, and counterparty lives on [storing gold and silver](/gold-silver/storage). Online logistics ends when an object can be signed for at an address you control. A pitch that skips shipping is a storage pitch — not a shortcut around the checklist, and not a ranking of vaults.",
+      "A seller who will only store the metal and never ship has not finished the purchase. The custody question has changed costume. If the metal exists as a named pile at all, it still sits somewhere — a vault claim, or an unallocated line on someone else’s books. That menu of access, cost, and counterparty is [storing gold and silver](/gold-silver/storage).",
+      "The logistics end when an object can be signed for at an address you control. A pitch that skips the parcel is a storage pitch.",
     ],
   },
   {
-    heading: "Outlier price",
+    heading: "A quote far below the field",
     paragraphs: [
-      "A quote far below everyone else’s print is information. It is not a bargain, and it is not a reason to send payment. Spot is a screen price for a paper ounce. The object on a desk carries fabrication, shipping, insurance, and a dealer’s book. An ask that undercuts that field by a wide margin has to be explained by something other than generosity.",
-      "Treat the outlier as a warning — the fakes-and-premium problem in another costume — not as a deal. The longer filter for obvious copies lives on [spotting fakes](/gold-silver/spotting-fakes). A high ask is not proof of honesty. A low ask is not proof of a fake.",
-    ],
-  },
-  {
-    heading: "What this page is not",
-    paragraphs: [
-      "This page is not a dealer ranking. No name, no shop, and no “best” online desk appears here. A counterparty is a logistics fact, not a recommended vendor. It is not a purchase tip, and it is not buy or sell advice. It does not say anyone ought to acquire gold or silver through a screen. It does not name a product, a quantity, or a payment rail to prefer.",
-      "It is also not a forecast. Nothing here says metal is cheap or dear, or that an online premium is a signal. Treating identity, payment, shipping, and invoices as a reason to hold metal would turn a checklist into a pitch.",
-    ],
-  },
-  {
-    heading: "Information only",
-    paragraphs: [
-      "Online buying measures a logistics checklist: dealer identity, payment finality, shipping and insurance, and invoice facts. It does not measure which desk anyone ought to use. It does not rank a vendor. These paragraphs inform. They do not advise a purchase. If someone acts, they do so on their own judgment and, where needed, with a licensed adviser in their jurisdiction. Return to [Gold & Silver in Practice](/gold-silver) for the handling menu — form, premium, storage, authenticity, and starting size — as mechanics, not as a shop. If the pitch skips the parcel, open [storing gold and silver](/gold-silver/storage). If the quote is an outlier, open [spotting fakes](/gold-silver/spotting-fakes).",
+      "Spot is a screen price for a paper ounce. The object carries fabrication, shipping, insurance, and a dealer’s book. An ask that undercuts that field by a wide margin has to be explained by something other than generosity.",
+      "Treat the outlier as a warning, not a deal. The longer filter for obvious copies is [spotting fakes](/gold-silver/spotting-fakes). A high ask is not proof of honesty. A low ask is not proof of a fake.",
     ],
   },
 ];
@@ -4961,42 +4886,42 @@ export const soundMoneyHubBody: Section[] = [
     heading: "",
     paragraphs: [
       "People argue about gold and paper money with a handful of words, and they rarely mean the same thing by them. One person says “backed” and means a note you can swap for metal at a bank counter. Another means gold sitting in a central-bank vault that nobody can ask for. Until the words are pinned down, the argument goes in circles.",
-      "Sound money is the oldest of those words. It describes money the issuer cannot simply create more of. For most of history the limit came from the metal: an ounce of gold takes real work to dig out and refine. Later it came from law, when a paper note could be exchanged for a fixed weight of gold or silver. Ask whether the issuer can add to the supply by decision alone, and most of the other questions sort themselves out.",
+      "The oldest of those words names money the issuer cannot simply create more of. For most of history the limit was the metal: an ounce of gold takes real work to dig out and refine. Later the limit was a statute, when a paper note could be exchanged for a fixed weight of gold or silver. Ask whether the issuer can add to the supply by decision alone, and most of the other questions sort themselves out.",
     ],
   },
   {
     heading: "Money nobody can simply make more of",
     paragraphs: [
-      "[What is sound money?](/sound-money/what-is-sound-money) begins with an ordinary banknote that pays for groceries on Monday. That proves it works as money today. It says nothing about whether the issuer can print more of it next week. A currency can be accepted everywhere and still lose value if whoever issues it is free to expand the supply.",
-      "The word itself is old. In English a sound coin was one that rang true when dropped on a counter, while a clipped or plated coin gave a dull note. Merchants tested coins that way because forgers, and sometimes rulers, shaved off metal. The worry behind the word has always been a coin worth less than it claims.",
+      "A banknote that pays for groceries on Monday works as money today. It says nothing about next week. [Sound money](/sound-money/what-is-sound-money) is that gap: a currency accepted everywhere can still lose value if whoever issues it is free to expand the supply.",
+      "The English is old. A sound coin rang true when dropped on a counter. A clipped or plated coin gave a dull note. Merchants tested coins that way because forgers, and sometimes rulers, shaved off metal. The worry has always been a coin worth less than it claims.",
     ],
   },
   {
     heading: "Mined, or made by law",
     paragraphs: [
-      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) comes down to cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin for “let it be done.” A treasury can issue a new note with a signature.",
-      "Neither kind guarantees a good or bad outcome. Some fiat currencies have held steady for years, and Roman emperors had cut the silver in the denarius to a few percent by the 270s AD. The same note can also change category overnight. When the United States stopped exchanging dollars for gold in August 1971, the notes in people’s wallets looked exactly as before. What had changed was that only the law stood behind them.",
+      "[Hard money vs fiat](/sound-money/hard-money-vs-fiat) is a question of cost. Gold has to be mined, and no vote adds an ounce to the world’s stock. **Fiat** money exists because a government says so and people keep accepting it. The word is Latin for “let it be done.” A treasury can issue a new note with a signature.",
+      "Some fiat currencies have held steady for years. Roman emperors had cut the silver in the denarius to a few percent by the 270s AD. The same note can also change category overnight. When the United States stopped exchanging dollars for gold in August 1971, the notes in people’s wallets looked exactly as before. Only the law stood behind them.",
     ],
   },
   {
     heading: "What money buys over the years",
     paragraphs: [
-      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) measures the loss in everyday terms: how much bread or rent an hour of work pays for, compared across decades. Rising prices are what people notice. The underlying change is in the currency. Hyperinflation is the extreme case. The economist Phillip Cagan drew the line in 1956 at prices rising by half or more in a single month.",
-      "Prices also rise for reasons that have nothing to do with money, such as war, drought or a failed harvest. Sound money cannot prevent those. What it removes is one particular cause: an issuer adding to the money supply whenever the budget runs short.",
+      "[Inflation and purchasing power](/sound-money/inflation-purchasing-power) is the loss in ordinary terms: how much bread or rent an hour of work pays for, across decades. Rising prices are what people notice. The change is in the currency. Hyperinflation is the extreme. The economist Phillip Cagan drew the line in 1956 at prices rising by half or more in a single month.",
+      "Prices also rise for reasons that have nothing to do with the unit, such as war, drought, or a failed harvest. A hard unit cannot stop a harvest from failing. What it removes is an issuer adding to the supply whenever the budget runs short.",
     ],
   },
   {
     heading: "Gold in the vault, or gold you can claim",
     paragraphs: [
-      "No word in these arguments gets stretched further than “backed.” [What “backed” means](/sound-money/backed-money) draws one line. A note is **redeemable** if you can hand it in and receive a known weight of metal. Gold in a vault that no holder has a right to claim is something else. You can test redeemability at a bank window. You cannot test a slogan.",
+      "No word in these arguments gets stretched further than “backed.” [Backed money](/sound-money/backed-money) separates the two uses. A note is **redeemable** if you can hand it in and receive a known weight of metal. Gold in a vault that no holder has a right to claim is something else. Redeemability can be tested at a bank window. A slogan cannot.",
       "Governments hold gold for many reasons, and holding it does not make their notes convertible. Only the law does that, by giving the holder the right to ask. In the twentieth century that right was taken away in stages. Most of Europe’s warring governments suspended it in **1914**. Franklin Roosevelt’s Executive Order 6102 told Americans to hand in their gold coin in **1933**. Richard Nixon stopped exchanging dollars for gold with foreign governments in **1971**. Washington kept the gold. The US Treasury still reports about 261 million troy ounces.",
     ],
   },
   {
     heading: "Where the words were tested",
     paragraphs: [
-      "These definitions come from real events. In November **1923** one US dollar cost 4.2 trillion German paper marks. In **1933** Americans turned in their gold coin at $20.67 an ounce, and a year later Washington revalued gold at $35. On 15 August **1971** the last official link between the dollar and gold was cut. [Sound Money History](/history) tells each of these stories in full, with the laws and the numbers.",
-      "In each case two questions explain most of what happened. Who was able to create more money? And could a holder still walk into a bank with a note and walk out with metal?",
+      "In November **1923** one US dollar cost 4.2 trillion German paper marks. In **1933** Americans turned in their gold coin at $20.67 an ounce, and a year later Washington revalued gold at $35. On 15 August **1971** the last official link between the dollar and gold was cut. [Sound Money History](/history) tells each of these stories with the laws and the numbers.",
+      "Two questions explain most of what happened. Who could create more money? And could a holder still walk into a bank with a note and walk out with metal?",
     ],
   },
 ];
@@ -5005,39 +4930,33 @@ export const practiceHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between those two facts sit fabrication, a premium, a place the object lives, and a later buyer who must believe the stamp. People who handle physical gold and silver already live in that gap — form, premium, storage, authenticity, and starting size as ordinary mechanics of the object.",
-      "Why two metals kept winning in trade is an older question: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — portability, durability, divisibility, recognizability — metal before the mint. Hard, fiat, and backed are the words that have to hold still when a stamp, a premium, or a vault invoice is in front of you; those definitions live under [Sound Money](/sound-money). Weimar, the Fed, and **1971** are told in [Sound Money History](/history). Official book rates and country offtake sit under [Markets](/markets).",
+      "A one-ounce coin on a table is metal you can weigh. The number on a dealing screen is a paper ounce. Between them sit fabrication, a premium, a place the object lives, and a later buyer who has to believe the stamp. Form, premium, storage, authenticity, and the size of a first holding are the mechanics of that gap.",
+      "Why those two metals kept winning in trade is older: [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver) — portability, durability, divisibility, recognizability. Hard, fiat, and backed have to hold still when a stamp or a vault invoice is in front of you; those words live under [Sound Money](/sound-money). Weimar, the Fed, and **1971** are in [Sound Money History](/history). A Treasury book value of **$42.22** is an accounting line, not a bid for a cast bar. Official book rates and country offtake sit under [Markets](/markets).",
     ],
   },
   {
-    heading: "The object in front of you",
+    heading: "The object",
     paragraphs: [
-      "A mint that lightens a coin, a bank that writes a receipt, or a statute that closes a gold window is a dated case. A leftover book rate, a reserve line, or a gold–silver quotient on a named date is a caption on the tape. Handling is the object: weight and fineness, a maker’s mark, a gap above a screen price, a vault or a drawer, a counterparty who may or may not still answer the phone next year.",
-      "A history of Lydia is not a reason to prefer a Maple Leaf. A Treasury book value of **$42.22** is not a bid for a cast bar. A definition of sound money is not a first-ounces checklist. Country offtake tables and official reserve lines are market captions. When “backed” or “hard” slips, the [Sound Money](/sound-money) pages hold the word still.",
+      "[Gold bars vs coins](/gold-silver/bars-vs-coins) compares objects. A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay over more ounces, so the gap above the screen is often lower, and the metal packs tighter. Resale of a large bar can mean a counterparty who will assay, or who already trusts the brand and serial. A bullion coin carries a face value far below the metal. The extra cost often buys recognizability: a stranger can name the type without a laboratory. Small minted bars sit closer to coins. “Bars versus coins” is empty until the size is named. Proofs and scarce dates are a different market — metal with a story, rather than metal as metal.",
     ],
   },
   {
-    heading: "Form, premium, storage, authenticity, size",
+    heading: "The gap",
     paragraphs: [
-      "Form is the first split. A bar is weight and fineness with a maker’s stamp. Larger bars spread minting and assay cost over more ounces, so the premium above the screen is often lower. Storage is denser. Resale of a large bar can mean finding a counterparty who will assay or who already trusts the brand and serial. A bullion coin is a government or mint product with a face value far below the metal. The extra cost often buys recognizability: a stranger can name the type without a laboratory. Small minted bars sit closer to coins on premium. The slogan “bars versus coins” is empty until you name the size. Numismatic and proof pieces are a different market. These notes stay on bullion — metal as metal. Mixing collectibles into a first holding is how a premium becomes a story instead of a fabrication cost.",
-      "Premium is the gap between the screen and the object. Spot is a paper ounce. The product in hand was cast or struck, shipped, insured, and sold by someone who must later bid for it. That difference is not automatically a trick. It is fabrication, distribution, and the bid–ask of a physical market. A coin can carry a large premium and still be a clean product. A bar can sit near spot and still be hard to resell. The number that matters later is the dealer’s buy price — the bid — not only the ask. A thin product with a fat ask and a poor bid is expensive twice. Compare the gap to the form trade-off, not to a morality tale about purity.",
-      "Storage is access versus cost versus counterparty. Home keeps the metal near and the operational risk on the household: fire, theft, forgetfulness, a safe that advertises itself. There is no vault fee and no auditor. A vault is distant and on them. Allocated storage, done properly, identifies bars or coins as yours; you should be able to name what you own. Pooled or unallocated accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
-      "Authenticity is a filter, not a laboratory course. Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defense is a counterparty you can still find in a year, a product common enough to be known, and a check of weight and dimensions against the published spec. Weigh it. Measure it. Look at the edge, the reeding, and the stamp. None of that is conclusive. A price far below everyone else is information: treat it as a warning, not a bargain. A wrong test can damage a good piece. If a fake would matter, use a professional.",
-      "Starting size is a process, not a slogan. First ounces are four decisions: what form, from whom, where the metal lives, and what you write down. Skip any one and the others get expensive. Decide the form and the size before looking at a quote. Know the premium and the bid, not only the ask. Choose storage before a parcel moves. Keep invoices, serials, and a note of location that is not only the same drawer as the metal. Stay off collectibles until bullion is understood. If the channel is remote, the watch-fors are identity of the dealer, payment finality, shipping, and the empty-box case — logistics, not a vendor ranking.",
+      "[Premium over spot](/gold-silver/premium-over-spot) is the screen against the object. Spot is a paper ounce. The piece in hand was cast or struck, shipped, insured, and sold by someone who must later bid for it. The difference is fabrication, distribution, and the bid–ask of a physical book. A coin can carry a large premium and still be a clean product. A bar can sit near spot and still be hard to resell. The number that matters later is the bid, not only the ask. A thin product with a fat ask and a poor bid is expensive twice.",
     ],
   },
   {
-    heading: "Six notes",
+    heading: "The place",
     paragraphs: [
-      "Six pages sit under this heading. Open any one for the detail.",
+      "[Storing gold and silver](/gold-silver/storage) is access, cost, and counterparty. Home keeps the metal near. Fire, theft, forgetfulness, and a safe that advertises itself sit with the household. There is no vault fee and no auditor. A vault is distant, and the risk sits with the operator. Allocated storage, done properly, identifies bars or coins; the paperwork names what is owned. Pooled or unallocated accounts are easier to run and easier to confuse with a bank deposit. If you cannot point to a bar list, you have a claim, not a pile. A seller who will “store it for you” and never ship has moved the custody question into another costume.",
     ],
-    list: [
-      "[Gold bars vs coins](/gold-silver/bars-vs-coins) — Fabrication, recognition, size; bullion versus collectibles.",
-      "[Premium over spot](/gold-silver/premium-over-spot) — Screen price versus product in hand; bid as well as ask.",
-      "[Storing gold and silver](/gold-silver/storage) — Access, cost, counterparty; home, allocated, unallocated.",
-      "[Spotting fakes](/gold-silver/spotting-fakes) — High-level filter only; counterparty and specs before gadgetry.",
-      "[Beginner checklist](/gold-silver/beginner-checklist) — Named decisions for first ounces.",
-      "[Buying online](/gold-silver/buying-online) — Remote identity, payment, shipping, invoice; no vendor list.",
+  },
+  {
+    heading: "Copies, and a first holding",
+    paragraphs: [
+      "[Spotting fakes](/gold-silver/spotting-fakes) is a filter. Counterfeits exist, especially of popular coins and of small bars with famous stamps. The first defense is a counterparty you can still find in a year, a product common enough to be known, and weight and dimensions against the published spec. Weigh it. Measure it. Look at the edge, the reeding, and the stamp. None of that is conclusive. A price far below everyone else is a warning, not a bargain. A wrong test can damage a good piece. If a fake would matter, use a professional.",
+      "First ounces are four decisions: what form, from whom, where the metal lives, and what gets written down. The [Beginner checklist](/gold-silver/beginner-checklist) is that sequence. Name the form and the size before the quote. Know the premium and the bid. Choose the place before a parcel moves. Keep invoices, serials, and a note of location that is not only the same drawer. If the channel is a screen, [Buying online](/gold-silver/buying-online) is the dealer’s identity, whether the payment is final, the shipping, and the empty box.",
     ],
   },
 ];

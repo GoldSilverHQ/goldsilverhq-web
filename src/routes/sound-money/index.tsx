@@ -10,7 +10,7 @@ export const Route = createFileRoute("/sound-money/")({
     meta: pageShareMeta({
       title: seoTitle(soundMoneyHub.titleTag),
       description:
-        "Sound money is money its issuer cannot create more of at will. Hard money and fiat, inflation, and what “backed by gold” really means.",
+        "Whether the issuer can create more of the unit by decision alone: hard money, fiat, what the unit buys, and a vault you can or cannot claim.",
       path: "/sound-money",
     }),
   }),
@@ -18,7 +18,6 @@ export const Route = createFileRoute("/sound-money/")({
 });
 
 function IdeaHub() {
-  const definitionPages = ideaPages.filter((p) => p.slug !== "information-not-advice");
   return (
     <SiteShell>
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -29,8 +28,7 @@ function IdeaHub() {
           <ArticleSections sections={soundMoneyHubBody} />
         </div>
 
-        <h2 className="mt-16 font-display text-3xl">The words in detail</h2>
-        <ol className="mt-10 grid gap-3">
+        <ol className="mt-16 grid gap-3">
           {ideaPages.map((page) => (
             <li key={page.slug}>
               <Link
@@ -41,9 +39,6 @@ function IdeaHub() {
                 <span>
                   <span className="block font-medium">{page.title}</span>
                   <span className="text-sm text-muted">{page.summary}</span>
-                  <span className="mt-1 block text-xs text-faint">
-                    {definitionPages.some((d) => d.slug === page.slug) ? "Definition" : "Disclaimer"}
-                  </span>
                 </span>
               </Link>
             </li>

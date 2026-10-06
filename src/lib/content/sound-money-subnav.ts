@@ -9,10 +9,10 @@ export type SoundMoneyNavItem = {
 };
 
 export const SOUND_MONEY_SUBNAV: SoundMoneyNavItem[] = [
-  { label: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+  { label: "Sound money", href: "/sound-money/what-is-sound-money" },
   { label: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
   { label: "Inflation & purchasing power", href: "/sound-money/inflation-purchasing-power" },
-  { label: "What “backed” means", href: "/sound-money/backed-money" },
+  { label: "Backed money", href: "/sound-money/backed-money" },
 ];
 
 /** Header flyout: hub overview, then the definition pages. */

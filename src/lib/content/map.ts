@@ -44,7 +44,7 @@ export const historyHub = {
   titleTag: "Sound Money History: From Coinage to 1971",
   related: [
     { title: "20th-century money", href: "/history/20th-century" },
-    { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+    { title: "Sound money", href: "/sound-money/what-is-sound-money" },
     { title: "Gold & silver markets — current figures", href: "/markets" },
   ],
 };
@@ -53,10 +53,10 @@ export const historyHub = {
 export const soundMoneyHub = {
   titleTag: "Sound Money: Hard, Fiat, Backed",
   related: [
-    { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+    { title: "Sound money", href: "/sound-money/what-is-sound-money" },
     { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
     { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
-    { title: "What “backed” means", href: "/sound-money/backed-money" },
+    { title: "Backed money", href: "/sound-money/backed-money" },
     { title: "Sound Money History", href: "/history" },
   ],
 };
@@ -133,8 +133,8 @@ export const pillars: Pillar[] = [
 export const ideaPages: Episode[] = [
   {
     slug: "what-is-sound-money",
-    title: "What is sound money?",
-    summary: "Money its issuer cannot create more of at will. For centuries gold did that job, because mining it is slow and costly.",
+    title: "Sound money",
+    summary: "Mining an ounce is slow and costly. For centuries that was the limit on the supply.",
     status: "ready",
     paragraphs: [
       "Sound money is money whose supply cannot be expanded at will by a political authority. Historically that constraint came from the cost of mining gold and silver. The point of the idea is not nostalgia. It is about whether the unit of account stays honest over long periods.",
@@ -143,7 +143,7 @@ export const ideaPages: Episode[] = [
     related: [
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
-      { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Backed money", href: "/sound-money/backed-money" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
       { title: "Sound Money History", href: "/history" },
     ],
@@ -165,9 +165,9 @@ export const ideaPages: Episode[] = [
       "Hard money is costly to produce. Fiat money is a claim created by a state or bank, accepted because of law and habit. Both can circulate. They fail in different ways.",
     ],
     related: [
-      { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+      { title: "Sound money", href: "/sound-money/what-is-sound-money" },
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
-      { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Backed money", href: "/sound-money/backed-money" },
       { title: "Gold–silver ratio (mining vs market)", href: "/markets/gold-silver-ratio" },
       { title: "LTCM 1998 consortium", href: "/blog/ltcm-1998-consortium" },
       { title: "Sound Money History", href: "/history" },
@@ -184,13 +184,13 @@ export const ideaPages: Episode[] = [
   {
     slug: "inflation-purchasing-power",
     title: "Inflation and purchasing power",
-    summary: "Inflation is a fall in what money buys. Rising prices are the symptom. Hyperinflation, at 50% or more a month, is the extreme.",
+    summary: "Prices are the surface. A rise of 50% in a month is the extreme, not the ordinary case.",
     status: "ready",
     paragraphs: [
       "Inflation is a decline in purchasing power of the unit. Prices are the visible surface. The underlying question is whether the stock of money is growing faster than the goods and claims it is asked to measure.",
     ],
     related: [
-      { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+      { title: "Sound money", href: "/sound-money/what-is-sound-money" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "Weimar hyperinflation", href: "/history/20th-century/weimar-1923" },
       { title: "Weimar purchasing-power note", href: "/blog/weimar-purchasing-power-note" },
@@ -210,14 +210,14 @@ export const ideaPages: Episode[] = [
   },
   {
     slug: "backed-money",
-    title: "What “backed money” means (and what it doesn’t)",
-    summary: "A backed note is one you can exchange for a set weight of metal. Gold in a vault that nobody can claim does not count.",
+    title: "Backed money",
+    summary: "A note you can exchange for a set weight of metal is a contract. Gold in a vault nobody can claim is not.",
     status: "ready",
     paragraphs: [
       "“Backed” is used loosely. A note that is legally redeemable in a defined weight of metal is one thing. A currency said to be “supported by” gold sitting in a vault with no public claim on it is another.",
     ],
     related: [
-      { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+      { title: "Sound money", href: "/sound-money/what-is-sound-money" },
       { title: "Hard money vs fiat", href: "/sound-money/hard-money-vs-fiat" },
       { title: "1933 U.S. gold recall", href: "/history/20th-century/1933-gold-recall" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
@@ -228,7 +228,7 @@ export const ideaPages: Episode[] = [
       demand: "mid",
       difficulty: "mid",
       intent: "definition",
-      titleTag: "What “Backed by Gold” Means: Contract vs Slogan",
+      titleTag: "Backed Money: Contract or Slogan",
     },
   },
   {
@@ -717,7 +717,7 @@ export const historyClusters: Cluster[] = [
           { title: "20th-century money", href: "/history/20th-century" },
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
           { title: "Assignats", href: "/history/banks-paper/assignats" },
-          { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+          { title: "Sound money", href: "/sound-money/what-is-sound-money" },
         ],
         seo: {
           primary: "weimar hyperinflation",
@@ -782,8 +782,8 @@ export const historyClusters: Cluster[] = [
             title: "Greenspan’s 1966 gold essay",
             href: "/blog/greenspan-1966-print-money",
           },
-          { title: "What “backed” means", href: "/sound-money/backed-money" },
-          { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+          { title: "Backed money", href: "/sound-money/backed-money" },
+          { title: "Sound money", href: "/sound-money/what-is-sound-money" },
         ],
         seo: {
           primary: "nixon shock 1971",
@@ -1013,9 +1013,9 @@ export const practicePages: Episode[] = [
   },
   {
     slug: "spotting-fakes",
-    title: "Spotting fake gold and silver (high level)",
+    title: "Spotting fake gold and silver",
     summary:
-      "Authenticity starts with counterparty and specs — weight and dimensions — not a home lab and not a guarantee. A filter for the obvious, not a test manual.",
+      "Weight, dimensions, and a counterparty you can still find next year. A filter for the obvious copy.",
     status: "ready",
     paragraphs: [
       "Authenticity is a filter, not a laboratory course. Counterparty and published specs come first. Weight, dimensions, edge, and stamp catch the obvious. Nothing here is a guarantee.",
@@ -1057,7 +1057,7 @@ export const practicePages: Episode[] = [
     slug: "buying-online",
     title: "Buying gold and silver online",
     summary:
-      "Buying metal online is a logistics checklist — dealer identity, payment finality, shipping and insurance, invoice facts — not a dealer ranking and not a purchase tip.",
+      "A screen quote still has to become a parcel: who the dealer is, how payment settles, how it ships, and what the invoice names.",
     status: "ready",
     paragraphs: [
       "Online buying is logistics: identity of the dealer, payment, shipping, and what happens if a parcel never arrives. Neutral watch-fors, not a vendor ranking.",
@@ -1114,7 +1114,7 @@ export const marketPages: Episode[] = [
         title: "Why the books still say $42.22",
         href: "/blog/us-gold-booked-at-42-22",
       },
-      { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Backed money", href: "/sound-money/backed-money" },
     ],
     seo: {
       primary: "official gold book value 42.22",
@@ -1141,7 +1141,7 @@ export const marketPages: Episode[] = [
         title: "Interest costs vs U.S. gold",
         href: "/blog/interest-costs-vs-us-gold",
       },
-      { title: "What “backed” means", href: "/sound-money/backed-money" },
+      { title: "Backed money", href: "/sound-money/backed-money" },
       { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
     ],
     seo: {
