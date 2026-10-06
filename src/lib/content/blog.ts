@@ -432,7 +432,7 @@ export const blogPosts: BlogPost[] = [
     related: [
       { title: "Weimar 1923", href: "/history/20th-century/weimar-1923" },
       { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
-      { title: "What is sound money?", href: "/sound-money/what-is-sound-money" },
+      { title: "Sound money", href: "/sound-money/what-is-sound-money" },
     ],
     relatedArticlePaths: [
       "/history/20th-century/weimar-1923",

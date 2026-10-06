@@ -28,19 +28,14 @@ function PracticeHub() {
           <ArticleSections sections={practiceHubBody} />
         </div>
 
-        <h2 className="mt-16 font-display text-3xl">The six notes</h2>
-        <p className="mt-2 max-w-prose text-muted">
-          Form, premium, storage, authenticity, first ounces, remote logistics — open any one.
-        </p>
-        <ol className="mt-10 grid gap-3">
-          {practicePages.map((page, i) => (
+        <ol className="mt-16 grid gap-3">
+          {practicePages.map((page) => (
             <li key={page.slug}>
               <Link
                 to="/gold-silver/$slug"
                 params={{ slug: page.slug }}
                 className="flex gap-4 rounded-lg bg-surface px-4 py-4 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]"
               >
-                <span className="w-6 text-sm text-gold">{i + 1}</span>
                 <span>
                   <span className="block font-medium">{page.title}</span>
                   <span className="text-sm text-muted">{page.summary}</span>

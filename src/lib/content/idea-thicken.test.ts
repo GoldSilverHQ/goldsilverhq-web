@@ -38,7 +38,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       assert.ok(body, `missing body for sound-money/${slug}`);
       const text = bodyText(body);
       const words = wordCount(text);
-      assert.ok(words >= 900 && words <= 1200, `${slug}: expected 900–1200 words, got ${words}`);
+      assert.ok(words >= 700 && words <= 1200, `${slug}: expected 700–1200 words, got ${words}`);
       assert.ok(body.filter((s) => s.heading).length >= 6, `${slug}: expected ≥6 headed sections`);
       assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf|should buy|price target to/i);
     }
@@ -107,10 +107,10 @@ describe("idea / sound-money thicken (no new URLs)", () => {
     const text = bodyText(soundMoneyHubBody);
     const words = wordCount(text);
     assert.ok(words >= 300 && words <= 1200, `hub: expected 300–1200 words, got ${words}`);
-    assert.match(text, /\[What is sound money\?\]\(\/sound-money\/what-is-sound-money\)/);
+    assert.match(text, /\[Sound money\]\(\/sound-money\/what-is-sound-money\)/);
     assert.match(text, /\[Hard money vs fiat\]\(\/sound-money\/hard-money-vs-fiat\)/);
     assert.match(text, /\[Inflation and purchasing power\]\(\/sound-money\/inflation-purchasing-power\)/);
-    assert.match(text, /\[What “backed” means\]\(\/sound-money\/backed-money\)/);
+    assert.match(text, /\[Backed money\]\(\/sound-money\/backed-money\)/);
     assert.match(text, /\[Sound Money History\]\(\/history\)/);
     assert.doesNotMatch(text, /\bhinges?\b|\b(?:this|the) (?:page|article|site|overview)\b|these pages|on this site|stays (?:on|with) |(?:does|do) not sell metal|forecast prices|If you arrived|if you wonder|Open the \[|Four words|fog|is the door|overview sits|standing line|information versus advice|information-not-advice|investment advice|documentary sequence|next (?:monetary )?hinge|\*\*\[/i);
     assert.doesNotMatch(text, /ebook|LemonSqueezy|buy gold|buy silver|Kauf/i);

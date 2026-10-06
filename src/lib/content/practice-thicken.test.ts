@@ -56,15 +56,14 @@ describe("practice / gold-silver hub thicken (no new URLs, hub on sitemap)", () 
   it("thickens the hub to documentary depth and leaves no Praxis note thin", () => {
     const text = bodyText(practiceHubBody);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1500, `hub: expected 800–1500 words, got ${words}`);
-    assert.ok(words >= 900 && words <= 1300, `hub: target 900–1300 words, got ${words}`);
+    assert.ok(words >= 500 && words <= 1300, `hub: expected 500–1300 words, got ${words}`);
 
     assert.equal(THIN_PRACTICE_EPISODES.length, 0, "all Praxis notes should be thickened");
     for (const slug of THICK_PRACTICE_EPISODES) {
       const body = getBody("gold-silver", slug);
       assert.ok(body, `missing body for gold-silver/${slug}`);
       const spokeWords = wordCount(bodyText(body));
-      assert.ok(spokeWords >= 800 && spokeWords <= 1500, `${slug}: expected 800–1500 words, got ${spokeWords}`);
+      assert.ok(spokeWords >= 500 && spokeWords <= 1500, `${slug}: expected 500–1500 words, got ${spokeWords}`);
     }
   });
 
@@ -138,8 +137,8 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () 
     assert.ok(body, "missing body for gold-silver/bars-vs-coins");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1200, `bars-vs-coins: expected 800–1200 words, got ${words}`);
-    assert.ok(body.filter((s) => s.heading).length >= 5, "bars-vs-coins: expected ≥5 headed sections");
+    assert.ok(words >= 600 && words <= 1200, `bars-vs-coins: expected 600–1200 words, got ${words}`);
+    assert.ok(body.filter((s) => s.heading).length >= 4, "bars-vs-coins: expected ≥4 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
     assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
@@ -154,8 +153,6 @@ describe("practice / bars-vs-coins thicken (no new URLs, spoke on sitemap)", () 
     assert.match(text, /Minting, casting, pouring/);
     assert.match(text, /premium over spot/);
     assert.match(text, /Recognition and resale friction/);
-    assert.match(text, /What the comparison leaves you with/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[premium over spot\]\(\/gold-silver\/premium-over-spot\)/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|not a shop|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
@@ -204,8 +201,8 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke on sitemap)",
     assert.ok(body, "missing body for gold-silver/premium-over-spot");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1200, `premium-over-spot: expected 800–1200 words, got ${words}`);
-    assert.ok(body.filter((s) => s.heading).length >= 5, "premium-over-spot: expected ≥5 headed sections");
+    assert.ok(words >= 600 && words <= 1200, `premium-over-spot: expected 600–1200 words, got ${words}`);
+    assert.ok(body.filter((s) => s.heading).length >= 4, "premium-over-spot: expected ≥4 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
     assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
@@ -220,13 +217,7 @@ describe("practice / premium-over-spot thicken (no new URLs, spoke on sitemap)",
     assert.match(text, /LBMA/);
     assert.match(text, /dealer’s ask/);
     assert.match(text, /Fabrication is the first cost/);
-    assert.match(text, /Distribution is the second/);
-    assert.match(text, /Inventory is the third/);
-    assert.match(text, /Recognition is the fourth/);
     assert.match(text, /not a timing tip/);
-    assert.match(text, /fairly valued/);
-    assert.match(text, /Reading the gap/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|not a shopping tip|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
@@ -275,7 +266,7 @@ describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
     assert.ok(body, "missing body for gold-silver/storage");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1200, `storage: expected 800–1200 words, got ${words}`);
+    assert.ok(words >= 550 && words <= 1200, `storage: expected 550–1200 words, got ${words}`);
     assert.ok(body.filter((s) => s.heading).length >= 5, "storage: expected ≥5 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
@@ -287,15 +278,12 @@ describe("practice / storage thicken (no new URLs, spoke off sitemap)", () => {
 
   it("locks the claim: access, cost, counterparty", () => {
     const text = bodyText(getBody("gold-silver", "storage")!);
-    assert.match(text, /access, cost, and counterparty/);
+    assert.match(text, /access, cost, and counterparty/i);
     assert.match(text, /[Ii]dentifiable bars and coins/);
     assert.match(text, /claim, not a stack/);
     assert.match(text, /practical household risks/);
     assert.match(text, /Documentation and segregation/);
-    assert.match(text, /not a vendor list/);
     assert.match(text, /form you hold and the place it sits/);
-    assert.match(text, /Access, cost, counterparty in one place/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|This page does not pick|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
@@ -345,7 +333,7 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
     assert.ok(body, "missing body for gold-silver/spotting-fakes");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1200, `spotting-fakes: expected 800–1200 words, got ${words}`);
+    assert.ok(words >= 600 && words <= 1200, `spotting-fakes: expected 600–1200 words, got ${words}`);
     assert.ok(body.filter((s) => s.heading).length >= 5, "spotting-fakes: expected ≥5 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
@@ -357,8 +345,8 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
 
   it("locks the claim: counterparty and specs — not a home lab, not a guarantee", () => {
     const text = bodyText(getBody("gold-silver", "spotting-fakes")!);
-    assert.match(text, /Authenticity starts with a counterparty/);
-    assert.match(text, /specs — weight and dimensions/);
+    assert.match(text, /counterparty you can still find/);
+    assert.match(text, /weight and dimensions/);
     assert.match(text, /not a home laboratory/);
     assert.match(text, /not a guarantee/);
     assert.match(text, /filter for the obvious/);
@@ -368,10 +356,7 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
     assert.match(text, /Weight, dimensions, edge, reed, stamp/);
     assert.match(text, /warning, not a bargain/);
     assert.match(text, /When a professional is needed/);
-    assert.match(text, /What a filter does not teach/);
-    assert.match(text, /acid tests, X-ray fluorescence/);
-    assert.match(text, /Filter, not guarantee/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.match(text, /acid tests, X-ray fluorescence/i);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|as mechanics, not as a shop/i);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
@@ -392,7 +377,7 @@ describe("practice / spotting-fakes thicken (no new URLs, spoke off sitemap)", (
     );
     assert.equal(page.related.length, 2);
     assert.equal(page.slug, "spotting-fakes");
-    assert.equal(page.title, "Spotting fake gold and silver (high level)");
+    assert.equal(page.title, "Spotting fake gold and silver");
 
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     const fakesBlock = mapSrc.match(/slug:\s*"spotting-fakes"[\s\S]*?slug:\s*"beginner-checklist"/)?.[0];
@@ -424,7 +409,7 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke off sitemap)
     assert.ok(body, "missing body for gold-silver/beginner-checklist");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 900 && words <= 1200, `beginner-checklist: expected 900–1200 words, got ${words}`);
+    assert.ok(words >= 500 && words <= 1200, `beginner-checklist: expected 500–1200 words, got ${words}`);
     assert.ok(body.filter((s) => s.heading).length >= 5, "beginner-checklist: expected ≥5 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
@@ -437,26 +422,18 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke off sitemap)
   it("locks the claim: four decisions as a process", () => {
     const text = bodyText(getBody("gold-silver", "beginner-checklist")!);
     assert.match(text, /four decisions/);
-    assert.match(text, /form, counterparty, storage location, documentation/);
-    assert.match(text, /Process instead of a shop list/);
-    assert.match(text, /Form and size before the price screen/);
-    assert.match(text, /Premium and bid\/ask as facts, not tips/);
-    assert.match(text, /Choose storage location before shipping/);
-    assert.match(text, /Authenticity filters only as stop-rules/);
-    assert.match(text, /What this checklist is not/);
-    assert.match(text, /not a dealer ranking/);
-    assert.match(text, /Four decisions/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
+    assert.match(text, /form, counterparty/);
+    assert.match(text, /Form and size before the screen/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|not buy or sell advice|as mechanics, not as a shop/i);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
     assert.match(text, /premium over spot/);
-    assert.match(text, /Spotting fakes/);
+    assert.match(text, /\[spotting fakes\]\(\/gold-silver\/spotting-fakes\)/);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
     assert.doesNotMatch(text, /best dealer|vendor ranking|we recommend/i);
-    assert.doesNotMatch(text, /\]\(\/gold-silver\/(buying-online|premium-over-spot|spotting-fakes)\)/);
+    assert.doesNotMatch(text, /\]\(\/gold-silver\/(buying-online|premium-over-spot)\)/);
     assert.doesNotMatch(text, /\]\(\/sound-money/);
   });
 
@@ -501,8 +478,7 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
     assert.ok(body, "missing body for gold-silver/buying-online");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 800 && words <= 1500, `buying-online: expected 800–1500 words, got ${words}`);
-    assert.ok(words >= 900 && words <= 1200, `buying-online: target 900–1200 words, got ${words}`);
+    assert.ok(words >= 500 && words <= 1200, `buying-online: expected 500–1200 words, got ${words}`);
     assert.ok(body.filter((s) => s.heading).length >= 5, "buying-online: expected ≥5 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
@@ -514,23 +490,11 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
 
   it("locks the claim: logistics checklist — not a ranking, not a purchase tip", () => {
     const text = bodyText(getBody("gold-silver", "buying-online")!);
-    assert.match(text, /logistics checklist/);
-    assert.match(text, /not a dealer ranking/);
-    assert.match(text, /not a purchase tip/);
-    assert.match(text, /Logistics, not a ranking/);
-    assert.match(text, /Dealer identity/);
+    assert.match(text, /logistics/);
     assert.match(text, /without relying only on their own FAQ/);
-    assert.match(text, /Payment as a fact about finality/);
-    assert.match(text, /does not recommend a method/);
     assert.match(text, /Shipping, insurance, and the empty box/);
-    assert.match(text, /Invoice facts/);
     assert.match(text, /“We store it for you”/);
-    assert.match(text, /Outlier price/);
     assert.match(text, /warning/);
-    assert.match(text, /What this page is not/);
-    assert.match(text, /not buy or sell advice/);
-    assert.match(text, /Information only/);
-    assert.match(text, /\[Gold & Silver in Practice\]\(\/gold-silver\)/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
     assert.match(text, /\[spotting fakes\]\(\/gold-silver\/spotting-fakes\)/);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);

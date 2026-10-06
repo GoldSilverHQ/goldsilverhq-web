@@ -185,7 +185,7 @@ export const HISTORY_PEOPLE: readonly HistoryPerson[] = [
         "Ludwig von Mises set the argument out in Theorie des Geldes und der Umlaufsmittel (1912), later in English as The Theory of Money and Credit. He argued that a money’s purchasing power is inherited from its earlier use as a commodity, not granted by the issuer’s word.",
         "He treated a gold coin standard as a limit on governments and banks that issue claims beyond the metal. Human Action (1949) restated that case after he had left Europe. Describing the argument is not a recommendation to hold metal, and it is not a forecast.",
       ],
-      more: { href: "/sound-money/what-is-sound-money", title: "What is sound money?" },
+      more: { href: "/sound-money/what-is-sound-money", title: "Sound money" },
     },
   ),
 ];
