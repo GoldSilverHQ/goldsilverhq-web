@@ -2721,6 +2721,14 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
+    heading: "The Washington Agreement on Gold, 26 September 1999",
+    paragraphs: [
+      "On **26 September 1999** the European Central Bank published a [joint statement on gold](https://www.ecb.europa.eu/press/pr/date/1999/html/pr990926.en.html). The signatories were the ECB, the euro-area central banks, Sweden’s Riksbank, the Swiss National Bank, and the Bank of England. That statement is the Washington Agreement on Gold.",
+      "Annual sales would not exceed about **400 tonnes**, and sales over the five years would not exceed **2,000 tonnes**. The signatories agreed not to expand gold leasing, or their use of gold futures and options, during that period. The agreement was to be reviewed after five years.",
+      "The United Kingdom’s **1999–2002** auctions — Brown’s Bottom, in the section below — ran while this cap was in force. The reported net official sellers table above names the published reductions through July 2026.",
+    ],
+  },
+  {
     heading: "Brown’s Bottom: the UK gold sales of 1999–2002",
     paragraphs: [
       "The best-documented official gold sale of recent decades is British. Traders later nicknamed it **Brown’s Bottom**, after Gordon Brown, then Chancellor of the Exchequer, and the price level at which the sales took place.",
