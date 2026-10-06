@@ -19,7 +19,7 @@ const root = join(import.meta.dirname, "../../..");
 describe("branded OG share cards", () => {
   it("resolves metadata for every Phase-1 sitemap URL", () => {
     const pages = phase1SharePages();
-    assert.equal(pages.length, 285);
+    assert.equal(pages.length, 286);
     assert.equal(pages.length, PHASE1_SITEMAP_PATHS.length);
     for (const page of pages) {
       assert.ok(page.cardTitle.length > 3, page.path);
@@ -40,7 +40,8 @@ describe("branded OG share cards", () => {
       ogImagePathForRoute("/gold-silver/premium-over-spot"),
       "/og/cards/gold-silver-premium-over-spot.jpg",
     );
-    assert.equal(ogImagePathForRoute("/gold-silver/storage"), "");
+    assert.equal(ogImagePathForRoute("/gold-silver/storage"), "/og/cards/gold-silver-storage.jpg");
+    assert.equal(ogImagePathForRoute("/gold-silver/spotting-fakes"), "");
     assert.equal(ogImagePathForRouteOrDefault("/desk"), "/og.jpg");
     assert.match(
       absoluteOgImageUrl("/markets"),
@@ -77,7 +78,7 @@ describe("branded OG share cards", () => {
         join(root, "public", ogImagePathForRouteOrDefault(path).replace(/^\//, "")),
       ),
     ];
-    assert.equal(files.length, 286);
+    assert.equal(files.length, 287);
     for (const file of files) {
       assert.ok(existsSync(file), `missing ${file}`);
       const size = statSync(file).size;

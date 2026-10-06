@@ -72,6 +72,7 @@ describe("phase-1 robots and sitemap", () => {
       "/gold-silver",
       "/gold-silver/bars-vs-coins",
       "/gold-silver/premium-over-spot",
+      "/gold-silver/storage",
       "/markets",
       "/markets/official-gold-book-value",
       "/markets/central-bank-gold-reserves",
@@ -104,18 +105,19 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 285);
+    assert.equal(locs.length, 286);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
-      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot"],
+      ["/gold-silver", "/gold-silver/bars-vs-coins", "/gold-silver/premium-over-spot", "/gold-silver/storage"],
     );
     assert.match(xml, /\/gold-silver\/bars-vs-coins/);
     assert.match(xml, /\/gold-silver\/premium-over-spot/);
+    assert.match(xml, /\/gold-silver\/storage/);
     assert.doesNotMatch(
       xml,
-      /\/gold-silver\/(?!bars-vs-coins|premium-over-spot)|information-not-advice|comex|physical-by-country|\/maps/,
+      /\/gold-silver\/(?!bars-vs-coins|premium-over-spot|storage)|information-not-advice|comex|physical-by-country|\/maps/,
     );
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/maps" as (typeof PHASE1_SITEMAP_PATHS)[number]));
   });

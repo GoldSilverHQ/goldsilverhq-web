@@ -901,7 +901,7 @@ const storage: Section[] = [
   {
     heading: "The object and the place",
     paragraphs: [
-      "A large wholesale bar is dense and awkward to move. A vault that handles bars by serial is built for that density. A common bullion coin is easier to recognise in a drawer and easier to carry in ones. Small minted bars sit between those poles. Fabrication, premium, and resale friction are the comparison on [gold bars vs coins](/gold-silver/bars-vs-coins). The form you hold and the place it sits are one decision.",
+      "A large wholesale bar is dense and awkward to move. A vault that handles bars by serial is built for that density. A common bullion coin is easier to recognise in a drawer and easier to carry in ones. Small minted bars sit between those poles. Fabrication, premium, and resale friction are compared on [gold bars vs coins](/gold-silver/bars-vs-coins). The form you hold and the place it sits are one decision.",
       "A coin that paid more fabrication per ounce does not become a different metal at home. A bar with a smaller gap to spot does not become allocated because someone said the word. A seller who will “store it for you” and never ship has only moved the custody question into another costume.",
     ],
   },
