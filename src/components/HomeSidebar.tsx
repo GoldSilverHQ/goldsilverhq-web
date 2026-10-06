@@ -20,24 +20,28 @@ function Box({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col rounded-sm bg-surface p-4 shadow-[var(--shadow-border)]">
+    <section className="flex flex-col items-center rounded-sm bg-surface p-4 text-center shadow-[var(--shadow-border)]">
       {centered ? (
-        <header className="text-center">
-          <h2 className={`font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
+        <header className="w-full">
+          <h2 className={`mx-auto max-w-full font-display text-lg leading-snug ${titleClassName}`}>
+            {title}
+          </h2>
           <p className="mt-1 text-sm font-semibold text-gold">{kicker}</p>
         </header>
       ) : (
-        <>
+        <header className="w-full">
           {kicker ? (
             <p className="mb-1 text-xs font-semibold tracking-[0.14em] text-gold uppercase">
               {kicker}
             </p>
           ) : null}
-          <h2 className={`font-display text-lg leading-snug ${titleClassName}`}>{title}</h2>
-        </>
+          <h2 className={`mx-auto max-w-full font-display text-lg leading-snug ${titleClassName}`}>
+            {title}
+          </h2>
+        </header>
       )}
-      <div className="mt-3 flex-1">{children}</div>
-      <p className="mt-4 border-t border-line pt-3 text-sm">{footer}</p>
+      <div className="mt-3 w-full flex-1">{children}</div>
+      <p className="mt-4 w-full border-t border-line pt-3 text-sm">{footer}</p>
     </section>
   );
 }
@@ -69,9 +73,12 @@ export function HomeSidebar({
         {events.length ? (
           <ul className="space-y-3 text-sm">
             {events.map((e) => (
-              <li key={`${e.year}-${e.text}`} className="flex gap-2">
-                <span aria-hidden className="mt-[0.45rem] size-1.5 shrink-0 rounded-full bg-gold" />
+              <li key={`${e.year}-${e.text}`}>
                 <p className="text-muted">
+                  <span
+                    aria-hidden
+                    className="mr-2 inline-block size-1.5 rounded-full bg-gold align-middle"
+                  />
                   <span className="font-semibold text-fg tabular-nums">{e.year}</span>{" "}
                   {e.href ? (
                     <a href={e.href} className="hover:text-gold">
@@ -91,7 +98,7 @@ export function HomeSidebar({
 
       <Box
         title="Top 5 Silver Producers 2026 (YTD)"
-        titleClassName="w-fit text-silver-shine"
+        titleClassName="w-fit max-w-full text-silver-shine"
         footer={
           <Link
             to="/silver-stocks"
@@ -102,8 +109,8 @@ export function HomeSidebar({
         }
       >
         {movers ? (
-          <table className="w-full text-sm">
-            <caption className="caption-bottom pt-2 text-left text-xs text-faint">
+          <table className="mx-auto w-fit max-w-full text-left text-sm">
+            <caption className="caption-bottom pt-2 text-center text-xs text-faint">
               Year-to-date change, producers only.
             </caption>
             <thead className="sr-only">
