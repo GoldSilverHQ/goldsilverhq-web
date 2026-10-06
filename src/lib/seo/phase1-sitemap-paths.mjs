@@ -4,7 +4,8 @@ export const CANONICAL_ORIGIN = "https://www.goldsilverhq.com";
 /**
  * Thick topical-map URLs only (Phase-1 discipline). Thin stubs stay off the
  * sitemap (omitted, not noindexed): remaining Practice spokes, Sell, and short
- * disclaimers. `/gold-silver` and `/gold-silver/bars-vs-coins` are listed.
+ * disclaimers. `/gold-silver`, `/gold-silver/bars-vs-coins`, and
+ * `/gold-silver/premium-over-spot` are listed.
  * Plain ESM so OG card scripts and the Grok head injector can share it.
  */
 /** Spot years before the continuous run. Notable hinges only — not every quiet year. */
@@ -69,6 +70,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/sound-money/backed-money",
   "/gold-silver",
   "/gold-silver/bars-vs-coins",
+  "/gold-silver/premium-over-spot",
   "/markets",
   "/markets/official-gold-book-value",
   "/markets/central-bank-gold-reserves",
