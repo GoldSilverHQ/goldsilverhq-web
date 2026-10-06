@@ -4788,7 +4788,172 @@ const edwardVi1551Silver: Section[] = [
   },
 ];
 
+/** Blog: 31 December 1974 — private gold holding returns, and COMEX gold futures open the same day. Longer than the X Article. */
+const goldFuturesSameDay1974: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **31 December 1974**, an American could buy a bar of gold, pay for it, and take it home. For 41 years that had been against the law. On the same day, trading opened in New York in something new: gold futures on the Commodity Exchange, better known as COMEX.",
+      "Forty-one years is the span from the ban to this December day. A bar is metal you pay for and carry out. A futures market is the new trading, in New York, on COMEX.",
+    ],
+  },
+  {
+    heading: "A promise for 100 ounces",
+    paragraphs: [
+      "A futures contract is a promise to buy or sell a set amount of gold at a price fixed today, for delivery on a later date. On COMEX the amount was 100 ounces. Traders can buy and sell those promises all day, and most are closed out before any metal moves.",
+      "Closed out means a later trade ends the promise on the books. One hundred ounces is the COMEX size. A bar moving from one holder to another is the rarer ending.",
+    ],
+  },
+  {
+    heading: "A bank crisis, then every bank shut",
+    paragraphs: [
+      "The ban began in a bank crisis. By **4 March 1933**, the day Franklin D. Roosevelt took office, banks in 37 states were closed or limiting withdrawals, and people were trading paper money for gold. Two days later Roosevelt shut every bank in the country.",
+      "Limiting withdrawals means a bank would hand a depositor only part of the balance. Two days after 4 March is **6 March**, and that shutdown covered every bank, past the 37 states.",
+    ],
+  },
+  {
+    heading: "Executive Order 6102",
+    paragraphs: [
+      "On **5 April** he signed Executive Order 6102. Everyone had to hand in gold coin, gold bullion, and gold certificates by **1 May**. A gold certificate was paper money the Treasury promised to swap for gold coin on demand. People could keep up to $100 in gold coins and certificates, rare coins prized by collectors, and gold for use in industry, a profession, or art. The official price was $20.67 an ounce. Breaking the order could cost a $10,000 fine, ten years in prison, or both.",
+      "A gold certificate was a swap: paper for gold coin, on demand. The exceptions sit in one sentence: up to $100, rare collector coins, and gold for industry, a profession, or art. The [1933 gold recall](/history/20th-century/1933-gold-recall) is that order and the turn-in.",
+    ],
+  },
+  {
+    heading: "A card for the day the ban ended",
+    paragraphs: [
+      "The card set into the article is dated **31 December 1974**. It states the two facts that day turned on. Gold ownership was legal again in the United States. A 100-ounce gold contract began trading on COMEX. A gold coin sits beside the lines.",
+      "The card is dated the day the ban ended. The 100-ounce line on it is the COMEX contract: a set amount, a price fixed in the trade, delivery on a later date.",
+    ],
+    figure: {
+      src: "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
+      alt: "Card dated December 31, 1974, with a United States gold coin, stating that gold ownership was legal again and that a 100-ounce gold contract began trading on COMEX.",
+      caption:
+        "31 December 1974 — gold ownership legal again, and a 100-ounce gold contract begins trading on COMEX.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on gold futures opening the day Americans could hold gold again.",
+      width: 671,
+      height: 377,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Thirty-five dollars, and the gap",
+    paragraphs: [
+      "In **January 1934** the Gold Reserve Act moved the nation's monetary gold to the Treasury, and Roosevelt set a new price of $35 an ounce. Those who had turned in their gold at $20.67 did not get the difference.",
+      "Monetary gold is the gold counted as money. The new official price is $35. The turn-in price was $20.67. The article says the people who had handed gold in did not receive the difference.",
+    ],
+  },
+  {
+    heading: "A line with no source",
+    paragraphs: [
+      "A line often credited to Herbert Hoover, the president Roosevelt replaced, has been passed around ever since. It has no documented source.",
+      "Hoover is the president Roosevelt replaced. A documented source would be a record that he said the line. The article says that record is missing, and it leaves the sentence out. This note does the same.",
+    ],
+  },
+  {
+    heading: "Old certificates, then the gold window",
+    paragraphs: [
+      "The rules eased slowly. In **1964** collectors were allowed to own old gold certificates again, though they could no longer be swapped for gold. In **1971** Richard Nixon closed the \"gold window,\" the promise that foreign governments could trade their dollars for American gold at the official price.",
+      "The 1964 change let collectors hold the old certificates. The swap of those certificates for gold coin stayed shut. The gold window was the later promise, to foreign governments, dollars for American gold at the official price. The [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) is the 1971 closing.",
+    ],
+  },
+  {
+    heading: "A warning on the day Ford was sworn in",
+    paragraphs: [
+      "Not everyone in Washington wanted Americans to have gold again. On **9 August 1974**, the day Gerald Ford was sworn in, Federal Reserve Chairman Arthur Burns warned Treasury Secretary William Simon that private ownership \"could well add to the uncertainties affecting financial markets.\" He said it might become desirable to seek repeal. Five days later Ford signed Public Law 93-373. From **31 December 1974** at the latest, no law could stop Americans from buying, holding or selling gold.",
+      "Burns chaired the Federal Reserve. Simon was Treasury secretary. Repeal would have asked Congress to take the permission back before it started. Five days after 9 August is **14 August**, the day Public Law 93-373 was signed. The latest date in that law is 31 December 1974.",
+      "The portrait with that month is Gerald Ford's first official portrait, August 1974.",
+    ],
+    figure: {
+      src: "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
+      alt: "Color portrait of Gerald Ford in a dark suit and patterned tie, standing before an American flag.",
+      caption:
+        "Gerald Ford's first official portrait, August 1974, the month he signed the law that ended the ban.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on gold futures opening the day Americans could hold gold again.",
+      width: 810,
+      height: 810,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "End on time, and sell",
+    paragraphs: [
+      "On **18 November**, Simon set out the choices for Ford. Asking Congress for a delay, he wrote, \"could be construed abroad as a shift in the U.S. position that gold should be phased out of a central role in the international monetary system.\" Any strain from private buying \"could be reduced or offset by limited sales of gold from Treasury stocks.\" Ford initialed both: the ban would end on time, and the Treasury would sell.",
+      "A delay would have pushed the date past 31 December. Simon wrote that a request for one could be read abroad as a change in the U.S. position on gold's role. The other line is the sales from Treasury stocks. Initialed both means Ford marked both: the ban ends on time, and the Treasury sells.",
+    ],
+  },
+  {
+    heading: "Two million ounces, and a cable",
+    paragraphs: [
+      "On **3 December**, Simon told Congress the Treasury would auction 2 million ounces on **6 January**. The next day the State Department sent cable 1974STATE265855 to every American embassy and consulate. Drafted at the Treasury and sent under Henry Kissinger's name, it reports that \"SIMON STRESSED US CONVICTION THAT ROLE OF GOLD IN MONETARY SYSTEM SHOULD BE FURTHER REDUCED.\" It also says the Treasury \"DOES NOT HAVE ANY SPECIFIC PRICE OBJECTIVE IN MIND.\"",
+      "The next day is **4 December**. Drafted at the Treasury means the words were written there. Sent under Kissinger's name means the State Department put his name on the sending. The two sentences the article quotes are the reduced role of gold, and the lack of any specific price objective.",
+    ],
+    figure: {
+      src: "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      alt: "Excerpt of State Department cable 1974STATE265855, dated December 4, 1974, with the cable number highlighted.",
+      caption:
+        "State Department cable 1974STATE265855, December 4, 1974, as published in WikiLeaks PlusD (excerpt).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on gold futures opening the day Americans could hold gold again.",
+      width: 1288,
+      height: 832,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "What London's dealers expected",
+    paragraphs: [
+      "On **10 December**, the U.S. Embassy in London cabled what London's big gold dealers expected from American ownership. Cable 1974LONDON16154 reads:",
+      "\"EACH OF THE DEALERS EXPRESSED THE BELIEF THAT THE FUTURES MARKET WOULD BE OF SIGNIFICANT PROPORTION AND PHYSICAL TRADING WOULD BE MINISCULE BY COMPARISON.\" Large futures trading, they expected, would create \"A HIGHLY VOLATILE MARKET,\" and the price swings \"WOULD DIMINISH THE INITIAL DEMAND FOR PHYSICAL HOLDING AND MOST LIKELY NEGATE LONG-TERM HOARDING BY U.S. CITIZENS.\"",
+      "That was the dealers' forecast, passed on to Washington.",
+      "Significant proportion is their size for futures: large. Miniscule, the cable's spelling, is their size for trading in the metal: small beside the futures. Volatile is their word for wide swings. The article calls the whole of it a forecast, passed on to Washington. It is what the dealers expected in December.",
+    ],
+  },
+  {
+    heading: "Four exchanges, and one published count",
+    paragraphs: [
+      "On **31 December**, gold futures opened on four American exchanges. COMEX alone traded 2,550 contracts on the first day, the New York Times reported. The rush for bars and coins was brief. Dealers saw a burst of interest that faded within days, while futures volume held up.",
+      "The article gives four American exchanges and names COMEX. The 2,550 contracts are the New York Times figure for that one exchange, each contract the 100-ounce promise. Futures volume is trading in those promises. It held up after the burst in bars and coins had faded.",
+    ],
+  },
+  {
+    heading: "The January auction",
+    paragraphs: [
+      "In London, gold had touched $197.50 on **30 December**. On **6 January**, the morning price was $173. That day the Treasury held its auction. It offered 2 million ounces and drew bids for less than half. It sold 753,600 ounces at an average of $165.65, and the lowest bid it accepted was $153. In June it sold another 500,000 ounces, almost all of what it offered.",
+      "Bids for less than half means the bids covered under half of the 2 million ounces offered. The sale was 753,600 ounces, average $165.65, lowest accepted bid $153. June is a second sale: 500,000 ounces, almost all of what was offered then.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["The ban, the slow easing, the statute, and the day futures opened."],
+    list: [
+      "**4 March 1933.** Roosevelt takes office. Banks in 37 states are closed or limiting withdrawals. Two days later every bank is shut.",
+      "**5 April 1933.** Executive Order 6102 calls in gold coin, bullion, and gold certificates by 1 May, at $20.67 an ounce.",
+      "**January 1934.** The Gold Reserve Act. Monetary gold moves to the Treasury. The official price becomes $35.",
+      "**1964.** Collectors may hold old gold certificates again. They can no longer be swapped for gold.",
+      "**1971.** Nixon closes the gold window for foreign governments.",
+      "**9 August 1974.** Ford is sworn in. Burns warns Simon about private ownership. Five days later Ford signs Public Law 93-373.",
+      "**18 November 1974.** Ford initials both of Simon's lines: the ban ends on time, and the Treasury will sell.",
+      "**3–4 December 1974.** Simon tells Congress of a 2 million ounce auction on 6 January. Cable 1974STATE265855 goes out the next day.",
+      "**10 December 1974.** London cable 1974LONDON16154: dealers expect a large futures market and small physical trading beside it.",
+      "**31 December 1974.** Gold bars can be taken home. Futures open on four American exchanges. COMEX trades 2,550 contracts.",
+      "**6 January 1975.** London morning price $173. The Treasury sells 753,600 ounces at an average of $165.65.",
+      "**June 1975.** Another 500,000 ounces, almost all of what was offered.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Americans had their gold back. The same week, they had a market that could trade it 100 ounces at a time without a bar changing hands, and a Treasury selling its own.",
+      "One hundred ounces at a time is the contract. Without a bar changing hands is a promise closed out before metal moves. Selling its own is the Treasury auction Ford had initialed in November.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2107386819281084416).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/gold-futures-same-day-1974": goldFuturesSameDay1974,
   "blog/edward-vi-1551-silver": edwardVi1551Silver,
   "blog/foreign-silver-legal-tender-1857": foreignSilverLegalTender1857,
   "blog/philadelphia-mint-1792": philadelphiaMint1792,

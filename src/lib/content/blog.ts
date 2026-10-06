@@ -49,6 +49,26 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "gold-futures-same-day-1974",
+    title: "How Gold Futures Opened the Same Day Americans Got Their Gold Back",
+    summary:
+      "On 31 December 1974 an American could take a gold bar home again. The same day, a 100-ounce gold futures contract opened on COMEX in New York.",
+    date: "2026-10-06",
+    status: "ready",
+    tags: ["History", "Markets"],
+    paragraphs: [],
+    related: [
+      { title: "1933 U.S. gold recall", href: "/history/20th-century/1933-gold-recall" },
+      { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
+    ],
+    relatedArticlePaths: [
+      "/history/20th-century/1933-gold-recall",
+      "/history/20th-century/bretton-woods-nixon-1971",
+    ],
+    xArticleUrl: "https://x.com/i/article/2107386819281084416",
+    sourceXId: "2107386819281084416",
+  },
+  {
     slug: "edward-vi-1551-silver",
     title: "How a Teenage King Put Real Silver Back in England's Money",
     summary:
