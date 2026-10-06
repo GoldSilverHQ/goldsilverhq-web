@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/gold-futures-same-day-1974",
+    src: "/images/blog/gold-futures-same-day-1974.jpg",
+    ogSrc: "/og/cards/blog-gold-futures-same-day-1974.jpg",
+    alt: "Title card reading How Gold Futures Opened the Same Day Americans Got Their Gold Back, with stacked gold bars in front of a trading floor.",
+    caption:
+      "31 December 1974 — Americans could take gold home again, and gold futures opened the same day.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on gold futures opening the day Americans could hold gold again.",
+  },
+  {
     path: "/blog/edward-vi-1551-silver",
     src: "/images/blog/edward-vi-1551-silver.jpg",
     ogSrc: "/og/cards/blog-edward-vi-1551-silver.jpg",

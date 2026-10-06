@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 18);
-    assert.equal(listBlogPosts().length, 18);
+    assert.equal(blogPosts.length, 19);
+    assert.equal(listBlogPosts().length, 19);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/gold-futures-same-day-1974",
         "/blog/edward-vi-1551-silver",
         "/blog/foreign-silver-legal-tender-1857",
         "/blog/philadelphia-mint-1792",
@@ -182,9 +183,9 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 16);
+    assert.equal(listBlogPostsByTag("History").length, 17);
     assert.equal(listBlogPostsByTag("Metals").length, 11);
-    assert.equal(listBlogPostsByTag("Markets").length, 5);
+    assert.equal(listBlogPostsByTag("Markets").length, 6);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
 
@@ -197,6 +198,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "gold-futures-same-day-1974",
       "edward-vi-1551-silver",
       "foreign-silver-legal-tender-1857",
       "philadelphia-mint-1792",
@@ -397,6 +399,56 @@ describe("blog section", () => {
     );
     for (const f of figures) {
       assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the 1974 gold-futures figures and credits the X Article once", () => {
+    const post = getBlogPost("gold-futures-same-day-1974");
+    assert.ok(post);
+    assert.equal(
+      post.title,
+      "How Gold Futures Opened the Same Day Americans Got Their Gold Back",
+    );
+    assert.equal(post.date, "2026-10-06");
+    assert.deepEqual(post.tags, ["History", "Markets"]);
+    assert.equal(post.sourceXId, "2107386819281084416");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/gold-futures-same-day-1974"));
+    const body = getBody("blog", "gold-futures-same-day-1974")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[1933 gold recall\]\(\/history\/20th-century\/1933-gold-recall\)/);
+    assert.match(text, /\[Nixon shock\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2107386819281084416/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("gold-futures-same-day-1974");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 3, `expected 3 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
+        "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
+        "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
       assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
     }
   });

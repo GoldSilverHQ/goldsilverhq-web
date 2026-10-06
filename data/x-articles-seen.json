@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-05T10:40:00.000Z",
+  "updatedAt": "2026-10-06T18:20:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2107386819281084416",
+      "postId": "2107475028568682962",
+      "title": "How Gold Futures Opened the Same Day Americans Got Their Gold Back",
+      "status": "mirrored",
+      "slug": "gold-futures-same-day-1974",
+      "sitePath": "/blog/gold-futures-same-day-1974",
+      "xArticleUrl": "https://x.com/i/article/2107386819281084416",
+      "publishedAt": "2026-10-06T14:16:16.000Z",
+      "mirroredAt": "2026-10-06T18:20:00.000Z",
+      "inlineMediaCount": 3,
+      "inlineNote": "Three MEDIA entities: the 31 December 1974 ownership card, Gerald Ford's August 1974 portrait, and cable 1974STATE265855. Three TWEET embeds are text-only and have no image."
+    },
     {
       "articleId": "2107028037153804288",
       "postId": "2107030341542183244",
