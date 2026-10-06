@@ -2725,7 +2725,15 @@ const centralBankGoldReserves: Section[] = [
     paragraphs: [
       "On **26 September 1999** the European Central Bank published a [joint statement on gold](https://www.ecb.europa.eu/press/pr/date/1999/html/pr990926.en.html). The signatories were the ECB, the euro-area central banks, Sweden’s Riksbank, the Swiss National Bank, and the Bank of England. That statement is the Washington Agreement on Gold.",
       "Annual sales would not exceed about **400 tonnes**, and sales over the five years would not exceed **2,000 tonnes**. The signatories agreed not to expand gold leasing, or their use of gold futures and options, during that period. The agreement was to be reviewed after five years.",
-      "The United Kingdom’s **1999–2002** auctions — Brown’s Bottom, in the section below — ran while this cap was in force. The reported net official sellers table above names the published reductions through July 2026.",
+      "The United Kingdom’s **1999–2002** auctions — Brown’s Bottom, further down — ran while this cap was in force. The reported net official sellers table above names the published reductions through July 2026.",
+    ],
+  },
+  {
+    heading: "Switzerland drops its gold parity and sells 1,300 tonnes (2000–2005)",
+    paragraphs: [
+      "On **1 May 2000** the new Swiss currency law took effect, and the franc’s official gold parity of **CHF 4,595** per kilogram ended. The Swiss National Bank’s [press release of 2 May 2000](https://www.snb.ch/public/asset/en/www-snb-ch/publications/communication/press-releases/2000/pre_20000502/publications0_en/pre_20000502.en.pdf) records that change. The parity was an official price. How an official gold price differs from a market price is explained under [official gold book value](/markets/official-gold-book-value).",
+      "The Swiss National Bank sold gold from **1 May 2000** under the 1999 Washington Agreement on Gold, in the section above. The sales finished on **30 March 2005**. Hildebrand’s [speech of 5 May 2005](https://www.snb.ch/en/publications/communication/speeches/2005/ref_20050505_pmh) ([BIS copy](https://www.bis.org/review/r050509b.pdf)) puts the total at **1,300 tonnes**.",
+      "Of that total, **1,170 tonnes** counted against the Washington Agreement’s **2,000-tonne** quota, and the Swiss National Bank was its largest user. The last **130 tonnes** were sold under the follow-up agreement. About **1,290 tonnes** remained afterwards, so roughly half the holdings were sold.",
     ],
   },
   {
