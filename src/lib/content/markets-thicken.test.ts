@@ -1080,7 +1080,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /1999–2002/);
     assert.match(text, /Brown’s Bottom/);
     assert.match(text, /ran while this cap was in force/);
-    assert.match(text, /section below/);
+    assert.match(text, /further down/);
     assert.match(text, /reported net official sellers table above/);
     assert.match(
       text,
@@ -1094,5 +1094,53 @@ describe("markets page thicken (no new URLs)", () => {
     assert.doesNotMatch(sitemapSrc, /washington-agreement|cbga-1999|wag-1999/);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /washington-agreement|cbga/.test(path)));
+  });
+
+  it("adds a dated Swiss gold-sale block after the Washington Agreement", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const swiss = body.find((s) => s.heading.startsWith("Switzerland drops"));
+    assert.ok(swiss, "expected a Switzerland sales section on the same spoke");
+    const wag = body.find((s) => s.heading.startsWith("The Washington Agreement"));
+    const brown = body.find((s) => s.heading.startsWith("Brown"));
+    assert.ok(wag && brown);
+    assert.ok(body.indexOf(wag) < body.indexOf(swiss));
+    assert.ok(body.indexOf(swiss) < body.indexOf(brown));
+
+    const text = [swiss.heading, ...swiss.paragraphs].join("\n");
+    assert.match(swiss.heading, /1,300 tonnes/);
+    assert.match(swiss.heading, /2000–2005/);
+    assert.match(text, /1 May 2000/);
+    assert.match(text, /CHF 4,595/);
+    assert.match(text, /sold gold from \*\*1 May 2000\*\*/);
+    assert.match(text, /30 March 2005/);
+    assert.match(text, /\*\*1,300 tonnes\*\*/);
+    assert.match(text, /\*\*1,170 tonnes\*\*/);
+    assert.match(text, /2,000-tonne/);
+    assert.match(text, /largest user/);
+    assert.match(text, /\*\*130 tonnes\*\*/);
+    assert.match(text, /follow-up agreement/);
+    assert.match(text, /\*\*1,290 tonnes\*\*/);
+    assert.match(text, /roughly half/);
+    assert.match(text, /Washington Agreement on Gold, in the section above/);
+    assert.match(text, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
+    assert.match(
+      text,
+      /https:\/\/www\.snb\.ch\/public\/asset\/en\/www-snb-ch\/publications\/communication\/press-releases\/2000\/pre_20000502\/publications0_en\/pre_20000502\.en\.pdf/,
+    );
+    assert.match(
+      text,
+      /https:\/\/www\.snb\.ch\/en\/publications\/communication\/speeches\/2005\/ref_20050505_pmh/,
+    );
+    assert.match(text, /https:\/\/www\.bis\.org\/review\/r050509b\.pdf/);
+    assert.doesNotMatch(text, /began on 1 May|started on 1 May|same day|CBGA|renewal|\b2004\b|\b2009\b/i);
+    assert.doesNotMatch(text, /buy gold|forecast|price target|Kauf|should have held|Information only/i);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /switzerland-gold|snb-gold|swiss-gold-sales/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /switzerland-gold|snb-gold|swiss-gold/.test(path)));
   });
 });
