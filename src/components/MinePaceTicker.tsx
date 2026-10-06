@@ -21,10 +21,10 @@ function PaceTile({
   const color =
     tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-gold-soft";
   return (
-    <article className="flex min-h-[9.25rem] flex-col rounded-lg bg-surface px-4 pt-4 pb-5 shadow-[var(--shadow-border)]">
+    <article className="flex min-h-[9.25rem] flex-col items-center rounded-lg bg-surface px-4 pt-4 pb-5 text-center shadow-[var(--shadow-border)]">
       <p className={`text-xs font-semibold tracking-[0.16em] uppercase ${color}`}>{kicker}</p>
       <p
-        className={`clock-value mt-3 flex flex-wrap items-baseline gap-x-2 font-sans tabular-nums tracking-tight ${color}`}
+        className={`clock-value mt-3 flex flex-wrap items-baseline justify-center gap-x-2 font-sans tabular-nums tracking-tight ${color}`}
       >
         {value}
         <span className="font-sans text-xs tracking-widest text-muted">{unit}</span>

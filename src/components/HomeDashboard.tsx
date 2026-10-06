@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { type ReactNode, useEffect, useState } from "react";
 import { MinePaceTicker } from "@/components/MinePaceTicker";
-import { COMPILED_OFFICIAL } from "@/lib/dashboard/clock-prints";
-import { fmtDayMonYear } from "@/lib/dashboard/dates";
+import { fmtUsdCompact, officialMtmUsd, TROY_OZ_PER_TONNE } from "@/lib/dashboard/clock-prints";
 import { fmtSignedPct, pctToneClass } from "@/lib/dashboard/pct";
 import { getSpotLite } from "@/lib/dashboard/spot";
 import {
@@ -10,7 +9,7 @@ import {
   type MetalPerformance,
   type SpotPerformance,
 } from "@/lib/dashboard/spot-performance";
-import { SILVER_2025, silverVisibleMonths } from "@/lib/dashboard/stocks";
+import { SILVER_2025, WGC_STOCK } from "@/lib/dashboard/stocks";
 
 type Spot = { gold: number; silver: number; ratio: number; asOf?: string };
 
@@ -18,62 +17,47 @@ function fmtMoney(n: number, d: number) {
   return n.toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
 }
 
-function FaceTile({
-  kicker,
-  label,
-  tone,
-  unit,
-  value,
-  note,
-}: {
-  kicker: string;
-  label: string;
-  tone: "gold" | "silver" | "fg";
-  unit: string;
-  value?: string;
-  note: ReactNode;
-}) {
-  const color = tone === "gold" ? "text-gold" : tone === "silver" ? "text-silver" : "text-fg";
-  return (
-    <article className="@container rounded-lg bg-surface p-4 shadow-[var(--shadow-border)]">
-      <p className="text-xs font-semibold tracking-[0.16em] text-faint">{kicker}</p>
-      <h3 className="mt-1 text-sm text-muted">{label}</h3>
-      <p className={`clock-value mt-3 font-sans tabular-nums tracking-tight ${color}`}>
-        {value ?? "—"}
-        <span className="ml-2 align-middle font-sans text-xs tracking-widest text-muted">
-          {unit}
-        </span>
-      </p>
-      {typeof note === "string" ? <p className="mt-2 text-xs text-faint">{note}</p> : note}
-    </article>
-  );
+/** Billion ounces once the stock is large enough; otherwise the survey's million-ounce unit. */
+function fmtStockOunces(oz: number) {
+  const billion = oz / 1e9;
+  if (billion >= 2) {
+    const digits = billion.toFixed(2).replace(/0$/, "");
+    return `${digits} billion ounces`;
+  }
+  const million = oz / 1e6;
+  const whole = Number.isInteger(million);
+  return `${million.toLocaleString("en-US", {
+    maximumFractionDigits: whole ? 0 : 1,
+    minimumFractionDigits: whole ? 0 : 1,
+  })} million ounces`;
 }
+
+const EVER_MINED_OZ = WGC_STOCK.aboveGroundT * TROY_OZ_PER_TONNE;
+const VISIBLE_SILVER_OZ = SILVER_2025.identifiableMoz * 1e6;
+
+/** World Silver Survey 2026 identifiable bullion: London, CME, SGE, SHFE, other exchanges. */
+const VISIBLE_SILVER_PARTS =
+  "London vaults, CME (COMEX), Shanghai Gold Exchange, Shanghai Futures Exchange, other exchanges";
 
 function PerfRow({ perf, label }: { perf: MetalPerformance | null | undefined; label: string }) {
   return (
-    <div className="mt-2.5">
-      <dl
-        aria-label={`${label} price change`}
-        className="grid grid-cols-3 gap-x-1 gap-y-1 @[15rem]:grid-cols-5"
-      >
-        {PERF_PERIODS.map((p) => {
-          const v = perf?.changes[p];
-          return (
-            <div key={p} className="min-w-0">
-              <dt className="text-[10px] font-medium tracking-[0.08em] text-faint">{p}</dt>
-              <dd
-                className={`text-[11px] leading-tight whitespace-nowrap tabular-nums ${v == null ? "text-faint" : pctToneClass(v, 1)}`}
-              >
-                {v == null ? "—" : fmtSignedPct(v, 1)}
-              </dd>
-            </div>
-          );
-        })}
-      </dl>
-      <p className="mt-1 text-[10px] leading-tight text-faint">
-        {perf ? `COMEX closes · as of ${fmtDayMonYear(perf.asOf)}` : "COMEX closes"}
-      </p>
-    </div>
+    <dl aria-label={`${label} price change`} className="mt-2 grid grid-cols-5 gap-x-0.5">
+      {PERF_PERIODS.map((p) => {
+        const v = perf?.changes[p];
+        return (
+          <div key={p} className="min-w-0 text-center">
+            <dt className="text-[8px] font-medium leading-none tracking-tight text-faint @[14rem]:text-[10px] @[14rem]:tracking-[0.06em]">
+              {p}
+            </dt>
+            <dd
+              className={`mt-0.5 text-[8px] leading-none whitespace-nowrap tabular-nums @[14rem]:text-[10px] @[18rem]:text-[11px] ${v == null ? "text-faint" : pctToneClass(v, 1)}`}
+            >
+              {v == null ? "—" : fmtSignedPct(v, 1)}
+            </dd>
+          </div>
+        );
+      })}
+    </dl>
   );
 }
 
@@ -92,7 +76,7 @@ function PriceCard({
 }) {
   const color = tone === "gold" ? "text-gold" : "text-silver";
   return (
-    <article className="@container rounded-lg bg-surface px-3.5 py-3 shadow-[var(--shadow-border)]">
+    <article className="@container rounded-lg bg-surface px-2 py-3 text-center shadow-[var(--shadow-border)]">
       <h3 className="text-xs font-medium tracking-wide text-muted">{label}</h3>
       <p
         className={`mt-1.5 font-sans text-[1.7rem] leading-none tabular-nums tracking-tight sm:text-[1.95rem] ${color}`}
@@ -103,6 +87,31 @@ function PriceCard({
         </span>
       </p>
       {children}
+    </article>
+  );
+}
+
+function StockCard({
+  tone,
+  value,
+  ounces,
+  detail,
+}: {
+  tone: "gold" | "silver";
+  value?: string;
+  ounces: string;
+  detail?: string;
+}) {
+  const color = tone === "gold" ? "text-gold" : "text-silver";
+  return (
+    <article className="rounded-lg bg-surface px-3.5 py-3 text-center shadow-[var(--shadow-border)]">
+      <p
+        className={`font-sans text-[1.7rem] font-bold leading-none tabular-nums tracking-tight sm:text-[1.95rem] ${color}`}
+      >
+        {value ?? "—"}
+      </p>
+      <p className="mt-2 text-xs text-muted">{ounces}</p>
+      {detail ? <p className="mt-1 text-xs leading-snug text-faint">{detail}</p> : null}
     </article>
   );
 }
@@ -162,21 +171,18 @@ export function HomeDashboard({
         </div>
 
         <section className="mt-3 grid gap-3 sm:grid-cols-2">
-          <FaceTile
-            kicker="Official"
-            label="World official gold"
+          <StockCard
             tone="gold"
-            unit="t"
-            value={Math.round(COMPILED_OFFICIAL.world.tonnes).toLocaleString("en-US")}
-            note="Country books + IMF + ECB, one year-end vintage."
+            value={
+              spot ? fmtUsdCompact(officialMtmUsd(WGC_STOCK.aboveGroundT, spot.gold)) : undefined
+            }
+            ounces={`${fmtStockOunces(EVER_MINED_OZ)} ever mined`}
           />
-          <FaceTile
-            kicker="Silver"
-            label="Visible silver / a year of industry"
+          <StockCard
             tone="silver"
-            unit="months"
-            value={silverVisibleMonths().toFixed(1)}
-            note={`Identifiable bullion ÷ ${SILVER_2025.asOf} fabrication.`}
+            value={spot ? fmtUsdCompact(spot.silver * VISIBLE_SILVER_OZ) : undefined}
+            ounces={fmtStockOunces(VISIBLE_SILVER_OZ)}
+            detail={VISIBLE_SILVER_PARTS}
           />
         </section>
 
