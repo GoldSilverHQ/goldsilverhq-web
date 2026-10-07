@@ -222,6 +222,9 @@ async function main() {
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);
   for (const path of historyPersonPaths()) heroOverrides.add(path);
+  // /history only: a collage of article photographs already on the history pages.
+  // The shared text template would put the internal pillar cover back on this one card.
+  heroOverrides.add("/history");
   const forceHero = process.env.OG_FORCE_HERO === "1";
   const pages = phase1SharePages().filter((page) => {
     if (only.length && !only.includes(page.path)) return false;
