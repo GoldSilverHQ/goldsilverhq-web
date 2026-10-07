@@ -2454,7 +2454,7 @@ const centralBankGoldReserves: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "Poland’s central bank closed **August 2026** with **648 tonnes** of gold on its books — up from about **103 tonnes** at the end of **2017**. China’s published stock sat near **2,387 tonnes**. Canada’s monthly reserve table still prints **Gold: 0**. Those three lines come from the same kind of document: an official reserve report filed with the IMF or published by the bank itself.",
+      "Poland’s central bank closed **August 2026** with **648 tonnes** of gold on its books — up from about **103 tonnes** at the end of **2017**. China’s published stock at the end of **September 2026** sat near **2,410 tonnes**. Canada’s monthly reserve table still prints **Gold: 0**. Those three lines come from the same kind of document: an official reserve report filed with the IMF or published by the bank itself.",
       "From those reports come the figures people quote — how much gold a country holds, what share of its reserves that gold makes up, how the stock compares with the size of the economy, and who bought or sold in a given month. Central banks move metal under statute, sanctions, and reserve rules. The arithmetic is a state ledger, not a household savings plan.",
     ],
   },
@@ -2688,7 +2688,7 @@ const centralBankGoldReserves: Section[] = [
       "For long stretches the published number did not move. At the end of **2000** the IMF/WGC series sat at about **395 tonnes**. In **April 2009**, SAFE’s Hu Xiaolian stated that China had adjusted the stock twice already this century — from **394 tonnes** to **500 tonnes** in **2001**, then to **600 tonnes** in **2003** — and that the stock had then reached **1,054 tonnes**. That **600-tonne** book is the WGC **2005** line. The **1,054-tonne** figure held, in the WGC/IMF book, through **2010** and on to early **2015**.",
       "In **July 2015** the PBoC said the stock at the end of **June 2015** was **1,658 tonnes** (**53.31 million ounces**). Monthly SAFE reporting followed. The WGC year-end **2015** line is **1,760 tonnes**. A later pause left the book near **1,948 tonnes** — **62.64 million ounces** at the end of **October 2019**, per PBoC data carried by Xinhua — and the WGC **2020** year-end line is **1,950 tonnes**.",
       "Reported buying resumed and produced the large **2023** addition. The World Gold Council’s Gold Demand Trends for full-year **2023** put the stock at **2,235 tonnes** after about **225 tonnes** of reported buying, the largest single year of published Chinese additions in the IMF series back to **1977**. Full-year **2024** put the stock at **2,280 tonnes** after **44 tonnes** of reported buying. The WGC/IMF year-end **2025** line is **2,306 tonnes**.",
-      "The 2026 monthly figures are the same series the year-to-date table uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. Against the **2,306-tonne** end-2025 line, that is about **+81 tonnes** year-to-date; the buyer table rounds the same SAFE/WGC compilation to **80 tonnes** through August.",
+      "The 2026 monthly figures through August are the series the year-to-date buyer table uses. A World Gold Council China note dated **12 June 2026**, citing SAFE, put May’s stock at **2,332 tonnes** after a **10-tonne** month. SAFE’s official-reserve-assets table published **7 September 2026** printed **76.73 million ounces** at the end of **August 2026** — about **2,387 tonnes**. The buyer table rounds the same SAFE/WGC compilation to **80 tonnes** through August. SAFE’s [official-reserve-assets table](https://www.safe.gov.cn/safe/file/file/20261007/82b013e9d3e24ece853a4583f5e34909.pdf) published **7 October 2026** printed **77.47 million fine troy ounces** at the end of **September 2026**, up **0.74 million ounces** (about **23 tonnes**) from August — about **2,410 tonnes**, the **23rd** consecutive monthly increase. Against the **2,306-tonne** end-2025 line, that is about **+104 tonnes** year-to-date. On the same table the reported dollar value of the gold fell from **$350.08 billion** at end-August to **$323.52 billion** at end-September: the ounces rose and the dollar value fell, a price effect ([China Daily](https://www.chinadaily.com.cn/a/202610/07/WS6ac5de0be4b06d4aa056185b.html), 7 October 2026).",
     ],
     table: {
       caption:
@@ -2707,6 +2707,7 @@ const centralBankGoldReserves: Section[] = [
         ["End-2025", "**2,306**", "WGC / IMF IFS"],
         ["May 2026", "**2,332**", "WGC, 12 June 2026, citing SAFE (**+10 t** in May)"],
         ["August 2026", "**2,387**", "SAFE, **76.73 million oz**, 7 September 2026"],
+        ["September 2026", "**2,410**", "SAFE, **77.47 million oz**, 7 October 2026"],
       ],
     },
   },

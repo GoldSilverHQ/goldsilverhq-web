@@ -607,6 +607,15 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /2,332/);
     assert.match(text, /2,387/);
     assert.match(text, /76\.73 million oz/);
+    assert.match(text, /September 2026/);
+    assert.match(text, /2,410/);
+    assert.match(text, /77\.47 million/);
+    assert.match(text, /0\.74 million ounces/);
+    assert.match(text, /23rd consecutive monthly increase/);
+    assert.match(text, /\+104 tonnes/);
+    assert.match(text, /\$350\.08 billion/);
+    assert.match(text, /\$323\.52 billion/);
+    assert.match(text, /80 tonnes\*\* through August/);
     assert.match(text, /SAFE/);
     assert.doesNotMatch(text, /private reader should follow|Read the table as/i);
     assert.doesNotMatch(text, /buy gold|Kauf|forecast|who to follow/i);
