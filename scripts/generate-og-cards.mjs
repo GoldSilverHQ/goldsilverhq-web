@@ -40,19 +40,11 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-function cardHtml({ cardTitle, kicker, path }, logoHref) {
+function cardHtml({ cardTitle, kicker }, logoHref) {
   const title = escapeHtml(cardTitle);
   const label = escapeHtml(kicker);
-  // /history only: drop the internal brand line and the pillar kicker.
-  // Do not substitute another kicker. Other cards keep both lines.
-  const omitHubLabels = path === "/history";
-  const hubLabels = omitHubLabels
-    ? ""
-    : `<p class="brand-tag">Sound money · documentary media</p>
-      <p class="kicker">${label}</p>`;
   const long = cardTitle.length > 64;
   const titleSize = long ? "46px" : cardTitle.length > 42 ? "52px" : "58px";
-  const titleMargin = omitHubLabels ? "0" : "16px";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -142,7 +134,7 @@ function cardHtml({ cardTitle, kicker, path }, logoHref) {
       color: #f0c94a;
     }
     .title {
-      margin-top: ${titleMargin};
+      margin-top: 16px;
       font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 600;
       font-size: ${titleSize};
@@ -182,7 +174,8 @@ function cardHtml({ cardTitle, kicker, path }, logoHref) {
       <div class="wordmark"><span class="gold">Gold</span><span class="silver">Silver</span><span class="hq">HQ</span></div>
     </div>
     <div class="content">
-      ${hubLabels}
+      <p class="brand-tag">Sound money · documentary media</p>
+      <p class="kicker">${label}</p>
       <h1 class="title">${title}</h1>
       <div class="foot">
         <p class="foot-left">Educational media · Not investment advice</p>
@@ -229,8 +222,13 @@ async function main() {
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);
   for (const path of historyPersonPaths()) heroOverrides.add(path);
+  // history.jpg is the original serif card with two gold lines painted out of
+  // the dark background. Regenerating it would rebuild a different layout or
+  // put those lines back. This skip holds even when OG_FORCE_HERO=1.
+  const frozenOg = new Set(["/history"]);
   const forceHero = process.env.OG_FORCE_HERO === "1";
   const pages = phase1SharePages().filter((page) => {
+    if (frozenOg.has(page.path)) return false;
     if (only.length && !only.includes(page.path)) return false;
     if (!forceHero && only.length === 0 && heroOverrides.has(page.path)) return false;
     if (!forceHero && only.includes(page.path) && heroOverrides.has(page.path)) return false;
@@ -238,14 +236,37 @@ async function main() {
   });
   const skippedHeroes =
     only.length === 0 && !forceHero
-      ? [...heroOverrides].filter((p) => PHASE1_SITEMAP_PATHS.includes(p))
+      ? [...heroOverrides].filter((p) => PHASE1_SITEMAP_PATHS.includes(p) && !frozenOg.has(p))
       : [];
+  const skippedFrozen = [...frozenOg].filter((p) => {
+    if (!PHASE1_SITEMAP_PATHS.includes(p)) return false;
+    if (only.length && !only.includes(p)) return false;
+    return true;
+  });
   const defaultPage = sharePageForPath("/");
   if (!defaultPage) throw new Error("Missing default share page for /");
-  if (only.length === 0 && pages.length + skippedHeroes.length !== PHASE1_SITEMAP_PATHS.length) {
+  if (
+    only.length === 0 &&
+    pages.length + skippedHeroes.length + skippedFrozen.length !== PHASE1_SITEMAP_PATHS.length
+  ) {
     throw new Error(
-      `Expected ${PHASE1_SITEMAP_PATHS.length} cards, got ${pages.length} (+ ${skippedHeroes.length} hero overrides)`,
+      `Expected ${PHASE1_SITEMAP_PATHS.length} cards, got ${pages.length} (+ ${skippedHeroes.length} hero overrides, ${skippedFrozen.length} frozen)`,
     );
+  }
+
+  if (pages.length === 0) {
+    if (process.env.KEEP_OG_TMP !== "1" && existsSync(tmpDir)) {
+      execFileSync("rm", ["-rf", tmpDir]);
+    }
+    for (const path of skippedFrozen) {
+      process.stdout.write(`skip frozen-og ${path}\n`);
+    }
+    process.stdout.write(
+      `OK 0 cards` +
+        (skippedFrozen.length ? ` (${skippedFrozen.length} frozen-og preserved)` : "") +
+        `\n`,
+    );
+    return;
   }
 
   const browser = await chromium.launch({
@@ -278,9 +299,13 @@ async function main() {
   for (const path of skippedHeroes) {
     process.stdout.write(`skip hero-og ${path}\n`);
   }
+  for (const path of skippedFrozen) {
+    process.stdout.write(`skip frozen-og ${path}\n`);
+  }
   process.stdout.write(
     `OK ${pages.length + (only.length === 0 ? 1 : 0)} cards` +
       (skippedHeroes.length ? ` (${skippedHeroes.length} hero-og preserved)` : "") +
+      (skippedFrozen.length ? ` (${skippedFrozen.length} frozen-og preserved)` : "") +
       `\n`,
   );
 }
