@@ -434,10 +434,10 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-england",
         title: "Bank of England",
         summary:
-          "The 1694 charter is war finance with a note issue attached — not a city giro table. In 1797 the Bank stopped paying gold for notes (Restriction); gold payout returned in the 1820s (resumption).",
+          "In February 1797 the Bank stopped paying gold for its notes. The pound kept its name until full gold payout returned in 1821. The notes began in 1694 as a war loan of about £1.2 million to the Crown.",
         status: "ready",
         paragraphs: [
-          "The Bank of England fused war finance and note issue: a private corporation chartered in 1694, not a copy of Amsterdam’s civic giro. Its notes became the ordinary paper of London. In 1797 the Bank stopped paying gold for those notes; full gold payout returned in the 1820s. England suspended and resumed the same window.",
+          "In February 1797 the Bank stopped paying gold for its notes. Holders could no longer test the pound in coin. The notes had begun in 1694, when a private corporation was chartered to lend about £1.2 million to the Crown, and they became the ordinary paper of London. Full gold payout returned in 1821.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
