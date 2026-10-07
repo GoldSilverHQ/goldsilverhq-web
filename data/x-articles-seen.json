@@ -1,9 +1,34 @@
 {
-  "updatedAt": "2026-10-06T18:20:00.000Z",
+  "updatedAt": "2026-10-07T18:40:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2107770779764961280",
+      "postId": "2107888058565529914",
+      "title": "The Idaho Boomtown That Ran on Gold Dust  - How a Gold Camp Grew Bigger Than Portland in a Year.",
+      "status": "mirrored",
+      "slug": "idaho-city-1862-gold-dust",
+      "sitePath": "/blog/idaho-city-1862-gold-dust",
+      "xArticleUrl": "https://x.com/i/article/2107770779764961280",
+      "publishedAt": "2026-10-07T17:37:30.000Z",
+      "mirroredAt": "2026-10-07T18:40:00.000Z",
+      "inlineMediaCount": 6
+    },
+    {
+      "articleId": "2107766694064111616",
+      "postId": "2107792361455550484",
+      "title": "When Cheating on Silver Coins Could Get You Hanged. And How Coins Lost Their Silver Anyway",
+      "status": "mirrored",
+      "slug": "coinage-act-1792-section-19",
+      "sitePath": "/blog/coinage-act-1792-section-19",
+      "xArticleUrl": "https://x.com/i/article/2107766694064111616",
+      "publishedAt": "2026-10-07T11:17:14.000Z",
+      "mirroredAt": "2026-10-07T18:40:00.000Z",
+      "inlineMediaCount": 4,
+      "inlineNote": "Four MEDIA entities (denarius of Octavian, antoninianus of Gallienus, Section 19 statute page, Philadelphia Mint). Two TWEET embeds also carry photos and are on the page: denarius comparison card 1866052920107573476 and Coinage Act of 1965 card 1767246357952143605."
+    },
     {
       "articleId": "2107386819281084416",
       "postId": "2107475028568682962",

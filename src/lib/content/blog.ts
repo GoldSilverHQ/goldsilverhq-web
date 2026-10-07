@@ -49,6 +49,47 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "idaho-city-1862-gold-dust",
+    title:
+      "The Idaho Boomtown That Ran on Gold Dust — How a Gold Camp Grew Bigger Than Portland in a Year",
+    summary:
+      "On 7 October 1862 miners laid out Bannock City in the Boise Basin. Within a year it was larger than Portland, and gold dust on a brass scale paid the bills.",
+    date: "2026-10-07",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "Greenbacks and the Civil War",
+        href: "/history/america/greenbacks-civil-war",
+      },
+    ],
+    relatedArticlePaths: ["/history/america/greenbacks-civil-war"],
+    xArticleUrl: "https://x.com/i/article/2107770779764961280",
+    sourceXId: "2107770779764961280",
+  },
+  {
+    slug: "coinage-act-1792-section-19",
+    title:
+      "When Cheating on Silver Coins Could Get You Hanged. And How Coins Lost Their Silver Anyway",
+    summary:
+      "In the spring of 1792, Congress made debasing the coins a hanging offense for Mint officers. In 1965, Congress took the silver out of the dime and the quarter.",
+    date: "2026-10-07",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Rome: denarius and aureus", href: "/history/ancient/rome-denarius-aureus" },
+      { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
+    ],
+    relatedArticlePaths: [
+      "/history/ancient/rome-denarius-aureus",
+      "/history/america/early-us-coinage",
+    ],
+    xArticleUrl: "https://x.com/i/article/2107766694064111616",
+    sourceXId: "2107766694064111616",
+  },
+  {
     slug: "gold-futures-same-day-1974",
     title: "How Gold Futures Opened the Same Day Americans Got Their Gold Back",
     summary:

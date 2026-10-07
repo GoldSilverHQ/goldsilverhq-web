@@ -357,6 +357,26 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/idaho-city-1862-gold-dust",
+    src: "/images/blog/idaho-city-1862-gold-dust.jpg",
+    ogSrc: "/og/cards/blog-idaho-city-1862-gold-dust.jpg",
+    alt: "Title card reading The Idaho Boomtown That Ran on Gold Dust, with a prospector panning in a creek and a wooden gold-rush town behind him.",
+    caption:
+      "7 October 1862 — Bannock City is laid out in the Boise Basin, and gold dust is the money.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+  },
+  {
+    path: "/blog/coinage-act-1792-section-19",
+    src: "/images/blog/coinage-act-1792-section-19.jpg",
+    ogSrc: "/og/cards/blog-coinage-act-1792-section-19.jpg",
+    alt: "Title card reading When Cheating on Silver Coins Could Get You Hanged, with a silver coin and a noose hanging from a wooden beam.",
+    caption:
+      "1792 — Congress writes a death penalty for debasing the Mint's coins.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+  },
+  {
     path: "/blog/gold-futures-same-day-1974",
     src: "/images/blog/gold-futures-same-day-1974.jpg",
     ogSrc: "/og/cards/blog-gold-futures-same-day-1974.jpg",
