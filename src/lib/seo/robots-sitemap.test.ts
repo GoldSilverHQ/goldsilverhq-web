@@ -107,7 +107,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 287);
+    assert.equal(locs.length, 288);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
