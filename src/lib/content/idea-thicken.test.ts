@@ -51,7 +51,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
       );
     }
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => path.includes("information-not-advice")));
-    // Practice hub, bars-vs-coins, premium-over-spot, storage, and spotting-fakes are on-sitemap; other spokes stay off.
+    // Practice hub, bars-vs-coins, premium-over-spot, storage, spotting-fakes, and beginner-checklist are on-sitemap; buying-online stays off.
     assert.deepEqual(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/gold-silver")),
       [
@@ -60,6 +60,7 @@ describe("idea / sound-money thicken (no new URLs)", () => {
         "/gold-silver/premium-over-spot",
         "/gold-silver/storage",
         "/gold-silver/spotting-fakes",
+        "/gold-silver/beginner-checklist",
       ],
     );
   });
