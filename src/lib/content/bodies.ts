@@ -1203,7 +1203,7 @@ const england: Section[] = [
     ],
   },
   {
-    heading: "London already paid with paper",
+    heading: "",
     paragraphs: [
       "When William III was at war with Louis XIV, the Crown needed a large loan at once. In London, goldsmith running-cash notes already circulated as private claims on metal left with a keeper, and paying with a slip of paper was already a habit that came from those goldsmiths and from warehouse receipts. The Stop of the Exchequer in **1672** had shown what that habit was worth when a sovereign closed the window on paper that had funded the Crown.",
       "The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had opened in **1609** as a municipal ledger for the bill market — mixed coin in, bank money out, bills settled by giro — and for a long time its reputation was that it did not lend, though concealed lending and the collapse of the agio came much later. The **1694** statute created a company whose first asset was a loan to the state and whose liabilities included notes the public could pass. Those notes were a promise to pay coin, and they came from a corporation that had already lent to the Crown.",
