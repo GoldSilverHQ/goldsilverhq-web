@@ -611,7 +611,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(text, /2,410/);
     assert.match(text, /77\.47 million/);
     assert.match(text, /0\.74 million ounces/);
-    assert.match(text, /23rd consecutive monthly increase/);
+    assert.match(text, /\*\*23rd\*\* consecutive monthly increase/);
     assert.match(text, /\+104 tonnes/);
     assert.match(text, /\$350\.08 billion/);
     assert.match(text, /\$323\.52 billion/);
