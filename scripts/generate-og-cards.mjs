@@ -40,11 +40,19 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-function cardHtml({ cardTitle, kicker }, logoHref) {
+function cardHtml({ cardTitle, kicker, path }, logoHref) {
   const title = escapeHtml(cardTitle);
   const label = escapeHtml(kicker);
+  // /history only: drop the internal brand line and the pillar kicker.
+  // Do not substitute another kicker. Other cards keep both lines.
+  const omitHubLabels = path === "/history";
+  const hubLabels = omitHubLabels
+    ? ""
+    : `<p class="brand-tag">Sound money · documentary media</p>
+      <p class="kicker">${label}</p>`;
   const long = cardTitle.length > 64;
   const titleSize = long ? "46px" : cardTitle.length > 42 ? "52px" : "58px";
+  const titleMargin = omitHubLabels ? "0" : "16px";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -134,7 +142,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       color: #f0c94a;
     }
     .title {
-      margin-top: 16px;
+      margin-top: ${titleMargin};
       font-family: Figtree, ui-sans-serif, system-ui, sans-serif;
       font-weight: 600;
       font-size: ${titleSize};
@@ -174,8 +182,7 @@ function cardHtml({ cardTitle, kicker }, logoHref) {
       <div class="wordmark"><span class="gold">Gold</span><span class="silver">Silver</span><span class="hq">HQ</span></div>
     </div>
     <div class="content">
-      <p class="brand-tag">Sound money · documentary media</p>
-      <p class="kicker">${label}</p>
+      ${hubLabels}
       <h1 class="title">${title}</h1>
       <div class="foot">
         <p class="foot-left">Educational media · Not investment advice</p>
@@ -222,9 +229,6 @@ async function main() {
   // Year pages keep a copied photograph as the share card. Do not paint a text card over it.
   for (const path of historyYearPaths()) heroOverrides.add(path);
   for (const path of historyPersonPaths()) heroOverrides.add(path);
-  // /history only: a collage of article photographs already on the history pages.
-  // The shared text template would put the internal pillar cover back on this one card.
-  heroOverrides.add("/history");
   const forceHero = process.env.OG_FORCE_HERO === "1";
   const pages = phase1SharePages().filter((page) => {
     if (only.length && !only.includes(page.path)) return false;
