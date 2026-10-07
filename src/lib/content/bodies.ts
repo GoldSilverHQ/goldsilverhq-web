@@ -4788,6 +4788,376 @@ const edwardVi1551Silver: Section[] = [
   },
 ];
 
+/** Blog: 7 October 1862 — Bannock City, later Idaho City, runs on gold dust. Longer than the X Article. */
+const idahoCity1862GoldDust: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **7 October 1862**, a party of miners laid out a town beside a creek in the mountains of what is now southern Idaho. They called it Bannock City. Within about a year it had more people than Portland, Oregon, and most of them paid for their flour, boots, and whiskey with a pinch of gold.",
+      "Laid out means the streets and lots were marked. The creek is not named. The payment is the fact that matters: a pinch of gold, not a paper note and not a minted coin, settled the bill for flour, boots, and whiskey.",
+    ],
+  },
+  {
+    heading: "The gravel, two months earlier",
+    paragraphs: [
+      "The gold had turned up two months earlier. On **2 August**, prospectors led by George Grimes and Moses Splawn found rich gravel in the Boise Basin, a bowl of forested hills northeast of today's city of Boise. Grimes was killed in the hills within days. The others carried their gold back to Walla Walla, in Washington Territory, and that fall they returned with a much bigger party.",
+      "Rich gravel means loose gold already in the creek beds. Walla Walla is where they carried the news, and the bigger party is the one that came back that fall.",
+    ],
+  },
+  {
+    heading: "A week of prospecting, then a town",
+    paragraphs: [
+      "The newcomers did well. A week of prospecting brought in $2,000, and most men could count on $8 to $20 a day. On **7 October**, J. Marion More, one of the discovery party, founded the town.",
+      "The $2,000 is one week's take for the party. The $8 to $20 is what most men could count on in a day. More is named as one of the discovery party.",
+    ],
+  },
+  {
+    heading: "Winter, flour sacks, and rockers",
+    paragraphs: [
+      "By December a full rush was on, and winter did not stop it. Men packed gravel in flour sacks down to whatever water still ran and washed it in rockers, wooden boxes rocked like a cradle so the heavy gold settled out. By the end of **January 1863**, some 4,000 miners were in the basin.",
+      "A rocker is that wooden box. Rock it, and the heavy gold stays while lighter sand washes on. Flour sacks are how they carried the gravel to water that had not frozen. Some 4,000 is the count given for the end of January. The picture with that winter is an illustration of men at rockers beside a half-frozen creek. The article marks it as an illustration, not a photograph from 1862.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-rockers-1862.jpg",
+      alt: "Illustration of miners in winter coats working wooden rockers beside a half-frozen creek in a snowy mountain basin.",
+      caption:
+        "Miners working rockers beside a half-frozen creek in the Boise Basin, winter 1862. AI-generated illustration.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 2048,
+      height: 1152,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Idaho City, and a larger town than Portland",
+    paragraphs: [
+      "In **March 1863** Congress created Idaho Territory, and that December the town was renamed Idaho City, so it would stop being confused with Bannack, another gold camp in what is now Montana. By then more than 6,000 people lived there. Idaho City had passed Portland as the largest community in the Pacific Northwest.",
+      "March is the territory. December 1863 is the new name. Bannack, spelled with an a, is the other camp. Bannock City, with an o, is this one. More than 6,000 is the count the account gives for the renamed town, and that count is what put it ahead of Portland. The street in the picture is Main Street around 1920, long after the rush had faded.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-main-street-1920.jpg",
+      alt: "Colorized photograph of a wide dirt main street in Idaho City lined with wooden false-front buildings and a few horses.",
+      caption:
+        "Main Street in Idaho City around 1920, long after the rush had faded. University of Washington Libraries (public domain), colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 767,
+      height: 436,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Gold dust, not greenbacks",
+    paragraphs: [
+      "What they mined was placer gold: loose flakes and grains that streams had worn out of the rock and buried in their gravel. Washed and dried, it was called gold dust, and in Idaho City the dust was the money.",
+      "The paper \"greenbacks\" the Union had begun printing in **1862** to pay for the Civil War were trusted less than gold. So every banker, storekeeper, and saloon kept a small brass balance on the counter, and customers carried their dust in buckskin pouches closed with a drawstring. Thomas Donaldson, who came to Boise as a federal land officer in **1869**, described how a purchase went. The [greenbacks and the Civil War](/history/america/greenbacks-civil-war) are that paper.",
+      "Placer gold is the loose metal in the gravel, not a vein. Washed and dried, it is dust. A balance is a small scale. A drawstring pouch is how a customer carried it. Donaldson is a witness from 1869, a federal land officer in Boise, writing about a counter that was already the town's habit.",
+    ],
+  },
+  {
+    heading: "Blow on the pan",
+    paragraphs: [
+      "\"The buyer or weigher turned the dust into the pans of the scales and then blew smartly on the mass to weed out all valueless light stuff.\"",
+      "Dishonest weighers, he added, blew harder than they needed to, so bits of the seller's gold scattered off the pan. The scales usually sat on a scrap of carpet. Donaldson saw one strip, about fifteen inches square, give up nearly $100 in gold that had fallen or blown off the pans in a single year.",
+      "The blow is the step that separates dust from grit. A harder blow is the cheat: gold leaves the pan with the grit. The carpet is where that gold landed. Fifteen inches square, and nearly $100 in one year, is the strip Donaldson saw. The illustration with the scales shows dust on a brass pan at a store counter. The article marks that picture as an illustration.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-dust-on-scale.jpg",
+      alt: "Illustration of a gloved hand pouring gold dust onto a brass balance scale on a wooden store counter.",
+      caption:
+        "Gold dust on the scale at an Idaho City store counter. AI-generated illustration.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 2048,
+      height: 1152,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The same counter, a generation later",
+    paragraphs: [
+      "The next picture is not Idaho City. It is a store counter in Dawson, Yukon, in **1899**. A customer's dust goes onto a brass scale. The article's point is that Idaho City's counters had worked the same way a generation earlier.",
+      "Dawson is the later camp. 1899 is a generation after 1862. The photograph is by Larss and Duclos. The comparison is the article's: same gesture, dust onto a brass scale, on a counter.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-dawson-gold-dust.jpg",
+      alt: "Colorized 1899 photograph of a man in a shop pouring gold dust from a pouch onto a brass scale while another man watches.",
+      caption:
+        "Paying with Gold Dust: a customer's dust goes onto the brass scale at a store counter in Dawson, Yukon, in 1899. Idaho City's counters had worked the same way a generation earlier. Larss & Duclos, University of Washington Libraries (public domain), colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 768,
+      height: 630,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Less than the mint's price for pure gold",
+    paragraphs: [
+      "Dust was never worth the full price of gold. The U.S. Mint paid $20.67 for an ounce of pure gold, but creek gold came mixed with silver and grit. Donaldson recalled that dust was accepted at $16 an ounce, and the silvery dust from the Owyhee mines to the southwest at only $10. Greenbacks were taken at 75 to 80 cents on the dollar against gold coin, and from **1863 to 1868** territorial taxes were collected in gold coin or its equivalent.",
+      "$20.67 is pure gold at the mint. $16 is this creek dust, and $10 is the silvery Owyhee dust to the southwest. A greenback dollar was taken as less than a gold-coin dollar.",
+    ],
+  },
+  {
+    heading: "Bogus dust",
+    paragraphs: [
+      "A money you weigh invites cheating. Crooks stretched their dust with particles of iron and lead, and fake dust was common enough to get its own name: \"bogus.\" Local legend says Bogus Basin, in the hills above Boise, is named for a gang of counterfeiters who worked there. Merchants answered by raising their prices.",
+      "Iron and lead are the metals the account names in the stretched dust. \"Bogus\" is the name it gives that fake dust. The basin's name is given as local legend, not as a record that has been proved, and this note keeps it as legend. Raising prices is how merchants answered a money they weighed by hand.",
+    ],
+  },
+  {
+    heading: "Ditches, a nozzle, and fires after dark",
+    paragraphs: [
+      "None of it slowed the digging. Miners dug some eighty miles of ditches to bring water to their claims, and near town a hydraulic giant, a big metal nozzle that blasted gravel banks apart with water from a high ditch, was already at work. In the spring of **1864**, five or six hundred new miners arrived every week. Crews worked day and night while the snowmelt lasted, and from Idaho City you could see more than thirty fires burning on the claims after dark.",
+      "Eighty miles is the ditch figure. A hydraulic giant is the nozzle. The water comes from a high ditch, so the force is the height of that ditch. Five or six hundred new miners a week is the spring of 1864. More than thirty fires is what you could see from town after dark, while the snowmelt lasted. The photograph of water jets is Idaho City around 1920, the same kind of work, years after that first spring.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-hydraulic-1920.jpg",
+      alt: "Colorized photograph of placer miners directing jets of water from a large metal nozzle into a gravel bank at Idaho City.",
+      caption:
+        "Placer mining with water jets at Idaho City, around 1920. Public domain, colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 1536,
+      height: 960,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "An assay office in Boise",
+    paragraphs: [
+      "Every ounce still had to be valued somewhere, and for years the dust went out by express and steamer to the mint in San Francisco. In **1869** Congress voted $75,000 for a federal assay office in Boise, where the government melted miners' gold, tested how pure it was, and put an honest value on it. It opened in **1872**.",
+      "Express and steamer is the route to San Francisco before Boise had its own office. $75,000 is the sum Congress voted in 1869. An assay office melts the gold and tests how pure it is. The office opened in 1872. The picture is an 1884 lithograph of that building on Main Street in Boise.",
+    ],
+    figure: {
+      src: "/images/blog/idaho-city-1862-gold-dust-assay-office.jpg",
+      alt: "Colorized 1884 lithograph of the United States Assay Office, a two-story building with a flag, on a Boise street with horses and wagons.",
+      caption:
+        "The U.S. Assay Office on Main Street in Boise, in an 1884 lithograph. Public domain, colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Idaho boomtown that ran on gold dust.",
+      width: 1664,
+      height: 1200,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The easy gold, and the first winter",
+    paragraphs: [
+      "By then the easy gold in the creeks was mostly gone. But in that first winter after **7 October 1862**, the town's wealth moved around in buckskin bags, and every purchase ended the same way: a little pile of gold on a brass pan, and someone leaning in to blow.",
+      "\"By then\" is 1872, when the assay office opened. The first winter is the one after the town was laid out: buckskin bags, a brass pan, and someone leaning in to blow.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["The find, the town, the dust on the counter, and the office that came later."],
+    list: [
+      "**2 August 1862.** Grimes and Splawn find rich gravel in the Boise Basin. Grimes is killed in the hills within days. The others carry the gold to Walla Walla.",
+      "**7 October 1862.** The party lays out Bannock City. J. Marion More, of the discovery party, founds the town. A week of prospecting had brought in $2,000. Most men could count on $8 to $20 a day.",
+      "**December 1862.** A full rush is on. Men wash gravel in rockers wherever water still runs.",
+      "**End of January 1863.** Some 4,000 miners are in the basin.",
+      "**March 1863.** Congress creates Idaho Territory.",
+      "**December 1863.** The town is renamed Idaho City, so it will not be confused with Bannack. More than 6,000 people live there. It has passed Portland.",
+      "**1863 to 1868.** Territorial taxes are collected in gold coin or its equivalent. Greenbacks are taken at 75 to 80 cents on the dollar against gold coin.",
+      "**1869.** Donaldson is in Boise as a federal land officer, and he describes the scales, the blow, and a carpet that gave up nearly $100 in a year. The same year, Congress votes $75,000 for an assay office in Boise.",
+      "**Spring 1864.** Five or six hundred new miners arrive every week. Some eighty miles of ditches are in use, and a hydraulic giant is already at work near town.",
+      "**1872.** The assay office opens. The easy gold in the creeks is mostly gone.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "For that first winter the money was the dust itself. You carried it in a pouch, someone else weighed it, and a breath decided how much grit left the pan.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2107770779764961280).",
+    ],
+  },
+];
+
+/** Blog: Coinage Act of 1792, Section 19, and the later exit of silver from the coin. Longer than the X Article. */
+const coinageAct1792Section19: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In the spring of **1792**, Congress wrote a death sentence into a law about money. The crime was not treason or murder. It was shaving the silver out of the nation's coins.",
+      "A death sentence in a coinage statute is the fact. The crime named at the start is shaving silver out of the coins. Treason and murder are the crimes it was not.",
+    ],
+  },
+  {
+    heading: "Back almost eighteen centuries",
+    paragraphs: [
+      "To see why the lawmakers were that harsh, you have to go back almost eighteen centuries, to Rome. The coin that starts the story is the denarius.",
+      "Almost eighteen centuries before 1792 is the distance the article gives. The [Roman denarius](/history/ancient/rome-denarius-aureus) is the silver coin that distance points to.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-denarius-octavian.jpg",
+      alt: "Silver denarius of Octavian, later Augustus, showing a bare-headed profile on one side and a standing figure on the other.",
+      caption:
+        "Silver denarius of Octavian, later Emperor Augustus. The Metropolitan Museum of Art (CC0).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 495,
+      height: 417,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A coin that was the metal",
+    paragraphs: [
+      "The denarius was Rome's everyday silver coin. It paid soldiers, settled market debts, and carried the emperor's face to every corner of the empire. Under Augustus, a denarius was about 95 to 98 percent pure silver. If you held one, you held the metal itself.",
+      "Everyday means soldiers' pay and market debts, not a rare piece kept in a box. The emperor's face is what traveled with the coin. About 95 to 98 percent pure is the figure given for a denarius under Augustus. The metal itself is the point of that percentage: the coin and the silver were nearly the same thing.",
+    ],
+  },
+  {
+    heading: "Less metal, same face",
+    paragraphs: [
+      "Then the bills came in. Armies on long frontiers, payments to troops, and the cost of running an empire kept rising, and the treasury struggled to keep up. So emperor after emperor found a quieter way out. They debased the coin. Debasing means putting less precious metal into each coin, mixing in cheaper copper, while keeping the same face and the same official value. Every coin looked like money. Each held a little less of what made it money.",
+      "The bills named are armies, troop payments, and the cost of the empire. The quieter way is the debasement: less precious metal, more copper, the same face, the same official value. Looked like money, and held less of what made it money, is the article's pair of sentences. The card set in after that explanation puts an Augustan denarius beside a later coin, so the loss of silver is visible.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-denarius-warning.jpg",
+      alt: "Card titled Rome's Denarius comparing a silver denarius of Augustus with a later, debased antoninianus.",
+      caption:
+        "Rome's denarius, on the card embedded in the X Article: an Augustan silver coin beside a later antoninianus.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 800,
+      height: 391,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The antoninianus",
+    paragraphs: [
+      "By around **270 AD** the denarius had been pushed aside by a newer coin, the antoninianus. Romans treated it as a double denarius, worth two of the old coins. Under Gallienus and Claudius II, it held about 5 percent silver or less. Many were bronze coins with a thin silver wash on the surface, a bright skin that wore off in the hand and showed the copper beneath.",
+      "Around 270 is the date given for the change of coin. A double denarius means the new coin was treated as worth two of the old ones. About 5 percent silver or less is the figure for the reigns of Gallienus and Claudius II. A silver wash is a thin skin of silver on bronze. It wore off in the hand, and the copper showed.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-antoninianus-gallienus.jpg",
+      alt: "Bronze antoninianus of Gallienus with a thin silver wash, radiate crown on the portrait and a standing figure on the reverse.",
+      caption:
+        "Antoninianus of Gallienus, struck at Rome. Yale University Art Gallery (CC0).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 449,
+      height: 253,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "One batch at a time",
+    paragraphs: [
+      "The coin had gone from almost pure silver to mostly copper in about three centuries. Nobody passed a law announcing it. It happened one batch of coins at a time.",
+      "About three centuries is the span from the Augustan denarius to that later coin. No announcing law is the article's contrast. One batch at a time is how the change is described.",
+    ],
+  },
+  {
+    heading: "A fixed weight, and a penalty",
+    paragraphs: [
+      "The men who built the American republic had read their Roman history. When Congress passed the Coinage Act of 1792 and set up a national mint, it defined the dollar by a fixed weight of silver. Then it guarded that weight with the harshest penalty in the whole act.",
+      "Read their Roman history is why the article puts Rome before Philadelphia. The Coinage Act of 1792 sets up the mint and defines the dollar by a fixed weight of silver. The [early U.S. coinage](/history/america/early-us-coinage) is that statute and the coins that followed. The harshest penalty in the act is the one the next lines quote.",
+    ],
+  },
+  {
+    heading: "Section 19",
+    paragraphs: [
+      "Section 19 said that if any officer or employee of the Mint debased the gold or silver coins \"with a fraudulent intent,\" or embezzled the metal entrusted to them for coining, they \"shall be deemed guilty of felony, and shall suffer death.\"",
+      "The persons named are an officer or an employee of the Mint. The acts named are debasing the gold or silver coins, and embezzling the metal entrusted for coining. The intent named is fraudulent. The penalty named is felony, and death. The page in the picture is Section 19 as printed in the U.S. Statutes at Large, volume 1, page 250.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-section-19.jpg",
+      alt: "Printed excerpt of Section 19 of the Coinage Act of 1792 from the Statutes at Large, ending in the words shall suffer death.",
+      caption:
+        "Section 19 of the Coinage Act of 1792, as printed in the U.S. Statutes at Large, vol. 1, p. 250: \"…shall be deemed guilty of felony, and shall suffer death.\" Library of Congress (public domain).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 1297,
+      height: 415,
+    },
+  },
+  {
+    heading: "The small brick mint",
+    paragraphs: [
+      "Think about what that meant for the workers at the small brick mint in Philadelphia. The silver that passed through their hands belonged to the public. Shaving a little from each coin was the very trick that had hollowed out Rome's money. In the new republic it could cost a man his life.",
+      "Small and brick is how the article describes that mint. The silver belonged to the public. Shaving a little from each coin is the trick just named in Rome. Cost a man his life is the penalty, applied to a Mint worker who did it with fraudulent intent. The picture is the mint in Philadelphia, colorized.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-philadelphia-mint.jpg",
+      alt: "Colorized photograph of the early United States Mint in Philadelphia, a two-story brick building with a cupola, seen from the street.",
+      caption: "US Mint in Philadelphia, colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 1024,
+      height: 1008,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "Ninety percent, for a long time",
+    paragraphs: [
+      "For most of the next 170 years, American dimes, quarters, and half dollars stayed silver coins. From **1837** on, the standard was 90 percent silver, 10 percent copper.",
+      "Most of the next 170 years is the span the article gives after 1792. Dimes, quarters, and half dollars are the coins named. From 1837, the standard is 90 percent silver and 10 percent copper.",
+    ],
+  },
+  {
+    heading: "23 July 1965",
+    paragraphs: [
+      "Then, in the early 1960s, the market price of silver rose toward the point where the metal in a coin was worth almost as much as the coin itself. People began holding on to silver coins, and change grew scarce in shops and banks. On **23 July 1965**, President Lyndon B. Johnson signed the Coinage Act of 1965.",
+      "The early 1960s are when the article places the rise in the market price of silver. Almost as much as the coin itself is how close that metal value came. Holding on to the coins is what people did, and change grew scarce in shops and banks. 23 July 1965 is the day Johnson signed the new act.",
+      "Silver left the dime and the quarter entirely. In its place came clad coins. Clad means layered, like a sandwich: two outer layers of copper-nickel bonded to a core of pure copper. Look at the edge of a quarter today and you can still see the copper stripe. The half dollar kept some silver for a while. From 1965 to 1970 it was 40 percent silver, and after that it went clad as well.",
+      "Left entirely means the dime and the quarter. Clad is the sandwich: copper-nickel, pure copper, copper-nickel. The copper stripe is the edge you can still see. The half dollar is the exception in the article: 40 percent silver from 1965 to 1970, and clad after that. The card with that act shows the layered coin and the date.",
+    ],
+    figure: {
+      src: "/images/blog/coinage-act-1792-section-19-coinage-act-1965.jpg",
+      alt: "Card for the Coinage Act of 1965 showing a clad quarter with a visible copper core, dated July 23, 1965.",
+      caption:
+        "The Coinage Act of 1965, on the card embedded in the X Article: a clad coin and the date 23 July 1965.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the death penalty for debasing the coin.",
+      width: 1000,
+      height: 496,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "No one was charged",
+    paragraphs: [
+      "No Mint officer went to the gallows over it. Nobody was charged at all. Section 19 had been written to stop a worker who stole metal from the public with a fraudulent intent. In 1965 the change came from Congress, out in the open, and it was signed into law.",
+      "The gallows is the death penalty in Section 19. Nobody charged is the article's statement about 1965. The distinction it draws is the one in the statute: a worker, fraudulent intent, metal stolen from the public, against a change Congress made in the open and signed into law.",
+    ],
+  },
+  {
+    heading: "Same face, less silver",
+    paragraphs: [
+      "The old silver dimes and quarters slowly disappeared from circulation and into drawers, jars, and collections. The new coins kept the same faces, the same sizes, and the same names. A dime still said ONE DIME.",
+      "Drawers, jars, and collections are where the article says the old silver coins went. Same faces, same sizes, same names are what the new coins kept. ONE DIME is the legend the article quotes.",
+      "Rome's coins kept the emperor's face long after the silver was gone. America's quarter kept Washington's.",
+      "The emperor's face is the Roman half of that last comparison. Washington's face is the American half. The silver was already gone from the metal.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["Rome's silver, the 1792 penalty, and the statute that took the silver out."],
+    list: [
+      "**Under Augustus.** A denarius is about 95 to 98 percent pure silver.",
+      "**Around 270 AD.** The antoninianus has pushed the denarius aside. Under Gallienus and Claudius II it holds about 5 percent silver or less. Many pieces are bronze with a silver wash.",
+      "**About three centuries.** The coin goes from almost pure silver to mostly copper, one batch at a time, with no law announcing it.",
+      "**Spring 1792.** The Coinage Act defines the dollar by a fixed weight of silver. Section 19 makes fraudulent debasing, or embezzling the metal, a felony punished by death.",
+      "**1837.** The standard for the silver coin becomes 90 percent silver and 10 percent copper.",
+      "**Early 1960s.** The market price of silver rises toward the metal value of the coin. People hold silver coins. Change grows scarce.",
+      "**23 July 1965.** Johnson signs the Coinage Act of 1965. Silver leaves the dime and the quarter. Clad coins replace them. The half dollar is 40 percent silver through 1970, then clad.",
+      "**After that.** No Mint officer is charged. The old silver coins leave circulation for drawers, jars, and collections. A dime still says ONE DIME.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Section 19 pointed at a worker who cheated the metal in his hands. The later change pointed at a statute everyone could read. The faces on the coins stayed. The silver did not.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2107766694064111616).",
+    ],
+  },
+];
+
 /** Blog: 31 December 1974 — private gold holding returns, and COMEX gold futures open the same day. Longer than the X Article. */
 const goldFuturesSameDay1974: Section[] = [
   {
@@ -4953,6 +5323,8 @@ const goldFuturesSameDay1974: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/idaho-city-1862-gold-dust": idahoCity1862GoldDust,
+  "blog/coinage-act-1792-section-19": coinageAct1792Section19,
   "blog/gold-futures-same-day-1974": goldFuturesSameDay1974,
   "blog/edward-vi-1551-silver": edwardVi1551Silver,
   "blog/foreign-silver-legal-tender-1857": foreignSilverLegalTender1857,

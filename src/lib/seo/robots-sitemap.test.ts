@@ -80,6 +80,8 @@ describe("phase-1 robots and sitemap", () => {
       "/markets/gold-silver-ratio",
       "/markets/physical-silver-demand-by-country",
       "/blog",
+      "/blog/idaho-city-1862-gold-dust",
+      "/blog/coinage-act-1792-section-19",
       "/blog/gold-futures-same-day-1974",
       "/blog/edward-vi-1551-silver",
       "/blog/foreign-silver-legal-tender-1857",
@@ -107,7 +109,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 288);
+    assert.equal(locs.length, 290);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(

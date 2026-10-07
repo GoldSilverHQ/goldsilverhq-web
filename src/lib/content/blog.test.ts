@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 19);
-    assert.equal(listBlogPosts().length, 19);
+    assert.equal(blogPosts.length, 21);
+    assert.equal(listBlogPosts().length, 21);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,8 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/idaho-city-1862-gold-dust",
+        "/blog/coinage-act-1792-section-19",
         "/blog/gold-futures-same-day-1974",
         "/blog/edward-vi-1551-silver",
         "/blog/foreign-silver-legal-tender-1857",
@@ -183,8 +185,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 17);
-    assert.equal(listBlogPostsByTag("Metals").length, 11);
+    assert.equal(listBlogPostsByTag("History").length, 19);
+    assert.equal(listBlogPostsByTag("Metals").length, 13);
     assert.equal(listBlogPostsByTag("Markets").length, 6);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -198,6 +200,8 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "idaho-city-1862-gold-dust",
+      "coinage-act-1792-section-19",
       "gold-futures-same-day-1974",
       "edward-vi-1551-silver",
       "foreign-silver-legal-tender-1857",
@@ -443,6 +447,113 @@ describe("blog section", () => {
         "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
         "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
         "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the Idaho gold-dust figures and credits the X Article once", () => {
+    const post = getBlogPost("idaho-city-1862-gold-dust");
+    assert.ok(post);
+    assert.equal(
+      post.title,
+      "The Idaho Boomtown That Ran on Gold Dust — How a Gold Camp Grew Bigger Than Portland in a Year",
+    );
+    assert.equal(post.date, "2026-10-07");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2107770779764961280");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/idaho-city-1862-gold-dust"));
+    const body = getBody("blog", "idaho-city-1862-gold-dust")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[greenbacks and the Civil War\]\(\/history\/america\/greenbacks-civil-war\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2107770779764961280/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("idaho-city-1862-gold-dust");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 6, `expected 6 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/idaho-city-1862-gold-dust-rockers-1862.jpg",
+        "/images/blog/idaho-city-1862-gold-dust-main-street-1920.jpg",
+        "/images/blog/idaho-city-1862-gold-dust-dust-on-scale.jpg",
+        "/images/blog/idaho-city-1862-gold-dust-dawson-gold-dust.jpg",
+        "/images/blog/idaho-city-1862-gold-dust-hydraulic-1920.jpg",
+        "/images/blog/idaho-city-1862-gold-dust-assay-office.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the 1792 debasement figures and credits the X Article once", () => {
+    const post = getBlogPost("coinage-act-1792-section-19");
+    assert.ok(post);
+    assert.equal(
+      post.title,
+      "When Cheating on Silver Coins Could Get You Hanged. And How Coins Lost Their Silver Anyway",
+    );
+    assert.equal(post.date, "2026-10-07");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2107766694064111616");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/coinage-act-1792-section-19"));
+    const body = getBody("blog", "coinage-act-1792-section-19")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[Roman denarius\]\(\/history\/ancient\/rome-denarius-aureus\)/);
+    assert.match(text, /\[early U\.S\. coinage\]\(\/history\/america\/early-us-coinage\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 2);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2107766694064111616/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("coinage-act-1792-section-19");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 6, `expected 6 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/coinage-act-1792-section-19-denarius-octavian.jpg",
+        "/images/blog/coinage-act-1792-section-19-denarius-warning.jpg",
+        "/images/blog/coinage-act-1792-section-19-antoninianus-gallienus.jpg",
+        "/images/blog/coinage-act-1792-section-19-section-19.jpg",
+        "/images/blog/coinage-act-1792-section-19-philadelphia-mint.jpg",
+        "/images/blog/coinage-act-1792-section-19-coinage-act-1965.jpg",
       ],
     );
     for (const f of figures) {
