@@ -28,6 +28,11 @@
   ],
   "10-05": [
     {
+      "year": 1551,
+      "text": "England’s Tower mint set new silver coins at about 92 parts silver in 100, so a shilling was silver again after years of copper-filled coins.",
+      "source": "Henry Symonds, The English Coinages of Edward VI, British Numismatic Journal 11 (1915): commission sealed at Hampton Court on 5 October 1551, silver 11 oz 1 dwt fine, British Museum Additional MS 18759; C. E. Challis, Southwark Mint 1545–1551, British Numismatic Journal 33 (1964)"
+    },
+    {
       "year": 1936,
       "text": "Italy’s Royal Decree-Law No. 1745 reduces the lira’s gold content from 0.07919 g to 0.04677 g of fine gold.",
       "source": "Banca d’Italia, Annual Report for 1936: Royal Decree-Law No. 1745 of 5 October 1936 reduced the gold content of the lira from 0.07919 to 0.04677 grammes fine; Gazzetta Ufficiale n. 231, 5 October 1936"
@@ -38,6 +43,11 @@
       "year": 1905,
       "text": "Switzerland adopts the National Bank Act, requiring the Swiss National Bank to redeem its notes in gold or silver and to hold at least 40 percent metal cover.",
       "source": "Bundesgesetz über die Schweizerische Nationalbank vom 6. Oktober 1905, AS 22 47; Schweizerische Nationalbank, Geld- und währungspolitische Chronik; SNB, Die Schweizerische Nationalbank — Bilanz und Erfolgsrechnung (2007)"
+    },
+    {
+      "year": 1917,
+      "text": "Congress gave the president power to regulate or stop exports of gold and silver coins and uncoined metal during the war.",
+      "source": "Trading with the Enemy Act, ch. 106, 40 Stat. 411, approved 6 October 1917, §5(b), govinfo Statutes at Large; Guaranty Trust Company of New York, Trading with the Enemy: Act Approved October 6, 1917 (1917), digest of the export power over gold or silver coin or bullion"
     }
   ],
   "10-07": [
@@ -45,6 +55,11 @@
       "year": 1980,
       "text": "Public Law 96-389 requires the Treasury Secretary to establish and chair a commission on the role of gold in U.S. domestic and international monetary systems.",
       "source": "Public Law 96-389, sec. 10, 94 Stat. 1555, approved October 7, 1980"
+    },
+    {
+      "year": 2025,
+      "text": "New York gold futures rose above $4,000 a troy ounce for the first time, a record price for gold.",
+      "source": "Reuters, 7 October 2025, “US gold futures top $4,000 mark”: December futures settled at $4,004.40, the first close above $4,000 a troy ounce; Associated Press, 7 October 2025, gold futures above $4,000 a troy ounce for the first time"
     }
   ]
 }
