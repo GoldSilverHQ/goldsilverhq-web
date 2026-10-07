@@ -434,10 +434,10 @@ export const historyClusters: Cluster[] = [
         slug: "bank-of-england",
         title: "Bank of England",
         summary:
-          "In February 1797 the Bank stopped paying gold for its notes. The pound kept its name until full gold payout returned in 1821. The notes began in 1694 as a war loan of about £1.2 million to the Crown.",
+          "In February 1797 the Bank stopped paying gold for notes that had begun in 1694 as a war loan of about £1.2 million to the Crown, and the pound kept its name until full gold payout returned in 1821.",
         status: "ready",
         paragraphs: [
-          "In February 1797 the Bank stopped paying gold for its notes. Holders could no longer test the pound in coin. The notes had begun in 1694, when a private corporation was chartered to lend about £1.2 million to the Crown, and they became the ordinary paper of London. Full gold payout returned in 1821.",
+          "In February 1797 the Bank stopped paying gold for its notes, so holders could no longer test the pound in coin, though the paper stayed in use until full gold payout returned in 1821. Those notes had begun in 1694, when a private corporation was chartered to lend about £1.2 million to the Crown, and over the eighteenth century they became the ordinary paper of London.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
