@@ -1205,14 +1205,14 @@ const england: Section[] = [
   {
     heading: "London already paid with paper",
     paragraphs: [
-      "William III was at war with Louis XIV, and the Crown needed a large loan at once, in a city where goldsmith running-cash notes already circulated as private claims on metal left with a keeper, and where paying with a slip of paper was already a habit, from those goldsmiths and from warehouse receipts. The Stop of the Exchequer in **1672** had shown what that habit was worth when a sovereign closed the window on paper that had funded the Crown.",
-      "The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had opened in **1609** as a municipal ledger for the bill market — mixed coin in, bank money out, bills settled by giro — and for a long time its reputation was that it did not lend, though concealed lending and the collapse of the agio came much later. The **1694** statute created a company whose first asset was a loan to the state and whose liabilities included notes the public could pass, a promise to pay coin, from a corporation that had already lent to the Crown.",
+      "When William III was at war with Louis XIV, the Crown needed a large loan at once. In London, goldsmith running-cash notes already circulated as private claims on metal left with a keeper, and paying with a slip of paper was already a habit that came from those goldsmiths and from warehouse receipts. The Stop of the Exchequer in **1672** had shown what that habit was worth when a sovereign closed the window on paper that had funded the Crown.",
+      "The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had opened in **1609** as a municipal ledger for the bill market — mixed coin in, bank money out, bills settled by giro — and for a long time its reputation was that it did not lend, though concealed lending and the collapse of the agio came much later. The **1694** statute created a company whose first asset was a loan to the state and whose liabilities included notes the public could pass. Those notes were a promise to pay coin, and they came from a corporation that had already lent to the Crown.",
     ],
   },
   {
     heading: "A charter for a war, 1694",
     paragraphs: [
-      "Parliament needed money for the Nine Years’ War, and the scheme that raised it was a subscription of about **£1.2 million** lent to the government at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England, a corporation that could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
+      "Parliament needed money for the Nine Years’ War, and the scheme that raised it was a subscription of about **£1.2 million** lent to the government at interest against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England, a corporation that could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
       "William Paterson and others had argued for such a bank, and a private company received the public privilege because the fiscal need was urgent. People took the notes because the window paid, and because London learned to treat that paper as cash.",
       "The charter was renewed because the state still needed the lender, and later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England.",
     ],
@@ -1221,7 +1221,7 @@ const england: Section[] = [
     heading: "Notes become London paper",
     paragraphs: [
       "Over the eighteenth century those notes became the ordinary paper of London, so a merchant could pay a debt with one without carting coin across the City. As long as redemption was ordinary, the note was a convenient claim on metal: the unit remained the pound, and the paper was how it moved.",
-      "Country banks issued their own notes outside London, but in the capital these notes crowded the field, and from **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing.",
+      "Country banks issued their own notes outside London, but in the capital these notes crowded the field. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing.",
       "Holders could present a note and ask for gold, and counterparties took the paper because they trusted that window. While it was open the note was a claim on metal; when it shut, the same note was still what people spent, if they would hold it.",
     ],
     figure: {
@@ -1239,7 +1239,7 @@ const england: Section[] = [
     heading: "Restriction, 1797",
     paragraphs: [
       "War with revolutionary France strained the gold stock, as coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes, and the Bank Restriction Act of **1797** made that suspension statute, so the notes stayed in circulation while the window did not.",
-      "During the restriction the Bank issued small notes of **one and two pounds**, while coin left daily trade and paper filled the till. The Bullion Report of **1810** argued, from the premium of gold over notes, that the paper pound had depreciated.",
+      "During the restriction, when coin had left daily trade and paper filled the till, the Bank issued small notes of **one and two pounds**. The Bullion Report of **1810** argued, from the premium of gold over notes, that the paper pound had depreciated.",
       "Prices rose and gold stood at a premium, but the notes did not collapse, and the public kept paying with them through the long war with France.",
     ],
     figure: {
@@ -1278,7 +1278,7 @@ const england: Section[] = [
     heading: "War finance with a note attached",
     paragraphs: [
       "Once notes are the ordinary cash of a capital, the issuer can be leaned on, and a crown can borrow against a charter. London’s daily money had become a bank’s paper, and that paper lost its metal window, then got it back.",
-      "France tried two other answers in the same century: [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**, while the revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
+      "France tried two other answers in the same century. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**; the revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
     ],
   },
 ];
