@@ -1199,31 +1199,30 @@ const england: Section[] = [
     heading: "",
     paragraphs: [
       "In **February 1797**, the Bank of England stopped paying gold for its notes. An Order in Council closed the window; the Restriction Act made the suspension statute. The notes stayed in London’s tills. The pound kept its name. Holders could no longer test that name in coin at Threadneedle Street. Gold went to a premium against paper. It would be more than twenty years before the window opened again.",
-      "The machine that could close a window had been built for war a century earlier. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend about **£1.2 million** to the Crown and to issue notes. Where the [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had been a city ledger for mixed coin, London’s bank began as a war loan with circulating paper attached.",
+      "The notes were already a century old. In **1694**, during the Nine Years’ War, a private corporation was chartered to lend about **£1.2 million** to the Crown and to issue paper the public could pass.",
     ],
   },
   {
-    heading: "Not a city giro table",
+    heading: "London already paid with paper",
     paragraphs: [
-      "Amsterdam’s Wisselbank, opened in **1609**, was a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Its concealed lending, and the collapse of the agio, came much later.",
-      "London in the 1690s had a different problem. William III was at war with Louis XIV. The Crown needed a large loan at once. Goldsmith running-cash notes already circulated; the Stop of the Exchequer in **1672** had shown that a sovereign can close a window. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass.",
-      "Amsterdam settled by giro — a book credit at a public table. London already had goldsmith notes: private claims on metal left with a keeper. The Bank’s note was something else again: a circulating promise to pay, issued by a chartered corporation that had already lent to the Crown. The habit of paying with paper came from the warehouse and goldsmith path. The 1694 machine put that habit on a war loan.",
+      "William III was at war with Louis XIV, and the Crown needed a large loan at once. Goldsmith running-cash notes already circulated: private claims on metal left with a keeper. The Stop of the Exchequer in **1672** had shown that a sovereign can close a window on paper that had funded the Crown. Paying with a slip of paper was already a London habit, from those goldsmiths and from warehouse receipts.",
+      "The [Bank of Amsterdam](/history/banks-paper/bank-of-amsterdam) had opened in **1609** as a municipal ledger for the bill market: mixed coin in, bank money out, bills settled by giro. For a long time its reputation was that it did not lend. Concealed lending, and the collapse of the agio, came much later. The **1694** statute created a company whose first asset was a loan to the state, and whose liabilities included notes the public could pass — a promise to pay coin, from a corporation that had already lent to the Crown.",
     ],
   },
   {
     heading: "A charter for a war, 1694",
     paragraphs: [
-      "Parliament needed money for the Nine Years’ War. The scheme that became the Bank offered a subscription: about **£1.2 million** lent to the government, at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England. The corporation could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
-      "William Paterson and others had argued for such a bank. The political fact is the charter: a private company received a public privilege because the fiscal need was urgent. The notes were the Bank’s own paper, accepted because the window paid and because London learned to treat that paper as cash.",
-      "The charter was not a one-time gift. It was renewed because the state still needed the machine. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England. The Bank’s life was fiscal from the start — a war lender with a note issue, not a city table for mixed coin.",
+      "Parliament needed money for the Nine Years’ War. The scheme offered a subscription: about **£1.2 million** lent to the government, at interest, against a stream of taxes. The subscribers were incorporated as the Governor and Company of the Bank of England. The corporation could deal in bills and bullion, take deposits, and issue notes payable on demand in coin.",
+      "William Paterson and others had argued for such a bank. A private company received a public privilege because the fiscal need was urgent. People took the notes because the window paid, and because London learned to treat that paper as cash.",
+      "The charter was renewed because the state still needed the lender. Later renewals bought more loans, longer privileges, and a tighter hold on joint-stock note issue in England.",
     ],
   },
   {
     heading: "Notes become London paper",
     paragraphs: [
-      "Over the eighteenth century those notes became the ordinary paper of London. A merchant could pay a debt with a Bank note without carting coin across the City. As long as redemption was ordinary, the note was a convenient claim on metal. The unit remained the pound. The paper was how it moved.",
-      "Country banks issued their own notes outside London. In the capital, Bank of England paper crowded the field. Statute helped. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing. The result was national money grown from a war loan, not from a city warehouse ticket alone.",
-      "Convertibility was the ordinary test. Holders could present notes and ask for gold. Counterparties took the paper because they trusted that window. When the window is open, a note is a claim. When the window closes, the same note is a wartime unit that still spends if the public will hold it.",
+      "Over the eighteenth century those notes became the ordinary paper of London. A merchant could pay a debt with one without carting coin across the City. As long as redemption was ordinary, the note was a convenient claim on metal. The unit remained the pound. The paper was how it moved.",
+      "Country banks issued their own notes outside London. In the capital, these notes crowded the field. From **1708** no other English bank with more than six partners could issue notes — a joint-stock monopoly that left private country issue standing, but kept a second Bank of England from appearing.",
+      "Holders could present a note and ask for gold. Counterparties took the paper because they trusted that window. While the window was open, the note was a claim on metal. When it shut, the same note was still what people spent, if they would hold it.",
     ],
     figure: {
       src: "/images/history/banks-paper/bank-of-england/great-hall-1808.jpg",
@@ -1240,8 +1239,8 @@ const england: Section[] = [
     heading: "Restriction, 1797",
     paragraphs: [
       "War with revolutionary France strained the gold stock. Coin left for subsidies, for armies, and for hoards when invasion talk rose. In **February 1797** an Order in Council told the Bank to stop paying gold for its notes. The Bank Restriction Act of **1797** made that suspension statute. The notes stayed in circulation. The window did not.",
-      "The pound kept its name. The public could no longer test that name at the Bank. Gold went to a premium against notes. During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from that premium, that the paper pound had depreciated.",
-      "The Bank had closed the gold window while its notes remained everyday money. The notes did not collapse. Prices rose and gold stood at a premium, but the pound stayed the pound, and the public kept paying with Bank paper through the long war with France.",
+      "During the restriction the Bank issued small notes of **one and two pounds**. Coin had left daily trade; the paper filled the till. The Bullion Report of **1810** argued, from the premium of gold over notes, that the paper pound had depreciated.",
+      "Prices rose, and gold stood at a premium, but the notes did not collapse. The public kept paying with them through the long war with France.",
     ],
     figure: {
       src: "/images/history/banks-paper/bank-of-england/gillray-midas-1797.jpg",
@@ -1258,8 +1257,8 @@ const england: Section[] = [
     heading: "Resumption in the 1820s",
     paragraphs: [
       "Cash payments did not return with the first peace. After Waterloo the question was when, and at what gold definition, the Bank would pay again. Peel’s Act of **1819** set a path back to convertibility. Full gold payout on notes resumed in **1821**, two years ahead of the Act’s final date.",
-      "England suspended for war, kept the notes in use, and resumed later at the old metal unit. A claim treated as money had lost its metal stop and then got it back — because the issuer survived the war and chose to pay.",
-      "Resumption did not make the Bank a warehouse. The loan book and the note issue remained. What returned was the ordinary test at the window.",
+      "The notes had stayed in use through the war. In **1821** the Bank paid gold again at the old metal unit, because the issuer had survived and chose to pay.",
+      "The loan book and the note issue remained. What returned was the ordinary test at the window.",
     ],
   },
   {
@@ -1267,9 +1266,9 @@ const england: Section[] = [
     paragraphs: ["From the Exchequer stop to cash payments again."],
     list: [
       "**1672.** Stop of the Exchequer; private paper that funded the Crown meets a closed sovereign window.",
-      "**1694.** Bank of England charter: about £1.2 million as a war loan, with a note issue attached.",
-      "**1708.** Joint-stock note-issue monopoly in England; Bank paper becomes the London standard.",
-      "**Eighteenth century.** Bank notes become the ordinary paper of London.",
+      "**1694.** Charter: about £1.2 million as a war loan, with a note issue attached.",
+      "**1708.** Joint-stock note-issue monopoly in England; the notes become the London standard.",
+      "**Eighteenth century.** The notes become the ordinary paper of London.",
       "**February–May 1797.** Order in Council, then the Bank Restriction Act: gold payout on notes stops.",
       "**1810.** Bullion Report: notes trade at a discount to gold.",
       "**1819–1821.** Peel’s Act; cash payments resume. Restriction ends in the 1820s.",
@@ -1278,7 +1277,7 @@ const england: Section[] = [
   {
     heading: "War finance with a note attached",
     paragraphs: [
-      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. England showed that a great state’s daily money can be a bank’s paper — and that the paper can lose its metal window, then get it back.",
+      "Once notes are the ordinary cash of a capital, the issuer can be leaned on. A crown can borrow against a charter. London’s daily money was a bank’s paper. It lost its metal window, then got it back.",
       "France tried two other answers in the same century. [John Law](/history/banks-paper/john-law) fused a note-issuing bank with a trading company, and the System broke in **1720**. The revolutionary [assignats](/history/banks-paper/assignats) of the **1790s** tied paper to seized land and died in **1796**. Neither came back to metal at the old unit. London did, in **1821**.",
     ],
   },
