@@ -402,23 +402,23 @@ const classicalGold: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In the first days of August **1914**, as armies mobilized, the peacetime gold window closed across Europe. Britain’s Currency and Bank Notes Act of **6 August** put Treasury notes of one pound and ten shillings into daily use and made Bank of England notes legal tender more broadly. Gold exports were blocked or licensed. The mark, the franc, and other gold names remained on coins and accounts. The public could no longer test those names at the teller.",
-      "Before that summer, major currencies were convertible into gold at fixed rates in peacetime — the classical gold standard. Convertibility, gold shipment, and London settlement held the order together. What came after the war was not the same system with a pause. It was a different architecture.",
+      "In the first days of August **1914**, as armies mobilized, the peacetime gold window closed across Europe. Britain’s Currency and Bank Notes Act of **6 August** put Treasury notes of one pound and ten shillings into daily use and made Bank of England notes legal tender more broadly, while gold exports were blocked or licensed. The mark, the franc, and the other gold names stayed on coins and accounts. The public could no longer test those names at the teller.",
+      "Before that summer a holder could still turn a major currency into gold at a fixed rate, which is what the classical gold standard was in practice: convertibility, shipment of metal, and settlement through London. What came after the war was not the same system with a pause. It was a different architecture.",
     ],
   },
   {
     heading: "The peacetime promise",
     paragraphs: [
-      "Before **1914** the international monetary system was a set of practices, not a single treaty. A currency on the classical gold standard was convertible into a defined weight of gold. Notes and deposits were claims that could, in ordinary times, be turned into coin or bullion at a published mint price. Gold could be imported and exported.",
-      "The parts of that promise stayed distinct. The mint price was the official gold definition of the unit. A note was a circulating promise to pay that gold. A deposit was a book claim that could be drawn as notes or coin. Convertibility was the ordinary test: the holder could still get metal at the window. Counterparties took the paper because they trusted that window, not because a conference had declared the paper to be gold.",
-      "Membership was practice, not a club card. Britain had been on gold, in the modern sense, since the early nineteenth century. Germany, France, and others joined as they defined their units in gold and opened the window. The United States did so after resumption and the Gold Standard Act of **1900**. The map was several national promises, mutually convertible because each promise pointed at the same metal.",
+      "Before **1914** the international monetary system was a set of practices, not a single treaty. A currency on the classical gold standard could be turned into a defined weight of gold, so notes and deposits were claims that, in ordinary times, became coin or bullion at a published mint price, and the metal itself could still be shipped in or out.",
+      "A holder who wanted metal had to know which promise he held. The mint price named the gold in the unit, a note was a claim he could present at the window, and a deposit was only a book entry he could draw as notes or coin. People took the paper because that window still paid, not because a conference had called the paper gold.",
+      "Membership was a habit, not a club card. Britain had been on gold, in the modern sense, since the early nineteenth century, and Germany, France, and the others joined as they defined their units in gold and opened the window. The United States did so after resumption and the Gold Standard Act of **1900**. No treaty held the map together. Each national promise pointed at the same metal, so the promises could be exchanged.",
     ],
   },
   {
     heading: "Gold points and London settlement",
     paragraphs: [
       "That convertibility, plus the cost of shipping metal, produced gold points. Sterling’s mint par against the dollar sat near **$4.86**. If sterling cheapened far enough, a New York house could take gold in London and ship it home more cheaply than paying the market rate. If sterling dearened, gold moved the other way. The band was mint par plus freight, insurance, and interest while the metal was at sea — a few cents either side of $4.86.",
-      "Inside the points, bills and credits did the settling. Outside them, gold actually moved. A broken promise showed up as a drain. A central bank that lost gold had to attract it back or lose the right to call its paper a gold claim.",
+      "Inside the points, bills and credits did the settling. Outside them, gold actually moved, and a broken promise showed up as a drain that a central bank had to reverse or else lose the right to call its paper a gold claim.",
       "London was the centre. Sterling bills financed trade far from Britain. The Bank of England’s Bank rate was the price of credit in that market. Raise the rate, and balances and metal were pulled toward Threadneedle Street. Lower it, and gold could leave. Quieter “gold devices” — the price paid for bars, the terms of advances — moved the cost of taking metal by a few pennies. They did not abolish the points. People and foreigners could still ask for gold.",
     ],
   },
@@ -432,8 +432,8 @@ const classicalGold: Section[] = [
   {
     heading: "Why 1914 ended it",
     paragraphs: [
-      "The First World War made convertibility and free gold movement incompatible with war finance. Governments needed to spend faster than tax and genuine borrowing would allow. Gold exports were blocked or licensed. Notes were protected from internal drains. Stock exchanges closed. The peacetime machine assumed ships, open windows, and a public that would take paper because it could still test the paper.",
-      "Britain’s Currency and Bank Notes Act of **6 August 1914** is one legal marker. Similar suspensions ran across the belligerents that summer and autumn. England’s Restriction in **1797** was an earlier wartime stop of gold payout, with resumption in the **1820s**. **1914** is another wartime stop. What did not return after **1918** was the old machine: several centres, private convertibility, gold that moved when the points were hit.",
+      "The First World War made convertibility and free gold movement incompatible with war finance, because governments needed to spend faster than tax and genuine borrowing would allow. Gold exports were blocked or licensed, notes were shielded from internal drains, and stock exchanges closed. The peacetime machine had assumed ships, open windows, and a public willing to hold paper because it could still test the paper.",
+      "Britain’s Currency and Bank Notes Act of **6 August 1914** is one legal marker of that summer, and similar suspensions ran across the belligerents through the autumn. England’s Restriction in **1797** had been an earlier wartime stop of gold payout, with resumption in the **1820s**, and **1914** was another stop of the same kind. What did not return after **1918** was the old machine: several centres, private convertibility, and gold that moved when the points were hit.",
       "The United States, not yet in the war, stayed closer to gold than the European combatants. New York, not London, became the place dollars and gold accumulated. That does not mean the classical system survived. A standard that only some members still honour, while the rest fight on inconvertible paper, is no longer the pre-1914 order.",
     ],
   },
@@ -452,8 +452,8 @@ const classicalGold: Section[] = [
   {
     heading: "What came after was not a pause",
     paragraphs: [
-      "After **1918** many countries tried to “return to gold.” They reused the word. They did not restore the old machinery. Genoa asked members to hold gold-convertible currencies as reserves. That is a gold-*exchange* design: one or two convertible centres, and a ring of claims on those centres. It is not several windows with gold moving between them when the points are hit.",
-      "Britain’s **1925** return at the pre-war sterling–dollar parity reused a number. It did not rebuild the world of **1913**. In **1931** Britain left gold again. Other interwar “gold standards” were pegs, exchange controls, and official gold — a different architecture wearing a familiar name.",
+      "After **1918** many countries tried to “return to gold.” They reused the word. They did not restore the old machinery. Genoa asked members to hold gold-convertible currencies as reserves, which is a gold-*exchange* design: one or two centres that still paid metal, and a ring of claims on those centres. It is not several windows with gold moving between them when the points are hit.",
+      "Britain’s **1925** return at the pre-war sterling–dollar parity reused a number and did not rebuild the world of **1913**. In **1931** Britain left gold again. Other interwar “gold standards” were pegs, exchange controls, and official gold — a familiar name on a different architecture.",
       "Where the wartime stop never returned, paper could run for the Treasury. Germany’s mark later collapsed into hyperinflation — war finance first, then a unit that ceased to work as money. That was not a pause in the classical system. The peacetime machine of convertibility, gold points, and London settlement had ended in the summer of **1914**.",
     ],
   },
@@ -464,15 +464,15 @@ const goldRecall1933: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **5 April 1933**, Franklin Roosevelt signed Executive Order **6102**. Most gold coin, gold bullion, and gold certificates in private American hands had to be delivered to a Federal Reserve Bank, a member bank, or a Treasury agent — at **$20.67 an ounce**, by a deadline printed as **1 May**. The week before inauguration, gold had already been leaving banks. A national bank holiday had stopped ordinary payments. The order made the call formal.",
-      "The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
+      "On **5 April 1933**, Franklin Roosevelt signed Executive Order **6102**, and most gold coin, gold bullion, and gold certificates in private American hands had to be delivered to a Federal Reserve Bank, a member bank, or a Treasury agent — at **$20.67 an ounce**, by a deadline printed as **1 May**. Gold had already been leaving the banks in the week before inauguration, and a national bank holiday had stopped ordinary payments. The order made that call formal.",
+      "The Gold Reserve Act of **1934** then vested title to monetary gold in the United States and reset the official price from **$20.67** to **$35** an ounce. With that, the public claim on gold at the old mint price was gone, and official gold became a Treasury asset rather than circulating money.",
     ],
   },
   {
-    heading: "What Order 6102 required",
+    heading: "Delivery at the old mint price",
     paragraphs: [
-      "The order required persons in the United States to deliver most gold coin, gold bullion, and gold certificates. Payment was at the official price then in force: **$20.67 an ounce**. Later licenses and exemptions matter more than that May date alone.",
-      "It did not take every ounce in private hands. Exceptions covered industry, profession, art, small personal amounts, and rare coins. Failure to deliver the monetary gold it covered was a federal offence. Compliance was incomplete; the legal requirement still stood. Title and the official price changed by statute the next January.",
+      "Persons in the United States had to turn in most gold coin, gold bullion, and gold certificates, and the payment was the official price then in force, **$20.67 an ounce**. Later licenses and exemptions matter more than that May date alone, because they decided who could still hold metal after the deadline.",
+      "The order did not take every ounce in private hands. Industry, profession, art, small personal amounts, and rare coins were excepted, but failing to deliver the monetary gold the order did cover was a federal offence. Compliance was incomplete. The legal requirement still stood, and the next January a statute changed both the title and the official price.",
     ],
     figure: {
       src: "/images/history/20th-century/1933-gold-recall/executive-order-6102-poster.jpg",
@@ -533,12 +533,12 @@ const goldRecall1933: Section[] = [
     ],
   },
   {
-    heading: "Not 1914, not 1971",
+    heading: "A call on private American gold",
     paragraphs: [
       "The [classical gold standard](/history/20th-century/classical-gold-standard-end) ended as a working international system in **1914**, when war finance blocked gold shipment and protected notes from internal drains. That break is about convertibility and metal movement among countries. It is not a domestic recall of coin from American households.",
       "The **1933–34** sequence is a United States statute story. Private monetary gold rights are removed. Title to official gold vests in the Treasury. The official price moves from $20.67 to $35. Americans lose a public claim they had still possessed after **1914**.",
       "Bretton Woods, in **1944**, defined the dollar against gold at **$35** for official convertibility. Ordinary people in the United States did not redeem paper at the Treasury window. On **15 August 1971** the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971) closed the remaining window: foreign official holders could no longer present dollars and demand US gold at the posted price.",
-      "Three different breaks, then. **1914** ends classical convertibility under war. **1933–34** removes the US public claim and revalues official gold. **1971** ends official dollar–gold convertibility for foreign holders. The shared lesson — gold stops being a right you can test — is not identity of the three events.",
+      "They were three different breaks. **1914** ended classical convertibility under the pressure of war, **1933–34** removed the American public’s claim and revalued official gold, and **1971** ended official dollar–gold convertibility for foreign holders. In each case gold stopped being a right a holder could test, which does not make the three events the same act.",
     ],
   },
   {
@@ -1378,21 +1378,21 @@ const whyMarkets: Section[] = [
   {
     heading: "Cattle, grain, shells, copper",
     paragraphs: [
-      "Plenty of things have been money close to home. Cattle settled a fine in a village that already priced in livestock. Grain paid a tax at harvest, if the collector took it before it spoiled. Cowries moved along coasts. Copper and bronze served as small change in more than one ancient economy. When the trade is near and everyone knows the goods, people use what is at hand.",
+      "Plenty of things have been money close to home. Cattle settled a fine in a village that already priced in livestock, grain paid a tax if the collector took it before it spoiled, cowries moved along coasts, and copper and bronze served as small change where the sums were small. When the trade is near and everyone knows the goods, people use what is at hand.",
       "Distance breaks those goods. An ox cannot settle a debt two seas away. Grain rots. Shells vary. Copper is useful, so it gets used up, and it is bulky for a large payment. A unit that has to travel, wait a year, and still be accepted by a stranger who never saw where it came from needs different qualities.",
       "A ruler can name what his tax office will take. That is power over a till. It does not make a distant trader hold the named thing overnight. When a unit failed in the hand — too heavy, too perishable, too easy to fake, too easy to grow — trade drifted to something else. Again and again, it drifted to gold and silver.",
     ],
   },
   {
-    heading: "Six things the metal had to do",
+    heading: "Why cattle and grain lost",
     paragraphs: [
-      "Economists later wrote the reasons down as six properties. Each one describes a job a payment has to do when the other side is a stranger and the money may sit for a year.",
-      "**Durability** means the unit can sit for a generation. Gold does not rot and does not rust in ordinary air. Silver tarnishes; the metal remains. Grain, cattle, and cloth do not offer that pause. A store of value is first a store: the thing must still be there.",
-      "**Divisibility** means a debt can be paid without slaughtering an ox. Metal can be cut, weighed, and recast. The same stuff settles a large claim and leaves a remainder. A live animal or a finished cloth is ruined by being divided. Change is how a unit works at more than one size of payment.",
-      "**Homogeneity** means one ounce is like another, once refined. Cattle are not interchangeable. Shells vary. Mixed copper is a guess. When pieces of the same fineness are alike, weight becomes a language. The scale replaces the argument about which cow or which lump.",
-      "**Scarcity** means a king cannot harvest a new stock from a field. Gold and silver are costly to find and to refine. The stock can grow — mines open, and one mountain would later flood a century with silver — but it does not appear because a treasury needs it this afternoon. Scarcity here means costly expansion, not a pile that never changes.",
-      "**Recognizability** is how cheaply a stranger can tell the stuff from a look-alike. Color, weight in the hand, the streak on a touchstone, the ring of a good piece: crude tests, and enough for metal to move without a letter of introduction. At a distance the test has to be cheaper than hiring an assayer for every bargain.",
-      "**Portability** is value per weight. Gold especially: a small mass settles a large debt. Silver is heavier for the same purchasing power, which is why it became the everyday metal of Mediterranean trade while gold stayed the metal of large sums. Both still beat cattle on a ship and grain in a wagon.",
+      "Economists later wrote the reasons down as six properties. Each one is a job a payment has to do when the other side is a stranger and the money may sit for a year.",
+      "**Durability** is why a debt can wait out a generation. Gold does not rot and does not rust in ordinary air, and silver tarnishes while the metal remains, whereas grain, cattle, and cloth do not offer that pause. A store of value is first a store. The thing must still be there.",
+      "**Divisibility** is how the same debt gets paid without slaughtering an ox. Metal can be cut, weighed, and recast, so one lump settles a large claim and still leaves a remainder, while a live animal or a finished cloth is ruined by being divided. Change is how a unit works at more than one size of payment.",
+      "**Homogeneity**, once the metal is refined, is why one ounce can stand in for another. Cattle are not interchangeable, shells vary, and mixed copper is a guess. When pieces of the same fineness are alike, weight becomes a language, and the scale replaces the argument about which cow or which lump.",
+      "**Scarcity** is why a king cannot harvest a new stock from a field when the treasury is short. Gold and silver are costly to find and to refine. The stock can grow — mines open, and one mountain would later flood a century with silver — but it does not appear because someone needs it this afternoon. Scarcity here means costly expansion, not a pile that never changes.",
+      "**Recognizability** is what lets a stranger tell the metal from a look-alike without a letter of introduction: color, weight in the hand, the streak on a touchstone, the ring of a good piece. The tests were crude. They were cheap enough to use at a distance, which mattered more than hiring an assayer for every bargain.",
+      "**Portability** is value per weight, and it is why a small mass of gold can settle a large debt while silver, heavier for the same purchasing power, became the everyday metal of Mediterranean trade and gold stayed the metal of large sums. Both still beat cattle on a ship and grain in a wagon.",
       "The six work together. A durable metal that cannot be divided is jewelry. A scarce metal no stranger can recognize is a rumor. A portable metal a king can plant is a season’s money. Gold and silver were the overlap that survived contact with people who did not share a temple, a harvest, or a law.",
     ],
   },
@@ -1424,24 +1424,24 @@ const lydia: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In a market of strangers in western Anatolia, a lump of electrum still started an argument at the scale. How much gold was in it? How much silver? Then someone struck the lump with a punch, and later with a recognisable design, and a buyer could check the king’s mark instead of every grain. That happened in Lydia, in the **seventh and sixth centuries BCE**. It is the conventional starting point for struck coinage. Croesus is the royal name later attached to separate gold and silver issues. The ore was old. The stamp was new.",
+      "In a market of strangers in western Anatolia, a lump of electrum still started an argument at the scale. How much gold was in it? How much silver? Then someone struck the lump with a punch, and later with a recognisable design, so a buyer could check the king’s mark instead of every grain. That happened in Lydia, in the **seventh and sixth centuries BCE**, the conventional starting point for struck coinage, and Croesus is the royal name later attached to separate gold and silver issues. The ore was old. The stamp was new.",
       "Traders had been settling in metal by weight for a long time already — that is the story of [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Lydia did not invent monetary gold and silver. It made them cheaper to check.",
     ],
   },
   {
     heading: "Where and when",
     paragraphs: [
-      "Western Anatolia sat on the trade routes between the Aegean and the interior of Asia Minor. Lydia’s kings controlled river gold and electrum sources that made a local mint possible. Archaeology and the literary tradition place the first true coins in this zone in the later seventh century BCE, with wider use in the sixth.",
-      "Claims about the exact first year vary with the dig and with how one defines a coin. The broad agreement is narrower: Lydia is where struck pieces carrying a state or royal mark became a habit of payment, not a one-off curiosity. Ionian cities nearby adopted the practice and adapted it. The Aegean learned the stamp.",
+      "Western Anatolia sat on the trade routes between the Aegean and the interior of Asia Minor, and Lydia’s kings controlled river gold and electrum sources that made a local mint possible. Archaeology and the literary tradition place the first true coins in this zone in the later seventh century BCE, with wider use in the sixth.",
+      "Claims about the exact first year vary with the dig and with how one defines a coin. The broad agreement is narrower: Lydia is where struck pieces carrying a state or royal mark became a habit of payment, not a one-off curiosity, and Ionian cities nearby took the practice up and adapted it. The Aegean learned the stamp.",
       "Lydia was not the birth of money. Mesopotamian silver accounts and Levantine hacksilver already measured value by weight. Lydia was the birth of a portable claim about that weight — a design you could recognise without opening every bag to the scale.",
     ],
   },
   {
     heading: "Electrum, punch, and type",
     paragraphs: [
-      "Early Lydian pieces were often electrum: gold and silver mixed, sometimes from river metal whose ratio was hard to read by eye. A blank was prepared. A punch or die left a mark. Later issues carried a clearer type — a design that named the issuer and implied a standard.",
+      "Early Lydian pieces were often electrum, gold and silver mixed, sometimes from river metal whose ratio was hard to read by eye. A blank was prepared and a punch or die left a mark; later issues carried a clearer type, a design that named the issuer and implied a standard.",
       "Electrum’s mixed nature made the stamp especially useful. Without a trusted mark, every lump invited an argument about assay. With a mark, the buyer still trusted the king or the city, but the trust was concentrated: check the type, not every grain. The stamp moved the cost of verification. It did not abolish trust.",
-      "Weights and denominations changed over time. Small pieces settled everyday trade; larger ones settled bigger claims. The metal remained the substance. The type was the shortcut. Numismatists still argue over how early blanks were cast or cut and how soon a true reverse die appears. The monetary point is simpler: a repeatable mark turned an anonymous alloy into a circulating claim.",
+      "Weights and denominations changed over time, so small pieces settled everyday trade while larger ones settled bigger claims. The metal remained the substance. The type was the shortcut. Numismatists still argue over how early blanks were cast or cut and how soon a true reverse die appears. The monetary point is simpler: a repeatable mark turned an anonymous alloy into a circulating claim.",
       "Hoards and find-spots show the pieces moving well beyond the palace. That circulation is the test. A royal souvenir that never leaves the treasury is not a new way of paying. Lydia is remembered because the habit stuck.",
     ],
   },
@@ -1450,7 +1450,7 @@ const lydia: Section[] = [
     paragraphs: [
       "Tradition credits **Croesus**, in the mid-sixth century BCE, with issuing pure gold and pure silver coins rather than only electrum. Whether or not every detail of that story holds, the logic is clear. Separating the metals makes fineness easier to state and to check. Electrum hid a ratio. A gold coin or a silver coin announces what is in it.",
       "Separate issues also point toward a world in which gold and silver do different jobs — large sums and everyday trade — under named standards. The later Greek silver networks and Rome’s pairing of the aureus and the denarius grow out of that habit. Lydia wrote no mint ratio into law. It showed a state choosing what its stamp would promise.",
-      "When Persia conquered Lydia, the habit did not vanish. Imperial coinage absorbed the technology and spread it. The stamp traveled with power. Subject cities and provincial mints learned that a typed piece could carry tax and trade farther than unmarked bullion — as long as people believed the type.",
+      "When Persia conquered Lydia, the habit did not vanish. Imperial coinage absorbed the technology and carried it outward, and the stamp traveled with power. Subject cities and provincial mints learned that a typed piece could carry tax and trade farther than unmarked bullion — as long as people believed the type.",
     ],
   },
   {
@@ -1663,23 +1663,23 @@ const earlyUs: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **2 April 1792**, Congress wrote gold and silver into United States law and fixed a mint ratio of **fifteen to one**. The dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed; the other was exported or hoarded.",
-      "The statute did not invent American money. It named a unit for a republic that already paid in Spanish dollars, wrote gold beside that silver at a fixed legal price, and left the world market to decide what actually circulated. Within a dozen years the Mint had stopped striking its two headline coins. Forty-two years later Congress moved the ratio.",
+      "On **2 April 1792**, Congress wrote gold and silver into United States law at a mint ratio of **fifteen to one**, so a dollar could be paid in either metal at that legal relation. Which metal actually stayed in circulation was decided by the market ratio abroad, not by the preamble. When world prices moved, Gresham’s pattern appeared: the legally overvalued metal stayed, and the other was exported or hoarded.",
+      "The statute did not invent American money. It named a unit for a republic that already paid in Spanish dollars, wrote gold beside that silver at a fixed legal price, and then left the world market to decide which metal actually circulated. Within a dozen years the Mint had stopped striking its two headline coins. Forty-two years later Congress moved the ratio.",
     ],
   },
   {
-    heading: "What the Coinage Act of 1792 did",
+    heading: "A mint, and a dollar in two metals",
     paragraphs: [
-      "The Coinage Act of **1792** established a Mint, housed in Philadelphia under its first director, David Rittenhouse, and defined the dollar in both gold and silver. A silver dollar was to contain **371.25 grains** of pure silver. Gold coins were set so that fifteen ounces of pure silver equaled one ounce of pure gold at the Mint. That **15:1** ratio was the legal bridge between the two metals.",
-      "The Act also named smaller silver coins and gold eagles, half-eagles, and quarter-eagles. Copper cents and half-cents covered small change. The design was bimetallic in law: either metal could settle a dollar debt at the posted weights. The statute did not invent money. It named a unit and a ratio for a republic that already traded in Spanish dollars and foreign coin.",
-      "Hamilton’s Report on the Establishment of a Mint (1791) had argued for a bimetallic dollar and for a ratio close to market practice. The 1792 Act is the legislative result. Later politics would treat “bimetallism” as a slogan. In 1792 it was a mint board: two metals, one legal unit, a fixed conversion.",
+      "The Coinage Act of **1792** established a Mint in Philadelphia under its first director, David Rittenhouse, and defined the dollar in both gold and silver. A silver dollar was to contain **371.25 grains** of pure silver, and gold coins were set so that fifteen ounces of pure silver equaled one ounce of pure gold at the Mint. That **15:1** ratio was the legal bridge between the two metals.",
+      "The Act also named smaller silver coins and gold eagles, half-eagles, and quarter-eagles, with copper cents and half-cents for the smallest change. Either metal could settle a dollar debt at the posted weights, which is what made the design bimetallic in law. The statute did not invent money. It named a unit and a ratio for a republic that already traded in Spanish dollars and foreign coin.",
+      "Hamilton’s Report on the Establishment of a Mint (1791) had argued for a bimetallic dollar and for a ratio close to market practice, and the 1792 Act is what Congress made of that argument. Later politics would treat “bimetallism” as a slogan. In 1792 it was a mint board: two metals, one legal unit, a fixed conversion.",
     ],
   },
   {
     heading: "The Spanish dollar in the background",
     paragraphs: [
       "The early United States did not invent its silver weight from blank paper. The Spanish eight-real piece — the [piece of eight](/history/silver/piece-of-eight) — had long been the common dollar of Atlantic trade. American contracts and statutes often meant that coin when they said “dollar.” The 1792 silver weight sat close to that familiar piece.",
-      "Foreign coin remained legal tender for years. The Mint was slow to supply enough domestic pieces. Circulation was a mix of Spanish and other foreign silver, scarce gold, and bank notes of uneven quality. The statute named an American unit. Daily payment still used what was in the bag.",
+      "Foreign coin remained legal tender for years, because the Mint was slow to supply enough domestic pieces, and what actually circulated was a mix of Spanish and other foreign silver, scarce gold, and bank notes of uneven quality. The statute named an American unit. Daily payment still used what was in the bag.",
       "Potosí silver and Spanish minting had already made a global silver coin. The United States adopted a dollar that traders already understood, then wrote gold beside it at a fixed ratio — the [bimetallism](/history/silver/bimetallism) that American politics would fight over for the rest of the century.",
     ],
   },
@@ -1688,7 +1688,7 @@ const earlyUs: Section[] = [
     paragraphs: [
       "A mint ratio is a legal price: how many ounces of silver equal one ounce of gold at the Mint. A market ratio is what traders actually pay in London, Amsterdam, or Paris. When the two drift, arbitrage follows. The metal that is cheaper at the Mint relative to the world is brought in for coinage. The metal that is dearer at the Mint is melted, exported, or hoarded.",
       "That is Gresham’s pattern in mint dress: the legally overvalued metal stays in circulation; the undervalued metal leaves. A preamble cannot outvote the price of silver in London.",
-      "Through the early nineteenth century, silver often looked cheap at 15:1 relative to European gold–silver prices. Gold tended to leave. The republic’s circulating coin leaned silver. The legal bridge still said both metals. The till said otherwise.",
+      "Through the early nineteenth century, silver often looked cheap at 15:1 relative to European gold–silver prices, so gold tended to leave and the republic’s circulating coin leaned silver. The legal bridge still said both metals. The till said otherwise.",
       "The Mint felt the arbitrage at once. New, full-weight American silver dollars were shipped to the West Indies and swapped for worn Spanish pieces, which came back to be recoined. Gold eagles were worth more as metal abroad than as coin at home, and they were melted or exported. By **1804** the Mint had stopped striking both the silver dollar and the eagle. Coining the headline pieces had become a subsidy to the traders who carried them away.",
     ],
   },
@@ -1805,31 +1805,31 @@ const greenbacks: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In **February 1862**, Congress authorized United States Notes — greenbacks — as legal tender for most public and private debts. Banks had already suspended specie payments at the end of **1861**. Gold still priced customs and foreign exchange. In New York a gold market posted the premium of coin over paper. When Union fortunes looked dark, that premium widened.",
-      "Greenbacks were a suspension of the metallic dollar for war finance, not a theory that paper had replaced metal forever. After Appomattox the fight shifted: whether to contract the greenback stock, whether to resume gold payments, and at what parity. The Specie Payment Resumption Act of **1875** set a date — **1 January 1879**. Between the Legal Tender Act and that morning lay seventeen years of war, argument, and a Treasury slowly building gold.",
+      "In **February 1862**, Congress made United States Notes — greenbacks — legal tender for most debts, because the banks had already stopped paying gold and silver at the end of **1861** and the Treasury still had a war to finance. Gold kept its own price for customs duties and for foreign exchange. In New York a market quoted how many greenbacks it took to buy one gold dollar, and that premium widened whenever Union fortunes looked dark.",
+      "The notes suspended the metallic dollar for the duration of the fighting, which is not the same as claiming that paper had replaced metal for good. After Appomattox the argument moved to whether the stock of notes should shrink, whether gold payments should return, and at what parity. The Specie Payment Resumption Act of **1875** named the morning: **1 January 1879**. Between the Legal Tender Act and that date lay seventeen years of war, politics, and a Treasury gathering gold.",
     ],
   },
   {
     heading: "Why the Union issued greenbacks",
     paragraphs: [
-      "War spending outran ordinary tax and bond finance. The Treasury needed a currency the public and contractors would accept when gold coin was scarce in daily Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
-      "Legal tender meant creditors had to accept the notes for most public and private debts, with exceptions such as customs duties and interest on some bonds, which stayed closer to gold. The notes were obligations of the United States. They were not warehouse receipts for a named pile of coin. Convertibility into gold was suspended for the duration of the emergency.",
-      "The Confederacy issued its own flood of paper; that story ends in collapse with the regime. The Union greenback is the paper that survived the war and then dominated peacetime politics.",
+      "War spending outran what taxes and bonds could raise, so the Treasury needed a currency the public and its contractors would take when gold coin had left everyday Union payments. Congress authorized United States Notes — demand notes at first, then the familiar green-backed legal-tender notes.",
+      "Legal tender meant a creditor had to accept the notes for most public and private debts, though customs duties and the interest on some bonds stayed closer to gold. The notes were obligations of the United States, not warehouse receipts for a named pile of coin, and convertibility into gold stayed suspended for the emergency.",
+      "The Confederacy printed its own flood of paper, and that issue died with the regime. The Union’s greenback survived the war and then set the terms of peacetime politics, because every mortgage and bond written in paper was now a bet on whether the notes would ever meet gold again.",
     ],
   },
   {
     heading: "Gold premium and the New York gold room",
     paragraphs: [
-      "Once greenbacks were legal tender and gold was still the international and customs metal, two prices appeared. Goods and contracts quoted in “currency” (paper) diverged from prices in gold. In New York a gold market — informal, then more organized — posted the premium of gold over greenbacks.",
-      "When Union fortunes looked dark, the premium widened: more greenbacks were needed to buy a gold dollar. When military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. The worst of it came in the summer of **1864**, with Grant stalled before Petersburg and Confederate raiders near Washington: it took roughly **$2.85** in greenbacks to buy one gold dollar.",
+      "Once greenbacks were legal tender while gold remained the metal of customs and of foreign bills, two prices appeared, and goods quoted in “currency” (paper) pulled away from prices in gold. In New York a gold market — informal, then more organized — posted the gold premium of coin over greenbacks.",
+      "When Union fortunes looked dark, the premium widened, because more greenbacks were needed to buy a gold dollar, and when military and fiscal news improved, the premium narrowed. Importers who needed gold for duties watched that market daily. The worst of it came in the summer of **1864**, with Grant stalled before Petersburg and Confederate raiders near Washington: it took roughly **$2.85** in greenbacks to buy one gold dollar.",
       "The premium is the record that greenbacks were not “as good as gold” during the war. They were a forced paper unit beside a gold unit that still priced customs and foreign exchange. Wage earners felt it as lost [purchasing power](/sound-money/inflation-purchasing-power): the same paper dollar bought less of anything tied to gold or imports, and wages were slow to catch up.",
     ],
   },
   {
     heading: "Legal tender cases and postwar politics",
     paragraphs: [
-      "After the war, debtors liked paying in cheaper paper. Creditors wanted gold or contraction of the note issue. The Supreme Court’s Legal Tender Cases flipped and then settled. *Hepburn v. Griswold* (**1870**) held the notes could not be forced on creditors for debts contracted before the Act. A year later, with two new justices on the bench, *Knox v. Lee* reversed that. *Juilliard v. Greenman* (**1884**) extended the power to peacetime.",
-      "Politics split along familiar lines. “Hard money” voices wanted a rapid return to specie and a smaller greenback stock. Greenback Party and agrarian voices wanted more paper, or at least no contraction that would raise the real burden of debts. Bondholders who had lent in gold terms watched every Treasury signal.",
+      "After the war, debtors liked paying in cheaper paper while creditors wanted gold or a smaller note issue, and the Supreme Court’s Legal Tender Cases flipped before they settled. *Hepburn v. Griswold* (**1870**) held the notes could not be forced on creditors for debts contracted before the Act. A year later, with two new justices on the bench, *Knox v. Lee* reversed that. *Juilliard v. Greenman* (**1884**) extended the power to peacetime.",
+      "Politics split along familiar lines. “Hard money” voices wanted a rapid return to specie and a smaller greenback stock, while the Greenback Party and agrarian voices wanted more paper, or at least no contraction that would raise the real burden of debts. Bondholders who had lent in gold terms watched every Treasury signal.",
       "National banking acts during and after the war created a federal note framework beside the greenback. The two paper stocks were not the same instrument: bank notes under national charter, United States Notes as direct Treasury obligations. Public argument often mashed them into one “paper money” complaint. The split mattered when resumption came: it was the Treasury’s own notes that had to be redeemed.",
       "The greenback was no longer only a war tool. It was a peacetime unit whose quantity and convertibility would decide winners and losers on every farm mortgage and railroad bond.",
     ],
@@ -1844,7 +1844,7 @@ const greenbacks: Section[] = [
   },
   {
     heading: "A short timeline",
-    paragraphs: ["War paper first, then the dated path back to specie."],
+    paragraphs: ["From the day the banks stopped paying metal to the morning the premium closed."],
     list: [
       "**December 1861:** Banks suspend specie payments.",
       "**February 1862:** Legal Tender Act — United States Notes (greenbacks) authorized as legal tender.",
@@ -1867,15 +1867,15 @@ const crime1873: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster. Gold became the effective standard for the dollar’s large unit. Subsidiary silver — dimes, quarters, halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
-      "In later agrarian politics that omission became the **“Crime of 1873”**: a conspiracy to demonetize silver and enrich creditors. In the Treasury’s and many economists’ telling it was a clarification toward gold, aligned with Europe’s move after Germany’s gold shift in the early 1870s. What sits on the statute book is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
+      "On **12 February 1873**, Congress revised the Mint’s list of coins and left the standard silver dollar off the free-coinage roster, so gold became the effective standard for the dollar’s large unit while subsidiary silver — dimes, quarters, and halves — continued under regulated coinage. The statute did not abolish silver metal. It ended free coinage of the old silver dollar as a full legal peer of gold.",
+      "In later agrarian politics that omission became the **“Crime of 1873”**, told as a conspiracy to demonetize silver and enrich creditors. The Treasury, and many economists with it, called the same Act a clarification toward gold, in line with Europe after Germany’s shift in the early 1870s. What sits on the statute book is the Coinage Act of **1873** and its list. The name “crime” is the political memory that organized a generation of American fight.",
     ],
   },
   {
     heading: "Why silver was already under pressure",
     paragraphs: [
-      "World silver supply rose in the late nineteenth century — Nevada’s Comstock and other Western mines among the sources — while several European states moved toward gold. Germany’s shift after unification dumped silver onto the market. The gold–silver market ratio moved away from older mint habits. Silver’s gold price fell.",
-      "The United States had already tilted gold-friendlier in [1834](/history/america/early-us-coinage). Greenback war finance had suspended specie. By the early 1870s, officials drafting a mint revision treated the silver dollar as a coin little used in large payments and awkward beside a gold unit. Dropping free coinage of that dollar looked, to them, like housekeeping.",
+      "World silver supply rose in the late nineteenth century — Nevada’s Comstock and other Western mines among the sources — while several European states moved toward gold. After unification Germany dumped silver onto the market, the gold–silver ratio drifted from the old mint habits, and silver’s price in gold fell.",
+      "The United States had already tilted gold-friendlier in [1834](/history/america/early-us-coinage), and greenback war finance had suspended specie. By the early 1870s, officials drafting a mint revision treated the silver dollar as a coin little used in large payments and awkward beside a gold unit, so dropping free coinage of that dollar looked, to them, like housekeeping.",
       "Housekeeping in a mint statute can still reprice every farm debt. Under [bimetallism](/history/silver/bimetallism), a mint that coins either metal freely at a fixed ratio gives the cheaper one a floor. When silver could no longer be coined freely into full-weight dollars, silver producers lost that floor, and debtors lost a path to inflate the unit with cheaper metal. That is why a quiet omission became a loud crime in memory.",
       "The timing explains the quiet. In **1873** the silver in a standard dollar was still worth a little more than a dollar in gold, so almost no one brought silver to the Mint to be coined into dollars. Dropping the coin cost nothing that year. Within three years silver had fallen far enough that coining it into dollars would have paid, and the door was already shut.",
     ],
@@ -1893,7 +1893,7 @@ const crime1873: Section[] = [
     paragraphs: [
       "“Free silver” meant unlimited coinage of silver into dollars at a fixed mint ratio — famously **sixteen to one** with gold — without the limits that later compromise acts imposed. Silver producers wanted a Mint bid for their metal. Debtors wanted a larger money stock and a cheaper dollar relative to gold debts.",
       "Congress did not ignore silver entirely after 1873. The Bland–Allison Act (**1878**) and the Sherman Silver Purchase Act (**1890**) required Treasury purchases of silver and limited coinage or note issue against it. Those were compromises, not free coinage at 16:1. Markets still watched whether the Treasury could hold gold payments while it accumulated silver.",
-      "The fight was national. Mining states, Southern and Western agrarians, and urban hard-money and creditor interests mapped onto parties and factions. The greenback generation’s paper fight and the silver generation’s metal fight were cousins: both asked whether the dollar would stay scarce relative to debts.",
+      "The fight ran across the country, because mining states, Southern and Western agrarians, and urban hard-money and creditor interests mapped onto parties and factions. The greenback generation’s paper fight and the silver generation’s metal fight were cousins: both asked whether the dollar would stay scarce relative to debts.",
     ],
   },
   {
