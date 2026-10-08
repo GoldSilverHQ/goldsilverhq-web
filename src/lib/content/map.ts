@@ -388,10 +388,10 @@ export const historyClusters: Cluster[] = [
         slug: "warehouses-to-public-banks",
         title: "From warehouses to public banks",
         summary:
-          "Before public banks, paper money is a warehouse or goldsmith receipt — a claim check on deposited metal. Banking begins when that ticket pays.",
+          "In 1640 Charles I seized merchants’ bullion in the Tower because the Crown needed cash for war, and afterward London settled debts with goldsmith notes while the metal stayed put.",
         status: "ready",
         paragraphs: [
-          "Before public banks, paper money is a warehouse receipt — a claim check on deposited metal. Banking starts when that paper pays a debt without the metal leaving the vault.",
+          "In 1640 Charles I seized merchants’ bullion stored in the Tower mint because the Crown needed cash for war, and depositors learned that a sovereign can close the window. After the Restoration, goldsmith running-cash notes could pay a debt while the metal stayed in the vault.",
         ],
         related: [
           { title: "Banks & paper hub", href: "/history/banks-paper" },
@@ -542,10 +542,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "jackson-and-the-bank",
         title: "Jackson and the Bank",
-        summary: "The 1832 veto and the fight over a central bank before the Fed existed.",
+        summary:
+          "Jackson’s 1832 veto refused a new charter for the Second Bank, which held the Treasury’s cash and issued notes decades before any Federal Reserve.",
         status: "ready",
         paragraphs: [
-          "Jackson’s war on the Second Bank was a fight over who held the government’s money and who issued the country’s paper — decades before any Federal Reserve. The 1832 veto, “pet” banks, and the Panic of 1837 are the story; the Fed is a later answer to a later panic.",
+          "The Second Bank held the Treasury’s cash and issued notes the public passed, and Jackson’s 1832 veto refused to renew that privilege. Pet banks and the Panic of 1837 followed; the Federal Reserve came after a later panic.",
         ],
         related: [
           { title: "America hub", href: "/history/america" },
@@ -871,10 +872,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "bimetallism",
         title: "Bimetallism: when gold and silver shared the stage",
-        summary: "A fixed mint ratio and a market that will not stay still.",
+        summary:
+          "A mint can be told to coin gold and silver at one legal ratio, and the market can still price the two metals differently the next week.",
         status: "ready",
         paragraphs: [
-          "Bimetallism is the legal attempt to keep both metals in the same monetary system. The American silver question is the political face of the same problem.",
+          "Bimetallism kept both metals in one system at a fixed mint ratio, and when the market price of gold in silver drifted, the metal the law overpaid stayed in the till.",
         ],
         related: [
           { title: "Crime of 1873", href: "/history/america/crime-of-1873" },
@@ -896,10 +898,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "silver-thursday",
         title: "Silver Thursday / Hunt Brothers 1980",
-        summary: "A concentrated position, exchange rule changes, a March 1980 break. Facts only.",
+        summary:
+          "On 27 March 1980 silver futures broke after the Hunts’ concentrated position met higher margins and limits on new longs.",
         status: "ready",
         paragraphs: [
-          "March 1980 ended a concentrated attempt to dominate the silver market. The page stays factual: positions, rules, and the break. No stock tips.",
+          "Through 1979 and into 1980 the Hunt brothers built an enormous position in silver bullion and futures. On 27 March 1980 the price broke after margins rose and new longs were restricted.",
         ],
         related: [
           { title: "Gold–silver ratio", href: "/markets/gold-silver-ratio" },
@@ -924,10 +927,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "monetary-and-industry",
         title: "Silver: monetary history and industry",
-        summary: "Money in memory, industrial input in fact. A split — not a forecast.",
+        summary:
+          "Silver stayed money in memory — coins, bars, a hedge named with gold — while photography, electronics, and solar paste pulled ounces into factories.",
         status: "ready",
         paragraphs: [
-          "Silver’s split personality — monetary metal and industrial metal — is the last article in this chapter. Facts only; no forecasts.",
+          "A vault ounce and a paste ounce answer different questions. Silver remained money in memory while photography, then electronics, then photovoltaics took it as an industrial input.",
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
