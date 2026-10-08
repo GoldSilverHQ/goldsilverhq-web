@@ -75,6 +75,7 @@ describe("phase-1 robots and sitemap", () => {
       "/gold-silver/storage",
       "/gold-silver/spotting-fakes",
       "/gold-silver/beginner-checklist",
+      "/gold-silver/buying-online",
       "/markets",
       "/markets/official-gold-book-value",
       "/markets/central-bank-gold-reserves",
@@ -110,7 +111,7 @@ describe("phase-1 robots and sitemap", () => {
       locs,
       PHASE1_SITEMAP_PATHS.map((path) => `${CANONICAL_ORIGIN}${path}`),
     );
-    assert.equal(locs.length, 291);
+    assert.equal(locs.length, 292);
     assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>/);
     assert.match(xml, /xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/);
     assert.deepEqual(
@@ -122,6 +123,7 @@ describe("phase-1 robots and sitemap", () => {
         "/gold-silver/storage",
         "/gold-silver/spotting-fakes",
         "/gold-silver/beginner-checklist",
+        "/gold-silver/buying-online",
       ],
     );
     assert.match(xml, /\/gold-silver\/bars-vs-coins/);
@@ -129,9 +131,10 @@ describe("phase-1 robots and sitemap", () => {
     assert.match(xml, /\/gold-silver\/storage/);
     assert.match(xml, /\/gold-silver\/spotting-fakes/);
     assert.match(xml, /\/gold-silver\/beginner-checklist/);
+    assert.match(xml, /\/gold-silver\/buying-online/);
     assert.doesNotMatch(
       xml,
-      /\/gold-silver\/(?!bars-vs-coins|premium-over-spot|storage|spotting-fakes|beginner-checklist)|information-not-advice|comex|physical-by-country|\/maps/,
+      /\/gold-silver\/(?!bars-vs-coins|premium-over-spot|storage|spotting-fakes|beginner-checklist|buying-online)|information-not-advice|comex|physical-by-country|\/maps/,
     );
     assert.ok(!PHASE1_SITEMAP_PATHS.includes("/maps" as (typeof PHASE1_SITEMAP_PATHS)[number]));
   });
