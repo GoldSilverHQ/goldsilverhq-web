@@ -622,6 +622,60 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /\/markets\/china|china-gold/.test(path)));
   });
 
+  it("adds a 2026 Treasuries-and-gold subsection inside the China block", () => {
+    const body = getBody("markets", "central-bank-gold-reserves");
+    assert.ok(body);
+
+    const china = body.find((s) => s.heading.startsWith("China:"));
+    const treasuries = body.find((s) => s.heading.startsWith("Treasuries and gold"));
+    const poland = body.find((s) => s.heading.startsWith("Poland"));
+    assert.ok(china && treasuries && poland);
+    assert.ok(body.indexOf(china) < body.indexOf(treasuries));
+    assert.ok(body.indexOf(treasuries) < body.indexOf(poland));
+    assert.equal(treasuries.heading, "Treasuries and gold on China’s reserve book, 2026");
+    assert.ok(treasuries.table);
+
+    const text = [
+      treasuries.heading,
+      ...treasuries.paragraphs,
+      treasuries.table.caption,
+      ...treasuries.table.headers,
+      ...treasuries.table.rows.flat(),
+    ].join("\n");
+
+    assert.match(text, /\$684\.4 billion/);
+    assert.match(text, /end of \*\*December 2025\*\*/);
+    assert.match(text, /\$618\.0 billion/);
+    assert.match(text, /end of \*\*July 2026\*\*/);
+    assert.match(text, /\$66\.4 billion/);
+    assert.match(text, /about \*\*2,306 tonnes\*\*/);
+    assert.match(text, /about \*\*2,410 tonnes\*\*/);
+    assert.match(text, /about \*\*\+104 tonnes\*\*/);
+    assert.match(text, /end of \*\*September 2026\*\*/);
+    assert.match(text, /country where they are held in custody/);
+    assert.match(text, /Belgium or Luxembourg/);
+    assert.match(text, /not counted as China/);
+    assert.match(text, /fair market value/);
+    assert.match(text, /4\.18 percent/);
+    assert.match(text, /4\.75 percent/);
+    assert.match(text, /rather than sales/);
+    assert.match(text, /Treasuries through \*\*July 2026\*\*/);
+    assert.match(text, /gold through \*\*September 2026\*\*/);
+    assert.match(
+      text,
+      /https:\/\/ticdata\.treasury\.gov\/resource-center\/data-chart-center\/tic\/Documents\/slt_table5\.txt/,
+    );
+    assert.match(text, /https:\/\/home\.treasury\.gov\/news\/press-releases\/sb0631/);
+    assert.doesNotMatch(text, /dumped|de-dollar|forecast|buy gold|sell gold|purchase price|dollar spend/i);
+    assert.doesNotMatch(text, /\[official gold book value\]|\[markets\]\(\/markets\)/);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/central-bank-gold-reserves/);
+    assert.doesNotMatch(sitemapSrc, /china-treasur|reserve-book-2026/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
+    assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /china-treasur|reserve-book/.test(path)));
+  });
+
   it("adds dated gold-as-share prints without inventing the X-hook percentages", () => {
     const body = getBody("markets", "central-bank-gold-reserves");
     assert.ok(body);

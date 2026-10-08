@@ -2716,6 +2716,32 @@ const centralBankGoldReserves: Section[] = [
     ],
   },
   {
+    heading: "Treasuries and gold on China’s reserve book, 2026",
+    paragraphs: [
+      "Mainland China’s reported gold, in the table above, is one line. U.S. Treasury holdings are another, and the two prints do not end on the same day. [TIC Table 5](https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt), Major Foreign Holders of Treasury Securities, prints **China, Mainland** at **$684.4 billion** at the end of **December 2025** and **$618.0 billion** at the end of **July 2026**. The difference of those two cells is **$66.4 billion**. The file was posted with the [16 September 2026](https://home.treasury.gov/news/press-releases/sb0631) TIC release. The gold tonnes are the ones already named above: about **2,306 tonnes** at the end of **2025**, and about **2,410 tonnes** at the end of **September 2026**, about **+104 tonnes** from the end-2025 line.",
+      "TIC attributes holdings by the country where they are held in custody. The note under Table 5 says securities held in overseas custody accounts may not be attributed to the actual owners. Chinese-owned bonds held through a custodian in Belgium or Luxembourg, for example, are not counted as China. The same cells are fair market value — the market price on the last business day of the month, as [TIC Form SLT](https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/sltinstr.pdf) instructs. On the Treasury daily par yield curve the 10-year was **4.18 percent** on [31 December 2025](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2025) and **4.75 percent** on [31 July 2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026). With yields higher, part of the **$66.4 billion** difference is a lower bond price, rather than sales. The two series cover different end dates: Treasuries through **July 2026**, gold through **September 2026**.",
+    ],
+    table: {
+      caption:
+        "Mainland China on two official series. Treasury cells are TIC Table 5, billions of dollars, fair market value, from the 16 September 2026 release. Gold tonnes are the end-2025 and end-September 2026 figures in the table above.",
+      headers: ["Line", "End-2025", "Later 2026 print", "Difference of the prints"],
+      rows: [
+        [
+          "Treasuries, China, Mainland",
+          "**$684.4 billion**",
+          "**$618.0 billion** (end-July)",
+          "**−$66.4 billion**",
+        ],
+        [
+          "Reported official gold",
+          "**2,306 tonnes**",
+          "**about 2,410 tonnes** (end-September)",
+          "**about +104 tonnes**",
+        ],
+      ],
+    },
+  },
+  {
     heading: "Poland: from 103 tonnes to 648",
     paragraphs: [
       "Narodowy Bank Polski (NBP) has been Europe’s most visible gold buyer of the 2020s, and its public statements make the build-up easy to follow.",
