@@ -49,6 +49,22 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "france-traded-dollars-for-gold",
+    title: "When France Traded Its Dollars for Gold",
+    summary:
+      "On 4 February 1965 Charles de Gaulle said gold has no nationality. France was already turning dollar reserves into American gold at the official price.",
+    date: "2026-10-08",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Nixon shock 1971", href: "/history/20th-century/bretton-woods-nixon-1971" },
+    ],
+    relatedArticlePaths: ["/history/20th-century/bretton-woods-nixon-1971"],
+    xArticleUrl: "https://x.com/i/article/2108101796191236096",
+    sourceXId: "2108101796191236096",
+  },
+  {
     slug: "idaho-city-1862-gold-dust",
     title:
       "The Idaho Boomtown That Ran on Gold Dust — How a Gold Camp Grew Bigger Than Portland in a Year",

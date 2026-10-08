@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-07T18:40:00.000Z",
+  "updatedAt": "2026-10-08T18:40:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2108101796191236096",
+      "postId": "2108190027624616433",
+      "title": "When France Traded Its Dollars for Gold",
+      "status": "mirrored",
+      "slug": "france-traded-dollars-for-gold",
+      "sitePath": "/blog/france-traded-dollars-for-gold",
+      "xArticleUrl": "https://x.com/i/article/2108101796191236096",
+      "publishedAt": "2026-10-08T13:37:25.000Z",
+      "mirroredAt": "2026-10-08T18:40:00.000Z",
+      "inlineMediaCount": 5,
+      "inlineNote": "Five MEDIA entities in article order: de Gaulle at the microphones, Giscard at Schiphol, the 1963–1966 routes map, the Banque de France facade, Nixon addressing Congress on 9 September 1971. Two TWEET embeds are not MEDIA and are not on the page: 2087464108341768566 (an August 12 on-this-day card) and 2107812434639491539 (a separate China chart post)."
+    },
     {
       "articleId": "2107770779764961280",
       "postId": "2107888058565529914",

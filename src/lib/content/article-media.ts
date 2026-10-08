@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/france-traded-dollars-for-gold",
+    src: "/images/blog/france-traded-dollars-for-gold.jpg",
+    ogSrc: "/og/cards/blog-france-traded-dollars-for-gold.jpg",
+    alt: "Title card reading When France Traded Its Dollars for Gold, with Charles de Gaulle at a podium and stacked gold bars.",
+    caption:
+      "4 February 1965 — Charles de Gaulle tells the press in Paris that gold has no nationality.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+  },
+  {
     path: "/blog/idaho-city-1862-gold-dust",
     src: "/images/blog/idaho-city-1862-gold-dust.jpg",
     ogSrc: "/og/cards/blog-idaho-city-1862-gold-dust.jpg",
