@@ -5364,7 +5364,162 @@ const goldFuturesSameDay1974: Section[] = [
   },
 ];
 
+const franceTradedDollarsForGold: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **4 February 1965**, Charles de Gaulle faced the press at the Élysée Palace in Paris and said out loud what Paris had been hinting for years. World trade, he argued, should rest on \"an unquestionable monetary basis\" that \"does not bear the stamp of any country in particular.\" There was only one candidate. Gold, he said, \"has no nationality.\"",
+      "The sentence was spoken in a press room. The practice it described was already underway: France was turning dollar reserves into American gold, and it was moving a large share of that gold out of foreign vaults and back to Paris.",
+    ],
+  },
+  {
+    heading: "Which country's stamp",
+    paragraphs: [
+      "Everyone in the room knew which country's stamp he meant. Since the war, the dollar had been the one currency tied to gold. A foreign central bank could hand dollars to the U.S. Treasury and receive gold at **$35** an ounce. That exchange was called the \"gold window.\" Most banks never used it. They kept their dollars as reserves, which meant America could pay for imports, bases abroad, and investment with money the rest of the world simply held on to.",
+      "A reserve, in that arrangement, was a stack of dollars. Those dollars were a claim on Treasury gold at a price written in advance, **$35** an ounce. Presenting the claim and taking the metal was using the window. Leaving the dollars on the books left the claim on paper and left the metal in the United States. De Gaulle's line named the metal. The photograph beside the speech is de Gaulle at the microphones in Cologne, in the early 1960s.",
+    ],
+    figure: {
+      src: "/images/blog/france-traded-dollars-for-gold-de-gaulle.jpg",
+      alt: "Charles de Gaulle in a dark overcoat speaking into a cluster of microphones, with a crowd behind him.",
+      caption:
+        "Charles de Gaulle at the microphones in Cologne, early 1960s. Anefo / Nationaal Archief (CC0).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+      width: 1053,
+      height: 1053,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A deficit without tears",
+    paragraphs: [
+      "De Gaulle's favorite economist, Jacques Rueff, had a name for the habit of holding the dollars. He called it \"a deficit without tears.\" His finance minister, Valéry Giscard d'Estaing, is usually credited with the more famous phrase: the dollar gave America an \"exorbitant privilege,\" the rare luxury of paying the world in money it printed itself.",
+      "A deficit without tears is Rueff's name for spending that other countries settle by holding the paper, so the metal does not have to move. An exorbitant privilege, in the phrase usually credited to Giscard, is the same arrangement from the side of the country that issues the paper: it can pay abroad in money of its own making. The portrait with that argument is Giscard on **20 July 1964**, arriving at Schiphol airport near Amsterdam as France's finance minister.",
+    ],
+    figure: {
+      src: "/images/blog/france-traded-dollars-for-gold-giscard.jpg",
+      alt: "Valéry Giscard d'Estaing in a dark suit and glasses, stepping from an aircraft doorway onto airstairs.",
+      caption:
+        "Valéry Giscard d'Estaing, France's finance minister, arriving at Schiphol airport near Amsterdam, July 20, 1964. Anefo / Nationaal Archief (CC0).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+      width: 1200,
+      height: 979,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The January program",
+    paragraphs: [
+      "France had not waited for the speech. In early **January 1965** Paris announced it would turn **$150 million** of its dollar reserves into American gold, the first half of a **$300 million** program. After that, it promised to convert every month's surplus. U.S. figures show the Treasury sold France **$884 million** in gold in **1965** and another **$601 million** in **1966**. At **$35** an ounce, that comes to close to **790 tonnes**, then about **530**.",
+      "The January announcement is the public start: **$150 million** first, inside a **$300 million** plan, and then each month's surplus converted. The Treasury figures are the sales that followed, **$884 million** in 1965 and **$601 million** in 1966. The tonne counts are that same pair of sales restated at the official **$35**: close to 790 tonnes, then about 530.",
+    ],
+  },
+  {
+    heading: "Vide-Gousset",
+    paragraphs: [
+      "Buying the gold was only half the job. Much of France's gold sat in New York, in the vault of the Federal Reserve Bank, and some in London. In **September 1963** the Banque de France had quietly begun bringing it home, under a code name with a wink: Vide-Gousset, an old French word for a pickpocket. The bars crossed the Atlantic on French Line ocean liners to Le Havre, and later on Air France flights. By a count later published by a former senior Banque de France official, about **3,300 tonnes** came home from New York and London between **1963 and 1966**, in **44 sailings** and **129 flights**.",
+      "Vide-Gousset began in September 1963, before the Élysée speech. New York and London are the vaults the gold was leaving. Le Havre is the port at the end of the liner route. The flights came later. The count of about 3,300 tonnes, 44 sailings, and 129 flights is the later published count, from a former senior Banque de France official. The map draws those routes: by liner from New York to Le Havre, by air from New York and London to Paris.",
+    ],
+    figure: {
+      src: "/images/blog/france-traded-dollars-for-gold-gold-routes.jpg",
+      alt: "Map of the North Atlantic with ship and air routes from New York to Le Havre and from New York and London to Paris, marked 1963 to 1966.",
+      caption:
+        "How the gold came home, 1963–1966: by liner from New York to Le Havre, by air from New York and London to Paris. Routes schematic. Map: Natural Earth data (public domain), modern borders.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+      width: 2000,
+      height: 1025,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The cruiser that stayed home",
+    paragraphs: [
+      "Later retellings put the French Navy on the job. The record Giscard later gave is plainer. De Gaulle, impatient with the slow pace, suggested sending the cruiser Colbert to New York to collect the gold. Giscard talked him out of it. The gold kept coming by liner and plane.",
+      "Colbert is the ship in that recollection. The suggestion was made. Giscard talked de Gaulle out of sending it. The bars continued on the liners and the flights already counted. The building in the photograph is the Banque de France on rue Croix-des-Petits-Champs in Paris. The bank's main gold vault, La Souterraine, lies deep beneath its headquarters.",
+    ],
+    figure: {
+      src: "/images/blog/france-traded-dollars-for-gold-banque-de-france.jpg",
+      alt: "The Banque de France on rue Croix-des-Petits-Champs, a pale stone facade with columns and the bank's name across the frieze.",
+      caption:
+        "The Banque de France on rue Croix-des-Petits-Champs in Paris. The bank's main gold vault, La Souterraine, lies deep beneath its headquarters. Photo: Boubloub, Wikimedia Commons (CC0).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+      width: 2000,
+      height: 1673,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Leaving the London Gold Pool",
+    paragraphs: [
+      "France pulled back in another place too. Since **1961**, eight central banks, France among them, had run the London Gold Pool, a shared stockpile of gold they sold into the London market to keep the price there close to the official **$35**. On **11 June 1967**, the Banque de France quietly stopped contributing. The public found out only in November, days after Britain devalued the pound. Buyers stampeded, and the pool shut down in **March 1968**. That same year, after the May unrest, France itself had to sell gold to defend the franc.",
+      "The pool was a shared stockpile. Eight central banks sold gold in London so the market price stayed close to the official price. France's quiet stop is 11 June 1967. The public date is November, days after the pound was devalued. The shutdown is March 1968. After the May unrest that same year, France sold gold to defend the franc. The size of that sale is not given.",
+    ],
+  },
+  {
+    heading: "The summer the dollars piled up",
+    paragraphs: [
+      "The gold window stayed open, but Washington pressed central banks not to use it. By the summer of **1971**, unwanted dollars were piling up in European central banks. Late on Friday, **6 August**, the U.S. announced a **$191 million** gold sale to France, gold Paris needed to repay the International Monetary Fund. Days later, Britain asked for protection on part of its own dollar reserves. Accounts of the size differ, but the message was clear.",
+      "The window was still officially open, and Washington was asking central banks to leave it unused. The 6 August sale is a named one: **$191 million** in gold for France, to repay the International Monetary Fund. Britain's request, days later, was for protection on part of its dollar reserves. Accounts of that size differ, so no single figure is settled here.",
+    ],
+  },
+  {
+    heading: "The Sunday broadcast",
+    paragraphs: [
+      "Richard Nixon took his advisers to Camp David. On Sunday evening, **15 August 1971**, he went on television: \"I have directed Secretary Connally to suspend temporarily the convertibility of the dollar into gold.\" The window never reopened.",
+      "Camp David is where the advisers went. Connally is the secretary named in the sentence. Temporarily is the word in the broadcast. The window never reopened. That Sunday broadcast is the [Nixon shock](/history/20th-century/bretton-woods-nixon-1971). Three and a half weeks later, on **9 September 1971**, Nixon took the new economic program to Congress. Vice President Spiro Agnew sits behind him in the photograph.",
+    ],
+    figure: {
+      src: "/images/blog/france-traded-dollars-for-gold-nixon-congress.jpg",
+      alt: "Richard Nixon at a podium addressing Congress, with Vice President Spiro Agnew seated behind him.",
+      caption:
+        "Nixon takes his new economic program to Congress on September 9, 1971, three and a half weeks after closing the gold window. Vice President Spiro Agnew sits behind him. United Press International, U.S. House of Representatives collection (public domain).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on France trading its dollars for gold.",
+      width: 804,
+      height: 804,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A line in a monthly release",
+    paragraphs: [
+      "Fifty-five years on, a reserve holder is again trading paper claims for metal, without a press conference. U.S. Treasury data show mainland China's holdings of Treasuries, the bonds the U.S. government sells to borrow, fell from **$684.4 billion** at the end of **2025** to **$618.0 billion** in **July 2026**. In the first nine months of **2026**, the People's Bank of China reported adding **3.32 million ounces** of gold, about **103 tonnes**, its **23rd** straight month of reported additions.",
+      "The fifty-five years run from the 1971 closing to this comparison. Treasuries are the bonds in the first pair of figures: **$684.4 billion** at the end of 2025, **$618.0 billion** in July 2026. The gold line is the People's Bank of China's report for the first nine months of 2026: **3.32 million ounces**, about **103 tonnes**, a 23rd straight month. The two lines sit side by side as paper claims and metal, published in a data release, with no press conference attached.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: [
+      "The speech, the shipments, the pool, the Sunday broadcast, and the later reserve figures.",
+    ],
+    list: [
+      "**4 February 1965.** De Gaulle at the Élysée. Gold, he said, \"has no nationality.\"",
+      "**Early January 1965.** Paris announces that **$150 million** of dollar reserves will be turned into American gold, the first half of a **$300 million** program, and that each month's surplus will be converted after that.",
+      "**1965 and 1966.** The Treasury sells France **$884 million** in gold, then **$601 million**. At **$35** an ounce, that is close to **790 tonnes**, then about **530**.",
+      "**September 1963 through 1966.** Vide-Gousset. About **3,300 tonnes** come home from New York and London, in **44 sailings** and **129 flights**.",
+      "**11 June 1967.** The Banque de France stops contributing to the London Gold Pool. The public learns in November, days after Britain devalues the pound.",
+      "**March 1968.** The pool shuts down. After the May unrest that year, France sells gold to defend the franc.",
+      "**6 August 1971.** The United States announces a **$191 million** gold sale to France, gold Paris needed to repay the International Monetary Fund. Days later Britain asks for protection on part of its dollar reserves. Accounts of that size differ.",
+      "**15 August 1971.** Nixon directs Secretary Connally to suspend temporarily the convertibility of the dollar into gold. The window never reopens.",
+      "**9 September 1971.** Nixon takes the program to Congress. Vice President Spiro Agnew sits behind him.",
+      "**End of 2025 to July 2026.** Mainland China's Treasury holdings fall from **$684.4 billion** to **$618.0 billion**. In the first nine months of 2026 the People's Bank of China reports adding **3.32 million ounces** of gold, about **103 tonnes**.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "De Gaulle needed ocean liners, cargo planes, and a code name. Today the same trade turns up as a line in a monthly data release.",
+      "The liners, the flights, and Vide-Gousset are the method of the 1960s. The monthly data release is the later form of the same trade: one country's Treasury holdings, and a central bank's reported gold, printed as figures.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2108101796191236096).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/france-traded-dollars-for-gold": franceTradedDollarsForGold,
   "blog/idaho-city-1862-gold-dust": idahoCity1862GoldDust,
   "blog/coinage-act-1792-section-19": coinageAct1792Section19,
   "blog/gold-futures-same-day-1974": goldFuturesSameDay1974,
