@@ -1067,10 +1067,10 @@ export const practicePages: Episode[] = [
     slug: "buying-online",
     title: "Buying gold and silver online",
     summary:
-      "A screen quote still has to become a parcel: who the dealer is, how payment settles, how it ships, and what the invoice names.",
+      "A screen quote still has to become a parcel: the dealer, a price locked at the order, payment, shipping, and an invoice. A parcel that does not arrive, or arrives light, is part of that logistics.",
     status: "ready",
     paragraphs: [
-      "Online buying is logistics: identity of the dealer, payment, shipping, and what happens if a parcel never arrives. Neutral watch-fors, not a vendor ranking.",
+      "Online buying is logistics: who the dealer is, whether the payment is final, how the parcel moves, what the invoice names, and what happens if the box never arrives or arrives light. The price on the order stays the price of that order.",
     ],
     related: [
       { title: "Gold & Silver in Practice", href: "/gold-silver" },

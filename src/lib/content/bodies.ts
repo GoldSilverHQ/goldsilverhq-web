@@ -1026,16 +1026,33 @@ const buyingOnline: Section[] = [
     ],
   },
   {
+    heading: "The price is locked at the order",
+    paragraphs: [
+      "The number on the order is the price of that order. A later screen print does not reopen it. Dealers commonly buy the metal, or hedge the sale, at acceptance, so the book is committed at that print.",
+      "Cancelling after the spot price has moved can leave the buyer liable for the difference. Dealer terms often call this a market-loss clause. It is common in those terms and conditions, and it applies whether the screen has since fallen or risen. It is not a forecast of the next print.",
+      "Payment deadlines are typically short. How long the window lasts is in that dealer’s terms, and it differs by desk and by country. A late transfer can still trigger the market-loss clause.",
+    ],
+  },
+  {
     heading: "Shipping, insurance, and the empty box",
     paragraphs: [
       "Shipping is the stretch where the object has left the desk and has not arrived. Insured carriage, a signature on delivery, and an address under your control are the ordinary facts. A box that advertises bullion is also a sign. Discreet packaging is a habit of the trade for that reason.",
-      "A carton arrives light, or resealed. A tracking number ends at a depot, a neighbour, or a signature that is not yours. Insurance is a contract with limits and notice windows. A waived signature is a different delivery from the one the invoice described.",
+      "An empty box is a tracking line that ends without an object that matches the invoice. Insurance pays only the loss its contract describes.",
+    ],
+  },
+  {
+    heading: "When a parcel does not arrive, or arrives light",
+    paragraphs: [
+      "Until handover, transit risk generally sits with the seller: loss, theft, or a box that never arrives. Handover is delivery to the buyer, often against a signature. A signature the buyer did not make is a different handover, and the tracking line is only the carrier’s scan.",
+      "Terms vary by dealer and by country. The dealer’s terms and conditions say when risk moves — on dispatch, on a carrier scan, or only on signature. Read them before the metal is on a van.",
+      "Reporting deadlines exist, and they are short. Carrier rules, the insurer, and the dealer’s terms each set a notice window for a missing parcel, a light carton, or obvious damage. The number of days is written there.",
+      "Film or photograph the unboxing before the contents are handled, including the outer labels and the seal. Keep the packaging, the labels, and the inner wrapping. Compare the weight and the dimensions with the invoice.",
     ],
   },
   {
     heading: "What the invoice names",
     paragraphs: [
-      "Product name, weight, fineness, and serials when the object carries them are the ordinary fields. The premium — the gap between the screen ounce and the line on the invoice — belongs on the same paper. Without those facts a later dispute is an argument about a story.",
+      "Product name, weight, fineness, and serials when the object carries them are the ordinary fields. The premium — the gap between the screen ounce and the line on the invoice — belongs on the same paper. That gap is the [premium over spot](/gold-silver/premium-over-spot): form and liquidity on a named object. Without those facts a later dispute is an argument about a story.",
       "A weight and a fineness without a product name is a paper ounce with adjectives. A product name without a weight is a stamp without a measure. The invoice does not make the metal safer. It makes the claim checkable when the box is light, the stamp looks wrong, or the desk and the carrier disagree about what left the building.",
     ],
   },

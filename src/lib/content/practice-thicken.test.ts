@@ -554,8 +554,13 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
     assert.ok(body, "missing body for gold-silver/buying-online");
     const text = bodyText(body);
     const words = wordCount(text);
-    assert.ok(words >= 500 && words <= 1200, `buying-online: expected 500–1200 words, got ${words}`);
-    assert.ok(body.filter((s) => s.heading).length >= 5, "buying-online: expected ≥5 headed sections");
+    const leadWords = wordCount(getPractice("buying-online")!.paragraphs.join("\n"));
+    assert.ok(words >= 800 && words <= 1200, `buying-online: expected 800–1200 body words, got ${words}`);
+    assert.ok(
+      words + leadWords >= 900 && words + leadWords <= 1100,
+      `buying-online: expected 900–1100 reader words (body + map paragraph), got ${words + leadWords}`,
+    );
+    assert.ok(body.filter((s) => s.heading).length >= 7, "buying-online: expected ≥7 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
     assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
@@ -568,16 +573,28 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
     const text = bodyText(getBody("gold-silver", "buying-online")!);
     assert.match(text, /logistics/);
     assert.match(text, /without relying only on their own FAQ/);
+    assert.match(text, /The price is locked at the order/);
+    assert.match(text, /market-loss clause/);
+    assert.match(text, /Payment deadlines are typically short/);
     assert.match(text, /Shipping, insurance, and the empty box/);
+    assert.match(text, /When a parcel does not arrive, or arrives light/);
+    assert.match(text, /transit risk generally sits with the seller/);
+    assert.match(text, /Terms vary by dealer and by country/);
+    assert.match(text, /terms and conditions/);
+    assert.match(text, /Reporting deadlines exist, and they are short/);
+    assert.match(text, /Film or photograph the unboxing/);
+    assert.match(text, /Keep the packaging, the labels/);
+    assert.match(text, /Compare the weight and the dimensions with the invoice/);
     assert.match(text, /“We store it for you”/);
     assert.match(text, /warning/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
+    assert.match(text, /\[premium over spot\]\(\/gold-silver\/premium-over-spot\)/);
     assert.match(text, /\[spotting fakes\]\(\/gold-silver\/spotting-fakes\)/);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
-    assert.doesNotMatch(text, /best dealer|vendor ranking|we recommend/i);
-    assert.doesNotMatch(text, /\]\(\/gold-silver\/(beginner-checklist|bars-vs-coins|premium-over-spot)\)/);
+    assert.doesNotMatch(text, /best dealer|vendor ranking|we recommend|Neutral watch-fors/i);
+    assert.doesNotMatch(text, /\]\(\/gold-silver\/(beginner-checklist|bars-vs-coins)\)/);
     assert.doesNotMatch(text, /\]\(\/sound-money/);
   });
 
@@ -591,6 +608,10 @@ describe("practice / buying-online thicken (no new URLs, spoke off sitemap)", ()
     assert.equal(page.related.length, 2);
     assert.equal(page.slug, "buying-online");
     assert.equal(page.title, "Buying gold and silver online");
+    assert.match(page.summary, /price locked at the order/);
+    assert.match(page.summary, /does not arrive, or arrives light/);
+    assert.match(page.paragraphs.join("\n"), /The price on the order stays the price of that order/);
+    assert.doesNotMatch(page.paragraphs.join("\n"), /Neutral watch-fors|vendor ranking/);
 
     const mapSrc = readFileSync(new URL("./map.ts", import.meta.url), "utf8");
     const buyingBlock = mapSrc.match(/slug:\s*"buying-online"[\s\S]*?\n  \},\n\];/)?.[0];
