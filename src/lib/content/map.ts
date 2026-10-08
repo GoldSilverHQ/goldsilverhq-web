@@ -350,10 +350,10 @@ export const historyClusters: Cluster[] = [
         slug: "solidus-continuity",
         title: "Constantine’s solidus: gold that kept its weight",
         summary:
-          "After silver had been washed thin, Constantine’s mint settled on a gold coin of fixed weight. It outlasted the western empire as Byzantium’s nomisma.",
+          "In the early fourth century Constantine’s mints settled on a gold coin of about 4.5 grams, and that weight outlasted the western empire as Byzantium’s nomisma.",
         status: "ready",
         paragraphs: [
-          "In the early fourth century Constantine settled on a gold coin of tightly held weight and fineness. That solidus outlasted the western empire and lived on in Constantinople as the nomisma.",
+          "Constantine’s solidus, about 1/72 of a Roman pound, became the gold piece strangers would still trust after silver had been washed thin. It lived on in Constantinople as the nomisma because the weight stayed put.",
         ],
         related: [
           { title: "Rome: denarius and aureus", href: "/history/ancient/rome-denarius-aureus" },
@@ -615,10 +615,10 @@ export const historyClusters: Cluster[] = [
         slug: "road-back-gold",
         title: "The road back toward the gold standard",
         summary:
-          "On 1 January 1879 greenbacks met gold at par again. The Gold Standard Act of 1900 wrote the dollar as 25.8 grains of gold. 1907 opens the next chapter.",
+          "On the morning of 1 January 1879 a greenback could be paid in gold at face again, and the Gold Standard Act of 1900 wrote the dollar as 25.8 grains.",
         status: "ready",
         paragraphs: [
-          "On the morning of 1 January 1879, a United States Note presented at a Treasury window could again be paid in gold at face. The Gold Standard Act of 1900 later defined the dollar in gold. Between those dates sat silver-purchase strain, Bryan’s campaign, and the reserve arithmetic that made a gold statute pass.",
+          "On 1 January 1879 paper and gold met at par, twenty-one years after the Union had flooded the country with legal-tender notes. Silver purchases, the panic of 1893, and Bryan’s 1896 campaign tested the reserve before the 1900 statute named the dollar in gold.",
         ],
         related: [
           { title: "Greenbacks and the Civil War", href: "/history/america/greenbacks-civil-war" },
@@ -654,10 +654,10 @@ export const historyClusters: Cluster[] = [
         slug: "panic-1907-fed",
         title: "Panic of 1907 and the birth of the Fed",
         summary:
-          "The 1907 bankers’ panic, J. P. Morgan’s rescue, and why the United States created the Federal Reserve in 1913.",
+          "On 22 October 1907 the Knickerbocker Trust ran out of cash on Fifth Avenue, and Congress created the Federal Reserve in 1913 because no public bank had been there to lend.",
         status: "ready",
         paragraphs: [
-          "The Panic of 1907 was a liquidity crisis centered on New York trust companies. Private bankers, led by J. Pierpont Morgan’s group, organized emergency support when no public central bank existed. The Federal Reserve did not cause 1907. Congress created the Fed afterward, in 1913, in part because that panic showed how thin the country’s crisis plumbing was.",
+          "On 22 October 1907 depositors lined up at the Knickerbocker Trust until the till failed, call money spiked, and the Exchange nearly shut. Morgan’s group improvised a last resort because no public central bank existed, and Congress created the Fed in 1913.",
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
@@ -711,10 +711,10 @@ export const historyClusters: Cluster[] = [
         slug: "weimar-1923",
         title: "Weimar hyperinflation (1923)",
         summary:
-          "In 1923 the German paper mark died as money — prices rose by the hour — until the Rentenmark of mid-November restored a usable unit.",
+          "In the autumn of 1923 a German mark bought less by the hour than it had that morning, until the Rentenmark of mid-November scaled the paper by a trillion.",
         status: "ready",
         paragraphs: [
-          "In autumn 1923 a German mark bought less by the hour than it had that morning. War finance, reparations, a Reichsbank that created marks against Treasury bills, and the Ruhr occupation drove the spiral. Mid-November the Rentenmark stopped it: one trillion paper marks equaled one Rentenmark.",
+          "In the autumn of 1923 wages paid at noon were spent before supper, and a dollar that had been about 4.2 marks before the war was quoted in trillions of paper marks. The Rentenmark stopped the spiral in mid-November, at one trillion paper marks to one.",
         ],
         related: [
           { title: "Inflation and purchasing power", href: "/sound-money/inflation-purchasing-power" },
@@ -770,10 +770,10 @@ export const historyClusters: Cluster[] = [
         slug: "bretton-woods-nixon-1971",
         title: "Nixon shock 1971: the gold window closes",
         summary:
-          "On 15 August 1971 — the Nixon shock — the United States suspended dollar-to-gold convertibility for foreign official holders and closed the Bretton Woods gold window.",
+          "On Sunday evening, 15 August 1971, Nixon told the country that foreign governments could no longer turn dollars into gold at $35, and the window stayed shut.",
         status: "ready",
         paragraphs: [
-          "On Sunday 15 August 1971 President Nixon suspended the dollar’s convertibility into gold for foreign treasuries and central banks. That closed the last official gold window in the postwar system. Official dollar claims had outgrown the U.S. gold stock at $35 an ounce for years; the Camp David weekend made the break public.",
+          "On 15 August 1971 the United States suspended dollar-to-gold convertibility for foreign official holders. Official claims had already outgrown the gold that could pay them at $35 an ounce, and by 1973 the major currencies were floating.",
         ],
         related: [
           { title: "Classical gold standard’s wartime end", href: "/history/20th-century/classical-gold-standard-end" },
@@ -825,10 +825,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "potosi",
         title: "Potosí — the silver mountain",
-        summary: "Cerro Rico, the Manila galleon, and a flood of silver into Eurasia.",
+        summary:
+          "From the 1540s Cerro Rico poured silver into Spanish fleets and, by the Manila galleon, into Chinese payments.",
         status: "ready",
         paragraphs: [
-          "Potosí flooded Eurasia with silver. For today’s country-by-country production and reserves picture, open the world map — same metal story, present geography.",
+          "From the 1540s the mountain above Potosí fed a mint, a fleet, and European payments, and the Manila galleon carried the same silver to China, where it settled trade.",
         ],
         related: [
           { title: "Piece of eight", href: "/history/silver/piece-of-eight" },
@@ -849,10 +850,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "piece-of-eight",
         title: "Piece of eight — first global currency",
-        summary: "The Spanish dollar as a coin that circulated from the Americas to East Asia.",
+        summary:
+          "For more than two centuries merchants priced cargo in the Spanish eight-real piece, and the young United States named its dollar after a coin Americans already carried.",
         status: "ready",
         paragraphs: [
-          "The piece of eight was not a metaphor. It was a coin that circulated from the Americas to East Asia.",
+          "The piece of eight, about twenty-seven grams of silver, settled trade from the Americas to East Asia, and much of the metal came from Potosí. In 1792 the United States wrote a dollar close to that weight.",
         ],
         related: [
           { title: "Potosí", href: "/history/silver/potosi" },
