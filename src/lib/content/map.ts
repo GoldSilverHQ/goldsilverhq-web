@@ -262,10 +262,10 @@ export const historyClusters: Cluster[] = [
         slug: "why-markets-chose-gold-silver",
         title: "Why markets chose gold and silver",
         summary:
-          "Markets selected gold and silver for trade — durability, divisibility, scarcity and homogeneity, recognizability and portability — not by decree. Coinage is a later stamp.",
+          "Traders settled large debts in silver by weight long before anyone struck a coin, because the metal survived what cattle, grain, and shells could not.",
         status: "ready",
         paragraphs: [
-          "Before states stamped coins, traders already settled in gold and silver. The selection is a trade result — durability, divisibility, scarcity and homogeneity, recognizability and portability — not a decree that invented money from nothing. Coinage is a later technology for verifying metal. The metal came first. The stamp came second.",
+          "Before states stamped coins, traders already settled in gold and silver by weight. The selection was a trade result, not a decree, and coinage came later as a cheaper way to check the metal. The metal came first. The stamp came second.",
         ],
         related: [
           { title: "Ancient money", href: "/history/ancient" },
@@ -283,10 +283,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "lydia-first-coins",
         title: "Lydia and the first coins",
-        summary: "A natural gold–silver mix (electrum), a royal stamp, and a cheaper way to check metal — not the invention of monetary gold and silver.",
+        summary:
+          "In Lydia, in the seventh and sixth centuries BCE, a punch on electrum let a buyer trust a king’s mark instead of arguing over every grain at the scale.",
         status: "ready",
         paragraphs: [
-          "Lydia is the conventional starting point for struck coinage. The stamp reduced the cost of verifying metal. That is the invention, not the metal itself.",
+          "Lydia is the conventional starting point for struck coinage because a stamp cut the cost of checking electrum. The ore was already money. The mark was the new thing.",
         ],
         related: [
           { title: "Why markets chose gold and silver", href: "/history/ancient/why-markets-chose-gold-silver" },
@@ -521,10 +522,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "early-us-coinage",
         title: "Early U.S. coinage / bimetallism",
-        summary: "1792 wrote gold and silver into law at a fixed official exchange (the mint ratio). When world prices drifted, the cheaper metal at the mint stayed.",
+        summary:
+          "On 2 April 1792 Congress fixed gold and silver at fifteen to one, and the world price, not the statute, decided which metal stayed in the till.",
         status: "ready",
         paragraphs: [
-          "The early United States legally recognized both gold and silver at a fixed mint ratio. When world metal prices drifted, the cheaper metal at the mint stayed in the till and the other left — the practical face of bimetallism.",
+          "On 2 April 1792 Congress recognized both gold and silver at fifteen to one. When world prices drifted, the metal the Mint overvalued stayed in the till and the other left.",
         ],
         related: [
           { title: "Bimetallism", href: "/history/silver/bimetallism" },
@@ -564,10 +566,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "greenbacks-civil-war",
         title: "Greenbacks and the Civil War",
-        summary: "Greenbacks were Union paper dollars made legal tender in 1862 — not redeemable in gold until specie payments returned in 1879.",
+        summary:
+          "In February 1862 Congress made greenbacks legal tender for a war the banks had already stopped paying in gold, and New York priced that paper against coin until 1879.",
         status: "ready",
         paragraphs: [
-          "Greenbacks financed the Union. They were a suspension, not a theory of money. The postwar fight was about whether and when to resume.",
+          "Greenbacks financed the Union after banks suspended specie at the end of 1861. They suspended the metallic dollar for the war, and the fight after Appomattox was whether and when gold payments would return.",
         ],
         related: [
           { title: "Jackson and the Bank", href: "/history/america/jackson-and-the-bank" },
@@ -589,10 +592,11 @@ export const historyClusters: Cluster[] = [
       {
         slug: "crime-of-1873",
         title: "The Crime of 1873 and the silver question",
-        summary: "The Coinage Act dropped the standard silver dollar. Crime or clarification — still the fight.",
+        summary:
+          "On 12 February 1873 Congress left the standard silver dollar off the Mint’s free-coinage list, and a generation later that omission was called the Crime of 1873.",
         status: "ready",
         paragraphs: [
-          "The Coinage Act of 1873 dropped the standard silver dollar. Whether that was a crime or a clarification is the American silver question in one sentence.",
+          "The Coinage Act of 1873 dropped free coinage of the standard silver dollar, so gold became the large unit of the dollar. Agrarian politics later named the omission the Crime of 1873.",
         ],
         related: [
           { title: "Early U.S. coinage", href: "/history/america/early-us-coinage" },
@@ -679,10 +683,10 @@ export const historyClusters: Cluster[] = [
         slug: "classical-gold-standard-end",
         title: "Classical gold standard and its wartime end",
         summary:
-          "The pre-1914 gold standard was convertibility, gold points, and London settlement — not a treaty. World War I ended that peacetime order. What followed was a different architecture.",
+          "In the first days of August 1914 the peacetime gold window closed across Europe, and convertibility, gold shipment, and London settlement did not return with the peace.",
         status: "ready",
         paragraphs: [
-          "The classical gold standard was a set of practices: convertibility, gold shipping, and interest rates that responded to reserve drains. The First World War suspended it. What came after was not the same system with a pause. It was a different architecture.",
+          "Before 1914 a holder could still turn a major currency into gold, and gold moved when the exchange rate reached the cost of shipping it. The First World War closed that window. Later “returns to gold” reused the word and not the machine.",
         ],
         related: [
           { title: "1933 U.S. gold recall (Executive Order 6102)", href: "/history/20th-century/1933-gold-recall" },
@@ -738,10 +742,10 @@ export const historyClusters: Cluster[] = [
         slug: "1933-gold-recall",
         title: "1933 U.S. gold recall (Executive Order 6102)",
         summary:
-          "Order 6102 and the Gold Reserve Act removed private monetary gold rights and reset the official price from $20.67 to $35. Official gold became a Treasury asset.",
+          "On 5 April 1933 Roosevelt required most private monetary gold to be turned in at $20.67 an ounce, and the next year’s statute put the metal on the Treasury’s books at $35.",
         status: "ready",
         paragraphs: [
-          "In 1933 the United States required most domestic gold coin, bullion, and gold certificates to be delivered to the government. The Gold Reserve Act of 1934 then vested title to monetary gold in the United States and reset the official price from $20.67 to $35 an ounce. The public claim on gold at the old mint price was removed. Official gold became a Treasury asset, not circulating money.",
+          "On 5 April 1933 most private American gold coin, bullion, and gold certificates had to be delivered at $20.67 an ounce. The Gold Reserve Act of 1934 vested title in the United States, reset the official price to $35, and left official gold a Treasury asset the public could no longer claim at a window.",
         ],
         related: [
           { title: "20th-century money", href: "/history/20th-century" },
