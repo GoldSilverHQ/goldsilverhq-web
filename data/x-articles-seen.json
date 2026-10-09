@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-08T18:40:00.000Z",
+  "updatedAt": "2026-10-09T18:45:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2108617063258308608",
+      "postId": "2108619623918907595",
+      "title": "The $20 Gold Coin America Melted, Then Hunted for Decades",
+      "status": "mirrored",
+      "slug": "1933-double-eagle",
+      "sitePath": "/blog/1933-double-eagle",
+      "xArticleUrl": "https://x.com/i/article/2108617063258308608",
+      "publishedAt": "2026-10-09T18:04:29.000Z",
+      "mirroredAt": "2026-10-09T18:45:00.000Z",
+      "inlineMediaCount": 5,
+      "inlineNote": "Five MEDIA entities in article order: the price ladder from $20 face value to $18.9 million, the 1933 turn-in notice, Nellie Tayloe Ross, the Smithsonian Saint-Gaudens double eagle (Jaclyn Nash), and Roosevelt with Farouk at Great Bitter Lake on 13 February 1945. No TWEET embeds."
+    },
     {
       "articleId": "2108101796191236096",
       "postId": "2108190027624616433",
