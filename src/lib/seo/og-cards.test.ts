@@ -49,7 +49,10 @@ describe("branded OG share cards", () => {
       ogImagePathForRoute("/gold-silver/beginner-checklist"),
       "/og/cards/gold-silver-beginner-checklist.jpg",
     );
-    assert.equal(ogImagePathForRoute("/gold-silver/buying-online"), "");
+    assert.equal(
+      ogImagePathForRoute("/gold-silver/buying-online"),
+      "/og/cards/gold-silver-buying-online.jpg",
+    );
     assert.equal(ogImagePathForRouteOrDefault("/desk"), "/og.jpg");
     assert.match(
       absoluteOgImageUrl("/markets"),
