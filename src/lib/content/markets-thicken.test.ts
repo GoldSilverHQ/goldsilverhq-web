@@ -1206,4 +1206,60 @@ describe("markets page thicken (no new URLs)", () => {
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/central-bank-gold-reserves"));
     assert.ok(!PHASE1_SITEMAP_PATHS.some((path) => /switzerland-gold|snb-gold|swiss-gold/.test(path)));
   });
+
+  it("refreshes the debt-versus-official-gold table on the existing book-value page", () => {
+    const body = getBody("markets", "official-gold-book-value");
+    assert.ok(body);
+
+    const debt = body.find((s) => s.heading.startsWith("What the official gold stock"));
+    assert.ok(debt, "expected the debt comparison on the book-value page");
+    assert.ok(debt.table);
+    const sources = body[body.indexOf(debt) + 1];
+    assert.ok(sources);
+    const text = [
+      debt.heading,
+      ...debt.paragraphs,
+      debt.table.caption,
+      ...debt.table.headers,
+      ...debt.table.rows.flat(),
+      ...sources.paragraphs,
+    ].join("\n");
+
+    assert.match(text, /31 August 2026/);
+    assert.match(text, /261,498,926\.241/);
+    assert.match(text, /7 October 2026/);
+    assert.match(text, /\$40,284,036,147,367\.19/);
+    assert.match(text, /23 September 2026/);
+    assert.match(text, /\$40,073,558,531,201\.68/);
+    assert.match(text, /\$210,477,616,165\.51/);
+    assert.match(text, /about \*\*\$210 billion\*\*/);
+    assert.match(text, /2\.769 percent/);
+    assert.match(text, /0\.027 percent/);
+    assert.match(text, /not earmarked to repay it/);
+    assert.deepEqual(debt.table.rows, [
+      ["**5%**", "**$7,702.52**"],
+      ["**10%**", "**$15,405.05**"],
+      ["**20%**", "**$30,810.10**"],
+      ["**50%**", "**$77,025.24**"],
+      ["**100%**", "**$154,050.48**"],
+    ]);
+    assert.match(text, /\[central-bank gold reserves\]\(\/markets\/central-bank-gold-reserves\)/);
+    assert.match(text, /\[Interest costs vs U\.S\. gold\]\(\/blog\/interest-costs-vs-us-gold\)/);
+    const internal = [...text.matchAll(/\]\((\/[^)]+)\)/g)].map((m) => m[1]);
+    assert.deepEqual(internal, [
+      "/markets/central-bank-gold-reserves",
+      "/blog/interest-costs-vs-us-gold",
+    ]);
+    assert.doesNotMatch(text, /\$15,324\.56|\$30,649\.12|\$76,622\.80|\$153,245\.59|2\.784 percent/);
+    assert.doesNotMatch(text, /buy gold|sell gold|forecast|price target|Kauf/i);
+
+    const sitemapSrc = readFileSync(new URL("../seo/phase1-sitemap-paths.mjs", import.meta.url), "utf8");
+    assert.match(sitemapSrc, /\/markets\/official-gold-book-value/);
+    assert.doesNotMatch(sitemapSrc, /debt-vs-official-gold|gold-cover-of-debt/);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets/official-gold-book-value"));
+    assert.equal(
+      PHASE1_SITEMAP_PATHS.filter((path) => path === "/markets/official-gold-book-value").length,
+      1,
+    );
+  });
 });
