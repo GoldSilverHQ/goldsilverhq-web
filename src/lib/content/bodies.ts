@@ -5519,7 +5519,152 @@ const franceTradedDollarsForGold: Section[] = [
   },
 ];
 
+const doubleEagle1933: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **9 October 1934**, two $20 gold coins were added to the national coin collection at the Smithsonian in Washington. They came from the Philadelphia Mint on the order of Nellie Tayloe Ross, the Director of the U.S. Mint. Both were dated 1933. They were meant to be the only ones of their kind left in the world.",
+      "A double eagle is the $20 gold piece. The two that arrived were shiny, they carried the date 1933, and they were sent so that no others of that date would remain. The chart with that opening lists what was later paid for the ones that did get out of the Mint, from the $20 face value to $18.9 million.",
+    ],
+    figure: {
+      src: "/images/blog/1933-double-eagle-price-ladder.jpg",
+      alt: "Chart of prices paid for 1933 double eagles that left the Mint, from the $20 face value up to $18.9 million.",
+      caption:
+        "Prices paid for 1933 double eagles that got out of the Mint, from $20 face value to $18.9 million.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+      width: 1600,
+      height: 1000,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Struck, then locked in the vault",
+    paragraphs: [
+      "The Philadelphia Mint had struck **445,500** of these double eagles between **15 March** and **19 May 1933**. The timing could not have been worse. On **6 March**, two days after Franklin D. Roosevelt took office, the Treasury told the Mint to pay out gold only under license. On **5 April**, Roosevelt's Executive Order 6102 told Americans to hand in their gold coins, gold bars, and gold certificates by **1 May**. That order is the [1933 gold recall](/history/20th-century/1933-gold-recall).",
+      "**445,500** is the number struck in those two months. The 6 March instruction limited gold leaving the Mint to a license. The 5 April order named gold coins, gold bars, and gold certificates, and it set 1 May as the day. The new coins never went out the door. They sat in sealed vaults while Washington decided what to do with them.",
+    ],
+    figure: {
+      src: "/images/blog/1933-double-eagle-gold-notice.jpg",
+      alt: "A 1933 printed notice telling Americans to turn in gold coin, gold bullion, and gold certificates by May 1.",
+      caption:
+        "The 1933 notice telling Americans to turn in their gold coin, bullion and gold certificates by May 1.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+      width: 671,
+      height: 377,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The order to melt",
+    paragraphs: [
+      "The answer came with the Gold Reserve Act of **January 1934**, which took gold coins out of American life for good. On **4 August 1934**, Ross ordered every branch of the Mint to start melting the gold coins on hand. Two of the 1933s were set aside for the Smithsonian. The rest waited their turn. Between **February and June 1937**, the furnaces in Philadelphia turned the stored double eagles into gold bars.",
+      "The 4 August order covered every branch, not Philadelphia alone. The two set aside were kept out of the melt for the Smithsonian. What remained of the stored 1933s became bars in Philadelphia from February through June 1937. Ross directed the Mint from 1933 to 1953.",
+    ],
+    figure: {
+      src: "/images/blog/1933-double-eagle-nellie-tayloe-ross.jpg",
+      alt: "Black-and-white portrait of Nellie Tayloe Ross seated in a dark dress with a light collar.",
+      caption: "Nellie Tayloe Ross, Director of the U.S. Mint from 1933 to 1953.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+      width: 1264,
+      height: 1552,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The ones that had already left",
+    paragraphs: [
+      "But some had already slipped out. In **February 1937**, a coin dealer named James Macallister paid **$500** for a 1933 double eagle from a Philadelphia jeweler, Israel Switt. He sold it the next day for **$1,600**. By the end of that year he had bought five, all from Switt, who kept changing his story about where they came from.",
+      "These were already outside while the stored coins were still waiting for the furnace. **$500** is what Macallister paid. **$1,600** is what he received the next day. Five is the number he had bought from Switt by the end of 1937.",
+      "Years later Switt told the Secret Service in a sworn statement: \"My first recollection of having bought and sold 1933 double eagles was about the beginning of February 1937.\" That was the same month the melting began.",
+      "Nobody in Washington noticed for seven years. In **March 1944**, after one of the coins turned up in an upcoming auction, the Secret Service opened an investigation. Within two years agents had seized or collected eight coins, and a ninth surfaced in **1952**. Every one was melted. Investigators came to believe the coins had left through the Mint's cashier, George McCann, with Switt as the middleman. Switt admitted selling them but said he could not remember how he got them. By then it was too late to prosecute.",
+      "The seven years are the gap before that March 1944 investigation. Eight coins were seized or collected within two years, and the ninth surfaced in 1952. All nine were melted. Investigators came to believe the path out was McCann, the cashier, with Switt as the middleman. Switt admitted the sales and said he could not remember how the coins reached him. It was too late to prosecute.",
+    ],
+  },
+  {
+    heading: "The coin that left for Egypt",
+    paragraphs: [
+      "One coin had already escaped. Shortly before the investigation began, a dealer sold a 1933 double eagle to King Farouk of Egypt, who owned more than **8,500** coins. His ministers asked the U.S. Treasury for an export license, and the Treasury, not yet aware of the theft, granted it. The coin left the country on **29 February 1944**.",
+      "More than 8,500 is the size given for Farouk's collection. The license request came from his ministers. The Treasury granted it because it did not yet know of the theft, and **29 February 1944** is the day the coin left the country. The two pieces held back in 1934 were still the ones for the national collection. The plate is the Smithsonian's own 1933 double eagle, front and back, designed by Augustus Saint-Gaudens.",
+    ],
+    figure: {
+      src: "/images/blog/1933-double-eagle-smithsonian-coin.jpg",
+      alt: "The Smithsonian's 1933 double eagle, front and back, the Saint-Gaudens design, on a blue ground.",
+      caption:
+        "The Smithsonian's own 1933 double eagle, front and back, designed by Augustus Saint-Gaudens. National Numismatic Collection, photo by Jaclyn Nash (public domain).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+      width: 3200,
+      height: 1617,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Cairo, a hotel suite, then an auction room",
+    paragraphs: [
+      "Washington spent years asking for it back. Farouk was overthrown in **1952**, and his collection went up for auction in Cairo in **1954**. The 1933 double eagle was in the catalog, then pulled from the sale at Washington's request. After that, it vanished.",
+      "It came back on **8 February 1996**, in a suite at the Waldorf-Astoria hotel in New York. A British dealer, Stephen Fenton, and an American dealer, Jay Parrino, had come to sell a 1933 double eagle. The buyer had gone to the government, and Secret Service agents were waiting next door. They seized the coin and arrested both men. Fenton said the coin came from Farouk's collection.",
+      "The criminal charges were dropped, and in **2001** Fenton and the government settled. The coin would be sold, with the money split between Fenton and the U.S. Treasury. First, the Treasury formally issued it as money, which made it the only 1933 double eagle ever lawfully released.",
+      "On **30 July 2002**, it sold at auction in New York for **$7,590,020**. The last **$20** of that paid the coin's face value. In **2021** the buyer revealed himself as the shoe designer Stuart Weitzman, and on **8 June** Sotheby's sold the coin again for **$18,872,250**, a record for any coin.",
+      "The last **$20** of the **$7,590,020** was the face value. Weitzman is the 2002 buyer, named in 2021. The later figure, **$18,872,250**, is what the sale reached, a record for any coin. The photograph is Franklin D. Roosevelt and King Farouk at Great Bitter Lake, Egypt, on **13 February 1945**, a year after the coin went to Cairo.",
+    ],
+    figure: {
+      src: "/images/blog/1933-double-eagle-roosevelt-farouk.jpg",
+      alt: "Franklin D. Roosevelt and King Farouk of Egypt seated together outdoors, with naval officers standing behind them.",
+      caption:
+        "Franklin D. Roosevelt and King Farouk of Egypt at Great Bitter Lake, Egypt, 13 February 1945, a year after the coin went to Cairo. National Archives (public domain).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+      width: 2919,
+      height: 2174,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Eleven more, then a table in Pittsburgh",
+    paragraphs: [
+      "The hunt never quite ended. In **2004** Switt's family handed ten more 1933 double eagles to the Mint to be checked. The Mint confirmed they were real and kept them. A jury sided with the government in **2011**, and in **2017** the Supreme Court declined to hear the family's appeal. Another owner, who had bought one on the open market, gave up an eleventh coin.",
+      "On **28 August 2026**, the Mint put all eleven on display together for the first time, at a coin show in Pittsburgh. Of the **445,500** coins struck in 1933, fourteen are known to survive: two at the Smithsonian, eleven with the Mint, and one in private hands. That one is still the only 1933 double eagle anyone can legally own.",
+      "Fourteen is that surviving count. Two are the Smithsonian pair from 1934. Eleven are the coins the Mint kept. The one in private hands is the coin issued as money in 2001, and it remains the only 1933 double eagle anyone can legally own.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: [
+      "The two coins for the Smithsonian, the melt, the coins that left, the one that came back, and the eleven in Pittsburgh.",
+    ],
+    list: [
+      "**9 October 1934.** Two 1933 double eagles join the Smithsonian's national coin collection, sent by Nellie Tayloe Ross.",
+      "**15 March–19 May 1933.** Philadelphia strikes 445,500 double eagles.",
+      "**6 March 1933.** Two days after Roosevelt takes office, the Treasury tells the Mint to pay out gold only under license.",
+      "**5 April 1933.** Executive Order 6102. Gold coins, gold bars, and gold certificates are to be handed in by 1 May.",
+      "**January 1934.** The Gold Reserve Act takes gold coins out of American life.",
+      "**4 August 1934.** Ross orders every Mint branch to begin melting gold coins on hand. Two 1933 double eagles are set aside for the Smithsonian.",
+      "**February–June 1937.** Philadelphia melts the stored double eagles into bars. In February, James Macallister pays Israel Switt $500 for one and sells it the next day for $1,600. By the end of the year he has bought five, all from Switt.",
+      "**29 February 1944.** A 1933 double eagle sold to King Farouk leaves the country under an export license. The Treasury was not yet aware of the theft.",
+      "**March 1944.** A coin listed for auction starts a Secret Service investigation. Within two years, eight coins are seized or collected. A ninth surfaces in 1952. All nine are melted.",
+      "**13 February 1945.** Roosevelt and Farouk at Great Bitter Lake, Egypt, a year after the coin went to Cairo.",
+      "**1952.** Farouk is overthrown. In 1954 his collection is auctioned in Cairo. The coin is in the catalog, pulled at Washington's request, and then vanishes.",
+      "**8 February 1996.** At the Waldorf-Astoria in New York, agents seize a 1933 double eagle and arrest Stephen Fenton and Jay Parrino. Fenton says the coin came from Farouk's collection.",
+      "**2001.** The charges are dropped. Fenton and the government settle. The Treasury issues the coin as money, the only 1933 double eagle ever lawfully released, and the sale proceeds are to be split.",
+      "**30 July 2002.** The coin sells in New York for $7,590,020. The last $20 pays the face value. In 2021 Stuart Weitzman identifies himself as the buyer. On 8 June, Sotheby's sells the coin for $18,872,250, a record for any coin.",
+      "**2004.** Switt's family turns ten more 1933 double eagles over to the Mint. The Mint keeps them. A jury sides with the government in 2011. In 2017 the Supreme Court declines to hear the appeal. Another owner gives up an eleventh coin.",
+      "**28 August 2026.** At a coin show in Pittsburgh, the Mint displays all eleven together for the first time. Fourteen 1933 double eagles are known: two at the Smithsonian, eleven with the Mint, and one in private hands.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Two coins were held back in 1934 so the date would survive in a public collection. Of the 445,500 struck, fourteen are known today. One of them is still the only 1933 double eagle anyone can legally own.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2108617063258308608).",
+    ],
+  },
+];
+
 const bodies: Record<string, Section[]> = {
+  "blog/1933-double-eagle": doubleEagle1933,
   "blog/france-traded-dollars-for-gold": franceTradedDollarsForGold,
   "blog/idaho-city-1862-gold-dust": idahoCity1862GoldDust,
   "blog/coinage-act-1792-section-19": coinageAct1792Section19,

@@ -49,6 +49,22 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "1933-double-eagle",
+    title: "The $20 Gold Coin America Melted, Then Hunted for Decades",
+    summary:
+      "On 9 October 1934 the Smithsonian took two 1933 double eagles. The Mint had struck 445,500 of them. Nearly all the rest were melted, then hunted.",
+    date: "2026-10-09",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "1933 U.S. gold recall", href: "/history/20th-century/1933-gold-recall" },
+    ],
+    relatedArticlePaths: ["/history/20th-century/1933-gold-recall"],
+    xArticleUrl: "https://x.com/i/article/2108617063258308608",
+    sourceXId: "2108617063258308608",
+  },
+  {
     slug: "france-traded-dollars-for-gold",
     title: "When France Traded Its Dollars for Gold",
     summary:

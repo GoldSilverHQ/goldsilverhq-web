@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/1933-double-eagle",
+    src: "/images/blog/1933-double-eagle.jpg",
+    ogSrc: "/og/cards/blog-1933-double-eagle.jpg",
+    alt: "Title card reading The $20 Gold Coin America Melted, Then Hunted for Decades, with a 1933 double eagle under a magnifying glass.",
+    caption:
+      "9 October 1934 — two 1933 double eagles are added to the Smithsonian, meant to be the last of their kind.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the $20 gold coin America melted, then hunted for decades.",
+  },
+  {
     path: "/blog/france-traded-dollars-for-gold",
     src: "/images/blog/france-traded-dollars-for-gold.jpg",
     ogSrc: "/og/cards/blog-france-traded-dollars-for-gold.jpg",
