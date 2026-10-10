@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { getBody, marketsHubBody } from "./bodies.ts";
-import { getMarket } from "./map.ts";
+import { getMarket, marketPages } from "./map.ts";
 import { PHASE1_SITEMAP_PATHS } from "../seo/robots-sitemap.ts";
 
 describe("markets page thicken (no new URLs)", () => {
@@ -1260,6 +1260,121 @@ describe("markets page thicken (no new URLs)", () => {
     assert.equal(
       PHASE1_SITEMAP_PATHS.filter((path) => path === "/markets/official-gold-book-value").length,
       1,
+    );
+  });
+
+  it("thickens the markets hub in place with dated spoke figures", () => {
+    function visibleWords(text: string) {
+      const plain = text
+        .replace(/\[[^\]]+\]\([^)]+\)/g, (m) => m.match(/\[([^\]]+)\]/)?.[1] ?? "")
+        .replace(/\*\*/g, "")
+        .trim();
+      return plain ? plain.split(/\s+/).filter(Boolean) : [];
+    }
+
+    const body = marketsHubBody
+      .flatMap((s) => [s.heading, ...s.paragraphs, ...(s.list ?? [])])
+      .filter(Boolean)
+      .join("\n");
+    const cards = marketPages.map((page) => `${page.title}\n${page.summary}`).join("\n");
+    const chrome = [
+      "Gold & silver markets",
+      "The articles",
+      "Each one takes a single number and explains where it comes from.",
+    ].join("\n");
+    const readerWords = visibleWords([chrome, body, cards].join("\n")).length;
+    assert.ok(
+      readerWords >= 1000 && readerWords <= 1100,
+      `expected 1,000–1,100 reader-visible words including cards, got ${readerWords}`,
+    );
+
+    const intro = marketsHubBody[0]?.paragraphs[0] ?? "";
+    assert.match(intro, /9 October 2026/);
+    assert.match(intro, /LBMA Gold Price PM/);
+    assert.match(intro, /\$4,186\.30/);
+    assert.doesNotMatch(intro, /31 July 2026|\$4,026\.60/);
+
+    const debt = marketsHubBody.find((s) => s.heading === "Official gold beside the federal debt");
+    const sales = marketsHubBody.find((s) => s.heading === "Official sales, and the cap on them");
+    const china = marketsHubBody.find((s) => s.heading === "China’s Treasuries and gold in 2026");
+    const dates = marketsHubBody.find((s) => s.heading === "A July print and an October print");
+    assert.ok(debt && sales && china && dates);
+
+    const debtText = debt.paragraphs.join("\n");
+    assert.match(debtText, /7 October 2026/);
+    assert.match(debtText, /\$40,284,036,147,367\.19/);
+    assert.match(debtText, /261,498,926\.241/);
+    assert.match(debtText, /\$11,041,059,957\.90/);
+    assert.match(debtText, /0\.027 percent/);
+    assert.match(debtText, /24 September 2026/);
+    assert.match(debtText, /\$4,266\.40/);
+    assert.match(debtText, /2\.769 percent/);
+    assert.match(debtText, /\[official gold book value\]\(\/markets\/official-gold-book-value\)/);
+    assert.match(debtText, /not earmarked to repay/);
+
+    const salesText = sales.paragraphs.join("\n");
+    assert.match(salesText, /Washington Agreement on Gold/);
+    assert.match(salesText, /26 September 1999/);
+    assert.match(salesText, /400 tonnes/);
+    assert.match(salesText, /2,000 tonnes/);
+    assert.match(salesText, /1,300 tonnes/);
+    assert.match(salesText, /1 May 2000/);
+    assert.match(salesText, /30 March 2005/);
+    assert.match(salesText, /1,290 tonnes/);
+    assert.match(salesText, /Brown’s Bottom/);
+    assert.match(salesText, /395 tonnes/);
+    assert.match(salesText, /\$275/);
+    assert.match(salesText, /central-bank gold reserves article/);
+    assert.doesNotMatch(salesText, /\]\(\//);
+
+    const chinaText = china.paragraphs.join("\n");
+    assert.match(chinaText, /\$684\.4 billion/);
+    assert.match(chinaText, /December 2025/);
+    assert.match(chinaText, /\$618\.0 billion/);
+    assert.match(chinaText, /July 2026/);
+    assert.match(chinaText, /\$66\.4 billion/);
+    assert.match(chinaText, /2,306 tonnes/);
+    assert.match(chinaText, /2,410 tonnes/);
+    assert.match(chinaText, /\+104 tonnes/);
+    assert.match(chinaText, /September 2026/);
+    assert.match(chinaText, /rather than sales/);
+    assert.doesNotMatch(chinaText, /\]\(\//);
+
+    const datesText = [dates.heading, ...dates.paragraphs].join("\n");
+    assert.match(datesText, /not one snapshot/);
+    assert.match(datesText, /\$4,026\.60/);
+    assert.match(datesText, /31 July 2026/);
+    assert.match(datesText, /7 October 2026/);
+    assert.match(datesText, /9 October 2026/);
+    assert.match(datesText, /\$4,186\.30/);
+    assert.doesNotMatch(datesText, /\]\(\//);
+
+    assert.match(body, /\[Bretton Woods and Nixon 1971\]\(\/history\/20th-century\/bretton-woods-nixon-1971\)/);
+    assert.match(body, /15 August 1971/);
+    const internal = [...new Set([...body.matchAll(/\]\((\/[^)]+)\)/g)].map((m) => m[1]))].sort();
+    assert.deepEqual(internal, [
+      "/desk",
+      "/history",
+      "/history/20th-century/bretton-woods-nixon-1971",
+      "/history/silver/monetary-and-industry",
+      "/markets/central-bank-gold-reserves",
+      "/markets/gold-silver-ratio",
+      "/markets/official-gold-book-value",
+      "/markets/physical-silver-demand-by-country",
+      "/sound-money/hard-money-vs-fiat",
+    ]);
+
+    assert.match(body, /Canada’s reserve table that now reads \*\*Gold: 0\*\*/);
+    assert.match(body, /gold auctions of \*\*1999–2002\*\*/);
+    assert.match(body, /Mine supply is ounces leaving the ground/);
+    assert.match(body, /No page here names a miner/);
+    assert.doesNotMatch(body, /forecast|ebook|buy gold|sell gold|price target|Kauf/i);
+
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 294);
+    assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets"));
+    assert.equal(
+      PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/markets")).length,
+      5,
     );
   });
 });

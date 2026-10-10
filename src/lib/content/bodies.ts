@@ -5846,7 +5846,7 @@ export const marketsHubBody: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "The U.S. Treasury still values its gold at **$42.22** an ounce, a price written into law in **1973** and never updated. On **31 July 2026** the London market price was **$4,026.60**. Both numbers are correct, and they answer different questions. Many of the figures quoted about gold and silver work that way: a price, a ratio, or a country ranking that means something precise and gets repeated as if it meant something else.",
+      "The U.S. Treasury still values its gold at **$42.22** an ounce, a price written into law in **1973** and never updated. On **9 October 2026** the LBMA Gold Price PM was **$4,186.30**. Both numbers are correct, and they answer different questions. Many of the figures quoted about gold and silver work that way: a price, a ratio, or a country ranking that means something precise and gets repeated as if it meant something else.",
       "The live [desk](/desk) shows prices and ratios as they move. The articles here take a few of those numbers apart — where each comes from, who publishes it, and what it counts.",
     ],
   },
@@ -5860,11 +5860,35 @@ export const marketsHubBody: Section[] = [
     ],
   },
   {
+    heading: "Official gold beside the federal debt",
+    paragraphs: [
+      "The Treasury’s gold report for **31 August 2026** counts **261,498,926.241** fine troy ounces, booked at **$11,041,059,957.90**. On **7 October 2026** total public debt outstanding was **$40,284,036,147,367.19**. Beside that debt the book value is **0.027 percent**, and the market value at the **24 September 2026** LBMA Gold Price PM of **$4,266.40** is **2.769 percent**. The table on [official gold book value](/markets/official-gold-book-value) holds the debt and the ounces fixed and changes only the share. The gold is not earmarked to repay the debt.",
+    ],
+  },
+  {
+    heading: "Official sales, and the cap on them",
+    paragraphs: [
+      "On **26 September 1999** the Washington Agreement on Gold capped signatories’ sales at about **400 tonnes** a year and **2,000 tonnes** over five years. Switzerland sold **1,300 tonnes** from **1 May 2000** to **30 March 2005**, and about **1,290 tonnes** remained. Brown’s Bottom — **17** United Kingdom auctions from **July 1999** to **March 2002** — sold about **395 tonnes** at an average near **$275** an ounce. The central-bank gold reserves article dates all three.",
+    ],
+  },
+  {
+    heading: "China’s Treasuries and gold in 2026",
+    paragraphs: [
+      "Treasuries and gold sit on China’s reserve book with different end dates. TIC Table 5 prints mainland holdings of **$684.4 billion** at the end of **December 2025** and **$618.0 billion** at the end of **July 2026**. Reported official gold moved from about **2,306 tonnes** at the end of **2025** to about **2,410 tonnes** at the end of **September 2026**, about **+104 tonnes**. Part of the **$66.4 billion** Treasury difference is a lower bond price — the 10-year was **4.18 percent** on **31 December 2025** and **4.75 percent** on **31 July 2026** — rather than sales.",
+    ],
+  },
+  {
     heading: "Where the numbers come from",
     paragraphs: [
       "Prices are the London (**LBMA**) and U.S. futures (**COMEX**) figures shown on the desk. Reserve figures come from IMF statistics, national central banks, and World Gold Council compilations. Silver demand comes from the World Silver Survey, researched by Metals Focus for the Silver Institute; mine output from the U.S. Geological Survey and the same survey. Every figure carries its date and source, because a July number and an August number from different books do not mix.",
       "Mine supply is ounces leaving the ground in a year, and it is a separate count again. The desk’s [Stocks & flows](/desk) tab shows mine output and above-ground metal beside these articles. No page here names a miner or a stock; the mine figures are geology, not picks.",
-      "How $35 became $42.22, and what closed in **1971**, is told in [Sound Money History](/history). Whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat), and silver’s double life as money and industrial metal in [monetary history and industry](/history/silver/monetary-and-industry).",
+      "How $35 became $42.22, and what closed in **1971**, is told in [Sound Money History](/history). The Sunday evening the window closed, **15 August 1971**, is [Bretton Woods and Nixon 1971](/history/20th-century/bretton-woods-nixon-1971). Whether the cost of mining should limit money is taken up in [hard money vs fiat](/sound-money/hard-money-vs-fiat), and silver’s double life as money and industrial metal in [monetary history and industry](/history/silver/monetary-and-industry).",
+    ],
+  },
+  {
+    heading: "A July print and an October print",
+    paragraphs: [
+      "They are not one snapshot. The gold-to-GDP table uses the LBMA Gold Price PM of **$4,026.60** on **31 July 2026**, matched to gold books through that month. The debt comparison uses **7 October 2026** and the **24 September 2026** afternoon price. China’s Treasury figure in that pair stops in July; the gold figure runs through September. The opening **9 October 2026** LBMA Gold Price PM of **$4,186.30** does not revise either earlier London price. Each figure keeps the date on the document that printed it.",
     ],
   },
 ];
