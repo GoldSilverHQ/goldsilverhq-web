@@ -49,6 +49,25 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "john-law-banque-royale-1720",
+    title: "The Scottish Gambler Who Tried to Replace France's Gold With Paper",
+    summary:
+      "On 10 October 1720 the Banque Royale's notes were set to stop being money on 1 November. John Law's paper had promised silver, and the bank could not pay.",
+    date: "2026-10-11",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      {
+        title: "John Law and the Mississippi Bubble",
+        href: "/history/banks-paper/john-law",
+      },
+    ],
+    relatedArticlePaths: ["/history/banks-paper/john-law"],
+    xArticleUrl: "https://x.com/i/article/2108961807880867840",
+    sourceXId: "2108961807880867840",
+  },
+  {
     slug: "1933-double-eagle",
     title: "The $20 Gold Coin America Melted, Then Hunted for Decades",
     summary:
