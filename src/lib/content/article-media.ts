@@ -72,10 +72,10 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
     path: "/history/ancient/lydia-first-coins",
     src: "/images/history/ancient/lydia-first-coins.jpg",
     ogSrc: "/og/cards/history-ancient-lydia-first-coins.jpg",
-    alt: "Line engraving of an early electrum stater: lion on the obverse and animal punch marks on the reverse.",
+    alt: "Colorized plate of an early electrum coin: a lion on one face and punch marks on the other.",
     caption:
-      "Early electrum stater (line plate after Barclay V. Head) — lion type from the first-coinage world of Lydia/Ionia.",
-    credit: "Public domain (19th-century numismatic plate; copyright expired).",
+      "Early electrum — a lion on one face and punch marks on the other, colorized from a public-domain plate.",
+    credit: "Colorized from a public-domain original (19th-century numismatic plate).",
   },
   {
     path: "/history/ancient/greece-silver-trade",
