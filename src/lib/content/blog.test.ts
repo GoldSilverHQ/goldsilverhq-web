@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 23);
-    assert.equal(listBlogPosts().length, 23);
+    assert.equal(blogPosts.length, 24);
+    assert.equal(listBlogPosts().length, 24);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/john-law-banque-royale-1720",
         "/blog/1933-double-eagle",
         "/blog/france-traded-dollars-for-gold",
         "/blog/idaho-city-1862-gold-dust",
@@ -187,8 +188,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 21);
-    assert.equal(listBlogPostsByTag("Metals").length, 15);
+    assert.equal(listBlogPostsByTag("History").length, 22);
+    assert.equal(listBlogPostsByTag("Metals").length, 16);
     assert.equal(listBlogPostsByTag("Markets").length, 6);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -202,6 +203,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "john-law-banque-royale-1720",
       "1933-double-eagle",
       "france-traded-dollars-for-gold",
       "idaho-city-1862-gold-dust",
@@ -451,6 +453,58 @@ describe("blog section", () => {
         "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
         "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
         "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the John Law Banque Royale figures and credits the X Article once", () => {
+    const post = getBlogPost("john-law-banque-royale-1720");
+    assert.ok(post);
+    assert.equal(
+      post.title,
+      "The Scottish Gambler Who Tried to Replace France's Gold With Paper",
+    );
+    assert.equal(post.date, "2026-10-11");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2108961807880867840");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/john-law-banque-royale-1720"));
+    const body = getBody("blog", "john-law-banque-royale-1720")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[John Law and the Mississippi Bubble\]\(\/history\/banks-paper\/john-law\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2108961807880867840/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("john-law-banque-royale-1720");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 5, `expected 5 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/john-law-banque-royale-1720-opening-portrait.jpg",
+        "/images/blog/john-law-banque-royale-1720-banque-note.jpg",
+        "/images/blog/john-law-banque-royale-1720-rue-quincampoix.jpg",
+        "/images/blog/john-law-banque-royale-1720-notes-vs-silver.jpg",
+        "/images/blog/john-law-banque-royale-1720-wind-trade.jpg",
       ],
     );
     for (const f of figures) {

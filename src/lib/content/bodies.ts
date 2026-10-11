@@ -5519,6 +5519,172 @@ const franceTradedDollarsForGold: Section[] = [
   },
 ];
 
+const johnLawBanqueRoyale1720: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **10 October 1720**, the French government announced that the notes of the Banque Royale, the royal bank in Paris, would stop being money on **1 November**. People still holding them could trade them in for government bonds or company shares, but they could no longer pay for bread with them. It was the end of the boldest money experiment Europe had yet seen, and of the man behind it, a Scottish gambler named John Law.",
+      "**1 November** is the day the notes would cease to be money. Bonds and company shares were what a holder could still take in exchange. Bread is the everyday purchase named for what the paper could no longer buy. The portrait is John Law.",
+    ],
+    figure: {
+      src: "/images/blog/john-law-banque-royale-1720-opening-portrait.jpg",
+      alt: "Colorized portrait of John Law in a long curled wig, a dark coat, and a white cravat.",
+      caption:
+        "Portrait of John Law, placed with the announcement that the Banque Royale notes would stop being money.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+      width: 2608,
+      height: 3353,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "A goldsmith's son, and an idea about paper",
+    paragraphs: [
+      "Law was born in Edinburgh in **1671** into a family of goldsmiths and bankers. In **1694** he killed a man in a sword duel in London, was sentenced to death, and escaped to the Continent. For the next twenty years he moved from city to city, gambling with great skill and writing about money. His big idea was simple: a country short of gold and silver could grow richer by using paper instead.",
+      "The London duel of 1694 ends in a death sentence and an escape to the Continent. Twenty years of gambling and of writing about money follow. The idea he carried into France was that paper could do the work where gold and silver were short.",
+    ],
+  },
+  {
+    heading: "A crown short of coin",
+    paragraphs: [
+      "France was the place for that trial. When Louis XIV died in **1715** he left debts of about **2.8 billion livres**, roughly ten years of the crown's income, and too little coin in circulation. The new regent, Philippe d'Orléans, listened to Law. In **May 1716** he let him open a private bank in Paris. From **1717** its notes could be used to pay taxes, and in **December 1718** it became the Banque Royale, backed by the king.",
+      "**2.8 billion livres** is the debt left at the king's death, set here at about ten years of the crown's income. Too little coin means too little gold and silver money in circulation. Philippe d'Orléans is the regent. May 1716 is the private bank. From 1717 the notes pay taxes. December 1718 makes it the Banque Royale, with the king behind it.",
+    ],
+  },
+  {
+    heading: "Payable in silver coin",
+    paragraphs: [
+      "Every note carried the same promise: \"La Banque promet payer au Porteur à vüe … en Especes d'Argent.\" The bank promises to pay the bearer on demand, in silver coin.",
+      "The bearer is the person holding the note. On demand is the moment that person asks. Especes d'Argent is silver coin. The plate is a Banque Royale note for **100 livres**, dated **1 January 1720**, and its text makes that promise.",
+    ],
+    figure: {
+      src: "/images/blog/john-law-banque-royale-1720-banque-note.jpg",
+      alt: "A Banque Royale note for 100 livres dated 1 January 1720, with a crowned coat of arms and a promise of payment in silver coin.",
+      caption:
+        "A Banque Royale note for 100 livres, dated 1 January 1720. The text promises payment \"en Especes d'Argent\", in silver coin.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+      width: 2600,
+      height: 1689,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The Mississippi Company",
+    paragraphs: [
+      "Law also built a trading company, first called the Company of the West and later the Company of the Indies, but known to everyone as the Mississippi Company. It held the monopoly on French Louisiana, where it founded New Orleans in **1718**. In **1719** it took over the royal mints, the collection of almost all taxes, and the national debt. Its shares had been issued at **500 livres**. Traded in the open air on the narrow rue Quincampoix in Paris, they reached **1,000 livres** in **July 1719**, **3,000** in **August**, and about **10,000** in **January 1720**.",
+      "Company of the West, then Company of the Indies: the name in the street was the Mississippi Company. The longer account of the bank and the company is [John Law and the Mississippi Bubble](/history/banks-paper/john-law). French Louisiana is the monopoly, and New Orleans is the city founded there in 1718. In 1719 the same company took the royal mints, almost all tax collection, and the national debt. The shares started at 500 livres. Rue Quincampoix is the narrow street where Paris traded them in the open air, up to about 10,000 livres by January 1720. The engraving shows that street in 1720.",
+    ],
+    figure: {
+      src: "/images/blog/john-law-banque-royale-1720-rue-quincampoix.jpg",
+      alt: "Colorized engraving of a crowded Paris street in 1720, people packed between tall buildings to trade shares in the open.",
+      caption:
+        "Rue Quincampoix in 1720, where Paris crowded in to trade Mississippi shares. Engraving by Antoine Humblot, Rijksmuseum (CC0). Colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+      width: 1664,
+      height: 1184,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The notes that bought the shares",
+    paragraphs: [
+      "The bank printed the notes that bought the shares, and the company used the money to take over the king's debts. On **5 January 1720**, Law became Controller-General of Finances, the most powerful money job in France.",
+      "Controller-General of Finances, from 5 January 1720, is the office the account calls the most powerful money job in France.",
+    ],
+  },
+  {
+    heading: "A limit on gold and silver",
+    paragraphs: [
+      "Then people started turning their paper back into gold and silver, and Law turned on metal itself. On **27 February 1720**, it became illegal to own more than **500 livres** in gold or silver coin, and any payment over **100 livres** had to be made in notes. On **11 March** came the full plan: from **1 May**, nobody but goldsmiths could keep gold coin or gold bars, and most silver coin would follow at the start of **1721**.",
+      "People were asking for the metal the notes had named. The February rule capped gold or silver coin at 500 livres and forced notes on any payment over 100 livres. The March plan, from 1 May, left gold coin and gold bars to goldsmiths alone. Most silver coin was to follow at the start of 1721.",
+    ],
+  },
+  {
+    heading: "Half the face value, then a retreat",
+    paragraphs: [
+      "The notes kept multiplying. About **1.1 billion livres** were out in early **March 1720**. By the end of **May** it was **2.2 billion**. On **21 May**, Law ordered the value of notes and shares cut in steps, the notes to half their face value by **December**. The uproar was so loud that the decree was cancelled six days later, and people were allowed to hold coin again. Law was dismissed, then called back within days.",
+      "From about 1.1 billion livres in early March to 2.2 billion by the end of May is the multiplication. The 21 May order walked the notes down, by steps, to half their face value in December, and did the same in steps for the shares. Six days later that decree was cancelled, coin could be held again, and Law, dismissed, was called back within days.",
+    ],
+  },
+  {
+    heading: "The bank stops paying",
+    paragraphs: [
+      "It was too late. In **July** the bank began paying out small notes in coin, and people were crushed to death in the crowds. On **17 July** it stopped paying for good. Over the summer the government said the notes would be phased out, and on **10 October** it brought the end forward to **1 November**. About **1.2 billion livres** in notes were still in circulation. At market prices they were worth about **160 million livres** in silver, counted at **1719** coin values.",
+      "Small notes, paid in coin, drew crowds in which people were crushed to death. 17 July is the day the bank stopped paying for good. The summer plan was a phase-out. 10 October moved the end to 1 November. About 1.2 billion livres of notes were still out, and at market prices they came to about 160 million livres in silver, using 1719 coin values. The chart sets that face value, from 1719 to 1721, against what the notes were worth in silver.",
+    ],
+    figure: {
+      src: "/images/blog/john-law-banque-royale-1720-notes-vs-silver.jpg",
+      alt: "Chart of Banque Royale notes from 1719 to 1721, comparing the face value in circulation with what the notes were worth in silver.",
+      caption:
+        "Banque Royale notes, 1719 to 1721: the face value of the notes in circulation against what they were worth in silver. Data: François R. Velde, Federal Reserve Bank of Chicago (2003).",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+      width: 1600,
+      height: 1000,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Out of Paris",
+    paragraphs: [
+      "The shares fell with the notes, to about **2,000 livres** in **September** and **1,000** in **December**. In mid-December Law slipped out of Paris, and by **22 December** he was in Brussels. He lived by gambling in one city after another and died poor in Venice on **21 March 1729**.",
+      "About 2,000 livres in September and 1,000 in December is the fall in the shares. Mid-December is the exit from Paris, and 22 December is Brussels. After that he lived by gambling, city to city, and on 21 March 1729 he died poor in Venice. The Dutch satire of 1720, \"The Inventor of the Wind Trade on His Triumphal Car,\" mocks Law and his Mississippi shares.",
+    ],
+    figure: {
+      src: "/images/blog/john-law-banque-royale-1720-wind-trade.jpg",
+      alt: "Colorized Dutch satire of 1720 showing a bewigged man riding a fantastical car through a crowd, titled The Inventor of the Wind Trade on His Triumphal Car.",
+      caption:
+        "\"The Inventor of the Wind Trade on His Triumphal Car\", a Dutch satire of 1720 mocking Law and his Mississippi shares. Library of Congress (public domain). Colorized.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+      width: 1168,
+      height: 1696,
+      layout: "inset",
+    },
+  },
+  {
+    heading: "The paper that was left",
+    paragraphs: [
+      "The cleanup took years. When the government checked the leftover paper in **1721** and **1722**, about **511,000** people came forward with some **2.5 billion livres** in paper. France stayed wary of paper money for a long time afterwards.",
+      "The check is the count for 1721 and 1722: about 511,000 people, and some 2.5 billion livres of paper.",
+      "The English banker Henry Thornton named the flaw in **1802**: \"He forgot that there might be no bounds to the demand for paper; that the increasing quantity would contribute to the rise of commodities: and the price of commodities require, and seem to justify, a still further increase.\"",
+      "Thornton, an English banker, wrote that in 1802: a demand for paper without bounds, and prices that seem to justify still more of it.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: ["From the private bank in Paris to the day the notes stopped being money."],
+    list: [
+      "**1671.** John Law is born in Edinburgh, into a family of goldsmiths and bankers.",
+      "**1694.** He kills a man in a sword duel in London, is sentenced to death, and escapes to the Continent.",
+      "**1715.** Louis XIV dies, leaving debts of about 2.8 billion livres and too little coin. Philippe d'Orléans, the regent, listens to Law.",
+      "**May 1716.** A private bank opens in Paris. From 1717 its notes can pay taxes. In December 1718 it is the Banque Royale.",
+      "**1718.** The Mississippi Company founds New Orleans. In 1719 it takes the mints, almost all taxes, and the national debt. Shares are issued at 500 livres.",
+      "**July 1719–January 1720.** On rue Quincampoix the shares reach 1,000 livres, then 3,000, then about 10,000.",
+      "**5 January 1720.** Law becomes Controller-General of Finances. The bank's notes are buying the shares.",
+      "**27 February 1720.** Owning more than 500 livres in gold or silver coin becomes illegal. Payments over 100 livres must be in notes.",
+      "**11 March 1720.** From 1 May, only goldsmiths may keep gold coin or gold bars. Most silver coin is to follow at the start of 1721.",
+      "**21 May 1720.** With about 2.2 billion livres of notes out, Law orders a step-down to half face value by December. The decree is cancelled six days later.",
+      "**17 July 1720.** After the payout of small notes in coin, and deaths in the crowds, the bank stops paying.",
+      "**10 October 1720.** Notes still out, about 1.2 billion livres, are worth about 160 million livres in silver at 1719 values. They stop being money on 1 November.",
+      "**22 December 1720.** Law is in Brussels. The shares are about 1,000 livres by December, down from about 2,000 in September.",
+      "**21 March 1729.** He dies poor in Venice.",
+      "**1721–1722.** About 511,000 people bring in some 2.5 billion livres of leftover paper.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Every one of Law's notes had promised silver. In the end, silver was the one thing his bank could not pay.",
+      "Payment to the bearer, on demand, in silver coin, is the line on the notes. The bank stops that payment on 17 July 1720. On 1 November the notes stop being money.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2108961807880867840).",
+    ],
+  },
+];
+
 const doubleEagle1933: Section[] = [
   {
     heading: "",
@@ -5664,6 +5830,7 @@ const doubleEagle1933: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/john-law-banque-royale-1720": johnLawBanqueRoyale1720,
   "blog/1933-double-eagle": doubleEagle1933,
   "blog/france-traded-dollars-for-gold": franceTradedDollarsForGold,
   "blog/idaho-city-1862-gold-dust": idahoCity1862GoldDust,

@@ -1370,7 +1370,7 @@ describe("markets page thicken (no new URLs)", () => {
     assert.match(body, /No page here names a miner/);
     assert.doesNotMatch(body, /forecast|ebook|buy gold|sell gold|price target|Kauf/i);
 
-    assert.equal(PHASE1_SITEMAP_PATHS.length, 294);
+    assert.equal(PHASE1_SITEMAP_PATHS.length, 295);
     assert.ok(PHASE1_SITEMAP_PATHS.includes("/markets"));
     assert.equal(
       PHASE1_SITEMAP_PATHS.filter((path) => path.startsWith("/markets")).length,

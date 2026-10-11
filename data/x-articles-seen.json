@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-09T18:45:00.000Z",
+  "updatedAt": "2026-10-11T10:20:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2108961807880867840",
+      "postId": "2109196321257140513",
+      "title": "The Scottish Gambler Who Tried to Replace France's Gold With Paper",
+      "status": "mirrored",
+      "slug": "john-law-banque-royale-1720",
+      "sitePath": "/blog/john-law-banque-royale-1720",
+      "xArticleUrl": "https://x.com/i/article/2108961807880867840",
+      "publishedAt": "2026-10-11T08:16:04.000Z",
+      "mirroredAt": "2026-10-11T10:20:00.000Z",
+      "inlineMediaCount": 5,
+      "inlineNote": "Five MEDIA entities in article order: an uncaptioned portrait of John Law after the 10 October opening; a Banque Royale 100-livre note after the silver promise; Rue Quincampoix after the share prices; the Velde chart of face value against silver after the 1.2 billion / 160 million figures; the Dutch satire The Inventor of the Wind Trade after Law's death in Venice. No TWEET embeds."
+    },
     {
       "articleId": "2108617063258308608",
       "postId": "2108619623918907595",

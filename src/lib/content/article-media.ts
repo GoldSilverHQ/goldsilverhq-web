@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/john-law-banque-royale-1720",
+    src: "/images/blog/john-law-banque-royale-1720.jpg",
+    ogSrc: "/og/cards/blog-john-law-banque-royale-1720.jpg",
+    alt: "Title card reading The Scottish Gambler Who Tried to Replace France's Gold With Paper, with a colorized portrait of John Law.",
+    caption:
+      "10 October 1720 — the notes of the Banque Royale are set to stop being money on 1 November.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the Scottish gambler who tried to replace France's gold with paper.",
+  },
+  {
     path: "/blog/1933-double-eagle",
     src: "/images/blog/1933-double-eagle.jpg",
     ogSrc: "/og/cards/blog-1933-double-eagle.jpg",
