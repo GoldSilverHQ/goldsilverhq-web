@@ -1441,7 +1441,7 @@ const lydia: Section[] = [
   {
     heading: "",
     paragraphs: [
-      "In a market of strangers in western Anatolia, a lump of electrum still started an argument at the scale. How much gold was in it? How much silver? Then someone struck the lump with a punch, and later with a recognisable design, so a buyer could check the king’s mark instead of every grain. That happened in Lydia, in the **seventh and sixth centuries BCE**, the conventional starting point for struck coinage, and Croesus is the royal name later attached to separate gold and silver issues. The ore was old. The stamp was new.",
+      "In a market of strangers in western Anatolia, a lump of electrum still started an argument at the scale: how much gold was in it, and how much silver. Then someone struck the lump with a punch, and later with a recognisable design, so a buyer could check the king’s mark instead of every grain. That happened in Lydia, in the **seventh and sixth centuries BCE**, and it is the conventional starting point for struck coinage. The ore was old. The stamp was new.",
       "Traders had been settling in metal by weight for a long time already — that is the story of [why markets chose gold and silver](/history/ancient/why-markets-chose-gold-silver). Lydia did not invent monetary gold and silver. It made them cheaper to check.",
     ],
   },
@@ -1450,32 +1450,52 @@ const lydia: Section[] = [
     paragraphs: [
       "Western Anatolia sat on the trade routes between the Aegean and the interior of Asia Minor, and Lydia’s kings controlled river gold and electrum sources that made a local mint possible. Archaeology and the literary tradition place the first true coins in this zone in the later seventh century BCE, with wider use in the sixth.",
       "Claims about the exact first year vary with the dig and with how one defines a coin. The broad agreement is narrower: Lydia is where struck pieces carrying a state or royal mark became a habit of payment, not a one-off curiosity, and Ionian cities nearby took the practice up and adapted it. The Aegean learned the stamp.",
-      "Lydia was not the birth of money. Mesopotamian silver accounts and Levantine hacksilver already measured value by weight. Lydia was the birth of a portable claim about that weight — a design you could recognise without opening every bag to the scale.",
+      "Lydia was not the birth of money. Mesopotamian silver accounts and Levantine hacksilver already measured value by weight, so what Lydia added was a portable claim about that weight — a design you could recognise without opening every bag to the scale.",
     ],
   },
   {
     heading: "Electrum, punch, and type",
     paragraphs: [
       "Early Lydian pieces were often electrum, gold and silver mixed, sometimes from river metal whose ratio was hard to read by eye. A blank was prepared and a punch or die left a mark; later issues carried a clearer type, a design that named the issuer and implied a standard.",
-      "Electrum’s mixed nature made the stamp especially useful. Without a trusted mark, every lump invited an argument about assay. With a mark, the buyer still trusted the king or the city, but the trust was concentrated: check the type, not every grain. The stamp moved the cost of verification. It did not abolish trust.",
-      "Weights and denominations changed over time, so small pieces settled everyday trade while larger ones settled bigger claims. The metal remained the substance. The type was the shortcut. Numismatists still argue over how early blanks were cast or cut and how soon a true reverse die appears. The monetary point is simpler: a repeatable mark turned an anonymous alloy into a circulating claim.",
-      "Hoards and find-spots show the pieces moving well beyond the palace. That circulation is the test. A royal souvenir that never leaves the treasury is not a new way of paying. Lydia is remembered because the habit stuck.",
+      "Electrum’s mixed nature made the stamp especially useful, because without a trusted mark every lump invited an argument about assay. With a mark, the buyer still trusted the king or the city, but the trust was concentrated: check the type, not every grain. The stamp moved the cost of verification, and it did not abolish trust.",
+      "Weights and denominations changed over time, so small pieces settled everyday trade while larger ones settled bigger claims. The metal remained the substance, and the type was the shortcut. Numismatists still argue over how early blanks were cast or cut and how soon a true reverse die appears, but the monetary point is simpler: a repeatable mark turned an anonymous alloy into a circulating claim.",
+      "Hoards and find-spots show the pieces moving well beyond the palace, and that circulation is the test. A royal souvenir that never leaves the treasury is not a new way of paying. Lydia is remembered because the habit stuck.",
     ],
+    figure: {
+      src: "/images/history/ancient/lydia-first-coins/electrum-trite-lion-punch.jpg",
+      alt: "Electrum coin with a lion’s head on one face and two deep rectangular punch marks on the other.",
+      caption: "Electrum coin — a lion’s head on one face, two punch marks on the other.",
+      credit: "Public domain — American Numismatic Society (1970.218.1).",
+      width: 2430,
+      height: 1105,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "Croesus and separate gold and silver",
     paragraphs: [
-      "Tradition credits **Croesus**, in the mid-sixth century BCE, with issuing pure gold and pure silver coins rather than only electrum. Whether or not every detail of that story holds, the logic is clear. Separating the metals makes fineness easier to state and to check. Electrum hid a ratio. A gold coin or a silver coin announces what is in it.",
+      "Tradition credits **Croesus**, in the mid-sixth century BCE, with issuing pure gold and pure silver coins rather than only electrum — the royal name later attached to those separate issues. Whether or not every detail of that story holds, the logic is clear. Separating the metals makes fineness easier to state and to check. Electrum hid a ratio. A gold coin or a silver coin announces what is in it.",
       "Separate issues also point toward a world in which gold and silver do different jobs — large sums and everyday trade — under named standards. The later Greek silver networks and Rome’s pairing of the aureus and the denarius grow out of that habit. Lydia wrote no mint ratio into law. It showed a state choosing what its stamp would promise.",
       "When Persia conquered Lydia, the habit did not vanish. Imperial coinage absorbed the technology and carried it outward, and the stamp traveled with power. Subject cities and provincial mints learned that a typed piece could carry tax and trade farther than unmarked bullion — as long as people believed the type.",
     ],
+    figure: {
+      src: "/images/history/ancient/lydia-first-coins/gold-stater-lion-bull.jpg",
+      alt: "Lydian gold coin with the foreparts of a lion and a bull facing each other.",
+      caption: "Lydian gold coin — a lion and a bull facing each other.",
+      credit: "CC0 — Metropolitan Museum of Art Open Access (26.59.5).",
+      width: 1400,
+      height: 1130,
+      layout: "inset",
+      placement: 1,
+    },
   },
   {
     heading: "What the stamp changed, and what it did not",
     paragraphs: [
-      "A stamp cuts the cost of checking weight and fineness among strangers. You still have to trust the issuer. You no longer have to weigh every lump, if the type is honest and familiar. When that trust holds, coin travels farther than anonymous hacksilver.",
+      "A stamp cuts the cost of checking weight and fineness among strangers. You still have to trust the issuer, and you no longer have to weigh every lump if the type is honest and familiar. When that trust holds, coin travels farther than anonymous hacksilver.",
       "When the type was lightened or the alloy cheated, people went back to the scale, discounted the coin, or hoarded the better pieces. A stamp is a claim, and claims can fail. Greece’s silver network, Rome’s slow debasement, and a later gold coin that held its weight are all stories about what happens after the mint exists. None of them shows that metal needed a king before it could be money.",
-      "Metal first. Stamp second. A king could speed adoption by demanding taxes in his coin. He could not make a distant trader treat a bad alloy as good gold. The market still tested the coin in the hand.",
+      "Metal first. Stamp second. A king could speed adoption by demanding taxes in his coin, but he could not make a distant trader treat a bad alloy as good gold. The market still tested the coin in the hand.",
     ],
   },
   {
