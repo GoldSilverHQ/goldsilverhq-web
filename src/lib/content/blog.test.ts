@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 24);
-    assert.equal(listBlogPosts().length, 24);
+    assert.equal(blogPosts.length, 25);
+    assert.equal(listBlogPosts().length, 25);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/collected-gold-1933-revalued",
         "/blog/john-law-banque-royale-1720",
         "/blog/1933-double-eagle",
         "/blog/france-traded-dollars-for-gold",
@@ -188,8 +189,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 22);
-    assert.equal(listBlogPostsByTag("Metals").length, 16);
+    assert.equal(listBlogPostsByTag("History").length, 23);
+    assert.equal(listBlogPostsByTag("Metals").length, 17);
     assert.equal(listBlogPostsByTag("Markets").length, 6);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -203,6 +204,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "collected-gold-1933-revalued",
       "john-law-banque-royale-1720",
       "1933-double-eagle",
       "france-traded-dollars-for-gold",
@@ -453,6 +455,54 @@ describe("blog section", () => {
         "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
         "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
         "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the 1933 gold-revaluation figures and credits the X Article once", () => {
+    const post = getBlogPost("collected-gold-1933-revalued");
+    assert.ok(post);
+    assert.equal(post.title, "How America Collected Gold in 1933, Then Revalued It");
+    assert.equal(post.date, "2026-10-17");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2111435694715338752");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/collected-gold-1933-revalued"));
+    const body = getBody("blog", "collected-gold-1933-revalued")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[1933 gold recall\]\(\/history\/20th-century\/1933-gold-recall\)/);
+    assert.match(text, /\[the \$20 gold coin America melted, then hunted for decades\]\(\/blog\/1933-double-eagle\)/);
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2111435694715338752/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("collected-gold-1933-revalued");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 3, `expected 3 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/collected-gold-1933-revalued-turn-in-notice.jpg",
+        "/images/blog/collected-gold-1933-revalued-gold-certificate.jpg",
+        "/images/blog/collected-gold-1933-revalued-double-eagle.jpg",
       ],
     );
     for (const f of figures) {

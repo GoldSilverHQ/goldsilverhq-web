@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/collected-gold-1933-revalued",
+    src: "/images/blog/collected-gold-1933-revalued.jpg",
+    ogSrc: "/og/cards/blog-collected-gold-1933-revalued.jpg",
+    alt: "Title card reading How America Collected Gold in 1933, Then Revalued It, with a 1933 gold turn-in notice, a gold certificate, and stacked bars.",
+    caption:
+      "Spring 1933 to January 1934 — gold collected at $20.67 an ounce, then booked at $35.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on how America collected gold in 1933, then revalued it.",
+  },
+  {
     path: "/blog/john-law-banque-royale-1720",
     src: "/images/blog/john-law-banque-royale-1720.jpg",
     ogSrc: "/og/cards/blog-john-law-banque-royale-1720.jpg",
