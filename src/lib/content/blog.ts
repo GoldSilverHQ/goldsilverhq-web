@@ -49,6 +49,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "collected-gold-1933-revalued",
+    title: "How America Collected Gold in 1933, Then Revalued It",
+    summary:
+      "In the spring of 1933 a $20 gold certificate still paid gold coin on demand. Ten months later the Treasury held that gold, and an ounce was $35.",
+    date: "2026-10-17",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "1933 U.S. gold recall", href: "/history/20th-century/1933-gold-recall" },
+      {
+        title: "The $20 gold coin America melted",
+        href: "/blog/1933-double-eagle",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/20th-century/1933-gold-recall",
+      "/blog/1933-double-eagle",
+    ],
+    xArticleUrl: "https://x.com/i/article/2111435694715338752",
+    sourceXId: "2111435694715338752",
+  },
+  {
     slug: "john-law-banque-royale-1720",
     title: "The Scottish Gambler Who Tried to Replace France's Gold With Paper",
     summary:

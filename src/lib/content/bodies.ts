@@ -5539,6 +5539,155 @@ const franceTradedDollarsForGold: Section[] = [
   },
 ];
 
+const collectedGold1933Revalued: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "In the spring of **1933**, an American could still walk into a bank with a $20 gold certificate — paper money that promised gold coin on demand — and expect metal in return. Within ten months, that same gold was in the hands of the United States Treasury, and the government had raised its official price from **$20.67** to **$35** an ounce.",
+      "The certificate was paper. The promise on it was gold coin, payable when the holder asked. Ten months later that gold was Treasury gold, and the official ounce had moved from **$20.67** to **$35**.",
+      "The order of those two steps is the whole story. First Washington collected the gold at the old price. Only then did it change the price.",
+    ],
+  },
+  {
+    heading: "A banking panic, then a holiday",
+    paragraphs: [
+      "The country was in a banking panic. By the day Franklin D. Roosevelt took office, **4 March 1933**, banks in dozens of states had closed or limited withdrawals, and people were trading paper for gold while they still could. Two days later Roosevelt declared a national bank holiday and shut every bank in the country.",
+      "**4 March 1933** is the day he took office. Dozens of states already had banks closed or paying out only part of a withdrawal. Two days later, **6 March**, the holiday shut every bank in the country. While a window was still open, people were trading paper for gold.",
+    ],
+  },
+  {
+    heading: "The April order",
+    paragraphs: [
+      "On **5 April 1933** he signed Executive Order 6102, \"Forbidding the Hoarding of Gold Coin, Gold Bullion and Gold Certificates.\" Everyone had to deliver their gold coin, bullion and gold certificates on or before **1 May 1933**, to a Federal Reserve Bank or to any member bank of the Federal Reserve System. In return they received, in the order's words, \"an equivalent amount of any other form of coin or currency.\" The official price behind that exchange was **$20.67** an ounce, the rate set by the Gold Act of **1900**. That order is the [1933 gold recall](/history/20th-century/1933-gold-recall).",
+      "**5 April** is the signature. **1 May** is the last day to deliver the gold. The return was other coin or other currency, priced at **$20.67** an ounce, the Gold Act of 1900 rate. The printed notice is that order in the form people were shown.",
+    ],
+    figure: {
+      src: "/images/blog/collected-gold-1933-revalued-turn-in-notice.jpg",
+      alt: "A 1933 printed notice headed GOLD, ordering Americans to deliver gold coin, gold bullion, and gold certificates by May 1.",
+      caption:
+        "The 1933 notice ordering Americans to deliver their gold coin, bullion and gold certificates by 1 May 1933. U.S. Government Printing Office.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on how America collected gold in 1933, then revalued it.",
+      width: 671,
+      height: 377,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Narrow exceptions",
+    paragraphs: [
+      "There were exceptions, and they were narrow. A person could keep up to **$100** in gold coin and certificates in total. Coins with a recognised special value to collectors of rare and unusual coins were exempt. So was gold needed for \"legitimate and customary use in industry, profession or art\" — the dentist, the jeweller and the sign-maker. Wilfully breaking the order could bring a fine of up to **$10,000**, up to ten years in prison, or both.",
+      "**$100** covers coin and certificates together. Coins of recognised special value to collectors of rare and unusual coins could be kept. So could gold for the dentist, the jeweller, and the sign-maker. Wilful breaking could mean up to **$10,000**, up to ten years, or both.",
+      "A **$20** gold certificate of the series of **1928** had been redeemable in gold coin on demand. Under the April order, paper like that had to be handed in.",
+    ],
+    figure: {
+      src: "/images/blog/collected-gold-1933-revalued-gold-certificate.jpg",
+      alt: "A Series of 1928 twenty-dollar gold certificate with an orange seal and a promise to pay the bearer in gold coin.",
+      caption:
+        "A $20 gold certificate, series of 1928. Paper like this, once redeemable in gold coin on demand, had to be handed in under the 1933 order. National Museum of American History / Smithsonian.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on how America collected gold in 1933, then revalued it.",
+      width: 1200,
+      height: 1055,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "The dollar pushed down in stages",
+    paragraphs: [
+      "Through the autumn of **1933** the administration pushed the dollar down in stages. From October, the Reconstruction Finance Corporation — a government lending agency — bought gold at prices raised step by step. Paying more dollars for the same ounce meant each dollar was worth less gold.",
+      "From October the Reconstruction Finance Corporation, a government lending agency, raised step by step the price at which it took gold. More dollars for the same ounce meant less gold in each dollar. The public had already turned gold in at **$20.67**.",
+    ],
+  },
+  {
+    heading: "Title moves to the Treasury",
+    paragraphs: [
+      "Then, in January **1934**, Congress locked the new arrangement into law. The Gold Reserve Act, signed on **30 January**, vested title to all monetary gold in the United States — not only the gold handed in by the public, but also the gold coin and bullion held by the Federal Reserve Banks themselves. The Federal Reserve received credits on the Treasury's books, payable in a new form of gold certificate that the public could not redeem for gold. Ownership of the nation's monetary gold had moved, by law, to the Treasury.",
+      "Title covered the public's gold and the Federal Reserve Banks' own coin and bullion. The Federal Reserve got credits, payable in gold certificates the public could not redeem. The Treasury held the monetary gold.",
+    ],
+  },
+  {
+    heading: "A lighter dollar",
+    paragraphs: [
+      "The next day, **31 January 1934**, Roosevelt issued Proclamation 2072. It fixed the weight of the gold dollar at **15 5/21 grains**, nine-tenths fine. In plain terms, a dollar was now defined as **59.06 percent** of its former weight in gold — **25.8 grains** before. Turn that definition around, and one troy ounce of gold was worth **$35** instead of **$20.67**.",
+      "Proclamation 2072, issued the next day, set the gold dollar at **15 5/21 grains**, nine-tenths fine. That weight is **59.06 percent** of the old **25.8 grains**. Turned around, a troy ounce is **$35** instead of **$20.67**.",
+    ],
+  },
+  {
+    heading: "One hundred ounces",
+    paragraphs: [
+      "Do the arithmetic on a small parcel and the mechanism becomes clear. One hundred ounces handed in during **1933** brought **$2,067** in other money. After **31 January 1934**, those same 100 ounces stood on the Treasury's books at **$3,500**. The **$1,433** difference did not go back to the person who had surrendered the gold. The White House said so at the time: the \"profit\" from reducing the gold content of the dollar \"accrues to the United States Treasury.\"",
+      "The same hundred ounces are **$2,067** at the turn-in and **$3,500** on the books after **31 January 1934**. The **$1,433** stayed with the Treasury. The White House called it a profit from reducing the gold content of the dollar.",
+    ],
+  },
+  {
+    heading: "A profit without a new ounce",
+    paragraphs: [
+      "Across the whole national stock, that bookkeeping profit came to about **$2.8 billion**. The government's gold, valued at roughly **$4.2 billion** at the old price, was worth about **$7.0 billion** at the new one — without a single new ounce being mined.",
+      "About **$2.8 billion** is the gap between roughly **$4.2 billion** at the old price and about **$7.0 billion** at the new one. No new ounce was mined. The ounces were the ones already in hand.",
+    ],
+  },
+  {
+    heading: "Where the windfall went",
+    paragraphs: [
+      "Congress had decided where most of that windfall would go. Two billion dollars became the Exchange Stabilization Fund, controlled by the Secretary of the Treasury with the President's approval, to deal in gold and foreign exchange to stabilise \"the exchange value of the dollar.\" The revaluation had paid for a permanent Treasury fund to defend the new dollar. The balance went into the Treasury's general fund.",
+      "Two billion dollars of that profit became the Exchange Stabilization Fund. The Secretary of the Treasury controlled it, with the President's approval, to deal in gold and foreign exchange and to stabilise the exchange value of the dollar. The balance went into the Treasury's general fund. The revaluation had paid for a standing fund to defend the new dollar.",
+    ],
+  },
+  {
+    heading: "The direction reversed",
+    paragraphs: [
+      "From **1 February 1934** the Treasury stood ready, through the Federal Reserve Bank of New York acting as its agent, to take gold delivered to United States mints and assay offices at **$35** a fine troy ounce, less mint and handling charges. The direction of travel had reversed. Before **1933**, the citizen could demand gold for paper. After **1934**, the government turned gold into dollars — at a price it had set after the gold was already in its vaults.",
+      "The Federal Reserve Bank of New York was the Treasury's agent. Delivery was at mints and assay offices, at **$35** a fine troy ounce less mint and handling charges. The old demand — gold for paper — had become a government price, set after the metal was already in the vaults.",
+      "The **$20** coin of that year is the Saint-Gaudens double eagle, struck in the year gold coinage ended. What happened to those coins after they were struck is a separate note, [the $20 gold coin America melted, then hunted for decades](/blog/1933-double-eagle).",
+    ],
+    figure: {
+      src: "/images/blog/collected-gold-1933-revalued-double-eagle.jpg",
+      alt: "A 1933 Saint-Gaudens double eagle, the standing Liberty design, dated MCMXXXIII.",
+      caption:
+        "A 1933 Saint-Gaudens double eagle, a $20 gold coin struck in the year gold coinage ended. National Numismatic Collection.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on how America collected gold in 1933, then revalued it.",
+      width: 1200,
+      height: 607,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Three decades at $35",
+    paragraphs: [
+      "That **$35** price then held as America's official gold price for more than three decades, until the link between the dollar and gold for foreign governments was ended in **1971**. But the decisive move had been made in ten months in **1933** and **1934**, and it was a sequence, not a single act: close the banks, collect the metal at **$20.67**, take legal title to all of it, and only then announce that an ounce was worth **$35**.",
+      "That **$35** held until **1971**, when the link for foreign governments ended. The person who had turned gold in during 1933 did not get a window back. The sequence was already finished: banks closed, metal collected at **$20.67**, title taken, and only then an ounce at **$35**.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: [
+      "The panic, the turn-in at the old price, the title, and the new ounce.",
+    ],
+    list: [
+      "**4 March 1933.** Roosevelt takes office. Banks in dozens of states have closed or limited withdrawals.",
+      "**6 March 1933.** A national bank holiday shuts every bank.",
+      "**5 April 1933.** Executive Order 6102. Gold coin, bullion, and gold certificates are due by 1 May, exchanged at $20.67 an ounce.",
+      "**1 May 1933.** Last day to deliver. Up to $100 in coin and certificates may be kept. Rare collector coins, and gold for industry, profession, or art, are exempt. Wilful breaking: up to $10,000, ten years, or both.",
+      "**October 1933.** The Reconstruction Finance Corporation takes gold at prices raised step by step.",
+      "**30 January 1934.** The Gold Reserve Act vests title to all monetary gold in the United States. The Federal Reserve receives credits the public cannot redeem for gold.",
+      "**31 January 1934.** Proclamation 2072. The gold dollar is 15 5/21 grains, nine-tenths fine — 59.06 percent of the old 25.8 grains. An ounce is $35.",
+      "**One hundred ounces.** $2,067 at the turn-in; $3,500 on the Treasury's books. The $1,433 difference accrues to the Treasury.",
+      "**The stock.** About $2.8 billion of bookkeeping profit. Roughly $4.2 billion becomes about $7.0 billion, with no new ounce mined. Two billion dollars goes to the Exchange Stabilization Fund. The balance goes to the general fund.",
+      "**1 February 1934.** The Treasury, through the Federal Reserve Bank of New York, takes gold at mints and assay offices at $35 a fine troy ounce, less charges.",
+      "**1971.** The official $35 price has held for more than three decades. The dollar–gold link for foreign governments ends.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Close the banks. Collect the metal at $20.67. Take legal title to all of it. Only then announce that an ounce is worth $35. The gold was in the vaults before the price moved, and the difference stayed with the Treasury.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2111435694715338752).",
+    ],
+  },
+];
+
 const johnLawBanqueRoyale1720: Section[] = [
   {
     heading: "",
@@ -5850,6 +5999,7 @@ const doubleEagle1933: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/collected-gold-1933-revalued": collectedGold1933Revalued,
   "blog/john-law-banque-royale-1720": johnLawBanqueRoyale1720,
   "blog/1933-double-eagle": doubleEagle1933,
   "blog/france-traded-dollars-for-gold": franceTradedDollarsForGold,

@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-11T10:20:00.000Z",
+  "updatedAt": "2026-10-17T18:30:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2111435694715338752",
+      "postId": "2111477857549455475",
+      "title": "How America Collected Gold in 1933, Then Revalued It",
+      "status": "mirrored",
+      "slug": "collected-gold-1933-revalued",
+      "sitePath": "/blog/collected-gold-1933-revalued",
+      "xArticleUrl": "https://x.com/i/article/2111435694715338752",
+      "publishedAt": "2026-10-17T15:22:05.000Z",
+      "mirroredAt": "2026-10-17T18:30:00.000Z",
+      "inlineMediaCount": 3,
+      "inlineNote": "Three MEDIA entities in article order: the 1933 turn-in notice after Executive Order 6102; the Series of 1928 $20 gold certificate after the narrow exceptions; the 1933 Saint-Gaudens double eagle after the 1 February 1934 purchase window. One TWEET embed (2105757141566882115) is an animated price card, not a MEDIA entity, and is not a still on the page."
+    },
     {
       "articleId": "2108961807880867840",
       "postId": "2109196321257140513",

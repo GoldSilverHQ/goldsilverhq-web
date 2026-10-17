@@ -83,6 +83,7 @@ export const PHASE1_SITEMAP_PATHS = [
   "/markets/gold-silver-ratio",
   "/markets/physical-silver-demand-by-country",
   "/blog",
+  "/blog/collected-gold-1933-revalued",
   "/blog/john-law-banque-royale-1720",
   "/blog/1933-double-eagle",
   "/blog/france-traded-dollars-for-gold",
