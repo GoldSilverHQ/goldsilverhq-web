@@ -1,9 +1,22 @@
 {
-  "updatedAt": "2026-10-17T18:30:00.000Z",
+  "updatedAt": "2026-10-20T03:10:00.000Z",
   "account": "GoldSilverHQ",
   "accountUserId": "1744721184623890432",
   "notes": "Durable seen-list for the X→blog mirror. Key = X Article id from /i/article/{id}. status mirrored = on site; skipped = intentionally not mirrored (e.g. weekly stock roundups).",
   "articles": [
+    {
+      "articleId": "2112258595009994752",
+      "postId": "2112259700934779343",
+      "title": "The Peseta Was Born as Real Silver. It Ended at 166 to the Euro",
+      "status": "mirrored",
+      "slug": "peseta-born-as-real-silver",
+      "sitePath": "/blog/peseta-born-as-real-silver",
+      "xArticleUrl": "https://x.com/i/article/2112258595009994752",
+      "publishedAt": "2026-10-19T19:08:51.000Z",
+      "mirroredAt": "2026-10-20T03:10:00.000Z",
+      "inlineMediaCount": 4,
+      "inlineNote": "Four MEDIA entities in article order: the 1869 provisional cabinet (Jean Laurent) after Figuerola takes the treasury; the Latin Monetary Union map after the 1865 standards; the Gaceta de Madrid page of 20 October 1868 after the decree's weights; the silver 5 pesetas of 1870 after the duro and the reverse legend. No TWEET embeds."
+    },
     {
       "articleId": "2111435694715338752",
       "postId": "2111477857549455475",

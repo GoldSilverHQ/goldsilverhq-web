@@ -40,8 +40,8 @@ function bodyWordCount(slug: string) {
 
 describe("blog section", () => {
   it("ships ready posts including the 1980 rules note, LTCM, and Newton with tags and source ids", () => {
-    assert.equal(blogPosts.length, 25);
-    assert.equal(listBlogPosts().length, 25);
+    assert.equal(blogPosts.length, 26);
+    assert.equal(listBlogPosts().length, 26);
     const greenspan = getBlogPost("greenspan-1966-print-money");
     assert.ok(greenspan);
     assert.equal(
@@ -157,6 +157,7 @@ describe("blog section", () => {
     assert.deepEqual(
       blogPostSitemapPaths(),
       [
+        "/blog/peseta-born-as-real-silver",
         "/blog/collected-gold-1933-revalued",
         "/blog/john-law-banque-royale-1720",
         "/blog/1933-double-eagle",
@@ -189,8 +190,8 @@ describe("blog section", () => {
   it("filters by tag and exposes the closed tag set", () => {
     assert.deepEqual([...BLOG_TAGS], ["History", "Metals", "Markets", "Ideas"]);
     assert.deepEqual(activeBlogTags(), ["History", "Metals", "Markets", "Ideas"]);
-    assert.equal(listBlogPostsByTag("History").length, 23);
-    assert.equal(listBlogPostsByTag("Metals").length, 17);
+    assert.equal(listBlogPostsByTag("History").length, 24);
+    assert.equal(listBlogPostsByTag("Metals").length, 18);
     assert.equal(listBlogPostsByTag("Markets").length, 6);
     assert.equal(listBlogPostsByTag("Ideas").length, 3);
   });
@@ -204,6 +205,7 @@ describe("blog section", () => {
 
   it("keeps mirrored site essays longer than their X Articles", () => {
     for (const slug of [
+      "peseta-born-as-real-silver",
       "collected-gold-1933-revalued",
       "john-law-banque-royale-1720",
       "1933-double-eagle",
@@ -455,6 +457,61 @@ describe("blog section", () => {
         "/images/blog/gold-futures-same-day-1974-ownership-card.jpg",
         "/images/blog/gold-futures-same-day-1974-ford-portrait.jpg",
         "/images/blog/gold-futures-same-day-1974-state-cable.jpg",
+      ],
+    );
+    for (const f of figures) {
+      assert.match(f!.credit ?? "", /GoldSilverHQ X Article/);
+      assert.ok(f!.alt.length > 20);
+      assert.ok(f!.caption.length > 10);
+      assert.ok(existsSync(join(publicRoot, f!.src.replace(/^\//, ""))));
+    }
+  });
+
+  it("embeds the peseta figures and credits the X Article once", () => {
+    const post = getBlogPost("peseta-born-as-real-silver");
+    assert.ok(post);
+    assert.equal(
+      post.title,
+      "The Peseta Was Born as Real Silver. It Ended at 166 to the Euro",
+    );
+    assert.equal(post.date, "2026-10-19");
+    assert.deepEqual(post.tags, ["History", "Metals"]);
+    assert.equal(post.sourceXId, "2112258595009994752");
+    assert.ok(
+      post.summary.length >= 140 && post.summary.length <= 160,
+      `summary length ${post.summary.length}`,
+    );
+    assert.ok(articleHeroForPath("/blog/peseta-born-as-real-silver"));
+    const body = getBody("blog", "peseta-born-as-real-silver")!;
+    const text = body
+      .flatMap((s) => [...s.paragraphs, ...(s.list ?? []), ...(s.callout?.paragraphs ?? [])])
+      .join("\n");
+    assert.doesNotMatch(
+      text,
+      /page carries|fact page|sits under|if you arrived|we do not sell|buy (gold|silver)|hinges?|pillars?|stock tip|should buy/i,
+    );
+    assert.match(text, /\[bimetallism\]\(\/history\/silver\/bimetallism\)/);
+    assert.match(
+      text,
+      /\[how Spanish silver became the world's first global money\]\(\/blog\/spanish-silver-first-global-money\)/,
+    );
+    assert.equal((text.match(/\]\(\/history\//g) ?? []).length, 1);
+    assert.equal(
+      (text.match(/x\.com\/i\/article\/2112258595009994752/g) ?? []).length,
+      1,
+    );
+    const words = bodyWordCount("peseta-born-as-real-silver");
+    assert.ok(words <= 1800, `expected site essay ≤1800 words, got ${words}`);
+    assert.ok(words > 1200, `expected site essay >1200 words, got ${words}`);
+    const figures = body.map((s) => s.figure).filter(Boolean);
+    assert.equal(figures.length, 4, `expected 4 inline figures, got ${figures.length}`);
+    assert.deepEqual(
+      figures.map((f) => f!.src),
+      [
+        "/images/blog/peseta-born-as-real-silver-provisional-cabinet.jpg",
+        "/images/blog/peseta-born-as-real-silver-latin-union-map.jpg",
+        "/images/blog/peseta-born-as-real-silver-gaceta-decree.jpg",
+        "/images/blog/peseta-born-as-real-silver-five-pesetas-1870.jpg",
       ],
     );
     for (const f of figures) {

@@ -5539,6 +5539,154 @@ const franceTradedDollarsForGold: Section[] = [
   },
 ];
 
+const pesetaBornAsRealSilver: Section[] = [
+  {
+    heading: "",
+    paragraphs: [
+      "On **19 October 1868**, three weeks after a revolution chased Queen Isabella II into France, Spain's new finance minister signed a decree that made the peseta the country's money. It lasted more than 130 years. It began as a fixed weight of silver and gold, and it ended at **166.386** pesetas to one euro.",
+      "**19 October 1868** is the day of the signature. The three weeks are the gap since the queen left the country. More than 130 years is the life of the name. The beginning is a weight of silver and a weight of gold. The end is a locked conversion: **166.386** pesetas for one euro.",
+      "A holder of the first coins could read the metal on the piece itself. A holder of the last pesetas had a rate against the euro.",
+    ],
+  },
+  {
+    heading: "A professor inherits the treasury",
+    paragraphs: [
+      "The minister was Laureano Figuerola, a Catalan economics professor and free trader who had taken over the treasury on **8 October**. The uprising had begun with a navy mutiny at Cádiz in September. After the queen's army lost at Alcolea on **28 September**, crowds filled Madrid's Puerta del Sol, and on **30 September** Isabella crossed the border. A provisional government under General Francisco Serrano took charge, and Figuerola inherited the treasury, along with a country full of coins bearing the deposed queen's face.",
+      "**8 October** is the day Figuerola took the treasury. The mutiny started at Cádiz. Alcolea, on **28 September**, is where the queen's army lost, and **30 September** is when Isabella crossed into France. Serrano headed the provisional government. The coins still in pockets carried her face.",
+      "A photograph of that government in **1869** places Figuerola at the far left, with Prim, Serrano, Sagasta, and the rest of the cabinet. Jean Laurent took the picture.",
+    ],
+    figure: {
+      src: "/images/blog/peseta-born-as-real-silver-provisional-cabinet.jpg",
+      alt: "Group portrait of Spain's Provisional Government in 1869, men in dark coats seated and standing around a table.",
+      caption:
+        "The Provisional Government in 1869, with Figuerola at far left alongside Prim, Serrano, Sagasta and the rest of the cabinet. Photograph by Jean Laurent.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the peseta that was born as real silver.",
+      width: 2138,
+      height: 1090,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Why the queen's face had to leave the coins",
+    paragraphs: [
+      "His decree said plainly why the coins had to go. The money of every era, it argued, carries the stamp of whoever rules. Since Spain now had \"no power but the Nation,\" the new coins \"should show to the eye only the figure of the homeland and the arms of Spain,\" with the Bourbon lilies wiped from the shield \"forever.\"",
+      "The argument is that a coin shows who rules. The phrase for the new authority is \"no power but the Nation.\" The instruction for the design is visual: the figure of the homeland, and the arms of Spain. The Bourbon lilies were to come off the shield, and the decree said \"forever.\"",
+    ],
+  },
+  {
+    heading: "The same weight as a French franc",
+    paragraphs: [
+      "Since the country had to pay for new coins anyway, Figuerola used the moment to rebuild the whole system. He adopted the coin standards that France, Belgium, Italy and Switzerland had signed on **23 December 1865**, the pact known as the Latin Monetary Union. Spain did not formally join and kept its \"freedom of action.\" A peseta was struck to the same weight and fineness as a French franc.",
+      "New coins were going to be paid for anyway, because the queen's face had to go. Figuerola used that expense to change the standard. The pact is **23 December 1865**, signed by France, Belgium, Italy, and Switzerland. Spain stayed outside formal membership, kept the words \"freedom of action,\" and still matched a French franc in weight and fineness.",
+      "The map that goes with that choice shows Spain beside the four founding members, and it marks two cities: Cádiz, where the revolt began, and Paris, where the 1865 convention was signed.",
+    ],
+    figure: {
+      src: "/images/blog/peseta-born-as-real-silver-latin-union-map.jpg",
+      alt: "Map of Spain, France, Belgium, Italy, and Switzerland, with Cádiz and Paris marked.",
+      caption:
+        "Spain and the four founding members of the Latin Monetary Union, with Cádiz, where the revolt began, and Paris, where the 1865 convention was signed.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the peseta that was born as real silver.",
+      width: 1600,
+      height: 1200,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "What the decree fixed",
+    paragraphs: [
+      "The decree then wrote the unit down as a list of weights, fineness, and rules about who had to accept which coins.",
+      "One peseta equals **100** céntimos. The silver five-peseta coin is **25 grams**, at **900** parts silver per **1,000**. Gold coins run from **5** to **100** pesetas, also **900** fine, and the **100**-peseta piece weighs **32.258 grams**.",
+      "Gold coins, and the silver five pesetas, are legal tender in any amount. Anyone can bring metal to the mint and have it coined free of charge. Those are the full-weight pieces: unlimited acceptance, and coinage open to metal the public brought in.",
+      "Smaller silver coins hold less silver, **835** per **1,000**. The state alone strikes them. They are capped at **6** pesetas per inhabitant. Nobody has to take more than **50** pesetas of them in one payment. The small coins are a limited tender, with less silver in each piece, and a ceiling on how many the mint may strike.",
+      "The system becomes mandatory on **31 December 1870**. Until that day the decree is the rule on paper. From that day the new coins are the money the country is required to use.",
+      "The printed page is the Gaceta de Madrid for **20 October 1868**, page 7, the day after the signature. Article 1 reads: \"In all Spanish dominions the monetary unit shall be the peseta.\"",
+    ],
+    figure: {
+      src: "/images/blog/peseta-born-as-real-silver-gaceta-decree.jpg",
+      alt: "Printed page of the Gaceta de Madrid for 20 October 1868, showing the decree that makes the peseta the monetary unit.",
+      caption:
+        "The decree as printed in the Gaceta de Madrid, October 20, 1868, page 7: \"Article 1. In all Spanish dominions the monetary unit shall be the peseta.\"",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the peseta that was born as real silver.",
+      width: 1885,
+      height: 1223,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "An old name on a new coin",
+    paragraphs: [
+      "The name was old. \"Peseta\" had long been the everyday word for a coin worth a fifth of a peso. The big five-peseta silver piece took over the old peso's nickname, the duro, \"the hard one,\" and Spaniards kept counting in duros until **2002**. Its reverse said exactly what it held: \"LEY 900 MILESIMAS, 40 PIEZAS EN KILOG,\" meaning **900** fine, **40** coins to the kilogram.",
+      "A fifth of a peso is what the word peseta had already meant in daily speech. The peso was the silver coin whose wider story is [how Spanish silver became the world's first global money](/blog/spanish-silver-first-global-money). The five-peseta piece inherited that coin's nickname, the duro. \"The hard one\" is what the nickname means. Counting in duros lasted until **2002**.",
+      "The reverse did not leave the contents to a nickname. **900** fine and **40** coins to the kilogram are the same **25 grams** the decree had already set for the five-peseta piece. A coin of **1870**, one of the first under the new system, shows seated Hispania on the front and the arms of Spain on the back.",
+    ],
+    figure: {
+      src: "/images/blog/peseta-born-as-real-silver-five-pesetas-1870.jpg",
+      alt: "Both sides of a silver five-peseta coin of 1870: seated Hispania, and the crowned arms of Spain.",
+      caption:
+        "A silver 5 pesetas of 1870, one of the first issues under the new system: seated Hispania on the front, the arms of Spain on the back.",
+      credit:
+        "Inline image from the GoldSilverHQ X Article on the peseta that was born as real silver.",
+      width: 1999,
+      height: 1000,
+      layout: "breakout",
+    },
+  },
+  {
+    heading: "Fifteen and a half to one",
+    paragraphs: [
+      "The trouble was the fixed ratio underneath. The system valued one kilogram of gold at **15.5** kilograms of silver. After **1873** the world price of silver began to slide, and by **1876** the market ratio was about **18 to one**. The Latin Monetary Union's members stopped coining silver freely in **1878** and drifted toward gold. Spain had already stopped private silver coinage in **1876**, and it ignored its own currency board's advice to adopt the gold standard.",
+      "**15.5** kilograms of silver to one kilogram of gold is the legal ratio. By **1876** the market stood near **18 to one**. In **1878** the Union's members stopped free coinage of silver and drifted toward gold.",
+      "With silver overvalued at the mint, gold coins disappeared from circulation. People spent the overvalued silver and kept the gold. A legal ratio the market has left behind is the subject of [bimetallism](/history/silver/bimetallism).",
+    ],
+  },
+  {
+    heading: "Paper fills the gap",
+    paragraphs: [
+      "Paper filled the gap. In **1874** the Bank of Spain won the sole right to issue banknotes. In the summer of **1883**, after foreign investment dried up following the Paris stock market crash of **1882**, the Bank stopped paying gold for its notes. It never started again. The peseta now floated.",
+      "**1874** is the year the Bank of Spain became the only issuer of banknotes. In the summer of **1883**, after the Paris crash of **1882** dried up foreign investment, gold payment for the notes stopped and did not resume.",
+      "By **1898**, with the war against the United States paid for with heavy borrowing, a British pound cost almost **40** pesetas, against about **25** at the old franc parity.",
+    ],
+  },
+  {
+    heading: "The duro outlasts the gold link",
+    paragraphs: [
+      "The silver duro outlived the gold link by more than half a century. In **1939**, as the Civil War ended, the state stripped silver coins of their legal tender status. On **1 January 1999**, the peseta was locked at **166.386** to the euro, and after **28 February 2002**, it was no longer legal tender.",
+      "More than half a century runs from the end of gold payment to the day silver coin lost legal tender. **1939** is when the Civil War ended and that status was stripped. **1 January 1999** locks the name at **166.386** to one euro. After **28 February 2002** the peseta no longer paid a debt.",
+    ],
+  },
+  {
+    heading: "The dates in order",
+    paragraphs: [
+      "The revolution, the decree, the ratio, the paper, and the euro lock.",
+    ],
+    list: [
+      "**September 1868.** A navy mutiny at Cádiz. On 28 September the queen's army loses at Alcolea. On 30 September Isabella II crosses into France.",
+      "**8 October 1868.** Figuerola takes the treasury under Serrano's provisional government.",
+      "**19 October 1868.** The decree makes the peseta the country's money. New coins are to show the homeland and the arms of Spain.",
+      "**20 October 1868.** The Gaceta de Madrid, page 7, prints Article 1: the peseta is the monetary unit in all Spanish dominions.",
+      "**23 December 1865.** France, Belgium, Italy, and Switzerland sign the Latin Monetary Union. Spain stays outside, keeps its freedom of action, and matches the franc in weight and fineness.",
+      "**The weights.** 100 céntimos to the peseta. Silver five pesetas: 25 grams, 900 fine. Gold from 5 to 100 pesetas, 900 fine. The 100-peseta piece weighs 32.258 grams.",
+      "**Legal tender.** Gold coins and the silver five pesetas pass in any amount, and metal brought to the mint is coined free of charge. Smaller silver is 835 fine, struck only by the state, capped at 6 pesetas per inhabitant, and limited to 50 pesetas in one payment.",
+      "**31 December 1870.** The system becomes mandatory. A five pesetas of 1870 shows seated Hispania and the arms of Spain. The reverse reads LEY 900 MILESIMAS, 40 PIEZAS EN KILOG. The duro nickname lasts until 2002.",
+      "**1873 to 1878.** After 1873 silver's world price slides. By 1876 the market is about 18 to one, against 15.5 kilograms of silver per kilogram of gold. Spain stops private silver coinage in 1876. The Union stops free silver coinage in 1878. People spend the silver and keep the gold.",
+      "**1874 and 1883.** The Bank of Spain becomes the only banknote issuer in 1874. In the summer of 1883, after the Paris crash of 1882, it stops paying gold for its notes. The peseta floats.",
+      "**1898.** War against the United States, paid for with heavy borrowing. A pound costs almost 40 pesetas, against about 25 at the franc parity.",
+      "**1939.** The Civil War ends. Silver coins lose legal tender. The duro has outlived the gold link by more than half a century.",
+      "**1 January 1999.** The peseta is locked at 166.386 to the euro. After 28 February 2002 it is no longer legal tender.",
+    ],
+  },
+  {
+    heading: "Close",
+    paragraphs: [
+      "Figuerola's duro had told its owner exactly what it held: **25 grams**, **900** fine, **40** to the kilogram. None of the paper pesetas that came after it could say the same.",
+      "A shorter version of this note first appeared as an [X Article](https://x.com/i/article/2112258595009994752).",
+    ],
+  },
+];
+
 const collectedGold1933Revalued: Section[] = [
   {
     heading: "",
@@ -5999,6 +6147,7 @@ const doubleEagle1933: Section[] = [
 ];
 
 const bodies: Record<string, Section[]> = {
+  "blog/peseta-born-as-real-silver": pesetaBornAsRealSilver,
   "blog/collected-gold-1933-revalued": collectedGold1933Revalued,
   "blog/john-law-banque-royale-1720": johnLawBanqueRoyale1720,
   "blog/1933-double-eagle": doubleEagle1933,
