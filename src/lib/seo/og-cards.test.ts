@@ -19,7 +19,7 @@ const root = join(import.meta.dirname, "../../..");
 describe("branded OG share cards", () => {
   it("resolves metadata for every Phase-1 sitemap URL", () => {
     const pages = phase1SharePages();
-    assert.equal(pages.length, 296);
+    assert.equal(pages.length, 297);
     assert.equal(pages.length, PHASE1_SITEMAP_PATHS.length);
     for (const page of pages) {
       assert.ok(page.cardTitle.length > 3, page.path);
@@ -89,7 +89,7 @@ describe("branded OG share cards", () => {
         join(root, "public", ogImagePathForRouteOrDefault(path).replace(/^\//, "")),
       ),
     ];
-    assert.equal(files.length, 297);
+    assert.equal(files.length, 298);
     for (const file of files) {
       assert.ok(existsSync(file), `missing ${file}`);
       const size = statSync(file).size;

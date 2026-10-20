@@ -357,6 +357,16 @@ export const ARTICLE_HEROES: readonly ArticleHero[] = [
   },
   // Blog
   {
+    path: "/blog/peseta-born-as-real-silver",
+    src: "/images/blog/peseta-born-as-real-silver.jpg",
+    ogSrc: "/og/cards/blog-peseta-born-as-real-silver.jpg",
+    alt: "Title card reading The Peseta Was Born as Real Silver. It Ended at 166 to the Euro, with a silver five-peseta coin and a page of the 1868 decree.",
+    caption:
+      "19 October 1868 — Spain's finance minister signs the decree that makes the peseta the country's money.",
+    credit:
+      "Title image from the GoldSilverHQ X Article on the peseta that was born as real silver.",
+  },
+  {
     path: "/blog/collected-gold-1933-revalued",
     src: "/images/blog/collected-gold-1933-revalued.jpg",
     ogSrc: "/og/cards/blog-collected-gold-1933-revalued.jpg",

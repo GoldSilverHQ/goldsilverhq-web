@@ -49,6 +49,29 @@ export type BlogPost = {
 /** Published catalog. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "peseta-born-as-real-silver",
+    title: "The Peseta Was Born as Real Silver. It Ended at 166 to the Euro",
+    summary:
+      "On 19 October 1868 Spain made the peseta its money, a fixed weight of silver and gold. More than 130 years later it was locked at 166.386 to one euro.",
+    date: "2026-10-19",
+    status: "ready",
+    tags: ["History", "Metals"],
+    paragraphs: [],
+    related: [
+      { title: "Bimetallism", href: "/history/silver/bimetallism" },
+      {
+        title: "How Spanish silver became the world's first global money",
+        href: "/blog/spanish-silver-first-global-money",
+      },
+    ],
+    relatedArticlePaths: [
+      "/history/silver/bimetallism",
+      "/blog/spanish-silver-first-global-money",
+    ],
+    xArticleUrl: "https://x.com/i/article/2112258595009994752",
+    sourceXId: "2112258595009994752",
+  },
+  {
     slug: "collected-gold-1933-revalued",
     title: "How America Collected Gold in 1933, Then Revalued It",
     summary:
