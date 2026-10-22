@@ -1,24 +1,24 @@
 {
-  "refreshedAt": "2026-10-21T11:47:51.800Z",
+  "refreshedAt": "2026-10-22T11:51:30.064Z",
   "metrics": {
     "usM2": {
       "bn": 23342.8,
       "asOf": "2026-08",
       "source": "FRED M2SL",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "cpi": {
       "value": 336.298,
       "asOf": "2026-09",
       "yoyPct": 3.7,
       "source": "FRED CPIAUCSL",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "eurM3": {
       "value": 17628992353019.54,
       "asOf": "2026-08",
       "source": "ECB BSI M3",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "fx": {
       "eurUsd": 1.1231,
@@ -26,7 +26,7 @@
       "jpyUsd": 158,
       "asOf": "2026-10-16",
       "source": "FRED DEXUSEU / DEXCHUS / DEXJPUS",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "lbma": {
       "history": [
@@ -628,12 +628,12 @@
       "staleSince": "2026-10-01"
     },
     "usDebt": {
-      "totalUsd": 40396401120485.05,
-      "publicUsd": 32533474452928.98,
-      "intragovUsd": 7862926667556.07,
-      "asOf": "2026-10-19",
+      "totalUsd": 40439546016039.08,
+      "publicUsd": 32566198492042.62,
+      "intragovUsd": 7873347523996.46,
+      "asOf": "2026-10-20",
       "source": "US Treasury Fiscal Data, Debt to the Penny",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "usInterest": {
       "ttmGrossUsd": 1360396866366,
@@ -642,14 +642,14 @@
       "fiscalYear": 2026,
       "asOf": "2026-09-30",
       "source": "US Treasury Fiscal Data, Interest Expense on the Public Debt Outstanding",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "usTreasuryGold": {
       "oz": 261498926.241,
       "bookUsd": 11041059957.9,
       "asOf": "2026-09-30",
       "source": "US Treasury Fiscal Data, U.S. Treasury-Owned Gold",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "usDebtHistory": {
       "debtGdpPct": 122.6,
@@ -712,7 +712,7 @@
         "2025": 38514009000000
       },
       "source": "FRED GFDEGDQ188S / GFDEBTN",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "imfGovDebt": {
       "year": 2025,
@@ -727,7 +727,7 @@
         }
       },
       "source": "IMF World Economic Outlook (DataMapper GGXWDG_NGDP × NGDPD)",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     },
     "comexOpenInterest": {
       "gold": {
@@ -741,7 +741,7 @@
         "asOf": "2026-10-13"
       },
       "source": "CFTC Commitments of Traders (futures only), COMEX",
-      "lastGoodAt": "2026-10-21"
+      "lastGoodAt": "2026-10-22"
     }
   },
   "manual": [
