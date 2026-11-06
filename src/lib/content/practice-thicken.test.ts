@@ -466,7 +466,7 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke on sitemap)"
     const text = bodyText(body);
     const words = wordCount(text);
     assert.ok(words >= 500 && words <= 1200, `beginner-checklist: expected 500–1200 words, got ${words}`);
-    assert.ok(body.filter((s) => s.heading).length >= 5, "beginner-checklist: expected ≥5 headed sections");
+    assert.ok(body.filter((s) => s.heading).length >= 7, "beginner-checklist: expected ≥7 headed sections");
 
     const routeSrc = readFileSync(new URL("../../routes/gold-silver/$slug.tsx", import.meta.url), "utf8");
     assert.match(routeSrc, /createFileRoute\("\/gold-silver\/\$slug"\)/);
@@ -480,16 +480,29 @@ describe("practice / beginner-checklist thicken (no new URLs, spoke on sitemap)"
     assert.match(text, /four decisions/);
     assert.match(text, /form, counterparty/);
     assert.match(text, /Form and size before the screen/);
+    assert.match(text, /Who is on the other side/);
+    assert.match(text, /verifiable address/);
+    assert.match(text, /published buy-back price/);
+    assert.match(text, /Reachability is the reply/);
+    assert.match(text, /What gets written down/);
+    assert.match(text, /serial number/);
+    assert.match(text, /photograph of the stamp/);
+    assert.match(text, /same drawer as the metal/);
+    assert.match(text, /It is not tax advice/);
+    assert.match(text, /No place has been named for the metal/);
+    assert.match(text, /money the household will need soon/);
+    assert.match(text, /That counterparty is not verified/);
     assert.doesNotMatch(text, /Information only|These paragraphs inform|not buy or sell advice|as mechanics, not as a shop/i);
     assert.match(text, /\[gold bars vs coins\]\(\/gold-silver\/bars-vs-coins\)/);
     assert.match(text, /\[storing gold and silver\]\(\/gold-silver\/storage\)/);
-    assert.match(text, /premium over spot/);
+    assert.match(text, /\[premium over spot\]\(\/gold-silver\/premium-over-spot\)/);
+    assert.match(text, /\[buying online\]\(\/gold-silver\/buying-online\)/);
     assert.match(text, /\[spotting fakes\]\(\/gold-silver\/spotting-fakes\)/);
     assert.doesNotMatch(text, BAFIN_FORBIDDEN);
     assert.doesNotMatch(text, SEO_HUB_META);
     assert.doesNotMatch(text, /this stop|Continue the map|spoke\b|Phase-?1|Kaufsprache|ebook/i);
     assert.doesNotMatch(text, /best dealer|vendor ranking|we recommend/i);
-    assert.doesNotMatch(text, /\]\(\/gold-silver\/(buying-online|premium-over-spot)\)/);
+    assert.doesNotMatch(text, /\b(buy gold|sell gold|you should|we recommend)\b/i);
     assert.doesNotMatch(text, /\]\(\/sound-money/);
   });
 
