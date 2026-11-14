@@ -983,8 +983,17 @@ const beginnerChecklist: Section[] = [
   {
     heading: "Ask, bid, and the gap",
     paragraphs: [
-      "The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap above the screen is the premium over spot — form and liquidity, not a second chemistry.",
+      "The object in hand was poured or struck, shipped, insured, and offered by someone who must later bid for it. The gap above the screen is the [premium over spot](/gold-silver/premium-over-spot) — form and liquidity, not a second chemistry.",
       "The bid is what a desk will pay for that object today. A fat ask and a poor bid make the piece expensive twice. The gap moves with mint capacity and with how common the stamp is. That is a supply of objects, not a signal that metal has become a bargain.",
+    ],
+  },
+  {
+    heading: "Who is on the other side",
+    paragraphs: [
+      "The other side of a first ounce is a desk. Three facts make that desk findable later: an address that can be checked, a published price for taking the object back, and a person who still answers after the parcel has left. A logo is none of those facts.",
+      "A verifiable address is a street and a name that appear in a register outside the desk’s own page. A box number with no building, or a shop that exists only as a handle, is a thinner fact. The test is the same name, in the same place, a year on.",
+      "A published buy-back price is the bid for that form, printed in the open. The ask is what the desk wants today. The bid is what it will pay for the same object. A sheet that shows only the ask has described half a market.",
+      "Reachability is the reply. A phone, a counter, or a written channel that has stayed put. A page that only talks has not introduced a person. When the channel is a screen, the dealer’s identity, whether the payment is final, the carrier, and the empty box are [buying online](/gold-silver/buying-online).",
     ],
   },
   {
@@ -992,7 +1001,14 @@ const beginnerChecklist: Section[] = [
     paragraphs: [
       "Home, an allocated vault, or an unallocated claim — access, cost, and whose books stand in the way. Choose among them before a parcel is in the post. A box on a van is a delay, not a decision. The menu is on [storing gold and silver](/gold-silver/storage).",
       "Home keeps the metal near, and the fire and theft risk with the household. A vault is distant, and the risk is theirs. Allocated storage names specific bars or coins. An unallocated or pool account is a claim on a stack, not a named pile. A seller who will “store it for you” and never ship has moved custody into another costume.",
-      "Invoices, serials, and a note of where the metal sits belong in writing somewhere that is not only the same drawer. The paperwork does not make the metal safer. It makes the other three facts checkable.",
+    ],
+  },
+  {
+    heading: "What gets written down",
+    paragraphs: [
+      "The fourth decision is the paper. An invoice names the product, the weight, the fineness, and the figure on that line. A serial number, when the piece carries one, ties the invoice to one bar or one coin rather than to a type. A photograph of the stamp, the serial, and the packing as it arrived is a second copy of those facts.",
+      "The papers do not sit in the same drawer as the metal. A fire, a theft, or a move that takes the pile also takes the only proof of what the pile was. A copy in another building, or in a file that is not the box, remains when the object is gone. The note of location — home, a vault, or a claim — stays with the papers.",
+      "The invoice records what changed hands. It is not tax advice. It does not say what to file, what to declare, or what a statute requires. It makes the other three decisions checkable: which form, which desk, which place.",
     ],
   },
   {
@@ -1000,6 +1016,7 @@ const beginnerChecklist: Section[] = [
     paragraphs: [
       "Copies exist, especially of popular coins and of small bars with famous stamps. A desk you cannot find next year, a weight or diameter that misses the published spec, or a quote far below everyone else’s print is a reason to stop treating the stamp as settled. It is not a verdict.",
       "The counterparty comes before the scale. Weight and dimensions catch the crude copies. A price far below the field is a warning, not a bargain. A piece that matches the spec can still be plated. If a fake would matter, a professional is the next step. The longer filter is [spotting fakes](/gold-silver/spotting-fakes).",
+      "A first ounce is still early when the other decisions are blank. No place has been named for the metal. The cash is money the household will need soon. The desk cannot be found at an address, or will not show a bid. That counterparty is not verified. A lower print on the screen does not fill those blanks. The price stays the last number.",
     ],
   },
 ];
